@@ -2,7 +2,7 @@
 
 Claude'un yapamadığı ya da senin kararını bekleyen işler. Bitenleri sil.
 
-## 1. Klasörü ASCII adla yeniden adlandır (`Aralık` → `Aralik`)
+## 1. Klasörü ASCII adla yeniden adlandır (`Aralık` → `Aralik`, i noktalı)
 "ı" harfi yüzünden Windows'ta Android Gradle build'i ve `flutter analyze` çalışmıyor.
 Şimdilik `subst A: "D:\Yazilim\Mobil\Aralık"` ile `A:\` üzerinden çalıştırılıyor.
 Açık oturum klasörü kullandığı için yeniden adlandırma oturum içinden yapılamadı.
@@ -27,22 +27,13 @@ Wikidata'daki il nüfusları TÜİK ile uyuşmuyor, bu yüzden bu sorular bankay
 TÜİK veri portalından "Adrese Dayalı Nüfus Kayıt Sistemi, il nüfusları" tablosunun en güncel yılını
 CSV/XLSX olarak indir ve `tools/tuik/` altına koy. Dönüştürücüyü Claude yazar.
 
-## 4. Karar: başlangıç tarihi ve kapalı test
-`lib/core/daily.dart` içinde `epoch = 2026-11-01`. Plana göre kapalı test 5. günde başlıyor (~2026-10-29).
-Epoch'tan önceki günlerde gün indeksi negatif oluyor ve set bankanın sonundan geliyor
-(örn. 31 Ekim, son 5 soru). Seçenekler:
-- (a) Epoch'u kapalı testin başladığı güne çek. Testçiler "#1"den başlar.
-- (b) Böyle bırak. Testçiler son setleri görür, ama o sorular ileride bir gün tekrar gelir.
+## 4. (İsteğe bağlı) Wikidata'daki hataları düzelt
+Veri çekerken görülen hatalar. Wikidata'da düzeltilirse bir sonraki çekimde uygulamaya da gelir:
+- Konya ilinin plaka kodu 53, Uşak'ın 62 girilmiş (doğrusu 42 ve 64).
+- Bingöl ilinin "başkent" (P36) bilgisi yok, bu yüzden mesafe sorularında Bingöl yok.
+- Çankırı şehrinin birbirinden >5 km farklı iki koordinatı var, bu yüzden Çankırı da şimdilik dışarıda.
 
-## 5. Paket onayı: `shared_preferences`
-CLAUDE.md'de izinli ama "eklemeden önce sor" kuralı var. Seri, istatistik ve ayarlar
-(`data/stats_store.dart`, 4. gün) için gerekli. Onay verirsen eklenir.
-
-## 6. Git ve GitHub
-Klasör henüz bir git deposu değil. Klasör adı değiştikten sonra `git init` ve ilk commit yapılabilir,
-ardından GitHub'da `YerdemA/aralik` reposu açılıp push edilir (push'u sen onaylarsın).
-
-## 7. (5. gün) Release imzası
+## 5. (5. gün) Release imzası
 Play'e yüklemek için upload keystore gerekiyor. Şifreleri sen belirlemelisin:
 `keytool -genkey -v -keystore $env:USERPROFILE\aralik-upload.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload`
 Sonra `android/key.properties` oluşturulur (git'e girmez). Gradle tarafını Claude bağlar.

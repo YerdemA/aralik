@@ -287,23 +287,86 @@ def fetch(ds: Dataset) -> Path:
     return out
 
 
+# Coordinates for on-device distance questions (see tools/build_places.py).
+# One row per coordinate statement; the builder drops ambiguous places.
+PLACE_QUERIES = {
+    "places_tr": (
+        "Türkiye il merkezleri, koordinat (P625)",
+        """
+SELECT ?province ?plate ?city ?cityLabel ?lat ?lon WHERE {
+  ?province wdt:P31 wd:Q48336 ; wdt:P36 ?city .
+  OPTIONAL { ?province wdt:P395 ?plate . }
+  ?city p:P625 ?st .
+  ?st wikibase:rank ?rank ; psv:P625 [ wikibase:geoLatitude ?lat ; wikibase:geoLongitude ?lon ] .
+  FILTER(?rank != wikibase:DeprecatedRank)
+  ?city rdfs:label ?cityLabel . FILTER(LANG(?cityLabel) = "tr")
+}
+""",
+    ),
+    "places_world": (
+        "Egemen devletlerin başkentleri, koordinat (P625)",
+        """
+SELECT ?country ?countryLabel ?links ?city ?cityLabel ?lat ?lon WHERE {
+  ?country wdt:P31 wd:Q3624078 ; wdt:P36 ?city ; wikibase:sitelinks ?links .
+  FILTER NOT EXISTS { ?country wdt:P576 [] . }
+  ?country rdfs:label ?countryLabel . FILTER(LANG(?countryLabel) = "tr")
+  ?city p:P625 ?st .
+  ?st wikibase:rank ?rank ; psv:P625 [ wikibase:geoLatitude ?lat ; wikibase:geoLongitude ?lon ] .
+  FILTER(?rank != wikibase:DeprecatedRank)
+  ?city rdfs:label ?cityLabel . FILTER(LANG(?cityLabel) = "tr")
+}
+""",
+    ),
+}
+
+
+def fetch_places(name: str) -> Path:
+    description, query = PLACE_QUERIES[name]
+    rows = []
+    for b in run_query(query):
+        row = {}
+        for key, cell in b.items():
+            value = cell["value"]
+            if cell.get("type") == "uri":
+                value = value.rsplit("/", 1)[-1]
+            row[key] = value
+        rows.append(row)
+    rows.sort(key=lambda r: tuple(sorted(r.items())))
+    out = RAW_DIR / f"{name}.json"
+    payload = {
+        "dataset": name,
+        "description": description,
+        "fetched_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "rows": rows,
+    }
+    out.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"  {len(rows)} satır -> tools/raw/{out.name}", flush=True)
+    return out
+
+
 def main(argv: list[str]) -> int:
     sys.stdout.reconfigure(encoding="utf-8")
     RAW_DIR.mkdir(parents=True, exist_ok=True)
     by_name = {ds.name: ds for ds in DATASETS}
-    unknown = [name for name in argv if name not in by_name]
+    names = list(by_name) + list(PLACE_QUERIES)
+    unknown = [name for name in argv if name not in names]
     if unknown:
-        print(f"Bilinmeyen veri seti: {', '.join(unknown)}. Seçenekler: {', '.join(by_name)}")
+        print(f"Bilinmeyen veri seti: {', '.join(unknown)}. Seçenekler: {', '.join(names)}")
         return 2
 
     failed = []
-    for ds in [by_name[name] for name in argv] if argv else DATASETS:
-        print(f"{ds.name}: {ds.description}", flush=True)
+    for name in argv or names:
         try:
-            fetch(ds)
+            if name in PLACE_QUERIES:
+                print(f"{name}: {PLACE_QUERIES[name][0]}", flush=True)
+                fetch_places(name)
+            else:
+                print(f"{name}: {by_name[name].description}", flush=True)
+                fetch(by_name[name])
         except Exception as error:  # noqa: BLE001 - report and continue
             print(f"  HATA: {error}", flush=True)
-            failed.append(ds.name)
+            failed.append(name)
+        time.sleep(PAUSE_SECONDS)
 
     if failed:
         print(f"Başarısız: {', '.join(failed)}. Tekrar: python tools/fetch_wikidata.py {' '.join(failed)}")

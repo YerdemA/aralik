@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 
 import '../core/daily.dart';
+import 'distance_questions.dart';
+import 'place.dart';
 import 'question.dart';
 
 /// Parses questions.json. Throws [FormatException] on invalid data.
@@ -26,10 +28,23 @@ class QuestionRepository {
     : _bundle = bundle ?? rootBundle;
 
   static const defaultAssetPath = 'assets/questions/questions.json';
+  static const placesAssetPath = 'assets/data/places.json';
 
   final AssetBundle _bundle;
   final String assetPath;
   Future<List<Question>>? _cache;
+  Future<DistanceQuestions>? _distanceCache;
+
+  /// Generator for on-device distance questions. Loaded once.
+  Future<DistanceQuestions> distanceQuestions() {
+    return _distanceCache ??= _bundle
+        .loadString(placesAssetPath)
+        .then((source) => DistanceQuestions(PlaceData.parse(source)))
+        .catchError((Object error, StackTrace stackTrace) {
+          _distanceCache = null; // allow a retry
+          Error.throwWithStackTrace(error, stackTrace);
+        });
+  }
 
   /// The whole bank in file order. Parsed on first call, then cached.
   Future<List<Question>> load() {

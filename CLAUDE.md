@@ -24,7 +24,7 @@ dediğinde gerçekten %90 isabet edip etmediğini ölçer.
 - State: Flutter'ın yerleşik `ChangeNotifier` / `ValueNotifier` yapıları. Riverpod, Bloc veya GetX kullanılmaz.
 - Navigasyon: `Navigator` 2.0 değil, basit `Navigator.push` / named routes yeterli.
 - İzinli paketler:
-  - `shared_preferences`: seri, istatistik, ayarlar
+  - `shared_preferences`: seri, istatistik, ayarlar, görülen sorular (eklendi)
   - `share_plus`: skor kartını metin olarak paylaşma
   - `flutter_local_notifications`: günlük hatırlatma (Faz 2)
 - Kullanılmayacaklar: `google_fonts` (çalışma anında indirir), `intl` (sayı biçimlendirme için kendi yardımcımız var), görsel/Lottie asset'leri, ikon paketleri (Material Icons yeterli).
@@ -50,11 +50,12 @@ lib/
     home/                   # ana ekran: günün seti, seri, kalibrasyon
     game/                   # soru ekranı + tahmin/aralık girişi
     result/                 # soru sonucu + gün özeti + paylaş
-    practice/               # pratik modu
+    practice/               # serbest mod (kişiye özel, tekrar etmeyen)
     stats/                  # istatistikler, kalibrasyon grafiği
     settings/
   widgets/                  # ortak küçük widget'lar
 assets/questions/questions.json
+assets/data/places.json     # il merkezi + başkent koordinatları (mesafe soruları)
 tools/                      # Python veri hattı (Wikidata, TÜİK CSV)
 docs/                       # PLAN.md, privacy-policy.md (GitHub Pages)
 test/
@@ -80,7 +81,11 @@ test/
 
 ## Oyun kuralları
 - **Günlük set:** Her gün 5 soru. `dayIndex = gün(yerel saat) − 2026-11-01`. Günün soruları `questions[5*dayIndex .. 5*dayIndex+4]` olur. Herkes aynı gün aynı soruları görür ve backend gerekmez. Banka biterse başa sarılır.
-- **Pratik modu:** Sınırsız soru. Yalnızca **geçmiş günlerin** sorularından çekilir, böylece gelecek günlerin soruları spoil olmaz.
+- **Serbest mod** (eski adıyla pratik modu): Sınırsız, 5'erli turlar. Kişiye özeldir ve oyuncunun daha önce kilitlediği hiçbir soru (hiçbir modda) tekrar gelmez (`StatsStore.seenIds`).
+  Soruların ~1/3'ü **geçmiş günlerin** banka sorularından gelir (gelecek günler spoil olmaz), kalanı cihazda üretilir. Bir şehir bir turda en fazla bir kez geçer.
+- **Cihazda üretilen sorular:** Kaynaklı küçük veri tablolarından hesaplanır, sayı asla elle yazılmaz. İlk üretici: il merkezleri / başkentler arası kuş uçuşu mesafe (`data/distance_questions.dart`, id `dist:Q1:Q2`).
+  Yeni üreticiler aynı kurala uyar: veri `tools/` ile Wikidata'dan çekilir, `assets/data/` altına gömülür, `source` iki öğenin de linkini içerir.
+- **Yeni soru akışı:** Günlük set herkes için aynı kalır (Wordle paylaşımı için). Banka her sürümde sona eklenerek büyür; serbest mod üreticiler sayesinde tükenmez.
 - **Giriş akışı:** (1) Kullanıcı en iyi tahminini kendi sayı klavyemizle girer. (2) Bir kaydırıcıyla aralığın genişliğini ayarlar. `magnitude` için kaydırıcı logaritmiktir, `year` için ±yıl olarak çalışır. Ekranda canlı olarak "4.500 – 5.500 m" gösterilir. (3) "Kilitle" butonu.
 - **Puan (`scoring.dart`):**
   - `magnitude`: cevap aralıktaysa `max(10, round(100 − 25·log2(high/low)))`, değilse `0`.
@@ -115,5 +120,7 @@ test/
 - Çalıştır: `flutter run`
 - Test: `flutter test`
 - Analiz: `flutter analyze`
+- Wikidata ham verisini çek: `python tools/fetch_wikidata.py [veri_seti ...]`
 - Soru bankası üret: `python tools/build_questions.py`
+- Yer verisini üret: `python tools/build_places.py`
 - Soru bankasını doğrula: `python tools/validate_questions.py`

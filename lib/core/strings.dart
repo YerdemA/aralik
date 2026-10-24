@@ -15,7 +15,10 @@ abstract final class AppStrings {
   static const streak = 'Seri';
   static const lastScore = 'Son skor';
   static const calibration = 'Kalibrasyon';
-  static const practice = 'Pratik';
+  static const freePlay = 'Serbest mod';
+  static const freePlayHint = 'Sınırsız tur, hep yeni sorular';
+  static const loadError = 'Sorular yüklenemedi. Tekrar dene.';
+  static String roundTotal(int points, int max) => '$points / $max puan';
   static const stats = 'İstatistikler';
   static const settings = 'Ayarlar';
 
@@ -23,12 +26,27 @@ abstract final class AppStrings {
   static String questionProgress(int current, int total) =>
       'Soru $current / $total';
   static const yourGuess = 'En iyi tahminin';
+  static const typeYourGuess = 'Tahminini yaz';
+  static const editGuess = 'Tahmini değiştir';
+  static const intervalLabel = '%90 emin olduğun aralık';
   static const intervalWidth = 'Aralığın genişliği';
   static const narrower = 'Dar';
   static const wider = 'Geniş';
+  static String potentialPoints(int points) => 'İsabet edersen $points puan';
   static const lock = 'Kilitle';
   static const next = 'Devam';
+  static const finish = 'Bitir';
   static const delete = 'Sil';
+  static const quit = 'Çık';
+
+  // Generated questions
+  static String distanceQuestion(String from, String to) =>
+      '$from ile $to arası kuş uçuşu kaç kilometredir?';
+  static String placeWithCountry(String city, String country) =>
+      '$city ($country)';
+  static const distanceFunFact =
+      'Mesafe, iki şehrin Wikidata koordinatlarından hesaplandı.';
+  static const kilometres = 'km';
 
   // Result
   static const hit = 'İsabet!';
