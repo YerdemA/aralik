@@ -1,0 +1,430 @@
+{
+ "dataset": "structures_tr",
+ "description": "Türkiye'deki yapılar, yükseklik (P2048)",
+ "property": "P2048",
+ "fetched_at": "2026-10-24T14:41:06+00:00",
+ "rows": [
+  {
+   "qid": "Q91274",
+   "label": "Galata Kulesi",
+   "links": 58,
+   "value": 62.59,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Beyoğlu"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q166882",
+   "label": "Istanbul Sapphire",
+   "links": 30,
+   "value": 261.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "İstanbul"
+   ],
+   "opened": [
+    2011
+   ]
+  },
+  {
+   "qid": "Q753776",
+   "label": "Atatürk Barajı ve Hidroelektrik Santrali",
+   "links": 27,
+   "value": 169.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Adıyaman",
+    "Bozova"
+   ],
+   "opened": [
+    1992
+   ]
+  },
+  {
+   "qid": "Q853029",
+   "label": "Beyazıt Kulesi",
+   "links": 19,
+   "value": 85.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Fatih",
+    "İstanbul"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q48816032",
+   "label": "Atatürk Maskı",
+   "links": 15,
+   "value": 42.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Buca",
+    "Konak"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q1518263",
+   "label": "Seyhan Barajı ve Hidroelektrik Santrali",
+   "links": 12,
+   "value": 53.2,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Yüreğir"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q28657490",
+   "label": "Çamlıca Kulesi",
+   "links": 10,
+   "value": 369.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Üsküdar"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q1208733",
+   "label": "Diamond of İstanbul",
+   "links": 7,
+   "value": 311.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "İstanbul"
+   ],
+   "opened": [
+    2015
+   ]
+  },
+  {
+   "qid": "Q12811774",
+   "label": "Selçuklu Kulesi",
+   "links": 6,
+   "value": 163.4,
+   "rank": "normal",
+   "value_year": null,
+   "place": [],
+   "opened": []
+  },
+  {
+   "qid": "Q4822225",
+   "label": "Hilton İzmir",
+   "links": 6,
+   "value": 142.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Konak"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q30752740",
+   "label": "Mistral Ofis Kulesi",
+   "links": 5,
+   "value": 216.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Konak"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q131388493",
+   "label": "TCMB Kulesi",
+   "links": 4,
+   "value": 354.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Ümraniye"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q104804875",
+   "label": "Metropol İstanbul A Kule",
+   "links": 3,
+   "value": 301.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Ataşehir"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q116046933",
+   "label": "Mermer Kule",
+   "links": 3,
+   "value": 25.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Fatih",
+    "İstanbul"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q25472424",
+   "label": "Atatürk Maskı",
+   "links": 3,
+   "value": 35.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Kepez"
+   ],
+   "opened": [
+    2008
+   ]
+  },
+  {
+   "qid": "Q3511624",
+   "label": "Süzer Plaza Ritz-Carlton",
+   "links": 3,
+   "value": 153.6,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Şişli"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q19312065",
+   "label": "Zeytinova Barajı",
+   "links": 2,
+   "value": 115.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Bayındır",
+    "İzmir"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q19613310",
+   "label": "Çanakkale Televizyon Kulesi",
+   "links": 2,
+   "value": 98.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Çanakkale"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q21600725",
+   "label": "Point Bornova",
+   "links": 2,
+   "value": 193.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "İzmir"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q49105436",
+   "label": "Atatürk Cumhuriyet Kulesi",
+   "links": 2,
+   "value": 197.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Ankara",
+    "Keçiören"
+   ],
+   "opened": [
+    2024
+   ]
+  },
+  {
+   "qid": "Q107717743",
+   "label": "Mahall Bomonti İzmir",
+   "links": 1,
+   "value": 240.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Konak"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q113987374",
+   "label": "Metropol İstanbul B Kule",
+   "links": 1,
+   "value": 150.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Ataşehir"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q116028173",
+   "label": "Kristal Kule",
+   "links": 1,
+   "value": 168.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Şişli"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q122395199",
+   "label": "Meryem Ana Heykeli",
+   "links": 1,
+   "value": 5.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Selçuk"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q122492132",
+   "label": "Belkahve Atatürk Heykeli",
+   "links": 1,
+   "value": 10.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Bornova"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q122492132",
+   "label": "Belkahve Atatürk Heykeli",
+   "links": 1,
+   "value": 16.5,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Bornova"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q135471481",
+   "label": "Biva Tower",
+   "links": 1,
+   "value": 151.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Bayraklı"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q135471590",
+   "label": "Fors İzmir",
+   "links": 1,
+   "value": 150.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Konak"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q135472629",
+   "label": "Folkart Nova",
+   "links": 1,
+   "value": 143.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Konak"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q140967576",
+   "label": "Metropol İstanbul C Kule",
+   "links": 1,
+   "value": 150.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Ataşehir"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q6009493",
+   "label": "Rahmanlar Barajı",
+   "links": 1,
+   "value": 92.3,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Ödemiş"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q6021330",
+   "label": "Grand Hotel Konya",
+   "links": 1,
+   "value": 132.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Selçuklu"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q6053142",
+   "label": "Salman Barajı",
+   "links": 1,
+   "value": 51.6,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Karaburun"
+   ],
+   "opened": []
+  },
+  {
+   "qid": "Q89362207",
+   "label": "Mistral Konut Kulesi",
+   "links": 0,
+   "value": 154.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Konak"
+   ],
+   "opened": []
+  }
+ ]
+}

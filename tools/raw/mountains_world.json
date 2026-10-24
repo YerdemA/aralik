@@ -1,0 +1,1548 @@
+{
+ "dataset": "mountains_world",
+ "description": "Dünyadaki bilinen dağlar, yükseklik (P2044)",
+ "property": "P2044",
+ "fetched_at": "2026-10-24T14:18:27+00:00",
+ "rows": [
+  {
+   "qid": "Q513",
+   "label": "Everest Dağı",
+   "links": 237,
+   "value": 8844.43,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Nepal",
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q513",
+   "label": "Everest Dağı",
+   "links": 237,
+   "value": 8848.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Nepal",
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q513",
+   "label": "Everest Dağı",
+   "links": 237,
+   "value": 8848.86,
+   "rank": "preferred",
+   "value_year": null,
+   "country": [
+    "Nepal",
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q513",
+   "label": "Everest Dağı",
+   "links": 237,
+   "value": 8850.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Nepal",
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q39231",
+   "label": "Fuji Dağı",
+   "links": 146,
+   "value": 3777.24,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Japonya"
+   ]
+  },
+  {
+   "qid": "Q524",
+   "label": "Vezüv Yanardağı",
+   "links": 136,
+   "value": 1281.0,
+   "rank": "preferred",
+   "value_year": null,
+   "country": [
+    "İtalya"
+   ]
+  },
+  {
+   "qid": "Q524",
+   "label": "Vezüv Yanardağı",
+   "links": 136,
+   "value": 1297.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "İtalya"
+   ]
+  },
+  {
+   "qid": "Q583",
+   "label": "Mont Blanc",
+   "links": 127,
+   "value": 4805.59,
+   "rank": "preferred",
+   "value_year": 2023,
+   "country": [
+    "Fransa",
+    "İtalya"
+   ]
+  },
+  {
+   "qid": "Q583",
+   "label": "Mont Blanc",
+   "links": 127,
+   "value": 4807.02,
+   "rank": "normal",
+   "value_year": 1894,
+   "country": [
+    "Fransa",
+    "İtalya"
+   ]
+  },
+  {
+   "qid": "Q583",
+   "label": "Mont Blanc",
+   "links": 127,
+   "value": 4807.81,
+   "rank": "normal",
+   "value_year": 2021,
+   "country": [
+    "Fransa",
+    "İtalya"
+   ]
+  },
+  {
+   "qid": "Q583",
+   "label": "Mont Blanc",
+   "links": 127,
+   "value": 4808.06,
+   "rank": "normal",
+   "value_year": 2017,
+   "country": [
+    "Fransa",
+    "İtalya"
+   ]
+  },
+  {
+   "qid": "Q583",
+   "label": "Mont Blanc",
+   "links": 127,
+   "value": 4808.72,
+   "rank": "normal",
+   "value_year": 2017,
+   "country": [
+    "Fransa",
+    "İtalya"
+   ]
+  },
+  {
+   "qid": "Q583",
+   "label": "Mont Blanc",
+   "links": 127,
+   "value": 4810.02,
+   "rank": "normal",
+   "value_year": 2013,
+   "country": [
+    "Fransa",
+    "İtalya"
+   ]
+  },
+  {
+   "qid": "Q16990",
+   "label": "Etna Yanardağı",
+   "links": 125,
+   "value": 3274.0,
+   "rank": "normal",
+   "value_year": 1900,
+   "country": [
+    "İtalya"
+   ]
+  },
+  {
+   "qid": "Q16990",
+   "label": "Etna Yanardağı",
+   "links": 125,
+   "value": 3290.0,
+   "rank": "normal",
+   "value_year": 1956,
+   "country": [
+    "İtalya"
+   ]
+  },
+  {
+   "qid": "Q16990",
+   "label": "Etna Yanardağı",
+   "links": 125,
+   "value": 3345.0,
+   "rank": "normal",
+   "value_year": 1978,
+   "country": [
+    "İtalya"
+   ]
+  },
+  {
+   "qid": "Q16990",
+   "label": "Etna Yanardağı",
+   "links": 125,
+   "value": 3357.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "country": [
+    "İtalya"
+   ]
+  },
+  {
+   "qid": "Q16990",
+   "label": "Etna Yanardağı",
+   "links": 125,
+   "value": 3403.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "İtalya"
+   ]
+  },
+  {
+   "qid": "Q43105",
+   "label": "Elbruz Dağı",
+   "links": 113,
+   "value": 5642.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q43512",
+   "label": "K2",
+   "links": 112,
+   "value": 8611.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Pakistan"
+   ]
+  },
+  {
+   "qid": "Q72303",
+   "label": "Ağrı Dağı",
+   "links": 112,
+   "value": 5137.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Türkiye"
+   ]
+  },
+  {
+   "qid": "Q80344",
+   "label": "Olimpos Dağı",
+   "links": 109,
+   "value": 2917.727,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Yunanistan"
+   ]
+  },
+  {
+   "qid": "Q725591",
+   "label": "Bazardüzü Dağı",
+   "links": 107,
+   "value": 2706.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Azerbaycan",
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q725591",
+   "label": "Bazardüzü Dağı",
+   "links": 107,
+   "value": 4466.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Azerbaycan",
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q38954",
+   "label": "Teide Yanardağı",
+   "links": 105,
+   "value": 3715.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "İspanya"
+   ]
+  },
+  {
+   "qid": "Q82019",
+   "label": "Kançencunga",
+   "links": 102,
+   "value": 8586.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Hindistan",
+    "Nepal"
+   ]
+  },
+  {
+   "qid": "Q130018",
+   "label": "Denali Dağı",
+   "links": 100,
+   "value": 6190.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ]
+  },
+  {
+   "qid": "Q83497",
+   "label": "Rushmore Dağı",
+   "links": 96,
+   "value": 1745.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ]
+  },
+  {
+   "qid": "Q1374",
+   "label": "Matterhorn",
+   "links": 92,
+   "value": 4477.54,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "İsviçre",
+    "İtalya"
+   ]
+  },
+  {
+   "qid": "Q229107",
+   "label": "Kailaş Dağı",
+   "links": 91,
+   "value": 6638.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q130736",
+   "label": "Nanga Parbat Dağı",
+   "links": 90,
+   "value": 8126.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Pakistan"
+   ]
+  },
+  {
+   "qid": "Q165440",
+   "label": "Dhaulagiri",
+   "links": 90,
+   "value": 8167.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Nepal"
+   ]
+  },
+  {
+   "qid": "Q169986",
+   "label": "Makalu",
+   "links": 89,
+   "value": 8485.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Nepal",
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q172070",
+   "label": "Kenya Dağı",
+   "links": 89,
+   "value": 5199.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Kenya"
+   ]
+  },
+  {
+   "qid": "Q130321",
+   "label": "Aynoroz",
+   "links": 87,
+   "value": 2033.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Yunanistan"
+   ]
+  },
+  {
+   "qid": "Q131230",
+   "label": "Mauna Kea",
+   "links": 87,
+   "value": 4207.3,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ]
+  },
+  {
+   "qid": "Q377485",
+   "label": "Sina Dağı",
+   "links": 87,
+   "value": 2287.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Mısır"
+   ]
+  },
+  {
+   "qid": "Q168702",
+   "label": "Lhotse",
+   "links": 86,
+   "value": 8516.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Nepal",
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q178167",
+   "label": "Kosciuszko Dağı",
+   "links": 86,
+   "value": 2228.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Avustralya"
+   ]
+  },
+  {
+   "qid": "Q14081",
+   "label": "Chimborazo",
+   "links": 84,
+   "value": 6263.47,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Ekvador"
+   ]
+  },
+  {
+   "qid": "Q170089",
+   "label": "Cho Oyu",
+   "links": 84,
+   "value": 8188.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Nepal",
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q170070",
+   "label": "Manaslu Dağı",
+   "links": 82,
+   "value": 8163.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Nepal"
+   ]
+  },
+  {
+   "qid": "Q4675",
+   "label": "St. Helens Yanardağı",
+   "links": 82,
+   "value": 2549.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ]
+  },
+  {
+   "qid": "Q134108",
+   "label": "Merapi Yanardağı",
+   "links": 79,
+   "value": 2910.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "country": [
+    "Endonezya"
+   ]
+  },
+  {
+   "qid": "Q40758",
+   "label": "Demavend Dağı",
+   "links": 79,
+   "value": 5610.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "İran"
+   ]
+  },
+  {
+   "qid": "Q40758",
+   "label": "Demavend Dağı",
+   "links": 79,
+   "value": 5628.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "İran"
+   ]
+  },
+  {
+   "qid": "Q104674",
+   "label": "Ben Nevis",
+   "links": 78,
+   "value": 1344.527,
+   "rank": "preferred",
+   "value_year": 2016,
+   "country": [
+    "Birleşik Krallık"
+   ]
+  },
+  {
+   "qid": "Q104674",
+   "label": "Ben Nevis",
+   "links": 78,
+   "value": 1344.53,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Birleşik Krallık"
+   ]
+  },
+  {
+   "qid": "Q105124",
+   "label": "Shishapangma",
+   "links": 78,
+   "value": 8027.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q1045888",
+   "label": "Puncak Jaya",
+   "links": 77,
+   "value": 4884.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Endonezya"
+   ]
+  },
+  {
+   "qid": "Q107635",
+   "label": "Baekdu Dağı",
+   "links": 77,
+   "value": 2744.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Kuzey Kore",
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q180996",
+   "label": "Broad Peak",
+   "links": 77,
+   "value": 8051.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Pakistan",
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q120306",
+   "label": "Logan Dağı",
+   "links": 75,
+   "value": 5959.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Kanada"
+   ]
+  },
+  {
+   "qid": "Q3375",
+   "label": "Zugspitze Dağı",
+   "links": 75,
+   "value": 2962.06,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Almanya",
+    "Avusturya"
+   ]
+  },
+  {
+   "qid": "Q168714",
+   "label": "Tambora",
+   "links": 73,
+   "value": 2850.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Endonezya"
+   ]
+  },
+  {
+   "qid": "Q181157",
+   "label": "Popocatépetl Yanardağı",
+   "links": 72,
+   "value": 5452.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Meksika"
+   ]
+  },
+  {
+   "qid": "Q181157",
+   "label": "Popocatépetl Yanardağı",
+   "links": 72,
+   "value": 5454.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Meksika"
+   ]
+  },
+  {
+   "qid": "Q213360",
+   "label": "Tafelberg",
+   "links": 72,
+   "value": 1085.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Güney Afrika"
+   ]
+  },
+  {
+   "qid": "Q233836",
+   "label": "Ojos del Salado",
+   "links": 72,
+   "value": 6893.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Arjantin",
+    "Şili"
+   ]
+  },
+  {
+   "qid": "Q187138",
+   "label": "Gaşerbrum I",
+   "links": 71,
+   "value": 8080.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Pakistan",
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q216059",
+   "label": "Tai Dağı",
+   "links": 71,
+   "value": 1545.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q1451",
+   "label": "Pinatubo Yanardağı",
+   "links": 70,
+   "value": 1486.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Filipinler"
+   ]
+  },
+  {
+   "qid": "Q1484",
+   "label": "Mayon Yanardağı",
+   "links": 70,
+   "value": 2462.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Filipinler"
+   ]
+  },
+  {
+   "qid": "Q186853",
+   "label": "Gaşerbrum II",
+   "links": 70,
+   "value": 8034.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Pakistan",
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q60967",
+   "label": "Kinabalu Dağı",
+   "links": 70,
+   "value": 4095.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Malezya"
+   ]
+  },
+  {
+   "qid": "Q188982",
+   "label": "Erebus Dağı",
+   "links": 69,
+   "value": 3794.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": []
+  },
+  {
+   "qid": "Q194057",
+   "label": "Rainier Dağı",
+   "links": 69,
+   "value": 4389.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ]
+  },
+  {
+   "qid": "Q203568",
+   "label": "Alagöz Dağı",
+   "links": 69,
+   "value": 4090.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Ermenistan"
+   ]
+  },
+  {
+   "qid": "Q5059",
+   "label": "Cook Dağı",
+   "links": 69,
+   "value": 3724.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Yeni Zelanda"
+   ]
+  },
+  {
+   "qid": "Q205976",
+   "label": "Zeytindağı",
+   "links": 67,
+   "value": 826.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "İsrail"
+   ]
+  },
+  {
+   "qid": "Q105261",
+   "label": "Parnassos Dağı",
+   "links": 66,
+   "value": 2455.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Yunanistan"
+   ]
+  },
+  {
+   "qid": "Q1024",
+   "label": "Triglav",
+   "links": 65,
+   "value": 2864.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Slovenya"
+   ]
+  },
+  {
+   "qid": "Q181476",
+   "label": "Cotopaxi",
+   "links": 65,
+   "value": 5897.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Ekvador"
+   ]
+  },
+  {
+   "qid": "Q215471",
+   "label": "Hermon Dağı",
+   "links": 65,
+   "value": 2813.95,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "İsrail işgali altındaki topraklar"
+   ]
+  },
+  {
+   "qid": "Q211529",
+   "label": "Han Tengri Dağı",
+   "links": 64,
+   "value": 7010.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Kazakistan",
+    "Kırgızistan",
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q219986",
+   "label": "Gangkhar Puensum",
+   "links": 64,
+   "value": 7570.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Butan"
+   ]
+  },
+  {
+   "qid": "Q194215",
+   "label": "İle Amsterdam",
+   "links": 63,
+   "value": 867.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Fransa"
+   ]
+  },
+  {
+   "qid": "Q207680",
+   "label": "Kazbek Dağı",
+   "links": 63,
+   "value": 5033.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q184975",
+   "label": "Hekla",
+   "links": 62,
+   "value": 1491.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "İzlanda"
+   ]
+  },
+  {
+   "qid": "Q210252",
+   "label": "Klyuçevskaya Sopka",
+   "links": 62,
+   "value": 4800.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q76309",
+   "label": "Pelée Dağı",
+   "links": 62,
+   "value": 1397.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Fransa"
+   ]
+  },
+  {
+   "qid": "Q207917",
+   "label": "Nemrut Dağı",
+   "links": 61,
+   "value": 2150.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Türkiye"
+   ]
+  },
+  {
+   "qid": "Q216894",
+   "label": "Arafat Dağı",
+   "links": 61,
+   "value": 454.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Suudi Arabistan"
+   ]
+  },
+  {
+   "qid": "Q235539",
+   "label": "Whitney Dağı",
+   "links": 61,
+   "value": 4421.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ]
+  },
+  {
+   "qid": "Q207323",
+   "label": "Vulcano Adası",
+   "links": 59,
+   "value": 500.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "İtalya"
+   ]
+  },
+  {
+   "qid": "Q627508",
+   "label": "Hoverla",
+   "links": 59,
+   "value": 2061.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Ukrayna"
+   ]
+  },
+  {
+   "qid": "Q193785",
+   "label": "Tabor Dağı",
+   "links": 58,
+   "value": 530.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "İsrail"
+   ]
+  },
+  {
+   "qid": "Q270158",
+   "label": "Semeru Yanardağı",
+   "links": 58,
+   "value": 3676.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Endonezya"
+   ]
+  },
+  {
+   "qid": "Q4425",
+   "label": "Eiger Dağı",
+   "links": 58,
+   "value": 3967.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "İsviçre"
+   ]
+  },
+  {
+   "qid": "Q617511",
+   "label": "Śnieżka",
+   "links": 58,
+   "value": 1603.3,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Polonya",
+    "Çekya"
+   ]
+  },
+  {
+   "qid": "Q210722",
+   "label": "Kesmeşeker Dağı",
+   "links": 57,
+   "value": 395.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Brezilya"
+   ]
+  },
+  {
+   "qid": "Q231620",
+   "label": "Paricutín",
+   "links": 57,
+   "value": 2800.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Meksika"
+   ]
+  },
+  {
+   "qid": "Q271700",
+   "label": "Noşak",
+   "links": 57,
+   "value": 7492.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Afganistan",
+    "Pakistan"
+   ]
+  },
+  {
+   "qid": "Q672936",
+   "label": "Rysy",
+   "links": 57,
+   "value": 2501.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Polonya",
+    "Slovakya"
+   ]
+  },
+  {
+   "qid": "Q15312",
+   "label": "Jungfrau Dağı",
+   "links": 56,
+   "value": 4158.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "İsviçre"
+   ]
+  },
+  {
+   "qid": "Q214011",
+   "label": "Kebnekaise Dağları",
+   "links": 56,
+   "value": 2096.8,
+   "rank": "preferred",
+   "value_year": 2018,
+   "country": [
+    "İsveç"
+   ]
+  },
+  {
+   "qid": "Q214011",
+   "label": "Kebnekaise Dağları",
+   "links": 56,
+   "value": 2135.0,
+   "rank": "normal",
+   "value_year": 1925,
+   "country": [
+    "İsveç"
+   ]
+  },
+  {
+   "qid": "Q214916",
+   "label": "Llullaillaco",
+   "links": 56,
+   "value": 6723.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Arjantin",
+    "Şili"
+   ]
+  },
+  {
+   "qid": "Q81213",
+   "label": "Gerlachovský štít",
+   "links": 56,
+   "value": 2654.4,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Slovakya"
+   ]
+  },
+  {
+   "qid": "Q81213",
+   "label": "Gerlachovský štít",
+   "links": 56,
+   "value": 2655.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Slovakya"
+   ]
+  },
+  {
+   "qid": "Q134927",
+   "label": "Emei Dağı",
+   "links": 55,
+   "value": 3099.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q204821",
+   "label": "Saint-Paul Adası",
+   "links": 55,
+   "value": 270.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Fransa"
+   ]
+  },
+  {
+   "qid": "Q209341",
+   "label": "Musala",
+   "links": 55,
+   "value": 2925.4,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Bulgaristan"
+   ]
+  },
+  {
+   "qid": "Q332762",
+   "label": "Zafer Doruğu",
+   "links": 55,
+   "value": 7439.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Kırgızistan",
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q41413",
+   "label": "Somoni Zirvesi",
+   "links": 55,
+   "value": 7495.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Tacikistan"
+   ]
+  },
+  {
+   "qid": "Q217457",
+   "label": "Şhara",
+   "links": 54,
+   "value": 5193.2,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Gürcistan",
+    "Rus İmparatorluğu",
+    "Rusya",
+    "Sovyet Sosyalist Cumhuriyetler Birliği"
+   ]
+  },
+  {
+   "qid": "Q60789",
+   "label": "Âdem Tepesi",
+   "links": 54,
+   "value": 2243.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Sri Lanka"
+   ]
+  },
+  {
+   "qid": "Q158526",
+   "label": "Monte Titano",
+   "links": 53,
+   "value": 739.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "San Marino"
+   ]
+  },
+  {
+   "qid": "Q158526",
+   "label": "Monte Titano",
+   "links": 53,
+   "value": 756.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "San Marino"
+   ]
+  },
+  {
+   "qid": "Q503433",
+   "label": "Cebel Tubkal",
+   "links": 53,
+   "value": 4167.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Fas"
+   ]
+  },
+  {
+   "qid": "Q203942",
+   "label": "Galdhøpiggen Dağı",
+   "links": 52,
+   "value": 2468.854,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Norveç"
+   ]
+  },
+  {
+   "qid": "Q207284",
+   "label": "Ruapehu Dağı",
+   "links": 52,
+   "value": 2797.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Yeni Zelanda"
+   ]
+  },
+  {
+   "qid": "Q208081",
+   "label": "Aneto",
+   "links": 52,
+   "value": 3404.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "İspanya"
+   ]
+  },
+  {
+   "qid": "Q209528",
+   "label": "Mulhacén Dağı",
+   "links": 52,
+   "value": 3479.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "İspanya"
+   ]
+  },
+  {
+   "qid": "Q242730",
+   "label": "Asama Dağı",
+   "links": 52,
+   "value": 2568.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Japonya"
+   ]
+  },
+  {
+   "qid": "Q500275",
+   "label": "Yushan",
+   "links": 52,
+   "value": 3952.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Tayvan"
+   ]
+  },
+  {
+   "qid": "Q724367",
+   "label": "Beluça",
+   "links": 52,
+   "value": 4506.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q818475",
+   "label": "Taal Yanardağı",
+   "links": 52,
+   "value": 129.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Filipinler"
+   ]
+  },
+  {
+   "qid": "Q818475",
+   "label": "Taal Yanardağı",
+   "links": 52,
+   "value": 311.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Filipinler"
+   ]
+  },
+  {
+   "qid": "Q306201",
+   "label": "Devils Tower",
+   "links": 51,
+   "value": 1558.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ]
+  },
+  {
+   "qid": "Q3403",
+   "label": "Dufourspitze",
+   "links": 51,
+   "value": 4634.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "İsviçre"
+   ]
+  },
+  {
+   "qid": "Q128841",
+   "label": "sakurajima yanardağı",
+   "links": 50,
+   "value": 1117.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Japonya"
+   ]
+  },
+  {
+   "qid": "Q182913",
+   "label": "Grímsvötn",
+   "links": 50,
+   "value": 1725.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "İzlanda"
+   ]
+  },
+  {
+   "qid": "Q120314",
+   "label": "Wutai Dağı",
+   "links": 49,
+   "value": 3061.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q126804",
+   "label": "Erciyes Dağı",
+   "links": 49,
+   "value": 3916.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Türkiye"
+   ]
+  },
+  {
+   "qid": "Q200935",
+   "label": "Huascarán Dağı",
+   "links": 49,
+   "value": 6768.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Peru"
+   ]
+  },
+  {
+   "qid": "Q206161",
+   "label": "Herzl Tepesi",
+   "links": 49,
+   "value": 834.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "İsrail"
+   ]
+  },
+  {
+   "qid": "Q312818",
+   "label": "Scopus Dağı",
+   "links": 49,
+   "value": 826.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Filistin",
+    "İsrail"
+   ]
+  },
+  {
+   "qid": "Q476313",
+   "label": "Dikdağ",
+   "links": 49,
+   "value": 5204.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q16525",
+   "label": "Mönch Dağı",
+   "links": 48,
+   "value": 4110.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "İsviçre"
+   ]
+  },
+  {
+   "qid": "Q503368",
+   "label": "Carrauntoohil",
+   "links": 48,
+   "value": 1038.6,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "İrlanda"
+   ]
+  },
+  {
+   "qid": "Q622616",
+   "label": "Mount Lu",
+   "links": 48,
+   "value": 1474.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q746524",
+   "label": "Moldoveanu Zirvesi",
+   "links": 48,
+   "value": 2544.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Romanya"
+   ]
+  },
+  {
+   "qid": "Q912579",
+   "label": "Korab Dağı",
+   "links": 48,
+   "value": 2764.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Arnavutluk",
+    "Kuzey Makedonya"
+   ]
+  },
+  {
+   "qid": "Q1315012",
+   "label": "Snæfellsjökull",
+   "links": 47,
+   "value": 1446.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "İzlanda"
+   ]
+  },
+  {
+   "qid": "Q1514176",
+   "label": "Yamandağ",
+   "links": 47,
+   "value": 1640.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q16648",
+   "label": "Monte San Giorgio",
+   "links": 47,
+   "value": 1097.0,
+   "rank": "normal",
+   "value_year": null,
+   "country": [
+    "İsviçre"
+   ]
+  }
+ ]
+}

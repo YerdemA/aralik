@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Aralık works fully offline. Strip INTERNET from the release build,
+         even if a dependency's manifest tries to merge it in. -->
+    <uses-permission
+        android:name="android.permission.INTERNET"
+        tools:node="remove" />
+</manifest>

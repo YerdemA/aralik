@@ -1,0 +1,2036 @@
+{
+ "dataset": "rivers_world",
+ "description": "Dünyadaki bilinen nehirler, uzunluk (P2043)",
+ "property": "P2043",
+ "fetched_at": "2026-10-24T14:24:38+00:00",
+ "rows": [
+  {
+   "qid": "Q3392",
+   "label": "Nil",
+   "links": 248,
+   "value": 2850000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Akdeniz"
+   ],
+   "country": [
+    "Burundi",
+    "Etiyopya",
+    "Güney Sudan",
+    "Mısır",
+    "Ruanda",
+    "Sudan",
+    "Uganda"
+   ]
+  },
+  {
+   "qid": "Q3392",
+   "label": "Nil",
+   "links": 248,
+   "value": 6650000.0,
+   "rank": "preferred",
+   "value_year": 2015,
+   "mouth": [
+    "Akdeniz"
+   ],
+   "country": [
+    "Burundi",
+    "Etiyopya",
+    "Güney Sudan",
+    "Mısır",
+    "Ruanda",
+    "Sudan",
+    "Uganda"
+   ]
+  },
+  {
+   "qid": "Q3783",
+   "label": "Amazon Nehri",
+   "links": 218,
+   "value": 3690000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Atlas Okyanusu"
+   ],
+   "country": [
+    "Brezilya",
+    "Kolombiya",
+    "Peru"
+   ]
+  },
+  {
+   "qid": "Q3783",
+   "label": "Amazon Nehri",
+   "links": 218,
+   "value": 6400000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "mouth": [
+    "Atlas Okyanusu"
+   ],
+   "country": [
+    "Brezilya",
+    "Kolombiya",
+    "Peru"
+   ]
+  },
+  {
+   "qid": "Q3783",
+   "label": "Amazon Nehri",
+   "links": 218,
+   "value": 6436000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Atlas Okyanusu"
+   ],
+   "country": [
+    "Brezilya",
+    "Kolombiya",
+    "Peru"
+   ]
+  },
+  {
+   "qid": "Q3783",
+   "label": "Amazon Nehri",
+   "links": 218,
+   "value": 6800000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Atlas Okyanusu"
+   ],
+   "country": [
+    "Brezilya",
+    "Kolombiya",
+    "Peru"
+   ]
+  },
+  {
+   "qid": "Q3783",
+   "label": "Amazon Nehri",
+   "links": 218,
+   "value": 6992150.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Atlas Okyanusu"
+   ],
+   "country": [
+    "Brezilya",
+    "Kolombiya",
+    "Peru"
+   ]
+  },
+  {
+   "qid": "Q1653",
+   "label": "Tuna",
+   "links": 200,
+   "value": 2850000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Karadeniz"
+   ],
+   "country": [
+    "Almanya",
+    "Avusturya",
+    "Bulgaristan",
+    "Hırvatistan",
+    "Macaristan",
+    "Moldova",
+    "Romanya",
+    "Slovakya",
+    "Sırbistan"
+   ]
+  },
+  {
+   "qid": "Q584",
+   "label": "Ren Nehri",
+   "links": 190,
+   "value": 1232700.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Kuzey Denizi"
+   ],
+   "country": [
+    "Almanya",
+    "Avusturya",
+    "Fransa",
+    "Hollanda",
+    "Lihtenştayn",
+    "İsviçre"
+   ]
+  },
+  {
+   "qid": "Q626",
+   "label": "Volga Nehri",
+   "links": 189,
+   "value": 3530000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Hazar Denizi",
+    "Kama Nehri"
+   ],
+   "country": [
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q1497",
+   "label": "Mississippi Nehri",
+   "links": 180,
+   "value": 3766000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Meksika Körfezi"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ]
+  },
+  {
+   "qid": "Q5089",
+   "label": "Ganj Nehri",
+   "links": 180,
+   "value": 2525000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Bengal Körfezi"
+   ],
+   "country": [
+    "Hindistan"
+   ]
+  },
+  {
+   "qid": "Q3503",
+   "label": "Kongo Nehri",
+   "links": 168,
+   "value": 4700000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Atlas Okyanusu"
+   ],
+   "country": [
+    "Angola",
+    "Kongo",
+    "Kongo Demokratik Cumhuriyeti",
+    "Zambiya"
+   ]
+  },
+  {
+   "qid": "Q5413",
+   "label": "Yangtze",
+   "links": 167,
+   "value": 6300000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Doğu Çin Denizi"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q7348",
+   "label": "İndus Nehri",
+   "links": 159,
+   "value": 3180000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Umman Denizi"
+   ],
+   "country": [
+    "Hindistan",
+    "Pakistan",
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q3542",
+   "label": "Nijer Nehri",
+   "links": 156,
+   "value": 4180000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Gine Körfezi"
+   ],
+   "country": [
+    "Benin",
+    "Gine",
+    "Mali",
+    "Nijer",
+    "Nijerya"
+   ]
+  },
+  {
+   "qid": "Q7355",
+   "label": "Sarı Irmak",
+   "links": 155,
+   "value": 5464000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Bohai Denizi"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q34589",
+   "label": "Fırat",
+   "links": 142,
+   "value": 2800000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Şattülarap"
+   ],
+   "country": [
+    "Irak",
+    "Suriye",
+    "Türkiye"
+   ]
+  },
+  {
+   "qid": "Q1471",
+   "label": "Sen Nehri",
+   "links": 131,
+   "value": 776670.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Manş Denizi"
+   ],
+   "country": [
+    "Fransa"
+   ]
+  },
+  {
+   "qid": "Q19686",
+   "label": "Thames Nehri",
+   "links": 131,
+   "value": 334000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Kuzey Denizi"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ]
+  },
+  {
+   "qid": "Q35591",
+   "label": "Dicle Nehri",
+   "links": 130,
+   "value": 1850000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Şattülarap"
+   ],
+   "country": [
+    "Irak",
+    "Suriye",
+    "Türkiye"
+   ]
+  },
+  {
+   "qid": "Q40855",
+   "label": "Dinyeper",
+   "links": 126,
+   "value": 2285000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [],
+   "country": [
+    "Belarus",
+    "Rusya",
+    "Ukrayna"
+   ]
+  },
+  {
+   "qid": "Q40059",
+   "label": "Şeria Nehri",
+   "links": 124,
+   "value": 252000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Lut Gölü"
+   ],
+   "country": [
+    "Filistin",
+    "Lübnan",
+    "Suriye",
+    "Ürdün",
+    "İsrail"
+   ]
+  },
+  {
+   "qid": "Q1644",
+   "label": "Elbe Nehri",
+   "links": 122,
+   "value": 367643.6613105102,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Alman Körfezi",
+    "Helgoland Körfezi",
+    "Kuzey Denizi"
+   ],
+   "country": [
+    "Almanya",
+    "Çekya"
+   ]
+  },
+  {
+   "qid": "Q1644",
+   "label": "Elbe Nehri",
+   "links": 122,
+   "value": 1094260.0,
+   "rank": "preferred",
+   "value_year": null,
+   "mouth": [
+    "Alman Körfezi",
+    "Helgoland Körfezi",
+    "Kuzey Denizi"
+   ],
+   "country": [
+    "Almanya",
+    "Çekya"
+   ]
+  },
+  {
+   "qid": "Q41179",
+   "label": "Mekong",
+   "links": 118,
+   "value": 4350000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Güney Çin Denizi"
+   ],
+   "country": [
+    "Kamboçya",
+    "Laos",
+    "Myanmar",
+    "Tayland",
+    "Vietnam",
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q548",
+   "label": "Vistül",
+   "links": 118,
+   "value": 1047000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Gdańsk Körfezi"
+   ],
+   "country": [
+    "Polonya"
+   ]
+  },
+  {
+   "qid": "Q6862",
+   "label": "Amur Nehri",
+   "links": 114,
+   "value": 2824000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Ohotsk Denizi"
+   ],
+   "country": [
+    "Rusya",
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q45403",
+   "label": "Brahmaputra Nehri",
+   "links": 113,
+   "value": 2900000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Ganj Nehri"
+   ],
+   "country": [
+    "Bangladeş",
+    "Hindistan",
+    "Nepal",
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q46841",
+   "label": "Lena Nehri",
+   "links": 112,
+   "value": 4294000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Laptev Denizi"
+   ],
+   "country": [
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q80240",
+   "label": "Ural Nehri",
+   "links": 112,
+   "value": 2428000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Hazar Denizi"
+   ],
+   "country": [
+    "Kazakistan",
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q973",
+   "label": "Obi Nehri",
+   "links": 112,
+   "value": 3650000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Kara Denizi"
+   ],
+   "country": [
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q1229",
+   "label": "Don Nehri",
+   "links": 109,
+   "value": 1870000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Azak Denizi"
+   ],
+   "country": [
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q5419",
+   "label": "Missouri Nehri",
+   "links": 109,
+   "value": 3726000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Mississippi Nehri"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ]
+  },
+  {
+   "qid": "Q1469",
+   "label": "Loire Nehri",
+   "links": 108,
+   "value": 1006000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Biskay Körfezi"
+   ],
+   "country": [
+    "Fransa"
+   ]
+  },
+  {
+   "qid": "Q643",
+   "label": "Po Nehri",
+   "links": 108,
+   "value": 652000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Adriyatik Denizi"
+   ],
+   "country": [
+    "İtalya"
+   ]
+  },
+  {
+   "qid": "Q552",
+   "label": "Oder",
+   "links": 107,
+   "value": 742000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Baltık Denizi",
+    "Szczecin Lagünü"
+   ],
+   "country": [
+    "Almanya",
+    "Polonya",
+    "Çekya"
+   ]
+  },
+  {
+   "qid": "Q552",
+   "label": "Oder",
+   "links": 107,
+   "value": 854000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "mouth": [
+    "Baltık Denizi",
+    "Szczecin Lagünü"
+   ],
+   "country": [
+    "Almanya",
+    "Polonya",
+    "Çekya"
+   ]
+  },
+  {
+   "qid": "Q602",
+   "label": "Rhône Nehri",
+   "links": 107,
+   "value": 812000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Akdeniz"
+   ],
+   "country": [
+    "Fransa",
+    "İsviçre"
+   ]
+  },
+  {
+   "qid": "Q131210",
+   "label": "Dinyester",
+   "links": 105,
+   "value": 1352000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Dinyester Limanı"
+   ],
+   "country": [
+    "Moldova",
+    "Transdinyester",
+    "Ukrayna"
+   ]
+  },
+  {
+   "qid": "Q134750",
+   "label": "Saint Lawrence Nehri",
+   "links": 104,
+   "value": 1197000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Saint Lawrence Körfezi"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri",
+    "Kanada"
+   ]
+  },
+  {
+   "qid": "Q134750",
+   "label": "Saint Lawrence Nehri",
+   "links": 104,
+   "value": 3058000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Saint Lawrence Körfezi"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri",
+    "Kanada"
+   ]
+  },
+  {
+   "qid": "Q13712",
+   "label": "Tiber Nehri",
+   "links": 104,
+   "value": 405000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Tiren Denizi"
+   ],
+   "country": [
+    "İtalya"
+   ]
+  },
+  {
+   "qid": "Q78707",
+   "label": "Yenisey",
+   "links": 104,
+   "value": 3487000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Kara Denizi",
+    "Yenisey Körfezi"
+   ],
+   "country": [
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q8493",
+   "label": "Ceyhun",
+   "links": 103,
+   "value": 2620000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Güney Aral Gölü"
+   ],
+   "country": [
+    "Afganistan",
+    "Tacikistan",
+    "Türkmenistan",
+    "Özbekistan"
+   ]
+  },
+  {
+   "qid": "Q14294",
+   "label": "Tejo Nehri",
+   "links": 102,
+   "value": 1007000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Atlas Okyanusu"
+   ],
+   "country": [
+    "Portekiz",
+    "İspanya"
+   ]
+  },
+  {
+   "qid": "Q131792",
+   "label": "Orinoco",
+   "links": 101,
+   "value": 2140000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Atlas Okyanusu"
+   ],
+   "country": [
+    "Kolombiya",
+    "Venezuela"
+   ]
+  },
+  {
+   "qid": "Q1265",
+   "label": "Kolorado Nehri",
+   "links": 100,
+   "value": 2334000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "California Körfezi"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri",
+    "Meksika"
+   ]
+  },
+  {
+   "qid": "Q132726",
+   "label": "Yamuna Nehri",
+   "links": 100,
+   "value": 1376000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Ganj Nehri"
+   ],
+   "country": [
+    "Hindistan"
+   ]
+  },
+  {
+   "qid": "Q645",
+   "label": "Neva Nehri",
+   "links": 97,
+   "value": 74000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "mouth": [
+    "Neva Körfezi"
+   ],
+   "country": [
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q645",
+   "label": "Neva Nehri",
+   "links": 97,
+   "value": 74674.67,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Neva Körfezi"
+   ],
+   "country": [
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q128102",
+   "label": "İrtiş Nehri",
+   "links": 96,
+   "value": 4248000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Obi Nehri"
+   ],
+   "country": [
+    "Kazakistan",
+    "Rusya",
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q882739",
+   "label": "Mavi Nil",
+   "links": 95,
+   "value": 1783000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Nil"
+   ],
+   "country": [
+    "Etiyopya",
+    "Sudan"
+   ]
+  },
+  {
+   "qid": "Q104437",
+   "label": "Yukon Nehri",
+   "links": 94,
+   "value": 3190000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Bering Denizi"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri",
+    "Kanada"
+   ]
+  },
+  {
+   "qid": "Q41986",
+   "label": "Maas Nehri",
+   "links": 94,
+   "value": 950000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Kuzey Denizi"
+   ],
+   "country": [
+    "Belçika",
+    "Fransa",
+    "Hollanda"
+   ]
+  },
+  {
+   "qid": "Q483159",
+   "label": "Seyhun",
+   "links": 94,
+   "value": 2212000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Kuzey Aral Gölü"
+   ],
+   "country": [
+    "Kazakistan",
+    "Kırgızistan",
+    "Tacikistan",
+    "Özbekistan"
+   ]
+  },
+  {
+   "qid": "Q8197",
+   "label": "Daugava Nehri",
+   "links": 94,
+   "value": 1020000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Riga Körfezi"
+   ],
+   "country": [
+    "Belarus",
+    "Letonya",
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q10965",
+   "label": "Ebro",
+   "links": 91,
+   "value": 910000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Akdeniz"
+   ],
+   "country": [
+    "İspanya"
+   ]
+  },
+  {
+   "qid": "Q160636",
+   "label": "Rio Grande",
+   "links": 91,
+   "value": 3051000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Meksika Körfezi"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri",
+    "Meksika"
+   ]
+  },
+  {
+   "qid": "Q2251",
+   "label": "Kolumbiya Nehri",
+   "links": 91,
+   "value": 2000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Büyük Okyanus"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri",
+    "Kanada"
+   ]
+  },
+  {
+   "qid": "Q3140",
+   "label": "Hudson Nehri",
+   "links": 91,
+   "value": 492000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Yukarı New York Körfezi"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ]
+  },
+  {
+   "qid": "Q1670",
+   "label": "Main",
+   "links": 90,
+   "value": 524000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Ren Nehri"
+   ],
+   "country": [
+    "Almanya"
+   ]
+  },
+  {
+   "qid": "Q173017",
+   "label": "Limpopo Nehri",
+   "links": 90,
+   "value": 1750000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Hint Okyanusu"
+   ],
+   "country": [
+    "Botsvana",
+    "Güney Afrika",
+    "Mozambik",
+    "Zimbabve"
+   ]
+  },
+  {
+   "qid": "Q127892",
+   "label": "Paraná Nehri",
+   "links": 89,
+   "value": 4880000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Río de la Plata"
+   ],
+   "country": [
+    "Arjantin",
+    "Brezilya",
+    "Paraguay"
+   ]
+  },
+  {
+   "qid": "Q14299",
+   "label": "Douro Nehri",
+   "links": 89,
+   "value": 897000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Atlas Okyanusu"
+   ],
+   "country": [
+    "Portekiz",
+    "İspanya"
+   ]
+  },
+  {
+   "qid": "Q4814791",
+   "label": "Beyaz Nil",
+   "links": 89,
+   "value": 2620000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Nil"
+   ],
+   "country": [
+    "Güney Sudan",
+    "Kongo Demokratik Cumhuriyeti",
+    "Ruanda",
+    "Sudan",
+    "Tanzanya",
+    "Uganda"
+   ]
+  },
+  {
+   "qid": "Q4915",
+   "label": "Ohio Nehri",
+   "links": 89,
+   "value": 1579000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Mississippi Nehri"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ]
+  },
+  {
+   "qid": "Q134350",
+   "label": "Tisza Nehri",
+   "links": 88,
+   "value": 966000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Tuna"
+   ],
+   "country": [
+    "Macaristan",
+    "Romanya",
+    "Slovakya",
+    "Sırbistan",
+    "Ukrayna"
+   ]
+  },
+  {
+   "qid": "Q1667",
+   "label": "Moselle Nehri",
+   "links": 88,
+   "value": 544000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Ren Nehri"
+   ],
+   "country": [
+    "Almanya",
+    "Fransa",
+    "Lüksemburg"
+   ]
+  },
+  {
+   "qid": "Q181475",
+   "label": "Turuncu Nehir",
+   "links": 88,
+   "value": 2200000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Atlas Okyanusu"
+   ],
+   "country": [
+    "Güney Afrika",
+    "Lesotho",
+    "Namibya"
+   ]
+  },
+  {
+   "qid": "Q183078",
+   "label": "Murray Nehri",
+   "links": 88,
+   "value": 2508000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "mouth": [
+    "Hint Okyanusu"
+   ],
+   "country": [
+    "Avustralya"
+   ]
+  },
+  {
+   "qid": "Q183078",
+   "label": "Murray Nehri",
+   "links": 88,
+   "value": 2530000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Hint Okyanusu"
+   ],
+   "country": [
+    "Avustralya"
+   ]
+  },
+  {
+   "qid": "Q35827",
+   "label": "Río de la Plata",
+   "links": 88,
+   "value": 290000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Atlas Okyanusu"
+   ],
+   "country": [
+    "Arjantin",
+    "Uruguay"
+   ]
+  },
+  {
+   "qid": "Q131574",
+   "label": "Vltava",
+   "links": 87,
+   "value": 376979.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Elbe Nehri"
+   ],
+   "country": [
+    "Çekya"
+   ]
+  },
+  {
+   "qid": "Q131574",
+   "label": "Vltava",
+   "links": 87,
+   "value": 430000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "mouth": [
+    "Elbe Nehri"
+   ],
+   "country": [
+    "Çekya"
+   ]
+  },
+  {
+   "qid": "Q191314",
+   "label": "Godavari Nehri",
+   "links": 87,
+   "value": 1465000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Bengal Körfezi"
+   ],
+   "country": [
+    "Hindistan"
+   ]
+  },
+  {
+   "qid": "Q175117",
+   "label": "Moskova Nehri",
+   "links": 86,
+   "value": 473000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Oka Nehri"
+   ],
+   "country": [
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q26076",
+   "label": "İravadi Nehri",
+   "links": 86,
+   "value": 2170000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Andaman Denizi"
+   ],
+   "country": [
+    "Myanmar"
+   ]
+  },
+  {
+   "qid": "Q3569",
+   "label": "Sénégal Nehri",
+   "links": 85,
+   "value": 1050000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Atlas Okyanusu"
+   ],
+   "country": [
+    "Mali",
+    "Moritanya",
+    "Senegal"
+   ]
+  },
+  {
+   "qid": "Q162737",
+   "label": "Angara Nehri",
+   "links": 84,
+   "value": 1779000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Yenisey"
+   ],
+   "country": [
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q18278",
+   "label": "Uruguay Nehri",
+   "links": 84,
+   "value": 1790000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Río de la Plata"
+   ],
+   "country": [
+    "Arjantin",
+    "Brezilya",
+    "Uruguay"
+   ]
+  },
+  {
+   "qid": "Q14383",
+   "label": "Sava",
+   "links": 83,
+   "value": 945000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Tuna"
+   ],
+   "country": [
+    "Bosna Hersek",
+    "Hırvatistan",
+    "Slovenya",
+    "Sırbistan"
+   ]
+  },
+  {
+   "qid": "Q160819",
+   "label": "Gambiya Nehri",
+   "links": 83,
+   "value": 1130000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Atlas Okyanusu"
+   ],
+   "country": [
+    "Gambiya",
+    "Gine",
+    "Senegal"
+   ]
+  },
+  {
+   "qid": "Q5077",
+   "label": "Garonne Nehri",
+   "links": 83,
+   "value": 647000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Gironde Halici"
+   ],
+   "country": [
+    "Fransa",
+    "İspanya"
+   ]
+  },
+  {
+   "qid": "Q79082",
+   "label": "Kama Nehri",
+   "links": 83,
+   "value": 1805000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Volga Nehri"
+   ],
+   "country": [
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q118771",
+   "label": "Rio Negro",
+   "links": 82,
+   "value": 2250000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Amazon Nehri"
+   ],
+   "country": [
+    "Brezilya",
+    "Kolombiya",
+    "Venezuela"
+   ]
+  },
+  {
+   "qid": "Q172089",
+   "label": "Oka Nehri",
+   "links": 82,
+   "value": 1500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Volga Nehri"
+   ],
+   "country": [
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q179396",
+   "label": "Paraguay Nehri",
+   "links": 82,
+   "value": 2550000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Paraná Nehri"
+   ],
+   "country": [
+    "Arjantin",
+    "Bolivya",
+    "Brezilya",
+    "Paraguay"
+   ]
+  },
+  {
+   "qid": "Q179396",
+   "label": "Paraguay Nehri",
+   "links": 82,
+   "value": 2621000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "mouth": [
+    "Paraná Nehri"
+   ],
+   "country": [
+    "Arjantin",
+    "Bolivya",
+    "Brezilya",
+    "Paraguay"
+   ]
+  },
+  {
+   "qid": "Q193499",
+   "label": "Krişna Nehri",
+   "links": 82,
+   "value": 1400000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Bengal Körfezi"
+   ],
+   "country": [
+    "Hindistan"
+   ]
+  },
+  {
+   "qid": "Q118251",
+   "label": "Madeira Nehri",
+   "links": 81,
+   "value": 1450000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Amazon Nehri"
+   ],
+   "country": [
+    "Bolivya",
+    "Brezilya"
+   ]
+  },
+  {
+   "qid": "Q156557",
+   "label": "Kura Nehri",
+   "links": 81,
+   "value": 1360000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Hazar Denizi"
+   ],
+   "country": [
+    "Azerbaycan",
+    "Gürcistan",
+    "Türkiye"
+   ]
+  },
+  {
+   "qid": "Q179751",
+   "label": "Aras Nehri",
+   "links": 81,
+   "value": 1072000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Kura Nehri"
+   ],
+   "country": [
+    "Azerbaycan",
+    "Ermenistan",
+    "Türkiye",
+    "İran"
+   ]
+  },
+  {
+   "qid": "Q3411",
+   "label": "Mackenzie Nehri",
+   "links": 81,
+   "value": 1738000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Beaufort Denizi"
+   ],
+   "country": [
+    "Kanada"
+   ]
+  },
+  {
+   "qid": "Q8168",
+   "label": "Peçora Nehri",
+   "links": 81,
+   "value": 1809000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Peçora Denizi"
+   ],
+   "country": [
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q14309",
+   "label": "Vadilkebir",
+   "links": 80,
+   "value": 657000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Cádiz Körfezi"
+   ],
+   "country": [
+    "İspanya"
+   ]
+  },
+  {
+   "qid": "Q14369",
+   "label": "İnn Nehri",
+   "links": 80,
+   "value": 517000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Tuna"
+   ],
+   "country": [
+    "Almanya",
+    "Avusturya",
+    "İsviçre"
+   ]
+  },
+  {
+   "qid": "Q5622",
+   "label": "Neman Nehri",
+   "links": 80,
+   "value": 937000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Baltık Denizi"
+   ],
+   "country": [
+    "Belarus",
+    "Litvanya",
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q188773",
+   "label": "Okavango Nehri",
+   "links": 79,
+   "value": 1600000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Okavango Deltası"
+   ],
+   "country": [
+    "Angola",
+    "Botsvana",
+    "Namibya"
+   ]
+  },
+  {
+   "qid": "Q191829",
+   "label": "Magdalena Nehri",
+   "links": 79,
+   "value": 1528000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Karayip Denizi"
+   ],
+   "country": [
+    "Kolombiya"
+   ]
+  },
+  {
+   "qid": "Q37620",
+   "label": "Schelde Nehri",
+   "links": 79,
+   "value": 355000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Kuzey Denizi"
+   ],
+   "country": [
+    "Belçika",
+    "Fransa",
+    "Hollanda"
+   ]
+  },
+  {
+   "qid": "Q78879",
+   "label": "Kolıma",
+   "links": 79,
+   "value": 2129000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Doğu Sibirya Denizi"
+   ],
+   "country": [
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q13696",
+   "label": "Adige Nehri",
+   "links": 78,
+   "value": 410000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Adriyatik Denizi"
+   ],
+   "country": [
+    "İtalya"
+   ]
+  },
+  {
+   "qid": "Q166966",
+   "label": "Şattülarap",
+   "links": 78,
+   "value": 200000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Basra Körfezi"
+   ],
+   "country": [
+    "Irak",
+    "İran"
+   ]
+  },
+  {
+   "qid": "Q1673",
+   "label": "Neckar Nehri",
+   "links": 78,
+   "value": 362000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Ren Nehri"
+   ],
+   "country": [
+    "Almanya"
+   ]
+  },
+  {
+   "qid": "Q192415",
+   "label": "Volta Nehri",
+   "links": 78,
+   "value": 1500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Gine Körfezi"
+   ],
+   "country": [
+    "Burkina Faso",
+    "Gana"
+   ]
+  },
+  {
+   "qid": "Q171649",
+   "label": "Ubangi Nehri",
+   "links": 77,
+   "value": 1060000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Kongo Nehri"
+   ],
+   "country": [
+    "Kongo",
+    "Kongo Demokratik Cumhuriyeti",
+    "Orta Afrika Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q8187",
+   "label": "Kuzey Dvina Nehri",
+   "links": 77,
+   "value": 744000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Dvina Körfezi"
+   ],
+   "country": [
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q118850",
+   "label": "Chao Phraya",
+   "links": 76,
+   "value": 372000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Tayland Körfezi"
+   ],
+   "country": [
+    "Tayland"
+   ]
+  },
+  {
+   "qid": "Q171009",
+   "label": "Drava",
+   "links": 76,
+   "value": 720000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Tuna"
+   ],
+   "country": [
+    "Avusturya",
+    "Hırvatistan",
+    "Macaristan",
+    "Slovenya",
+    "İtalya"
+   ]
+  },
+  {
+   "qid": "Q179444",
+   "label": "Potomac Irmağı",
+   "links": 76,
+   "value": 590000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Chesapeake Körfezi"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ]
+  },
+  {
+   "qid": "Q179444",
+   "label": "Potomac Irmağı",
+   "links": 76,
+   "value": 665000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "mouth": [
+    "Chesapeake Körfezi"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ]
+  },
+  {
+   "qid": "Q216875",
+   "label": "Çenab Nehri",
+   "links": 76,
+   "value": 1974000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [],
+   "country": [
+    "Hindistan",
+    "Pakistan"
+   ]
+  },
+  {
+   "qid": "Q142148",
+   "label": "São Francisco Nehri",
+   "links": 75,
+   "value": 2814000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Atlas Okyanusu"
+   ],
+   "country": [
+    "Brezilya"
+   ]
+  },
+  {
+   "qid": "Q1675",
+   "label": "Aare",
+   "links": 75,
+   "value": 295000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Ren Nehri"
+   ],
+   "country": [
+    "İsviçre"
+   ]
+  },
+  {
+   "qid": "Q1684",
+   "label": "Spree",
+   "links": 75,
+   "value": 382000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Havel"
+   ],
+   "country": [
+    "Almanya"
+   ]
+  },
+  {
+   "qid": "Q201463",
+   "label": "İnci Irmağı",
+   "links": 75,
+   "value": 2400000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Güney Çin Denizi"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q26422",
+   "label": "Saluen",
+   "links": 75,
+   "value": 2815000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Andaman Denizi"
+   ],
+   "country": [
+    "Myanmar",
+    "Tayland",
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q93360",
+   "label": "Bío-Bío Nehri",
+   "links": 75,
+   "value": 380000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Büyük Okyanus"
+   ],
+   "country": [
+    "Şili"
+   ]
+  },
+  {
+   "qid": "Q181482",
+   "label": "Darling Nehri",
+   "links": 74,
+   "value": 1472000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Murray Nehri"
+   ],
+   "country": [
+    "Avustralya"
+   ]
+  },
+  {
+   "qid": "Q82776",
+   "label": "Terek Irmağı",
+   "links": 74,
+   "value": 623000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Hazar Denizi"
+   ],
+   "country": [
+    "Gürcistan",
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q8319",
+   "label": "Arkansas Nehri",
+   "links": 74,
+   "value": 2364000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Mississippi Nehri"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ]
+  },
+  {
+   "qid": "Q106588",
+   "label": "Isar",
+   "links": 73,
+   "value": 291500.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Tuna"
+   ],
+   "country": [
+    "Almanya",
+    "Avusturya"
+   ]
+  },
+  {
+   "qid": "Q1650",
+   "label": "Weser Nehri",
+   "links": 73,
+   "value": 451000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Kuzey Denizi"
+   ],
+   "country": [
+    "Almanya"
+   ]
+  },
+  {
+   "qid": "Q182445",
+   "label": "Prut",
+   "links": 73,
+   "value": 953000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Tuna"
+   ],
+   "country": [
+    "Moldova",
+    "Romanya",
+    "Ukrayna"
+   ]
+  },
+  {
+   "qid": "Q186541",
+   "label": "Kasai Nehri",
+   "links": 73,
+   "value": 2272000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Kongo Nehri"
+   ],
+   "country": [
+    "Angola",
+    "Kongo Demokratik Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q156054",
+   "label": "Tocantins Nehri",
+   "links": 72,
+   "value": 2450000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [],
+   "country": [
+    "Brezilya"
+   ]
+  },
+  {
+   "qid": "Q171675",
+   "label": "Satlec Nehri",
+   "links": 72,
+   "value": 1500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [],
+   "country": [
+    "Hindistan",
+    "Pakistan",
+    "Çin Halk Cumhuriyeti"
+   ]
+  },
+  {
+   "qid": "Q19682",
+   "label": "Severn Nehri",
+   "links": 72,
+   "value": 354000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Bristol Kanalı"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ]
+  },
+  {
+   "qid": "Q201823",
+   "label": "Warta",
+   "links": 72,
+   "value": 808000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Oder"
+   ],
+   "country": [
+    "Polonya"
+   ]
+  },
+  {
+   "qid": "Q204806",
+   "label": "Benue",
+   "links": 72,
+   "value": 1370000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Nijer Nehri"
+   ],
+   "country": [
+    "Kamerun",
+    "Nijerya"
+   ]
+  },
+  {
+   "qid": "Q82207",
+   "label": "İndigirka Nehri",
+   "links": 72,
+   "value": 1726000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Doğu Sibirya Denizi"
+   ],
+   "country": [
+    "Rusya"
+   ]
+  },
+  {
+   "qid": "Q191238",
+   "label": "Donets Nehri",
+   "links": 71,
+   "value": 1053000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Don Nehri"
+   ],
+   "country": [
+    "Rusya",
+    "Ukrayna"
+   ]
+  }
+ ]
+}

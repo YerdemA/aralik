@@ -1,0 +1,679 @@
+{
+ "dataset": "rivers_tr",
+ "description": "Türkiye'den geçen nehirler, uzunluk (P2043)",
+ "property": "P2043",
+ "fetched_at": "2026-10-24T14:22:27+00:00",
+ "rows": [
+  {
+   "qid": "Q34589",
+   "label": "Fırat",
+   "links": 142,
+   "value": 2800000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Şattülarap"
+   ]
+  },
+  {
+   "qid": "Q35591",
+   "label": "Dicle Nehri",
+   "links": 130,
+   "value": 1850000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Şattülarap"
+   ]
+  },
+  {
+   "qid": "Q156557",
+   "label": "Kura Nehri",
+   "links": 81,
+   "value": 1360000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Hazar Denizi"
+   ]
+  },
+  {
+   "qid": "Q179751",
+   "label": "Aras Nehri",
+   "links": 81,
+   "value": 1072000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Kura Nehri"
+   ]
+  },
+  {
+   "qid": "Q257785",
+   "label": "Kızılırmak",
+   "links": 70,
+   "value": 1355000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Karadeniz"
+   ]
+  },
+  {
+   "qid": "Q204347",
+   "label": "Meriç",
+   "links": 63,
+   "value": 490000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Trakya Denizi"
+   ]
+  },
+  {
+   "qid": "Q188871",
+   "label": "Asi Nehri",
+   "links": 60,
+   "value": 571000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Akdeniz"
+   ]
+  },
+  {
+   "qid": "Q211089",
+   "label": "Büyük Menderes Nehri",
+   "links": 53,
+   "value": 548000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Ege Denizi"
+   ]
+  },
+  {
+   "qid": "Q217466",
+   "label": "Sakarya Nehri",
+   "links": 53,
+   "value": 824000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Karadeniz"
+   ]
+  },
+  {
+   "qid": "Q756018",
+   "label": "Zap Suyu",
+   "links": 43,
+   "value": 473000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Dicle Nehri"
+   ]
+  },
+  {
+   "qid": "Q1996981",
+   "label": "Arpaçay",
+   "links": 40,
+   "value": 186000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Aras Nehri"
+   ]
+  },
+  {
+   "qid": "Q70970",
+   "label": "Çoruh Nehri",
+   "links": 38,
+   "value": 438000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Karadeniz"
+   ]
+  },
+  {
+   "qid": "Q731777",
+   "label": "Tunca Nehri",
+   "links": 37,
+   "value": 283000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Meriç"
+   ]
+  },
+  {
+   "qid": "Q1145293",
+   "label": "Yeşilırmak",
+   "links": 36,
+   "value": 519000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Karadeniz"
+   ]
+  },
+  {
+   "qid": "Q913193",
+   "label": "Murat Nehri",
+   "links": 36,
+   "value": 722000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Fırat"
+   ]
+  },
+  {
+   "qid": "Q1351474",
+   "label": "Gediz Nehri",
+   "links": 32,
+   "value": 401000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "İzmir Körfezi"
+   ]
+  },
+  {
+   "qid": "Q910975",
+   "label": "Seyhan Nehri",
+   "links": 32,
+   "value": 560000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Akdeniz"
+   ]
+  },
+  {
+   "qid": "Q1057961",
+   "label": "Ceyhan Nehri",
+   "links": 30,
+   "value": 474000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Akdeniz"
+   ]
+  },
+  {
+   "qid": "Q732201",
+   "label": "Göksu",
+   "links": 29,
+   "value": 260000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Akdeniz"
+   ]
+  },
+  {
+   "qid": "Q2890912",
+   "label": "Mutludere",
+   "links": 28,
+   "value": 112000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Karadeniz"
+   ]
+  },
+  {
+   "qid": "Q2455311",
+   "label": "Kocadere",
+   "links": 26,
+   "value": 147000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Karadeniz"
+   ]
+  },
+  {
+   "qid": "Q387842",
+   "label": "Afrin Çayı",
+   "links": 26,
+   "value": 131000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Asi Nehri"
+   ]
+  },
+  {
+   "qid": "Q922382",
+   "label": "Küçük Menderes",
+   "links": 26,
+   "value": 114000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Ege Denizi"
+   ]
+  },
+  {
+   "qid": "Q923929",
+   "label": "Sart Çayı",
+   "links": 25,
+   "value": 25000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Gediz Nehri"
+   ]
+  },
+  {
+   "qid": "Q385473",
+   "label": "Köprüçay",
+   "links": 24,
+   "value": 183000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Akdeniz"
+   ]
+  },
+  {
+   "qid": "Q153675",
+   "label": "Manavgat Nehri",
+   "links": 23,
+   "value": 93000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Akdeniz"
+   ]
+  },
+  {
+   "qid": "Q1728989",
+   "label": "Karasu Nehri",
+   "links": 23,
+   "value": 470000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Fırat"
+   ]
+  },
+  {
+   "qid": "Q1268444",
+   "label": "Biga Çayı",
+   "links": 21,
+   "value": 80000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Marmara Denizi"
+   ]
+  },
+  {
+   "qid": "Q3033332",
+   "label": "Sayur Çayı",
+   "links": 20,
+   "value": 108000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Fırat"
+   ]
+  },
+  {
+   "qid": "Q3515829",
+   "label": "Berdan Çayı",
+   "links": 20,
+   "value": 124000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Akdeniz"
+   ]
+  },
+  {
+   "qid": "Q396585",
+   "label": "Ergene",
+   "links": 20,
+   "value": 283000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Meriç"
+   ]
+  },
+  {
+   "qid": "Q2004311",
+   "label": "Batman Çayı",
+   "links": 18,
+   "value": 115000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Dicle Nehri"
+   ]
+  },
+  {
+   "qid": "Q1752576",
+   "label": "Maçahel Suyu",
+   "links": 17,
+   "value": 37000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Çoruh Nehri"
+   ]
+  },
+  {
+   "qid": "Q2488636",
+   "label": "Karamenderes Nehri",
+   "links": 17,
+   "value": 110000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Çanakkale Boğazı"
+   ]
+  },
+  {
+   "qid": "Q421630",
+   "label": "Aksu Çayı",
+   "links": 17,
+   "value": 162000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Akdeniz"
+   ]
+  },
+  {
+   "qid": "Q1436746",
+   "label": "Bakırçay",
+   "links": 16,
+   "value": 129000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Çandarlı Körfezi"
+   ]
+  },
+  {
+   "qid": "Q2720896",
+   "label": "Porsuk Çayı",
+   "links": 16,
+   "value": 448000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Sakarya Nehri"
+   ]
+  },
+  {
+   "qid": "Q3045328",
+   "label": "Kelkit Çayı",
+   "links": 16,
+   "value": 356000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Yeşilırmak"
+   ]
+  },
+  {
+   "qid": "Q3181444",
+   "label": "Simav Çayı",
+   "links": 16,
+   "value": 321000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Mustafakemalpaşa Çayı"
+   ]
+  },
+  {
+   "qid": "Q2850284",
+   "label": "Ankara Çayı",
+   "links": 14,
+   "value": 140000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Sakarya Nehri"
+   ]
+  },
+  {
+   "qid": "Q3021654",
+   "label": "Delice Irmağı",
+   "links": 14,
+   "value": 426000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Kızılırmak"
+   ]
+  },
+  {
+   "qid": "Q3775655",
+   "label": "Limonlu Çayı",
+   "links": 14,
+   "value": 60000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Akdeniz"
+   ]
+  },
+  {
+   "qid": "Q894622",
+   "label": "Botan Çayı",
+   "links": 14,
+   "value": 268000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Dicle Nehri"
+   ]
+  },
+  {
+   "qid": "Q2560421",
+   "label": "Zamantı Nehri",
+   "links": 13,
+   "value": 308000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Seyhan Nehri"
+   ]
+  },
+  {
+   "qid": "Q2886191",
+   "label": "Bartın Çayı",
+   "links": 13,
+   "value": 100000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Karadeniz"
+   ]
+  },
+  {
+   "qid": "Q4896971",
+   "label": "Gökırmak",
+   "links": 12,
+   "value": 221000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Kızılırmak"
+   ]
+  },
+  {
+   "qid": "Q18689526",
+   "label": "Terme Çayı",
+   "links": 11,
+   "value": 35000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Karadeniz"
+   ]
+  },
+  {
+   "qid": "Q3327955",
+   "label": "Munzur Çayı",
+   "links": 11,
+   "value": 144000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Peri Çayı"
+   ]
+  },
+  {
+   "qid": "Q18690050",
+   "label": "Eşen Çayı",
+   "links": 10,
+   "value": 120000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Akdeniz"
+   ]
+  },
+  {
+   "qid": "Q3532553",
+   "label": "Tortum Çayı",
+   "links": 10,
+   "value": 112000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Oltu Çayı"
+   ]
+  },
+  {
+   "qid": "Q4213436",
+   "label": "Karadere",
+   "links": 10,
+   "value": 70000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Karadeniz"
+   ]
+  },
+  {
+   "qid": "Q4701849",
+   "label": "Aksu Deresi",
+   "links": 10,
+   "value": 60000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Karadeniz"
+   ]
+  },
+  {
+   "qid": "Q4896922",
+   "label": "Çekerek Çayı",
+   "links": 10,
+   "value": 300000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Yeşilırmak"
+   ]
+  },
+  {
+   "qid": "Q770193",
+   "label": "Dim Çayı",
+   "links": 10,
+   "value": 60000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Akdeniz"
+   ]
+  },
+  {
+   "qid": "Q12809886",
+   "label": "Harşit Çayı",
+   "links": 9,
+   "value": 137000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Karadeniz"
+   ]
+  },
+  {
+   "qid": "Q12809886",
+   "label": "Harşit Çayı",
+   "links": 9,
+   "value": 143000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Karadeniz"
+   ]
+  },
+  {
+   "qid": "Q13055247",
+   "label": "Oltu Çayı",
+   "links": 9,
+   "value": 144000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Çoruh Nehri"
+   ]
+  },
+  {
+   "qid": "Q2413236",
+   "label": "Nilüfer Çayı",
+   "links": 9,
+   "value": 203000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Simav Çayı"
+   ]
+  },
+  {
+   "qid": "Q18676664",
+   "label": "Dalaman Çayı",
+   "links": 8,
+   "value": 229000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Akdeniz"
+   ]
+  },
+  {
+   "qid": "Q20583371",
+   "label": "Kotur Çayı",
+   "links": 8,
+   "value": 170000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Aras Nehri"
+   ]
+  },
+  {
+   "qid": "Q56629",
+   "label": "Posof Çayı",
+   "links": 8,
+   "value": 63000.0,
+   "rank": "normal",
+   "value_year": null,
+   "mouth": [
+    "Kura Nehri"
+   ]
+  }
+ ]
+}

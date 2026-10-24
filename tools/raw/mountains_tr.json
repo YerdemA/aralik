@@ -1,0 +1,673 @@
+{
+ "dataset": "mountains_tr",
+ "description": "Türkiye'deki dağlar, yükseklik (P2044)",
+ "property": "P2044",
+ "fetched_at": "2026-10-24T14:11:45+00:00",
+ "rows": [
+  {
+   "qid": "Q72303",
+   "label": "Ağrı Dağı",
+   "links": 112,
+   "value": 5137.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Ağrı"
+   ]
+  },
+  {
+   "qid": "Q207917",
+   "label": "Nemrut Dağı",
+   "links": 61,
+   "value": 2150.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Adıyaman"
+   ]
+  },
+  {
+   "qid": "Q126804",
+   "label": "Erciyes Dağı",
+   "links": 49,
+   "value": 3916.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Kayseri"
+   ]
+  },
+  {
+   "qid": "Q925688",
+   "label": "Uludağ",
+   "links": 38,
+   "value": 2542.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Bursa"
+   ]
+  },
+  {
+   "qid": "Q1302768",
+   "label": "Hasandağı",
+   "links": 37,
+   "value": 3268.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Aksaray"
+   ]
+  },
+  {
+   "qid": "Q948747",
+   "label": "Nemrut Dağı",
+   "links": 33,
+   "value": 3050.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Bitlis"
+   ]
+  },
+  {
+   "qid": "Q1433508",
+   "label": "Süphan Dağı",
+   "links": 30,
+   "value": 4058.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Bitlis"
+   ]
+  },
+  {
+   "qid": "Q1641126",
+   "label": "Kaçkar Dağı",
+   "links": 27,
+   "value": 3932.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Rize"
+   ]
+  },
+  {
+   "qid": "Q1143135",
+   "label": "Cudi Dağı",
+   "links": 26,
+   "value": 2089.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Şırnak"
+   ]
+  },
+  {
+   "qid": "Q1143135",
+   "label": "Cudi Dağı",
+   "links": 26,
+   "value": 2118.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Şırnak"
+   ]
+  },
+  {
+   "qid": "Q532698",
+   "label": "Spil Dağı",
+   "links": 24,
+   "value": 1513.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Manisa"
+   ]
+  },
+  {
+   "qid": "Q941456",
+   "label": "Palandöken Dağı",
+   "links": 21,
+   "value": 3174.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Erzurum",
+    "Palandöken"
+   ]
+  },
+  {
+   "qid": "Q941456",
+   "label": "Palandöken Dağı",
+   "links": 21,
+   "value": 3271.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Erzurum",
+    "Palandöken"
+   ]
+  },
+  {
+   "qid": "Q1125445",
+   "label": "Tendürek Dağı",
+   "links": 20,
+   "value": 3533.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Ağrı",
+    "Van"
+   ]
+  },
+  {
+   "qid": "Q1402638",
+   "label": "Mahya Dağı",
+   "links": 19,
+   "value": 1031.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": []
+  },
+  {
+   "qid": "Q3022142",
+   "label": "Demirkazık Dağı",
+   "links": 18,
+   "value": 3756.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Niğde"
+   ]
+  },
+  {
+   "qid": "Q383473",
+   "label": "Kel Dağı",
+   "links": 18,
+   "value": 1717.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": []
+  },
+  {
+   "qid": "Q383473",
+   "label": "Kel Dağı",
+   "links": 18,
+   "value": 1736.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": []
+  },
+  {
+   "qid": "Q2388359",
+   "label": "Tahtalı Dağı",
+   "links": 17,
+   "value": 2366.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Antalya"
+   ]
+  },
+  {
+   "qid": "Q611484",
+   "label": "Honaz Dağı",
+   "links": 17,
+   "value": 2528.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": []
+  },
+  {
+   "qid": "Q1091987",
+   "label": "Cilo Dağı",
+   "links": 16,
+   "value": 4116.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Hakkari"
+   ]
+  },
+  {
+   "qid": "Q4278782",
+   "label": "Küçük Ağrı Dağı",
+   "links": 16,
+   "value": 3925.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Iğdır"
+   ]
+  },
+  {
+   "qid": "Q1559343",
+   "label": "Göllü Dağ",
+   "links": 15,
+   "value": 2143.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Çiftlik (ilçe)"
+   ]
+  },
+  {
+   "qid": "Q6018069",
+   "label": "Artos Dağı",
+   "links": 15,
+   "value": 3554.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Van"
+   ]
+  },
+  {
+   "qid": "Q7878579",
+   "label": "Bozdağlar",
+   "links": 14,
+   "value": 2157.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Manisa",
+    "İzmir"
+   ]
+  },
+  {
+   "qid": "Q4837427",
+   "label": "Babadağ (dağ)",
+   "links": 13,
+   "value": 1969.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Muğla"
+   ]
+  },
+  {
+   "qid": "Q6920390",
+   "label": "Davraz Dağı",
+   "links": 13,
+   "value": 2637.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Isparta"
+   ]
+  },
+  {
+   "qid": "Q4180162",
+   "label": "Karapınar Düzlüğü",
+   "links": 12,
+   "value": 1302.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Karapınar"
+   ]
+  },
+  {
+   "qid": "Q733877",
+   "label": "Karadağ",
+   "links": 12,
+   "value": 2288.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": []
+  },
+  {
+   "qid": "Q962205",
+   "label": "Yamanlar Dağı",
+   "links": 12,
+   "value": 1076.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "İzmir"
+   ]
+  },
+  {
+   "qid": "Q15856901",
+   "label": "Bingöl Dağları",
+   "links": 11,
+   "value": 3250.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": []
+  },
+  {
+   "qid": "Q6596128",
+   "label": "Kösedağ",
+   "links": 11,
+   "value": 3445.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Ağrı",
+    "Eleşkirt"
+   ]
+  },
+  {
+   "qid": "Q6920664",
+   "label": "Erek Dağı",
+   "links": 10,
+   "value": 3250.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Van"
+   ]
+  },
+  {
+   "qid": "Q1434038",
+   "label": "Uludoruk",
+   "links": 9,
+   "value": 4135.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": []
+  },
+  {
+   "qid": "Q345086",
+   "label": "Acıgöl-Nevşehir",
+   "links": 9,
+   "value": 1683.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": []
+  },
+  {
+   "qid": "Q4175805",
+   "label": "Kula Tepeleri",
+   "links": 9,
+   "value": 750.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Kula"
+   ]
+  },
+  {
+   "qid": "Q6923703",
+   "label": "Sis Dağı",
+   "links": 9,
+   "value": 2182.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Görele"
+   ]
+  },
+  {
+   "qid": "Q11936592",
+   "label": "Aydın Dağları",
+   "links": 8,
+   "value": 1031.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Aydın",
+    "Ege Bölgesi"
+   ]
+  },
+  {
+   "qid": "Q11936592",
+   "label": "Aydın Dağları",
+   "links": 8,
+   "value": 1828.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Aydın",
+    "Ege Bölgesi"
+   ]
+  },
+  {
+   "qid": "Q30621465",
+   "label": "Medetsiz Dağı",
+   "links": 8,
+   "value": 3524.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Mersin"
+   ]
+  },
+  {
+   "qid": "Q4817974",
+   "label": "Aydos Tepesi",
+   "links": 8,
+   "value": 537.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": []
+  },
+  {
+   "qid": "Q6027083",
+   "label": "Bilican Dağları",
+   "links": 7,
+   "value": 2322.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Muş"
+   ]
+  },
+  {
+   "qid": "Q6922413",
+   "label": "Nif Dağı",
+   "links": 7,
+   "value": 1510.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Kemalpaşa",
+    "İzmir"
+   ]
+  },
+  {
+   "qid": "Q19611707",
+   "label": "Kızılkaya Dağı",
+   "links": 6,
+   "value": 3767.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": []
+  },
+  {
+   "qid": "Q19611707",
+   "label": "Kızılkaya Dağı",
+   "links": 6,
+   "value": 3771.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": []
+  },
+  {
+   "qid": "Q24680949",
+   "label": "Heva",
+   "links": 5,
+   "value": 2812.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Acara",
+    "Artvin"
+   ]
+  },
+  {
+   "qid": "Q61077697",
+   "label": "Ahır Dağı",
+   "links": 5,
+   "value": 450.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Kahramanmaraş"
+   ]
+  },
+  {
+   "qid": "Q954620",
+   "label": "Herekol Dağı",
+   "links": 5,
+   "value": 2838.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": []
+  },
+  {
+   "qid": "Q31503259",
+   "label": "Raman Dağı",
+   "links": 4,
+   "value": 1263.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Batman"
+   ]
+  },
+  {
+   "qid": "Q31565136",
+   "label": "Kargapazarı Dağları",
+   "links": 4,
+   "value": 2832.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Erzurum"
+   ]
+  },
+  {
+   "qid": "Q416948",
+   "label": "Akdağ (Denizli)",
+   "links": 4,
+   "value": 2449.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Afyonkarahisar",
+    "Denizli"
+   ]
+  },
+  {
+   "qid": "Q6019333",
+   "label": "Soğanlı Dağı",
+   "links": 4,
+   "value": 2885.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": []
+  },
+  {
+   "qid": "Q6043205",
+   "label": "Sülbüs Dağı",
+   "links": 4,
+   "value": 2884.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Bingöl"
+   ]
+  },
+  {
+   "qid": "Q31524766",
+   "label": "Ekecik Dağı",
+   "links": 3,
+   "value": 2133.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Aksaray"
+   ]
+  },
+  {
+   "qid": "Q6013357",
+   "label": "Düldül Dağı",
+   "links": 3,
+   "value": 2448.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Osmaniye"
+   ]
+  },
+  {
+   "qid": "Q6024573",
+   "label": "Arnos Dağı",
+   "links": 3,
+   "value": 3550.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Van"
+   ]
+  },
+  {
+   "qid": "Q6052814",
+   "label": "Gavurdağları",
+   "links": 3,
+   "value": 2720.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Erzurum"
+   ]
+  },
+  {
+   "qid": "Q6076389",
+   "label": "Tekeli Dağı",
+   "links": 3,
+   "value": 2624.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Almus",
+    "Doğanşar"
+   ]
+  },
+  {
+   "qid": "Q896117",
+   "label": "Bozdağ",
+   "links": 3,
+   "value": 2419.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": []
+  },
+  {
+   "qid": "Q31189585",
+   "label": "Dibek Dağı",
+   "links": 2,
+   "value": 2506.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Hatay"
+   ]
+  },
+  {
+   "qid": "Q6006306",
+   "label": "Mescit Dağı",
+   "links": 2,
+   "value": 3239.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": []
+  },
+  {
+   "qid": "Q108602823",
+   "label": "Akyarlar",
+   "links": 1,
+   "value": 172.0,
+   "rank": "normal",
+   "value_year": null,
+   "place": [
+    "Akyarlar",
+    "Bodrum",
+    "Muğla"
+   ]
+  }
+ ]
+}

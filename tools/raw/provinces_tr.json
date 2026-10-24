@@ -1,0 +1,2428 @@
+{
+ "dataset": "provinces_tr",
+ "description": "Türkiye illeri, nüfus (P1082)",
+ "property": "P1082",
+ "fetched_at": "2026-10-24T14:26:45+00:00",
+ "rows": [
+  {
+   "qid": "Q40249",
+   "label": "Antalya",
+   "links": 98,
+   "value": 2418651.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "07"
+   ]
+  },
+  {
+   "qid": "Q40249",
+   "label": "Antalya",
+   "links": 98,
+   "value": 2426356.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "07"
+   ]
+  },
+  {
+   "qid": "Q40249",
+   "label": "Antalya",
+   "links": 98,
+   "value": 2722103.0,
+   "rank": "normal",
+   "value_year": 2024,
+   "plate": [
+    "07"
+   ]
+  },
+  {
+   "qid": "Q40549",
+   "label": "Adana",
+   "links": 95,
+   "value": 2059893.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "01"
+   ]
+  },
+  {
+   "qid": "Q40549",
+   "label": "Adana",
+   "links": 95,
+   "value": 2183167.0,
+   "rank": "normal",
+   "value_year": 2015,
+   "plate": [
+    "01"
+   ]
+  },
+  {
+   "qid": "Q40549",
+   "label": "Adana",
+   "links": 95,
+   "value": 2220125.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "01"
+   ]
+  },
+  {
+   "qid": "Q43690",
+   "label": "Bursa",
+   "links": 95,
+   "value": 2550645.0,
+   "rank": "normal",
+   "value_year": 2009,
+   "plate": [
+    "16"
+   ]
+  },
+  {
+   "qid": "Q43690",
+   "label": "Bursa",
+   "links": 95,
+   "value": 2894954.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "16"
+   ]
+  },
+  {
+   "qid": "Q43690",
+   "label": "Bursa",
+   "links": 95,
+   "value": 2994521.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "16"
+   ]
+  },
+  {
+   "qid": "Q43745",
+   "label": "Artvin",
+   "links": 94,
+   "value": 158964.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "08"
+   ]
+  },
+  {
+   "qid": "Q43745",
+   "label": "Artvin",
+   "links": 94,
+   "value": 164759.0,
+   "rank": "normal",
+   "value_year": 2010,
+   "plate": [
+    "08"
+   ]
+  },
+  {
+   "qid": "Q43745",
+   "label": "Artvin",
+   "links": 94,
+   "value": 174010.0,
+   "rank": "preferred",
+   "value_year": 2018,
+   "plate": [
+    "08"
+   ]
+  },
+  {
+   "qid": "Q47117",
+   "label": "Balıkesir",
+   "links": 92,
+   "value": 1175324.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "10"
+   ]
+  },
+  {
+   "qid": "Q47117",
+   "label": "Balıkesir",
+   "links": 92,
+   "value": 1226575.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "10"
+   ]
+  },
+  {
+   "qid": "Q79846",
+   "label": "Aydın",
+   "links": 92,
+   "value": 1054769.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "09"
+   ]
+  },
+  {
+   "qid": "Q79846",
+   "label": "Aydın",
+   "links": 92,
+   "value": 1097746.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "09"
+   ]
+  },
+  {
+   "qid": "Q83274",
+   "label": "Hatay",
+   "links": 92,
+   "value": 1501571.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "31"
+   ]
+  },
+  {
+   "qid": "Q83274",
+   "label": "Hatay",
+   "links": 92,
+   "value": 1609856.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "31"
+   ]
+  },
+  {
+   "qid": "Q43924",
+   "label": "Adıyaman",
+   "links": 91,
+   "value": 562636.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "02"
+   ]
+  },
+  {
+   "qid": "Q43924",
+   "label": "Adıyaman",
+   "links": 91,
+   "value": 602774.0,
+   "rank": "normal",
+   "value_year": 2015,
+   "plate": [
+    "02"
+   ]
+  },
+  {
+   "qid": "Q43924",
+   "label": "Adıyaman",
+   "links": 91,
+   "value": 624513.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "02"
+   ]
+  },
+  {
+   "qid": "Q43924",
+   "label": "Adıyaman",
+   "links": 91,
+   "value": 632148.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "02"
+   ]
+  },
+  {
+   "qid": "Q45220",
+   "label": "Afyonkarahisar",
+   "links": 90,
+   "value": 685031.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "03"
+   ]
+  },
+  {
+   "qid": "Q45220",
+   "label": "Afyonkarahisar",
+   "links": 90,
+   "value": 709015.0,
+   "rank": "preferred",
+   "value_year": 2015,
+   "plate": [
+    "03"
+   ]
+  },
+  {
+   "qid": "Q45220",
+   "label": "Afyonkarahisar",
+   "links": 90,
+   "value": 725568.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "03"
+   ]
+  },
+  {
+   "qid": "Q80036",
+   "label": "Amasya",
+   "links": 90,
+   "value": 313693.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "05"
+   ]
+  },
+  {
+   "qid": "Q80036",
+   "label": "Amasya",
+   "links": 90,
+   "value": 337508.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "05"
+   ]
+  },
+  {
+   "qid": "Q80051",
+   "label": "Ağrı",
+   "links": 89,
+   "value": 454387.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "04"
+   ]
+  },
+  {
+   "qid": "Q80051",
+   "label": "Ağrı",
+   "links": 89,
+   "value": 537665.0,
+   "rank": "normal",
+   "value_year": 2009,
+   "plate": [
+    "04"
+   ]
+  },
+  {
+   "qid": "Q80051",
+   "label": "Ağrı",
+   "links": 89,
+   "value": 539657.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "04"
+   ]
+  },
+  {
+   "qid": "Q80051",
+   "label": "Ağrı",
+   "links": 89,
+   "value": 547210.0,
+   "rank": "normal",
+   "value_year": 2015,
+   "plate": [
+    "04"
+   ]
+  },
+  {
+   "qid": "Q82089",
+   "label": "Bolu",
+   "links": 89,
+   "value": 299413.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "14"
+   ]
+  },
+  {
+   "qid": "Q82089",
+   "label": "Bolu",
+   "links": 89,
+   "value": 311810.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "14"
+   ]
+  },
+  {
+   "qid": "Q2297724",
+   "label": "Ankara",
+   "links": 88,
+   "value": 5317215.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "06"
+   ]
+  },
+  {
+   "qid": "Q2297724",
+   "label": "Ankara",
+   "links": 88,
+   "value": 5445026.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "plate": [
+    "06"
+   ]
+  },
+  {
+   "qid": "Q2297724",
+   "label": "Ankara",
+   "links": 88,
+   "value": 5503985.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "06"
+   ]
+  },
+  {
+   "qid": "Q47813",
+   "label": "Çanakkale",
+   "links": 88,
+   "value": 524498.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "17"
+   ]
+  },
+  {
+   "qid": "Q47813",
+   "label": "Çanakkale",
+   "links": 88,
+   "value": 540662.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "17"
+   ]
+  },
+  {
+   "qid": "Q344490",
+   "label": "İzmir",
+   "links": 87,
+   "value": 4126820.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "35"
+   ]
+  },
+  {
+   "qid": "Q344490",
+   "label": "İzmir",
+   "links": 87,
+   "value": 4320519.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "35"
+   ]
+  },
+  {
+   "qid": "Q46763",
+   "label": "Bilecik",
+   "links": 87,
+   "value": 212486.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "11"
+   ]
+  },
+  {
+   "qid": "Q46763",
+   "label": "Bilecik",
+   "links": 87,
+   "value": 223448.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "11"
+   ]
+  },
+  {
+   "qid": "Q534799",
+   "label": "İstanbul",
+   "links": 87,
+   "value": 14567918.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "34"
+   ]
+  },
+  {
+   "qid": "Q534799",
+   "label": "İstanbul",
+   "links": 87,
+   "value": 15067724.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "34"
+   ]
+  },
+  {
+   "qid": "Q534799",
+   "label": "İstanbul",
+   "links": 87,
+   "value": 15655924.0,
+   "rank": "preferred",
+   "value_year": 2023,
+   "plate": [
+    "34"
+   ]
+  },
+  {
+   "qid": "Q79760",
+   "label": "Bingöl",
+   "links": 87,
+   "value": 253359.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "12"
+   ]
+  },
+  {
+   "qid": "Q79760",
+   "label": "Bingöl",
+   "links": 87,
+   "value": 281205.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "12"
+   ]
+  },
+  {
+   "qid": "Q79840",
+   "label": "Ardahan",
+   "links": 87,
+   "value": 87748.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "75"
+   ]
+  },
+  {
+   "qid": "Q79840",
+   "label": "Ardahan",
+   "links": 87,
+   "value": 98907.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "75"
+   ]
+  },
+  {
+   "qid": "Q123934",
+   "label": "Muğla",
+   "links": 86,
+   "value": 967487.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "48"
+   ]
+  },
+  {
+   "qid": "Q123934",
+   "label": "Muğla",
+   "links": 86,
+   "value": 1021141.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "48"
+   ]
+  },
+  {
+   "qid": "Q130553",
+   "label": "Manisa",
+   "links": 86,
+   "value": 1347352.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "45"
+   ]
+  },
+  {
+   "qid": "Q130553",
+   "label": "Manisa",
+   "links": 86,
+   "value": 1429643.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "45"
+   ]
+  },
+  {
+   "qid": "Q80550",
+   "label": "Van",
+   "links": 86,
+   "value": 994436.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "65"
+   ]
+  },
+  {
+   "qid": "Q80550",
+   "label": "Van",
+   "links": 86,
+   "value": 1022330.0,
+   "rank": "normal",
+   "value_year": 2009,
+   "plate": [
+    "65"
+   ]
+  },
+  {
+   "qid": "Q80550",
+   "label": "Van",
+   "links": 86,
+   "value": 1123784.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "65"
+   ]
+  },
+  {
+   "qid": "Q83965",
+   "label": "Kocaeli",
+   "links": 86,
+   "value": 1851790.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "41"
+   ]
+  },
+  {
+   "qid": "Q83965",
+   "label": "Kocaeli",
+   "links": 86,
+   "value": 1906391.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "41"
+   ]
+  },
+  {
+   "qid": "Q83965",
+   "label": "Kocaeli",
+   "links": 86,
+   "value": 1953035.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "plate": [
+    "41"
+   ]
+  },
+  {
+   "qid": "Q376797",
+   "label": "Erzurum",
+   "links": 85,
+   "value": 683823.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "25"
+   ]
+  },
+  {
+   "qid": "Q376797",
+   "label": "Erzurum",
+   "links": 85,
+   "value": 767848.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "25"
+   ]
+  },
+  {
+   "qid": "Q80370",
+   "label": "Batman",
+   "links": 85,
+   "value": 545792.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "72"
+   ]
+  },
+  {
+   "qid": "Q80370",
+   "label": "Batman",
+   "links": 85,
+   "value": 599103.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "72"
+   ]
+  },
+  {
+   "qid": "Q83069",
+   "label": "Sakarya",
+   "links": 85,
+   "value": 973995.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "54"
+   ]
+  },
+  {
+   "qid": "Q83069",
+   "label": "Sakarya",
+   "links": 85,
+   "value": 1010700.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "54"
+   ]
+  },
+  {
+   "qid": "Q83102",
+   "label": "Edirne",
+   "links": 85,
+   "value": 389114.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "22"
+   ]
+  },
+  {
+   "qid": "Q83102",
+   "label": "Edirne",
+   "links": 85,
+   "value": 411528.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "22"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 131446.0,
+   "rank": "normal",
+   "value_year": 1927,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 194252.0,
+   "rank": "normal",
+   "value_year": 1935,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 202606.0,
+   "rank": "normal",
+   "value_year": 1945,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 209888.0,
+   "rank": "normal",
+   "value_year": 1940,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 224821.0,
+   "rank": "normal",
+   "value_year": 1950,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 251071.0,
+   "rank": "normal",
+   "value_year": 1955,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 274806.0,
+   "rank": "normal",
+   "value_year": 1960,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 287381.0,
+   "rank": "normal",
+   "value_year": 1965,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 302946.0,
+   "rank": "normal",
+   "value_year": 1970,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 319987.0,
+   "rank": "normal",
+   "value_year": 1975,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 360742.0,
+   "rank": "normal",
+   "value_year": 1980,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 402721.0,
+   "rank": "normal",
+   "value_year": 1985,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 468842.0,
+   "rank": "normal",
+   "value_year": 1990,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 623591.0,
+   "rank": "normal",
+   "value_year": 2000,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 728396.0,
+   "rank": "normal",
+   "value_year": 2007,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 770772.0,
+   "rank": "normal",
+   "value_year": 2008,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 783310.0,
+   "rank": "normal",
+   "value_year": 2009,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 798109.0,
+   "rank": "normal",
+   "value_year": 2010,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 829873.0,
+   "rank": "normal",
+   "value_year": 2011,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 852321.0,
+   "rank": "normal",
+   "value_year": 2012,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 874475.0,
+   "rank": "normal",
+   "value_year": 2013,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 906732.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 937910.0,
+   "rank": "normal",
+   "value_year": 2015,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 972875.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 1005463.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 1029927.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 1055412.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 1081065.0,
+   "rank": "normal",
+   "value_year": 2020,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 1113400.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 1142451.0,
+   "rank": "normal",
+   "value_year": 2022,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 1167059.0,
+   "rank": "preferred",
+   "value_year": 2023,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 1187162.0,
+   "rank": "normal",
+   "value_year": 2024,
+   "plate": [
+    "59"
+   ]
+  },
+  {
+   "qid": "Q83239",
+   "label": "Bitlis",
+   "links": 84,
+   "value": 307483.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "13"
+   ]
+  },
+  {
+   "qid": "Q83239",
+   "label": "Bitlis",
+   "links": 84,
+   "value": 349396.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "13"
+   ]
+  },
+  {
+   "qid": "Q388995",
+   "label": "Trabzon",
+   "links": 83,
+   "value": 757629.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "61"
+   ]
+  },
+  {
+   "qid": "Q388995",
+   "label": "Trabzon",
+   "links": 83,
+   "value": 768417.0,
+   "rank": "normal",
+   "value_year": 2015,
+   "plate": [
+    "61"
+   ]
+  },
+  {
+   "qid": "Q388995",
+   "label": "Trabzon",
+   "links": 83,
+   "value": 807903.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "61"
+   ]
+  },
+  {
+   "qid": "Q483063",
+   "label": "Bayburt",
+   "links": 83,
+   "value": 78777.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "69"
+   ]
+  },
+  {
+   "qid": "Q483063",
+   "label": "Bayburt",
+   "links": 83,
+   "value": 82274.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "69"
+   ]
+  },
+  {
+   "qid": "Q80088",
+   "label": "Burdur",
+   "links": 83,
+   "value": 257183.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "15"
+   ]
+  },
+  {
+   "qid": "Q80088",
+   "label": "Burdur",
+   "links": 83,
+   "value": 269926.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "15"
+   ]
+  },
+  {
+   "qid": "Q80088",
+   "label": "Burdur",
+   "links": 83,
+   "value": 277226.0,
+   "rank": "normal",
+   "value_year": 2025,
+   "plate": [
+    "15"
+   ]
+  },
+  {
+   "qid": "Q82096",
+   "label": "Denizli",
+   "links": 83,
+   "value": 975566.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "20"
+   ]
+  },
+  {
+   "qid": "Q82096",
+   "label": "Denizli",
+   "links": 83,
+   "value": 1051056.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "20"
+   ]
+  },
+  {
+   "qid": "Q83073",
+   "label": "Aksaray",
+   "links": 83,
+   "value": 390189.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "68"
+   ]
+  },
+  {
+   "qid": "Q83073",
+   "label": "Aksaray",
+   "links": 83,
+   "value": 429069.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "68"
+   ]
+  },
+  {
+   "qid": "Q126874",
+   "label": "Kütahya",
+   "links": 82,
+   "value": 543187.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "43"
+   ]
+  },
+  {
+   "qid": "Q126874",
+   "label": "Kütahya",
+   "links": 82,
+   "value": 571554.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "plate": [
+    "43"
+   ]
+  },
+  {
+   "qid": "Q126874",
+   "label": "Kütahya",
+   "links": 82,
+   "value": 577941.0,
+   "rank": "preferred",
+   "value_year": 2018,
+   "plate": [
+    "43"
+   ]
+  },
+  {
+   "qid": "Q482779",
+   "label": "Giresun",
+   "links": 82,
+   "value": 424106.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "28"
+   ]
+  },
+  {
+   "qid": "Q482779",
+   "label": "Giresun",
+   "links": 82,
+   "value": 453912.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "28"
+   ]
+  },
+  {
+   "qid": "Q483040",
+   "label": "Samsun",
+   "links": 82,
+   "value": 1274554.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "55"
+   ]
+  },
+  {
+   "qid": "Q483040",
+   "label": "Samsun",
+   "links": 82,
+   "value": 1335716.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "55"
+   ]
+  },
+  {
+   "qid": "Q81551",
+   "label": "Konya",
+   "links": 82,
+   "value": 2076524.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "53"
+   ]
+  },
+  {
+   "qid": "Q81551",
+   "label": "Konya",
+   "links": 82,
+   "value": 2205609.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "53"
+   ]
+  },
+  {
+   "qid": "Q81551",
+   "label": "Konya",
+   "links": 82,
+   "value": 2296347.0,
+   "rank": "normal",
+   "value_year": 2022,
+   "plate": [
+    "53"
+   ]
+  },
+  {
+   "qid": "Q83081",
+   "label": "Diyarbakır",
+   "links": 82,
+   "value": 1557143.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "21"
+   ]
+  },
+  {
+   "qid": "Q83081",
+   "label": "Diyarbakır",
+   "links": 82,
+   "value": 1732396.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "21"
+   ]
+  },
+  {
+   "qid": "Q83342",
+   "label": "Bartın",
+   "links": 82,
+   "value": 190324.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "74"
+   ]
+  },
+  {
+   "qid": "Q83342",
+   "label": "Bartın",
+   "links": 82,
+   "value": 198999.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "74"
+   ]
+  },
+  {
+   "qid": "Q272947",
+   "label": "Çorum",
+   "links": 81,
+   "value": 491031.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "19"
+   ]
+  },
+  {
+   "qid": "Q272947",
+   "label": "Çorum",
+   "links": 81,
+   "value": 536483.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "19"
+   ]
+  },
+  {
+   "qid": "Q483083",
+   "label": "Yalova",
+   "links": 81,
+   "value": 262234.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "77"
+   ]
+  },
+  {
+   "qid": "Q483083",
+   "label": "Yalova",
+   "links": 81,
+   "value": 269342.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "77"
+   ]
+  },
+  {
+   "qid": "Q83077",
+   "label": "Kars",
+   "links": 81,
+   "value": 253403.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "36"
+   ]
+  },
+  {
+   "qid": "Q83077",
+   "label": "Kars",
+   "links": 81,
+   "value": 288878.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "36"
+   ]
+  },
+  {
+   "qid": "Q83077",
+   "label": "Kars",
+   "links": 81,
+   "value": 296466.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "plate": [
+    "36"
+   ]
+  },
+  {
+   "qid": "Q93209",
+   "label": "Hakkari",
+   "links": 81,
+   "value": 247997.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "30"
+   ]
+  },
+  {
+   "qid": "Q93209",
+   "label": "Hakkari",
+   "links": 81,
+   "value": 286470.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "30"
+   ]
+  },
+  {
+   "qid": "Q131384",
+   "label": "Malatya",
+   "links": 80,
+   "value": 743558.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "44"
+   ]
+  },
+  {
+   "qid": "Q131384",
+   "label": "Malatya",
+   "links": 80,
+   "value": 797036.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "44"
+   ]
+  },
+  {
+   "qid": "Q131387",
+   "label": "Muş",
+   "links": 80,
+   "value": 351802.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "49"
+   ]
+  },
+  {
+   "qid": "Q131387",
+   "label": "Muş",
+   "links": 80,
+   "value": 407992.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "49"
+   ]
+  },
+  {
+   "qid": "Q131597",
+   "label": "Kırklareli",
+   "links": 80,
+   "value": 344825.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "39"
+   ]
+  },
+  {
+   "qid": "Q131597",
+   "label": "Kırklareli",
+   "links": 80,
+   "value": 360860.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "39"
+   ]
+  },
+  {
+   "qid": "Q132637",
+   "label": "Mersin",
+   "links": 80,
+   "value": 1733188.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "33"
+   ]
+  },
+  {
+   "qid": "Q132637",
+   "label": "Mersin",
+   "links": 80,
+   "value": 1814468.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "33"
+   ]
+  },
+  {
+   "qid": "Q432391",
+   "label": "Düzce",
+   "links": 80,
+   "value": 360388.0,
+   "rank": "normal",
+   "value_year": 2015,
+   "plate": [
+    "81"
+   ]
+  },
+  {
+   "qid": "Q432391",
+   "label": "Düzce",
+   "links": 80,
+   "value": 369674.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "81"
+   ]
+  },
+  {
+   "qid": "Q432391",
+   "label": "Düzce",
+   "links": 80,
+   "value": 387844.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "81"
+   ]
+  },
+  {
+   "qid": "Q482834",
+   "label": "Kahramanmaraş",
+   "links": 80,
+   "value": 1056425.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "46"
+   ]
+  },
+  {
+   "qid": "Q482834",
+   "label": "Kahramanmaraş",
+   "links": 80,
+   "value": 1144851.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "46"
+   ]
+  },
+  {
+   "qid": "Q483154",
+   "label": "Gaziantep",
+   "links": 80,
+   "value": 2164134.0,
+   "rank": "normal",
+   "value_year": 2023,
+   "plate": [
+    "27"
+   ]
+  },
+  {
+   "qid": "Q483173",
+   "label": "Erzincan",
+   "links": 80,
+   "value": 219866.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "24"
+   ]
+  },
+  {
+   "qid": "Q483173",
+   "label": "Erzincan",
+   "links": 80,
+   "value": 236034.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "24"
+   ]
+  },
+  {
+   "qid": "Q483180",
+   "label": "Ordu",
+   "links": 80,
+   "value": 710463.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "52"
+   ]
+  },
+  {
+   "qid": "Q483180",
+   "label": "Ordu",
+   "links": 80,
+   "value": 771932.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "52"
+   ]
+  },
+  {
+   "qid": "Q483195",
+   "label": "Tokat",
+   "links": 80,
+   "value": 562116.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "60"
+   ]
+  },
+  {
+   "qid": "Q483195",
+   "label": "Tokat",
+   "links": 80,
+   "value": 612646.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "60"
+   ]
+  },
+  {
+   "qid": "Q75445",
+   "label": "Yozgat",
+   "links": 80,
+   "value": 388830.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "66"
+   ]
+  },
+  {
+   "qid": "Q75445",
+   "label": "Yozgat",
+   "links": 80,
+   "value": 420699.0,
+   "rank": "preferred",
+   "value_year": 2023,
+   "plate": [
+    "66"
+   ]
+  },
+  {
+   "qid": "Q75445",
+   "label": "Yozgat",
+   "links": 80,
+   "value": 424981.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "66"
+   ]
+  },
+  {
+   "qid": "Q131293",
+   "label": "Mardin",
+   "links": 79,
+   "value": 705098.0,
+   "rank": "normal",
+   "value_year": 2009,
+   "plate": [
+    "47"
+   ]
+  },
+  {
+   "qid": "Q131293",
+   "label": "Mardin",
+   "links": 79,
+   "value": 747268.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "47"
+   ]
+  },
+  {
+   "qid": "Q131293",
+   "label": "Mardin",
+   "links": 79,
+   "value": 829195.0,
+   "rank": "preferred",
+   "value_year": 2018,
+   "plate": [
+    "47"
+   ]
+  },
+  {
+   "qid": "Q268043",
+   "label": "Isparta",
+   "links": 79,
+   "value": 416157.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "32"
+   ]
+  },
+  {
+   "qid": "Q268043",
+   "label": "Isparta",
+   "links": 79,
+   "value": 441412.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "32"
+   ]
+  },
+  {
+   "qid": "Q388469",
+   "label": "Şanlıurfa",
+   "links": 79,
+   "value": 1789868.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "63"
+   ]
+  },
+  {
+   "qid": "Q388469",
+   "label": "Şanlıurfa",
+   "links": 79,
+   "value": 2035809.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "63"
+   ]
+  },
+  {
+   "qid": "Q482788",
+   "label": "Gümüşhane",
+   "links": 79,
+   "value": 140192.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "29"
+   ]
+  },
+  {
+   "qid": "Q482788",
+   "label": "Gümüşhane",
+   "links": 79,
+   "value": 162748.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "29"
+   ]
+  },
+  {
+   "qid": "Q483091",
+   "label": "Elazığ",
+   "links": 79,
+   "value": 541103.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "23"
+   ]
+  },
+  {
+   "qid": "Q483091",
+   "label": "Elazığ",
+   "links": 79,
+   "value": 595638.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "23"
+   ]
+  },
+  {
+   "qid": "Q483100",
+   "label": "Sivas",
+   "links": 79,
+   "value": 588673.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "58"
+   ]
+  },
+  {
+   "qid": "Q483100",
+   "label": "Sivas",
+   "links": 79,
+   "value": 634924.0,
+   "rank": "normal",
+   "value_year": 2022,
+   "plate": [
+    "58"
+   ]
+  },
+  {
+   "qid": "Q483100",
+   "label": "Sivas",
+   "links": 79,
+   "value": 646608.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "58"
+   ]
+  },
+  {
+   "qid": "Q125506",
+   "label": "Iğdır",
+   "links": 78,
+   "value": 180544.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "76"
+   ]
+  },
+  {
+   "qid": "Q125506",
+   "label": "Iğdır",
+   "links": 78,
+   "value": 197456.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "76"
+   ]
+  },
+  {
+   "qid": "Q219956",
+   "label": "Zonguldak",
+   "links": 78,
+   "value": 556326.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "67"
+   ]
+  },
+  {
+   "qid": "Q219956",
+   "label": "Zonguldak",
+   "links": 78,
+   "value": 599698.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "67"
+   ]
+  },
+  {
+   "qid": "Q272662",
+   "label": "Çankırı",
+   "links": 78,
+   "value": 183068.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "18"
+   ]
+  },
+  {
+   "qid": "Q272662",
+   "label": "Çankırı",
+   "links": 78,
+   "value": 216362.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "18"
+   ]
+  },
+  {
+   "qid": "Q281206",
+   "label": "Osmaniye",
+   "links": 78,
+   "value": 502018.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "80"
+   ]
+  },
+  {
+   "qid": "Q281206",
+   "label": "Osmaniye",
+   "links": 78,
+   "value": 534415.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "80"
+   ]
+  },
+  {
+   "qid": "Q483191",
+   "label": "Kastamonu",
+   "links": 78,
+   "value": 354122.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "37"
+   ]
+  },
+  {
+   "qid": "Q483191",
+   "label": "Kastamonu",
+   "links": 78,
+   "value": 383373.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "37"
+   ]
+  },
+  {
+   "qid": "Q483481",
+   "label": "Rize",
+   "links": 78,
+   "value": 322103.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "53"
+   ]
+  },
+  {
+   "qid": "Q483481",
+   "label": "Rize",
+   "links": 78,
+   "value": 329779.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "plate": [
+    "53"
+   ]
+  },
+  {
+   "qid": "Q483481",
+   "label": "Rize",
+   "links": 78,
+   "value": 348608.0,
+   "rank": "preferred",
+   "value_year": 2018,
+   "plate": [
+    "53"
+   ]
+  },
+  {
+   "qid": "Q620742",
+   "label": "Tunceli",
+   "links": 78,
+   "value": 78056.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "62"
+   ]
+  },
+  {
+   "qid": "Q620742",
+   "label": "Tunceli",
+   "links": 78,
+   "value": 88198.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "62"
+   ]
+  },
+  {
+   "qid": "Q647378",
+   "label": "Şırnak",
+   "links": 78,
+   "value": 467810.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "73"
+   ]
+  },
+  {
+   "qid": "Q647378",
+   "label": "Şırnak",
+   "links": 78,
+   "value": 524190.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "73"
+   ]
+  },
+  {
+   "qid": "Q430693",
+   "label": "Nevşehir",
+   "links": 77,
+   "value": 284657.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "50"
+   ]
+  },
+  {
+   "qid": "Q430693",
+   "label": "Nevşehir",
+   "links": 77,
+   "value": 286250.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "plate": [
+    "50"
+   ]
+  },
+  {
+   "qid": "Q430693",
+   "label": "Nevşehir",
+   "links": 77,
+   "value": 298339.0,
+   "rank": "preferred",
+   "value_year": 2018,
+   "plate": [
+    "50"
+   ]
+  },
+  {
+   "qid": "Q482825",
+   "label": "Siirt",
+   "links": 77,
+   "value": 288138.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "56"
+   ]
+  },
+  {
+   "qid": "Q482825",
+   "label": "Siirt",
+   "links": 77,
+   "value": 318366.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "plate": [
+    "56"
+   ]
+  },
+  {
+   "qid": "Q482825",
+   "label": "Siirt",
+   "links": 77,
+   "value": 331670.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "56"
+   ]
+  },
+  {
+   "qid": "Q482975",
+   "label": "Karaman",
+   "links": 77,
+   "value": 237847.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "70"
+   ]
+  },
+  {
+   "qid": "Q482975",
+   "label": "Karaman",
+   "links": 77,
+   "value": 251913.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "70"
+   ]
+  },
+  {
+   "qid": "Q483053",
+   "label": "Eskişehir",
+   "links": 77,
+   "value": 839097.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "26"
+   ]
+  },
+  {
+   "qid": "Q483053",
+   "label": "Eskişehir",
+   "links": 77,
+   "value": 915418.0,
+   "rank": "preferred",
+   "value_year": 2023,
+   "plate": [
+    "26"
+   ]
+  },
+  {
+   "qid": "Q483078",
+   "label": "Uşak",
+   "links": 77,
+   "value": 348239.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "62"
+   ]
+  },
+  {
+   "qid": "Q483078",
+   "label": "Uşak",
+   "links": 77,
+   "value": 369433.0,
+   "rank": "normal",
+   "value_year": 2020,
+   "plate": [
+    "62"
+   ]
+  },
+  {
+   "qid": "Q483168",
+   "label": "Karabük",
+   "links": 77,
+   "value": 234826.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "78"
+   ]
+  },
+  {
+   "qid": "Q483168",
+   "label": "Karabük",
+   "links": 77,
+   "value": 248014.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "78"
+   ]
+  },
+  {
+   "qid": "Q483472",
+   "label": "Kayseri",
+   "links": 77,
+   "value": 1255349.0,
+   "rank": "normal",
+   "value_year": 2011,
+   "plate": [
+    "38"
+   ]
+  },
+  {
+   "qid": "Q483472",
+   "label": "Kayseri",
+   "links": 77,
+   "value": 1313852.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "38"
+   ]
+  },
+  {
+   "qid": "Q483472",
+   "label": "Kayseri",
+   "links": 77,
+   "value": 1389680.0,
+   "rank": "preferred",
+   "value_year": 2018,
+   "plate": [
+    "38"
+   ]
+  },
+  {
+   "qid": "Q484392",
+   "label": "Kırıkkale",
+   "links": 76,
+   "value": 257654.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "plate": [
+    "71"
+   ]
+  },
+  {
+   "qid": "Q484392",
+   "label": "Kırıkkale",
+   "links": 76,
+   "value": 286602.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "71"
+   ]
+  },
+  {
+   "qid": "Q128978",
+   "label": "Kilis",
+   "links": 75,
+   "value": 129263.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "79"
+   ]
+  },
+  {
+   "qid": "Q128978",
+   "label": "Kilis",
+   "links": 75,
+   "value": 142541.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "79"
+   ]
+  },
+  {
+   "qid": "Q155219",
+   "label": "Niğde",
+   "links": 75,
+   "value": 333356.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "51"
+   ]
+  },
+  {
+   "qid": "Q155219",
+   "label": "Niğde",
+   "links": 75,
+   "value": 343898.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "plate": [
+    "51"
+   ]
+  },
+  {
+   "qid": "Q155219",
+   "label": "Niğde",
+   "links": 75,
+   "value": 364707.0,
+   "rank": "preferred",
+   "value_year": 2018,
+   "plate": [
+    "51"
+   ]
+  },
+  {
+   "qid": "Q134187",
+   "label": "Kırşehir",
+   "links": 74,
+   "value": 225754.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "40"
+   ]
+  },
+  {
+   "qid": "Q134187",
+   "label": "Kırşehir",
+   "links": 74,
+   "value": 241868.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "40"
+   ]
+  },
+  {
+   "qid": "Q134413",
+   "label": "Sinop",
+   "links": 74,
+   "value": 205318.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "plate": [
+    "57"
+   ]
+  },
+  {
+   "qid": "Q134413",
+   "label": "Sinop",
+   "links": 74,
+   "value": 219733.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "plate": [
+    "57"
+   ]
+  },
+  {
+   "qid": "Q134413",
+   "label": "Sinop",
+   "links": 74,
+   "value": 225848.0,
+   "rank": "normal",
+   "value_year": 2025,
+   "plate": [
+    "57"
+   ]
+  },
+  {
+   "qid": "Q134413",
+   "label": "Sinop",
+   "links": 74,
+   "value": 229716.0,
+   "rank": "preferred",
+   "value_year": 2023,
+   "plate": [
+    "57"
+   ]
+  }
+ ]
+}
