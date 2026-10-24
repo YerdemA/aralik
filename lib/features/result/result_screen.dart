@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 import '../../core/number_format.dart';
-import '../../core/scoring.dart';
 import '../../core/strings.dart';
 import '../../core/theme.dart';
 import '../../data/question.dart';
+import '../../widgets/interval_bar.dart';
 import '../game/game_controller.dart';
 
-/// Outcome of one locked interval. Day 4 adds the position bar and the
-/// day summary; this is the minimal version.
+/// Outcome of one locked interval: hit/miss, points, where the answer fell
+/// relative to the interval, fun fact and source.
 class ResultScreen extends StatelessWidget {
   const ResultScreen({super.key, required this.answer, required this.isLast});
 
@@ -21,11 +21,7 @@ class ResultScreen extends StatelessWidget {
     final colors = theme.extension<GameColors>()!;
     final q = answer.question;
     final isYear = q.kind == QuestionKind.year;
-    final color = switch (answer.tier) {
-      ResultTier.good => colors.good,
-      ResultTier.partial => colors.partial,
-      ResultTier.miss => colors.miss,
-    };
+    final color = colors.forTier(answer.tier);
     final answerText = isYear
         ? formatYear(q.answer.round())
         : [
@@ -57,6 +53,14 @@ class ResultScreen extends StatelessWidget {
                 const SizedBox(height: 32),
                 Text(q.text, style: theme.textTheme.titleMedium),
                 const SizedBox(height: 16),
+                IntervalBar(
+                  isYear: isYear,
+                  low: answer.low,
+                  high: answer.high,
+                  answer: q.answer,
+                  bandColor: color,
+                ),
+                const SizedBox(height: 12),
                 _Row(label: AppStrings.answer, value: answerText),
                 _Row(
                   label: AppStrings.yourInterval,

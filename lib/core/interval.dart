@@ -47,6 +47,35 @@ Bounds yearInterval(int guess, double t) {
   return (low: guess - half, high: guess + half);
 }
 
+/// Positions (0…1) of the interval and the answer on the result bar.
+///
+/// The axis covers both with some margin; magnitudes use a log axis so the
+/// picture matches how the interval was chosen.
+({double low, double high, double answer}) barPositions({
+  required bool isYear,
+  required num low,
+  required num high,
+  required num answer,
+}) {
+  double Function(num) f;
+  if (isYear) {
+    final lo = math.min(low, answer).toDouble();
+    final hi = math.max(high, answer).toDouble();
+    final margin = math.max(2.0, (hi - lo) * 0.2);
+    final start = lo - margin;
+    final span = (hi + margin) - start;
+    f = (v) => (v - start) / span;
+  } else {
+    final lo = math.log(math.max(1, math.min(low, answer)));
+    final hi = math.log(math.max(1, math.max(high, answer)));
+    final margin = math.max(math.log(1.2), (hi - lo) * 0.2);
+    final start = lo - margin;
+    final span = (hi + margin) - start;
+    f = (v) => (math.log(math.max(1, v)) - start) / span;
+  }
+  return (low: f(low), high: f(high), answer: f(answer));
+}
+
 /// Largest 1/2/5 × 10ⁿ step not above a tenth of [size], at least 1.
 int _niceStep(double size) {
   final target = size / 10;

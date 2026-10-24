@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'scoring.dart';
+
 /// App-wide light and dark themes (Material 3, system font).
 abstract final class AppTheme {
   static const Color _seed = Color(0xFF2E6BD9);
@@ -71,6 +73,12 @@ class GameColors extends ThemeExtension<GameColors> {
 
   /// Interval missed the answer.
   final Color miss;
+
+  Color forTier(ResultTier tier) => switch (tier) {
+    ResultTier.good => good,
+    ResultTier.partial => partial,
+    ResultTier.miss => miss,
+  };
 
   static const light = GameColors(
     good: Color(0xFF2E9E5B),

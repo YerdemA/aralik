@@ -10,8 +10,13 @@ abstract final class AppStrings {
 
   // Home
   static const playToday = 'Günün setini oyna';
+  static String continueToday(int done, int total) =>
+      'Devam et ($done / $total)';
   static const todayDone = 'Bugünkü seti bitirdin';
   static const comeBackTomorrow = 'Yarın 5 yeni soru seni bekliyor.';
+  static const previewEdition = '(deneme)';
+  static String streakDays(int days) => '$days gün';
+  static const noValue = '–';
   static const streak = 'Seri';
   static const lastScore = 'Son skor';
   static const calibration = 'Kalibrasyon';
@@ -56,7 +61,11 @@ abstract final class AppStrings {
   static const points = 'puan';
   static const source = 'Kaynak';
   static const daySummary = 'Günün özeti';
+  static const roundSummary = 'Tur özeti';
   static const share = 'Paylaş';
+  static const newRound = 'Yeni tur';
+  static const backHome = 'Ana ekran';
+  static const shareSubject = 'Aralık skorum';
 
   // Calibration feedback
   static const calibrationTooNarrow = 'Aralıkların fazla dar.';

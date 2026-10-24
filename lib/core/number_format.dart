@@ -52,6 +52,9 @@ const List<(num, String)> _scales = [
   (1e6, AppStrings.million),
 ];
 
+/// Turkish percent with the sign in front: `0.8 → '%80'`.
+String formatPercent(double fraction) => '%${(fraction * 100).round()}';
+
 /// Formats a calendar year without thousands separators.
 /// Negative years are BCE: `-330 → 'MÖ 330'`.
 String formatYear(int year) =>

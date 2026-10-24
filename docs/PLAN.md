@@ -25,6 +25,15 @@
 
 **Faz 2 (v1.1, yayından sonra):** günlük bildirim, kategori seçimli pratik, rozetler.
 
+**Gelecek fikri: uygulama güncellemesi olmadan internetten yeni sorular** (not, 2026-10-24)
+- Fikir: Ek soru paketleri GitHub Pages'te statik JSON olarak tutulur (ücretsiz, sunucu yok). Uygulama ara sıra indirip cache'ler, internet yoksa gömülü bankayla devam eder.
+- Etkiledikleri:
+  - INTERNET izni release manifest'e geri eklenmeli.
+  - Gizlilik politikası ve Play "Veri güvenliği" formu güncellenmeli. GitHub sunucusu IP adresini görür.
+  - CLAUDE.md'deki "tamamen offline" ilkesi esnetilmeli.
+  - HTTP için yeni paket gerekmez, `dart:io` `HttpClient` yeterli.
+- Kural: İndirilen sorular da `validate_questions.py` ile doğrulanır ve kaynaklıdır. Paketler imzalanmalı ya da en azından sürüm ve sağlama toplamı (hash) ile kontrol edilmeli. Günlük setler gömülü bankadan gelmeye devam eder, böylece herkes aynı soruları görür. İndirilen paketler yalnızca serbest modu besler.
+
 ## Takvim (14 gün)
 > Kapalı test 14 gün kesintisiz sürmeli ve en az 12 test kullanıcısı gerekiyor. Bu yüzden **5. günde** kapalı teste çıkılır, geliştirme test sürerken devam eder.
 

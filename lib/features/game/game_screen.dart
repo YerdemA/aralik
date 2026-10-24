@@ -11,9 +11,18 @@ import 'game_controller.dart';
 /// Plays [questions] in order: guess → width → lock → result, per question.
 /// Pops with the list of [RoundAnswer]s when the round is finished.
 class GameScreen extends StatefulWidget {
-  const GameScreen({super.key, required this.questions, this.onLocked});
+  const GameScreen({
+    super.key,
+    required this.questions,
+    this.onLocked,
+    this.alreadyAnswered = 0,
+  });
 
   final List<Question> questions;
+
+  /// Questions of the same set answered in an earlier session; only shifts
+  /// the "Soru 3 / 5" counter when a daily set is resumed.
+  final int alreadyAnswered;
 
   /// Called right after each lock, e.g. to persist stats.
   final ValueChanged<RoundAnswer>? onLocked;
@@ -56,8 +65,8 @@ class _GameScreenState extends State<GameScreen> {
         appBar: AppBar(
           title: Text(
             AppStrings.questionProgress(
-              _game.index + 1,
-              _game.questions.length,
+              widget.alreadyAnswered + _game.index + 1,
+              widget.alreadyAnswered + _game.questions.length,
             ),
           ),
           leading: IconButton(

@@ -19,7 +19,20 @@ int dayIndexFor(DateTime now) {
 }
 
 /// Public puzzle number shown in the share text ("Aralık #1" on day 0).
+/// Zero or negative before the epoch (closed test).
 int puzzleNumber(int dayIndex) => dayIndex + 1;
+
+/// Consecutive completed days ending today, or ending yesterday while
+/// today's set is not done yet (the streak is still alive until midnight).
+int currentStreak(Set<int> completedDays, int today) {
+  var day = completedDays.contains(today) ? today : today - 1;
+  var streak = 0;
+  while (completedDays.contains(day)) {
+    streak++;
+    day--;
+  }
+  return streak;
+}
 
 /// Bank indices of the questions for [dayIndex]:
 /// `5·dayIndex .. 5·dayIndex+4`, wrapping around when the bank runs out.
