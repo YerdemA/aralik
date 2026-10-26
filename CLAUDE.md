@@ -51,14 +51,16 @@ lib/
     home/                   # ana ekran: günün seti, seri, kalibrasyon
     game/                   # soru ekranı + tahmin/aralık girişi
     result/                 # soru sonucu + gün özeti + paylaş
-    practice/               # serbest mod (kişiye özel, tekrar etmeyen)
     stats/                  # istatistikler, kalibrasyon grafiği
-    settings/
+    settings/               # ayarlar → hakkında: veri kaynakları, lisanslar, gizlilik
   widgets/                  # ortak küçük widget'lar
 assets/questions/questions.json
+assets/questions/schedule.json  # günlük takvim: gün → 5 soru id'si (yalnızca sona eklenir)
 assets/data/places.json     # il merkezi + başkent koordinatları (mesafe soruları)
-tools/                      # Python veri hattı (Wikidata, TÜİK CSV)
-docs/                       # PLAN.md, privacy-policy.md (GitHub Pages)
+assets/data/attributions.json   # atıf listesi (tools/sources.json'dan üretilir)
+tools/                      # Python veri hattı; ham dökümler tools/raw/<kaynak>/ (+ _meta.json)
+tools/sources.json          # tüm veri kaynakları: lisans, atıf, durum, veri setleri
+docs/                       # PLAN.md, SOURCES.md, privacy-policy.md, attributions.md (GitHub Pages)
 test/
 ```
 
@@ -73,23 +75,29 @@ test/
   "category": "coğrafya",
   "source": "https://www.wikidata.org/wiki/Q93323",
   "data_year": 2024,
-  "fun_fact": "Türkiye'nin en yüksek noktası."
+  "fun_fact": "Türkiye'nin en yüksek noktası.",
+  "difficulty": 1,
+  "dataset": "mountains_tr"
 }
 ```
 - `kind`: `magnitude` (pozitif büyüklük: nüfus, km, m, adet) veya `year` (tarih/yıl).
-- Kategoriler: `coğrafya`, `tarih`, `türkiye`, `bilim`, `spor`, `gündelik`.
-- `questions.json` build zamanında **sabit seed ile karıştırılmış** sırada tutulur. Sıra değiştirilmez, yeni sorular sona eklenir.
+- Kategoriler: `coğrafya`, `tarih`, `türkiye`, `bilim`, `spor`, `gündelik`, `hayvanlar`, `şirketler`.
+  Uygulama bilmediği bir kategoriyi (içerik güncellemesiyle gelen yeni bir kategori) `diğer` altında gösterir. `diğer` bankaya asla yazılmaz.
+- Opsiyonel alanlar: `difficulty` (1 kolay, 2 orta, 3 zor; `build_questions.py` okunma sayısı, kategori ve türden tahmin eder, `tools/difficulty_overrides.json` elle düzeltir), `dataset` (veri seti adı; `tools/sources.json` içinde kullanımdaki bir kaynağa bağlı olmalı), `anchor` (`{text, value, unit, source}`, kaynaklı çapa değer; henüz doldurulmuyor).
+- `questions.json` yalnızca sona eklenir: id'ler asla silinmez, yer değiştirmez. Hangi sorunun hangi gün geleceğine takvim karar verir.
 
 ## Oyun kuralları
-- **Günlük set:** Her gün 5 soru. `dayIndex = gün(yerel saat) − 2026-11-01`. Günün soruları `questions[5*dayIndex .. 5*dayIndex+4]` olur. Herkes aynı gün aynı soruları görür ve backend gerekmez. Banka biterse başa sarılır.
+- **Günlük set:** Her gün 5 soru. `dayIndex = gün(yerel saat) − 2026-11-01`. Günün soruları `schedule.json` içindeki `days[dayIndex]` id'leridir (`core/daily.dart`, `Schedule`). Herkes aynı gün aynı soruları görür ve backend gerekmez. Takvim biterse başa sarılır, kapalı testteki negatif günler sondan sayılır.
+  Takvimi `tools/build_schedule.py` kurar: her gün 2 kolay + 2 orta + 1 zor, en az 3 kategori, aynı veri setinden en fazla 1 soru, kolaydan zora sıralı. Takvim yalnızca sona gün eklenerek uzar.
 - **Serbest mod** (eski adıyla pratik modu): Sınırsız, 5'erli turlar. Kişiye özeldir ve oyuncunun daha önce kilitlediği hiçbir soru (hiçbir modda) tekrar gelmez (`StatsStore.seenIds`).
-  Soruların ~1/3'ü **geçmiş günlerin** banka sorularından gelir (gelecek günler spoil olmaz), kalanı cihazda üretilir. Bir şehir bir turda en fazla bir kez geçer.
+  Banka soruları takvimin önümüzdeki 60 gününde olmayanlardan gelir (geçmiş günler ve takvime girmemiş sorular dahil). Turda her üreticiden en fazla 1, toplamda en fazla 2 üretilmiş soru olur. Banka havuzu biterse tur kısalır.
 - **Cihazda üretilen sorular:** Kaynaklı küçük veri tablolarından hesaplanır, sayı asla elle yazılmaz. İlk üretici: il merkezleri / başkentler arası kuş uçuşu mesafe (`data/distance_questions.dart`, id `dist:Q1:Q2`).
   Yeni üreticiler aynı kurala uyar: veri `tools/` ile Wikidata'dan çekilir, `assets/data/` altına gömülür, `source` iki öğenin de linkini içerir.
 - **Yeni soru akışı:** Günlük set herkes için aynı kalır (Wordle paylaşımı için). Serbest mod, üreticiler sayesinde tükenmez.
-- **İnternetten içerik:** `python tools/publish_content.py` bankayı ve yer verisini `docs/content/` altına kopyalar ve `manifest.json` sürümünü artırır. Push edilince GitHub Pages'ten yayınlanır.
-  Uygulama en fazla 6 saatte bir manifest'e bakar. Yeni sürümü indirir, doğrular ve sonraki açılışta kullanır.
-  İndirilen banka, uygulamadaki bankanın birebir devamı olmak zorundadır (aynı id'ler, aynı sıra). Değilse reddedilir. Bu yüzden sorular yalnızca sona eklenir, asla silinmez veya yer değiştirmez.
+- **İnternetten içerik:** `python tools/publish_content.py` bankayı, takvimi ve yer verisini `docs/content/` altına kopyalar ve `manifest.json` sürümünü artırır. Push edilince GitHub Pages'ten yayınlanır.
+  Uygulama en fazla 6 saatte bir manifest'e bakar. Yeni sürümü indirir, üç dosyayı birlikte doğrular ve sonraki açılışta kullanır.
+  İndirilen banka ve takvim, uygulamadakilerin birebir devamı olmak zorundadır (aynı id'ler ve günler, aynı sıra), takvimdeki her id bankada bulunmalıdır. Değilse üçü birden reddedilir.
+- **Veri kaynakları ve atıf:** Her kaynak `tools/sources.json` içinde lisansı ve atıf satırıyla durur (ayrıntı: `docs/SOURCES.md`). `python tools/build_attributions.py` kullanımdaki kaynakları `assets/data/attributions.json` ve `docs/attributions.md` olarak yazar. Uygulamada Ayarlar → Veri kaynakları ve lisanslar ekranında gösterilir.
 - **Giriş akışı:** (1) Kullanıcı en iyi tahminini kendi sayı klavyemizle girer. (2) Bir kaydırıcıyla aralığın genişliğini ayarlar. `magnitude` için kaydırıcı logaritmiktir, `year` için ±yıl olarak çalışır. Ekranda canlı olarak "4.500 – 5.500 m" gösterilir. (3) "Kilitle" butonu.
 - **Puan (`scoring.dart`), interval score (α = 0,1):**
   - Ceza `S = genişlik + 20 × (cevabın aralık dışında kalan mesafesi)`. `magnitude` için log2 ekseninde, `year` için yıl cinsinden.
@@ -127,8 +135,10 @@ test/
 - Test: `flutter test`
 - Analiz: `flutter analyze`
 - Wikidata ham verisini çek: `python tools/fetch_wikidata.py [veri_seti ...]`
-- Soru bankası üret: `python tools/build_questions.py`
+- Soru bankası üret: `python tools/build_questions.py [--fresh] [--dry-run] [--report]`
+- Günlük takvimi üret: `python tools/build_schedule.py [--days N] [--fresh] [--dry-run]`
+- Atıf listesini üret: `python tools/build_attributions.py`
 - Yer verisini üret: `python tools/build_places.py`
-- Soru bankasını doğrula: `python tools/validate_questions.py`
-- İçeriği yayına hazırla: `python tools/publish_content.py` (sonra `docs/` commit + push)
+- Bankayı ve takvimi doğrula: `python tools/validate_questions.py`
+- İçeriği yayına hazırla: `python tools/publish_content.py [--reset]` (sonra `docs/` commit + push; `--reset` yalnızca ilk oyuncudan önce)
 - Uygulama ikonunu üret: `flutter test tools/icon/render_icon_test.dart`

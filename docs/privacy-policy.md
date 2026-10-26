@@ -29,6 +29,11 @@ Tüm oyun verilerini silmek için uygulamayı kaldırman ya da Android ayarları
 ## Çocuklar
 Uygulama hiçbir yaş grubundan kişisel veri toplamaz.
 
+## Veri kaynakları
+Soruların cevapları açık lisanslı kaynaklardan gelir. Kaynakların ve lisanslarının listesi:
+[Veri kaynakları ve lisanslar](attributions.md). Aynı liste uygulamada Ayarlar → Veri kaynakları ve
+lisanslar ekranında da yer alır.
+
 ## Değişiklikler
 Bu politika değişirse güncel hâli bu sayfada yayınlanır.
 

@@ -1,4 +1,4 @@
-"""Fetch raw question data from Wikidata into tools/raw/.
+"""Fetch raw question data from Wikidata into tools/raw/wikidata/.
 
 Usage:  python tools/fetch_wikidata.py [dataset ...]
 
@@ -16,8 +16,18 @@ Then the article's page views over the last 12 months are added
 (Wikimedia REST API). build_questions.py ranks by them: they say far more
 about what a Turkish player knows than sitelink counts.
 
-Each dataset is saved as tools/raw/<name>.json with one row per value
-statement, so build_questions.py can resolve ambiguous values itself.
+Each dataset is saved as tools/raw/wikidata/<name>.json with one row per
+value statement, so build_questions.py can resolve ambiguous values itself.
+tools/raw/<source>/_meta.json records where each dump came from, when, and
+under which license (docs/SOURCES.md, rule 2).
+
+Property and class ids were checked on wikidata.org before use (2026-10-26):
+P2067 mass, P2048 height, P2250 life expectancy, P571 inception, P1128
+employees, P166 award received, P585 point in time, P2101 melting point,
+P2102 boiling point, P575 time of discovery, P21 sex, P3831 object of
+statement has role; Q11303 skyscraper, Q11344 chemical element, Q7432
+species, Q4830453/Q891723/Q6881511/Q783794 business/public company/
+enterprise/company, Q38104 … Q47170 the six Nobel prizes.
 """
 
 from __future__ import annotations
@@ -40,9 +50,27 @@ PAGEVIEWS = (
 # Last 12 full months before the fetch.
 VIEWS_START, VIEWS_END = "2025100100", "2026093000"
 USER_AGENT = "AralikQuestionBot/0.1 (https://github.com/YerdemA/aralik)"
-RAW_DIR = Path(__file__).resolve().parent / "raw"
+RAW_ROOT = Path(__file__).resolve().parent / "raw"
+RAW_DIR = RAW_ROOT / "wikidata"
+VIEWS_DIR = RAW_ROOT / "wikimedia_pageviews"
+VIEWS_CACHE = VIEWS_DIR / "pageviews_cache.json"
 IN_TURKEY = "?item wdt:P17 wd:Q43 ."
-VIEWS_CACHE = RAW_DIR / "pageviews_cache.json"
+TR_ARTICLE_PATTERN = "?article schema:about ?item ; schema:isPartOf <https://tr.wikipedia.org/> ."
+META = {
+    RAW_DIR: {
+        "source": "wikidata",
+        "url": ENDPOINT,
+        "license": "CC0 1.0",
+        "license_url": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+    },
+    VIEWS_DIR: {
+        "source": "wikimedia_pageviews",
+        "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/",
+        "license": "CC0 1.0",
+        "license_url": "https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews",
+        "period": f"{VIEWS_START[:8]}-{VIEWS_END[:8]}",
+    },
+}
 DETAIL_CHUNK = 60
 PAUSE_SECONDS = 2  # be polite to the public endpoint
 
@@ -55,6 +83,10 @@ CLUB_TYPES = ("Q476028", "Q847017")  # association football club, sports club
 HISTORIC_BUILDING_TYPES = ("Q32815", "Q23413", "Q16560")  # mosque, castle, palace
 BRIDGE_TYPES = ("Q12280", "Q12570", "Q158555")  # bridge, suspension, cable-stayed
 STADIUM_TYPES = ("Q483110", "Q1154710", "Q1049757")  # stadium, football, multi-purpose
+# business, public company, enterprise, company
+COMPANY_TYPES = ("Q4830453", "Q891723", "Q6881511", "Q783794")
+NOBEL_PRIZES = ("Q38104", "Q44585", "Q80061", "Q37922", "Q35637", "Q47170")
+SPECIES = "?item wdt:P105 wd:Q7432 ."  # taxon rank: species
 
 
 @dataclass(frozen=True)
@@ -77,8 +109,17 @@ class Dataset:
     # mountains). False: a single query over all types, left to the
     # optimizer, which is much faster for the structure types.
     per_type_scan: bool = True
-    # "quantity" or "year" (a date property; only year precision or finer).
+    # "quantity", "year" (a date property; only year precision or finer) or
+    # "qualifier_year": the year (P585) of a statement whose value is one of
+    # value_items, e.g. the year of a Nobel prize (P166).
     value_kind: str = "quantity"
+    value_items: tuple[str, ...] = ()
+    # name -> qualifier property, kept per statement as QIDs, e.g. the sex
+    # (P21) and role (P3831) of an animal's mass.
+    qualifiers: dict[str, str] = field(default_factory=dict)
+    # Hand-written candidate pattern (binds ?item) for sets where the
+    # generic scans time out; replaces types/where in the candidate query.
+    candidates: str = ""
 
 
 DATASETS = [
@@ -234,6 +275,114 @@ DATASETS = [
         value_kind="year",
     ),
     Dataset(
+        name="skyscrapers_world",
+        description="Gökdelenler ve kuleler, yükseklik (P2048)",
+        types=("Q11303", "Q12518"),
+        prop="P2048",
+        limit=250,
+        extras={"place": ("wdt:P131", "label"), "country": ("wdt:P17", "label")},
+        per_type_scan=False,
+    ),
+    Dataset(
+        name="companies_founded",
+        description="Şirketler, kuruluş yılı (P571)",
+        types=COMPANY_TYPES,
+        prop="P571",
+        limit=300,
+        extras={"country": ("wdt:P17", "label")},
+        value_kind="year",
+        # Well-documented companies only (those with an employee count);
+        # the plain type scan times out on "business" (2026-10-26).
+        candidates=" ".join(
+            [
+                "VALUES ?type {",
+                *(f"wd:{t}" for t in COMPANY_TYPES),
+                "}",
+                TR_ARTICLE_PATTERN,
+                "?item wdt:P31 ?type ; wdt:P1128 [] .",
+            ]
+        ),
+    ),
+    Dataset(
+        name="companies_employees",
+        description="Şirketler, çalışan sayısı (P1128, yılı P585)",
+        types=COMPANY_TYPES,
+        prop="P1128",
+        limit=300,
+        normalized=False,
+        extras={"country": ("wdt:P17", "label")},
+        per_type_scan=False,
+    ),
+    Dataset(
+        name="elements_melting",
+        description="Kimyasal elementler, erime noktası (P2101, kelvin)",
+        types=("Q11344",),
+        prop="P2101",
+        limit=130,
+        where="?item wdt:P1086 [] .",
+        per_type_scan=False,
+    ),
+    Dataset(
+        name="elements_boiling",
+        description="Kimyasal elementler, kaynama noktası (P2102, kelvin)",
+        types=("Q11344",),
+        prop="P2102",
+        limit=130,
+        where="?item wdt:P1086 [] .",
+        per_type_scan=False,
+    ),
+    Dataset(
+        name="elements_discovered",
+        description="Kimyasal elementler, keşif yılı (P575)",
+        types=("Q11344",),
+        prop="P575",
+        limit=130,
+        where="?item wdt:P1086 [] .",
+        per_type_scan=False,
+        value_kind="year",
+    ),
+    Dataset(
+        name="nobel",
+        description="Nobel ödülü sahipleri, ödül yılı (P166 + P585)",
+        types=("Q5",),
+        prop="P166",
+        limit=400,
+        where="VALUES ?prize { " + " ".join(f"wd:{q}" for q in NOBEL_PRIZES) + " } ?item wdt:P166 ?prize .",
+        per_type_scan=False,
+        value_kind="qualifier_year",
+        value_items=NOBEL_PRIZES,
+    ),
+    Dataset(
+        name="animals_mass",
+        description="Hayvan türleri, kütle (P2067, cinsiyet ve rol niteleyicileriyle)",
+        types=("Q16521",),
+        prop="P2067",
+        limit=250,
+        where=SPECIES,
+        qualifiers={"sex": "P21", "role": "P3831"},
+        # P225 taxon name: a "label" equal to it means no Turkish name.
+        extras={"taxon": ("wdt:P225", "literal")},
+        # Start from the adult-weight qualifier: only those values are used,
+        # and every other order times out (2026-10-26).
+        candidates=f"""hint:Query hint:optimizer "None" .
+  ?st pq:P3831 wd:Q78101716 . ?item p:P2067 ?st .
+  {SPECIES}
+  {TR_ARTICLE_PATTERN}""",
+    ),
+    Dataset(
+        name="animals_lifespan",
+        description="Hayvan türleri, beklenen yaşam süresi (P2250)",
+        types=("Q16521",),
+        prop="P2250",
+        limit=100,
+        where=SPECIES,
+        qualifiers={"sex": "P21", "applies_to": "P518"},
+        extras={"taxon": ("wdt:P225", "literal")},
+        # Only ~70 species have P2250 at all; the article join is what times
+        # out, and the details query keeps Turkish labels anyway.
+        candidates=f"?item wdt:P2250 [] . {SPECIES}",
+    ),
+    Dataset(
         name="battles",
         description="Muharebeler, tarih (P585)",
         types=("Q178561",),
@@ -267,7 +416,9 @@ TR_ARTICLE = "?article schema:isPartOf <https://tr.wikipedia.org/> ; schema:abou
 
 def candidates_query(ds: Dataset, item_type: str | None = None) -> str:
     """Candidates of one type (per-type scan) or of all types at once."""
-    if item_type:
+    if ds.candidates:
+        body = ds.candidates
+    elif item_type:
         # optimizer "None" keeps the written join order: start from the
         # Turkish Wikipedia articles, far fewer than e.g. all mountains.
         body = f"""hint:Query hint:optimizer "None" .
@@ -277,8 +428,9 @@ def candidates_query(ds: Dataset, item_type: str | None = None) -> str:
     else:
         types = " ".join(f"wd:{t}" for t in ds.types)
         # Turkey-restricted sets are small enough without the article filter.
+        restriction = ds.where if ds.where == IN_TURKEY else f"{TR_ARTICLE}\n  {ds.where}"
         body = f"""VALUES ?type {{ {types} }}
-  {ds.where or TR_ARTICLE}
+  {restriction}
   ?item wdt:P31 ?type ."""
     return f"""
 SELECT DISTINCT ?item ?links WHERE {{
@@ -291,7 +443,14 @@ LIMIT {ds.limit}
 
 
 def details_query(ds: Dataset, qids: list[str]) -> str:
-    if ds.value_kind == "year":
+    if ds.value_kind == "qualifier_year":
+        items = " ".join(f"wd:{q}" for q in ds.value_items)
+        value_pattern = (
+            f"ps:{ds.prop} ?valueItem ; pq:P585 ?date .\n"
+            f"  VALUES ?valueItem {{ {items} }}\n"
+            "  BIND(YEAR(?date) AS ?value)"
+        )
+    elif ds.value_kind == "year":
         # Only dates known at least to the year (precision 9 = year).
         value_pattern = (
             f"psv:{ds.prop} [ wikibase:timeValue ?date ; wikibase:timePrecision ?precision ] .\n"
@@ -317,11 +476,15 @@ def details_query(ds: Dataset, qids: list[str]) -> str:
             )
         else:
             extra_where.append(f"OPTIONAL {{ ?item {path} ?{name}_v . }}")
+    for name, prop in ds.qualifiers.items():
+        extra_select.append(f'(GROUP_CONCAT(DISTINCT ?{name}_q; separator="|") AS ?{name})')
+        extra_where.append(f"OPTIONAL {{ ?st pq:{prop} ?{name}_q . }}")
+    item_select = "?valueItem" if ds.value_kind == "qualifier_year" else ""
     values = " ".join(f"wd:{qid}" for qid in qids)
     extras = "\n  ".join(extra_where)
 
     return f"""
-SELECT ?item ?label ?value ?rank ?valueYear (SAMPLE(?title_v) AS ?title) {' '.join(extra_select)} WHERE {{
+SELECT ?item ?label ?st ?value {item_select} ?rank ?valueYear (SAMPLE(?title_v) AS ?title) {' '.join(extra_select)} WHERE {{
   VALUES ?item {{ {values} }}
   ?item rdfs:label ?label . FILTER(LANG(?label) = "tr")
   ?item p:{ds.prop} ?st .
@@ -331,7 +494,7 @@ SELECT ?item ?label ?value ?rank ?valueYear (SAMPLE(?title_v) AS ?title) {' '.jo
   OPTIONAL {{ ?st pq:P585 ?time . BIND(YEAR(?time) AS ?valueYear) }}
   {extras}
 }}
-GROUP BY ?item ?label ?value ?rank ?valueYear
+GROUP BY ?item ?label ?st ?value {item_select} ?rank ?valueYear
 """
 
 
@@ -371,7 +534,7 @@ def qid_of(binding: dict) -> str:
 
 def fetch_candidates(ds: Dataset) -> dict[str, int]:
     links: dict[str, int] = {}
-    for item_type in ds.types if ds.per_type_scan else [None]:
+    for item_type in ds.types if ds.per_type_scan and not ds.candidates else [None]:
         bindings = run_query(candidates_query(ds, item_type))
         for b in bindings:
             links[qid_of(b)] = int(b["links"]["value"])
@@ -394,6 +557,11 @@ def simplify(ds: Dataset, binding: dict, links: int) -> dict:
         "value_year": int(get("valueYear")) if get("valueYear") else None,
         "tr_title": get("title"),
     }
+    if get("valueItem"):
+        row["value_item"] = get("valueItem").rsplit("/", 1)[-1]
+    for name in ds.qualifiers:
+        raw = get(name)
+        row[name] = sorted(v.rsplit("/", 1)[-1] for v in raw.split("|") if v) if raw else []
     for name, (_, kind) in ds.extras.items():
         raw = get(name)
         values = sorted({v for v in raw.split("|") if v}) if raw else []
@@ -422,9 +590,23 @@ def fetch(ds: Dataset) -> Path:
         "rows": rows,
     }
     out.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
+    write_meta(RAW_DIR, ds.name, payload["fetched_at"], ds.description)
     items = len({r["qid"] for r in rows})
-    print(f"  {len(rows)} satır, {items} öğe -> tools/raw/{out.name}", flush=True)
+    print(f"  {len(rows)} satır, {items} öğe -> tools/raw/wikidata/{out.name}", flush=True)
     return out
+
+
+def write_meta(directory: Path, dataset: str, fetched_at: str, description: str) -> None:
+    """Record the dump's origin, date and license in <dir>/_meta.json."""
+    path = directory / "_meta.json"
+    meta = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    meta.update(META[directory])
+    meta.setdefault("datasets", {})[dataset] = {
+        "description": description,
+        "fetched_at": fetched_at,
+    }
+    meta["datasets"] = dict(sorted(meta["datasets"].items()))
+    path.write_text(json.dumps(meta, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
 
 def page_views(titles: set[str]) -> dict[str, int]:
@@ -452,6 +634,12 @@ def page_views(titles: set[str]) -> dict[str, int]:
             print(f"    okunma sayıları: {i + 1}/{len(missing)}", flush=True)
             VIEWS_CACHE.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
     VIEWS_CACHE.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
+    write_meta(
+        VIEWS_DIR,
+        "tr.wikipedia",
+        datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "Türkçe Vikipedi maddelerinin aylık okunma sayıları (kullanıcı erişimi)",
+    )
     return {t: known[t] for t in titles}
 
 
@@ -517,13 +705,15 @@ def fetch_places(name: str) -> Path:
         "rows": rows,
     }
     out.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"  {len(rows)} satır -> tools/raw/{out.name}", flush=True)
+    write_meta(RAW_DIR, name, payload["fetched_at"], description)
+    print(f"  {len(rows)} satır -> tools/raw/wikidata/{out.name}", flush=True)
     return out
 
 
 def main(argv: list[str]) -> int:
     sys.stdout.reconfigure(encoding="utf-8")
     RAW_DIR.mkdir(parents=True, exist_ok=True)
+    VIEWS_DIR.mkdir(parents=True, exist_ok=True)
     by_name = {ds.name: ds for ds in DATASETS}
     names = list(by_name) + list(PLACE_QUERIES)
     unknown = [name for name in argv if name not in names]

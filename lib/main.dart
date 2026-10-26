@@ -16,10 +16,5 @@ Future<void> main() async {
   runApp(AralikApp(repository: repository, stats: StatsStore(prefs)));
 
   // Look for new questions in the background; used from the next launch.
-  content
-      .sync(
-        acceptQuestions: repository.acceptsQuestions,
-        acceptPlaces: repository.acceptsPlaces,
-      )
-      .ignore();
+  content.sync(accept: repository.acceptsContent).ignore();
 }

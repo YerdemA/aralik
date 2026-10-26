@@ -1,0 +1,4537 @@
+{
+ "dataset": "companies_founded",
+ "description": "Şirketler, kuruluş yılı (P571)",
+ "property": "P571",
+ "fetched_at": "2026-10-26T15:21:42+00:00",
+ "rows": [
+  {
+   "qid": "Q38076",
+   "label": "McDonald's",
+   "links": 137,
+   "value": 1940.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "McDonald's",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 27163
+  },
+  {
+   "qid": "Q8093",
+   "label": "Nintendo",
+   "links": 131,
+   "value": 1889.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nintendo",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 14947
+  },
+  {
+   "qid": "Q8093",
+   "label": "Nintendo",
+   "links": 131,
+   "value": 1947.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nintendo",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 14947
+  },
+  {
+   "qid": "Q3884",
+   "label": "Amazon.com",
+   "links": 124,
+   "value": 1994.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Amazon (şirket)",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 24759
+  },
+  {
+   "qid": "Q193701",
+   "label": "SpaceX",
+   "links": 117,
+   "value": 2002.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "SpaceX",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 15516
+  },
+  {
+   "qid": "Q23317",
+   "label": "Audi",
+   "links": 115,
+   "value": 1909.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Audi",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 24254
+  },
+  {
+   "qid": "Q41187",
+   "label": "Sony",
+   "links": 114,
+   "value": 1946.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sony",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 17316
+  },
+  {
+   "qid": "Q478214",
+   "label": "Tesla Motors",
+   "links": 112,
+   "value": 2003.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tesla (şirket)",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 26518
+  },
+  {
+   "qid": "Q3895",
+   "label": "Adidas",
+   "links": 107,
+   "value": 1924.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Adidas",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 26690
+  },
+  {
+   "qid": "Q3895",
+   "label": "Adidas",
+   "links": 107,
+   "value": 1949.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Adidas",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 26690
+  },
+  {
+   "qid": "Q47099",
+   "label": "Televisa",
+   "links": 105,
+   "value": 1973.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Televisa",
+   "country": [
+    "Meksika"
+   ],
+   "tr_views": 5275
+  },
+  {
+   "qid": "Q9584",
+   "label": "Honda",
+   "links": 105,
+   "value": 1946.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Honda",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 18057
+  },
+  {
+   "qid": "Q9584",
+   "label": "Honda",
+   "links": 105,
+   "value": 1948.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Honda",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 18057
+  },
+  {
+   "qid": "Q9325",
+   "label": "Lufthansa",
+   "links": 101,
+   "value": 1926.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lufthansa",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 11444
+  },
+  {
+   "qid": "Q9325",
+   "label": "Lufthansa",
+   "links": 101,
+   "value": 1953.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lufthansa",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 11444
+  },
+  {
+   "qid": "Q21708200",
+   "label": "OpenAI",
+   "links": 98,
+   "value": 2015.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "OpenAI",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 27198
+  },
+  {
+   "qid": "Q21708200",
+   "label": "OpenAI",
+   "links": 98,
+   "value": 2015.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "OpenAI",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 27198
+  },
+  {
+   "qid": "Q67",
+   "label": "Airbus Commercial Aircraft",
+   "links": 98,
+   "value": 1969.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Airbus Commercial Aircraft",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 23
+  },
+  {
+   "qid": "Q67",
+   "label": "Airbus Commercial Aircraft",
+   "links": 98,
+   "value": 1970.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Airbus Commercial Aircraft",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 23
+  },
+  {
+   "qid": "Q160120",
+   "label": "Huawei",
+   "links": 95,
+   "value": 1987.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Huawei",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 12908
+  },
+  {
+   "qid": "Q127552",
+   "label": "Pixar",
+   "links": 94,
+   "value": 1986.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pixar",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 10145
+  },
+  {
+   "qid": "Q158888",
+   "label": "Yamaha Motor Company",
+   "links": 94,
+   "value": 1955.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yamaha Motor Company",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 5725
+  },
+  {
+   "qid": "Q160746",
+   "label": "Nestlé",
+   "links": 92,
+   "value": 1866.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nestlé",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 16995
+  },
+  {
+   "qid": "Q40993",
+   "label": "Porsche",
+   "links": 91,
+   "value": 1931.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Porsche",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 23672
+  },
+  {
+   "qid": "Q130879",
+   "label": "Reuters",
+   "links": 90,
+   "value": 1851.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Reuters",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 8481
+  },
+  {
+   "qid": "Q20165",
+   "label": "Nissan",
+   "links": 90,
+   "value": 1933.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nissan",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 18117
+  },
+  {
+   "qid": "Q81965",
+   "label": "General Motors",
+   "links": 90,
+   "value": 1908.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "General Motors",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 20803
+  },
+  {
+   "qid": "Q4548",
+   "label": "Türk Hava Yolları",
+   "links": 89,
+   "value": 1933.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Türk Hava Yolları",
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 115027
+  },
+  {
+   "qid": "Q483915",
+   "label": "Nike",
+   "links": 89,
+   "value": 1964.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nike (şirket)",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 18308
+  },
+  {
+   "qid": "Q1636958",
+   "label": "Xiaomi",
+   "links": 88,
+   "value": 2010.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Xiaomi",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 17189
+  },
+  {
+   "qid": "Q11463",
+   "label": "Adobe",
+   "links": 87,
+   "value": 1982.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Adobe",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 6960
+  },
+  {
+   "qid": "Q380",
+   "label": "Meta, Inc.",
+   "links": 87,
+   "value": 2004.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Meta, Inc.",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 21730
+  },
+  {
+   "qid": "Q35886",
+   "label": "Lamborghini",
+   "links": 86,
+   "value": 1948.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lamborghini",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 33124
+  },
+  {
+   "qid": "Q80978",
+   "label": "Hewlett-Packard",
+   "links": 85,
+   "value": 1939.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hewlett-Packard",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 5815
+  },
+  {
+   "qid": "Q483551",
+   "label": "Wal-Mart",
+   "links": 84,
+   "value": 1962.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Walmart",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 13604
+  },
+  {
+   "qid": "Q483551",
+   "label": "Wal-Mart",
+   "links": 84,
+   "value": 1969.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Walmart",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 13604
+  },
+  {
+   "qid": "Q14799",
+   "label": "Lenovo",
+   "links": 83,
+   "value": 1984.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lenovo",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 10481
+  },
+  {
+   "qid": "Q35996",
+   "label": "Mazda",
+   "links": 82,
+   "value": 1920.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mazda",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 16003
+  },
+  {
+   "qid": "Q182477",
+   "label": "Nvidia",
+   "links": 81,
+   "value": 1993.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nvidia",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 45144
+  },
+  {
+   "qid": "Q30873",
+   "label": "Dell",
+   "links": 81,
+   "value": 1989.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Dell",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 4710
+  },
+  {
+   "qid": "Q30873",
+   "label": "Dell",
+   "links": 81,
+   "value": 2016.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dell",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 4710
+  },
+  {
+   "qid": "Q29637",
+   "label": "Skoda",
+   "links": 80,
+   "value": 1895.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Škoda Auto",
+   "country": [
+    "Çekya"
+   ],
+   "tr_views": 24678
+  },
+  {
+   "qid": "Q29637",
+   "label": "Skoda",
+   "links": 80,
+   "value": 1990.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Škoda Auto",
+   "country": [
+    "Çekya"
+   ],
+   "tr_views": 24678
+  },
+  {
+   "qid": "Q53247",
+   "label": "Panasonic",
+   "links": 79,
+   "value": 1918.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Panasonic",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 8171
+  },
+  {
+   "qid": "Q81230",
+   "label": "Siemens AG",
+   "links": 79,
+   "value": 1847.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Siemens AG",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 13678
+  },
+  {
+   "qid": "Q102673",
+   "label": "Gazprom",
+   "links": 78,
+   "value": 1989.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gazprom",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 8244
+  },
+  {
+   "qid": "Q128896",
+   "label": "AMD",
+   "links": 78,
+   "value": 1969.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "AMD",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 5153
+  },
+  {
+   "qid": "Q19900",
+   "label": "Oracle",
+   "links": 78,
+   "value": 1977.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Oracle",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 16532
+  },
+  {
+   "qid": "Q170416",
+   "label": "Philips",
+   "links": 77,
+   "value": 1891.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Philips",
+   "country": [
+    "Hollanda"
+   ],
+   "tr_views": 18216
+  },
+  {
+   "qid": "Q154950",
+   "label": "Shell plc",
+   "links": 76,
+   "value": 1890.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Shell plc",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 18061
+  },
+  {
+   "qid": "Q206921",
+   "label": "Pfizer",
+   "links": 76,
+   "value": 1849.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pfizer",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 5704
+  },
+  {
+   "qid": "Q170614",
+   "label": "Ryanair",
+   "links": 75,
+   "value": 1985.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ryanair",
+   "country": [
+    "İrlanda"
+   ],
+   "tr_views": 9048
+  },
+  {
+   "qid": "Q178516",
+   "label": "Gucci",
+   "links": 75,
+   "value": 1921.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gucci",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 13897
+  },
+  {
+   "qid": "Q58707",
+   "label": "Aeroflot",
+   "links": 75,
+   "value": 1923.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aeroflot",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 5813
+  },
+  {
+   "qid": "Q14647",
+   "label": "Sun Microsystems",
+   "links": 74,
+   "value": 1982.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sun Microsystems",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 1473
+  },
+  {
+   "qid": "Q20800404",
+   "label": "Alphabet Inc.",
+   "links": 74,
+   "value": 2015.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Alphabet",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 163
+  },
+  {
+   "qid": "Q5281",
+   "label": "Yandex",
+   "links": 74,
+   "value": 1997.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yandex",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 174475
+  },
+  {
+   "qid": "Q5281",
+   "label": "Yandex",
+   "links": 74,
+   "value": 2000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Yandex",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 174475
+  },
+  {
+   "qid": "Q188822",
+   "label": "Asya Kalkınma Bankası",
+   "links": 73,
+   "value": 1966.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Asya Kalkınma Bankası",
+   "country": [
+    "Filipinler"
+   ],
+   "tr_views": 1820
+  },
+  {
+   "qid": "Q188822",
+   "label": "Asya Kalkınma Bankası",
+   "links": 73,
+   "value": 1966.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Asya Kalkınma Bankası",
+   "country": [
+    "Filipinler"
+   ],
+   "tr_views": 1820
+  },
+  {
+   "qid": "Q188822",
+   "label": "Asya Kalkınma Bankası",
+   "links": 73,
+   "value": 1966.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Asya Kalkınma Bankası",
+   "country": [
+    "Filipinler"
+   ],
+   "tr_views": 1820
+  },
+  {
+   "qid": "Q27530",
+   "label": "Daimler AG",
+   "links": 73,
+   "value": 1998.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mercedes-Benz Group",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 9355
+  },
+  {
+   "qid": "Q3295867",
+   "label": "The Coca-Cola Company",
+   "links": 73,
+   "value": 1886.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "The Coca-Cola Company",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 22672
+  },
+  {
+   "qid": "Q3295867",
+   "label": "The Coca-Cola Company",
+   "links": 73,
+   "value": 1892.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "The Coca-Cola Company",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 22672
+  },
+  {
+   "qid": "Q163810",
+   "label": "Volvo",
+   "links": 72,
+   "value": 1927.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Volvo",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 21023
+  },
+  {
+   "qid": "Q35476",
+   "label": "AT&T",
+   "links": 72,
+   "value": 1885.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "AT&T",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 6338
+  },
+  {
+   "qid": "Q35476",
+   "label": "AT&T",
+   "links": 72,
+   "value": 1983.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "AT&T",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 6338
+  },
+  {
+   "qid": "Q35476",
+   "label": "AT&T",
+   "links": 72,
+   "value": 2005.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "AT&T",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 6338
+  },
+  {
+   "qid": "Q14772",
+   "label": "Baidu",
+   "links": 71,
+   "value": 2000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Baidu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 6459
+  },
+  {
+   "qid": "Q156238",
+   "label": "ExxonMobil",
+   "links": 71,
+   "value": 1882.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "ExxonMobil",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 9902
+  },
+  {
+   "qid": "Q173941",
+   "label": "Electronic Arts",
+   "links": 71,
+   "value": 1982.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Electronic Arts",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 11005
+  },
+  {
+   "qid": "Q173941",
+   "label": "Electronic Arts",
+   "links": 71,
+   "value": 1982.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Electronic Arts",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 11005
+  },
+  {
+   "qid": "Q62621",
+   "label": "Canon",
+   "links": 71,
+   "value": 1937.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Canon Inc.",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 1050
+  },
+  {
+   "qid": "Q62621",
+   "label": "Canon",
+   "links": 71,
+   "value": 1937.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Canon Inc.",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 1050
+  },
+  {
+   "qid": "Q1359568",
+   "label": "Alibaba",
+   "links": 70,
+   "value": 1999.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Alibaba Group",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 16607
+  },
+  {
+   "qid": "Q152864",
+   "label": "ASUS",
+   "links": 70,
+   "value": 1989.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Asus",
+   "country": [
+    "Tayvan"
+   ],
+   "tr_views": 7312
+  },
+  {
+   "qid": "Q157064",
+   "label": "Puma SE",
+   "links": 70,
+   "value": 1948.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Puma (şirket)",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 13359
+  },
+  {
+   "qid": "Q183275",
+   "label": "Mitsubishi",
+   "links": 70,
+   "value": 1870.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mitsubishi",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 10618
+  },
+  {
+   "qid": "Q183275",
+   "label": "Mitsubishi",
+   "links": 70,
+   "value": 1950.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mitsubishi",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 10618
+  },
+  {
+   "qid": "Q188326",
+   "label": "H&M",
+   "links": 70,
+   "value": 1947.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "H&M",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 16444
+  },
+  {
+   "qid": "Q32491",
+   "label": "Qantas",
+   "links": 70,
+   "value": 1920.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Qantas",
+   "country": [
+    "Avustralya"
+   ],
+   "tr_views": 2255
+  },
+  {
+   "qid": "Q66048",
+   "label": "Deutsche Bank",
+   "links": 70,
+   "value": 1870.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Deutsche Bank",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 5781
+  },
+  {
+   "qid": "Q66048",
+   "label": "Deutsche Bank",
+   "links": 70,
+   "value": 1870.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Deutsche Bank",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 5781
+  },
+  {
+   "qid": "Q7240",
+   "label": "Lockheed Martin",
+   "links": 70,
+   "value": 1995.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lockheed Martin",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 32791
+  },
+  {
+   "qid": "Q156578",
+   "label": "Volkswagen grubu",
+   "links": 69,
+   "value": 1937.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Volkswagen AG",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 32198
+  },
+  {
+   "qid": "Q173395",
+   "label": "Cisco Systems",
+   "links": 69,
+   "value": 1984.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cisco Systems",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2440
+  },
+  {
+   "qid": "Q173395",
+   "label": "Cisco Systems",
+   "links": 69,
+   "value": 2021.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cisco Systems",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2440
+  },
+  {
+   "qid": "Q234021",
+   "label": "Robert Bosch GmbH",
+   "links": 67,
+   "value": 1886.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bosch",
+   "country": [
+    "Almanya",
+    "Hollanda"
+   ],
+   "tr_views": 11057
+  },
+  {
+   "qid": "Q152051",
+   "label": "Bayer AG",
+   "links": 66,
+   "value": 1863.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayer AG",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 6982
+  },
+  {
+   "qid": "Q152057",
+   "label": "BP",
+   "links": 66,
+   "value": 1908.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "BP",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 13688
+  },
+  {
+   "qid": "Q152057",
+   "label": "BP",
+   "links": 66,
+   "value": 1909.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "BP",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 13688
+  },
+  {
+   "qid": "Q334800",
+   "label": "PepsiCo",
+   "links": 66,
+   "value": 1961.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "PepsiCo",
+   "country": [
+    "Amerika Birleşik Devletleri",
+    "Belçika"
+   ],
+   "tr_views": 20067
+  },
+  {
+   "qid": "Q62288",
+   "label": "Rolex",
+   "links": 66,
+   "value": 1905.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rolex",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 11327
+  },
+  {
+   "qid": "Q679322",
+   "label": "ARAMCO",
+   "links": 66,
+   "value": 1932.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saudi Aramco",
+   "country": [
+    "Suudi Arabistan"
+   ],
+   "tr_views": 12790
+  },
+  {
+   "qid": "Q679322",
+   "label": "ARAMCO",
+   "links": 66,
+   "value": 1933.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saudi Aramco",
+   "country": [
+    "Suudi Arabistan"
+   ],
+   "tr_views": 12790
+  },
+  {
+   "qid": "Q679322",
+   "label": "ARAMCO",
+   "links": 66,
+   "value": 1988.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saudi Aramco",
+   "country": [
+    "Suudi Arabistan"
+   ],
+   "tr_views": 12790
+  },
+  {
+   "qid": "Q679322",
+   "label": "ARAMCO",
+   "links": 66,
+   "value": 1988.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saudi Aramco",
+   "country": [
+    "Suudi Arabistan"
+   ],
+   "tr_views": 12790
+  },
+  {
+   "qid": "Q157062",
+   "label": "Unilever",
+   "links": 65,
+   "value": 1929.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Unilever",
+   "country": [
+    "Birleşik Krallık",
+    "Hollanda Krallığı"
+   ],
+   "tr_views": 24941
+  },
+  {
+   "qid": "Q157062",
+   "label": "Unilever",
+   "links": 65,
+   "value": 1929.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Unilever",
+   "country": [
+    "Birleşik Krallık",
+    "Hollanda Krallığı"
+   ],
+   "tr_views": 24941
+  },
+  {
+   "qid": "Q328840",
+   "label": "Visa Inc.",
+   "links": 65,
+   "value": 1958.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Visa",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 1150
+  },
+  {
+   "qid": "Q38903",
+   "label": "Universal Music Group",
+   "links": 65,
+   "value": 1934.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Universal Music Group",
+   "country": [
+    "Amerika Birleşik Devletleri",
+    "Hollanda"
+   ],
+   "tr_views": 4589
+  },
+  {
+   "qid": "Q187854",
+   "label": "Scandinavian Airlines",
+   "links": 64,
+   "value": 1946.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Scandinavian Airlines",
+   "country": [
+    "Danimarka",
+    "Norveç",
+    "İsveç"
+   ],
+   "tr_views": 2146
+  },
+  {
+   "qid": "Q2084900",
+   "label": "Oppo",
+   "links": 64,
+   "value": 2004.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Oppo",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 10544
+  },
+  {
+   "qid": "Q26070",
+   "label": "Uniqlo",
+   "links": 64,
+   "value": 1984.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Uniqlo",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 3688
+  },
+  {
+   "qid": "Q486269",
+   "label": "Kodak",
+   "links": 64,
+   "value": 1880.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kodak",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 7553
+  },
+  {
+   "qid": "Q486269",
+   "label": "Kodak",
+   "links": 64,
+   "value": 1882.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kodak",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 7553
+  },
+  {
+   "qid": "Q212405",
+   "label": "Procter & Gamble",
+   "links": 63,
+   "value": 1837.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Procter & Gamble",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 16347
+  },
+  {
+   "qid": "Q552581",
+   "label": "SAP SE",
+   "links": 63,
+   "value": 1972.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "SAP",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 9861
+  },
+  {
+   "qid": "Q56760250",
+   "label": "Sony Music Entertainment",
+   "links": 63,
+   "value": 2009.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sony Music",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 4970
+  },
+  {
+   "qid": "Q105557",
+   "label": "Embraer",
+   "links": 62,
+   "value": 1969.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Embraer",
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 11125
+  },
+  {
+   "qid": "Q190464",
+   "label": "HSBC",
+   "links": 62,
+   "value": 1865.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "HSBC",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 10718
+  },
+  {
+   "qid": "Q489921",
+   "label": "Mastercard",
+   "links": 62,
+   "value": 1966.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mastercard",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 11672
+  },
+  {
+   "qid": "Q489921",
+   "label": "Mastercard",
+   "links": 62,
+   "value": 1979.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mastercard",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 11672
+  },
+  {
+   "qid": "Q191551",
+   "label": "easyJet",
+   "links": 61,
+   "value": 1995.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "EasyJet",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 3125
+  },
+  {
+   "qid": "Q36033",
+   "label": "Mitsubishi Motors",
+   "links": 61,
+   "value": 1970.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mitsubishi Motors",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 7717
+  },
+  {
+   "qid": "Q481778",
+   "label": "Acer",
+   "links": 61,
+   "value": 1976.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Acer (şirket)",
+   "country": [
+    "Tayvan"
+   ],
+   "tr_views": 895
+  },
+  {
+   "qid": "Q52618",
+   "label": "Ericsson",
+   "links": 61,
+   "value": 1876.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ericsson",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 8920
+  },
+  {
+   "qid": "Q20718",
+   "label": "Samsung Electronics",
+   "links": 60,
+   "value": 1969.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Samsung Electronics",
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 9354
+  },
+  {
+   "qid": "Q485593",
+   "label": "Red Hat",
+   "links": 60,
+   "value": 1993.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Red Hat",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 1572
+  },
+  {
+   "qid": "Q487907",
+   "label": "Bank of America",
+   "links": 60,
+   "value": 1784.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bank of America",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 6326
+  },
+  {
+   "qid": "Q487907",
+   "label": "Bank of America",
+   "links": 60,
+   "value": 1956.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bank of America",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 6326
+  },
+  {
+   "qid": "Q487907",
+   "label": "Bank of America",
+   "links": 60,
+   "value": 1998.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Bank of America",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 6326
+  },
+  {
+   "qid": "Q191715",
+   "label": "Warner Media Group",
+   "links": 59,
+   "value": 1990.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "WarnerMedia",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2921
+  },
+  {
+   "qid": "Q191715",
+   "label": "Warner Media Group",
+   "links": 59,
+   "value": 2016.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "WarnerMedia",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2921
+  },
+  {
+   "qid": "Q193326",
+   "label": "Goldman Sachs",
+   "links": 59,
+   "value": 1869.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Goldman Sachs",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 4609
+  },
+  {
+   "qid": "Q201821",
+   "label": "Finnair",
+   "links": 59,
+   "value": 1923.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Finnair",
+   "country": [
+    "Finlandiya"
+   ],
+   "tr_views": 665
+  },
+  {
+   "qid": "Q29043471",
+   "label": "Neuralink",
+   "links": 59,
+   "value": 2016.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Neuralink",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 4645
+  },
+  {
+   "qid": "Q332477",
+   "label": "Victoria's Secret",
+   "links": 59,
+   "value": 1977.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Victoria's Secret",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 9645
+  },
+  {
+   "qid": "Q45700",
+   "label": "Konami",
+   "links": 59,
+   "value": 1969.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Konami",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 10830
+  },
+  {
+   "qid": "Q51747",
+   "label": "Air China",
+   "links": 59,
+   "value": 1988.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Air China",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 1545
+  },
+  {
+   "qid": "Q843887",
+   "label": "Hermès",
+   "links": 59,
+   "value": 1837.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hermès",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 4484
+  },
+  {
+   "qid": "Q860580",
+   "label": "Tencent",
+   "links": 59,
+   "value": 1998.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tencent",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 18778
+  },
+  {
+   "qid": "Q9401",
+   "label": "BASF SE",
+   "links": 59,
+   "value": 1865.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "BASF",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 4065
+  },
+  {
+   "qid": "Q14428",
+   "label": "Capcom",
+   "links": 58,
+   "value": 1979.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Capcom",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 6633
+  },
+  {
+   "qid": "Q151954",
+   "label": "Lidl",
+   "links": 58,
+   "value": 1973.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lidl",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 9651
+  },
+  {
+   "qid": "Q188217",
+   "label": "SEAT",
+   "links": 58,
+   "value": 1950.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "SEAT",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 14579
+  },
+  {
+   "qid": "Q188454",
+   "label": "Yamaha",
+   "links": 58,
+   "value": 1987.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yamaha",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 6460
+  },
+  {
+   "qid": "Q192314",
+   "label": "JPMorgan Chase",
+   "links": 58,
+   "value": 1968.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "JPMorgan Chase",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 13503
+  },
+  {
+   "qid": "Q192314",
+   "label": "JPMorgan Chase",
+   "links": 58,
+   "value": 2000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "JPMorgan Chase",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 13503
+  },
+  {
+   "qid": "Q192653",
+   "label": "Czech Airlines",
+   "links": 58,
+   "value": 1923.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Czech Airlines",
+   "country": [
+    "Çekya"
+   ],
+   "tr_views": 1444
+  },
+  {
+   "qid": "Q192653",
+   "label": "Czech Airlines",
+   "links": 58,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Czech Airlines",
+   "country": [
+    "Çekya"
+   ],
+   "tr_views": 1444
+  },
+  {
+   "qid": "Q204284",
+   "label": "All Nippon Airways",
+   "links": 58,
+   "value": 1952.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "All Nippon Airways",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 3283
+  },
+  {
+   "qid": "Q53227",
+   "label": "Sharp Corporation",
+   "links": 58,
+   "value": 1912.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sharp",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 2757
+  },
+  {
+   "qid": "Q15733006",
+   "label": "DeepMind",
+   "links": 57,
+   "value": 2010.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Google DeepMind",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 3592
+  },
+  {
+   "qid": "Q194393",
+   "label": "SK Slavia Prag",
+   "links": 57,
+   "value": 1892.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "SK Slavia Praha",
+   "country": [
+    "Çekya"
+   ],
+   "tr_views": 6115
+  },
+  {
+   "qid": "Q194393",
+   "label": "SK Slavia Prag",
+   "links": 57,
+   "value": 1995.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "SK Slavia Praha",
+   "country": [
+    "Çekya"
+   ],
+   "tr_views": 6115
+  },
+  {
+   "qid": "Q156376",
+   "label": "Vimeo",
+   "links": 56,
+   "value": 2004.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vimeo",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 1544
+  },
+  {
+   "qid": "Q193481",
+   "label": "AC Sparta Prag",
+   "links": 56,
+   "value": 1893.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "AC Sparta Praha",
+   "country": [
+    "Çekya"
+   ],
+   "tr_views": 6586
+  },
+  {
+   "qid": "Q217338",
+   "label": "Casio",
+   "links": 56,
+   "value": 1957.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Casio",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 8899
+  },
+  {
+   "qid": "Q219635",
+   "label": "BlackRock",
+   "links": 56,
+   "value": 1988.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "BlackRock",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 64826
+  },
+  {
+   "qid": "Q487494",
+   "label": "Tesco",
+   "links": 56,
+   "value": 1919.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tesco",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 3495
+  },
+  {
+   "qid": "Q544847",
+   "label": "Qualcomm",
+   "links": 56,
+   "value": 1985.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Qualcomm",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 5183
+  },
+  {
+   "qid": "Q190238",
+   "label": "Norsk rikskringkasting",
+   "links": 55,
+   "value": 1933.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Norsk rikskringkasting",
+   "country": [
+    "Norveç"
+   ],
+   "tr_views": 328
+  },
+  {
+   "qid": "Q194360",
+   "label": "American Express",
+   "links": 55,
+   "value": 1850.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "American Express",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 7458
+  },
+  {
+   "qid": "Q204296",
+   "label": "Air New Zealand",
+   "links": 55,
+   "value": 1940.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Air New Zealand",
+   "country": [
+    "Yeni Zelanda"
+   ],
+   "tr_views": 436
+  },
+  {
+   "qid": "Q212322",
+   "label": "GlaxoSmithKline",
+   "links": 55,
+   "value": 2000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "GSK plc",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 2085
+  },
+  {
+   "qid": "Q217583",
+   "label": "Berkshire Hathaway",
+   "links": 55,
+   "value": 1839.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Berkshire Hathaway",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 15628
+  },
+  {
+   "qid": "Q217583",
+   "label": "Berkshire Hathaway",
+   "links": 55,
+   "value": 1955.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Berkshire Hathaway",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 15628
+  },
+  {
+   "qid": "Q217583",
+   "label": "Berkshire Hathaway",
+   "links": 55,
+   "value": 1998.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Berkshire Hathaway",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 15628
+  },
+  {
+   "qid": "Q32277",
+   "label": "Virgin Atlantic Airways",
+   "links": 55,
+   "value": 1984.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Virgin Atlantic Airways",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 804
+  },
+  {
+   "qid": "Q407448",
+   "label": "Air Liquide",
+   "links": 55,
+   "value": 1902.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Air liquide",
+   "country": [
+    "Fransa",
+    "Kanada"
+   ],
+   "tr_views": 504
+  },
+  {
+   "qid": "Q489815",
+   "label": "DHL",
+   "links": 55,
+   "value": 1969.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "DHL",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 13154
+  },
+  {
+   "qid": "Q504998",
+   "label": "LVMH",
+   "links": 55,
+   "value": 1987.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "LVMH",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 18797
+  },
+  {
+   "qid": "Q504998",
+   "label": "LVMH",
+   "links": 55,
+   "value": 1987.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "LVMH",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 18797
+  },
+  {
+   "qid": "Q731938",
+   "label": "AstraZeneca",
+   "links": 55,
+   "value": 1913.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "AstraZeneca",
+   "country": [
+    "Birleşik Krallık",
+    "İsveç"
+   ],
+   "tr_views": 6087
+  },
+  {
+   "qid": "Q113215",
+   "label": "Carlsberg",
+   "links": 54,
+   "value": 1847.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Carlsberg",
+   "country": [
+    "Danimarka"
+   ],
+   "tr_views": 9147
+  },
+  {
+   "qid": "Q152433",
+   "label": "Xerox",
+   "links": 54,
+   "value": 1906.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Xerox",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 4768
+  },
+  {
+   "qid": "Q162345",
+   "label": "LG Electronics",
+   "links": 54,
+   "value": 1958.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "LG Electronics",
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 2308
+  },
+  {
+   "qid": "Q193412",
+   "label": "Texas Instruments",
+   "links": 54,
+   "value": 1930.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Texas Instruments",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2119
+  },
+  {
+   "qid": "Q193412",
+   "label": "Texas Instruments",
+   "links": 54,
+   "value": 1930.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Texas Instruments",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2119
+  },
+  {
+   "qid": "Q215293",
+   "label": "Volvo Cars",
+   "links": 54,
+   "value": 1927.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Volvo Cars",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 7054
+  },
+  {
+   "qid": "Q215293",
+   "label": "Volvo Cars",
+   "links": 54,
+   "value": 2010.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Volvo Cars",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 7054
+  },
+  {
+   "qid": "Q245343",
+   "label": "Barclays",
+   "links": 54,
+   "value": 1690.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Barclays",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 5503
+  },
+  {
+   "qid": "Q488048",
+   "label": "PricewaterhouseCoopers",
+   "links": 54,
+   "value": 1998.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "PricewaterhouseCoopers",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 3865
+  },
+  {
+   "qid": "Q503308",
+   "label": "Southwest Airlines",
+   "links": 54,
+   "value": 1967.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Southwest Airlines",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2240
+  },
+  {
+   "qid": "Q503308",
+   "label": "Southwest Airlines",
+   "links": 54,
+   "value": 1967.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Southwest Airlines",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2240
+  },
+  {
+   "qid": "Q658192",
+   "label": "Vilnius Üniversitesi",
+   "links": 54,
+   "value": 1579.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vilnius Üniversitesi",
+   "country": [
+    "Litvanya"
+   ],
+   "tr_views": 583
+  },
+  {
+   "qid": "Q713418",
+   "label": "TSMC",
+   "links": 54,
+   "value": 1987.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "TSMC",
+   "country": [
+    "Tayvan"
+   ],
+   "tr_views": 18934
+  },
+  {
+   "qid": "Q207770",
+   "label": "Pirelli",
+   "links": 53,
+   "value": 1872.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pirelli",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 6244
+  },
+  {
+   "qid": "Q207770",
+   "label": "Pirelli",
+   "links": 53,
+   "value": 1920.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pirelli",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 6244
+  },
+  {
+   "qid": "Q26463",
+   "label": "Çin Endüstri ve Ticaret Bankası",
+   "links": 53,
+   "value": 1984.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çin Endüstri ve Ticaret Bankası",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 2665
+  },
+  {
+   "qid": "Q27460",
+   "label": "Dacia",
+   "links": 53,
+   "value": 1966.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dacia",
+   "country": [
+    "Romanya"
+   ],
+   "tr_views": 14885
+  },
+  {
+   "qid": "Q29803",
+   "label": "Isuzu",
+   "links": 53,
+   "value": 1934.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Isuzu",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 6135
+  },
+  {
+   "qid": "Q335147",
+   "label": "Wizz Air",
+   "links": 53,
+   "value": 2003.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Wizz Air",
+   "country": [
+    "Macaristan"
+   ],
+   "tr_views": 4607
+  },
+  {
+   "qid": "Q1438774",
+   "label": "Supercell",
+   "links": 52,
+   "value": 2011.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Supercell",
+   "country": [
+    "Finlandiya"
+   ],
+   "tr_views": 9009
+  },
+  {
+   "qid": "Q186394",
+   "label": "Fujitsu",
+   "links": 52,
+   "value": 1935.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fujitsu",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 4849
+  },
+  {
+   "qid": "Q214346",
+   "label": "Viacom",
+   "links": 52,
+   "value": 2005.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Viacom",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2632
+  },
+  {
+   "qid": "Q275623",
+   "label": "Groupe PSA",
+   "links": 52,
+   "value": 1976.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Groupe PSA",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 15221
+  },
+  {
+   "qid": "Q27585",
+   "label": "AOL",
+   "links": 52,
+   "value": 1983.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "AOL",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2153
+  },
+  {
+   "qid": "Q27585",
+   "label": "AOL",
+   "links": 52,
+   "value": 1985.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "AOL",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2153
+  },
+  {
+   "qid": "Q329347",
+   "label": "Lukoil",
+   "links": 52,
+   "value": 1991.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lukoil",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 3902
+  },
+  {
+   "qid": "Q390107",
+   "label": "Burberry",
+   "links": 52,
+   "value": 1856.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Burberry",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 6620
+  },
+  {
+   "qid": "Q51756",
+   "label": "China Airlines",
+   "links": 52,
+   "value": 1959.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "China Airlines",
+   "country": [
+    "Tayvan"
+   ],
+   "tr_views": 674
+  },
+  {
+   "qid": "Q589757",
+   "label": "MyHeritage",
+   "links": 52,
+   "value": 2003.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "MyHeritage",
+   "country": [
+    "İsrail"
+   ],
+   "tr_views": 6419
+  },
+  {
+   "qid": "Q207983",
+   "label": "Monsanto",
+   "links": 51,
+   "value": 1901.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Monsanto (şirket)",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 5168
+  },
+  {
+   "qid": "Q210047",
+   "label": "Petrobras",
+   "links": 51,
+   "value": 1953.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Petrobras",
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 3500
+  },
+  {
+   "qid": "Q219501",
+   "label": "Saab",
+   "links": 51,
+   "value": 1937.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saab",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 9530
+  },
+  {
+   "qid": "Q338825",
+   "label": "Accenture",
+   "links": 51,
+   "value": 2001.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Accenture",
+   "country": [
+    "İrlanda"
+   ],
+   "tr_views": 5342
+  },
+  {
+   "qid": "Q380580",
+   "label": "Aegean Airlines",
+   "links": 51,
+   "value": 1987.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aegean Airlines",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 2780
+  },
+  {
+   "qid": "Q459965",
+   "label": "Caterpillar",
+   "links": 51,
+   "value": 1925.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Caterpillar",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 9407
+  },
+  {
+   "qid": "Q1127887",
+   "label": "Vivendi SA",
+   "links": 50,
+   "value": 1981.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vivendi",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 1643
+  },
+  {
+   "qid": "Q1127887",
+   "label": "Vivendi SA",
+   "links": 50,
+   "value": 1987.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vivendi",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 1643
+  },
+  {
+   "qid": "Q136484",
+   "label": "ZTE",
+   "links": 50,
+   "value": 1985.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "ZTE",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 2924
+  },
+  {
+   "qid": "Q1431486",
+   "label": "Orange",
+   "links": 50,
+   "value": 1988.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Orange (GSM operatörü)",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 2181
+  },
+  {
+   "qid": "Q185278",
+   "label": "News Corporation",
+   "links": 50,
+   "value": 1979.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "News Corporation",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 4652
+  },
+  {
+   "qid": "Q185278",
+   "label": "News Corporation",
+   "links": 50,
+   "value": 1980.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "News Corporation",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 4652
+  },
+  {
+   "qid": "Q207784",
+   "label": "Square Enix",
+   "links": 50,
+   "value": 1975.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Square Enix",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 2215
+  },
+  {
+   "qid": "Q207922",
+   "label": "Atari",
+   "links": 50,
+   "value": 1972.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Atari",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 7839
+  },
+  {
+   "qid": "Q21077",
+   "label": "Warner Music Group",
+   "links": 50,
+   "value": 1958.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Warner Music Group",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2449
+  },
+  {
+   "qid": "Q211165",
+   "label": "Asiana Airlines",
+   "links": 50,
+   "value": 1988.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Asiana Airlines",
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 1249
+  },
+  {
+   "qid": "Q212900",
+   "label": "Lehman Brothers",
+   "links": 50,
+   "value": 1850.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lehman Brothers",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 5411
+  },
+  {
+   "qid": "Q219508",
+   "label": "Citigroup",
+   "links": 50,
+   "value": 1812.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Citigroup",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 7114
+  },
+  {
+   "qid": "Q219508",
+   "label": "Citigroup",
+   "links": 50,
+   "value": 1998.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Citigroup",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 7114
+  },
+  {
+   "qid": "Q39064",
+   "label": "Canonical Ltd.",
+   "links": 50,
+   "value": 2004.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Canonical",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 1277
+  },
+  {
+   "qid": "Q467752",
+   "label": "Bell Atlantic",
+   "links": 50,
+   "value": 1983.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Verizon Communications",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 999
+  },
+  {
+   "qid": "Q467752",
+   "label": "Bell Atlantic",
+   "links": 50,
+   "value": 2000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Verizon Communications",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 999
+  },
+  {
+   "qid": "Q9396",
+   "label": "Deutsche Telekom",
+   "links": 50,
+   "value": 1995.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Deutsche Telekom",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 2225
+  },
+  {
+   "qid": "Q18224",
+   "label": "A.P. Moller-Maersk Grubu",
+   "links": 49,
+   "value": 1904.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "A.P. Moller-Maersk Grubu",
+   "country": [
+    "Danimarka"
+   ],
+   "tr_views": 3853
+  },
+  {
+   "qid": "Q18301787",
+   "label": "Vivo",
+   "links": 49,
+   "value": 2009.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vivo",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 6455
+  },
+  {
+   "qid": "Q204474",
+   "label": "id Software",
+   "links": 49,
+   "value": 1991.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İd Software",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 1420
+  },
+  {
+   "qid": "Q205012",
+   "label": "Sberbank",
+   "links": 49,
+   "value": 1991.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sberbank",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 3557
+  },
+  {
+   "qid": "Q223127",
+   "label": "Logitech",
+   "links": 49,
+   "value": 1981.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Logitech",
+   "country": [
+    "Amerika Birleşik Devletleri",
+    "İsviçre"
+   ],
+   "tr_views": 5520
+  },
+  {
+   "qid": "Q2311",
+   "label": "Airbus",
+   "links": 49,
+   "value": 1998.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Airbus",
+   "country": [
+    "Fransa",
+    "Hollanda"
+   ],
+   "tr_views": 29667
+  },
+  {
+   "qid": "Q321772",
+   "label": "Daewoo",
+   "links": 49,
+   "value": 1967.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Daewoo",
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 8461
+  },
+  {
+   "qid": "Q487292",
+   "label": "Allianz SE",
+   "links": 49,
+   "value": 1890.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Allianz SE",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 7435
+  },
+  {
+   "qid": "Q52825",
+   "label": "ABB Grubu",
+   "links": 49,
+   "value": 1988.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "ABB",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 5356
+  },
+  {
+   "qid": "Q739000",
+   "label": "Geely",
+   "links": 49,
+   "value": 1986.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Geely",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 10402
+  },
+  {
+   "qid": "Q739000",
+   "label": "Geely",
+   "links": 49,
+   "value": 2003.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Geely",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 10402
+  },
+  {
+   "qid": "Q97439162",
+   "label": "Stellantis",
+   "links": 49,
+   "value": 2021.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Stellantis",
+   "country": [
+    "Hollanda"
+   ],
+   "tr_views": 56996
+  },
+  {
+   "qid": "Q161833",
+   "label": "Leica",
+   "links": 48,
+   "value": 1869.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Leica",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 3729
+  },
+  {
+   "qid": "Q27893",
+   "label": "ArcelorMittal",
+   "links": 48,
+   "value": 2006.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "ArcelorMittal",
+   "country": [
+    "Lüksemburg",
+    "İspanya"
+   ],
+   "tr_views": 412
+  },
+  {
+   "qid": "Q309084",
+   "label": "Alstom",
+   "links": 48,
+   "value": 1928.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Alstom",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 3369
+  },
+  {
+   "qid": "Q329953",
+   "label": "Northrop Grumman Corporation",
+   "links": 48,
+   "value": 1994.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Northrop Grumman",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 13035
+  },
+  {
+   "qid": "Q334204",
+   "label": "Morgan Stanley",
+   "links": 48,
+   "value": 1924.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Morgan Stanley",
+   "country": [
+    "Amerika Birleşik Devletleri",
+    "Birleşik Krallık"
+   ],
+   "tr_views": 4301
+  },
+  {
+   "qid": "Q334204",
+   "label": "Morgan Stanley",
+   "links": 48,
+   "value": 1931.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Morgan Stanley",
+   "country": [
+    "Amerika Birleşik Devletleri",
+    "Birleşik Krallık"
+   ],
+   "tr_views": 4301
+  },
+  {
+   "qid": "Q334204",
+   "label": "Morgan Stanley",
+   "links": 48,
+   "value": 1935.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Morgan Stanley",
+   "country": [
+    "Amerika Birleşik Devletleri",
+    "Birleşik Krallık"
+   ],
+   "tr_views": 4301
+  },
+  {
+   "qid": "Q334204",
+   "label": "Morgan Stanley",
+   "links": 48,
+   "value": 2008.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Morgan Stanley",
+   "country": [
+    "Amerika Birleşik Devletleri",
+    "Birleşik Krallık"
+   ],
+   "tr_views": 4301
+  },
+  {
+   "qid": "Q459477",
+   "label": "FedEx",
+   "links": 48,
+   "value": 1971.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "FedEx",
+   "country": [
+    "Amerika Birleşik Devletleri",
+    "Kanada"
+   ],
+   "tr_views": 6929
+  },
+  {
+   "qid": "Q491627",
+   "label": "Hugo Boss",
+   "links": 48,
+   "value": 1924.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hugo Boss",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 7965
+  },
+  {
+   "qid": "Q50595",
+   "label": "YG Entertainment",
+   "links": 48,
+   "value": 1995.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "YG Entertainment",
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 6867
+  },
+  {
+   "qid": "Q744149",
+   "label": "Wells Fargo",
+   "links": 48,
+   "value": 1852.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Wells Fargo",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 1806
+  },
+  {
+   "qid": "Q744149",
+   "label": "Wells Fargo",
+   "links": 48,
+   "value": 1852.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Wells Fargo",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 1806
+  },
+  {
+   "qid": "Q76039",
+   "label": "Hudson's Bay Company",
+   "links": 48,
+   "value": 1670.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hudson's Bay Company",
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 1328
+  },
+  {
+   "qid": "Q861042",
+   "label": "Western Union",
+   "links": 48,
+   "value": 1851.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Western Union",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2287
+  },
+  {
+   "qid": "Q861042",
+   "label": "Western Union",
+   "links": 48,
+   "value": 1856.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Western Union",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2287
+  },
+  {
+   "qid": "Q1066858",
+   "label": "Tiffany & Co.",
+   "links": 47,
+   "value": 1837.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tiffany & Co.",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2448
+  },
+  {
+   "qid": "Q13977",
+   "label": "Bloomberg L.P.",
+   "links": 47,
+   "value": 1981.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bloomberg L.P.",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2929
+  },
+  {
+   "qid": "Q164740",
+   "label": "Fujifilm",
+   "links": 47,
+   "value": 1934.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fujifilm",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 2119
+  },
+  {
+   "qid": "Q164740",
+   "label": "Fujifilm",
+   "links": 47,
+   "value": 2006.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fujifilm",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 2119
+  },
+  {
+   "qid": "Q16499972",
+   "label": "OnePlus",
+   "links": 47,
+   "value": 2013.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "OnePlus",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 7653
+  },
+  {
+   "qid": "Q27511",
+   "label": "Daihatsu",
+   "links": 47,
+   "value": 1907.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Daihatsu",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 7114
+  },
+  {
+   "qid": "Q35594",
+   "label": "Koenigsegg",
+   "links": 47,
+   "value": 1994.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Koenigsegg",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 8315
+  },
+  {
+   "qid": "Q375791",
+   "label": "Standard Oil Company",
+   "links": 47,
+   "value": 1870.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Standard Oil Company",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 10540
+  },
+  {
+   "qid": "Q375791",
+   "label": "Standard Oil Company",
+   "links": 47,
+   "value": 1882.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Standard Oil Company",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 10540
+  },
+  {
+   "qid": "Q375791",
+   "label": "Standard Oil Company",
+   "links": 47,
+   "value": 1890.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Standard Oil Company",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 10540
+  },
+  {
+   "qid": "Q483938",
+   "label": "S.M. Entertainment",
+   "links": 47,
+   "value": 1995.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "SM Entertainment",
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 2919
+  },
+  {
+   "qid": "Q512468",
+   "label": "Garuda Indonesia",
+   "links": 47,
+   "value": 1947.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Garuda Indonesia",
+   "country": [
+    "Endonezya"
+   ],
+   "tr_views": 578
+  },
+  {
+   "qid": "Q611115",
+   "label": "Swarovski",
+   "links": 47,
+   "value": 1895.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Swarovski",
+   "country": [
+    "Avusturya"
+   ],
+   "tr_views": 3920
+  },
+  {
+   "qid": "Q611115",
+   "label": "Swarovski",
+   "links": 47,
+   "value": 1915.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Swarovski",
+   "country": [
+    "Avusturya"
+   ],
+   "tr_views": 3920
+  },
+  {
+   "qid": "Q724759",
+   "label": "NBC Universal",
+   "links": 47,
+   "value": 1926.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "NBCUniversal",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 3893
+  },
+  {
+   "qid": "Q724759",
+   "label": "NBC Universal",
+   "links": 47,
+   "value": 2004.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "NBCUniversal",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 3893
+  },
+  {
+   "qid": "Q842108",
+   "label": "Euronext",
+   "links": 47,
+   "value": 2000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Euronext",
+   "country": [
+    "Belçika",
+    "Danimarka",
+    "Fransa",
+    "Hollanda",
+    "Norveç",
+    "Portekiz",
+    "Yunanistan",
+    "İrlanda",
+    "İtalya"
+   ],
+   "tr_views": 848
+  },
+  {
+   "qid": "Q125470407",
+   "label": "Airalo",
+   "links": 46,
+   "value": 2019.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Airalo",
+   "country": [
+    "Singapur"
+   ],
+   "tr_views": 933
+  },
+  {
+   "qid": "Q129110",
+   "label": "Telewizja Polska",
+   "links": 46,
+   "value": 1952.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Telewizja Polska",
+   "country": [
+    "Polonya"
+   ],
+   "tr_views": 581
+  },
+  {
+   "qid": "Q1475312",
+   "label": "Vinci (şirket)",
+   "links": 46,
+   "value": 1899.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vinci (şirket)",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 1273
+  },
+  {
+   "qid": "Q155026",
+   "label": "United Parcel Service",
+   "links": 46,
+   "value": 1907.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "United Parcel Service",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 3373
+  },
+  {
+   "qid": "Q159433",
+   "label": "3M",
+   "links": 46,
+   "value": 1902.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "3M",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2910
+  },
+  {
+   "qid": "Q160229",
+   "label": "Telefonica",
+   "links": 46,
+   "value": 1924.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Telefónica",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 488
+  },
+  {
+   "qid": "Q160229",
+   "label": "Telefonica",
+   "links": 46,
+   "value": 1924.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Telefónica",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 488
+  },
+  {
+   "qid": "Q213849",
+   "label": "ATI Technologies",
+   "links": 46,
+   "value": 1985.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "ATI",
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 1731
+  },
+  {
+   "qid": "Q496302",
+   "label": "Deere & Company",
+   "links": 46,
+   "value": 1837.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Deere & Company",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 3665
+  },
+  {
+   "qid": "Q496302",
+   "label": "Deere & Company",
+   "links": 46,
+   "value": 1868.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Deere & Company",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 3665
+  },
+  {
+   "qid": "Q499707",
+   "label": "BNP Paribas",
+   "links": 46,
+   "value": 1848.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "BNP Paribas",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 7530
+  },
+  {
+   "qid": "Q505922",
+   "label": "Electrolux",
+   "links": 46,
+   "value": 1910.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Electrolux",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 6823
+  },
+  {
+   "qid": "Q507154",
+   "label": "Novartis",
+   "links": 46,
+   "value": 1996.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Novartis",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 6524
+  },
+  {
+   "qid": "Q5476713",
+   "label": "21st Century Fox",
+   "links": 46,
+   "value": 2013.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "21st Century Fox",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 3196
+  },
+  {
+   "qid": "Q620875",
+   "label": "Goodyear Tire and Rubber Company",
+   "links": 46,
+   "value": 1898.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Goodyear (şirket)",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 5117
+  },
+  {
+   "qid": "Q1100424",
+   "label": "Pegasus Hava Yolları",
+   "links": 45,
+   "value": 1989.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pegasus Hava Yolları",
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 54227
+  },
+  {
+   "qid": "Q1141123",
+   "label": "Rosneft",
+   "links": 45,
+   "value": 1993.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rosneft",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 1970
+  },
+  {
+   "qid": "Q152815",
+   "label": "Heckler & Koch",
+   "links": 45,
+   "value": 1949.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Heckler & Koch",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 8638
+  },
+  {
+   "qid": "Q160054",
+   "label": "AXA",
+   "links": 45,
+   "value": 1816.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "AXA",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 2657
+  },
+  {
+   "qid": "Q17460900",
+   "label": "Zoom Video Communications",
+   "links": 45,
+   "value": 2011.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zoom Communications",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 275
+  },
+  {
+   "qid": "Q217493",
+   "label": "Paradox Interactive",
+   "links": 45,
+   "value": 1999.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Paradox Interactive",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 8085
+  },
+  {
+   "qid": "Q221692",
+   "label": "Petronas",
+   "links": 45,
+   "value": 1974.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Petronas",
+   "country": [
+    "Malezya"
+   ],
+   "tr_views": 2841
+  },
+  {
+   "qid": "Q30256699",
+   "label": "BioNTech",
+   "links": 45,
+   "value": 2008.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "BioNTech",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 7771
+  },
+  {
+   "qid": "Q45464",
+   "label": "Tatra",
+   "links": 45,
+   "value": 1897.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tatra (şirket)",
+   "country": [
+    "Çekya"
+   ],
+   "tr_views": 2525
+  },
+  {
+   "qid": "Q45464",
+   "label": "Tatra",
+   "links": 45,
+   "value": 2013.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tatra (şirket)",
+   "country": [
+    "Çekya"
+   ],
+   "tr_views": 2525
+  },
+  {
+   "qid": "Q59187",
+   "label": "Vauxhall",
+   "links": 45,
+   "value": 1857.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vauxhall",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 6642
+  },
+  {
+   "qid": "Q645708",
+   "label": "ING Group",
+   "links": 45,
+   "value": 1991.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "ING Group",
+   "country": [
+    "Hollanda"
+   ],
+   "tr_views": 4009
+  },
+  {
+   "qid": "Q738770",
+   "label": "Western Digital",
+   "links": 45,
+   "value": 1970.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Western Digital",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 1239
+  },
+  {
+   "qid": "Q738770",
+   "label": "Western Digital",
+   "links": 45,
+   "value": 1970.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Western Digital",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 1239
+  },
+  {
+   "qid": "Q748148",
+   "label": "Kawasaki Heavy Industries",
+   "links": 45,
+   "value": 1878.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kawasaki Heavy Industries",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 3022
+  },
+  {
+   "qid": "Q748148",
+   "label": "Kawasaki Heavy Industries",
+   "links": 45,
+   "value": 1939.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kawasaki Heavy Industries",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 3022
+  },
+  {
+   "qid": "Q748148",
+   "label": "Kawasaki Heavy Industries",
+   "links": 45,
+   "value": 1969.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kawasaki Heavy Industries",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 3022
+  },
+  {
+   "qid": "Q748148",
+   "label": "Kawasaki Heavy Industries",
+   "links": 45,
+   "value": 2000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kawasaki Heavy Industries",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 3022
+  },
+  {
+   "qid": "Q871325",
+   "label": "Fitch Derecelendirmesi",
+   "links": 45,
+   "value": 1913.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fitch Ratings",
+   "country": [
+    "Amerika Birleşik Devletleri",
+    "Birleşik Krallık"
+   ],
+   "tr_views": 1210
+  },
+  {
+   "qid": "Q885836",
+   "label": "Blue Origin",
+   "links": 45,
+   "value": 2000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Blue Origin",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 3197
+  },
+  {
+   "qid": "Q11407",
+   "label": "VMware",
+   "links": 44,
+   "value": 1998.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "VMware",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 1342
+  },
+  {
+   "qid": "Q137910",
+   "label": "ThyssenKrupp",
+   "links": 44,
+   "value": 1999.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "ThyssenKrupp",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 5664
+  },
+  {
+   "qid": "Q161086",
+   "label": "JetBlue Airways",
+   "links": 44,
+   "value": 1999.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "JetBlue Airways",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 794
+  },
+  {
+   "qid": "Q269792",
+   "label": "Ferrero",
+   "links": 44,
+   "value": 1946.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ferrero",
+   "country": [
+    "Lüksemburg",
+    "İtalya"
+   ],
+   "tr_views": 9541
+  },
+  {
+   "qid": "Q26989",
+   "label": "Infosys",
+   "links": 44,
+   "value": 1981.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Infosys",
+   "country": [
+    "Hindistan"
+   ],
+   "tr_views": 3331
+  },
+  {
+   "qid": "Q297879",
+   "label": "ASML",
+   "links": 44,
+   "value": 1984.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "ASML",
+   "country": [
+    "Hollanda"
+   ],
+   "tr_views": 18209
+  },
+  {
+   "qid": "Q327247",
+   "label": "ASICS",
+   "links": 44,
+   "value": 1949.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "ASICS",
+   "country": [
+    "Almanya",
+    "Amerika Birleşik Devletleri",
+    "Japonya"
+   ],
+   "tr_views": 3626
+  },
+  {
+   "qid": "Q41230",
+   "label": "İslam Kalkınma Bankası",
+   "links": 44,
+   "value": 1973.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İslam Kalkınma Bankası",
+   "country": [
+    "Suudi Arabistan"
+   ],
+   "tr_views": 6542
+  },
+  {
+   "qid": "Q41230",
+   "label": "İslam Kalkınma Bankası",
+   "links": 44,
+   "value": 1975.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İslam Kalkınma Bankası",
+   "country": [
+    "Suudi Arabistan"
+   ],
+   "tr_views": 6542
+  },
+  {
+   "qid": "Q471891",
+   "label": "De Beers",
+   "links": 44,
+   "value": 1888.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "De Beers",
+   "country": [
+    "Güney Afrika"
+   ],
+   "tr_views": 3459
+  },
+  {
+   "qid": "Q502121",
+   "label": "BlackBerry",
+   "links": 44,
+   "value": 1984.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "BlackBerry",
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 7156
+  },
+  {
+   "qid": "Q76846862",
+   "label": "Paramount Global",
+   "links": 44,
+   "value": 2019.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Paramount Global",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 3808
+  },
+  {
+   "qid": "Q921159",
+   "label": "RTL Group",
+   "links": 44,
+   "value": 2000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "RTL Group",
+   "country": [
+    "Lüksemburg"
+   ],
+   "tr_views": 524
+  },
+  {
+   "qid": "Q157617",
+   "label": "Commerzbank",
+   "links": 43,
+   "value": 1870.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Commerzbank",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 1268
+  },
+  {
+   "qid": "Q157617",
+   "label": "Commerzbank",
+   "links": 43,
+   "value": 1958.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Commerzbank",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 1268
+  },
+  {
+   "qid": "Q221062",
+   "label": "DuPont",
+   "links": 43,
+   "value": 1802.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "DuPont",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 7855
+  },
+  {
+   "qid": "Q221062",
+   "label": "DuPont",
+   "links": 43,
+   "value": 2015.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "DuPont",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 7855
+  },
+  {
+   "qid": "Q44504",
+   "label": "Inditex",
+   "links": 43,
+   "value": 1985.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Inditex",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 24054
+  },
+  {
+   "qid": "Q501476",
+   "label": "Hasbro",
+   "links": 43,
+   "value": 1923.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hasbro",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 3856
+  },
+  {
+   "qid": "Q678565",
+   "label": "Saint-Gobain",
+   "links": 43,
+   "value": 1665.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saint-Gobain",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 1750
+  },
+  {
+   "qid": "Q688619",
+   "label": "Olympus",
+   "links": 43,
+   "value": 1919.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Olympus (şirket)",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 697
+  },
+  {
+   "qid": "Q931207",
+   "label": "Kering",
+   "links": 43,
+   "value": 1955.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kering",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 6183
+  },
+  {
+   "qid": "Q931207",
+   "label": "Kering",
+   "links": 43,
+   "value": 1955.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kering",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 6183
+  },
+  {
+   "qid": "Q931207",
+   "label": "Kering",
+   "links": 43,
+   "value": 1962.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kering",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 6183
+  },
+  {
+   "qid": "Q163241",
+   "label": "Continental",
+   "links": 42,
+   "value": 1871.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Continental",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 5136
+  },
+  {
+   "qid": "Q163241",
+   "label": "Continental",
+   "links": 42,
+   "value": 1871.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Continental",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 5136
+  },
+  {
+   "qid": "Q327646",
+   "label": "Enron",
+   "links": 42,
+   "value": 1985.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Enron",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 4175
+  },
+  {
+   "qid": "Q344341",
+   "label": "Activision Blizzard",
+   "links": 42,
+   "value": 2008.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Activision Blizzard",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2802
+  },
+  {
+   "qid": "Q494917",
+   "label": "Virgin Group",
+   "links": 42,
+   "value": 1970.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Virgin Group",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 1588
+  },
+  {
+   "qid": "Q565594",
+   "label": "Eni",
+   "links": 42,
+   "value": 1953.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eni",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 1750
+  },
+  {
+   "qid": "Q597394",
+   "label": "İsviçre Ulusal Bankası",
+   "links": 42,
+   "value": 1907.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İsviçre Ulusal Bankası",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 960
+  },
+  {
+   "qid": "Q668687",
+   "label": "United States Postal Service",
+   "links": 42,
+   "value": 1971.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "United States Postal Service",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 491
+  },
+  {
+   "qid": "Q83822",
+   "label": "Österreichische Bundesbahnen",
+   "links": 42,
+   "value": 1919.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Österreichische Bundesbahnen",
+   "country": [
+    "Avusturya"
+   ],
+   "tr_views": 180
+  },
+  {
+   "qid": "Q83822",
+   "label": "Österreichische Bundesbahnen",
+   "links": 42,
+   "value": 2004.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Österreichische Bundesbahnen",
+   "country": [
+    "Avusturya"
+   ],
+   "tr_views": 180
+  },
+  {
+   "qid": "Q1200552",
+   "label": "Marvel Entertainment",
+   "links": 41,
+   "value": 1998.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Marvel Entertainment",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 5008
+  },
+  {
+   "qid": "Q161140",
+   "label": "Diageo",
+   "links": 41,
+   "value": 1997.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Diageo",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 12101
+  },
+  {
+   "qid": "Q161140",
+   "label": "Diageo",
+   "links": 41,
+   "value": 1997.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Diageo",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 12101
+  },
+  {
+   "qid": "Q161544",
+   "label": "Rheinmetall",
+   "links": 41,
+   "value": 1889.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rheinmetall",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 8006
+  },
+  {
+   "qid": "Q16924332",
+   "label": "DJI",
+   "links": 41,
+   "value": 2006.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "DJI",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 4508
+  },
+  {
+   "qid": "Q16924332",
+   "label": "DJI",
+   "links": 41,
+   "value": 2006.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "DJI",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 4508
+  },
+  {
+   "qid": "Q169552",
+   "label": "Haribo",
+   "links": 41,
+   "value": 1920.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Haribo",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 6342
+  },
+  {
+   "qid": "Q1795504",
+   "label": "Emlyon Business School",
+   "links": 41,
+   "value": 1872.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Emlyon Business School",
+   "country": [
+    "Fransa",
+    "Hindistan",
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 154
+  },
+  {
+   "qid": "Q2047336",
+   "label": "Palantir Technologies",
+   "links": 41,
+   "value": 2003.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Palantir Technologies",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 20038
+  },
+  {
+   "qid": "Q329494",
+   "label": "Raidió Teilifís Éireann",
+   "links": 41,
+   "value": 1960.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "RTÉ",
+   "country": [
+    "İrlanda"
+   ],
+   "tr_views": 418
+  },
+  {
+   "qid": "Q333498",
+   "label": "Bombardier Inc.",
+   "links": 41,
+   "value": 1942.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bombardier",
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 2615
+  },
+  {
+   "qid": "Q385518",
+   "label": "SK Sigma Olomouc",
+   "links": 41,
+   "value": 1919.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "SK Sigma Olomouc",
+   "country": [
+    "Çekya"
+   ],
+   "tr_views": 1224
+  },
+  {
+   "qid": "Q502940",
+   "label": "General Dynamics",
+   "links": 41,
+   "value": 1952.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "General Dynamics",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 6193
+  },
+  {
+   "qid": "Q503182",
+   "label": "PetroChina",
+   "links": 41,
+   "value": 1999.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "PetroChina",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 319
+  },
+  {
+   "qid": "Q739416",
+   "label": "BAE Systems",
+   "links": 41,
+   "value": 1999.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "BAE Systems",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 8994
+  }
+ ]
+}

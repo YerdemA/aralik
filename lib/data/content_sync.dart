@@ -14,7 +14,14 @@ abstract interface class RemoteContent {
 
   /// places.json text, or null if nothing was downloaded yet.
   String? get placesJson;
+
+  /// schedule.json text, or null if nothing was downloaded yet.
+  String? get scheduleJson;
 }
+
+/// One downloaded release: the files are only valid together, because the
+/// schedule refers to questions of the bank.
+typedef ContentFiles = ({String questions, String places, String schedule});
 
 enum SyncResult { skipped, upToDate, updated, rejected, failed }
 
@@ -45,6 +52,7 @@ class ContentSync implements RemoteContent {
   static const _checkedKey = 'content_checked_at';
   static const _questionsKey = 'content_questions';
   static const _placesKey = 'content_places';
+  static const _scheduleKey = 'content_schedule';
 
   final SharedPreferences _prefs;
   final HttpGet _get;
@@ -57,13 +65,16 @@ class ContentSync implements RemoteContent {
   @override
   String? get placesJson => _prefs.getString(_placesKey);
 
+  @override
+  String? get scheduleJson => _prefs.getString(_scheduleKey);
+
   int get version => _prefs.getInt(_versionKey) ?? 0;
 
-  /// Checks for new content. [acceptQuestions] / [acceptPlaces] decide
-  /// whether downloaded files may replace the current ones.
+  /// Checks for new content. [accept] decides whether the downloaded files
+  /// may replace the current ones; they are stored all together or not at
+  /// all.
   Future<SyncResult> sync({
-    required FutureOr<bool> Function(String json) acceptQuestions,
-    required FutureOr<bool> Function(String json) acceptPlaces,
+    required FutureOr<bool> Function(ContentFiles files) accept,
     bool force = false,
   }) async {
     final now = _now();
@@ -84,11 +95,14 @@ class ContentSync implements RemoteContent {
         _base.resolve(manifest['questions'] as String),
       );
       final places = await _get(_base.resolve(manifest['places'] as String));
-      if (!await acceptQuestions(questions) || !await acceptPlaces(places)) {
-        return SyncResult.rejected;
-      }
+      final schedule = await _get(
+        _base.resolve(manifest['schedule'] as String),
+      );
+      final files = (questions: questions, places: places, schedule: schedule);
+      if (!await accept(files)) return SyncResult.rejected;
       await _prefs.setString(_questionsKey, questions);
       await _prefs.setString(_placesKey, places);
+      await _prefs.setString(_scheduleKey, schedule);
       await _prefs.setInt(_versionKey, remoteVersion);
       return SyncResult.updated;
     } catch (_) {

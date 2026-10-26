@@ -2,6 +2,10 @@
 /// date, so no backend is needed.
 library;
 
+import 'dart:convert';
+
+import 'package:flutter/foundation.dart';
+
 const int questionsPerDay = 5;
 
 /// Day 0 of the game (local calendar date).
@@ -48,26 +52,72 @@ int longestStreak(Set<int> completedDays) {
   return best;
 }
 
-/// Bank indices of the questions for [dayIndex]:
-/// `5·dayIndex .. 5·dayIndex+4`, wrapping around when the bank runs out.
-List<int> dailyIndices(int dayIndex, int bankSize) {
-  if (bankSize <= 0) return const [];
-  final count = questionsPerDay < bankSize ? questionsPerDay : bankSize;
-  return List.unmodifiable([
-    for (var k = 0; k < count; k++) (questionsPerDay * dayIndex + k) % bankSize,
-  ]);
-}
+/// Days of the schedule that free play keeps away from, so the next
+/// daily sets are not spoiled.
+const int freePlayHorizonDays = 60;
 
-/// Bank indices available for practice on [todayIndex]: only questions of
-/// past days, never today's set, so nothing upcoming is spoiled.
+/// The daily sets: day index → five question ids
+/// (assets/questions/schedule.json, `{"days": [[id, …], …]}`).
 ///
-/// Sorted and unique. Empty on or before day 0.
-List<int> practiceIndices(int todayIndex, int bankSize) {
-  if (todayIndex <= 0 || bankSize <= 0) return const [];
-  final pastCount = questionsPerDay * todayIndex;
-  final today = dailyIndices(todayIndex, bankSize).toSet();
-  return List.unmodifiable([
-    for (var i = 0; i < bankSize && i < pastCount; i++)
-      if (!today.contains(i)) i,
-  ]);
+/// Separate from the bank's order, so sets can be balanced by difficulty
+/// and category. Append-only: days are only ever added at the end, so
+/// everyone keeps seeing the same questions on the same day.
+class Schedule {
+  Schedule(Iterable<List<String>> days)
+    : days = List.unmodifiable(<List<String>>[
+        for (final d in days) List<String>.unmodifiable(d),
+      ]);
+
+  final List<List<String>> days;
+
+  int get length => days.length;
+
+  /// Every id in the schedule.
+  Set<String> get ids => {for (final d in days) ...d};
+
+  /// Parses and checks schedule.json: every day has [questionsPerDay]
+  /// distinct ids and no question appears twice. Throws [FormatException].
+  factory Schedule.parse(String source) {
+    final decoded = jsonDecode(source);
+    final rawDays = decoded is Map<String, dynamic> ? decoded['days'] : null;
+    if (rawDays is! List) {
+      throw const FormatException('schedule.json needs a "days" list');
+    }
+    final seen = <String>{};
+    final days = <List<String>>[];
+    for (final (i, day) in rawDays.indexed) {
+      if (day is! List ||
+          day.length != questionsPerDay ||
+          day.any((id) => id is! String)) {
+        throw FormatException('Day $i must list $questionsPerDay ids: $day');
+      }
+      for (final id in day.cast<String>()) {
+        if (!seen.add(id)) throw FormatException('Day $i repeats $id');
+      }
+      days.add(List<String>.from(day));
+    }
+    return Schedule(days);
+  }
+
+  /// Question ids of [dayIndex]. Wraps around when the schedule runs out;
+  /// days before the epoch (closed test) count back from its end.
+  List<String> idsFor(int dayIndex) =>
+      days.isEmpty ? const [] : days[dayIndex % days.length];
+
+  /// Ids of the [horizon] days starting with [today], wrapping like
+  /// [idsFor]. Covers the whole schedule when it is shorter than [horizon].
+  Set<String> upcomingIds(int today, {int horizon = freePlayHorizonDays}) => {
+    for (var d = today; d < today + horizon && d < today + length; d++)
+      ...idsFor(d),
+  };
+
+  /// Whether this schedule keeps every day of [base] unchanged and only
+  /// appends days.
+  bool extendsSchedule(Schedule base) {
+    if (length < base.length) return false;
+    for (var i = 0; i < base.length; i++) {
+      if (!listEquals(days[i], base.days[i])) return false;
+    }
+    return true;
+  }
 }

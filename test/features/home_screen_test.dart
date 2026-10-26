@@ -4,6 +4,7 @@ import 'package:aralik/core/theme.dart';
 import 'package:aralik/data/question_repository.dart';
 import 'package:aralik/data/stats_store.dart';
 import 'package:aralik/features/home/home_screen.dart';
+import 'package:aralik/features/settings/settings_screen.dart';
 import 'package:aralik/features/stats/stats_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -70,5 +71,12 @@ void main() {
     await tester.tap(find.byTooltip(AppStrings.stats));
     await tester.pumpAndSettle();
     expect(find.byType(StatsScreen), findsOneWidget);
+  });
+
+  testWidgets('the gear icon opens settings', (tester) async {
+    await pumpHome(tester);
+    await tester.tap(find.byTooltip(AppStrings.settings));
+    await tester.pumpAndSettle();
+    expect(find.byType(SettingsScreen), findsOneWidget);
   });
 }

@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:aralik/core/daily.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -39,53 +41,64 @@ void main() {
     expect(puzzleNumber(41), 42);
   });
 
-  group('dailyIndices', () {
-    test('takes five consecutive questions per day', () {
-      expect(dailyIndices(0, 150), [0, 1, 2, 3, 4]);
-      expect(dailyIndices(1, 150), [5, 6, 7, 8, 9]);
-      expect(dailyIndices(29, 150), [145, 146, 147, 148, 149]);
+  group('Schedule', () {
+    List<String> day(int n) => [for (var k = 0; k < 5; k++) 'q$n$k'];
+    String json(List<List<String>> days) => jsonEncode({'days': days});
+    final three = Schedule([day(0), day(1), day(2)]);
+
+    test('parses schedule.json', () {
+      final s = Schedule.parse(json([day(0), day(1)]));
+      expect(s.length, 2);
+      expect(s.idsFor(1), day(1));
+      expect(s.ids, {...day(0), ...day(1)});
     });
 
-    test('wraps around when the bank runs out', () {
-      expect(dailyIndices(30, 150), [0, 1, 2, 3, 4]);
-      expect(dailyIndices(30, 154), [150, 151, 152, 153, 0]);
-    });
-
-    test('handles days before the epoch', () {
-      expect(dailyIndices(-1, 150), [145, 146, 147, 148, 149]);
-    });
-
-    test('handles tiny banks', () {
-      expect(dailyIndices(0, 0), isEmpty);
-      expect(dailyIndices(1, 3), [2, 0, 1]);
-    });
-  });
-
-  group('practiceIndices', () {
-    test('is empty on day 0 and before', () {
-      expect(practiceIndices(0, 150), isEmpty);
-      expect(practiceIndices(-3, 150), isEmpty);
-    });
-
-    test('contains only past days', () {
-      expect(practiceIndices(1, 150), [0, 1, 2, 3, 4]);
-      expect(practiceIndices(3, 150), List.generate(15, (i) => i));
-    });
-
-    test('never contains today or future questions', () {
-      for (var day = 1; day < 40; day++) {
-        final pool = practiceIndices(day, 154).toSet();
-        expect(pool.intersection(dailyIndices(day, 154).toSet()), isEmpty);
-        if (5 * day < 154) {
-          expect(pool.every((i) => i < 5 * day), isTrue);
-        }
+    test('rejects malformed schedules', () {
+      for (final bad in [
+        '[]',
+        '{"days": 3}',
+        json([
+          ['a', 'b', 'c', 'd'],
+        ]),
+        json([
+          ['a', 'b', 'c', 'd', 'a'],
+        ]),
+        json([
+          day(0),
+          ['x', 'y', 'z', 'w', 'q00'],
+        ]), // q00 already on day 0
+        '{"days": [["a", "b", "c", "d", 5]]}',
+      ]) {
+        expect(() => Schedule.parse(bad), throwsFormatException, reason: bad);
       }
     });
 
-    test('after the bank wraps, everything but today is available', () {
-      final pool = practiceIndices(31, 154);
-      expect(pool, hasLength(149));
-      expect(pool.toSet().length, pool.length);
+    test('wraps around and counts closed-test days back from the end', () {
+      expect(three.idsFor(0), day(0));
+      expect(three.idsFor(3), day(0));
+      expect(three.idsFor(4), day(1));
+      expect(three.idsFor(-1), day(2));
+      expect(Schedule(const []).idsFor(0), isEmpty);
+    });
+
+    test('upcomingIds covers the horizon from today', () {
+      final ten = Schedule([for (var d = 0; d < 10; d++) day(d)]);
+      expect(ten.upcomingIds(2, horizon: 3), {...day(2), ...day(3), ...day(4)});
+      expect(ten.upcomingIds(9, horizon: 2), {...day(9), ...day(0)});
+    });
+
+    test('upcomingIds is the whole schedule when it is shorter', () {
+      expect(three.upcomingIds(1, horizon: 60), three.ids);
+    });
+
+    test('extendsSchedule only allows appended days', () {
+      final two = Schedule([day(0), day(1)]);
+      expect(three.extendsSchedule(two), isTrue);
+      expect(two.extendsSchedule(two), isTrue);
+      expect(two.extendsSchedule(three), isFalse);
+      expect(Schedule([day(1), day(0), day(2)]).extendsSchedule(two), isFalse);
+      final changed = [...day(0)]..[4] = 'other';
+      expect(Schedule([changed, day(1)]).extendsSchedule(two), isFalse);
     });
   });
 }

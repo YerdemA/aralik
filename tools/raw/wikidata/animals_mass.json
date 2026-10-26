@@ -1,0 +1,10197 @@
+{
+ "dataset": "animals_mass",
+ "description": "Hayvan türleri, kütle (P2067, cinsiyet ve rol niteleyicileriyle)",
+ "property": "P2067",
+ "fetched_at": "2026-10-26T15:23:24+00:00",
+ "rows": [
+  {
+   "qid": "Q140",
+   "label": "aslan",
+   "links": 274,
+   "value": 1.65,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aslan",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Panthera leo"
+   ],
+   "tr_views": 68935
+  },
+  {
+   "qid": "Q140",
+   "label": "aslan",
+   "links": 274,
+   "value": 126.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aslan",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Panthera leo"
+   ],
+   "tr_views": 68935
+  },
+  {
+   "qid": "Q140",
+   "label": "aslan",
+   "links": 274,
+   "value": 188.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aslan",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Panthera leo"
+   ],
+   "tr_views": 68935
+  },
+  {
+   "qid": "Q19939",
+   "label": "Kaplan",
+   "links": 236,
+   "value": 1.19,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kaplan",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Panthera tigris"
+   ],
+   "tr_views": 45941
+  },
+  {
+   "qid": "Q19939",
+   "label": "Kaplan",
+   "links": 236,
+   "value": 120.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kaplan",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Panthera tigris"
+   ],
+   "tr_views": 45941
+  },
+  {
+   "qid": "Q19939",
+   "label": "Kaplan",
+   "links": 236,
+   "value": 180.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kaplan",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Panthera tigris"
+   ],
+   "tr_views": 45941
+  },
+  {
+   "qid": "Q23907",
+   "label": "Çita",
+   "links": 151,
+   "value": 0.28,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çita",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Acinonyx jubatus"
+   ],
+   "tr_views": 29585
+  },
+  {
+   "qid": "Q23907",
+   "label": "Çita",
+   "links": 151,
+   "value": 35.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çita",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Acinonyx jubatus"
+   ],
+   "tr_views": 29585
+  },
+  {
+   "qid": "Q23907",
+   "label": "Çita",
+   "links": 151,
+   "value": 40.2,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çita",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Acinonyx jubatus"
+   ],
+   "tr_views": 29585
+  },
+  {
+   "qid": "Q17592",
+   "label": "Deve kuşu",
+   "links": 149,
+   "value": 1.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Deve kuşu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Struthio camelus"
+   ],
+   "tr_views": 12748
+  },
+  {
+   "qid": "Q17592",
+   "label": "Deve kuşu",
+   "links": 149,
+   "value": 100.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Deve kuşu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Struthio camelus"
+   ],
+   "tr_views": 12748
+  },
+  {
+   "qid": "Q17592",
+   "label": "Deve kuşu",
+   "links": 149,
+   "value": 115.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Deve kuşu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Struthio camelus"
+   ],
+   "tr_views": 12748
+  },
+  {
+   "qid": "Q33602",
+   "label": "Dev panda",
+   "links": 146,
+   "value": 0.104,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dev panda",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Ailuropoda melanoleuca"
+   ],
+   "tr_views": 37281
+  },
+  {
+   "qid": "Q33602",
+   "label": "Dev panda",
+   "links": 146,
+   "value": 117.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dev panda",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Ailuropoda melanoleuca"
+   ],
+   "tr_views": 37281
+  },
+  {
+   "qid": "Q25307",
+   "label": "Avrupa saksağanı",
+   "links": 135,
+   "value": 0.0099,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avrupa saksağanı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Pica pica"
+   ],
+   "tr_views": 12194
+  },
+  {
+   "qid": "Q25307",
+   "label": "Avrupa saksağanı",
+   "links": 135,
+   "value": 0.191,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avrupa saksağanı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pica pica"
+   ],
+   "tr_views": 12194
+  },
+  {
+   "qid": "Q25307",
+   "label": "Avrupa saksağanı",
+   "links": 135,
+   "value": 0.221,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avrupa saksağanı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pica pica"
+   ],
+   "tr_views": 12194
+  },
+  {
+   "qid": "Q18845",
+   "label": "bayağı guguk",
+   "links": 118,
+   "value": 0.00322,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı guguk",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Cuculus canorus"
+   ],
+   "tr_views": 1275
+  },
+  {
+   "qid": "Q18845",
+   "label": "bayağı guguk",
+   "links": 118,
+   "value": 0.106,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı guguk",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Cuculus canorus"
+   ],
+   "tr_views": 1275
+  },
+  {
+   "qid": "Q18845",
+   "label": "bayağı guguk",
+   "links": 118,
+   "value": 0.117,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı guguk",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Cuculus canorus"
+   ],
+   "tr_views": 1275
+  },
+  {
+   "qid": "Q42326",
+   "label": "Kaya güvercini",
+   "links": 117,
+   "value": 0.267,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kaya güvercini",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Columba livia"
+   ],
+   "tr_views": 6306
+  },
+  {
+   "qid": "Q42326",
+   "label": "Kaya güvercini",
+   "links": 117,
+   "value": 0.294,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kaya güvercini",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Columba livia"
+   ],
+   "tr_views": 6306
+  },
+  {
+   "qid": "Q43502",
+   "label": "Dodo",
+   "links": 117,
+   "value": 10.2,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dodo",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Raphus cucullatus"
+   ],
+   "tr_views": 34383
+  },
+  {
+   "qid": "Q41960",
+   "label": "Küçük panda",
+   "links": 113,
+   "value": 0.12,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük panda",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Ailurus fulgens"
+   ],
+   "tr_views": 15002
+  },
+  {
+   "qid": "Q41960",
+   "label": "Küçük panda",
+   "links": 113,
+   "value": 4.95,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük panda",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Ailurus fulgens"
+   ],
+   "tr_views": 15002
+  },
+  {
+   "qid": "Q25485",
+   "label": "büyük baştankara",
+   "links": 112,
+   "value": 0.00168,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük baştankara",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Parus major"
+   ],
+   "tr_views": 5222
+  },
+  {
+   "qid": "Q25485",
+   "label": "büyük baştankara",
+   "links": 112,
+   "value": 0.0185,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük baştankara",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Parus major"
+   ],
+   "tr_views": 5222
+  },
+  {
+   "qid": "Q25345",
+   "label": "Kakım",
+   "links": 110,
+   "value": 0.219,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kakım",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Mustela erminea"
+   ],
+   "tr_views": 8070
+  },
+  {
+   "qid": "Q41181",
+   "label": "kaya kartalı",
+   "links": 110,
+   "value": 3.572,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kaya kartalı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Aquila chrysaetos"
+   ],
+   "tr_views": 6494
+  },
+  {
+   "qid": "Q41181",
+   "label": "kaya kartalı",
+   "links": 110,
+   "value": 5.194,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kaya kartalı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Aquila chrysaetos"
+   ],
+   "tr_views": 6494
+  },
+  {
+   "qid": "Q130933",
+   "label": "Puhu",
+   "links": 108,
+   "value": 0.08,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Puhu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Bubo bubo"
+   ],
+   "tr_views": 6490
+  },
+  {
+   "qid": "Q130933",
+   "label": "Puhu",
+   "links": 108,
+   "value": 2.38,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Puhu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Bubo bubo"
+   ],
+   "tr_views": 6490
+  },
+  {
+   "qid": "Q130933",
+   "label": "Puhu",
+   "links": 108,
+   "value": 2.992,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Puhu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Bubo bubo"
+   ],
+   "tr_views": 6490
+  },
+  {
+   "qid": "Q25440",
+   "label": "Karabatak",
+   "links": 108,
+   "value": 2.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karabatak",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Phalacrocorax carbo"
+   ],
+   "tr_views": 7536
+  },
+  {
+   "qid": "Q25440",
+   "label": "Karabatak",
+   "links": 108,
+   "value": 2.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karabatak",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Phalacrocorax carbo"
+   ],
+   "tr_views": 7536
+  },
+  {
+   "qid": "Q26490",
+   "label": "Bayağı kerkenez",
+   "links": 107,
+   "value": 0.021,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı kerkenez",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Falco tinnunculus"
+   ],
+   "tr_views": 4058
+  },
+  {
+   "qid": "Q26490",
+   "label": "Bayağı kerkenez",
+   "links": 107,
+   "value": 0.167,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı kerkenez",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Falco tinnunculus"
+   ],
+   "tr_views": 4058
+  },
+  {
+   "qid": "Q26490",
+   "label": "Bayağı kerkenez",
+   "links": 107,
+   "value": 0.201,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Bayağı kerkenez",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Falco tinnunculus"
+   ],
+   "tr_views": 4058
+  },
+  {
+   "qid": "Q14334",
+   "label": "Kutup porsuğu",
+   "links": 106,
+   "value": 0.084,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kutup porsuğu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Gulo gulo"
+   ],
+   "tr_views": 5111
+  },
+  {
+   "qid": "Q14334",
+   "label": "Kutup porsuğu",
+   "links": 106,
+   "value": 10.6,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kutup porsuğu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Gulo gulo"
+   ],
+   "tr_views": 5111
+  },
+  {
+   "qid": "Q14334",
+   "label": "Kutup porsuğu",
+   "links": 106,
+   "value": 14.8,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kutup porsuğu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Gulo gulo"
+   ],
+   "tr_views": 5111
+  },
+  {
+   "qid": "Q25380",
+   "label": "Accipiter nisus",
+   "links": 106,
+   "value": 0.0225,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Atmaca",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Accipiter nisus"
+   ],
+   "tr_views": 10271
+  },
+  {
+   "qid": "Q25380",
+   "label": "Accipiter nisus",
+   "links": 106,
+   "value": 0.11,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Atmaca",
+   "sex": [],
+   "role": [],
+   "taxon": [
+    "Accipiter nisus"
+   ],
+   "tr_views": 10271
+  },
+  {
+   "qid": "Q25380",
+   "label": "Accipiter nisus",
+   "links": 106,
+   "value": 0.15,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Atmaca",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Accipiter nisus"
+   ],
+   "tr_views": 10271
+  },
+  {
+   "qid": "Q25380",
+   "label": "Accipiter nisus",
+   "links": 106,
+   "value": 0.29,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Atmaca",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Accipiter nisus"
+   ],
+   "tr_views": 10271
+  },
+  {
+   "qid": "Q25882",
+   "label": "Boz kaz",
+   "links": 106,
+   "value": 0.16,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boz kaz",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Anser anser"
+   ],
+   "tr_views": 3396
+  },
+  {
+   "qid": "Q25882",
+   "label": "Boz kaz",
+   "links": 106,
+   "value": 3.237,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boz kaz",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Anser anser"
+   ],
+   "tr_views": 3396
+  },
+  {
+   "qid": "Q25882",
+   "label": "Boz kaz",
+   "links": 106,
+   "value": 3.692,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boz kaz",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Anser anser"
+   ],
+   "tr_views": 3396
+  },
+  {
+   "qid": "Q131538",
+   "label": "Hydrochoerus hydrochaeris",
+   "links": 105,
+   "value": 1.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hydrochoerus hydrochaeris",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Hydrochoerus hydrochaeris"
+   ],
+   "tr_views": 33083
+  },
+  {
+   "qid": "Q131538",
+   "label": "Hydrochoerus hydrochaeris",
+   "links": 105,
+   "value": 48.9,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hydrochoerus hydrochaeris",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Hydrochoerus hydrochaeris"
+   ],
+   "tr_views": 33083
+  },
+  {
+   "qid": "Q25317",
+   "label": "Bayağı peçeli baykuş",
+   "links": 104,
+   "value": 0.58,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı peçeli baykuş",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Tyto alba"
+   ],
+   "tr_views": 5544
+  },
+  {
+   "qid": "Q25376",
+   "label": "Sakarmeke",
+   "links": 104,
+   "value": 0.0365,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sakarmeke",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Fulica atra"
+   ],
+   "tr_views": 7942
+  },
+  {
+   "qid": "Q25376",
+   "label": "Sakarmeke",
+   "links": 104,
+   "value": 0.715,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sakarmeke",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Fulica atra"
+   ],
+   "tr_views": 7942
+  },
+  {
+   "qid": "Q25376",
+   "label": "Sakarmeke",
+   "links": 104,
+   "value": 0.835,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sakarmeke",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Fulica atra"
+   ],
+   "tr_views": 7942
+  },
+  {
+   "qid": "Q25386",
+   "label": "ekin kargası",
+   "links": 103,
+   "value": 0.418,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ekin kargası",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Corvus frugilegus"
+   ],
+   "tr_views": 1712
+  },
+  {
+   "qid": "Q25386",
+   "label": "ekin kargası",
+   "links": 103,
+   "value": 0.489,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ekin kargası",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Corvus frugilegus"
+   ],
+   "tr_views": 1712
+  },
+  {
+   "qid": "Q25450",
+   "label": "Kılkuyruk",
+   "links": 103,
+   "value": 0.866,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kılkuyruk",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Anas acuta"
+   ],
+   "tr_views": 1757
+  },
+  {
+   "qid": "Q25450",
+   "label": "Kılkuyruk",
+   "links": 103,
+   "value": 1.025,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kılkuyruk",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Anas acuta"
+   ],
+   "tr_views": 1757
+  },
+  {
+   "qid": "Q25968",
+   "label": "Orman serçesi",
+   "links": 102,
+   "value": 0.026,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ağaç serçesi",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Passer montanus"
+   ],
+   "tr_views": 2131
+  },
+  {
+   "qid": "Q71516",
+   "label": "tek hörgüçlü deve",
+   "links": 102,
+   "value": 37.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tek hörgüçlü deve",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Camelus dromedarius"
+   ],
+   "tr_views": 2662
+  },
+  {
+   "qid": "Q71516",
+   "label": "tek hörgüçlü deve",
+   "links": 102,
+   "value": 450.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tek hörgüçlü deve",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Camelus dromedarius"
+   ],
+   "tr_views": 2662
+  },
+  {
+   "qid": "Q71516",
+   "label": "tek hörgüçlü deve",
+   "links": 102,
+   "value": 500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tek hörgüçlü deve",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Camelus dromedarius"
+   ],
+   "tr_views": 2662
+  },
+  {
+   "qid": "Q80362",
+   "label": "Kara çaylak",
+   "links": 102,
+   "value": 0.056,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara çaylak",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Milvus migrans"
+   ],
+   "tr_views": 1510
+  },
+  {
+   "qid": "Q80362",
+   "label": "Kara çaylak",
+   "links": 102,
+   "value": 0.828,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara çaylak",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Milvus migrans"
+   ],
+   "tr_views": 1510
+  },
+  {
+   "qid": "Q25382",
+   "label": "Bayağı şakrak kuşu",
+   "links": 100,
+   "value": 0.00241,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı şakrak kuşu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Pyrrhula pyrrhula"
+   ],
+   "tr_views": 1045
+  },
+  {
+   "qid": "Q25382",
+   "label": "Bayağı şakrak kuşu",
+   "links": 100,
+   "value": 0.031,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı şakrak kuşu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pyrrhula pyrrhula"
+   ],
+   "tr_views": 1045
+  },
+  {
+   "qid": "Q25385",
+   "label": "Bayağı şahin",
+   "links": 100,
+   "value": 0.06,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı şahin",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Buteo buteo"
+   ],
+   "tr_views": 1956
+  },
+  {
+   "qid": "Q25385",
+   "label": "Bayağı şahin",
+   "links": 100,
+   "value": 0.79,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı şahin",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Buteo buteo"
+   ],
+   "tr_views": 1956
+  },
+  {
+   "qid": "Q25385",
+   "label": "Bayağı şahin",
+   "links": 100,
+   "value": 0.925,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı şahin",
+   "sex": [],
+   "role": [],
+   "taxon": [
+    "Buteo buteo"
+   ],
+   "tr_views": 1956
+  },
+  {
+   "qid": "Q25385",
+   "label": "Bayağı şahin",
+   "links": 100,
+   "value": 0.9665,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı şahin",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Buteo buteo"
+   ],
+   "tr_views": 1956
+  },
+  {
+   "qid": "Q18847",
+   "label": "Saztavuğu",
+   "links": 99,
+   "value": 0.348,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saztavuğu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Gallinula chloropus"
+   ],
+   "tr_views": 1551
+  },
+  {
+   "qid": "Q19537",
+   "label": "Bonobo",
+   "links": 99,
+   "value": 33.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bonobo",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pan paniscus"
+   ],
+   "tr_views": 15961
+  },
+  {
+   "qid": "Q19537",
+   "label": "Bonobo",
+   "links": 99,
+   "value": 43.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bonobo",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pan paniscus"
+   ],
+   "tr_views": 15961
+  },
+  {
+   "qid": "Q25404",
+   "label": "Mavi baştankara",
+   "links": 99,
+   "value": 0.00114,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mavi baştankara",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Cyanistes caeruleus"
+   ],
+   "tr_views": 3724
+  },
+  {
+   "qid": "Q25404",
+   "label": "Mavi baştankara",
+   "links": 99,
+   "value": 0.0118,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mavi baştankara",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Cyanistes caeruleus"
+   ],
+   "tr_views": 3724
+  },
+  {
+   "qid": "Q129059",
+   "label": "Büyük orman tavuğu",
+   "links": 98,
+   "value": 0.053,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük orman tavuğu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Tetrao urogallus"
+   ],
+   "tr_views": 90
+  },
+  {
+   "qid": "Q129059",
+   "label": "Büyük orman tavuğu",
+   "links": 98,
+   "value": 1.97,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük orman tavuğu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Tetrao urogallus"
+   ],
+   "tr_views": 90
+  },
+  {
+   "qid": "Q129059",
+   "label": "Büyük orman tavuğu",
+   "links": 98,
+   "value": 3.8,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük orman tavuğu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Tetrao urogallus"
+   ],
+   "tr_views": 90
+  },
+  {
+   "qid": "Q25402",
+   "label": "Cygnus olor",
+   "links": 98,
+   "value": 9.67,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cygnus olor",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Cygnus olor"
+   ],
+   "tr_views": 1277
+  },
+  {
+   "qid": "Q25402",
+   "label": "Cygnus olor",
+   "links": 98,
+   "value": 11.8,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cygnus olor",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Cygnus olor"
+   ],
+   "tr_views": 1277
+  },
+  {
+   "qid": "Q82037",
+   "label": "Okapi",
+   "links": 98,
+   "value": 22.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Okapi",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Okapia johnstoni"
+   ],
+   "tr_views": 10867
+  },
+  {
+   "qid": "Q82037",
+   "label": "Okapi",
+   "links": 98,
+   "value": 250.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Okapi",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Okapia johnstoni"
+   ],
+   "tr_views": 10867
+  },
+  {
+   "qid": "Q126167",
+   "label": "sakallı akbaba",
+   "links": 97,
+   "value": 0.224,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sakallı akbaba",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Gypaetus barbatus"
+   ],
+   "tr_views": 3254
+  },
+  {
+   "qid": "Q126167",
+   "label": "sakallı akbaba",
+   "links": 97,
+   "value": 4.913,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sakallı akbaba",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Gypaetus barbatus"
+   ],
+   "tr_views": 3254
+  },
+  {
+   "qid": "Q126167",
+   "label": "sakallı akbaba",
+   "links": 97,
+   "value": 6.175,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sakallı akbaba",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Gypaetus barbatus"
+   ],
+   "tr_views": 3254
+  },
+  {
+   "qid": "Q25383",
+   "label": "Bayağı ispinoz",
+   "links": 97,
+   "value": 0.00216,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı ispinoz",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Fringilla coelebs"
+   ],
+   "tr_views": 5429
+  },
+  {
+   "qid": "Q25383",
+   "label": "Bayağı ispinoz",
+   "links": 97,
+   "value": 0.022,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı ispinoz",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Fringilla coelebs"
+   ],
+   "tr_views": 5429
+  },
+  {
+   "qid": "Q25422",
+   "label": "Bahri",
+   "links": 97,
+   "value": 0.0395,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bahri",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Podiceps cristatus"
+   ],
+   "tr_views": 1840
+  },
+  {
+   "qid": "Q25422",
+   "label": "Bahri",
+   "links": 97,
+   "value": 0.83,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bahri",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Podiceps cristatus"
+   ],
+   "tr_views": 1840
+  },
+  {
+   "qid": "Q25422",
+   "label": "Bahri",
+   "links": 97,
+   "value": 0.92,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bahri",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Podiceps cristatus"
+   ],
+   "tr_views": 1840
+  },
+  {
+   "qid": "Q25438",
+   "label": "Bayağı deniz kartalı",
+   "links": 97,
+   "value": 0.142,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Beyaz kuyruklu kartal",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Haliaeetus albicilla"
+   ],
+   "tr_views": 1642
+  },
+  {
+   "qid": "Q25438",
+   "label": "Bayağı deniz kartalı",
+   "links": 97,
+   "value": 4.014,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Beyaz kuyruklu kartal",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Haliaeetus albicilla"
+   ],
+   "tr_views": 1642
+  },
+  {
+   "qid": "Q25438",
+   "label": "Bayağı deniz kartalı",
+   "links": 97,
+   "value": 5.572,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Beyaz kuyruklu kartal",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Haliaeetus albicilla"
+   ],
+   "tr_views": 1642
+  },
+  {
+   "qid": "Q93208",
+   "label": "Dromaius novaehollandiae",
+   "links": 97,
+   "value": 0.5812,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Emu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Dromaius novaehollandiae"
+   ],
+   "tr_views": 10411
+  },
+  {
+   "qid": "Q93208",
+   "label": "Dromaius novaehollandiae",
+   "links": 97,
+   "value": 32.7,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Emu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Dromaius novaehollandiae"
+   ],
+   "tr_views": 10411
+  },
+  {
+   "qid": "Q93208",
+   "label": "Dromaius novaehollandiae",
+   "links": 97,
+   "value": 38.3,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Emu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Dromaius novaehollandiae"
+   ],
+   "tr_views": 10411
+  },
+  {
+   "qid": "Q127216",
+   "label": "Kel kartal",
+   "links": 93,
+   "value": 0.117,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kel kartal",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Haliaeetus leucocephalus"
+   ],
+   "tr_views": 8293
+  },
+  {
+   "qid": "Q127216",
+   "label": "Kel kartal",
+   "links": 93,
+   "value": 4.13,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kel kartal",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Haliaeetus leucocephalus"
+   ],
+   "tr_views": 8293
+  },
+  {
+   "qid": "Q127216",
+   "label": "Kel kartal",
+   "links": 93,
+   "value": 5.35,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kel kartal",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Haliaeetus leucocephalus"
+   ],
+   "tr_views": 8293
+  },
+  {
+   "qid": "Q33504",
+   "label": "Mısır akbabası",
+   "links": 93,
+   "value": 0.094,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Neophron percnopterus",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Neophron percnopterus"
+   ],
+   "tr_views": 1463
+  },
+  {
+   "qid": "Q33504",
+   "label": "Mısır akbabası",
+   "links": 93,
+   "value": 1.977,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Neophron percnopterus",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Neophron percnopterus"
+   ],
+   "tr_views": 1463
+  },
+  {
+   "qid": "Q126216",
+   "label": "gece balıkçılı",
+   "links": 92,
+   "value": 0.59,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gece balıkçılı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Nycticorax nycticorax"
+   ],
+   "tr_views": 31
+  },
+  {
+   "qid": "Q126216",
+   "label": "gece balıkçılı",
+   "links": 92,
+   "value": 0.682,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gece balıkçılı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Nycticorax nycticorax"
+   ],
+   "tr_views": 31
+  },
+  {
+   "qid": "Q134015",
+   "label": "Mirket",
+   "links": 92,
+   "value": 0.031,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mirket",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Suricata suricatta"
+   ],
+   "tr_views": 20032
+  },
+  {
+   "qid": "Q134015",
+   "label": "Mirket",
+   "links": 92,
+   "value": 0.725,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mirket",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Suricata suricatta"
+   ],
+   "tr_views": 20032
+  },
+  {
+   "qid": "Q170723",
+   "label": "Angut",
+   "links": 92,
+   "value": 0.083,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Angut (kuş)",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Tadorna ferruginea"
+   ],
+   "tr_views": 15704
+  },
+  {
+   "qid": "Q170723",
+   "label": "Angut",
+   "links": 92,
+   "value": 1.1,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Angut (kuş)",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Tadorna ferruginea"
+   ],
+   "tr_views": 15704
+  },
+  {
+   "qid": "Q170723",
+   "label": "Angut",
+   "links": 92,
+   "value": 1.36,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Angut (kuş)",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Tadorna ferruginea"
+   ],
+   "tr_views": 15704
+  },
+  {
+   "qid": "Q33261",
+   "label": "Oselo",
+   "links": 91,
+   "value": 13.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Oselo",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Leopardus pardalis"
+   ],
+   "tr_views": 7814
+  },
+  {
+   "qid": "Q131709",
+   "label": "Küçük ak balıkçıl",
+   "links": 90,
+   "value": 0.028,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük ak balıkçıl",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Egretta garzetta"
+   ],
+   "tr_views": 125
+  },
+  {
+   "qid": "Q131709",
+   "label": "Küçük ak balıkçıl",
+   "links": 90,
+   "value": 0.532,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük ak balıkçıl",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Egretta garzetta"
+   ],
+   "tr_views": 125
+  },
+  {
+   "qid": "Q177856",
+   "label": "Kızıl akbaba",
+   "links": 90,
+   "value": 0.252,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kızıl akbaba",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Gyps fulvus"
+   ],
+   "tr_views": 1656
+  },
+  {
+   "qid": "Q177856",
+   "label": "Kızıl akbaba",
+   "links": 90,
+   "value": 8.328,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kızıl akbaba",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Gyps fulvus"
+   ],
+   "tr_views": 1656
+  },
+  {
+   "qid": "Q25612",
+   "label": "Ötücü kuğu",
+   "links": 90,
+   "value": 0.331,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ötücü kuğu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Cygnus cygnus"
+   ],
+   "tr_views": 660
+  },
+  {
+   "qid": "Q25612",
+   "label": "Ötücü kuğu",
+   "links": 90,
+   "value": 8.75,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ötücü kuğu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Cygnus cygnus"
+   ],
+   "tr_views": 660
+  },
+  {
+   "qid": "Q25612",
+   "label": "Ötücü kuğu",
+   "links": 90,
+   "value": 14.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ötücü kuğu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Cygnus cygnus"
+   ],
+   "tr_views": 660
+  },
+  {
+   "qid": "Q54696",
+   "label": "Avrasya yakalı kumru",
+   "links": 90,
+   "value": 0.0092,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kumru (tür)",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Streptopelia decaocto"
+   ],
+   "tr_views": 14580
+  },
+  {
+   "qid": "Q54696",
+   "label": "Avrasya yakalı kumru",
+   "links": 90,
+   "value": 0.193,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kumru (tür)",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Streptopelia decaocto"
+   ],
+   "tr_views": 14580
+  },
+  {
+   "qid": "Q199427",
+   "label": "Ak pelikan",
+   "links": 89,
+   "value": 0.18,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ak pelikan",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Pelecanus onocrotalus"
+   ],
+   "tr_views": 1495
+  },
+  {
+   "qid": "Q199427",
+   "label": "Ak pelikan",
+   "links": 89,
+   "value": 7.59,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ak pelikan",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pelecanus onocrotalus"
+   ],
+   "tr_views": 1495
+  },
+  {
+   "qid": "Q199427",
+   "label": "Ak pelikan",
+   "links": 89,
+   "value": 11.45,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ak pelikan",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pelecanus onocrotalus"
+   ],
+   "tr_views": 1495
+  },
+  {
+   "qid": "Q25876",
+   "label": "Delice doğan",
+   "links": 89,
+   "value": 0.024,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Delice doğan",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Falco subbuteo"
+   ],
+   "tr_views": 1837
+  },
+  {
+   "qid": "Q25876",
+   "label": "Delice doğan",
+   "links": 89,
+   "value": 0.1815,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Delice doğan",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Falco subbuteo"
+   ],
+   "tr_views": 1837
+  },
+  {
+   "qid": "Q25876",
+   "label": "Delice doğan",
+   "links": 89,
+   "value": 0.2405,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Delice doğan",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Falco subbuteo"
+   ],
+   "tr_views": 1837
+  },
+  {
+   "qid": "Q168514",
+   "label": "Üveyik",
+   "links": 87,
+   "value": 0.0082,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Üveyik",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Streptopelia turtur"
+   ],
+   "tr_views": 7319
+  },
+  {
+   "qid": "Q168514",
+   "label": "Üveyik",
+   "links": 87,
+   "value": 0.136,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Üveyik",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Streptopelia turtur"
+   ],
+   "tr_views": 7319
+  },
+  {
+   "qid": "Q168748",
+   "label": "Sagittarius serpentarius",
+   "links": 87,
+   "value": 0.13,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sekreter kuşu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Sagittarius serpentarius"
+   ],
+   "tr_views": 4321
+  },
+  {
+   "qid": "Q168748",
+   "label": "Sagittarius serpentarius",
+   "links": 87,
+   "value": 4.052,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sekreter kuşu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Sagittarius serpentarius"
+   ],
+   "tr_views": 4321
+  },
+  {
+   "qid": "Q18859",
+   "label": "Kızılbacak",
+   "links": 86,
+   "value": 0.0223,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kızılbacak",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Tringa totanus"
+   ],
+   "tr_views": 274
+  },
+  {
+   "qid": "Q18859",
+   "label": "Kızılbacak",
+   "links": 86,
+   "value": 0.129,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kızılbacak",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Tringa totanus"
+   ],
+   "tr_views": 274
+  },
+  {
+   "qid": "Q25692",
+   "label": "Su çulluğu",
+   "links": 86,
+   "value": 0.111,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Su çulluğu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Gallinago gallinago"
+   ],
+   "tr_views": 1299
+  },
+  {
+   "qid": "Q25692",
+   "label": "Su çulluğu",
+   "links": 86,
+   "value": 0.128,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Su çulluğu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Gallinago gallinago"
+   ],
+   "tr_views": 1299
+  },
+  {
+   "qid": "Q26209",
+   "label": "Göknar ağaçkakanı",
+   "links": 86,
+   "value": 0.0057,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Orman alaca ağaçkakan",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Dendrocopos major"
+   ],
+   "tr_views": 841
+  },
+  {
+   "qid": "Q26209",
+   "label": "Göknar ağaçkakanı",
+   "links": 86,
+   "value": 0.089,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Orman alaca ağaçkakan",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Dendrocopos major"
+   ],
+   "tr_views": 841
+  },
+  {
+   "qid": "Q178811",
+   "label": "Bayağı aynak",
+   "links": 85,
+   "value": 0.633,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı aynak",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Plegadis falcinellus"
+   ],
+   "tr_views": 746
+  },
+  {
+   "qid": "Q25761",
+   "label": "Suna",
+   "links": 85,
+   "value": 0.078,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suna",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Tadorna tadorna"
+   ],
+   "tr_views": 5530
+  },
+  {
+   "qid": "Q25761",
+   "label": "Suna",
+   "links": 85,
+   "value": 1.043,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suna",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Tadorna tadorna"
+   ],
+   "tr_views": 5530
+  },
+  {
+   "qid": "Q25761",
+   "label": "Suna",
+   "links": 85,
+   "value": 1.261,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suna",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Tadorna tadorna"
+   ],
+   "tr_views": 5530
+  },
+  {
+   "qid": "Q131918",
+   "label": "Boz doğan",
+   "links": 84,
+   "value": 0.162,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boz doğan",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Falco columbarius"
+   ],
+   "tr_views": 1311
+  },
+  {
+   "qid": "Q131918",
+   "label": "Boz doğan",
+   "links": 84,
+   "value": 0.212,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boz doğan",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Falco columbarius"
+   ],
+   "tr_views": 1311
+  },
+  {
+   "qid": "Q156250",
+   "label": "Kızıl çaylak",
+   "links": 84,
+   "value": 0.063,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kızıl çaylak",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Milvus milvus"
+   ],
+   "tr_views": 1315
+  },
+  {
+   "qid": "Q156250",
+   "label": "Kızıl çaylak",
+   "links": 84,
+   "value": 1.012,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kızıl çaylak",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Milvus milvus"
+   ],
+   "tr_views": 1315
+  },
+  {
+   "qid": "Q156250",
+   "label": "Kızıl çaylak",
+   "links": 84,
+   "value": 1.232,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kızıl çaylak",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Milvus milvus"
+   ],
+   "tr_views": 1315
+  },
+  {
+   "qid": "Q178821",
+   "label": "Bayağı uzunbacak",
+   "links": 84,
+   "value": 0.0218,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı uzunbacak",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Himantopus himantopus"
+   ],
+   "tr_views": 927
+  },
+  {
+   "qid": "Q178821",
+   "label": "Bayağı uzunbacak",
+   "links": 84,
+   "value": 0.16,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı uzunbacak",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Himantopus himantopus"
+   ],
+   "tr_views": 927
+  },
+  {
+   "qid": "Q25572",
+   "label": "Gökçe tuygun",
+   "links": 84,
+   "value": 0.346,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gökçe tuygun",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Circus cyaneus"
+   ],
+   "tr_views": 551
+  },
+  {
+   "qid": "Q25572",
+   "label": "Gökçe tuygun",
+   "links": 84,
+   "value": 0.527,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gökçe tuygun",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Circus cyaneus"
+   ],
+   "tr_views": 551
+  },
+  {
+   "qid": "Q25634",
+   "label": "Karabaş martı",
+   "links": 84,
+   "value": 0.267,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karabaş martı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Chroicocephalus ridibundus"
+   ],
+   "tr_views": 1629
+  },
+  {
+   "qid": "Q25634",
+   "label": "Karabaş martı",
+   "links": 84,
+   "value": 0.294,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karabaş martı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Chroicocephalus ridibundus"
+   ],
+   "tr_views": 1629
+  },
+  {
+   "qid": "Q27075852",
+   "label": "Keten kuşu",
+   "links": 84,
+   "value": 0.00166,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Keten kuşu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Linaria cannabina"
+   ],
+   "tr_views": 1277
+  },
+  {
+   "qid": "Q27075852",
+   "label": "Keten kuşu",
+   "links": 84,
+   "value": 0.019,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Keten kuşu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Linaria cannabina"
+   ],
+   "tr_views": 1277
+  },
+  {
+   "qid": "Q131044",
+   "label": "Kara kuğu",
+   "links": 83,
+   "value": 0.258,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara kuğu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Cygnus atratus"
+   ],
+   "tr_views": 1593
+  },
+  {
+   "qid": "Q131044",
+   "label": "Kara kuğu",
+   "links": 83,
+   "value": 5.1,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara kuğu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Cygnus atratus"
+   ],
+   "tr_views": 1593
+  },
+  {
+   "qid": "Q131044",
+   "label": "Kara kuğu",
+   "links": 83,
+   "value": 6.2,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara kuğu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Cygnus atratus"
+   ],
+   "tr_views": 1593
+  },
+  {
+   "qid": "Q184774",
+   "label": "Kırmızı hint kuşu",
+   "links": 83,
+   "value": 0.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gallus gallus",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Gallus gallus"
+   ],
+   "tr_views": 2685
+  },
+  {
+   "qid": "Q184774",
+   "label": "Kırmızı hint kuşu",
+   "links": 83,
+   "value": 0.844,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gallus gallus",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Gallus gallus"
+   ],
+   "tr_views": 2685
+  },
+  {
+   "qid": "Q27075864",
+   "label": "Kara başlı iskete",
+   "links": 83,
+   "value": 0.00129,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara başlı iskete",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Spinus spinus"
+   ],
+   "tr_views": 1279
+  },
+  {
+   "qid": "Q27075864",
+   "label": "Kara başlı iskete",
+   "links": 83,
+   "value": 0.0138,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara başlı iskete",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Spinus spinus"
+   ],
+   "tr_views": 1279
+  },
+  {
+   "qid": "Q155878",
+   "label": "Kara orman tavuğu",
+   "links": 82,
+   "value": 0.0355,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara orman tavuğu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Lyrurus tetrix"
+   ],
+   "tr_views": 1039
+  },
+  {
+   "qid": "Q155878",
+   "label": "Kara orman tavuğu",
+   "links": 82,
+   "value": 0.925,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara orman tavuğu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Lyrurus tetrix"
+   ],
+   "tr_views": 1039
+  },
+  {
+   "qid": "Q155878",
+   "label": "Kara orman tavuğu",
+   "links": 82,
+   "value": 1.175,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara orman tavuğu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Lyrurus tetrix"
+   ],
+   "tr_views": 1039
+  },
+  {
+   "qid": "Q179359",
+   "label": "Bozkır kartalı",
+   "links": 82,
+   "value": 0.117,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bozkır kartalı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Aquila nipalensis"
+   ],
+   "tr_views": 372
+  },
+  {
+   "qid": "Q179359",
+   "label": "Bozkır kartalı",
+   "links": 82,
+   "value": 2.459,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bozkır kartalı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Aquila nipalensis"
+   ],
+   "tr_views": 372
+  },
+  {
+   "qid": "Q179359",
+   "label": "Bozkır kartalı",
+   "links": 82,
+   "value": 2.987,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bozkır kartalı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Aquila nipalensis"
+   ],
+   "tr_views": 372
+  },
+  {
+   "qid": "Q18854",
+   "label": "Bayağı kervan çulluğu",
+   "links": 82,
+   "value": 0.076,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı kervan çulluğu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Numenius arquata"
+   ],
+   "tr_views": 498
+  },
+  {
+   "qid": "Q18854",
+   "label": "Bayağı kervan çulluğu",
+   "links": 82,
+   "value": 0.742,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı kervan çulluğu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Numenius arquata"
+   ],
+   "tr_views": 498
+  },
+  {
+   "qid": "Q18854",
+   "label": "Bayağı kervan çulluğu",
+   "links": 82,
+   "value": 0.869,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı kervan çulluğu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Numenius arquata"
+   ],
+   "tr_views": 498
+  },
+  {
+   "qid": "Q25756",
+   "label": "Alaca baykuş",
+   "links": 82,
+   "value": 0.426,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Alaca baykuş",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Strix aluco"
+   ],
+   "tr_views": 1951
+  },
+  {
+   "qid": "Q25756",
+   "label": "Alaca baykuş",
+   "links": 82,
+   "value": 0.524,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Alaca baykuş",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Strix aluco"
+   ],
+   "tr_views": 1951
+  },
+  {
+   "qid": "Q28122714",
+   "label": "Dövüşken kuş",
+   "links": 82,
+   "value": 0.021,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dövüşken kuş",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Calidris pugnax"
+   ],
+   "tr_views": 424
+  },
+  {
+   "qid": "Q28122714",
+   "label": "Dövüşken kuş",
+   "links": 82,
+   "value": 0.102,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dövüşken kuş",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Calidris pugnax"
+   ],
+   "tr_views": 424
+  },
+  {
+   "qid": "Q28122714",
+   "label": "Dövüşken kuş",
+   "links": 82,
+   "value": 0.17,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dövüşken kuş",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Calidris pugnax"
+   ],
+   "tr_views": 424
+  },
+  {
+   "qid": "Q26733",
+   "label": "Kanada kazı",
+   "links": 81,
+   "value": 3.314,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Branta canadensis",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Branta canadensis"
+   ],
+   "tr_views": 618
+  },
+  {
+   "qid": "Q26733",
+   "label": "Kanada kazı",
+   "links": 81,
+   "value": 3.814,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Branta canadensis",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Branta canadensis"
+   ],
+   "tr_views": 618
+  },
+  {
+   "qid": "Q26733",
+   "label": "Kanada kazı",
+   "links": 81,
+   "value": 5.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Branta canadensis",
+   "sex": [],
+   "role": [],
+   "taxon": [
+    "Branta canadensis"
+   ],
+   "tr_views": 618
+  },
+  {
+   "qid": "Q25678",
+   "label": "Bayağı boyunburan",
+   "links": 80,
+   "value": 0.0027,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı boyunburan",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Jynx torquilla"
+   ],
+   "tr_views": 375
+  },
+  {
+   "qid": "Q25678",
+   "label": "Bayağı boyunburan",
+   "links": 80,
+   "value": 0.037,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı boyunburan",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Jynx torquilla"
+   ],
+   "tr_views": 375
+  },
+  {
+   "qid": "Q26349",
+   "label": "Öter ardıç kuşu",
+   "links": 80,
+   "value": 0.006,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Öter ardıç kuşu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Turdus philomelos"
+   ],
+   "tr_views": 7013
+  },
+  {
+   "qid": "Q26349",
+   "label": "Öter ardıç kuşu",
+   "links": 80,
+   "value": 0.072,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Öter ardıç kuşu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Turdus philomelos"
+   ],
+   "tr_views": 7013
+  },
+  {
+   "qid": "Q166171",
+   "label": "Yeşil ağaçkakan",
+   "links": 79,
+   "value": 0.0089,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeşil ağaçkakan",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Picus viridis"
+   ],
+   "tr_views": 924
+  },
+  {
+   "qid": "Q166171",
+   "label": "Yeşil ağaçkakan",
+   "links": 79,
+   "value": 0.193,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeşil ağaçkakan",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Picus viridis"
+   ],
+   "tr_views": 924
+  },
+  {
+   "qid": "Q25777",
+   "label": "Tarla ardıç kuşu",
+   "links": 79,
+   "value": 0.0068,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tarla ardıç kuşu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Turdus pilaris"
+   ],
+   "tr_views": 1909
+  },
+  {
+   "qid": "Q25777",
+   "label": "Tarla ardıç kuşu",
+   "links": 79,
+   "value": 0.105,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tarla ardıç kuşu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Turdus pilaris"
+   ],
+   "tr_views": 1909
+  },
+  {
+   "qid": "Q156767",
+   "label": "Bayağı sıvacı kuşu",
+   "links": 78,
+   "value": 0.00225,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı sıvacı kuşu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Sitta europaea"
+   ],
+   "tr_views": 484
+  },
+  {
+   "qid": "Q156767",
+   "label": "Bayağı sıvacı kuşu",
+   "links": 78,
+   "value": 0.023,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı sıvacı kuşu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Sitta europaea"
+   ],
+   "tr_views": 484
+  },
+  {
+   "qid": "Q168976",
+   "label": "Şah kartal",
+   "links": 78,
+   "value": 0.132,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şah kartal",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Aquila heliaca"
+   ],
+   "tr_views": 5429
+  },
+  {
+   "qid": "Q168976",
+   "label": "Şah kartal",
+   "links": 78,
+   "value": 2.585,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şah kartal",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Aquila heliaca"
+   ],
+   "tr_views": 5429
+  },
+  {
+   "qid": "Q168976",
+   "label": "Şah kartal",
+   "links": 78,
+   "value": 3.845,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şah kartal",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Aquila heliaca"
+   ],
+   "tr_views": 5429
+  },
+  {
+   "qid": "Q25928",
+   "label": "Bayağı poyraz kuşu",
+   "links": 78,
+   "value": 0.0467,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı poyraz kuşu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Haematopus ostralegus"
+   ],
+   "tr_views": 464
+  },
+  {
+   "qid": "Q25928",
+   "label": "Bayağı poyraz kuşu",
+   "links": 78,
+   "value": 0.518,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı poyraz kuşu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Haematopus ostralegus"
+   ],
+   "tr_views": 464
+  },
+  {
+   "qid": "Q26685",
+   "label": "Bayağı deniz papağanı",
+   "links": 78,
+   "value": 0.376,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı deniz papağanı",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Fratercula arctica"
+   ],
+   "tr_views": 3609
+  },
+  {
+   "qid": "Q18840",
+   "label": "Yeşilbacak",
+   "links": 77,
+   "value": 0.0305,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeşilbacak",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Tringa nebularia"
+   ],
+   "tr_views": 215
+  },
+  {
+   "qid": "Q18840",
+   "label": "Yeşilbacak",
+   "links": 77,
+   "value": 0.173,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeşilbacak",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Tringa nebularia"
+   ],
+   "tr_views": 215
+  },
+  {
+   "qid": "Q191125",
+   "label": "Hint kazı",
+   "links": 77,
+   "value": 0.141,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hint kazı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Anser indicus"
+   ],
+   "tr_views": 454
+  },
+  {
+   "qid": "Q191125",
+   "label": "Hint kazı",
+   "links": 77,
+   "value": 2.23,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hint kazı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Anser indicus"
+   ],
+   "tr_views": 454
+  },
+  {
+   "qid": "Q191125",
+   "label": "Hint kazı",
+   "links": 77,
+   "value": 2.505,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hint kazı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Anser indicus"
+   ],
+   "tr_views": 454
+  },
+  {
+   "qid": "Q26427",
+   "label": "Küçük gümüş martı",
+   "links": 77,
+   "value": 0.36,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük gümüş martı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Larus canus"
+   ],
+   "tr_views": 317
+  },
+  {
+   "qid": "Q26427",
+   "label": "Küçük gümüş martı",
+   "links": 77,
+   "value": 0.413,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük gümüş martı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Larus canus"
+   ],
+   "tr_views": 317
+  },
+  {
+   "qid": "Q26452",
+   "label": "Tarla kazı",
+   "links": 77,
+   "value": 0.146,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tarla kazı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Anser fabalis"
+   ],
+   "tr_views": 361
+  },
+  {
+   "qid": "Q26452",
+   "label": "Tarla kazı",
+   "links": 77,
+   "value": 2.843,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tarla kazı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Anser fabalis"
+   ],
+   "tr_views": 361
+  },
+  {
+   "qid": "Q26452",
+   "label": "Tarla kazı",
+   "links": 77,
+   "value": 3.198,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tarla kazı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Anser fabalis"
+   ],
+   "tr_views": 361
+  },
+  {
+   "qid": "Q179625",
+   "label": "Ala doğan",
+   "links": 76,
+   "value": 0.017,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ala doğan",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Falco vespertinus"
+   ],
+   "tr_views": 1177
+  },
+  {
+   "qid": "Q179625",
+   "label": "Ala doğan",
+   "links": 76,
+   "value": 0.15,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ala doğan",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Falco vespertinus"
+   ],
+   "tr_views": 1177
+  },
+  {
+   "qid": "Q179625",
+   "label": "Ala doğan",
+   "links": 76,
+   "value": 0.167,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ala doğan",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Falco vespertinus"
+   ],
+   "tr_views": 1177
+  },
+  {
+   "qid": "Q185099",
+   "label": "Su kılavuzu",
+   "links": 76,
+   "value": 0.098,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Su kılavuzu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Rallus aquaticus"
+   ],
+   "tr_views": 527
+  },
+  {
+   "qid": "Q185099",
+   "label": "Su kılavuzu",
+   "links": 76,
+   "value": 0.125,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Su kılavuzu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Rallus aquaticus"
+   ],
+   "tr_views": 527
+  },
+  {
+   "qid": "Q187704",
+   "label": "Koypu",
+   "links": 76,
+   "value": 0.225,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Koypu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Myocastor coypus"
+   ],
+   "tr_views": 4164
+  },
+  {
+   "qid": "Q187704",
+   "label": "Koypu",
+   "links": 76,
+   "value": 6.36,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Koypu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Myocastor coypus"
+   ],
+   "tr_views": 4164
+  },
+  {
+   "qid": "Q187704",
+   "label": "Koypu",
+   "links": 76,
+   "value": 6.7,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Koypu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Myocastor coypus"
+   ],
+   "tr_views": 4164
+  },
+  {
+   "qid": "Q18841",
+   "label": "Çamur çulluğu",
+   "links": 76,
+   "value": 0.039,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çamur çulluğu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Limosa limosa"
+   ],
+   "tr_views": 1895
+  },
+  {
+   "qid": "Q18841",
+   "label": "Çamur çulluğu",
+   "links": 76,
+   "value": 0.264,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çamur çulluğu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Limosa limosa"
+   ],
+   "tr_views": 1895
+  },
+  {
+   "qid": "Q18841",
+   "label": "Çamur çulluğu",
+   "links": 76,
+   "value": 0.315,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çamur çulluğu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Limosa limosa"
+   ],
+   "tr_views": 1895
+  },
+  {
+   "qid": "Q20823352",
+   "label": "Ala sığırcık",
+   "links": 76,
+   "value": 0.0066,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ala sığırcık",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Pastor roseus"
+   ],
+   "tr_views": 456
+  },
+  {
+   "qid": "Q20823352",
+   "label": "Ala sığırcık",
+   "links": 76,
+   "value": 0.0669,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ala sığırcık",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pastor roseus"
+   ],
+   "tr_views": 456
+  },
+  {
+   "qid": "Q20823352",
+   "label": "Ala sığırcık",
+   "links": 76,
+   "value": 0.0796,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ala sığırcık",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pastor roseus"
+   ],
+   "tr_views": 456
+  },
+  {
+   "qid": "Q26691",
+   "label": "Kızıl gerdanlı dalgıç",
+   "links": 76,
+   "value": 1.477,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kızıl gerdanlı dalgıç",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Gavia stellata"
+   ],
+   "tr_views": 523
+  },
+  {
+   "qid": "Q26691",
+   "label": "Kızıl gerdanlı dalgıç",
+   "links": 76,
+   "value": 1.729,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kızıl gerdanlı dalgıç",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Gavia stellata"
+   ],
+   "tr_views": 523
+  },
+  {
+   "qid": "Q26711",
+   "label": "Küçük su çulluğu",
+   "links": 76,
+   "value": 0.0467,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük su çulluğu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Lymnocryptes minimus"
+   ],
+   "tr_views": 187
+  },
+  {
+   "qid": "Q26711",
+   "label": "Küçük su çulluğu",
+   "links": 76,
+   "value": 0.0537,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük su çulluğu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Lymnocryptes minimus"
+   ],
+   "tr_views": 187
+  },
+  {
+   "qid": "Q182971",
+   "label": "Küçük kartal",
+   "links": 75,
+   "value": 0.062,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük kartal",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Hieraaetus pennatus"
+   ],
+   "tr_views": 482
+  },
+  {
+   "qid": "Q182971",
+   "label": "Küçük kartal",
+   "links": 75,
+   "value": 0.709,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük kartal",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Hieraaetus pennatus"
+   ],
+   "tr_views": 482
+  },
+  {
+   "qid": "Q182971",
+   "label": "Küçük kartal",
+   "links": 75,
+   "value": 0.975,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük kartal",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Hieraaetus pennatus"
+   ],
+   "tr_views": 482
+  },
+  {
+   "qid": "Q213084",
+   "label": "Keseli Ceylan",
+   "links": 75,
+   "value": 4.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Keseli ceylan",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Antidorcas marsupialis"
+   ],
+   "tr_views": 2176
+  },
+  {
+   "qid": "Q213084",
+   "label": "Keseli Ceylan",
+   "links": 75,
+   "value": 37.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Keseli ceylan",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Antidorcas marsupialis"
+   ],
+   "tr_views": 2176
+  },
+  {
+   "qid": "Q213084",
+   "label": "Keseli Ceylan",
+   "links": 75,
+   "value": 41.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Keseli ceylan",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Antidorcas marsupialis"
+   ],
+   "tr_views": 2176
+  },
+  {
+   "qid": "Q229408",
+   "label": "Küçük kerkenez",
+   "links": 75,
+   "value": 0.016,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük kerkenez",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Falco naumanni"
+   ],
+   "tr_views": 1130
+  },
+  {
+   "qid": "Q229408",
+   "label": "Küçük kerkenez",
+   "links": 75,
+   "value": 0.148,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük kerkenez",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Falco naumanni"
+   ],
+   "tr_views": 1130
+  },
+  {
+   "qid": "Q229408",
+   "label": "Küçük kerkenez",
+   "links": 75,
+   "value": 0.17,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük kerkenez",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Falco naumanni"
+   ],
+   "tr_views": 1130
+  },
+  {
+   "qid": "Q28450",
+   "label": "Yeşil düdükçün",
+   "links": 75,
+   "value": 0.0155,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeşil düdükçün",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Tringa ochropus"
+   ],
+   "tr_views": 630
+  },
+  {
+   "qid": "Q28450",
+   "label": "Yeşil düdükçün",
+   "links": 75,
+   "value": 0.075,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeşil düdükçün",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Tringa ochropus"
+   ],
+   "tr_views": 630
+  },
+  {
+   "qid": "Q28450",
+   "label": "Yeşil düdükçün",
+   "links": 75,
+   "value": 0.085,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeşil düdükçün",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Tringa ochropus"
+   ],
+   "tr_views": 630
+  },
+  {
+   "qid": "Q165974",
+   "label": "Ulu doğan",
+   "links": 74,
+   "value": 0.053,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ulu doğan",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Falco cherrug"
+   ],
+   "tr_views": 1899
+  },
+  {
+   "qid": "Q165974",
+   "label": "Ulu doğan",
+   "links": 74,
+   "value": 0.875,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ulu doğan",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Falco cherrug"
+   ],
+   "tr_views": 1899
+  },
+  {
+   "qid": "Q165974",
+   "label": "Ulu doğan",
+   "links": 74,
+   "value": 1.13,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ulu doğan",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Falco cherrug"
+   ],
+   "tr_views": 1899
+  },
+  {
+   "qid": "Q188446",
+   "label": "Karabaş ötleğen",
+   "links": 74,
+   "value": 0.00219,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karabaş ötleğen",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Sylvia atricapilla"
+   ],
+   "tr_views": 1431
+  },
+  {
+   "qid": "Q188446",
+   "label": "Karabaş ötleğen",
+   "links": 74,
+   "value": 0.0181,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karabaş ötleğen",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Sylvia atricapilla"
+   ],
+   "tr_views": 1431
+  },
+  {
+   "qid": "Q188657",
+   "label": "Çizgili sırtlan",
+   "links": 74,
+   "value": 0.7,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çizgili sırtlan",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Hyaena hyaena"
+   ],
+   "tr_views": 13524
+  },
+  {
+   "qid": "Q188657",
+   "label": "Çizgili sırtlan",
+   "links": 74,
+   "value": 40.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çizgili sırtlan",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Hyaena hyaena"
+   ],
+   "tr_views": 13524
+  },
+  {
+   "qid": "Q189609",
+   "label": "Tarakdiş",
+   "links": 74,
+   "value": 0.072,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tarakdiş",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Mergus serrator"
+   ],
+   "tr_views": 366
+  },
+  {
+   "qid": "Q189609",
+   "label": "Tarakdiş",
+   "links": 74,
+   "value": 0.908,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tarakdiş",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Mergus serrator"
+   ],
+   "tr_views": 366
+  },
+  {
+   "qid": "Q189609",
+   "label": "Tarakdiş",
+   "links": 74,
+   "value": 1.135,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tarakdiş",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Mergus serrator"
+   ],
+   "tr_views": 366
+  },
+  {
+   "qid": "Q194024",
+   "label": "Benekli sutavuğu",
+   "links": 74,
+   "value": 0.0109,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Benekli sutavuğu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Porzana porzana"
+   ],
+   "tr_views": 374
+  },
+  {
+   "qid": "Q194024",
+   "label": "Benekli sutavuğu",
+   "links": 74,
+   "value": 0.08,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Benekli sutavuğu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Porzana porzana"
+   ],
+   "tr_views": 374
+  },
+  {
+   "qid": "Q27160",
+   "label": "Kara sırtlı martı",
+   "links": 74,
+   "value": 0.755,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara sırtlı martı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Larus fuscus"
+   ],
+   "tr_views": 997
+  },
+  {
+   "qid": "Q27160",
+   "label": "Kara sırtlı martı",
+   "links": 74,
+   "value": 0.88,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara sırtlı martı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Larus fuscus"
+   ],
+   "tr_views": 997
+  },
+  {
+   "qid": "Q29865",
+   "label": "Altıngöz",
+   "links": 74,
+   "value": 0.8,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bucephala clangula",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Bucephala clangula"
+   ],
+   "tr_views": 144
+  },
+  {
+   "qid": "Q29865",
+   "label": "Altıngöz",
+   "links": 74,
+   "value": 1.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bucephala clangula",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Bucephala clangula"
+   ],
+   "tr_views": 144
+  },
+  {
+   "qid": "Q179919",
+   "label": "Kızıl boyunlu batağan",
+   "links": 73,
+   "value": 0.0305,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kızıl boyunlu batağan",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Podiceps grisegena"
+   ],
+   "tr_views": 193
+  },
+  {
+   "qid": "Q179919",
+   "label": "Kızıl boyunlu batağan",
+   "links": 73,
+   "value": 0.7854,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kızıl boyunlu batağan",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Podiceps grisegena"
+   ],
+   "tr_views": 193
+  },
+  {
+   "qid": "Q179919",
+   "label": "Kızıl boyunlu batağan",
+   "links": 73,
+   "value": 0.8735,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kızıl boyunlu batağan",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Podiceps grisegena"
+   ],
+   "tr_views": 193
+  },
+  {
+   "qid": "Q180991",
+   "label": "Büyük tarakdiş",
+   "links": 73,
+   "value": 1.232,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük tarakdiş",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Mergus merganser"
+   ],
+   "tr_views": 345
+  },
+  {
+   "qid": "Q180991",
+   "label": "Büyük tarakdiş",
+   "links": 73,
+   "value": 1.709,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük tarakdiş",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Mergus merganser"
+   ],
+   "tr_views": 345
+  },
+  {
+   "qid": "Q182209",
+   "label": "Kral penguen",
+   "links": 73,
+   "value": 0.306,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kral penguen",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Aptenodytes patagonicus"
+   ],
+   "tr_views": 6059
+  },
+  {
+   "qid": "Q182209",
+   "label": "Kral penguen",
+   "links": 73,
+   "value": 11.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kral penguen",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Aptenodytes patagonicus"
+   ],
+   "tr_views": 6059
+  },
+  {
+   "qid": "Q182209",
+   "label": "Kral penguen",
+   "links": 73,
+   "value": 12.8,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kral penguen",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Aptenodytes patagonicus"
+   ],
+   "tr_views": 6059
+  },
+  {
+   "qid": "Q18864",
+   "label": "Kıyı çamur çulluğu",
+   "links": 73,
+   "value": 0.313,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kıyı çamur çulluğu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Limosa lapponica"
+   ],
+   "tr_views": 3306
+  },
+  {
+   "qid": "Q18864",
+   "label": "Kıyı çamur çulluğu",
+   "links": 73,
+   "value": 0.354,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kıyı çamur çulluğu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Limosa lapponica"
+   ],
+   "tr_views": 3306
+  },
+  {
+   "qid": "Q191723",
+   "label": "Pasbaş patka",
+   "links": 73,
+   "value": 0.043,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pasbaş patka",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Aythya nyroca"
+   ],
+   "tr_views": 1134
+  },
+  {
+   "qid": "Q191723",
+   "label": "Pasbaş patka",
+   "links": 73,
+   "value": 0.52,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pasbaş patka",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Aythya nyroca"
+   ],
+   "tr_views": 1134
+  },
+  {
+   "qid": "Q191723",
+   "label": "Pasbaş patka",
+   "links": 73,
+   "value": 0.583,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pasbaş patka",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Aythya nyroca"
+   ],
+   "tr_views": 1134
+  },
+  {
+   "qid": "Q192058",
+   "label": "Kulaklı batağan",
+   "links": 73,
+   "value": 0.0225,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kulaklı batağan",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Podiceps auritus"
+   ],
+   "tr_views": 306
+  },
+  {
+   "qid": "Q192058",
+   "label": "Kulaklı batağan",
+   "links": 73,
+   "value": 0.4495,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kulaklı batağan",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Podiceps auritus"
+   ],
+   "tr_views": 306
+  },
+  {
+   "qid": "Q26800",
+   "label": "Kuzey sumrusu",
+   "links": 73,
+   "value": 0.114,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kuzey sumrusu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Sterna paradisaea"
+   ],
+   "tr_views": 943
+  },
+  {
+   "qid": "Q27129",
+   "label": "Hazar sumrusu",
+   "links": 73,
+   "value": 0.588,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hazar sumrusu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Hydroprogne caspia"
+   ],
+   "tr_views": 339
+  },
+  {
+   "qid": "Q27129",
+   "label": "Hazar sumrusu",
+   "links": 73,
+   "value": 0.68,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hazar sumrusu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Hydroprogne caspia"
+   ],
+   "tr_views": 339
+  },
+  {
+   "qid": "Q185295",
+   "label": "Böcekçil sırtlan",
+   "links": 72,
+   "value": 10.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Proteles cristata",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Proteles cristata"
+   ],
+   "tr_views": 544
+  },
+  {
+   "qid": "Q186778",
+   "label": "Ay-ay",
+   "links": 72,
+   "value": 0.12,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aye-aye",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Daubentonia madagascariensis"
+   ],
+   "tr_views": 647
+  },
+  {
+   "qid": "Q186778",
+   "label": "Ay-ay",
+   "links": 72,
+   "value": 2.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aye-aye",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Daubentonia madagascariensis"
+   ],
+   "tr_views": 647
+  },
+  {
+   "qid": "Q18837",
+   "label": "Orman düdükçünü",
+   "links": 72,
+   "value": 0.0135,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Orman düdükçünü",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Tringa glareola"
+   ],
+   "tr_views": 292
+  },
+  {
+   "qid": "Q18837",
+   "label": "Orman düdükçünü",
+   "links": 72,
+   "value": 0.062,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Orman düdükçünü",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Tringa glareola"
+   ],
+   "tr_views": 292
+  },
+  {
+   "qid": "Q18837",
+   "label": "Orman düdükçünü",
+   "links": 72,
+   "value": 0.073,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Orman düdükçünü",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Tringa glareola"
+   ],
+   "tr_views": 292
+  },
+  {
+   "qid": "Q230837",
+   "label": "Bozkır tuygunu",
+   "links": 72,
+   "value": 0.028,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bozkır tuygunu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Circus macrourus"
+   ],
+   "tr_views": 781
+  },
+  {
+   "qid": "Q230837",
+   "label": "Bozkır tuygunu",
+   "links": 72,
+   "value": 0.322,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bozkır tuygunu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Circus macrourus"
+   ],
+   "tr_views": 781
+  },
+  {
+   "qid": "Q230837",
+   "label": "Bozkır tuygunu",
+   "links": 72,
+   "value": 0.445,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bozkır tuygunu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Circus macrourus"
+   ],
+   "tr_views": 781
+  },
+  {
+   "qid": "Q25587867",
+   "label": "Küçük balaban",
+   "links": 72,
+   "value": 0.013,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük balaban",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Botaurus minutus"
+   ],
+   "tr_views": 1118
+  },
+  {
+   "qid": "Q25587867",
+   "label": "Küçük balaban",
+   "links": 72,
+   "value": 0.147,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük balaban",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Botaurus minutus"
+   ],
+   "tr_views": 1118
+  },
+  {
+   "qid": "Q27074540",
+   "label": "Kar kazı",
+   "links": 72,
+   "value": 0.127,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kar kazı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Anser caerulescens"
+   ],
+   "tr_views": 332
+  },
+  {
+   "qid": "Q27074540",
+   "label": "Kar kazı",
+   "links": 72,
+   "value": 2.63,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kar kazı",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Anser caerulescens"
+   ],
+   "tr_views": 332
+  },
+  {
+   "qid": "Q12267692",
+   "label": "Küçük sumru",
+   "links": 71,
+   "value": 0.01,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük sumru",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Sternula albifrons"
+   ],
+   "tr_views": 459
+  },
+  {
+   "qid": "Q12267692",
+   "label": "Küçük sumru",
+   "links": 71,
+   "value": 0.057,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük sumru",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Sternula albifrons"
+   ],
+   "tr_views": 459
+  },
+  {
+   "qid": "Q201316",
+   "label": "Dağ kuyruksallayanı",
+   "links": 71,
+   "value": 0.00191,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dağ kuyruksallayanı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Motacilla cinerea"
+   ],
+   "tr_views": 1049
+  },
+  {
+   "qid": "Q201316",
+   "label": "Dağ kuyruksallayanı",
+   "links": 71,
+   "value": 0.0174,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dağ kuyruksallayanı",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Motacilla cinerea"
+   ],
+   "tr_views": 1049
+  },
+  {
+   "qid": "Q514809",
+   "label": "sultan papağanı",
+   "links": 71,
+   "value": 0.00568,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sultan papağanı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Nymphicus hollandicus"
+   ],
+   "tr_views": 32661
+  },
+  {
+   "qid": "Q514809",
+   "label": "sultan papağanı",
+   "links": 71,
+   "value": 0.086,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sultan papağanı",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Nymphicus hollandicus"
+   ],
+   "tr_views": 32661
+  },
+  {
+   "qid": "Q188877",
+   "label": "Dağ ispinozu",
+   "links": 70,
+   "value": 0.00214,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dağ ispinozu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Fringilla montifringilla"
+   ],
+   "tr_views": 999
+  },
+  {
+   "qid": "Q188877",
+   "label": "Dağ ispinozu",
+   "links": 70,
+   "value": 0.022,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dağ ispinozu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Fringilla montifringilla"
+   ],
+   "tr_views": 999
+  },
+  {
+   "qid": "Q26574",
+   "label": "Çayır tuygunu",
+   "links": 70,
+   "value": 0.024,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çayır tuygunu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Circus pygargus"
+   ],
+   "tr_views": 490
+  },
+  {
+   "qid": "Q26574",
+   "label": "Çayır tuygunu",
+   "links": 70,
+   "value": 0.261,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çayır tuygunu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Circus pygargus"
+   ],
+   "tr_views": 490
+  },
+  {
+   "qid": "Q26574",
+   "label": "Çayır tuygunu",
+   "links": 70,
+   "value": 0.37,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çayır tuygunu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Circus pygargus"
+   ],
+   "tr_views": 490
+  },
+  {
+   "qid": "Q27124",
+   "label": "Büyük kum kuşu",
+   "links": 70,
+   "value": 0.0193,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük kum kuşu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Calidris canutus"
+   ],
+   "tr_views": 203
+  },
+  {
+   "qid": "Q27124",
+   "label": "Büyük kum kuşu",
+   "links": 70,
+   "value": 0.126,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük kum kuşu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Calidris canutus"
+   ],
+   "tr_views": 203
+  },
+  {
+   "qid": "Q27124",
+   "label": "Büyük kum kuşu",
+   "links": 70,
+   "value": 0.148,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük kum kuşu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Calidris canutus"
+   ],
+   "tr_views": 203
+  },
+  {
+   "qid": "Q53745",
+   "label": "harpia kartalı",
+   "links": 70,
+   "value": 4.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Harpia kartalı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Harpia harpyja"
+   ],
+   "tr_views": 1060
+  },
+  {
+   "qid": "Q53745",
+   "label": "harpia kartalı",
+   "links": 70,
+   "value": 7.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Harpia kartalı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Harpia harpyja"
+   ],
+   "tr_views": 1060
+  },
+  {
+   "qid": "Q143313",
+   "label": "Ağaç incir kuşu",
+   "links": 69,
+   "value": 0.022,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Anthus trivialis",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Anthus trivialis"
+   ],
+   "tr_views": 522
+  },
+  {
+   "qid": "Q143313",
+   "label": "Ağaç incir kuşu",
+   "links": 69,
+   "value": 0.025,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Anthus trivialis",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Anthus trivialis"
+   ],
+   "tr_views": 522
+  },
+  {
+   "qid": "Q183330",
+   "label": "Fossa",
+   "links": 69,
+   "value": 0.1,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cryptoprocta ferox",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Cryptoprocta ferox"
+   ],
+   "tr_views": 1809
+  },
+  {
+   "qid": "Q183330",
+   "label": "Fossa",
+   "links": 69,
+   "value": 9.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cryptoprocta ferox",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Cryptoprocta ferox"
+   ],
+   "tr_views": 1809
+  },
+  {
+   "qid": "Q187958",
+   "label": "Adelie pengueni",
+   "links": 69,
+   "value": 0.124,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pygoscelis adeliae",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Pygoscelis adeliae"
+   ],
+   "tr_views": 1842
+  },
+  {
+   "qid": "Q187958",
+   "label": "Adelie pengueni",
+   "links": 69,
+   "value": 4.74,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pygoscelis adeliae",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pygoscelis adeliae"
+   ],
+   "tr_views": 1842
+  },
+  {
+   "qid": "Q187958",
+   "label": "Adelie pengueni",
+   "links": 69,
+   "value": 5.35,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pygoscelis adeliae",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pygoscelis adeliae"
+   ],
+   "tr_views": 1842
+  },
+  {
+   "qid": "Q190342",
+   "label": "Buz dalgıcı",
+   "links": 69,
+   "value": 4.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gavia immer",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Gavia immer"
+   ],
+   "tr_views": 404
+  },
+  {
+   "qid": "Q190342",
+   "label": "Buz dalgıcı",
+   "links": 69,
+   "value": 5.46,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gavia immer",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Gavia immer"
+   ],
+   "tr_views": 404
+  },
+  {
+   "qid": "Q237670",
+   "label": "Küçük sutavuğu",
+   "links": 69,
+   "value": 0.035,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük sutavuğu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Zapornia pusilla"
+   ],
+   "tr_views": 163
+  },
+  {
+   "qid": "Q26407",
+   "label": "Paçalı şahin",
+   "links": 69,
+   "value": 0.8246,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Paçalı şahin",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Buteo lagopus"
+   ],
+   "tr_views": 800
+  },
+  {
+   "qid": "Q26407",
+   "label": "Paçalı şahin",
+   "links": 69,
+   "value": 1.027,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Paçalı şahin",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Buteo lagopus"
+   ],
+   "tr_views": 800
+  },
+  {
+   "qid": "Q27232",
+   "label": "Küçük kum kuşu",
+   "links": 69,
+   "value": 0.0063,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük kum kuşu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Calidris minuta"
+   ],
+   "tr_views": 260
+  },
+  {
+   "qid": "Q27232",
+   "label": "Küçük kum kuşu",
+   "links": 69,
+   "value": 0.024,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük kum kuşu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Calidris minuta"
+   ],
+   "tr_views": 260
+  },
+  {
+   "qid": "Q27232",
+   "label": "Küçük kum kuşu",
+   "links": 69,
+   "value": 0.0271,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük kum kuşu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Calidris minuta"
+   ],
+   "tr_views": 260
+  },
+  {
+   "qid": "Q178702",
+   "label": "Lagopus lagopus",
+   "links": 68,
+   "value": 0.58,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lagopus lagopus",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Lagopus lagopus"
+   ],
+   "tr_views": 378
+  },
+  {
+   "qid": "Q178702",
+   "label": "Lagopus lagopus",
+   "links": 68,
+   "value": 0.72,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lagopus lagopus",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Lagopus lagopus"
+   ],
+   "tr_views": 378
+  },
+  {
+   "qid": "Q18855",
+   "label": "Akça cılıbıt",
+   "links": 68,
+   "value": 0.047,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Akça cılıbıt",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Charadrius alexandrinus"
+   ],
+   "tr_views": 827
+  },
+  {
+   "qid": "Q192524",
+   "label": "Kanarya",
+   "links": 68,
+   "value": 0.00154,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kanarya",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Serinus canaria"
+   ],
+   "tr_views": 10598
+  },
+  {
+   "qid": "Q192524",
+   "label": "Kanarya",
+   "links": 68,
+   "value": 0.0153,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kanarya",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Serinus canaria"
+   ],
+   "tr_views": 10598
+  },
+  {
+   "qid": "Q232523",
+   "label": "Küçük orman kartalı",
+   "links": 68,
+   "value": 0.088,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük orman kartalı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Clanga pomarina"
+   ],
+   "tr_views": 281
+  },
+  {
+   "qid": "Q232523",
+   "label": "Küçük orman kartalı",
+   "links": 68,
+   "value": 1.258,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük orman kartalı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Clanga pomarina"
+   ],
+   "tr_views": 281
+  },
+  {
+   "qid": "Q232523",
+   "label": "Küçük orman kartalı",
+   "links": 68,
+   "value": 1.693,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük orman kartalı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Clanga pomarina"
+   ],
+   "tr_views": 281
+  },
+  {
+   "qid": "Q244350",
+   "label": "Macar ördeği",
+   "links": 68,
+   "value": 0.056,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Macar ördeği",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Netta rufina"
+   ],
+   "tr_views": 1140
+  },
+  {
+   "qid": "Q244350",
+   "label": "Macar ördeği",
+   "links": 68,
+   "value": 1.115,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Macar ördeği",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Netta rufina"
+   ],
+   "tr_views": 1140
+  },
+  {
+   "qid": "Q26675",
+   "label": "Sümsük kuşu",
+   "links": 68,
+   "value": 2.999,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sümsük kuşu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Morus bassanus"
+   ],
+   "tr_views": 2370
+  },
+  {
+   "qid": "Q26680",
+   "label": "Ak yanaklı kaz",
+   "links": 68,
+   "value": 0.107,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Branta leucopsis",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Branta leucopsis"
+   ],
+   "tr_views": 252
+  },
+  {
+   "qid": "Q26680",
+   "label": "Ak yanaklı kaz",
+   "links": 68,
+   "value": 1.586,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Branta leucopsis",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Branta leucopsis"
+   ],
+   "tr_views": 252
+  },
+  {
+   "qid": "Q26680",
+   "label": "Ak yanaklı kaz",
+   "links": 68,
+   "value": 1.788,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Branta leucopsis",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Branta leucopsis"
+   ],
+   "tr_views": 252
+  },
+  {
+   "qid": "Q28103",
+   "label": "Kara kızılbacak",
+   "links": 68,
+   "value": 0.0245,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara kızılbacak",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Tringa erythropus"
+   ],
+   "tr_views": 147
+  },
+  {
+   "qid": "Q28103",
+   "label": "Kara kızılbacak",
+   "links": 68,
+   "value": 0.142,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara kızılbacak",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Tringa erythropus"
+   ],
+   "tr_views": 147
+  },
+  {
+   "qid": "Q28103",
+   "label": "Kara kızılbacak",
+   "links": 68,
+   "value": 0.161,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara kızılbacak",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Tringa erythropus"
+   ],
+   "tr_views": 147
+  },
+  {
+   "qid": "Q58921",
+   "label": "Sarı bacaklı kum kuşu",
+   "links": 68,
+   "value": 0.0058,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sarı bacaklı kum kuşu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Calidris temminckii"
+   ],
+   "tr_views": 110
+  },
+  {
+   "qid": "Q58921",
+   "label": "Sarı bacaklı kum kuşu",
+   "links": 68,
+   "value": 0.0243,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sarı bacaklı kum kuşu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Calidris temminckii"
+   ],
+   "tr_views": 110
+  },
+  {
+   "qid": "Q58921",
+   "label": "Sarı bacaklı kum kuşu",
+   "links": 68,
+   "value": 0.0278,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sarı bacaklı kum kuşu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Calidris temminckii"
+   ],
+   "tr_views": 110
+  },
+  {
+   "qid": "Q184508",
+   "label": "Büyük örümcek kuşu",
+   "links": 67,
+   "value": 0.0634,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük örümcek kuşu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Lanius excubitor"
+   ],
+   "tr_views": 421
+  },
+  {
+   "qid": "Q190154",
+   "label": "Addaks",
+   "links": 67,
+   "value": 5.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Addaks",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Addax nasomaculatus"
+   ],
+   "tr_views": 959
+  },
+  {
+   "qid": "Q190154",
+   "label": "Addaks",
+   "links": 67,
+   "value": 75.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Addaks",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Addax nasomaculatus"
+   ],
+   "tr_views": 959
+  },
+  {
+   "qid": "Q190154",
+   "label": "Addaks",
+   "links": 67,
+   "value": 112.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Addaks",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Addax nasomaculatus"
+   ],
+   "tr_views": 959
+  },
+  {
+   "qid": "Q205930",
+   "label": "Dağ kar tavuğu",
+   "links": 67,
+   "value": 0.555,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dağ kar tavuğu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Lagopus muta"
+   ],
+   "tr_views": 279
+  },
+  {
+   "qid": "Q205930",
+   "label": "Dağ kar tavuğu",
+   "links": 67,
+   "value": 0.665,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dağ kar tavuğu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Lagopus muta"
+   ],
+   "tr_views": 279
+  },
+  {
+   "qid": "Q21148",
+   "label": "Altın yağmurcun",
+   "links": 67,
+   "value": 0.0328,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Altın yağmurcun",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Pluvialis apricaria"
+   ],
+   "tr_views": 587
+  },
+  {
+   "qid": "Q21148",
+   "label": "Altın yağmurcun",
+   "links": 67,
+   "value": 0.175,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Altın yağmurcun",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pluvialis apricaria"
+   ],
+   "tr_views": 587
+  },
+  {
+   "qid": "Q26612",
+   "label": "Kara bacaklı martı",
+   "links": 67,
+   "value": 0.393,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara ayaklı martı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Rissa tridactyla"
+   ],
+   "tr_views": 62
+  },
+  {
+   "qid": "Q26612",
+   "label": "Kara bacaklı martı",
+   "links": 67,
+   "value": 0.443,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara ayaklı martı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Rissa tridactyla"
+   ],
+   "tr_views": 62
+  },
+  {
+   "qid": "Q26696",
+   "label": "Pufla kazı",
+   "links": 67,
+   "value": 1.915,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pufla kazı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Somateria mollissima"
+   ],
+   "tr_views": 367
+  },
+  {
+   "qid": "Q26696",
+   "label": "Pufla kazı",
+   "links": 67,
+   "value": 2.218,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pufla kazı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Somateria mollissima"
+   ],
+   "tr_views": 367
+  },
+  {
+   "qid": "Q28355",
+   "label": "Bataklık düdükçünü",
+   "links": 67,
+   "value": 0.014,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bataklık düdükçünü",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Tringa stagnatilis"
+   ],
+   "tr_views": 176
+  },
+  {
+   "qid": "Q28355",
+   "label": "Bataklık düdükçünü",
+   "links": 67,
+   "value": 0.0671,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bataklık düdükçünü",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Tringa stagnatilis"
+   ],
+   "tr_views": 176
+  },
+  {
+   "qid": "Q28355",
+   "label": "Bataklık düdükçünü",
+   "links": 67,
+   "value": 0.076,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bataklık düdükçünü",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Tringa stagnatilis"
+   ],
+   "tr_views": 176
+  },
+  {
+   "qid": "Q321267",
+   "label": "Ak karınlı ebabil",
+   "links": 67,
+   "value": 0.00605,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ak karınlı ebabil",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Tachymarptis melba"
+   ],
+   "tr_views": 821
+  },
+  {
+   "qid": "Q321267",
+   "label": "Ak karınlı ebabil",
+   "links": 67,
+   "value": 0.096,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ak karınlı ebabil",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Tachymarptis melba"
+   ],
+   "tr_views": 821
+  },
+  {
+   "qid": "Q643836",
+   "label": "Kırmızı gagalı dağ kargası",
+   "links": 67,
+   "value": 0.263,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kırmızı gagalı dağ kargası",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pyrrhocorax pyrrhocorax"
+   ],
+   "tr_views": 806
+  },
+  {
+   "qid": "Q643836",
+   "label": "Kırmızı gagalı dağ kargası",
+   "links": 67,
+   "value": 0.312,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kırmızı gagalı dağ kargası",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pyrrhocorax pyrrhocorax"
+   ],
+   "tr_views": 806
+  },
+  {
+   "qid": "Q192817",
+   "label": "Bıyıklı baştankara",
+   "links": 66,
+   "value": 0.00188,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bıyıklı baştankara",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Panurus biarmicus"
+   ],
+   "tr_views": 704
+  },
+  {
+   "qid": "Q192817",
+   "label": "Bıyıklı baştankara",
+   "links": 66,
+   "value": 0.0153,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bıyıklı baştankara",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Panurus biarmicus"
+   ],
+   "tr_views": 704
+  },
+  {
+   "qid": "Q200646",
+   "label": "Sütlabi",
+   "links": 66,
+   "value": 0.042,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sütlabi",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Mergellus albellus"
+   ],
+   "tr_views": 528
+  },
+  {
+   "qid": "Q200646",
+   "label": "Sütlabi",
+   "links": 66,
+   "value": 0.568,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sütlabi",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Mergellus albellus"
+   ],
+   "tr_views": 528
+  },
+  {
+   "qid": "Q200646",
+   "label": "Sütlabi",
+   "links": 66,
+   "value": 0.652,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sütlabi",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Mergellus albellus"
+   ],
+   "tr_views": 528
+  },
+  {
+   "qid": "Q26603",
+   "label": "Küçük kuğu",
+   "links": 66,
+   "value": 6.305,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük kuğu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Cygnus columbianus"
+   ],
+   "tr_views": 470
+  },
+  {
+   "qid": "Q26603",
+   "label": "Küçük kuğu",
+   "links": 66,
+   "value": 7.258,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük kuğu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Cygnus columbianus"
+   ],
+   "tr_views": 470
+  },
+  {
+   "qid": "Q334183",
+   "label": "Karabaşlı kirazkuşu",
+   "links": 66,
+   "value": 0.00308,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara başlı kiraz kuşu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Emberiza melanocephala"
+   ],
+   "tr_views": 555
+  },
+  {
+   "qid": "Q334183",
+   "label": "Karabaşlı kirazkuşu",
+   "links": 66,
+   "value": 0.028,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara başlı kiraz kuşu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Emberiza melanocephala"
+   ],
+   "tr_views": 555
+  },
+  {
+   "qid": "Q184825",
+   "label": "Kızıl ardıç kuşu",
+   "links": 65,
+   "value": 0.0049,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kızıl ardıç kuşu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Turdus iliacus"
+   ],
+   "tr_views": 566
+  },
+  {
+   "qid": "Q184825",
+   "label": "Kızıl ardıç kuşu",
+   "links": 65,
+   "value": 0.062,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kızıl ardıç kuşu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Turdus iliacus"
+   ],
+   "tr_views": 566
+  },
+  {
+   "qid": "Q201300",
+   "label": "Kadife ördek",
+   "links": 65,
+   "value": 1.762,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kadife ördek",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Melanitta fusca"
+   ],
+   "tr_views": 386
+  },
+  {
+   "qid": "Q233616",
+   "label": "Bıyıklı sumru",
+   "links": 65,
+   "value": 0.078,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bıyıklı sumru",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Chlidonias hybrida"
+   ],
+   "tr_views": 291
+  },
+  {
+   "qid": "Q233616",
+   "label": "Bıyıklı sumru",
+   "links": 65,
+   "value": 0.09,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bıyıklı sumru",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Chlidonias hybrida"
+   ],
+   "tr_views": 291
+  },
+  {
+   "qid": "Q191628",
+   "label": "Küçük sakarca",
+   "links": 64,
+   "value": 0.1,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük sakarca",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Anser erythropus"
+   ],
+   "tr_views": 322
+  },
+  {
+   "qid": "Q191628",
+   "label": "Küçük sakarca",
+   "links": 64,
+   "value": 1.797,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük sakarca",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Anser erythropus"
+   ],
+   "tr_views": 322
+  },
+  {
+   "qid": "Q208004",
+   "label": "Karayip flamingosu",
+   "links": 64,
+   "value": 0.142,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karayip flamingosu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Phoenicopterus ruber"
+   ],
+   "tr_views": 1415
+  },
+  {
+   "qid": "Q208004",
+   "label": "Karayip flamingosu",
+   "links": 64,
+   "value": 2.525,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karayip flamingosu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Phoenicopterus ruber"
+   ],
+   "tr_views": 1415
+  },
+  {
+   "qid": "Q208004",
+   "label": "Karayip flamingosu",
+   "links": 64,
+   "value": 3.579,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karayip flamingosu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Phoenicopterus ruber"
+   ],
+   "tr_views": 1415
+  },
+  {
+   "qid": "Q28114227",
+   "label": "Sürmeli kum kuşu",
+   "links": 64,
+   "value": 0.0091,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sürmeli kum kuşu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Calidris falcinellus"
+   ],
+   "tr_views": 87
+  },
+  {
+   "qid": "Q28114227",
+   "label": "Sürmeli kum kuşu",
+   "links": 64,
+   "value": 0.037,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sürmeli kum kuşu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Calidris falcinellus"
+   ],
+   "tr_views": 87
+  },
+  {
+   "qid": "Q184389",
+   "label": "Yeleli kurt",
+   "links": 63,
+   "value": 0.39,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeleli kurt",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Chrysocyon brachyurus"
+   ],
+   "tr_views": 3791
+  },
+  {
+   "qid": "Q184389",
+   "label": "Yeleli kurt",
+   "links": 63,
+   "value": 23.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeleli kurt",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Chrysocyon brachyurus"
+   ],
+   "tr_views": 3791
+  },
+  {
+   "qid": "Q207838",
+   "label": "Bataklık baştankarası",
+   "links": 63,
+   "value": 0.00124,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kayın baştankarası",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Poecile palustris"
+   ],
+   "tr_views": 641
+  },
+  {
+   "qid": "Q207838",
+   "label": "Bataklık baştankarası",
+   "links": 63,
+   "value": 0.0119,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kayın baştankarası",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Poecile palustris"
+   ],
+   "tr_views": 641
+  },
+  {
+   "qid": "Q213216",
+   "label": "Kaya kırlangıcı",
+   "links": 63,
+   "value": 0.00208,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kaya kırlangıcı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Ptyonoprogne rupestris"
+   ],
+   "tr_views": 473
+  },
+  {
+   "qid": "Q213216",
+   "label": "Kaya kırlangıcı",
+   "links": 63,
+   "value": 0.02,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kaya kırlangıcı",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Ptyonoprogne rupestris"
+   ],
+   "tr_views": 473
+  },
+  {
+   "qid": "Q110257516",
+   "label": "Ak gerdanlı ötleğen",
+   "links": 62,
+   "value": 0.00178,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Akgerdanlı ötleğen",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Curruca communis"
+   ],
+   "tr_views": 539
+  },
+  {
+   "qid": "Q110257516",
+   "label": "Ak gerdanlı ötleğen",
+   "links": 62,
+   "value": 0.0145,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Akgerdanlı ötleğen",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Curruca communis"
+   ],
+   "tr_views": 539
+  },
+  {
+   "qid": "Q187852",
+   "label": "Sibirya kazı",
+   "links": 62,
+   "value": 0.09,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Branta ruficollis",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Branta ruficollis"
+   ],
+   "tr_views": 594
+  },
+  {
+   "qid": "Q187852",
+   "label": "Sibirya kazı",
+   "links": 62,
+   "value": 1.095,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Branta ruficollis",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Branta ruficollis"
+   ],
+   "tr_views": 594
+  },
+  {
+   "qid": "Q187852",
+   "label": "Sibirya kazı",
+   "links": 62,
+   "value": 1.375,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Branta ruficollis",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Branta ruficollis"
+   ],
+   "tr_views": 594
+  },
+  {
+   "qid": "Q193337",
+   "label": "Kea",
+   "links": 62,
+   "value": 0.026,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nestor notabilis",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Nestor notabilis"
+   ],
+   "tr_views": 970
+  },
+  {
+   "qid": "Q193337",
+   "label": "Kea",
+   "links": 62,
+   "value": 0.779,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nestor notabilis",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Nestor notabilis"
+   ],
+   "tr_views": 970
+  },
+  {
+   "qid": "Q193337",
+   "label": "Kea",
+   "links": 62,
+   "value": 0.956,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nestor notabilis",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Nestor notabilis"
+   ],
+   "tr_views": 970
+  },
+  {
+   "qid": "Q194314",
+   "label": "Kaliforniya kondoru",
+   "links": 62,
+   "value": 8.45,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kaliforniya kondoru",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Gymnogyps californianus"
+   ],
+   "tr_views": 2769
+  },
+  {
+   "qid": "Q200400",
+   "label": "İri kulaklı tilki",
+   "links": 62,
+   "value": 0.12,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İri kulaklı tilki",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Otocyon megalotis"
+   ],
+   "tr_views": 1062
+  },
+  {
+   "qid": "Q200400",
+   "label": "İri kulaklı tilki",
+   "links": 62,
+   "value": 4.15,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İri kulaklı tilki",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Otocyon megalotis"
+   ],
+   "tr_views": 1062
+  },
+  {
+   "qid": "Q206840",
+   "label": "Deniz düdükçünü",
+   "links": 62,
+   "value": 0.0063,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Deniz düdükçünü",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Phalaropus lobatus"
+   ],
+   "tr_views": 420
+  },
+  {
+   "qid": "Q206840",
+   "label": "Deniz düdükçünü",
+   "links": 62,
+   "value": 0.035,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Deniz düdükçünü",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Phalaropus lobatus"
+   ],
+   "tr_views": 420
+  },
+  {
+   "qid": "Q206840",
+   "label": "Deniz düdükçünü",
+   "links": 62,
+   "value": 0.039,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Deniz düdükçünü",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Phalaropus lobatus"
+   ],
+   "tr_views": 420
+  },
+  {
+   "qid": "Q27442",
+   "label": "Kara sinekkapan",
+   "links": 62,
+   "value": 0.0017,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara sinekkapan",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Ficedula hypoleuca"
+   ],
+   "tr_views": 696
+  },
+  {
+   "qid": "Q27442",
+   "label": "Kara sinekkapan",
+   "links": 62,
+   "value": 0.012,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara sinekkapan",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Ficedula hypoleuca"
+   ],
+   "tr_views": 696
+  },
+  {
+   "qid": "Q27215",
+   "label": "Kara sumru",
+   "links": 61,
+   "value": 0.011,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara sumru",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Chlidonias niger"
+   ],
+   "tr_views": 169
+  },
+  {
+   "qid": "Q27215",
+   "label": "Kara sumru",
+   "links": 61,
+   "value": 0.06,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara sumru",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Chlidonias niger"
+   ],
+   "tr_views": 169
+  },
+  {
+   "qid": "Q27226",
+   "label": "Kır incir kuşu",
+   "links": 61,
+   "value": 0.00273,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kır incir kuşu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Anthus campestris"
+   ],
+   "tr_views": 493
+  },
+  {
+   "qid": "Q27226",
+   "label": "Kır incir kuşu",
+   "links": 61,
+   "value": 0.022,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kır incir kuşu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Anthus campestris"
+   ],
+   "tr_views": 493
+  },
+  {
+   "qid": "Q164467",
+   "label": "Küçük martı",
+   "links": 60,
+   "value": 0.098,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük martı",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Hydrocoloeus minutus"
+   ],
+   "tr_views": 440
+  },
+  {
+   "qid": "Q194043",
+   "label": "Kınalı keklik",
+   "links": 60,
+   "value": 0.0225,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kınalı keklik",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Alectoris chukar"
+   ],
+   "tr_views": 4735
+  },
+  {
+   "qid": "Q194043",
+   "label": "Kınalı keklik",
+   "links": 60,
+   "value": 0.565,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kınalı keklik",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Alectoris chukar"
+   ],
+   "tr_views": 4735
+  },
+  {
+   "qid": "Q194043",
+   "label": "Kınalı keklik",
+   "links": 60,
+   "value": 0.65,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kınalı keklik",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Alectoris chukar"
+   ],
+   "tr_views": 4735
+  },
+  {
+   "qid": "Q203628",
+   "label": "Küçük penguen",
+   "links": 60,
+   "value": 0.052,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük penguen",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Eudyptula minor"
+   ],
+   "tr_views": 1088
+  },
+  {
+   "qid": "Q203628",
+   "label": "Küçük penguen",
+   "links": 60,
+   "value": 1.085,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük penguen",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Eudyptula minor"
+   ],
+   "tr_views": 1088
+  },
+  {
+   "qid": "Q203628",
+   "label": "Küçük penguen",
+   "links": 60,
+   "value": 1.244,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük penguen",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Eudyptula minor"
+   ],
+   "tr_views": 1088
+  },
+  {
+   "qid": "Q208714",
+   "label": "Kahverengi pelikan",
+   "links": 60,
+   "value": 3.174,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kahverengi pelikan",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pelecanus occidentalis"
+   ],
+   "tr_views": 1021
+  },
+  {
+   "qid": "Q208714",
+   "label": "Kahverengi pelikan",
+   "links": 60,
+   "value": 3.702,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kahverengi pelikan",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pelecanus occidentalis"
+   ],
+   "tr_views": 1021
+  },
+  {
+   "qid": "Q241399",
+   "label": "Dikkuyruk",
+   "links": 60,
+   "value": 0.096,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dikkuyruk",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Oxyura leucocephala"
+   ],
+   "tr_views": 11806
+  },
+  {
+   "qid": "Q241399",
+   "label": "Dikkuyruk",
+   "links": 60,
+   "value": 0.593,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dikkuyruk",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Oxyura leucocephala"
+   ],
+   "tr_views": 11806
+  },
+  {
+   "qid": "Q241399",
+   "label": "Dikkuyruk",
+   "links": 60,
+   "value": 0.737,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dikkuyruk",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Oxyura leucocephala"
+   ],
+   "tr_views": 11806
+  },
+  {
+   "qid": "Q460967",
+   "label": "Amerika nar bülbülü",
+   "links": 60,
+   "value": 0.0773,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Göçmen ardıç",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Turdus migratorius"
+   ],
+   "tr_views": 539
+  },
+  {
+   "qid": "Q18865",
+   "label": "Küçük altın yağmurcun",
+   "links": 59,
+   "value": 0.018,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük altın yağmurcun",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Pluvialis fulva"
+   ],
+   "tr_views": 183
+  },
+  {
+   "qid": "Q18865",
+   "label": "Küçük altın yağmurcun",
+   "links": 59,
+   "value": 0.135,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük altın yağmurcun",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pluvialis fulva"
+   ],
+   "tr_views": 183
+  },
+  {
+   "qid": "Q191737",
+   "label": "Çalı köpeği",
+   "links": 59,
+   "value": 5.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çalı köpeği",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Speothos venaticus"
+   ],
+   "tr_views": 1225
+  },
+  {
+   "qid": "Q207760",
+   "label": "Büyük korsan martı",
+   "links": 59,
+   "value": 0.1117,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük korsan martı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Stercorarius skua"
+   ],
+   "tr_views": 431
+  },
+  {
+   "qid": "Q207760",
+   "label": "Büyük korsan martı",
+   "links": 59,
+   "value": 1.735,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük korsan martı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Stercorarius skua"
+   ],
+   "tr_views": 431
+  },
+  {
+   "qid": "Q207760",
+   "label": "Büyük korsan martı",
+   "links": 59,
+   "value": 1.935,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük korsan martı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Stercorarius skua"
+   ],
+   "tr_views": 431
+  },
+  {
+   "qid": "Q27375",
+   "label": "Kutup martısı",
+   "links": 59,
+   "value": 1.249,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kutup martısı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Larus hyperboreus"
+   ],
+   "tr_views": 630
+  },
+  {
+   "qid": "Q27375",
+   "label": "Kutup martısı",
+   "links": 59,
+   "value": 1.576,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kutup martısı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Larus hyperboreus"
+   ],
+   "tr_views": 630
+  },
+  {
+   "qid": "Q389505",
+   "label": "Gümüş martı",
+   "links": 59,
+   "value": 0.06,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hazar martısı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Larus cachinnans"
+   ],
+   "tr_views": 149
+  },
+  {
+   "qid": "Q389505",
+   "label": "Gümüş martı",
+   "links": 59,
+   "value": 1.033,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hazar martısı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Larus cachinnans"
+   ],
+   "tr_views": 149
+  },
+  {
+   "qid": "Q389505",
+   "label": "Gümüş martı",
+   "links": 59,
+   "value": 1.275,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hazar martısı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Larus cachinnans"
+   ],
+   "tr_views": 149
+  },
+  {
+   "qid": "Q212767",
+   "label": "Küt kuyruklu korsan martı",
+   "links": 58,
+   "value": 0.066,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küt kuyruklu korsan martı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Stercorarius pomarinus"
+   ],
+   "tr_views": 221
+  },
+  {
+   "qid": "Q212767",
+   "label": "Küt kuyruklu korsan martı",
+   "links": 58,
+   "value": 0.648,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küt kuyruklu korsan martı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Stercorarius pomarinus"
+   ],
+   "tr_views": 221
+  },
+  {
+   "qid": "Q212767",
+   "label": "Küt kuyruklu korsan martı",
+   "links": 58,
+   "value": 0.74,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küt kuyruklu korsan martı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Stercorarius pomarinus"
+   ],
+   "tr_views": 221
+  },
+  {
+   "qid": "Q235057",
+   "label": "Taşkızılı",
+   "links": 58,
+   "value": 0.00495,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Taşkızılı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Monticola saxatilis"
+   ],
+   "tr_views": 286
+  },
+  {
+   "qid": "Q235057",
+   "label": "Taşkızılı",
+   "links": 58,
+   "value": 0.047,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Taşkızılı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Monticola saxatilis"
+   ],
+   "tr_views": 286
+  },
+  {
+   "qid": "Q235057",
+   "label": "Taşkızılı",
+   "links": 58,
+   "value": 0.0524,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Taşkızılı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Monticola saxatilis"
+   ],
+   "tr_views": 286
+  },
+  {
+   "qid": "Q239393",
+   "label": "Kara alınlı örümcek kuşu",
+   "links": 58,
+   "value": 0.0043,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara alınlı örümcek kuşu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Lanius minor"
+   ],
+   "tr_views": 511
+  },
+  {
+   "qid": "Q239393",
+   "label": "Kara alınlı örümcek kuşu",
+   "links": 58,
+   "value": 0.046,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara alınlı örümcek kuşu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Lanius minor"
+   ],
+   "tr_views": 511
+  },
+  {
+   "qid": "Q27075477",
+   "label": "Orman çıvgını",
+   "links": 58,
+   "value": 0.00132,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Orman çıvgını",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Phylloscopus sibilatrix"
+   ],
+   "tr_views": 355
+  },
+  {
+   "qid": "Q27075477",
+   "label": "Orman çıvgını",
+   "links": 58,
+   "value": 0.01,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Orman çıvgını",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Phylloscopus sibilatrix"
+   ],
+   "tr_views": 355
+  },
+  {
+   "qid": "Q273331",
+   "label": "Irrawaddy yunusu",
+   "links": 58,
+   "value": 12.3,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Irrawaddy yunusu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Orcaella brevirostris"
+   ],
+   "tr_views": 434
+  },
+  {
+   "qid": "Q273331",
+   "label": "Irrawaddy yunusu",
+   "links": 58,
+   "value": 123.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Irrawaddy yunusu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Orcaella brevirostris"
+   ],
+   "tr_views": 434
+  },
+  {
+   "qid": "Q747686",
+   "label": "Boz kuyrukkakan",
+   "links": 58,
+   "value": 0.00304,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boz kuyrukkakan",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Oenanthe isabellina"
+   ],
+   "tr_views": 212
+  },
+  {
+   "qid": "Q747686",
+   "label": "Boz kuyrukkakan",
+   "links": 58,
+   "value": 0.029,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boz kuyrukkakan",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Oenanthe isabellina"
+   ],
+   "tr_views": 212
+  },
+  {
+   "qid": "Q209419",
+   "label": "Küçük tarla kazı",
+   "links": 57,
+   "value": 0.12,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük tarla kazı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Anser brachyrhynchus"
+   ],
+   "tr_views": 123
+  },
+  {
+   "qid": "Q209419",
+   "label": "Küçük tarla kazı",
+   "links": 57,
+   "value": 2.13,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük tarla kazı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Anser brachyrhynchus"
+   ],
+   "tr_views": 123
+  },
+  {
+   "qid": "Q209419",
+   "label": "Küçük tarla kazı",
+   "links": 57,
+   "value": 2.88,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük tarla kazı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Anser brachyrhynchus"
+   ],
+   "tr_views": 123
+  },
+  {
+   "qid": "Q242419",
+   "label": "Keseli karıncayiyen",
+   "links": 57,
+   "value": 0.6,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Keseli karıncayiyen",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Myrmecobius fasciatus"
+   ],
+   "tr_views": 1896
+  },
+  {
+   "qid": "Q507383",
+   "label": "Hint kargası",
+   "links": 57,
+   "value": 0.0137,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ev kargası",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Corvus splendens"
+   ],
+   "tr_views": 169
+  },
+  {
+   "qid": "Q507383",
+   "label": "Hint kargası",
+   "links": 57,
+   "value": 0.27,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ev kargası",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Corvus splendens"
+   ],
+   "tr_views": 169
+  },
+  {
+   "qid": "Q507383",
+   "label": "Hint kargası",
+   "links": 57,
+   "value": 0.317,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ev kargası",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Corvus splendens"
+   ],
+   "tr_views": 169
+  },
+  {
+   "qid": "Q83774",
+   "label": "Dev su samuru",
+   "links": 57,
+   "value": 0.2,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pteronura brasiliensis",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Pteronura brasiliensis"
+   ],
+   "tr_views": 985
+  },
+  {
+   "qid": "Q83774",
+   "label": "Dev su samuru",
+   "links": 57,
+   "value": 24.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pteronura brasiliensis",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pteronura brasiliensis"
+   ],
+   "tr_views": 985
+  },
+  {
+   "qid": "Q83774",
+   "label": "Dev su samuru",
+   "links": 57,
+   "value": 29.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pteronura brasiliensis",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pteronura brasiliensis"
+   ],
+   "tr_views": 985
+  },
+  {
+   "qid": "Q207246",
+   "label": "Macellan pengueni",
+   "links": 56,
+   "value": 0.107,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Macellan pengueni",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Spheniscus magellanicus"
+   ],
+   "tr_views": 837
+  },
+  {
+   "qid": "Q207246",
+   "label": "Macellan pengueni",
+   "links": 56,
+   "value": 3.77,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Macellan pengueni",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Spheniscus magellanicus"
+   ],
+   "tr_views": 837
+  },
+  {
+   "qid": "Q207246",
+   "label": "Macellan pengueni",
+   "links": 56,
+   "value": 4.47,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Macellan pengueni",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Spheniscus magellanicus"
+   ],
+   "tr_views": 837
+  },
+  {
+   "qid": "Q216921",
+   "label": "Uzun kuyruklu korsan martı",
+   "links": 56,
+   "value": 0.0392,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uzun kuyruklu korsan martı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Stercorarius longicaudus"
+   ],
+   "tr_views": 248
+  },
+  {
+   "qid": "Q216921",
+   "label": "Uzun kuyruklu korsan martı",
+   "links": 56,
+   "value": 0.2699,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uzun kuyruklu korsan martı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Stercorarius longicaudus"
+   ],
+   "tr_views": 248
+  },
+  {
+   "qid": "Q216921",
+   "label": "Uzun kuyruklu korsan martı",
+   "links": 56,
+   "value": 0.3072,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uzun kuyruklu korsan martı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Stercorarius longicaudus"
+   ],
+   "tr_views": 248
+  },
+  {
+   "qid": "Q290871",
+   "label": "Hubara",
+   "links": 56,
+   "value": 0.068,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hubara",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Chlamydotis undulata"
+   ],
+   "tr_views": 1702
+  },
+  {
+   "qid": "Q290871",
+   "label": "Hubara",
+   "links": 56,
+   "value": 1.15,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hubara",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Chlamydotis undulata"
+   ],
+   "tr_views": 1702
+  },
+  {
+   "qid": "Q290871",
+   "label": "Hubara",
+   "links": 56,
+   "value": 1.96,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hubara",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Chlamydotis undulata"
+   ],
+   "tr_views": 1702
+  },
+  {
+   "qid": "Q31354",
+   "label": "Çin kazı",
+   "links": 56,
+   "value": 0.145,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çin kazı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Anser cygnoides"
+   ],
+   "tr_views": 1076
+  },
+  {
+   "qid": "Q31354",
+   "label": "Çin kazı",
+   "links": 56,
+   "value": 3.15,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çin kazı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Anser cygnoides"
+   ],
+   "tr_views": 1076
+  },
+  {
+   "qid": "Q31354",
+   "label": "Çin kazı",
+   "links": 56,
+   "value": 3.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çin kazı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Anser cygnoides"
+   ],
+   "tr_views": 1076
+  },
+  {
+   "qid": "Q4535",
+   "label": "Baykal Foku",
+   "links": 56,
+   "value": 3.25,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Baykal foku",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Pusa sibirica"
+   ],
+   "tr_views": 2093
+  },
+  {
+   "qid": "Q4535",
+   "label": "Baykal Foku",
+   "links": 56,
+   "value": 90.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Baykal foku",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pusa sibirica"
+   ],
+   "tr_views": 2093
+  },
+  {
+   "qid": "Q457267",
+   "label": "Mavi ayaklı sümsük kuşu",
+   "links": 56,
+   "value": 0.061,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mavi ayaklı sümsük kuşu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Sula nebouxii"
+   ],
+   "tr_views": 2331
+  },
+  {
+   "qid": "Q457267",
+   "label": "Mavi ayaklı sümsük kuşu",
+   "links": 56,
+   "value": 1.283,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mavi ayaklı sümsük kuşu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Sula nebouxii"
+   ],
+   "tr_views": 2331
+  },
+  {
+   "qid": "Q457267",
+   "label": "Mavi ayaklı sümsük kuşu",
+   "links": 56,
+   "value": 1.801,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mavi ayaklı sümsük kuşu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Sula nebouxii"
+   ],
+   "tr_views": 2331
+  },
+  {
+   "qid": "Q476356",
+   "label": "Büyük karabaş martı",
+   "links": 56,
+   "value": 0.112,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük karabaş martı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Ichthyaetus ichthyaetus"
+   ],
+   "tr_views": 265
+  },
+  {
+   "qid": "Q476356",
+   "label": "Büyük karabaş martı",
+   "links": 56,
+   "value": 1.189,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük karabaş martı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Ichthyaetus ichthyaetus"
+   ],
+   "tr_views": 265
+  },
+  {
+   "qid": "Q476356",
+   "label": "Büyük karabaş martı",
+   "links": 56,
+   "value": 1.599,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük karabaş martı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Ichthyaetus ichthyaetus"
+   ],
+   "tr_views": 265
+  },
+  {
+   "qid": "Q205491",
+   "label": "Kaya kiraz kuşu",
+   "links": 55,
+   "value": 0.00277,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kaya kiraz kuşu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Emberiza cia"
+   ],
+   "tr_views": 175
+  },
+  {
+   "qid": "Q205491",
+   "label": "Kaya kiraz kuşu",
+   "links": 55,
+   "value": 0.023,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kaya kiraz kuşu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Emberiza cia"
+   ],
+   "tr_views": 175
+  },
+  {
+   "qid": "Q216855",
+   "label": "Küçük kiraz kuşu",
+   "links": 55,
+   "value": 0.00189,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük kiraz kuşu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Emberiza pusilla"
+   ],
+   "tr_views": 149
+  },
+  {
+   "qid": "Q216855",
+   "label": "Küçük kiraz kuşu",
+   "links": 55,
+   "value": 0.0154,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük kiraz kuşu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Emberiza pusilla"
+   ],
+   "tr_views": 149
+  },
+  {
+   "qid": "Q242599",
+   "label": "Sarı kamışçın",
+   "links": 55,
+   "value": 0.00149,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sarı kamışçın",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Acrocephalus paludicola"
+   ],
+   "tr_views": 181
+  },
+  {
+   "qid": "Q242599",
+   "label": "Sarı kamışçın",
+   "links": 55,
+   "value": 0.0105,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sarı kamışçın",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Acrocephalus paludicola"
+   ],
+   "tr_views": 181
+  },
+  {
+   "qid": "Q269896",
+   "label": "Steller deniz kartalı",
+   "links": 55,
+   "value": 5.45,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Steller deniz kartalı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Haliaeetus pelagicus"
+   ],
+   "tr_views": 1626
+  },
+  {
+   "qid": "Q269896",
+   "label": "Steller deniz kartalı",
+   "links": 55,
+   "value": 7.9,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Steller deniz kartalı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Haliaeetus pelagicus"
+   ],
+   "tr_views": 1626
+  },
+  {
+   "qid": "Q470853",
+   "label": "Boğmaklı toygar",
+   "links": 55,
+   "value": 0.055,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boğmaklı toygar",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Melanocorypha calandra"
+   ],
+   "tr_views": 210
+  },
+  {
+   "qid": "Q470853",
+   "label": "Boğmaklı toygar",
+   "links": 55,
+   "value": 0.063,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boğmaklı toygar",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Melanocorypha calandra"
+   ],
+   "tr_views": 210
+  },
+  {
+   "qid": "Q244284",
+   "label": "Java ıslıkçı ördeği",
+   "links": 54,
+   "value": 0.019,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Java ıslıkçı ördeği",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Dendrocygna javanica"
+   ],
+   "tr_views": 134
+  },
+  {
+   "qid": "Q244284",
+   "label": "Java ıslıkçı ördeği",
+   "links": 54,
+   "value": 0.525,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Java ıslıkçı ördeği",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Dendrocygna javanica"
+   ],
+   "tr_views": 134
+  },
+  {
+   "qid": "Q330310",
+   "label": "Bataklık kırlangıcı",
+   "links": 54,
+   "value": 0.0101,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bataklık kırlangıcı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Glareola pratincola"
+   ],
+   "tr_views": 398
+  },
+  {
+   "qid": "Q330310",
+   "label": "Bataklık kırlangıcı",
+   "links": 54,
+   "value": 0.077,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bataklık kırlangıcı",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Glareola pratincola"
+   ],
+   "tr_views": 398
+  },
+  {
+   "qid": "Q331447",
+   "label": "Yaz ördeği",
+   "links": 54,
+   "value": 0.492,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yaz ördeği",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Marmaronetta angustirostris"
+   ],
+   "tr_views": 427
+  },
+  {
+   "qid": "Q331447",
+   "label": "Yaz ördeği",
+   "links": 54,
+   "value": 0.562,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yaz ördeği",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Marmaronetta angustirostris"
+   ],
+   "tr_views": 427
+  },
+  {
+   "qid": "Q279307",
+   "label": "Sürmeli kız kuşu",
+   "links": 53,
+   "value": 0.0265,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sürmeli kız kuşu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Vanellus gregarius"
+   ],
+   "tr_views": 242
+  },
+  {
+   "qid": "Q279307",
+   "label": "Sürmeli kız kuşu",
+   "links": 53,
+   "value": 0.2,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sürmeli kız kuşu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Vanellus gregarius"
+   ],
+   "tr_views": 242
+  },
+  {
+   "qid": "Q279307",
+   "label": "Sürmeli kız kuşu",
+   "links": 53,
+   "value": 0.252,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sürmeli kız kuşu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Vanellus gregarius"
+   ],
+   "tr_views": 242
+  },
+  {
+   "qid": "Q320193",
+   "label": "Sula leucogaster",
+   "links": 53,
+   "value": 0.053,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sula leucogaster",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Sula leucogaster"
+   ],
+   "tr_views": 126
+  },
+  {
+   "qid": "Q320193",
+   "label": "Sula leucogaster",
+   "links": 53,
+   "value": 1.189,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sula leucogaster",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Sula leucogaster"
+   ],
+   "tr_views": 126
+  },
+  {
+   "qid": "Q320193",
+   "label": "Sula leucogaster",
+   "links": 53,
+   "value": 1.344,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sula leucogaster",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Sula leucogaster"
+   ],
+   "tr_views": 126
+  },
+  {
+   "qid": "Q18861",
+   "label": "Sülün kuyruklu jakana",
+   "links": 52,
+   "value": 0.0141,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sülün kuyruklu jakana",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Hydrophasianus chirurgus"
+   ],
+   "tr_views": 164
+  },
+  {
+   "qid": "Q18861",
+   "label": "Sülün kuyruklu jakana",
+   "links": 52,
+   "value": 0.126,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sülün kuyruklu jakana",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Hydrophasianus chirurgus"
+   ],
+   "tr_views": 164
+  },
+  {
+   "qid": "Q18861",
+   "label": "Sülün kuyruklu jakana",
+   "links": 52,
+   "value": 0.231,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sülün kuyruklu jakana",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Hydrophasianus chirurgus"
+   ],
+   "tr_views": 164
+  },
+  {
+   "qid": "Q217122",
+   "label": "Kızıl ayaklı sümsük kuşu",
+   "links": 52,
+   "value": 0.928,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kızıl ayaklı sümsük kuşu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Sula sula"
+   ],
+   "tr_views": 483
+  },
+  {
+   "qid": "Q217122",
+   "label": "Kızıl ayaklı sümsük kuşu",
+   "links": 52,
+   "value": 1.068,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kızıl ayaklı sümsük kuşu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Sula sula"
+   ],
+   "tr_views": 483
+  },
+  {
+   "qid": "Q391421",
+   "label": "İnce gagalı martı",
+   "links": 52,
+   "value": 0.029,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İnce gagalı martı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Chroicocephalus genei"
+   ],
+   "tr_views": 310
+  },
+  {
+   "qid": "Q391421",
+   "label": "İnce gagalı martı",
+   "links": 52,
+   "value": 0.236,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İnce gagalı martı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Chroicocephalus genei"
+   ],
+   "tr_views": 310
+  },
+  {
+   "qid": "Q391421",
+   "label": "İnce gagalı martı",
+   "links": 52,
+   "value": 0.275,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İnce gagalı martı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Chroicocephalus genei"
+   ],
+   "tr_views": 310
+  },
+  {
+   "qid": "Q45974",
+   "label": "Ak karınlı deniz kartalı",
+   "links": 52,
+   "value": 0.117,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ak karınlı deniz kartalı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Haliaeetus leucogaster"
+   ],
+   "tr_views": 852
+  },
+  {
+   "qid": "Q45974",
+   "label": "Ak karınlı deniz kartalı",
+   "links": 52,
+   "value": 2.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ak karınlı deniz kartalı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Haliaeetus leucogaster"
+   ],
+   "tr_views": 852
+  },
+  {
+   "qid": "Q45974",
+   "label": "Ak karınlı deniz kartalı",
+   "links": 52,
+   "value": 3.33,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ak karınlı deniz kartalı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Haliaeetus leucogaster"
+   ],
+   "tr_views": 852
+  },
+  {
+   "qid": "Q498428",
+   "label": "Ardeola grayii",
+   "links": 52,
+   "value": 0.255,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ardeola grayii",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Ardeola grayii"
+   ],
+   "tr_views": 103
+  },
+  {
+   "qid": "Q632213",
+   "label": "Agapornis roseicollis",
+   "links": 52,
+   "value": 0.00395,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Agapornis roseicollis",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Agapornis roseicollis"
+   ],
+   "tr_views": 936
+  },
+  {
+   "qid": "Q632213",
+   "label": "Agapornis roseicollis",
+   "links": 52,
+   "value": 0.054,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Agapornis roseicollis",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Agapornis roseicollis"
+   ],
+   "tr_views": 936
+  },
+  {
+   "qid": "Q695729",
+   "label": "Kara kanatlı bataklık kırlangıcı",
+   "links": 52,
+   "value": 0.011,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara kanatlı bataklık kırlangıcı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Glareola nordmanni"
+   ],
+   "tr_views": 252
+  },
+  {
+   "qid": "Q695729",
+   "label": "Kara kanatlı bataklık kırlangıcı",
+   "links": 52,
+   "value": 0.097,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara kanatlı bataklık kırlangıcı",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Glareola nordmanni"
+   ],
+   "tr_views": 252
+  },
+  {
+   "qid": "Q747787",
+   "label": "Ağaç kamışçını",
+   "links": 52,
+   "value": 0.00236,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ağaç kamışçını",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Locustella fluviatilis"
+   ],
+   "tr_views": 328
+  },
+  {
+   "qid": "Q747787",
+   "label": "Ağaç kamışçını",
+   "links": 52,
+   "value": 0.0188,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ağaç kamışçını",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Locustella fluviatilis"
+   ],
+   "tr_views": 328
+  },
+  {
+   "qid": "Q212047",
+   "label": "Çatal kuyruklu martı",
+   "links": 51,
+   "value": 0.016,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çatal kuyruklu martı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Xema sabini"
+   ],
+   "tr_views": 40
+  },
+  {
+   "qid": "Q212047",
+   "label": "Çatal kuyruklu martı",
+   "links": 51,
+   "value": 0.185,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çatal kuyruklu martı",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Xema sabini"
+   ],
+   "tr_views": 40
+  },
+  {
+   "qid": "Q220271",
+   "label": "Amerika tapiri",
+   "links": 51,
+   "value": 4.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Amerika tapiri",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Tapirus terrestris"
+   ],
+   "tr_views": 582
+  },
+  {
+   "qid": "Q220271",
+   "label": "Amerika tapiri",
+   "links": 51,
+   "value": 200.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Amerika tapiri",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Tapirus terrestris"
+   ],
+   "tr_views": 582
+  },
+  {
+   "qid": "Q260716",
+   "label": "Çizgili kum kuşu",
+   "links": 51,
+   "value": 0.0131,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çizgili kum kuşu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Calidris melanotos"
+   ],
+   "tr_views": 177
+  },
+  {
+   "qid": "Q260716",
+   "label": "Çizgili kum kuşu",
+   "links": 51,
+   "value": 0.0651,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çizgili kum kuşu",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Calidris melanotos"
+   ],
+   "tr_views": 177
+  },
+  {
+   "qid": "Q260716",
+   "label": "Çizgili kum kuşu",
+   "links": 51,
+   "value": 0.0978,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çizgili kum kuşu",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Calidris melanotos"
+   ],
+   "tr_views": 177
+  },
+  {
+   "qid": "Q285165",
+   "label": "Turaç",
+   "links": 51,
+   "value": 0.355,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Turaç",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Francolinus francolinus"
+   ],
+   "tr_views": 4811
+  },
+  {
+   "qid": "Q285165",
+   "label": "Turaç",
+   "links": 51,
+   "value": 0.425,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Turaç",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Francolinus francolinus"
+   ],
+   "tr_views": 4811
+  },
+  {
+   "qid": "Q304434",
+   "label": "Gri hint kuşu",
+   "links": 51,
+   "value": 0.75,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gallus sonneratii",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Gallus sonneratii"
+   ],
+   "tr_views": 379
+  },
+  {
+   "qid": "Q304434",
+   "label": "Gri hint kuşu",
+   "links": 51,
+   "value": 0.965,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gallus sonneratii",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Gallus sonneratii"
+   ],
+   "tr_views": 379
+  },
+  {
+   "qid": "Q527830",
+   "label": "Küçük pelikan",
+   "links": 51,
+   "value": 0.116,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük pelikan",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Pelecanus rufescens"
+   ],
+   "tr_views": 143
+  },
+  {
+   "qid": "Q527830",
+   "label": "Küçük pelikan",
+   "links": 51,
+   "value": 4.92,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük pelikan",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pelecanus rufescens"
+   ],
+   "tr_views": 143
+  },
+  {
+   "qid": "Q527830",
+   "label": "Küçük pelikan",
+   "links": 51,
+   "value": 5.97,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük pelikan",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pelecanus rufescens"
+   ],
+   "tr_views": 143
+  },
+  {
+   "qid": "Q740741",
+   "label": "Kahverengi ıslıkçı ördek",
+   "links": 51,
+   "value": 0.052,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kahverengi ıslıkçı ördek",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Dendrocygna bicolor"
+   ],
+   "tr_views": 278
+  },
+  {
+   "qid": "Q740741",
+   "label": "Kahverengi ıslıkçı ördek",
+   "links": 51,
+   "value": 0.682,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kahverengi ıslıkçı ördek",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Dendrocygna bicolor"
+   ],
+   "tr_views": 278
+  },
+  {
+   "qid": "Q212243",
+   "label": "Ada doğanı",
+   "links": 50,
+   "value": 0.026,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ada doğanı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Falco eleonorae"
+   ],
+   "tr_views": 532
+  },
+  {
+   "qid": "Q212243",
+   "label": "Ada doğanı",
+   "links": 50,
+   "value": 0.2805,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ada doğanı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Falco eleonorae"
+   ],
+   "tr_views": 532
+  },
+  {
+   "qid": "Q212243",
+   "label": "Ada doğanı",
+   "links": 50,
+   "value": 0.388,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ada doğanı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Falco eleonorae"
+   ],
+   "tr_views": 532
+  },
+  {
+   "qid": "Q276290",
+   "label": "Çıplak kör fare",
+   "links": 50,
+   "value": 0.0015,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çıplak kör fare",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Heterocephalus glaber"
+   ],
+   "tr_views": 1751
+  },
+  {
+   "qid": "Q276290",
+   "label": "Çıplak kör fare",
+   "links": 50,
+   "value": 0.034,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çıplak kör fare",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Heterocephalus glaber"
+   ],
+   "tr_views": 1751
+  },
+  {
+   "qid": "Q752513",
+   "label": "Phylloscopus proregulus",
+   "links": 50,
+   "value": 0.00093,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Phylloscopus proregulus",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Phylloscopus proregulus"
+   ],
+   "tr_views": 50
+  },
+  {
+   "qid": "Q752513",
+   "label": "Phylloscopus proregulus",
+   "links": 50,
+   "value": 0.006,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Phylloscopus proregulus",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Phylloscopus proregulus"
+   ],
+   "tr_views": 50
+  },
+  {
+   "qid": "Q165923",
+   "label": "Boz ebabil",
+   "links": 49,
+   "value": 0.0035,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boz ebabil",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Apus pallidus"
+   ],
+   "tr_views": 933
+  },
+  {
+   "qid": "Q165923",
+   "label": "Boz ebabil",
+   "links": 49,
+   "value": 0.0413,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boz ebabil",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Apus pallidus"
+   ],
+   "tr_views": 933
+  },
+  {
+   "qid": "Q1951359",
+   "label": "Yeşil arı kuşu",
+   "links": 49,
+   "value": 0.0494,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeşil arı kuşu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Merops persicus"
+   ],
+   "tr_views": 818
+  },
+  {
+   "qid": "Q217494",
+   "label": "Makaroni pengueni",
+   "links": 49,
+   "value": 0.142,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Makaroni pengueni",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Eudyptes chrysolophus"
+   ],
+   "tr_views": 2383
+  },
+  {
+   "qid": "Q217494",
+   "label": "Makaroni pengueni",
+   "links": 49,
+   "value": 4.985,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Makaroni pengueni",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Eudyptes chrysolophus"
+   ],
+   "tr_views": 2383
+  },
+  {
+   "qid": "Q263706",
+   "label": "Ova tilkisi",
+   "links": 49,
+   "value": 2.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ova tilkisi",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Vulpes velox"
+   ],
+   "tr_views": 854
+  },
+  {
+   "qid": "Q626289",
+   "label": "Nestor meridionalis",
+   "links": 49,
+   "value": 0.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nestor meridionalis",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Nestor meridionalis"
+   ],
+   "tr_views": 278
+  },
+  {
+   "qid": "Q626289",
+   "label": "Nestor meridionalis",
+   "links": 49,
+   "value": 0.458,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nestor meridionalis",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Nestor meridionalis"
+   ],
+   "tr_views": 278
+  },
+  {
+   "qid": "Q647461",
+   "label": "Kara başlı dikkuyruk",
+   "links": 49,
+   "value": 0.499,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara başlı dikkuyruk",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Oxyura jamaicensis"
+   ],
+   "tr_views": 567
+  },
+  {
+   "qid": "Q647461",
+   "label": "Kara başlı dikkuyruk",
+   "links": 49,
+   "value": 0.59,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara başlı dikkuyruk",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Oxyura jamaicensis"
+   ],
+   "tr_views": 567
+  },
+  {
+   "qid": "Q723064",
+   "label": "Ak martı",
+   "links": 49,
+   "value": 0.507,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ak martı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pagophila eburnea"
+   ],
+   "tr_views": 26
+  },
+  {
+   "qid": "Q723064",
+   "label": "Ak martı",
+   "links": 49,
+   "value": 0.617,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ak martı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pagophila eburnea"
+   ],
+   "tr_views": 26
+  },
+  {
+   "qid": "Q125895",
+   "label": "Bahçe tırmaşık kuşu",
+   "links": 48,
+   "value": 0.00116,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bahçe tırmaşık kuşu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Certhia brachydactyla"
+   ],
+   "tr_views": 386
+  },
+  {
+   "qid": "Q125895",
+   "label": "Bahçe tırmaşık kuşu",
+   "links": 48,
+   "value": 0.0084,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bahçe tırmaşık kuşu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Certhia brachydactyla"
+   ],
+   "tr_views": 386
+  },
+  {
+   "qid": "Q212055",
+   "label": "Kara dalıcımartı",
+   "links": 48,
+   "value": 0.381,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara dalıcı martı",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Cepphus grylle"
+   ],
+   "tr_views": 216
+  },
+  {
+   "qid": "Q216836",
+   "label": "Amerika altın yağmurcunu",
+   "links": 48,
+   "value": 0.026,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Amerika altın yağmurcunu",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Pluvialis dominica"
+   ],
+   "tr_views": 169
+  },
+  {
+   "qid": "Q216836",
+   "label": "Amerika altın yağmurcunu",
+   "links": 48,
+   "value": 0.145,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Amerika altın yağmurcunu",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pluvialis dominica"
+   ],
+   "tr_views": 169
+  },
+  {
+   "qid": "Q219199",
+   "label": "Çöl koşarı",
+   "links": 48,
+   "value": 0.0139,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çöl koşarı",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Cursorius cursor"
+   ],
+   "tr_views": 523
+  },
+  {
+   "qid": "Q219199",
+   "label": "Çöl koşarı",
+   "links": 48,
+   "value": 0.129,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çöl koşarı",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Cursorius cursor"
+   ],
+   "tr_views": 523
+  },
+  {
+   "qid": "Q333796",
+   "label": "Büyük mavi balıkçıl",
+   "links": 48,
+   "value": 2.11,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük mavi balıkçıl",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Ardea herodias"
+   ],
+   "tr_views": 1926
+  },
+  {
+   "qid": "Q333796",
+   "label": "Büyük mavi balıkçıl",
+   "links": 48,
+   "value": 2.48,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük mavi balıkçıl",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Ardea herodias"
+   ],
+   "tr_views": 1926
+  },
+  {
+   "qid": "Q71118",
+   "label": "Leptosomus discolor",
+   "links": 48,
+   "value": 0.255,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Leptosomus discolor",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Leptosomus discolor"
+   ],
+   "tr_views": 86
+  },
+  {
+   "qid": "Q723575",
+   "label": "Püsküllü geyik",
+   "links": 48,
+   "value": 23.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Püsküllü geyik",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Elaphodus cephalophus"
+   ],
+   "tr_views": 184
+  },
+  {
+   "qid": "Q735190",
+   "label": "Amerika ak pelikanı",
+   "links": 48,
+   "value": 4.97,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Amerika ak pelikanı",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pelecanus erythrorhynchos"
+   ],
+   "tr_views": 462
+  },
+  {
+   "qid": "Q735190",
+   "label": "Amerika ak pelikanı",
+   "links": 48,
+   "value": 6.92,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Amerika ak pelikanı",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Pelecanus erythrorhynchos"
+   ],
+   "tr_views": 462
+  },
+  {
+   "qid": "Q742574",
+   "label": "Ak yüzlü ıslıkçı ördek",
+   "links": 48,
+   "value": 0.036,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ak yüzlü ıslıkçı ördek",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Dendrocygna viduata"
+   ],
+   "tr_views": 268
+  },
+  {
+   "qid": "Q742574",
+   "label": "Ak yüzlü ıslıkçı ördek",
+   "links": 48,
+   "value": 0.674,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ak yüzlü ıslıkçı ördek",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Dendrocygna viduata"
+   ],
+   "tr_views": 268
+  },
+  {
+   "qid": "Q824974",
+   "label": "Dacelo novaeguineae",
+   "links": 48,
+   "value": 0.0304,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dacelo novaeguineae",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Dacelo novaeguineae"
+   ],
+   "tr_views": 209
+  },
+  {
+   "qid": "Q824974",
+   "label": "Dacelo novaeguineae",
+   "links": 48,
+   "value": 0.3072,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dacelo novaeguineae",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Dacelo novaeguineae"
+   ],
+   "tr_views": 209
+  },
+  {
+   "qid": "Q824974",
+   "label": "Dacelo novaeguineae",
+   "links": 48,
+   "value": 0.3521,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dacelo novaeguineae",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Dacelo novaeguineae"
+   ],
+   "tr_views": 209
+  },
+  {
+   "qid": "Q216850",
+   "label": "Boz yelkovan",
+   "links": 47,
+   "value": 0.074,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boz yelkovan",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Calonectris diomedea"
+   ],
+   "tr_views": 280
+  },
+  {
+   "qid": "Q216850",
+   "label": "Boz yelkovan",
+   "links": 47,
+   "value": 0.8173,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boz yelkovan",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Calonectris diomedea"
+   ],
+   "tr_views": 280
+  },
+  {
+   "qid": "Q216850",
+   "label": "Boz yelkovan",
+   "links": 47,
+   "value": 0.9556,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boz yelkovan",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Calonectris diomedea"
+   ],
+   "tr_views": 280
+  },
+  {
+   "qid": "Q217704",
+   "label": "Aynakgaga",
+   "links": 47,
+   "value": 0.037,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aynakgaga",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Ibidorhyncha struthersii"
+   ],
+   "tr_views": 174
+  },
+  {
+   "qid": "Q217704",
+   "label": "Aynakgaga",
+   "links": 47,
+   "value": 0.294,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aynakgaga",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Ibidorhyncha struthersii"
+   ],
+   "tr_views": 174
+  },
+  {
+   "qid": "Q492684",
+   "label": "Kaya kekliği",
+   "links": 47,
+   "value": 0.565,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kaya kekliği",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Alectoris graeca"
+   ],
+   "tr_views": 1013
+  },
+  {
+   "qid": "Q492684",
+   "label": "Kaya kekliği",
+   "links": 47,
+   "value": 0.7,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kaya kekliği",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Alectoris graeca"
+   ],
+   "tr_views": 1013
+  },
+  {
+   "qid": "Q665363",
+   "label": "Tepeli guguk",
+   "links": 47,
+   "value": 0.00985,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tepeli guguk",
+   "sex": [],
+   "role": [
+    "Q4128476"
+   ],
+   "taxon": [
+    "Clamator glandarius"
+   ],
+   "tr_views": 1052
+  },
+  {
+   "qid": "Q665363",
+   "label": "Tepeli guguk",
+   "links": 47,
+   "value": 0.138,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tepeli guguk",
+   "sex": [
+    "Q43445"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Clamator glandarius"
+   ],
+   "tr_views": 1052
+  },
+  {
+   "qid": "Q665363",
+   "label": "Tepeli guguk",
+   "links": 47,
+   "value": 0.169,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tepeli guguk",
+   "sex": [
+    "Q44148"
+   ],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Clamator glandarius"
+   ],
+   "tr_views": 1052
+  },
+  {
+   "qid": "Q72260",
+   "label": "Microcarbo niger",
+   "links": 47,
+   "value": 0.427,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Microcarbo niger",
+   "sex": [],
+   "role": [
+    "Q78101716"
+   ],
+   "taxon": [
+    "Microcarbo niger"
+   ],
+   "tr_views": 162
+  }
+ ]
+}

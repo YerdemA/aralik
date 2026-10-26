@@ -1,0 +1,214 @@
+{
+ "_comment": "Tek kaynak listesi. status: in_use (uygulamada atfı gösterilir), planned, reference_only (yalnızca elle doğrulama), do_not_use. Ayrıntı: docs/SOURCES.md. Değiştirince: python tools/build_attributions.py",
+ "sources": [
+  {
+   "id": "wikidata",
+   "name": "Wikidata",
+   "license": "CC0 1.0",
+   "license_url": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+   "url": "https://www.wikidata.org/",
+   "attribution": "Wikidata, Wikimedia Vakfı. Yapılandırılmış veri CC0 ile kamu malına bırakılmıştır.",
+   "status": "in_use",
+   "raw_dir": "wikidata",
+   "datasets": [
+    "mountains_tr", "mountains_world", "rivers_tr", "rivers_world", "lakes_tr",
+    "countries_population", "countries_area", "structures_tr", "structures_world",
+    "skyscrapers_world", "bridges_tr", "stadiums_tr", "clubs_tr", "universities_tr",
+    "battles", "wars", "companies_founded", "companies_employees",
+    "elements_melting", "elements_boiling", "elements_discovered", "nobel",
+    "animals_mass", "animals_lifespan", "places_tr", "places_world"
+   ]
+  },
+  {
+   "id": "wikimedia_pageviews",
+   "name": "Wikimedia Pageviews API",
+   "license": "CC0 1.0",
+   "license_url": "https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews",
+   "url": "https://wikimedia.org/api/rest_v1/",
+   "attribution": "Türkçe Vikipedi okunma sayıları, Wikimedia Vakfı (soruların seçimi ve zorluk tahmini için).",
+   "status": "in_use",
+   "raw_dir": "wikimedia_pageviews",
+   "datasets": []
+  },
+  {
+   "id": "anage",
+   "name": "AnAge (HAGR)",
+   "license": "CC BY 3.0",
+   "license_url": "https://genomics.senescence.info/legal.html",
+   "url": "https://genomics.senescence.info/species/",
+   "attribution": "AnAge: The Animal Ageing and Longevity Database, HAGR (de Magalhães ve ark.), CC BY 3.0",
+   "status": "planned",
+   "datasets": []
+  },
+  {
+   "id": "animaltraits",
+   "name": "AnimalTraits",
+   "license": "CC BY 4.0",
+   "license_url": "https://www.nature.com/articles/s41597-022-01364-9",
+   "url": "https://animaltraits.org/",
+   "attribution": "AnimalTraits (Herberstein ve ark., 2022), CC BY 4.0",
+   "status": "planned",
+   "datasets": []
+  },
+  {
+   "id": "usda_fdc",
+   "name": "USDA FoodData Central",
+   "license": "CC0 1.0",
+   "license_url": "https://fdc.nal.usda.gov/",
+   "url": "https://fdc.nal.usda.gov/",
+   "attribution": "USDA FoodData Central, CC0",
+   "status": "planned",
+   "datasets": []
+  },
+  {
+   "id": "nasa_nssdc",
+   "name": "NASA NSSDC Planetary Fact Sheets",
+   "license": "ABD kamu eseri",
+   "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+   "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+   "attribution": "NASA Goddard Space Flight Center, NSSDC Planetary Fact Sheets",
+   "status": "planned",
+   "datasets": []
+  },
+  {
+   "id": "usgs_comcat",
+   "name": "USGS ANSS ComCat",
+   "license": "Kamu malı",
+   "license_url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+   "url": "https://earthquake.usgs.gov/fdsnws/event/1/",
+   "attribution": "U.S. Geological Survey, ANSS ComCat",
+   "status": "planned",
+   "datasets": []
+  },
+  {
+   "id": "ourairports",
+   "name": "OurAirports",
+   "license": "Kamu malı",
+   "license_url": "https://ourairports.com/data/",
+   "url": "https://ourairports.com/",
+   "attribution": "OurAirports (kamu malı)",
+   "status": "planned",
+   "datasets": []
+  },
+  {
+   "id": "openfootball",
+   "name": "openfootball",
+   "license": "Kamu malı",
+   "license_url": "https://github.com/openfootball/football.json",
+   "url": "https://github.com/openfootball",
+   "attribution": "openfootball (kamu malı)",
+   "status": "planned",
+   "datasets": []
+  },
+  {
+   "id": "world_bank",
+   "name": "Dünya Bankası Açık Veri",
+   "license": "CC BY 4.0",
+   "license_url": "https://datacatalog.worldbank.org/",
+   "url": "https://data.worldbank.org/",
+   "attribution": "The World Bank, World Development Indicators, CC BY 4.0",
+   "status": "planned",
+   "datasets": []
+  },
+  {
+   "id": "faostat",
+   "name": "FAOSTAT",
+   "license": "CC BY 4.0",
+   "license_url": "https://www.fao.org/contact-us/terms/db-terms-of-use",
+   "url": "https://www.fao.org/faostat/",
+   "attribution": "FAO. FAOSTAT. Lisans: CC BY 4.0",
+   "status": "planned",
+   "datasets": []
+  },
+  {
+   "id": "owid",
+   "name": "Our World in Data",
+   "license": "CC BY 4.0 (yalnızca OWID'in kendi verisi)",
+   "license_url": "https://ourworldindata.org/faqs",
+   "url": "https://ourworldindata.org/",
+   "attribution": "Our World in Data, CC BY",
+   "status": "planned",
+   "datasets": []
+  },
+  {
+   "id": "ibb",
+   "name": "İBB Açık Veri Portalı",
+   "license": "İBB Açık Veri Lisansı 1.0",
+   "license_url": "https://data.ibb.gov.tr/license",
+   "url": "https://data.ibb.gov.tr/",
+   "attribution": "İstanbul Büyükşehir Belediyesi Açık Veri Portalı, İBB Açık Veri Lisansı",
+   "status": "planned",
+   "datasets": []
+  },
+  {
+   "id": "eurostat",
+   "name": "Eurostat",
+   "license": "Kaynak gösterilerek yeniden kullanım (yalnızca AB, EFTA ve aday ülke satırları)",
+   "license_url": "https://ec.europa.eu/eurostat/help/copyright-notice",
+   "url": "https://ec.europa.eu/eurostat/",
+   "attribution": "Kaynak: Eurostat",
+   "status": "planned",
+   "datasets": []
+  },
+  {
+   "id": "tuik",
+   "name": "TÜİK Veri Portalı",
+   "license": "Kaynak gösterilerek kullanım (açık lisans doğrulanmadı)",
+   "license_url": "https://data.tuik.gov.tr/",
+   "url": "https://data.tuik.gov.tr/",
+   "attribution": "Türkiye İstatistik Kurumu (TÜİK)",
+   "status": "planned",
+   "datasets": []
+  },
+  {
+   "id": "pubchem",
+   "name": "PubChem",
+   "license": "Kamu malı ve katkıcı hakları",
+   "license_url": "https://pubchem.ncbi.nlm.nih.gov/docs/downloads",
+   "url": "https://pubchem.ncbi.nlm.nih.gov/",
+   "attribution": "PubChem (yalnızca elle doğrulama)",
+   "status": "reference_only",
+   "datasets": []
+  },
+  {
+   "id": "guinness",
+   "name": "Guinness World Records",
+   "license": "Tüm hakları saklı",
+   "license_url": "https://www.guinnessworldrecords.com/using-this-website/terms-and-conditions",
+   "url": "https://www.guinnessworldrecords.com/",
+   "attribution": "Guinness World Records (yalnızca elle doğrulama)",
+   "status": "reference_only",
+   "datasets": []
+  },
+  {
+   "id": "wikipedia",
+   "name": "Vikipedi",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "url": "https://tr.wikipedia.org/",
+   "attribution": "Vikipedi (yalnızca aday bulma ve elle doğrulama; metin kopyalanmaz)",
+   "status": "reference_only",
+   "datasets": []
+  },
+  {
+   "id": "nobel_api",
+   "name": "Nobel Prize API",
+   "license": "Belirsiz",
+   "license_url": "https://www.nobelprize.org/about/developer-zone-2/",
+   "url": "https://www.nobelprize.org/",
+   "attribution": "Kullanılmıyor; Nobel verisi Wikidata'dan gelir.",
+   "status": "do_not_use",
+   "datasets": []
+  },
+  {
+   "id": "open_food_facts",
+   "name": "Open Food Facts",
+   "license": "ODbL",
+   "license_url": "https://wiki.openfoodfacts.org/ODBL_License",
+   "url": "https://world.openfoodfacts.org/",
+   "attribution": "Kullanılmıyor (share-alike yükümlülüğü).",
+   "status": "do_not_use",
+   "datasets": []
+  }
+ ]
+}

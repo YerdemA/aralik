@@ -1,0 +1,44 @@
+{
+ "source": "wikidata",
+ "url": "https://query.wikidata.org/sparql",
+ "license": "CC0 1.0",
+ "license_url": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+ "datasets": {
+  "animals_lifespan": {
+   "description": "Hayvan türleri, beklenen yaşam süresi (P2250)",
+   "fetched_at": "2026-10-26T15:23:34+00:00"
+  },
+  "animals_mass": {
+   "description": "Hayvan türleri, kütle (P2067, cinsiyet ve rol niteleyicileriyle)",
+   "fetched_at": "2026-10-26T15:23:24+00:00"
+  },
+  "companies_employees": {
+   "description": "Şirketler, çalışan sayısı (P1128, yılı P585)",
+   "fetched_at": "2026-10-26T14:51:51+00:00"
+  },
+  "companies_founded": {
+   "description": "Şirketler, kuruluş yılı (P571)",
+   "fetched_at": "2026-10-26T15:21:42+00:00"
+  },
+  "elements_boiling": {
+   "description": "Kimyasal elementler, kaynama noktası (P2102, kelvin)",
+   "fetched_at": "2026-10-26T14:52:54+00:00"
+  },
+  "elements_discovered": {
+   "description": "Kimyasal elementler, keşif yılı (P575)",
+   "fetched_at": "2026-10-26T14:53:31+00:00"
+  },
+  "elements_melting": {
+   "description": "Kimyasal elementler, erime noktası (P2101, kelvin)",
+   "fetched_at": "2026-10-26T14:52:39+00:00"
+  },
+  "nobel": {
+   "description": "Nobel ödülü sahipleri, ödül yılı (P166 + P585)",
+   "fetched_at": "2026-10-26T14:58:14+00:00"
+  },
+  "skyscrapers_world": {
+   "description": "Gökdelenler ve kuleler, yükseklik (P2048)",
+   "fetched_at": "2026-10-26T14:43:49+00:00"
+  }
+ }
+}

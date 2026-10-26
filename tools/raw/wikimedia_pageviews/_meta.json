@@ -1,0 +1,13 @@
+{
+ "source": "wikimedia_pageviews",
+ "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/",
+ "license": "CC0 1.0",
+ "license_url": "https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews",
+ "period": "20251001-20260930",
+ "datasets": {
+  "tr.wikipedia": {
+   "description": "Türkçe Vikipedi maddelerinin aylık okunma sayıları (kullanıcı erişimi)",
+   "fetched_at": "2026-10-26T15:23:34+00:00"
+  }
+ }
+}

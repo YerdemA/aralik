@@ -209,6 +209,9 @@ extension CategoryStyle on QuestionCategory {
     QuestionCategory.science => Icons.science_rounded,
     QuestionCategory.sports => Icons.sports_soccer_rounded,
     QuestionCategory.everyday => Icons.local_cafe_rounded,
+    QuestionCategory.animals => Icons.pets_rounded,
+    QuestionCategory.companies => Icons.business_rounded,
+    QuestionCategory.other => Icons.category_rounded,
   };
 
   Color color(Brightness brightness) {
@@ -226,6 +229,12 @@ extension CategoryStyle on QuestionCategory {
         light ? const Color(0xFF2E6BD9) : const Color(0xFF9DC0FF),
       QuestionCategory.everyday =>
         light ? const Color(0xFFB03F70) : const Color(0xFFF6A5C6),
+      QuestionCategory.animals =>
+        light ? const Color(0xFF8A6A1F) : const Color(0xFFE6C77A),
+      QuestionCategory.companies =>
+        light ? const Color(0xFF00796B) : const Color(0xFF7FD8CB),
+      QuestionCategory.other =>
+        light ? const Color(0xFF5F6368) : const Color(0xFFB0B6BE),
     };
   }
 }

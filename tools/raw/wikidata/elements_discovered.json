@@ -1,0 +1,1138 @@
+{
+ "dataset": "elements_discovered",
+ "description": "Kimyasal elementler, keşif yılı (P575)",
+ "property": "P575",
+ "fetched_at": "2026-10-26T14:53:31+00:00",
+ "rows": [
+  {
+   "qid": "Q556",
+   "label": "hidrojen",
+   "links": 238,
+   "value": 1766.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hidrojen",
+   "tr_views": 23969
+  },
+  {
+   "qid": "Q629",
+   "label": "oksijen",
+   "links": 234,
+   "value": 1771.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Oksijen",
+   "tr_views": 16341
+  },
+  {
+   "qid": "Q629",
+   "label": "oksijen",
+   "links": 234,
+   "value": 1774.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Oksijen",
+   "tr_views": 16341
+  },
+  {
+   "qid": "Q623",
+   "label": "karbon",
+   "links": 219,
+   "value": 1789.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karbon",
+   "tr_views": 20281
+  },
+  {
+   "qid": "Q663",
+   "label": "alüminyum",
+   "links": 210,
+   "value": 1825.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Alüminyum",
+   "tr_views": 19324
+  },
+  {
+   "qid": "Q560",
+   "label": "Helyum",
+   "links": 208,
+   "value": 1868.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Helyum",
+   "tr_views": 10807
+  },
+  {
+   "qid": "Q627",
+   "label": "azot",
+   "links": 205,
+   "value": 1772.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Azot",
+   "tr_views": 14779
+  },
+  {
+   "qid": "Q682",
+   "label": "kükürt",
+   "links": 196,
+   "value": 1777.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kükürt",
+   "tr_views": 18079
+  },
+  {
+   "qid": "Q568",
+   "label": "lityum",
+   "links": 194,
+   "value": 1817.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lityum",
+   "tr_views": 11078
+  },
+  {
+   "qid": "Q658",
+   "label": "sodyum",
+   "links": 188,
+   "value": 1807.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sodyum",
+   "tr_views": 10842
+  },
+  {
+   "qid": "Q706",
+   "label": "Kalsiyum",
+   "links": 183,
+   "value": 1808.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kalsiyum",
+   "tr_views": 7436
+  },
+  {
+   "qid": "Q569",
+   "label": "berilyum",
+   "links": 182,
+   "value": 1798.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Berilyum",
+   "tr_views": 6185
+  },
+  {
+   "qid": "Q654",
+   "label": "Neon",
+   "links": 180,
+   "value": 1898.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Neon",
+   "tr_views": 7255
+  },
+  {
+   "qid": "Q660",
+   "label": "magnezyum",
+   "links": 178,
+   "value": 1755.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Magnezyum",
+   "tr_views": 9259
+  },
+  {
+   "qid": "Q670",
+   "label": "silisyum",
+   "links": 177,
+   "value": 1823.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Silisyum",
+   "tr_views": 11207
+  },
+  {
+   "qid": "Q703",
+   "label": "potasyum",
+   "links": 177,
+   "value": 1807.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Potasyum",
+   "tr_views": 8943
+  },
+  {
+   "qid": "Q1098",
+   "label": "uranyum",
+   "links": 176,
+   "value": 1789.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Uranyum",
+   "tr_views": 27742
+  },
+  {
+   "qid": "Q1098",
+   "label": "uranyum",
+   "links": 176,
+   "value": 1789.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uranyum",
+   "tr_views": 27742
+  },
+  {
+   "qid": "Q650",
+   "label": "flor",
+   "links": 175,
+   "value": 1810.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Flor",
+   "tr_views": 5118
+  },
+  {
+   "qid": "Q674",
+   "label": "fosfor",
+   "links": 175,
+   "value": 1669.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fosfor",
+   "tr_views": 11287
+  },
+  {
+   "qid": "Q688",
+   "label": "klor",
+   "links": 175,
+   "value": 1774.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Klor",
+   "tr_views": 9988
+  },
+  {
+   "qid": "Q618",
+   "label": "bor",
+   "links": 173,
+   "value": 1808.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bor",
+   "tr_views": 19538
+  },
+  {
+   "qid": "Q618",
+   "label": "bor",
+   "links": 173,
+   "value": 1892.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Bor",
+   "tr_views": 19538
+  },
+  {
+   "qid": "Q696",
+   "label": "Argon",
+   "links": 168,
+   "value": 1894.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Argon",
+   "tr_views": 4911
+  },
+  {
+   "qid": "Q716",
+   "label": "titanyum",
+   "links": 167,
+   "value": 1791.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Titanyum",
+   "tr_views": 9220
+  },
+  {
+   "qid": "Q716",
+   "label": "titanyum",
+   "links": 167,
+   "value": 1791.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Titanyum",
+   "tr_views": 9220
+  },
+  {
+   "qid": "Q725",
+   "label": "krom",
+   "links": 164,
+   "value": 1797.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Krom",
+   "tr_views": 9993
+  },
+  {
+   "qid": "Q1103",
+   "label": "iyot",
+   "links": 163,
+   "value": 1811.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İyot",
+   "tr_views": 7847
+  },
+  {
+   "qid": "Q740",
+   "label": "Kobalt",
+   "links": 163,
+   "value": 1735.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kobalt",
+   "tr_views": 7645
+  },
+  {
+   "qid": "Q731",
+   "label": "mangan",
+   "links": 161,
+   "value": 1774.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Manganez",
+   "tr_views": 7643
+  },
+  {
+   "qid": "Q744",
+   "label": "nikel",
+   "links": 161,
+   "value": 1751.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nikel",
+   "tr_views": 11837
+  },
+  {
+   "qid": "Q880",
+   "label": "Platin",
+   "links": 161,
+   "value": 1557.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Platin",
+   "tr_views": 14434
+  },
+  {
+   "qid": "Q888",
+   "label": "Kripton",
+   "links": 159,
+   "value": 1898.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kripton",
+   "tr_views": 4010
+  },
+  {
+   "qid": "Q1112",
+   "label": "baryum",
+   "links": 158,
+   "value": 1772.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Baryum",
+   "tr_views": 3596
+  },
+  {
+   "qid": "Q1112",
+   "label": "baryum",
+   "links": 158,
+   "value": 1808.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Baryum",
+   "tr_views": 3596
+  },
+  {
+   "qid": "Q722",
+   "label": "vanadyum",
+   "links": 158,
+   "value": 1801.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vanadyum",
+   "tr_views": 4551
+  },
+  {
+   "qid": "Q861",
+   "label": "galyum",
+   "links": 158,
+   "value": 1875.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Galyum",
+   "tr_views": 5215
+  },
+  {
+   "qid": "Q1128",
+   "label": "radyum",
+   "links": 157,
+   "value": 1898.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Radyum",
+   "tr_views": 8037
+  },
+  {
+   "qid": "Q671",
+   "label": "fransiyum",
+   "links": 156,
+   "value": 1939.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fransiyum",
+   "tr_views": 3945
+  },
+  {
+   "qid": "Q879",
+   "label": "Brom",
+   "links": 156,
+   "value": 1825.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Brom",
+   "tr_views": 4618
+  },
+  {
+   "qid": "Q1133",
+   "label": "radon",
+   "links": 155,
+   "value": 1899.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Radon",
+   "tr_views": 4236
+  },
+  {
+   "qid": "Q876",
+   "label": "Selenyum",
+   "links": 155,
+   "value": 1817.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Selenyum",
+   "tr_views": 4348
+  },
+  {
+   "qid": "Q1091",
+   "label": "Kadmiyum",
+   "links": 153,
+   "value": 1817.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kadmiyum",
+   "tr_views": 3587
+  },
+  {
+   "qid": "Q713",
+   "label": "skandiyum",
+   "links": 153,
+   "value": 1879.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Skandiyum",
+   "tr_views": 3139
+  },
+  {
+   "qid": "Q938",
+   "label": "stronsiyum",
+   "links": 153,
+   "value": 1787.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Stronsiyum",
+   "tr_views": 2721
+  },
+  {
+   "qid": "Q1106",
+   "label": "Ksenon",
+   "links": 152,
+   "value": 1898.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ksenon",
+   "tr_views": 4831
+  },
+  {
+   "qid": "Q1108",
+   "label": "Sezyum",
+   "links": 152,
+   "value": 1860.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sezyum",
+   "tr_views": 5605
+  },
+  {
+   "qid": "Q867",
+   "label": "Germanyum",
+   "links": 152,
+   "value": 1886.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Germanyum",
+   "tr_views": 4850
+  },
+  {
+   "qid": "Q895",
+   "label": "rubidyum",
+   "links": 152,
+   "value": 1861.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rubidyum",
+   "tr_views": 2395
+  },
+  {
+   "qid": "Q743",
+   "label": "Tungsten",
+   "links": 150,
+   "value": 1783.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tungsten",
+   "tr_views": 13702
+  },
+  {
+   "qid": "Q1046",
+   "label": "niobyum",
+   "links": 149,
+   "value": 1801.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Niyobyum",
+   "tr_views": 1973
+  },
+  {
+   "qid": "Q1102",
+   "label": "plütonyum",
+   "links": 149,
+   "value": 1941.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Plütonyum",
+   "tr_views": 9575
+  },
+  {
+   "qid": "Q877",
+   "label": "İridyum",
+   "links": 149,
+   "value": 1803.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İridyum",
+   "tr_views": 4520
+  },
+  {
+   "qid": "Q1089",
+   "label": "Paladyum",
+   "links": 148,
+   "value": 1803.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Paladyum",
+   "tr_views": 11994
+  },
+  {
+   "qid": "Q979",
+   "label": "polonyum",
+   "links": 148,
+   "value": 1898.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Polonyum",
+   "tr_views": 6020
+  },
+  {
+   "qid": "Q1053",
+   "label": "Molibden",
+   "links": 147,
+   "value": 1778.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Molibden",
+   "tr_views": 4668
+  },
+  {
+   "qid": "Q751",
+   "label": "Osmiyum",
+   "links": 147,
+   "value": 1804.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Osmiyum",
+   "tr_views": 6305
+  },
+  {
+   "qid": "Q1100",
+   "label": "Tellür",
+   "links": 146,
+   "value": 1783.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tellür",
+   "tr_views": 1721
+  },
+  {
+   "qid": "Q1119",
+   "label": "hafniyum",
+   "links": 146,
+   "value": 1922.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hafniyum",
+   "tr_views": 1505
+  },
+  {
+   "qid": "Q1123",
+   "label": "tantal",
+   "links": 146,
+   "value": 1802.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tantal",
+   "tr_views": 5989
+  },
+  {
+   "qid": "Q941",
+   "label": "itriyum",
+   "links": 146,
+   "value": 1787.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İtriyum",
+   "tr_views": 2683
+  },
+  {
+   "qid": "Q999",
+   "label": "astatin",
+   "links": 146,
+   "value": 1940.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Astatin",
+   "tr_views": 5497
+  },
+  {
+   "qid": "Q1054",
+   "label": "Teknesyum",
+   "links": 145,
+   "value": 1937.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Teknesyum",
+   "tr_views": 2140
+  },
+  {
+   "qid": "Q1038",
+   "label": "zirkonyum",
+   "links": 144,
+   "value": 1789.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zirkonyum",
+   "tr_views": 5862
+  },
+  {
+   "qid": "Q1086",
+   "label": "Rutenyum",
+   "links": 144,
+   "value": 1844.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rutenyum",
+   "tr_views": 1867
+  },
+  {
+   "qid": "Q1087",
+   "label": "Rodyum",
+   "links": 144,
+   "value": 1803.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rodyum",
+   "tr_views": 4433
+  },
+  {
+   "qid": "Q1094",
+   "label": "indiyum",
+   "links": 144,
+   "value": 1863.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İndiyum",
+   "tr_views": 1612
+  },
+  {
+   "qid": "Q1115",
+   "label": "toryum",
+   "links": 144,
+   "value": 1828.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Toryum",
+   "tr_views": 16699
+  },
+  {
+   "qid": "Q1105",
+   "label": "neptünyum",
+   "links": 143,
+   "value": 1940.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Neptünyum",
+   "tr_views": 1756
+  },
+  {
+   "qid": "Q1121",
+   "label": "aktinyum",
+   "links": 143,
+   "value": 1899.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aktinyum",
+   "tr_views": 1965
+  },
+  {
+   "qid": "Q1801",
+   "label": "Lantan",
+   "links": 142,
+   "value": 1839.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lantan",
+   "tr_views": 3192
+  },
+  {
+   "qid": "Q737",
+   "label": "renyum",
+   "links": 142,
+   "value": 1925.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Renyum",
+   "tr_views": 2282
+  },
+  {
+   "qid": "Q932",
+   "label": "talyum",
+   "links": 142,
+   "value": 1861.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Talyum",
+   "tr_views": 2010
+  },
+  {
+   "qid": "Q1396",
+   "label": "Evropiyum",
+   "links": 140,
+   "value": 1901.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Evropiyum",
+   "tr_views": 1697
+  },
+  {
+   "qid": "Q1226",
+   "label": "rutherfordiyum",
+   "links": 139,
+   "value": 1964.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rutherfordyum",
+   "tr_views": 1184
+  },
+  {
+   "qid": "Q1252",
+   "label": "hassiyum",
+   "links": 139,
+   "value": 1984.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hassiyum",
+   "tr_views": 1162
+  },
+  {
+   "qid": "Q1385",
+   "label": "Seryum",
+   "links": 139,
+   "value": 1804.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Seryum",
+   "tr_views": 2524
+  },
+  {
+   "qid": "Q1234",
+   "label": "seaborgiyum",
+   "links": 137,
+   "value": 1974.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Seaborgiyum",
+   "tr_views": 1347
+  },
+  {
+   "qid": "Q1819",
+   "label": "Samaryum",
+   "links": 137,
+   "value": 1879.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Samaryum",
+   "tr_views": 2889
+  },
+  {
+   "qid": "Q1857",
+   "label": "lutesyum",
+   "links": 137,
+   "value": 1906.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lutesyum",
+   "tr_views": 1700
+  },
+  {
+   "qid": "Q1109",
+   "label": "protaktinyum",
+   "links": 136,
+   "value": 1917.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Protaktinyum",
+   "tr_views": 1380
+  },
+  {
+   "qid": "Q1232",
+   "label": "dubniyum",
+   "links": 136,
+   "value": 1970.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dubniyum",
+   "tr_views": 891
+  },
+  {
+   "qid": "Q1888",
+   "label": "kaliforniyum",
+   "links": 136,
+   "value": 1950.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kaliforniyum",
+   "tr_views": 8175
+  },
+  {
+   "qid": "Q1892",
+   "label": "aynştaynyum",
+   "links": 136,
+   "value": 1952.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aynştaynyum",
+   "tr_views": 3149
+  },
+  {
+   "qid": "Q1249",
+   "label": "bohriyum",
+   "links": 135,
+   "value": 1976.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bohriyum",
+   "tr_views": 1038
+  },
+  {
+   "qid": "Q1258",
+   "label": "meitneriyum",
+   "links": 135,
+   "value": 1982.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Meitneriyum",
+   "tr_views": 1241
+  },
+  {
+   "qid": "Q1307",
+   "label": "oganesson",
+   "links": 135,
+   "value": 2002.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Oganesson",
+   "tr_views": 14171
+  },
+  {
+   "qid": "Q1809",
+   "label": "Prometyum",
+   "links": 135,
+   "value": 1945.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Prometyum",
+   "tr_views": 1890
+  },
+  {
+   "qid": "Q1832",
+   "label": "gadolinyum",
+   "links": 135,
+   "value": 1880.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gadolinyum",
+   "tr_views": 2434
+  },
+  {
+   "qid": "Q1872",
+   "label": "amerikyum",
+   "links": 135,
+   "value": 1944.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Amerikyum",
+   "tr_views": 4222
+  },
+  {
+   "qid": "Q1386",
+   "label": "Praseodim",
+   "links": 134,
+   "value": 1841.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Praseodim",
+   "tr_views": 1522
+  },
+  {
+   "qid": "Q1388",
+   "label": "Neodimyum",
+   "links": 134,
+   "value": 1885.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Neodimyum",
+   "tr_views": 4078
+  },
+  {
+   "qid": "Q1843",
+   "label": "Disprozyum",
+   "links": 134,
+   "value": 1886.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Disprozyum",
+   "tr_views": 1822
+  },
+  {
+   "qid": "Q1896",
+   "label": "fermiyum",
+   "links": 134,
+   "value": 1952.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fermiyum",
+   "tr_views": 1134
+  },
+  {
+   "qid": "Q1901",
+   "label": "nobelyum",
+   "links": 134,
+   "value": 1958.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nobelyum",
+   "tr_views": 2335
+  },
+  {
+   "qid": "Q1266",
+   "label": "darmstadtiyum",
+   "links": 133,
+   "value": 1994.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Darmstadtiyum",
+   "tr_views": 1279
+  },
+  {
+   "qid": "Q1838",
+   "label": "Terbiyum",
+   "links": 133,
+   "value": 1843.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Terbiyum",
+   "tr_views": 2081
+  },
+  {
+   "qid": "Q1876",
+   "label": "küriyum",
+   "links": 133,
+   "value": 1944.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küriyum",
+   "tr_views": 1842
+  },
+  {
+   "qid": "Q1882",
+   "label": "berkelyum",
+   "links": 133,
+   "value": 1949.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Berkelyum",
+   "tr_views": 1309
+  },
+  {
+   "qid": "Q1272",
+   "label": "Röntgenyum",
+   "links": 132,
+   "value": 1994.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Röntgenyum",
+   "tr_views": 2784
+  },
+  {
+   "qid": "Q1849",
+   "label": "Erbiyum",
+   "links": 132,
+   "value": 1843.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Erbiyum",
+   "tr_views": 1123
+  },
+  {
+   "qid": "Q1855",
+   "label": "İterbiyum",
+   "links": 132,
+   "value": 1878.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İterbiyum",
+   "tr_views": 1617
+  },
+  {
+   "qid": "Q1898",
+   "label": "mendelevyum",
+   "links": 132,
+   "value": 1955.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mendelevyum",
+   "tr_views": 1310
+  },
+  {
+   "qid": "Q1905",
+   "label": "lavrensiyum",
+   "links": 132,
+   "value": 1961.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lavrensiyum",
+   "tr_views": 2208
+  },
+  {
+   "qid": "Q1846",
+   "label": "Holmiyum",
+   "links": 131,
+   "value": 1878.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Holmiyum",
+   "tr_views": 1219
+  },
+  {
+   "qid": "Q1278",
+   "label": "kopernikyum",
+   "links": 130,
+   "value": 1996.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kopernikyum",
+   "tr_views": 1350
+  },
+  {
+   "qid": "Q1301",
+   "label": "nihonyum",
+   "links": 130,
+   "value": 2006.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nihonyum",
+   "tr_views": 674
+  },
+  {
+   "qid": "Q1303",
+   "label": "moskovyum",
+   "links": 129,
+   "value": 2003.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Moskovyum",
+   "tr_views": 1771
+  },
+  {
+   "qid": "Q1304",
+   "label": "livermoryum",
+   "links": 128,
+   "value": 2000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Livermoryum",
+   "tr_views": 1509
+  },
+  {
+   "qid": "Q1853",
+   "label": "Tulyum",
+   "links": 128,
+   "value": 1879.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tulyum",
+   "tr_views": 1304
+  },
+  {
+   "qid": "Q1302",
+   "label": "flerovyum",
+   "links": 126,
+   "value": 1999.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Flerovyum",
+   "tr_views": 1239
+  },
+  {
+   "qid": "Q1306",
+   "label": "tennesin",
+   "links": 124,
+   "value": 2009.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tennesin",
+   "tr_views": 2488
+  },
+  {
+   "qid": "Q1306",
+   "label": "tennesin",
+   "links": 124,
+   "value": 2010.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tennesin",
+   "tr_views": 2488
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+[
+ {
+  "name": "Wikidata",
+  "attribution": "Wikidata, Wikimedia Vakfı. Yapılandırılmış veri CC0 ile kamu malına bırakılmıştır.",
+  "license": "CC0 1.0",
+  "license_url": "https://www.wikidata.org/wiki/Wikidata:Licensing",
+  "url": "https://www.wikidata.org/"
+ },
+ {
+  "name": "Wikimedia Pageviews API",
+  "attribution": "Türkçe Vikipedi okunma sayıları, Wikimedia Vakfı (soruların seçimi ve zorluk tahmini için).",
+  "license": "CC0 1.0",
+  "license_url": "https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews",
+  "url": "https://wikimedia.org/api/rest_v1/"
+ }
+]

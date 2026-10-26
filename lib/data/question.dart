@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 /// How the answer is entered and scored.
 enum QuestionKind {
   /// Positive quantity (population, km, m). Log-scale interval.
@@ -13,17 +15,57 @@ enum QuestionCategory {
   turkey('türkiye'),
   science('bilim'),
   sports('spor'),
-  everyday('gündelik');
+  everyday('gündelik'),
+  animals('hayvanlar'),
+  companies('şirketler'),
+
+  /// Fallback for a category this app version does not know yet (added by
+  /// a content update). The question stays playable and is shown under
+  /// "Diğer" until an app update brings the real category. Never written
+  /// to questions.json.
+  other('diğer');
 
   const QuestionCategory(this.jsonValue);
 
   /// Value used in questions.json.
   final String jsonValue;
 
-  static QuestionCategory fromJson(String value) => values.firstWhere(
-    (c) => c.jsonValue == value,
-    orElse: () => throw FormatException('Unknown category: $value'),
-  );
+  static QuestionCategory fromJson(String value) =>
+      values.firstWhere((c) => c.jsonValue == value, orElse: () => other);
+}
+
+/// A sourced reference value that can help the player find the scale,
+/// e.g. "Erciyes Dağı" 3917 m.
+@immutable
+class Anchor {
+  const Anchor({
+    required this.text,
+    required this.value,
+    required this.unit,
+    required this.source,
+  });
+
+  final String text;
+  final num value;
+  final String unit;
+
+  /// Link to the data source, like a question's.
+  final String source;
+
+  factory Anchor.fromJson(Object? json) {
+    if (json is! Map<String, dynamic>) {
+      throw FormatException('anchor must be an object, got $json');
+    }
+    final text = json['text'], value = json['value'];
+    final unit = json['unit'], source = json['source'];
+    if (text is! String || value is! num || unit is! String) {
+      throw FormatException('anchor needs text, value and unit: $json');
+    }
+    if (source is! String || source.isEmpty) {
+      throw FormatException('anchor needs a source: $json');
+    }
+    return Anchor(text: text, value: value, unit: unit, source: source);
+  }
 }
 
 /// One question from assets/questions/questions.json.
@@ -38,7 +80,13 @@ class Question {
     required this.source,
     required this.dataYear,
     this.funFact,
+    this.difficulty,
+    this.anchor,
+    this.dataset,
   });
+
+  static const minDifficulty = 1;
+  static const maxDifficulty = 3;
 
   final String id;
   final String text;
@@ -53,6 +101,16 @@ class Question {
   final String source;
   final int dataYear;
   final String? funFact;
+
+  /// Estimated difficulty: 1 easy, 2 medium, 3 hard. Null if unknown
+  /// (e.g. generated questions).
+  final int? difficulty;
+
+  /// Optional reference value shown as a hint.
+  final Anchor? anchor;
+
+  /// Source data set (e.g. `battles`), used to vary the daily set.
+  final String? dataset;
 
   /// Throws [FormatException] on missing or mistyped fields.
   factory Question.fromJson(Map<String, dynamic> json) {
@@ -76,6 +134,14 @@ class Question {
     if (kind == QuestionKind.year && answer is! int) {
       throw FormatException('Question ${json['id']}: year must be an integer');
     }
+    final difficulty = field<int?>('difficulty');
+    if (difficulty != null &&
+        (difficulty < minDifficulty || difficulty > maxDifficulty)) {
+      throw FormatException(
+        'Question ${json['id']}: difficulty must be 1–3, got $difficulty',
+      );
+    }
+    final anchorJson = json['anchor'];
 
     return Question(
       id: field<String>('id'),
@@ -87,6 +153,9 @@ class Question {
       source: field<String>('source'),
       dataYear: field<int>('data_year'),
       funFact: field<String?>('fun_fact'),
+      difficulty: difficulty,
+      anchor: anchorJson == null ? null : Anchor.fromJson(anchorJson),
+      dataset: field<String?>('dataset'),
     );
   }
 }

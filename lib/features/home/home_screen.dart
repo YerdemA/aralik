@@ -18,6 +18,7 @@ import '../../widgets/stat_tile.dart';
 import '../game/game_controller.dart';
 import '../game/game_screen.dart';
 import '../result/summary_screen.dart';
+import '../settings/settings_screen.dart';
 import '../stats/stats_screen.dart';
 
 /// Today's set (play / continue / done + share), streak, last score,
@@ -102,13 +103,22 @@ class _HomeScreenState extends State<HomeScreen> {
   Future<void> _playFree() => _guarded(() async {
     // Free play loops: round → summary → new round, until "Ana ekran".
     while (mounted) {
+      final distance = await _repository.distanceQuestions();
       final round = buildFreeRound(
-        pastBank: await _repository.practicePool(_today),
-        generator: await _repository.distanceQuestions(),
+        bankPool: await _repository.freePlayPool(_today),
+        generators: [
+          (rng, accept) => distance.pick(rng, accept: (q, _, _) => accept(q)),
+        ],
         seen: _stats.seenIds,
         rng: _rng,
       );
-      if (!mounted || round.isEmpty) return;
+      if (!mounted) return;
+      if (round.isEmpty) {
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(const SnackBar(content: Text(AppStrings.freePlayEmpty)));
+        return;
+      }
       final answers = await Navigator.of(context).push<List<RoundAnswer>>(
         MaterialPageRoute(
           builder: (_) => GameScreen(
@@ -135,6 +145,9 @@ class _HomeScreenState extends State<HomeScreen> {
       if (action != SummaryAction.newRound) return;
     }
   });
+
+  void _openSettings() => Navigator.of(context)
+      .push(MaterialPageRoute<void>(builder: (_) => const SettingsScreen()));
 
   void _openStats() => Navigator.of(context).push(
     MaterialPageRoute<void>(
@@ -172,6 +185,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                     : AppStrings.previewEdition,
                               ),
                               const Spacer(),
+                              IconButton.filledTonal(
+                                onPressed: _openSettings,
+                                tooltip: AppStrings.settings,
+                                icon: const Icon(Icons.settings_rounded),
+                              ),
+                              const SizedBox(width: 8),
                               IconButton.filledTonal(
                                 onPressed: _openStats,
                                 tooltip: AppStrings.stats,

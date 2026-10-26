@@ -24,6 +24,8 @@ abstract final class AppStrings {
   static const calibration = 'Kalibrasyon';
   static const freePlay = 'Serbest mod';
   static const freePlayHint = 'Sınırsız tur, hep yeni sorular';
+  static const freePlayEmpty =
+      'Serbest modda yeni soru kalmadı. Yarın yenileri açılır.';
   static const loadError = 'Sorular yüklenemedi. Tekrar dene.';
   static String roundTotal(int points, int max) => '$points / $max puan';
   static const stats = 'İstatistikler';
@@ -105,6 +107,9 @@ abstract final class AppStrings {
   static const categoryScience = 'Bilim';
   static const categorySports = 'Spor';
   static const categoryEveryday = 'Gündelik';
+  static const categoryAnimals = 'Hayvanlar';
+  static const categoryCompanies = 'Şirketler';
+  static const categoryOther = 'Diğer';
 
   // Settings
   static const theme = 'Tema';
@@ -114,6 +119,18 @@ abstract final class AppStrings {
   static const howToPlay = 'Nasıl oynanır?';
   static const privacy = 'Gizlilik';
   static const about = 'Hakkında';
+  static const dataSources = 'Veri kaynakları ve lisanslar';
+  static const dataSourcesHint = 'Soruların ve cevapların kaynakları';
+  static const dataSourcesIntro =
+      'Sorular ve cevapları aşağıdaki kaynaklara dayanır. Sonuç ekranında '
+      'her cevabın görüldüğü sayfa ayrıca gösterilir.';
+  static const openSourceLicenses = 'Açık kaynak lisansları';
+  static const privacyPolicy = 'Gizlilik politikası';
+  static const license = 'Lisans';
+  static const copyLink = 'Bağlantıyı kopyala';
+  static const linkCopied = 'Bağlantı kopyalandı';
+  static const privacyPolicyUrl =
+      'https://yerdema.github.io/aralik/privacy-policy.html';
 
   // Onboarding
   static const onboarding1 =
@@ -133,4 +150,7 @@ String categoryName(QuestionCategory c) => switch (c) {
   QuestionCategory.science => AppStrings.categoryScience,
   QuestionCategory.sports => AppStrings.categorySports,
   QuestionCategory.everyday => AppStrings.categoryEveryday,
+  QuestionCategory.animals => AppStrings.categoryAnimals,
+  QuestionCategory.companies => AppStrings.categoryCompanies,
+  QuestionCategory.other => AppStrings.categoryOther,
 };

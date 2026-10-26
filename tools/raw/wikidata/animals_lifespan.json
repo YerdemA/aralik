@@ -1,0 +1,419 @@
+{
+ "dataset": "animals_lifespan",
+ "description": "Hayvan türleri, beklenen yaşam süresi (P2250)",
+ "property": "P2250",
+ "fetched_at": "2026-10-26T15:23:34+00:00",
+ "rows": [
+  {
+   "qid": "Q33609",
+   "label": "Kutup ayısı",
+   "links": 159,
+   "value": 1576800000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kutup ayısı",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Ursus maritimus"
+   ],
+   "tr_views": 31879
+  },
+  {
+   "qid": "Q8332",
+   "label": "kızıl tilki",
+   "links": 158,
+   "value": 157680000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kızıl tilki",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Vulpes vulpes"
+   ],
+   "tr_views": 8284
+  },
+  {
+   "qid": "Q25357",
+   "label": "Bayağı kuzgun",
+   "links": 137,
+   "value": 541369051.2,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı kuzgun",
+   "sex": [],
+   "applies_to": [
+    "Q911871"
+   ],
+   "taxon": [
+    "Corvus corax"
+   ],
+   "tr_views": 18369
+  },
+  {
+   "qid": "Q36101",
+   "label": "koala",
+   "links": 129,
+   "value": 315360000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Koala",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Phascolarctos cinereus"
+   ],
+   "tr_views": 30587
+  },
+  {
+   "qid": "Q121439",
+   "label": "rakun",
+   "links": 111,
+   "value": 80000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rakun",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Procyon lotor"
+   ],
+   "tr_views": 14184
+  },
+  {
+   "qid": "Q121439",
+   "label": "rakun",
+   "links": 111,
+   "value": 630720000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rakun",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Procyon lotor"
+   ],
+   "tr_views": 14184
+  },
+  {
+   "qid": "Q25345",
+   "label": "Kakım",
+   "links": 110,
+   "value": 157680000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kakım",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Mustela erminea"
+   ],
+   "tr_views": 8070
+  },
+  {
+   "qid": "Q79803",
+   "label": "Kobay",
+   "links": 108,
+   "value": 157680000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ginepig",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Cavia porcellus"
+   ],
+   "tr_views": 18661
+  },
+  {
+   "qid": "Q129026",
+   "label": "Büyük beyaz köpek balığı",
+   "links": 107,
+   "value": 2302128000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Carcharodon charcharias",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Carcharodon carcharias"
+   ],
+   "tr_views": 12151
+  },
+  {
+   "qid": "Q25380",
+   "label": "Accipiter nisus",
+   "links": 106,
+   "value": 126144000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Atmaca",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Accipiter nisus"
+   ],
+   "tr_views": 10271
+  },
+  {
+   "qid": "Q25317",
+   "label": "Bayağı peçeli baykuş",
+   "links": 104,
+   "value": 126144000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı peçeli baykuş",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Tyto alba"
+   ],
+   "tr_views": 5544
+  },
+  {
+   "qid": "Q4504",
+   "label": "Komodo ejderi",
+   "links": 102,
+   "value": 946080000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Komodo ejderi",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Varanus komodoensis"
+   ],
+   "tr_views": 29944
+  },
+  {
+   "qid": "Q25385",
+   "label": "Bayağı şahin",
+   "links": 100,
+   "value": 315360000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı şahin",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Buteo buteo"
+   ],
+   "tr_views": 1956
+  },
+  {
+   "qid": "Q192056",
+   "label": "Bayağı engerek",
+   "links": 90,
+   "value": 315360000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı engerek",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Vipera berus"
+   ],
+   "tr_views": 1452
+  },
+  {
+   "qid": "Q132905",
+   "label": "Kambur balina",
+   "links": 86,
+   "value": 1500000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kambur balina",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Megaptera novaeangliae"
+   ],
+   "tr_views": 10296
+  },
+  {
+   "qid": "Q179959",
+   "label": "Kakapo",
+   "links": 85,
+   "value": 1860624000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Strigops habroptila",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Strigops habroptila"
+   ],
+   "tr_views": 3385
+  },
+  {
+   "qid": "Q199788",
+   "label": "Atlantik morinası",
+   "links": 74,
+   "value": 788400000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Atlantik morinası",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Gadus morhua"
+   ],
+   "tr_views": 1549
+  },
+  {
+   "qid": "Q26842",
+   "label": "Gümüşçün",
+   "links": 70,
+   "value": 63072000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gümüşçün",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Lepisma saccharina"
+   ],
+   "tr_views": 32594
+  },
+  {
+   "qid": "Q220328",
+   "label": "Jako",
+   "links": 68,
+   "value": 693792000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Jako",
+   "sex": [],
+   "applies_to": [
+    "Q16390140"
+   ],
+   "taxon": [
+    "Psittacus erithacus"
+   ],
+   "tr_views": 13067
+  },
+  {
+   "qid": "Q220328",
+   "label": "Jako",
+   "links": 68,
+   "value": 1419120000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Jako",
+   "sex": [],
+   "applies_to": [
+    "Q57812559"
+   ],
+   "taxon": [
+    "Psittacus erithacus"
+   ],
+   "tr_views": 13067
+  },
+  {
+   "qid": "Q232523",
+   "label": "Küçük orman kartalı",
+   "links": 68,
+   "value": 819936000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük orman kartalı",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Clanga pomarina"
+   ],
+   "tr_views": 281
+  },
+  {
+   "qid": "Q726151",
+   "label": "Quokka",
+   "links": 66,
+   "value": 315360000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Quokka",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Setonix brachyurus"
+   ],
+   "tr_views": 3875
+  },
+  {
+   "qid": "Q81056",
+   "label": "Yeni Dünya kunduzu",
+   "links": 65,
+   "value": 470000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeni Dünya kunduzu",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Castor canadensis"
+   ],
+   "tr_views": 1313
+  },
+  {
+   "qid": "Q27471",
+   "label": "Sürmeli çalı kuşu",
+   "links": 62,
+   "value": 176601600.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sürmeli çalı kuşu",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Regulus ignicapilla"
+   ],
+   "tr_views": 541
+  },
+  {
+   "qid": "Q27027",
+   "label": "Bayağı musur",
+   "links": 61,
+   "value": 280000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mutur",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Phocoena phocoena"
+   ],
+   "tr_views": 5388
+  },
+  {
+   "qid": "Q737413",
+   "label": "Büyük nalburunlu yarasa",
+   "links": 52,
+   "value": 110000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük nalburunlu yarasa",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Rhinolophus ferrumequinum"
+   ],
+   "tr_views": 1434
+  },
+  {
+   "qid": "Q651361",
+   "label": "Bayağı ahtapot",
+   "links": 51,
+   "value": 50000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayağı ahtapot",
+   "sex": [],
+   "applies_to": [],
+   "taxon": [
+    "Octopus vulgaris"
+   ],
+   "tr_views": 804
+  }
+ ]
+}

@@ -1,4 +1,4 @@
-"""Build assets/data/places.json from tools/raw/places_*.json.
+"""Build assets/data/places.json from tools/raw/wikidata/places_*.json.
 
 Usage:  python tools/build_places.py
 
@@ -17,7 +17,7 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-RAW_DIR = ROOT / "tools" / "raw"
+RAW_DIR = ROOT / "tools" / "raw" / "wikidata"
 OUT_PATH = ROOT / "assets" / "data" / "places.json"
 
 MAX_SPREAD_KM = 5

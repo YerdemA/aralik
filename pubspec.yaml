@@ -22,4 +22,6 @@ flutter:
   uses-material-design: true
   assets:
     - assets/questions/questions.json
+    - assets/questions/schedule.json
     - assets/data/places.json
+    - assets/data/attributions.json

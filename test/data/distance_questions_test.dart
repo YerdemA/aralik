@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'dart:math' as math;
 
-import 'package:aralik/core/free_play.dart';
 import 'package:aralik/data/distance_questions.dart';
 import 'package:aralik/data/place.dart';
 import 'package:aralik/data/question.dart';
@@ -25,17 +24,6 @@ DistanceQuestions generator({
   List<Place> world = const [_x, _y],
 }) =>
     DistanceQuestions(PlaceData(dataYear: 2026, turkey: turkey, world: world));
-
-Question bankQuestion(String id) => Question(
-  id: id,
-  text: '$id?',
-  answer: 1,
-  unit: 'm',
-  kind: QuestionKind.magnitude,
-  category: QuestionCategory.geography,
-  source: 'https://example.org/$id',
-  dataYear: 2026,
-);
 
 void main() {
   group('Place', () {
@@ -114,69 +102,6 @@ void main() {
         generator().pick(math.Random(3), accept: (_, _, _) => false),
         isNull,
       );
-    });
-  });
-
-  group('buildFreeRound', () {
-    final big = generator(
-      turkey: [
-        for (var i = 0; i < 20; i++)
-          Place(id: 'T$i', name: 'Şehir $i', lat: i.toDouble(), lon: 0),
-      ],
-    );
-
-    test('makes a full round without repeats or seen questions', () {
-      final bank = [for (var i = 0; i < 10; i++) bankQuestion('q$i')];
-      final seen = {'q0', 'q1', 'q2'};
-      for (var seed = 0; seed < 30; seed++) {
-        final round = buildFreeRound(
-          pastBank: bank,
-          generator: big,
-          seen: seen,
-          rng: math.Random(seed),
-        );
-        expect(round, hasLength(5));
-        final ids = round.map((q) => q.id).toList();
-        expect(ids.toSet(), hasLength(5));
-        expect(ids.where(seen.contains), isEmpty);
-      }
-    });
-
-    test('uses each city at most once per round', () {
-      for (var seed = 0; seed < 30; seed++) {
-        final round = buildFreeRound(
-          pastBank: const [],
-          generator: big,
-          seen: const {},
-          rng: math.Random(seed),
-        );
-        final cities = [for (final q in round) ...q.id.split(':').skip(1)];
-        expect(cities.toSet(), hasLength(cities.length));
-      }
-    });
-
-    test('mixes in past daily questions', () {
-      final bank = [for (var i = 0; i < 50; i++) bankQuestion('q$i')];
-      var fromBank = 0;
-      for (var seed = 0; seed < 40; seed++) {
-        fromBank += buildFreeRound(
-          pastBank: bank,
-          generator: big,
-          seen: const {},
-          rng: math.Random(seed),
-        ).where((q) => q.id.startsWith('q')).length;
-      }
-      expect(fromBank, inInclusiveRange(30, 110)); // ~1/3 of 200
-    });
-
-    test('falls back to the bank when the generator is exhausted', () {
-      final round = buildFreeRound(
-        pastBank: [bankQuestion('q1'), bankQuestion('q2')],
-        generator: generator(turkey: const [], world: const []),
-        seen: const {},
-        rng: math.Random(0),
-      );
-      expect(round.map((q) => q.id).toSet(), {'q1', 'q2'});
     });
   });
 

@@ -39,11 +39,46 @@ void main() {
       expect(q.funFact, isNull);
     });
 
+    test('optional fields are null when missing', () {
+      final q = Question.fromJson(sample());
+      expect(q.difficulty, isNull);
+      expect(q.anchor, isNull);
+      expect(q.dataset, isNull);
+    });
+
+    test('reads difficulty, anchor and dataset', () {
+      final q = Question.fromJson(
+        sample(
+          override: {
+            'difficulty': 2,
+            'dataset': 'mountains_tr',
+            'anchor': {
+              'text': 'Erciyes Dağı',
+              'value': 3917,
+              'unit': 'm',
+              'source': 'https://www.wikidata.org/wiki/Q193547',
+            },
+          },
+        ),
+      );
+      expect(q.difficulty, 2);
+      expect(q.dataset, 'mountains_tr');
+      expect(q.anchor!.text, 'Erciyes Dağı');
+      expect(q.anchor!.value, 3917);
+      expect(q.anchor!.unit, 'm');
+      expect(q.anchor!.source, 'https://www.wikidata.org/wiki/Q193547');
+    });
+
     test('reads year questions', () {
       final q = Question.fromJson(
         sample(override: {'kind': 'year', 'answer': 1889, 'unit': ''}),
       );
       expect(q.kind, QuestionKind.year);
+    });
+
+    test('an unknown category falls back to "other"', () {
+      final q = Question.fromJson(sample(override: {'category': 'müzik'}));
+      expect(q.category, QuestionCategory.other);
     });
 
     test('maps every category', () {
@@ -62,9 +97,24 @@ void main() {
         {'answer': 0},
         {'kind': 'distance'},
         {'kind': 'year', 'answer': 1889.5},
-        {'category': 'müzik'},
         {'data_year': '2026'},
         {'fun_fact': 3},
+        {'difficulty': 0},
+        {'difficulty': 4},
+        {'difficulty': '2'},
+        {'dataset': 7},
+        {'anchor': 'Erciyes'},
+        {
+          'anchor': {'text': 'Erciyes', 'value': 3917, 'unit': 'm'},
+        },
+        {
+          'anchor': {
+            'text': 'Erciyes',
+            'value': '3917',
+            'unit': 'm',
+            'source': 'x',
+          },
+        },
       ]) {
         expect(
           () => Question.fromJson(sample(override: override)),
@@ -101,13 +151,26 @@ void main() {
       expect(bank.map((q) => q.id).toSet(), hasLength(bank.length));
     });
 
-    test('serves daily sets and practice pools', () async {
+    test('the bundled schedule fits the bundled bank', () async {
       final repository = QuestionRepository();
       final bank = await repository.load();
-      final day0 = await repository.dailySet(0);
-      expect(day0.map((q) => q.id), bank.take(5).map((q) => q.id));
-      expect(await repository.practicePool(0), isEmpty);
-      expect(await repository.practicePool(2), hasLength(10));
+      final schedule = await repository.schedule();
+      expect(schedule.length, greaterThanOrEqualTo(30));
+      expect(scheduleFitsBank(schedule, bank), isTrue);
+      for (var day = 0; day < schedule.length; day++) {
+        expect(await repository.dailySet(day), hasLength(5), reason: '$day');
+      }
+    });
+
+    test('free play stays clear of the next 60 days', () async {
+      final repository = QuestionRepository();
+      final schedule = await repository.schedule();
+      for (final today in [-6, 0, 10]) {
+        final pool = (await repository.freePlayPool(today)).map((q) => q.id);
+        final upcoming = schedule.upcomingIds(today);
+        expect(pool.where(upcoming.contains), isEmpty, reason: '$today');
+        expect(pool, isNotEmpty, reason: '$today');
+      }
     });
 
     test('can retry after a failed load', () async {

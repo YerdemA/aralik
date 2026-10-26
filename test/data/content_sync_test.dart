@@ -19,6 +19,10 @@ Map<String, Object> q(String id) => {
 
 String bank(List<String> ids) => jsonEncode([for (final id in ids) q(id)]);
 
+List<String> ids(int from, int to) => [for (var i = from; i <= to; i++) 'q$i'];
+
+String schedule(List<List<String>> days) => jsonEncode({'days': days});
+
 const places =
     '{"data_year":2026,'
     '"tr":[{"id":"Q1","name":"A","lat":0,"lon":0},{"id":"Q2","name":"B","lat":0,"lon":1}],'
@@ -50,8 +54,9 @@ void main() {
 
   QuestionRepository repository() => QuestionRepository(
     bundle: _Bundle({
-      QuestionRepository.questionsAssetPath: bank(['q1', 'q2']),
+      QuestionRepository.questionsAssetPath: bank(ids(1, 5)),
       QuestionRepository.placesAssetPath: places,
+      QuestionRepository.scheduleAssetPath: schedule([ids(1, 5)]),
     }),
     remote: ContentSync(prefs, httpGet: fakeGet, clock: () => now),
   );
@@ -59,8 +64,7 @@ void main() {
   Future<SyncResult> sync({bool force = false}) {
     final repo = repository();
     return (repo.remote! as ContentSync).sync(
-      acceptQuestions: repo.acceptsQuestions,
-      acceptPlaces: repo.acceptsPlaces,
+      accept: repo.acceptsContent,
       force: force,
     );
   }
@@ -75,16 +79,19 @@ void main() {
         'version': 2,
         'questions': 'questions.json',
         'places': 'places.json',
+        'schedule': 'schedule.json',
       }),
-      'questions.json': bank(['q1', 'q2', 'q3']),
+      'questions.json': bank(ids(1, 10)),
       'places.json': places,
+      'schedule.json': schedule([ids(1, 5), ids(6, 10)]),
     };
   });
 
-  test('downloads a newer bank and uses it on the next load', () async {
+  test('downloads newer content and uses it on the next load', () async {
     expect(await sync(), SyncResult.updated);
-    final bankIds = (await repository().load()).map((q) => q.id);
-    expect(bankIds, ['q1', 'q2', 'q3']);
+    final repo = repository();
+    expect((await repo.load()).map((q) => q.id), ids(1, 10));
+    expect((await repo.dailySet(1)).map((q) => q.id), ids(6, 10));
   });
 
   test('checks at most every 6 hours', () async {
@@ -99,26 +106,53 @@ void main() {
   });
 
   test('rejects a bank that reorders or drops bundled questions', () async {
-    server['questions.json'] = bank(['q2', 'q1', 'q3']);
+    server['questions.json'] = bank(['q2', 'q1', ...ids(3, 10)]);
     expect(await sync(), SyncResult.rejected);
-    expect((await repository().load()).map((q) => q.id), ['q1', 'q2']);
+    expect((await repository().load()).map((q) => q.id), ids(1, 5));
 
-    server['questions.json'] = bank(['q1']);
+    server['questions.json'] = bank(ids(1, 4));
     expect(await sync(force: true), SyncResult.rejected);
+  });
+
+  test('rejects a schedule that changes a bundled day', () async {
+    server['schedule.json'] = schedule([ids(6, 10), ids(1, 5)]);
+    expect(await sync(), SyncResult.rejected);
+    expect(prefs.getString('content_questions'), isNull); // nothing stored
+    expect((await repository().dailySet(0)).map((q) => q.id), ids(1, 5));
+  });
+
+  test('rejects a schedule naming questions the bank lacks', () async {
+    server['questions.json'] = bank(ids(1, 9));
+    expect(await sync(), SyncResult.rejected);
+  });
+
+  test('ignores a cached schedule that does not fit the bank', () async {
+    await prefs.setString(
+      'content_schedule',
+      schedule([ids(1, 5), ids(6, 10)]),
+    ); // but no downloaded bank with q6–q10
+    expect((await repository().schedule()).length, 1);
   });
 
   test('rejects broken downloads and keeps working offline', () async {
     server['questions.json'] = '[{"id": "q1"}]';
     expect(await sync(), SyncResult.rejected);
 
+    server['questions.json'] = bank(ids(1, 10));
+    server['schedule.json'] = '{"days": [["q1"]]}';
+    expect(await sync(force: true), SyncResult.rejected);
+
     server.clear();
     expect(await sync(force: true), SyncResult.failed);
-    expect((await repository().load()).map((q) => q.id), ['q1', 'q2']);
+    expect((await repository().load()).map((q) => q.id), ids(1, 5));
   });
 
   test('ignores a corrupt cache and falls back to the bundled bank', () async {
     await prefs.setString('content_questions', 'not json');
-    expect((await repository().load()).map((q) => q.id), ['q1', 'q2']);
+    await prefs.setString('content_schedule', 'not json');
+    final repo = repository();
+    expect((await repo.load()).map((q) => q.id), ids(1, 5));
+    expect((await repo.schedule()).length, 1);
   });
 
   test('extendsBank', () {

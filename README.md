@@ -43,7 +43,7 @@ Kalibrasyon %80
 | **İstatistikler** | Oynanan gün, seri, en uzun seri, ortalama ve en iyi gün. Ayrıca zaman içindeki kalibrasyon grafiği, ıskaların yönü (tahminin fazla mı yüksek, fazla mı düşük) ve kategori bazında isabet. |
 
 ## Veri doğruluğu
-Her sorunun cevabı kaynaklıdır ve sayılar asla elle yazılmaz:
+Her sorunun cevabı kaynaklıdır ve sayılar asla elle yazılmaz. Kaynaklar ve lisansları: [docs/SOURCES.md](docs/SOURCES.md), uygulamada gösterilen atıflar: [docs/attributions.md](docs/attributions.md).
 - Banka soruları Wikidata'dan çekilir. Kaynak linki her soruda görünür.
 - Hangi öğelerin soru olacağına, Türkçe Vikipedi'deki son 12 aylık okunma sayısına bakılarak karar verilir. Böylece oyuncunun duymuş olabileceği şeyler sorulur.
 - Mesafe soruları, Wikidata koordinatlarından cihazda hesaplanır.
@@ -54,23 +54,25 @@ Yeni sorular uygulama güncellemesi gerekmeden GitHub Pages'ten indirilir. Gizli
 ## Gelinen nokta (2026-10-26)
 **Tamamlananlar**
 - Proje iskeleti, Türkçe sayı biçimi, tema (açık/koyu, sisteme göre)
-- Wikidata veri hattı ve 213 soruluk banka (coğrafya, tarih, spor, Türkiye, gündelik)
+- Wikidata veri hattı ve 456 soruluk banka: coğrafya, tarih, spor, Türkiye, gündelik, bilim (elementler, Nobel), şirketler, hayvanlar
+- Zorluk tahmini (kolay/orta/zor) ve dengeli günlük takvim: her gün 2 kolay + 2 orta + 1 zor, en az 3 kategori (45 gün)
+- Atıf altyapısı: tek kaynak listesi (`tools/sources.json`), Ayarlar → Veri kaynakları ve lisanslar ekranı, `docs/attributions.md`
 - Soru ekranı: kendi sayı klavyesi, logaritmik/yıl kaydırıcısı, kilitleme
 - Puanlama: interval score, birim testleriyle doğrulanmış
 - Sonuç ekranı, gün/tur özeti, paylaşım, yarıda kalan seti sürdürme
-- Serbest mod ve cihazda üretilen mesafe soruları (79 Türkiye şehri, 40 başkent)
+- Serbest mod: takvimin önümüzdeki 60 gününde olmayan banka soruları ve turda en fazla 1 mesafe sorusu (79 Türkiye şehri, 40 başkent)
 - İnternetten içerik güncelleme (GitHub Pages, 6 saatte bir kontrol)
 - İstatistik ekranı: kalibrasyon grafiği, ıska yönü, kategori bazında isabet
 - Görsel kimlik: ikondaki manzaradan türetilen renkler, kodla çizilen manzara, kategori renkleri ve hafif animasyonlar
 - Uygulama ikonu (uyarlanabilir, yuvarlak, Android 13 tek renkli), gizlilik politikası
 - İmzalı release paketi (AAB)
-- 127 birim ve widget testi, `flutter analyze` sıfır uyarı
+- 139 birim ve widget testi, `flutter analyze` sıfır uyarı
 
 **Sıradakiler**
 - Google Play kapalı teste yükleme (14 gün, en az 12 test kullanıcısı)
-- Açık geri bildirimler: günlük sorular çok zor, serbest mod hep mesafe soruyor, puanlama kolay görünüyor. Ayrıntılar [docs/PLAN.md](docs/PLAN.md) içinde.
-- Soru bankasını 450 soruya çıkarmak (≈ 90 gün)
-- Ayarlar ekranı (tema seçimi, nasıl oynanır, gizlilik, hakkında) ve ilk açılış tanıtımı
+- Açık geri bildirim: puanlama kolay görünüyor. Ayrıntılar [docs/PLAN.md](docs/PLAN.md) içinde.
+- Yeni veri kaynakları ([docs/SOURCES.md](docs/SOURCES.md), 3. adım ve sonrası): AnAge, USDA FoodData, NASA, OurAirports, openfootball, Dünya Bankası, FAOSTAT, İBB, TÜİK. Takvimi uzatmak için en çok kolay sorulara ihtiyaç var.
+- Ayarların geri kalanı (tema seçimi, nasıl oynanır) ve ilk açılış tanıtımı
 - Boyut ölçümü (hedef: indirme boyutu < 8 MB) ve mağaza sayfası
 - Faz 2: günlük hatırlatma bildirimi, kategori seçimli pratik, rozetler
 

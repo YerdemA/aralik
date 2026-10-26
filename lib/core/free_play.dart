@@ -1,62 +1,58 @@
 import 'dart:math' as math;
 
-import '../data/distance_questions.dart';
 import '../data/question.dart';
 import 'daily.dart';
 
-/// Share of free-play questions taken from past daily sets; the rest are
-/// generated on device.
-const double bankShare = 1 / 3;
+/// Picks a generated question that [accept] allows, or null when it has
+/// none left (e.g. `DistanceQuestions.pick`).
+typedef QuestionGenerator = Question? Function(
+  math.Random rng,
+  bool Function(Question q) accept,
+);
+
+/// Generated questions per round, all generators together.
+const int maxGeneratedPerRound = 2;
+
+/// Questions per round from one generator (so at most one distance
+/// question).
+const int maxPerGenerator = 1;
 
 /// Builds one free-play round of [size] questions the player has never
 /// answered ([seen] holds every answered id).
 ///
-/// Mixes unseen questions of past daily sets ([pastBank], so upcoming days
-/// are never spoiled) with generated distance questions. A city appears at
-/// most once per round. May return fewer than [size] questions only when
-/// both sources are exhausted.
+/// Mostly bank questions from [bankPool] (those outside the upcoming
+/// schedule), plus at most [maxPerGenerator] question from each of
+/// [generators] and [maxGeneratedPerRound] in total. The round is shorter
+/// than [size] only when the bank pool runs out; it is empty when nothing
+/// is left at all.
 List<Question> buildFreeRound({
-  required List<Question> pastBank,
-  required DistanceQuestions generator,
+  required List<Question> bankPool,
+  required List<QuestionGenerator> generators,
   required Set<String> seen,
   required math.Random rng,
   int size = questionsPerDay,
 }) {
-  final unseenBank = [
-    for (final q in pastBank)
-      if (!seen.contains(q.id)) q,
-  ]..shuffle(rng);
-
-  final round = <Question>[];
+  final generated = <Question>[];
   final usedIds = <String>{};
-  final usedPlaces = <String>{};
-
-  Question? fromGenerator() => generator.pick(
-    rng,
-    accept: (q, from, to) =>
-        !seen.contains(q.id) &&
-        !usedIds.contains(q.id) &&
-        !usedPlaces.contains(from.id) &&
-        !usedPlaces.contains(to.id),
-  );
-
-  while (round.length < size) {
-    final preferBank = unseenBank.isNotEmpty && rng.nextDouble() < bankShare;
-    Question? next;
-    if (preferBank) {
-      next = unseenBank.removeLast();
-    } else {
-      next = fromGenerator();
-      if (next != null) {
-        // ids look like dist:Q1:Q2
-        usedPlaces.addAll(next.id.split(':').skip(1));
-      } else if (unseenBank.isNotEmpty) {
-        next = unseenBank.removeLast();
-      }
+  for (final generate in [...generators]..shuffle(rng)) {
+    if (generated.length >= maxGeneratedPerRound || generated.length >= size) {
+      break;
     }
-    if (next == null) break;
-    usedIds.add(next.id);
-    round.add(next);
+    for (var n = 0; n < maxPerGenerator; n++) {
+      final q = generate(
+        rng,
+        (q) => !seen.contains(q.id) && !usedIds.contains(q.id),
+      );
+      if (q == null) break;
+      usedIds.add(q.id);
+      generated.add(q);
+    }
   }
-  return round;
+
+  final unseenBank = [
+    for (final q in bankPool)
+      if (!seen.contains(q.id) && !usedIds.contains(q.id)) q,
+  ]..shuffle(rng);
+  final fromBank = unseenBank.take(size - generated.length);
+  return [...fromBank, ...generated]..shuffle(rng);
 }

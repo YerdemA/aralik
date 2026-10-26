@@ -1,11 +1,17 @@
-"""Build assets/questions/questions.json from tools/raw/*.json.
+"""Build assets/questions/questions.json from tools/raw/wikidata/*.json.
 
 Usage:  python tools/build_questions.py [--fresh] [--dry-run] [--report]
 
 The bank is append-only: questions already in questions.json keep their id
-and position (the daily sets depend on it). New questions are shuffled with
-a fixed seed and appended. --fresh rebuilds from scratch; use it only before
-the first player has the app.
+(the daily schedule and the players' seen questions refer to it). New
+questions are shuffled with a fixed seed and appended. --fresh rebuilds from
+scratch; use it only before the first player has the app. Which question
+comes on which day is decided by tools/build_schedule.py, not by the order.
+
+Every question gets its data set and a starting difficulty (1 easy, 2
+medium, 3 hard), estimated from page views, category and kind (see
+difficulty()). tools/difficulty_overrides.json ({"q0012": 1, ...}) fixes
+single questions by hand and wins over the estimate.
 
 Numbers come only from the raw Wikidata dumps. A value is skipped when its
 statements disagree (more than 1% apart, or different years, after rank
@@ -21,6 +27,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import random
 import re
 import sys
@@ -32,12 +39,12 @@ from pathlib import Path
 from typing import Callable
 
 ROOT = Path(__file__).resolve().parent.parent
-RAW_DIR = ROOT / "tools" / "raw"
+RAW_DIR = ROOT / "tools" / "raw" / "wikidata"
 OUT_PATH = ROOT / "assets" / "questions" / "questions.json"
+OVERRIDES_PATH = ROOT / "tools" / "difficulty_overrides.json"
 
 SEED = 20261101
 QUESTIONS_PER_DAY = 5
-MAX_SAME_CATEGORY_PER_DAY = 2
 AMBIGUITY_TOLERANCE = 0.01
 MIN_DATA_YEAR = 2020  # population / capacity figures must be this recent
 
@@ -53,9 +60,33 @@ EXCLUDED = {
     "Q751820": "BJK İnönü Stadyumu yıkıldı; yerine Beşiktaş Stadyumu yapıldı.",
     "Q4450209": "Taksim Stadı yıkıldı.",
     "Q229": "Kıbrıs nüfusu/yüzölçümü Türk kullanıcılar için tartışmalı.",
+    "Q43502": "Dodo'nun nesli tükendi; 'kaç kilogram gelir?' diye sorulamaz.",
 }
 
-FIELD_ORDER = ["id", "text", "answer", "unit", "kind", "category", "source", "data_year", "fun_fact"]
+FIELD_ORDER = [
+    "id", "text", "answer", "unit", "kind", "category", "source", "data_year",
+    "fun_fact", "difficulty", "dataset",
+]
+
+# Starting difficulty. ease = log10(Turkish Wikipedia reads in 12 months)
+# + the adjustments below; higher is easier. Familiar topics and units a
+# player has a feel for are easier; whole-country figures span orders of
+# magnitude nobody has a feel for. Tuned so the bank splits roughly into
+# 40% easy, 40% medium and 20% hard, which is what the schedule uses.
+CATEGORY_EASE = {
+    "türkiye": 0.4,
+    "gündelik": 0.3,
+    "spor": 0.2,
+    "tarih": 0.0,
+    "coğrafya": -0.1,
+    "bilim": -0.2,
+    "hayvanlar": 0.2,
+    "şirketler": 0.0,
+}
+KIND_EASE = {"year": 0.0, "magnitude": -0.1}
+UNIT_EASE = {"kişi": -0.6, "km²": -0.6}
+EASY_MIN_EASE = 4.69  # ease ≥ this → 1 (easy)
+HARD_MAX_EASE = 4.12  # ease < this → 3 (hard)
 
 
 @dataclass
@@ -269,6 +300,227 @@ def no_fact(_: Entity) -> None:
     return None
 
 
+def abroad(template: Template) -> Template:
+    """Skip items in Turkey: structures_tr asks them under "türkiye"."""
+
+    def build(e: Entity, fetched_year: int) -> dict | None:
+        return None if "Türkiye" in e.extra("country") else template(e, fetched_year)
+
+    build.__qualname__ = template.__qualname__
+    return build
+
+
+def tr_capitalize(text: str) -> str:
+    """Upper-case the first letter the Turkish way: 'iyot' → 'İyot'."""
+    if not text:
+        return text
+    first = {"i": "İ", "ı": "I"}.get(text[0], text[0].upper())
+    return first + text[1:]
+
+
+def plain_label(e: Entity) -> str | None:
+    """Labels of common nouns ('demir', 'aslan') start in lower case on
+    Wikidata; accept them, but still reject odd punctuation. A label equal
+    to the scientific name (P225) means the species has no Turkish name,
+    and then it makes no question."""
+    label = e.label.strip()
+    if not label or any(c in label for c in "(),/;:") or re.search(r"\d", label):
+        return None
+    if label.casefold() in {t.casefold() for t in e.extra("taxon")}:
+        return None
+    return label
+
+
+def with_rows(e: Entity, rows: list[dict]) -> Entity:
+    return Entity(e.qid, e.label, e.views, rows, e.homonym)
+
+
+KELVIN = 273.15
+
+
+def element_temperature(verb: str, *, min_celsius: float = 100) -> Template:
+    """Melting or boiling point in °C. Wikidata normalizes temperatures to
+    kelvin. The interval slider is logarithmic, so only clearly positive
+    Celsius values are asked (no mercury or gases)."""
+
+    def build(e: Entity, fetched_year: int) -> dict | None:
+        resolved = resolve_value(e)
+        label = plain_label(e)
+        if not resolved or not label:
+            return None
+        celsius = resolved[0] - KELVIN
+        if celsius < min_celsius:
+            return None
+        return {
+            "text": f"{tr_capitalize(label)} kaç °C'de {verb}?",
+            "answer": round_answer(celsius),
+            "unit": "°C",
+            "kind": "magnitude",
+            "category": "bilim",
+            "data_year": fetched_year,
+            "fun_fact": None,
+        }
+
+    build.__qualname__ = f"temperature[{verb}]"
+    return build
+
+
+def discovered_year(*, min_year: int = 1600) -> Template:
+    """Discovery year of an element; ancient ones have no meaningful year."""
+
+    def build(e: Entity, fetched_year: int) -> dict | None:
+        resolved = resolve_value(e, exact=True)
+        label = plain_label(e)
+        if not resolved or not label or not min_year <= resolved[0] <= fetched_year:
+            return None
+        return {
+            "text": f"{tr_capitalize(label)} hangi yıl keşfedilmiştir?",
+            "answer": int(resolved[0]),
+            "unit": "",
+            "kind": "year",
+            "category": "bilim",
+            "data_year": fetched_year,
+            "fun_fact": None,
+        }
+
+    build.__qualname__ = "discovered"
+    return build
+
+
+# The six Nobel prizes: Turkish name in the accusative, and the category.
+# Not taken from Wikidata labels: Q80061's Turkish label reads "… sahipleri
+# listesi" (2026-10-26).
+NOBEL_PRIZES = {
+    "Q38104": ("Nobel Fizik Ödülü'nü", "bilim"),
+    "Q44585": ("Nobel Kimya Ödülü'nü", "bilim"),
+    "Q80061": ("Nobel Fizyoloji veya Tıp Ödülü'nü", "bilim"),
+    "Q47170": ("Nobel Ekonomi Ödülü'nü", "bilim"),
+    "Q37922": ("Nobel Edebiyat Ödülü'nü", "tarih"),
+    "Q35637": ("Nobel Barış Ödülü'nü", "tarih"),
+}
+
+
+def nobel_year(e: Entity, fetched_year: int) -> dict | None:
+    """Year of a person's Nobel prize. People with several Nobel statements
+    (Curie, Bardeen, Sanger, ...) are skipped: one clear answer only."""
+    prizes = {r.get("value_item") for r in e.rows}
+    resolved = resolve_value(e, exact=True)
+    label = e.question_label(allow_digits=False)
+    if len(prizes) != 1 or not resolved or not label:
+        return None
+    prize, category = NOBEL_PRIZES[prizes.pop()]
+    if not 1901 <= resolved[0] <= fetched_year:
+        return None
+    return {
+        "text": f"{label}, {prize} hangi yıl almıştır?",
+        "answer": int(resolved[0]),
+        "unit": "",
+        "kind": "year",
+        "category": category,
+        "data_year": fetched_year,
+        "fun_fact": None,
+    }
+
+
+nobel_year.__qualname__ = "nobel"
+
+ADULT_WEIGHT = "Q78101716"  # P3831 role: adult weight
+MALE, FEMALE = "Q44148", "Q43445"
+
+
+def animal_mass(e: Entity, fetched_year: int) -> dict | None:
+    """Adult mass, from statements qualified as adult weight (P3831). With
+    separate values per sex the male one is asked, naming the sex; a value
+    without a sex is asked only when no sex-specific value exists."""
+    label = plain_label(e)
+    adult = [r for r in e.rows if ADULT_WEIGHT in r.get("role", [])]
+    if not label or not adult:
+        return None
+    unsexed = [r for r in adult if not r.get("sex")]
+    male = [r for r in adult if r.get("sex") == [MALE]]
+    if male:
+        rows, who = male, "yetişkin erkek"
+    elif unsexed and not any(r.get("sex") for r in adult):
+        rows, who = unsexed, "yetişkin"
+    else:
+        return None
+    resolved = resolve_value(with_rows(e, rows))
+    if not resolved:
+        return None
+    kg = resolved[0]
+    value, unit = (kg, "kg") if kg >= 1 else (kg * 1000, "g")
+    unit_word = "kilogram" if unit == "kg" else "gram"
+    return {
+        "text": f"{tr_capitalize(label)} ({who}) ortalama kaç {unit_word} gelir?",
+        "answer": round_answer(value),
+        "unit": unit,
+        "kind": "magnitude",
+        "category": "hayvanlar",
+        "data_year": fetched_year,
+        "fun_fact": None,
+    }
+
+
+animal_mass.__qualname__ = "animal_mass"
+
+SECONDS_PER_YEAR = 365.25 * 24 * 3600
+
+
+def animal_lifespan(e: Entity, fetched_year: int) -> dict | None:
+    """Life expectancy (P2250, normalized to seconds). Statements limited to
+    a sex or a setting (wild, captivity) are left out: the question could
+    not say which one it means."""
+    label = plain_label(e)
+    rows = [r for r in e.rows if not r.get("sex") and not r.get("applies_to")]
+    if not label or not rows:
+        return None
+    resolved = resolve_value(with_rows(e, rows))
+    if not resolved:
+        return None
+    years = resolved[0] / SECONDS_PER_YEAR
+    if years < 1:
+        return None
+    return {
+        "text": f"{tr_capitalize(label)} ortalama kaç yıl yaşar?",
+        "answer": round_answer(years),
+        "unit": "yıl",
+        "kind": "magnitude",
+        "category": "hayvanlar",
+        "data_year": fetched_year,
+        "fun_fact": None,
+    }
+
+
+animal_lifespan.__qualname__ = "animal_lifespan"
+
+
+def ease(q: dict, views: int) -> float:
+    return (
+        math.log10(max(views, 1))
+        + CATEGORY_EASE.get(q["category"], 0.0)
+        + KIND_EASE.get(q["kind"], 0.0)
+        + UNIT_EASE.get(q["unit"], 0.0)
+    )
+
+
+def difficulty(q: dict, views: int) -> int:
+    """1 easy, 2 medium, 3 hard (see CATEGORY_EASE)."""
+    e = ease(q, views)
+    if e >= EASY_MIN_EASE:
+        return 1
+    return 3 if e < HARD_MAX_EASE else 2
+
+
+def load_overrides() -> dict[str, int]:
+    if not OVERRIDES_PATH.exists():
+        return {}
+    overrides = json.loads(OVERRIDES_PATH.read_text(encoding="utf-8"))
+    bad = {k: v for k, v in overrides.items() if v not in (1, 2, 3)}
+    if bad:
+        sys.exit(f"HATA: difficulty_overrides.json geçersiz değerler: {bad}")
+    return overrides
+
+
 @dataclass(frozen=True)
 class Step:
     dataset: str
@@ -287,24 +539,33 @@ class Step:
 #   single sourced answer.
 # - earthquakes_tr: every label contains the year ("1999 Gölcük depremi").
 PLAN: list[Step] = [
-    Step("mountains_tr", magnitude("{label} kaç metre yüksekliktedir?", "m", "coğrafya", minimum=500), 12, 15000),
-    Step("mountains_world", magnitude("{label} kaç metre yüksekliktedir?", "m", "coğrafya", minimum=500), 14, 10000),
-    Step("rivers_tr", magnitude("{label} kaç kilometre uzunluğundadır?", "km", "coğrafya", scale=1 / 1000, minimum=50, fact=mouth), 10, 15000),
-    Step("rivers_world", magnitude("{label} kaç kilometre uzunluğundadır?", "km", "coğrafya", scale=1 / 1000, minimum=50, fact=mouth), 12, 10000),
-    Step("lakes_tr", magnitude("{label} kaç kilometrekaredir?", "km²", "coğrafya", scale=1 / 1e6, minimum=1), 8, 10000),
-    Step("countries_population", magnitude("{year} verilerine göre {label} nüfusu kaçtır?", "kişi", "coğrafya", latest_year=True, fact=capital, genitive_label=True), 25, 50000),
-    Step("countries_area", magnitude("{label} yüzölçümü kaç kilometrekaredir?", "km²", "coğrafya", scale=1 / 1e6, minimum=1, fact=capital, genitive_label=True), 20, 50000),
-    Step("structures_tr", magnitude("{label} kaç metre yüksekliğindedir?", "m", "türkiye", minimum=30), 10, 15000),
-    Step("structures_world", magnitude("{label} kaç metre yüksekliğindedir?", "m", "gündelik", minimum=30), 14, 10000),
-    Step("bridges_tr", magnitude("{label} kaç metre uzunluğundadır?", "m", "türkiye", minimum=100), 10, 5000),
-    Step("stadiums_tr", magnitude("{label} kaç kişiliktir?", "kişi", "spor", minimum=1000), 12, 5000),
-    Step("structures_tr", opened_year("tarih"), 4, 15000),
-    Step("structures_world", opened_year("tarih"), 10, 10000),
-    Step("bridges_tr", opened_year("türkiye"), 6, 5000),
-    Step("clubs_tr", year_of("{label} hangi yıl kurulmuştur?", "spor"), 20, 15000),
-    Step("universities_tr", year_of("{label} hangi yıl kurulmuştur?", "türkiye"), 15, 30000),
-    Step("battles", year_of("{label} hangi yıl yaşanmıştır?", "tarih", fact=no_fact), 30, 30000),
-    Step("wars", year_of("{label} hangi yıl başlamıştır?", "tarih", fact=no_fact), 20, 30000),
+    Step("mountains_tr", magnitude("{label} kaç metre yüksekliktedir?", "m", "coğrafya", minimum=500), 19, 7500),
+    Step("mountains_world", magnitude("{label} kaç metre yüksekliktedir?", "m", "coğrafya", minimum=500), 22, 5000),
+    Step("rivers_tr", magnitude("{label} kaç kilometre uzunluğundadır?", "km", "coğrafya", scale=1 / 1000, minimum=50, fact=mouth), 16, 7500),
+    Step("rivers_world", magnitude("{label} kaç kilometre uzunluğundadır?", "km", "coğrafya", scale=1 / 1000, minimum=50, fact=mouth), 19, 5000),
+    Step("lakes_tr", magnitude("{label} kaç kilometrekaredir?", "km²", "coğrafya", scale=1 / 1e6, minimum=1), 13, 5000),
+    Step("countries_population", magnitude("{year} verilerine göre {label} nüfusu kaçtır?", "kişi", "coğrafya", latest_year=True, fact=capital, genitive_label=True), 40, 25000),
+    Step("countries_area", magnitude("{label} yüzölçümü kaç kilometrekaredir?", "km²", "coğrafya", scale=1 / 1e6, minimum=1, fact=capital, genitive_label=True), 32, 25000),
+    Step("structures_tr", magnitude("{label} kaç metre yüksekliğindedir?", "m", "türkiye", minimum=30), 16, 7500),
+    Step("structures_world", magnitude("{label} kaç metre yüksekliğindedir?", "m", "gündelik", minimum=30), 22, 5000),
+    Step("bridges_tr", magnitude("{label} kaç metre uzunluğundadır?", "m", "türkiye", minimum=100), 16, 2500),
+    Step("stadiums_tr", magnitude("{label} kaç kişiliktir?", "kişi", "spor", minimum=1000), 19, 2500),
+    Step("structures_tr", opened_year("tarih"), 6, 7500),
+    Step("structures_world", opened_year("tarih"), 16, 5000),
+    Step("bridges_tr", opened_year("türkiye"), 10, 2500),
+    Step("clubs_tr", year_of("{label} hangi yıl kurulmuştur?", "spor"), 32, 7500),
+    Step("universities_tr", year_of("{label} hangi yıl kurulmuştur?", "türkiye"), 24, 15000),
+    Step("battles", year_of("{label} hangi yıl yaşanmıştır?", "tarih", fact=no_fact), 48, 15000),
+    Step("wars", year_of("{label} hangi yıl başlamıştır?", "tarih", fact=no_fact), 32, 15000),
+    Step("skyscrapers_world", abroad(magnitude("{label} kaç metre yüksekliğindedir?", "m", "gündelik", minimum=100)), 12, 2000),
+    Step("companies_founded", year_of("{label} hangi yıl kurulmuştur?", "şirketler"), 25, 5000),
+    Step("companies_employees", magnitude("{year} verilerine göre {label} kaç kişi çalıştırmaktadır?", "kişi", "şirketler", latest_year=True, minimum=100, genitive_label=False), 12, 5000),
+    Step("elements_melting", element_temperature("erir"), 10, 1000),
+    Step("elements_boiling", element_temperature("kaynar"), 8, 1000),
+    Step("elements_discovered", discovered_year(), 12, 1000),
+    Step("nobel", nobel_year, 25, 5000),
+    Step("animals_mass", animal_mass, 15, 1000),
+    Step("animals_lifespan", animal_lifespan, 8, 1000),
 ]
 
 
@@ -334,6 +595,8 @@ def generate(report: bool = False) -> list[dict]:
                 continue
             taken.add(key)
             q["source"] = entity.source
+            q["dataset"] = step.dataset
+            q["difficulty"] = difficulty(q, entity.views)
             q["_views"] = entity.views
             questions.append(q)
             chosen.append((entity, q))
@@ -343,49 +606,24 @@ def generate(report: bool = False) -> list[dict]:
         print(f"  {step.dataset:22} {name:16} {made:3} soru, {skipped} uygunsuz{note}")
         if report:
             for entity, q in chosen:
-                print(f"      + {entity.views:>8,} {q['text']} = {q['answer']} {q['unit']}")
+                print(f"      + {entity.views:>8,} z{q['difficulty']} {q['text']} = {q['answer']} {q['unit']}")
             for entity in passed[:3]:
                 print(f"      - {entity.views:>8,} {entity.label}")
     return questions
 
 
-def order_for_days(questions: list[dict], offset: int, rng: random.Random) -> list[dict]:
-    """Spread categories evenly, then greedily avoid repeating a source or
-    flooding a category within a day."""
-    # Stratified shuffle: the k-th of n questions in a category sorts near
-    # position k/n, so every category is spread over the whole bank instead
-    # of the largest one piling up at the end.
-    by_category: dict[str, list[dict]] = {}
-    for q in questions:
-        by_category.setdefault(q["category"], []).append(q)
-    keyed = []
-    for category in sorted(by_category):
-        group = by_category[category]
-        rng.shuffle(group)
-        for k, q in enumerate(group):
-            keyed.append(((k + rng.random()) / len(group), q))
-    keyed.sort(key=lambda kq: kq[0])
-    pool = [q for _, q in keyed]
-    ordered: list[dict] = []
-    while pool:
-        day_start = ((offset + len(ordered)) // QUESTIONS_PER_DAY) * QUESTIONS_PER_DAY - offset
-        day = ordered[max(day_start, 0) :]
-        sources = {q["source"] for q in day}
-        categories = Counter(q["category"] for q in day)
-
-        def fits(q: dict, strict: bool) -> bool:
-            if q["source"] in sources:
-                return False
-            return not strict or categories[q["category"]] < MAX_SAME_CATEGORY_PER_DAY
-
-        # The category rule only looks a few items ahead, so it varies a day
-        # locally without dragging a big category towards the end.
-        window = pool[:QUESTIONS_PER_DAY]
-        pick = next((q for q in window if fits(q, True)), None)
-        pick = pick or next((q for q in pool if fits(q, False)), pool[0])
-        pool.remove(pick)
-        ordered.append(pick)
-    return ordered
+def print_difficulty_table(bank: list[dict]) -> None:
+    """Difficulty × category counts, and how many days 2+2+1 allows."""
+    categories = sorted({q["category"] for q in bank})
+    counts = Counter((q.get("difficulty"), q["category"]) for q in bank)
+    print("\nZorluk × kategori:")
+    print(f"  {'':10}" + "".join(f"{c:>10}" for c in categories) + f"{'toplam':>10}")
+    for d, name in ((1, "kolay"), (2, "orta"), (3, "zor")):
+        row = [counts[(d, c)] for c in categories]
+        print(f"  {name:10}" + "".join(f"{n:>10}" for n in row) + f"{sum(row):>10}")
+    by_difficulty = Counter(q.get("difficulty") for q in bank)
+    days = min(by_difficulty[1] // 2, by_difficulty[2] // 2, by_difficulty[3])
+    print(f"  2 kolay + 2 orta + 1 zor ile en fazla {days} gün (kategori/veri seti kuralları hariç).")
 
 
 def main(argv: list[str]) -> int:
@@ -409,23 +647,30 @@ def main(argv: list[str]) -> int:
         old = known.get((q["source"], q["kind"]))
         if old is None:
             new.append(q)
-        elif old["answer"] != q["answer"]:
+            continue
+        if old["answer"] != q["answer"]:
             print(f"  UYARI: {old['id']} cevabı değişmiş: {old['answer']} -> {q['answer']} (dokunulmadı)")
+        # Metadata may be refreshed; the schedule does not depend on it.
+        old["dataset"] = q["dataset"]
+        old["difficulty"] = q["difficulty"]
 
-    # Within the new batch, better-known items come first: the first weeks
-    # (and the closed test) should not start with the obscure tail.
-    new.sort(key=lambda q: -q["_views"])
-    head, tail = new[: len(new) // 2], new[len(new) // 2 :]
+    # The order does not matter for the daily sets (build_schedule.py picks
+    # them); shuffle so nothing reads the file order as a ranking.
     rng = random.Random(f"{SEED}:{len(existing)}")
-    ordered = order_for_days(head, len(existing), rng)
-    ordered += order_for_days(tail, len(existing) + len(ordered), rng)
+    rng.shuffle(new)
     next_number = max((int(q["id"][1:]) for q in existing), default=0) + 1
-    for i, q in enumerate(ordered):
+    for i, q in enumerate(new):
         q["id"] = f"q{next_number + i:04d}"
-    bank = existing + [{key: q[key] for key in FIELD_ORDER} for q in ordered]
+    bank = existing + new
 
-    print(f"{len(existing)} mevcut + {len(ordered)} yeni = {len(bank)} soru "
-          f"({len(bank) // QUESTIONS_PER_DAY} gün).")
+    overrides = load_overrides()
+    for q in bank:
+        if q["id"] in overrides:
+            q["difficulty"] = overrides[q["id"]]
+    bank = [{key: q[key] for key in FIELD_ORDER if key in q} for q in bank]
+
+    print(f"{len(existing)} mevcut + {len(new)} yeni = {len(bank)} soru.")
+    print_difficulty_table(bank)
     if args.dry_run:
         return 0
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)

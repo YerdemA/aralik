@@ -25,3 +25,12 @@ Veri çekerken görülen hatalar. Wikidata'da düzeltilirse bir sonraki çekimde
 3. Test kullanıcılarının (en az 12) e-postalarını listeye ekle. 14 günlük sayaç yayınlandığı an başlar.
 4. Gizlilik politikası URL'si: GitHub Pages'teki `privacy-policy` sayfası. Veri güvenliği formu: veri toplanmıyor.
 5. `android/key.properties` ve `aralik-upload.jks` dosyalarını güvenli bir yere yedekle. Kaybolursa güncelleme yüklenemez.
+
+## 6. Yeni içeriği yayına al ve linkleri kontrol et (push sonrası)
+Banka 456 soruya, takvim 45 güne çıktı. `docs/content/` yerelde `--reset` ile hazırlandı (sürüm 2).
+1. `docs/` dahil commit'i GitHub'a push et.
+2. Tarayıcıda aç ve sayfaların açıldığını kontrol et (uygulama bu adresleri gösteriyor):
+   - https://yerdema.github.io/aralik/privacy-policy.html
+   - https://yerdema.github.io/aralik/attributions.html
+   - https://yerdema.github.io/aralik/content/manifest.json (`"version": 2` ve `"schedule"` görünmeli)
+3. GitHub Pages kapalıysa: repo → Settings → Pages → Branch: `main`, klasör: `/docs`.
