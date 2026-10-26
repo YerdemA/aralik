@@ -2,17 +2,6 @@
 
 Claude'un yapamadığı ya da senin kararını bekleyen işler. Bitenleri sil.
 
-## 1. Klasörü ASCII adla yeniden adlandır (`Aralık` → `Aralik`, i noktalı)
-"ı" harfi yüzünden Windows'ta Android Gradle build'i ve `flutter analyze` çalışmıyor.
-Şimdilik `subst A: "D:\Yazilim\Mobil\Aralık"` ile `A:\` üzerinden çalıştırılıyor.
-Açık oturum klasörü kullandığı için yeniden adlandırma oturum içinden yapılamadı.
-
-1. Claude Code, VS Code / Android Studio ve açık terminalleri kapat.
-2. `D:\Yazilim\Mobil\Aralık` klasörünü `Aralik` olarak yeniden adlandır.
-3. Yeni klasörde: `flutter clean; flutter pub get; flutter build apk --release`
-4. Claude Code'u yeni klasörde aç. (Claude'un proje hafızası eski yola bağlı. İstersen
-   `C:\Users\yusuf\.claude\projects\D--Yazilim-Mobil-Aral-k\memory\` içeriğini yeni projenin klasörüne kopyala.)
-
 ## 3. Soru bankasına göz at (31 Ekim'e kadar, isteğe bağlı)
 Banka 2026-10-26'da Türkçe Vikipedi okunma sayılarına göre yeniden kuruldu (213 soru).
 `python tools/build_questions.py --fresh --dry-run --report` her veri setinde seçilenleri ve sınırda kalanları okunma sayılarıyla listeler.
@@ -29,7 +18,10 @@ Veri çekerken görülen hatalar. Wikidata'da düzeltilirse bir sonraki çekimde
 - Bingöl ilinin "başkent" (P36) bilgisi yok, bu yüzden mesafe sorularında Bingöl yok.
 - Çankırı şehrinin birbirinden >5 km farklı iki koordinatı var, bu yüzden Çankırı da şimdilik dışarıda.
 
-## 5. (5. gün) Release imzası
-Play'e yüklemek için upload keystore gerekiyor. Şifreleri sen belirlemelisin:
-`keytool -genkey -v -keystore $env:USERPROFILE\aralik-upload.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload`
-Sonra `android/key.properties` oluşturulur (git'e girmez). Gradle tarafını Claude bağlar.
+## 5. Kapalı teste yükle (5. gün)
+İmzalı paket hazır: `build\app\outputs\bundle\release\app-release.aab` (upload anahtarıyla imzalı, 2026-10-26 doğrulandı).
+1. Play Console → uygulama oluştur (`com.yerdema.aralik`) → Test → Kapalı test → yeni sürüm → AAB'yi yükle.
+2. `build\symbols` klasörünü sakla (çökme raporlarını çözmek için gerekli, git'e girmez).
+3. Test kullanıcılarının (en az 12) e-postalarını listeye ekle. 14 günlük sayaç yayınlandığı an başlar.
+4. Gizlilik politikası URL'si: GitHub Pages'teki `privacy-policy` sayfası. Veri güvenliği formu: veri toplanmıyor.
+5. `android/key.properties` ve `aralik-upload.jks` dosyalarını güvenli bir yere yedekle. Kaybolursa güncelleme yüklenemez.

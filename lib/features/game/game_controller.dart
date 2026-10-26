@@ -30,6 +30,7 @@ class RoundAnswer {
   final int points;
 
   bool get hit => isHit(low, high, question.answer);
+  Outcome get outcome => Outcome.of(low, high, question.answer);
   ResultTier get tier => ResultTier.of(points: points, hit: hit);
 }
 

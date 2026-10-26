@@ -1,6 +1,12 @@
+import 'package:aralik/core/scoring.dart';
+import 'package:aralik/data/question.dart';
 import 'package:aralik/data/stats_store.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+const _geo = QuestionCategory.geography;
+
+Outcome _outcome(bool hit) => hit ? Outcome.hit : Outcome.tooHigh;
 
 void main() {
   setUp(() => SharedPreferences.setMockInitialValues({}));
@@ -14,8 +20,16 @@ void main() {
 
   test('records answers and persists them', () async {
     final stats = await StatsStore.open();
-    await stats.recordAnswer(questionId: 'q0001', hit: true);
-    await stats.recordAnswer(questionId: 'dist:Q1:Q2', hit: false);
+    await stats.recordAnswer(
+      questionId: 'q0001',
+      category: _geo,
+      outcome: Outcome.hit,
+    );
+    await stats.recordAnswer(
+      questionId: 'dist:Q1:Q2',
+      category: _geo,
+      outcome: Outcome.tooLow,
+    );
     expect(stats.seenIds, {'q0001', 'dist:Q1:Q2'});
     expect(stats.answered, 2);
     expect(stats.hits, 1);
@@ -30,7 +44,11 @@ void main() {
     final stats = await StatsStore.open();
     var calls = 0;
     stats.addListener(() => calls++);
-    await stats.recordAnswer(questionId: 'q1', hit: true);
+    await stats.recordAnswer(
+      questionId: 'q1',
+      category: _geo,
+      outcome: Outcome.hit,
+    );
     expect(calls, 1);
   });
 
@@ -39,7 +57,8 @@ void main() {
     for (var i = 0; i < 4; i++) {
       await stats.recordAnswer(
         questionId: 'q$i',
-        hit: true,
+        category: _geo,
+        outcome: _outcome(true),
         dailyDay: 7,
         points: 50 + i,
       );
@@ -50,7 +69,8 @@ void main() {
 
     await stats.recordAnswer(
       questionId: 'q4',
-      hit: false,
+      category: _geo,
+      outcome: _outcome(false),
       dailyDay: 7,
       points: 0,
     );
@@ -75,7 +95,11 @@ void main() {
 
   test('free-play answers do not touch daily progress', () async {
     final stats = await StatsStore.open();
-    await stats.recordAnswer(questionId: 'dist:Q1:Q2', hit: true);
+    await stats.recordAnswer(
+      questionId: 'dist:Q1:Q2',
+      category: _geo,
+      outcome: Outcome.hit,
+    );
     expect(stats.completedDays, isEmpty);
     expect(stats.dailyResults(0), isEmpty);
   });
@@ -83,5 +107,41 @@ void main() {
   test('seenIds is read-only', () async {
     final stats = await StatsStore.open();
     expect(() => stats.seenIds.add('x'), throwsUnsupportedError);
+  });
+
+  test('keeps an answer log across launches', () async {
+    final stats = await StatsStore.open();
+    await stats.recordAnswer(
+      questionId: 'q1',
+      category: QuestionCategory.history,
+      outcome: Outcome.tooLow,
+      points: -40,
+    );
+    await stats.recordAnswer(
+      questionId: 'q2',
+      category: QuestionCategory.sports,
+      outcome: Outcome.hit,
+      points: 85,
+    );
+    final expected = [
+      (
+        category: QuestionCategory.history,
+        points: -40,
+        outcome: Outcome.tooLow,
+      ),
+      (category: QuestionCategory.sports, points: 85, outcome: Outcome.hit),
+    ];
+    expect(stats.answerLog, expected);
+    expect((await StatsStore.open()).answerLog, expected);
+  });
+
+  test('skips log entries it cannot read', () async {
+    SharedPreferences.setMockInitialValues({
+      'answer_log': ['geography:85:h', 'nope', 'music:10:h', 'tarih:x:h'],
+    });
+    final stats = await StatsStore.open();
+    expect(stats.answerLog, [
+      (category: QuestionCategory.geography, points: 85, outcome: Outcome.hit),
+    ]);
   });
 }

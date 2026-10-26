@@ -34,6 +34,20 @@ int currentStreak(Set<int> completedDays, int today) {
   return streak;
 }
 
+/// Longest run of consecutive days in [completedDays].
+int longestStreak(Set<int> completedDays) {
+  var best = 0;
+  for (final day in completedDays) {
+    if (completedDays.contains(day - 1)) continue; // not a run's start
+    var length = 1;
+    while (completedDays.contains(day + length)) {
+      length++;
+    }
+    if (length > best) best = length;
+  }
+  return best;
+}
+
 /// Bank indices of the questions for [dayIndex]:
 /// `5·dayIndex .. 5·dayIndex+4`, wrapping around when the bank runs out.
 List<int> dailyIndices(int dayIndex, int bankSize) {

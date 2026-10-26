@@ -11,9 +11,11 @@ import '../../core/strings.dart';
 import '../../data/question_repository.dart';
 import '../../data/stats_store.dart';
 import '../../widgets/calibration_text.dart';
+import '../../widgets/stat_tile.dart';
 import '../game/game_controller.dart';
 import '../game/game_screen.dart';
 import '../result/summary_screen.dart';
+import '../stats/stats_screen.dart';
 
 /// Today's set (play / continue / done + share), streak, last score,
 /// calibration, and free play.
@@ -71,7 +73,8 @@ class _HomeScreenState extends State<HomeScreen> {
           alreadyAnswered: done,
           onLocked: (a) => _stats.recordAnswer(
             questionId: a.question.id,
-            hit: a.hit,
+            category: a.question.category,
+            outcome: a.outcome,
             dailyDay: day,
             points: a.points,
           ),
@@ -107,8 +110,12 @@ class _HomeScreenState extends State<HomeScreen> {
         MaterialPageRoute(
           builder: (_) => GameScreen(
             questions: round,
-            onLocked: (a) =>
-                _stats.recordAnswer(questionId: a.question.id, hit: a.hit),
+            onLocked: (a) => _stats.recordAnswer(
+              questionId: a.question.id,
+              category: a.question.category,
+              outcome: a.outcome,
+              points: a.points,
+            ),
           ),
         ),
       );
@@ -126,6 +133,12 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   });
 
+  void _openStats() => Navigator.of(context).push(
+    MaterialPageRoute<void>(
+      builder: (_) => StatsScreen(stats: _stats, today: _today),
+    ),
+  );
+
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -141,6 +154,14 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
+                  Align(
+                    alignment: Alignment.topRight,
+                    child: IconButton(
+                      onPressed: _openStats,
+                      tooltip: AppStrings.stats,
+                      icon: const Icon(Icons.bar_chart_rounded),
+                    ),
+                  ),
                   const Spacer(),
                   Text(
                     AppStrings.appName,
@@ -255,34 +276,13 @@ class _StatsRow extends StatelessWidget {
         : formatPercent(stats.hits / stats.answered);
     return Row(
       children: [
-        _Stat(
+        StatTile(
           label: AppStrings.streak,
           value: AppStrings.streakDays(stats.streak(today)),
         ),
-        _Stat(label: AppStrings.lastScore, value: lastScore),
-        _Stat(label: AppStrings.calibration, value: calibration),
+        StatTile(label: AppStrings.lastScore, value: lastScore),
+        StatTile(label: AppStrings.calibration, value: calibration),
       ],
-    );
-  }
-}
-
-class _Stat extends StatelessWidget {
-  const _Stat({required this.label, required this.value});
-
-  final String label;
-  final String value;
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    return Expanded(
-      child: Column(
-        children: [
-          Text(value, style: theme.textTheme.headlineMedium),
-          const SizedBox(height: 2),
-          Text(label, style: theme.textTheme.labelMedium),
-        ],
-      ),
     );
   }
 }

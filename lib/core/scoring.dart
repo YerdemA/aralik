@@ -32,6 +32,23 @@ const double yearPointsPerYear = 1;
 /// Whether [answer] lies inside the closed interval [low, high].
 bool isHit(num low, num high, num answer) => low <= answer && answer <= high;
 
+/// Where the answer fell relative to a locked interval.
+enum Outcome {
+  hit,
+
+  /// The whole interval was above the answer (overestimate).
+  tooHigh,
+
+  /// The whole interval was below the answer (underestimate).
+  tooLow;
+
+  static Outcome of(num low, num high, num answer) => answer < low
+      ? tooHigh
+      : answer > high
+      ? tooLow
+      : hit;
+}
+
 /// Interval score S of one locked interval (lower is better).
 ///
 /// * magnitude: on a log2 axis, so ×2 too high costs as much as ÷2 too low

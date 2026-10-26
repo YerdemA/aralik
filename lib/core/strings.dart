@@ -75,9 +75,34 @@ abstract final class AppStrings {
 
   // Stats
   static const gamesPlayed = 'Oynanan gün';
-  static const averageScore = 'Ortalama puan';
-  static const hitRate = 'İsabet oranı';
+  static const averageScore = 'Ortalama';
+  static const bestDay = 'En iyi gün';
+  static const longestStreak = 'En uzun seri';
+  static const answeredCount = 'Cevaplanan';
   static const byCategory = 'Kategoriye göre';
+  static const missDirection = 'Iskaların';
+  static const statsEmpty = 'Henüz istatistik yok. İlk soruları oyna.';
+  static String calibrationChartCaption(int blockSize) =>
+      'Her sütun $blockSize soru. Kesikli çizgi %90 hedefi.';
+  static String calibrationChartEmpty(int blockSize) =>
+      'Grafik, ilk $blockSize sorudan sonra burada.';
+  static String calibrationChartSemantics(String rates) =>
+      'Son sütunların isabet oranları: $rates';
+  static const missBiasHigh =
+      'Iskalarının çoğunda tahminin fazla yüksekti. Aralığı aşağı da aç.';
+  static const missBiasLow =
+      'Iskalarının çoğunda tahminin fazla düşüktü. Aralığı yukarı da aç.';
+  static const missBiasNone = 'Iskaların iki yöne dengeli dağılıyor.';
+  static String categoryTally(String percent, int answered) =>
+      '$percent · $answered soru';
+
+  // Categories
+  static const categoryGeography = 'Coğrafya';
+  static const categoryHistory = 'Tarih';
+  static const categoryTurkey = 'Türkiye';
+  static const categoryScience = 'Bilim';
+  static const categorySports = 'Spor';
+  static const categoryEveryday = 'Gündelik';
 
   // Settings
   static const theme = 'Tema';

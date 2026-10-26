@@ -4,6 +4,7 @@ import 'package:aralik/core/theme.dart';
 import 'package:aralik/data/question_repository.dart';
 import 'package:aralik/data/stats_store.dart';
 import 'package:aralik/features/home/home_screen.dart';
+import 'package:aralik/features/stats/stats_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -62,5 +63,12 @@ void main() {
     expect(find.text(AppStrings.playToday), findsNothing);
     expect(find.text(AppStrings.streakDays(1)), findsOneWidget);
     expect(find.text('287'), findsOneWidget); // last score
+  });
+
+  testWidgets('the chart icon opens the stats screen', (tester) async {
+    await pumpHome(tester);
+    await tester.tap(find.byTooltip(AppStrings.stats));
+    await tester.pumpAndSettle();
+    expect(find.byType(StatsScreen), findsOneWidget);
   });
 }
