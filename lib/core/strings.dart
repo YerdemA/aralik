@@ -1,3 +1,5 @@
+import '../data/question.dart';
+
 /// Every user-facing Turkish string lives here.
 abstract final class AppStrings {
   static const appName = 'Aralık';
@@ -122,3 +124,13 @@ abstract final class AppStrings {
       '%90 emin olduğun aralığı ver. Uzun vadede 10 sorunun 9\'unu tutturmalısın.';
   static const start = 'Başla';
 }
+
+/// Display name of a question category.
+String categoryName(QuestionCategory c) => switch (c) {
+  QuestionCategory.geography => AppStrings.categoryGeography,
+  QuestionCategory.history => AppStrings.categoryHistory,
+  QuestionCategory.turkey => AppStrings.categoryTurkey,
+  QuestionCategory.science => AppStrings.categoryScience,
+  QuestionCategory.sports => AppStrings.categorySports,
+  QuestionCategory.everyday => AppStrings.categoryEveryday,
+};

@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../core/number_format.dart';
+import '../../core/scoring.dart';
 import '../../core/strings.dart';
+import '../../core/theme.dart';
 import '../../data/question.dart';
+import '../../widgets/category_chip.dart';
 import '../../widgets/number_pad.dart';
 import '../result/result_screen.dart';
 import 'game_controller.dart';
@@ -74,6 +77,13 @@ class _GameScreenState extends State<GameScreen> {
             tooltip: AppStrings.quit,
             onPressed: () => Navigator.of(context).pop(),
           ),
+          bottom: PreferredSize(
+            preferredSize: const Size.fromHeight(12),
+            child: _Progress(
+              done: widget.alreadyAnswered + _game.answers.length,
+              total: widget.alreadyAnswered + _game.questions.length,
+            ),
+          ),
         ),
         body: SafeArea(
           child: Padding(
@@ -81,10 +91,7 @@ class _GameScreenState extends State<GameScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Text(
-                  _game.question.text,
-                  style: Theme.of(context).textTheme.headlineSmall,
-                ),
+                _QuestionCard(question: _game.question),
                 Expanded(
                   child: AnimatedSwitcher(
                     duration: const Duration(milliseconds: 200),
@@ -102,6 +109,100 @@ class _GameScreenState extends State<GameScreen> {
           ),
         ),
       ),
+    );
+  }
+}
+
+/// One segment per question; locked ones fill in.
+class _Progress extends StatelessWidget {
+  const _Progress({required this.done, required this.total});
+
+  final int done;
+  final int total;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
+      child: Row(
+        children: [
+          for (var i = 0; i < total; i++)
+            Expanded(
+              child: AnimatedContainer(
+                duration: const Duration(milliseconds: 300),
+                height: 6,
+                margin: const EdgeInsets.symmetric(horizontal: 3),
+                decoration: BoxDecoration(
+                  color: i < done
+                      ? scheme.tertiary
+                      : i == done
+                      ? scheme.primary
+                      : scheme.surfaceContainerHighest,
+                  borderRadius: BorderRadius.circular(3),
+                ),
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+}
+
+class _QuestionCard extends StatelessWidget {
+  const _QuestionCard({required this.question});
+
+  final Question question;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 16, 20, 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CategoryChip(category: question.category),
+            const SizedBox(height: 12),
+            AnimatedSwitcher(
+              duration: const Duration(milliseconds: 250),
+              child: Text(
+                question.text,
+                key: ValueKey(question.id),
+                style: Theme.of(context).textTheme.headlineSmall,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Rounded frame for the big number; lights up once there is a value.
+class _Display extends StatelessWidget {
+  const _Display({required this.active, required this.child});
+
+  final bool active;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 200),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+      decoration: BoxDecoration(
+        color: active
+            ? Theme.of(context).cardTheme.color
+            : scheme.surfaceContainerHigh,
+        borderRadius: BorderRadius.circular(22),
+        border: Border.all(
+          color: active ? scheme.primary : Colors.transparent,
+          width: 2,
+        ),
+      ),
+      child: child,
     );
   }
 }
@@ -128,18 +229,24 @@ class _GuessStep extends StatelessWidget {
           style: theme.textTheme.labelLarge,
           textAlign: TextAlign.center,
         ),
-        const SizedBox(height: 4),
-        FittedBox(
-          fit: BoxFit.scaleDown,
-          child: Text(
-            guess == null
-                ? AppStrings.typeYourGuess
-                : [
-                    _formatGuess(game, guess),
-                    if (unit.isNotEmpty) unit,
-                  ].join(' '),
-            style: theme.textTheme.displayMedium?.copyWith(
-              color: guess == null ? theme.colorScheme.outline : null,
+        const SizedBox(height: 8),
+        _Display(
+          active: guess != null,
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              guess == null
+                  ? AppStrings.typeYourGuess
+                  : [
+                      _formatGuess(game, guess),
+                      if (unit.isNotEmpty) unit,
+                    ].join(' '),
+              style: guess == null
+                  ? theme.textTheme.headlineMedium?.copyWith(
+                      color: theme.colorScheme.outline,
+                      height: 1.6,
+                    )
+                  : theme.textTheme.displayMedium,
             ),
           ),
         ),
@@ -151,9 +258,10 @@ class _GuessStep extends StatelessWidget {
           onClear: game.clear,
         ),
         const SizedBox(height: 12),
-        FilledButton(
+        FilledButton.icon(
           onPressed: game.canConfirmGuess ? game.confirmGuess : null,
-          child: const Text(AppStrings.next),
+          icon: const Icon(Icons.arrow_forward_rounded),
+          label: const Text(AppStrings.next),
         ),
       ],
     );
@@ -195,19 +303,16 @@ class _WidthStep extends StatelessWidget {
           style: theme.textTheme.labelLarge,
           textAlign: TextAlign.center,
         ),
-        const SizedBox(height: 4),
-        FittedBox(
-          fit: BoxFit.scaleDown,
-          child: Text(range, style: theme.textTheme.displayMedium),
-        ),
         const SizedBox(height: 8),
-        Text(
-          AppStrings.potentialPoints(game.potentialPoints),
-          style: theme.textTheme.titleMedium?.copyWith(
-            color: theme.colorScheme.primary,
+        _Display(
+          active: true,
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(range, style: theme.textTheme.displayMedium),
           ),
-          textAlign: TextAlign.center,
         ),
+        const SizedBox(height: 14),
+        Center(child: _PotentialPill(points: game.potentialPoints)),
         const Spacer(),
         Slider(
           value: game.width,
@@ -231,6 +336,44 @@ class _WidthStep extends StatelessWidget {
           label: const Text(AppStrings.lock),
         ),
       ],
+    );
+  }
+}
+
+/// "İsabet edersen 85 puan", tinted like the result square it would earn.
+class _PotentialPill extends StatelessWidget {
+  const _PotentialPill({required this.points});
+
+  final int points;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final color = theme.extension<GameColors>()!.forTier(
+      ResultTier.of(points: points, hit: true),
+    );
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 200),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: .16),
+        borderRadius: BorderRadius.circular(99),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(Icons.bolt_rounded, size: 20, color: color),
+          const SizedBox(width: 4),
+          Flexible(
+            child: Text(
+              AppStrings.potentialPoints(points),
+              style: theme.textTheme.titleMedium?.copyWith(
+                color: theme.colorScheme.onSurface,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

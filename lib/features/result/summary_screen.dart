@@ -5,6 +5,7 @@ import '../../core/scoring.dart';
 import '../../core/strings.dart';
 import '../../core/theme.dart';
 import '../../widgets/calibration_text.dart';
+import '../../widgets/count_up.dart';
 
 enum SummaryAction { newRound, home }
 
@@ -31,6 +32,16 @@ class SummaryScreen extends StatelessWidget {
 
   bool get _isDaily => shareText != null;
 
+  /// Green when calibrated, amber when off, neutral without enough data.
+  Color _calibrationColor(ThemeData theme) {
+    final colors = theme.extension<GameColors>()!;
+    return switch (calibrationFeedback(hits, answered)) {
+      CalibrationFeedback.good => colors.good,
+      CalibrationFeedback.notEnoughData => theme.colorScheme.primary,
+      _ => colors.partial,
+    };
+  }
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -51,18 +62,48 @@ class SummaryScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 8),
-              Text(
-                '$total / $max',
-                style: theme.textTheme.displayMedium,
-                textAlign: TextAlign.center,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.baseline,
+                textBaseline: TextBaseline.alphabetic,
+                children: [
+                  CountUp(
+                    value: total,
+                    duration: const Duration(milliseconds: 1000),
+                    style: theme.textTheme.displayLarge?.copyWith(
+                      color: theme.colorScheme.primary,
+                    ),
+                  ),
+                  Text(
+                    ' / $max',
+                    style: theme.textTheme.headlineSmall?.copyWith(
+                      color: theme.colorScheme.onSurfaceVariant,
+                    ),
+                  ),
+                ],
               ),
-              const SizedBox(height: 20),
-              _TierRow(results: results),
               const SizedBox(height: 24),
-              Text(
-                calibrationSummary(hits, answered),
-                style: theme.textTheme.titleMedium,
-                textAlign: TextAlign.center,
+              _TierRow(results: results),
+              const SizedBox(height: 28),
+              Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.track_changes_rounded,
+                        color: _calibrationColor(theme),
+                      ),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: Text(
+                          calibrationSummary(hits, answered),
+                          style: theme.textTheme.titleMedium,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
               if (_isDaily) ...[
                 const SizedBox(height: 8),
@@ -85,15 +126,17 @@ class SummaryScreen extends StatelessWidget {
                   label: const Text(AppStrings.share),
                 )
               else
-                FilledButton(
+                FilledButton.icon(
                   onPressed: () =>
                       Navigator.of(context).pop(SummaryAction.newRound),
-                  child: const Text(AppStrings.newRound),
+                  icon: const Icon(Icons.refresh_rounded),
+                  label: const Text(AppStrings.newRound),
                 ),
               const SizedBox(height: 8),
-              TextButton(
+              TextButton.icon(
+                icon: const Icon(Icons.home_rounded),
+                label: const Text(AppStrings.backHome),
                 onPressed: () => Navigator.of(context).pop(SummaryAction.home),
-                child: const Text(AppStrings.backHome),
               ),
             ],
           ),
@@ -103,7 +146,8 @@ class SummaryScreen extends StatelessWidget {
   }
 }
 
-/// Coloured squares matching the share card.
+/// Coloured squares matching the share card, popping in one by one, with
+/// each question's points below.
 class _TierRow extends StatelessWidget {
   const _TierRow({required this.results});
 
@@ -111,23 +155,44 @@ class _TierRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colors = Theme.of(context).extension<GameColors>()!;
+    final theme = Theme.of(context);
+    final colors = theme.extension<GameColors>()!;
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        for (final r in results)
+        for (final (i, r) in results.indexed)
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 4),
-            child: Tooltip(
-              message: '${r.points} ${AppStrings.points}',
-              child: Container(
-                width: 40,
-                height: 40,
-                decoration: BoxDecoration(
-                  color: colors.forTier(r.tier),
-                  borderRadius: BorderRadius.circular(8),
+            padding: const EdgeInsets.symmetric(horizontal: 5),
+            child: Column(
+              children: [
+                // Later squares take longer, so they land one after another.
+                TweenAnimationBuilder<double>(
+                  tween: Tween(begin: 0, end: 1),
+                  duration: Duration(milliseconds: 350 + 150 * i),
+                  curve: Interval(
+                    i / (results.length + 1),
+                    1,
+                    curve: Curves.easeOutBack,
+                  ),
+                  builder: (context, t, child) =>
+                      Transform.scale(scale: t, child: child),
+                  child: Container(
+                    width: 48,
+                    height: 48,
+                    decoration: BoxDecoration(
+                      color: colors.forTier(r.tier),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
                 ),
-              ),
+                const SizedBox(height: 6),
+                Text(
+                  '${r.points}',
+                  style: theme.textTheme.labelMedium?.copyWith(
+                    color: theme.colorScheme.onSurfaceVariant,
+                  ),
+                ),
+              ],
             ),
           ),
       ],

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../core/number_format.dart';
 import '../../core/scoring.dart';
 import '../../core/strings.dart';
+import '../../core/theme.dart';
 
 /// Hit rate per block of answers as bars, with a dashed 90% target line.
 class CalibrationChart extends StatelessWidget {
@@ -13,7 +14,9 @@ class CalibrationChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+    final colors = theme.extension<GameColors>()!;
     return Semantics(
       label: AppStrings.calibrationChartSemantics(
         rates.map(formatPercent).join(', '),
@@ -24,7 +27,8 @@ class CalibrationChart extends StatelessWidget {
         child: CustomPaint(
           painter: _ChartPainter(
             rates: rates,
-            bar: scheme.primary,
+            good: colors.good,
+            off: scheme.primary,
             track: scheme.surfaceContainerHighest,
             target: scheme.onSurfaceVariant,
           ),
@@ -37,13 +41,19 @@ class CalibrationChart extends StatelessWidget {
 class _ChartPainter extends CustomPainter {
   _ChartPainter({
     required this.rates,
-    required this.bar,
+    required this.good,
+    required this.off,
     required this.track,
     required this.target,
   });
 
   final List<double> rates;
-  final Color bar;
+
+  /// Blocks within the "good" band (80–95%).
+  final Color good;
+
+  /// Other blocks.
+  final Color off;
   final Color track;
   final Color target;
 
@@ -59,7 +69,6 @@ class _ChartPainter extends CustomPainter {
       _maxBarWidth,
     );
     final trackPaint = Paint()..color = track;
-    final barPaint = Paint()..color = bar;
     for (var i = 0; i < rates.length; i++) {
       final left = i * (width + _gap);
       canvas.drawRRect(
@@ -70,7 +79,7 @@ class _ChartPainter extends CustomPainter {
       if (top < size.height) {
         canvas.drawRRect(
           RRect.fromLTRBR(left, top, left + width, size.height, _radius),
-          barPaint,
+          Paint()..color = _inBand(rates[i]) ? good : off,
         );
       }
     }
@@ -90,10 +99,15 @@ class _ChartPainter extends CustomPainter {
     }
   }
 
+  static bool _inBand(double rate) =>
+      calibrationFeedback((rate * 100).round(), 100) ==
+      CalibrationFeedback.good;
+
   @override
   bool shouldRepaint(_ChartPainter old) =>
       old.rates != rates ||
-      old.bar != bar ||
+      old.good != good ||
+      old.off != off ||
       old.track != track ||
       old.target != target;
 }

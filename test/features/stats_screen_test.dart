@@ -55,6 +55,10 @@ void main() {
     expect(find.text('300'), findsOneWidget); // best day
     expect(find.byType(CalibrationChart), findsOneWidget);
     expect(find.text(AppStrings.missBiasHigh), findsOneWidget);
+    await tester.scrollUntilVisible(
+      find.text(AppStrings.categoryTally('%55', 11)),
+      200,
+    );
     expect(find.text(AppStrings.categoryHistory), findsOneWidget);
     expect(find.text(AppStrings.categoryTally('%100', 6)), findsOneWidget);
     expect(find.text(AppStrings.categoryTally('%55', 11)), findsOneWidget);

@@ -5,7 +5,7 @@ import '../../core/number_format.dart';
 import '../../core/scoring.dart';
 import '../../core/stats.dart';
 import '../../core/strings.dart';
-import '../../data/question.dart';
+import '../../core/theme.dart';
 import '../../data/stats_store.dart';
 import '../../widgets/calibration_text.dart';
 import '../../widgets/stat_tile.dart';
@@ -37,18 +37,31 @@ class StatsScreen extends StatelessWidget {
             : ListView(
                 padding: const EdgeInsets.fromLTRB(24, 8, 24, 24),
                 children: [
-                  _DailySection(stats: stats, today: today),
-                  const SizedBox(height: 32),
-                  _CalibrationSection(stats: stats),
+                  _Section(
+                    child: _DailySection(stats: stats, today: today),
+                  ),
+                  const SizedBox(height: 16),
+                  _Section(child: _CalibrationSection(stats: stats)),
                   if (stats.answerLog.isNotEmpty) ...[
-                    const SizedBox(height: 32),
-                    _CategorySection(log: stats.answerLog),
+                    const SizedBox(height: 16),
+                    _Section(child: _CategorySection(log: stats.answerLog)),
                   ],
                 ],
               ),
       ),
     );
   }
+}
+
+class _Section extends StatelessWidget {
+  const _Section({required this.child});
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) => Card(
+    child: Padding(padding: const EdgeInsets.all(20), child: child),
+  );
 }
 
 class _DailySection extends StatelessWidget {
@@ -64,16 +77,27 @@ class _DailySection extends StatelessWidget {
       for (final d in days) totalPoints(stats.dailyResults(d)),
     ]);
     String orDash(int? v) => v == null ? AppStrings.noValue : '$v';
+    final colors = Theme.of(context).extension<GameColors>()!;
+    final primary = Theme.of(context).colorScheme.primary;
     return Column(
       children: [
         Row(
           children: [
-            StatTile(label: AppStrings.gamesPlayed, value: '${summary.days}'),
             StatTile(
+              icon: Icons.calendar_month_rounded,
+              color: primary,
+              label: AppStrings.gamesPlayed,
+              value: '${summary.days}',
+            ),
+            StatTile(
+              icon: Icons.local_fire_department_rounded,
+              color: colors.streak,
               label: AppStrings.streak,
               value: AppStrings.streakDays(stats.streak(today)),
             ),
             StatTile(
+              icon: Icons.whatshot_rounded,
+              color: colors.streak,
               label: AppStrings.longestStreak,
               value: AppStrings.streakDays(longestStreak(days)),
             ),
@@ -83,11 +107,20 @@ class _DailySection extends StatelessWidget {
         Row(
           children: [
             StatTile(
+              icon: Icons.functions_rounded,
+              color: primary,
               label: AppStrings.averageScore,
               value: orDash(summary.average),
             ),
-            StatTile(label: AppStrings.bestDay, value: orDash(summary.best)),
             StatTile(
+              icon: Icons.emoji_events_rounded,
+              color: colors.partial,
+              label: AppStrings.bestDay,
+              value: orDash(summary.best),
+            ),
+            StatTile(
+              icon: Icons.quiz_rounded,
+              color: primary,
               label: AppStrings.answeredCount,
               value: formatNumber(stats.answered),
             ),
@@ -139,7 +172,17 @@ class _CalibrationSection extends StatelessWidget {
         ],
         if (misses >= minMissesForBias) ...[
           const SizedBox(height: 16),
-          Text(bias, style: textTheme.bodyMedium),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Icon(
+                Icons.swap_vert_rounded,
+                color: Theme.of(context).colorScheme.tertiary,
+              ),
+              const SizedBox(width: 8),
+              Expanded(child: Text(bias, style: textTheme.bodyMedium)),
+            ],
+          ),
         ],
       ],
     );
@@ -150,15 +193,6 @@ class _CategorySection extends StatelessWidget {
   const _CategorySection({required this.log});
 
   final List<AnswerRecord> log;
-
-  static String _name(QuestionCategory c) => switch (c) {
-    QuestionCategory.geography => AppStrings.categoryGeography,
-    QuestionCategory.history => AppStrings.categoryHistory,
-    QuestionCategory.turkey => AppStrings.categoryTurkey,
-    QuestionCategory.science => AppStrings.categoryScience,
-    QuestionCategory.sports => AppStrings.categorySports,
-    QuestionCategory.everyday => AppStrings.categoryEveryday,
-  };
 
   @override
   Widget build(BuildContext context) {
@@ -178,9 +212,15 @@ class _CategorySection extends StatelessWidget {
               children: [
                 Row(
                   children: [
+                    Icon(
+                      category.icon,
+                      size: 20,
+                      color: category.color(theme.brightness),
+                    ),
+                    const SizedBox(width: 8),
                     Expanded(
                       child: Text(
-                        _name(category),
+                        categoryName(category),
                         style: theme.textTheme.titleSmall,
                       ),
                     ),
@@ -196,8 +236,12 @@ class _CategorySection extends StatelessWidget {
                 const SizedBox(height: 6),
                 LinearProgressIndicator(
                   value: tally.hits / tally.answered,
-                  minHeight: 8,
-                  borderRadius: BorderRadius.circular(4),
+                  minHeight: 10,
+                  borderRadius: BorderRadius.circular(5),
+                  color: category.color(theme.brightness),
+                  backgroundColor: category
+                      .color(theme.brightness)
+                      .withValues(alpha: .15),
                 ),
               ],
             ),
