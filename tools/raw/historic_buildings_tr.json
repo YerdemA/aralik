@@ -1,0 +1,2400 @@
+{
+ "dataset": "historic_buildings_tr",
+ "description": "Türkiye'deki cami, kale ve saraylar, yapım yılı (P571)",
+ "property": "P571",
+ "fetched_at": "2026-10-26T10:13:17+00:00",
+ "rows": [
+  {
+   "qid": "Q12506",
+   "label": "Ayasofya",
+   "links": 152,
+   "value": 360.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ayasofya",
+   "place": [
+    "Cankurtaran",
+    "Fatih",
+    "İstanbul"
+   ],
+   "tr_views": 179603
+  },
+  {
+   "qid": "Q12506",
+   "label": "Ayasofya",
+   "links": 152,
+   "value": 415.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ayasofya",
+   "place": [
+    "Cankurtaran",
+    "Fatih",
+    "İstanbul"
+   ],
+   "tr_views": 179603
+  },
+  {
+   "qid": "Q12506",
+   "label": "Ayasofya",
+   "links": 152,
+   "value": 532.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Ayasofya",
+   "place": [
+    "Cankurtaran",
+    "Fatih",
+    "İstanbul"
+   ],
+   "tr_views": 179603
+  },
+  {
+   "qid": "Q12506",
+   "label": "Ayasofya",
+   "links": 152,
+   "value": 537.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ayasofya",
+   "place": [
+    "Cankurtaran",
+    "Fatih",
+    "İstanbul"
+   ],
+   "tr_views": 179603
+  },
+  {
+   "qid": "Q80541",
+   "label": "Sultanahmet Camii",
+   "links": 89,
+   "value": 1609.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sultanahmet Camii",
+   "place": [
+    "Eminönü"
+   ],
+   "tr_views": 118650
+  },
+  {
+   "qid": "Q170495",
+   "label": "Topkapı Sarayı",
+   "links": 79,
+   "value": 1460.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Topkapı Sarayı",
+   "place": [
+    "Eminönü",
+    "İstanbul"
+   ],
+   "tr_views": 156074
+  },
+  {
+   "qid": "Q170495",
+   "label": "Topkapı Sarayı",
+   "links": 79,
+   "value": 1475.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Topkapı Sarayı",
+   "place": [
+    "Eminönü",
+    "İstanbul"
+   ],
+   "tr_views": 156074
+  },
+  {
+   "qid": "Q178643",
+   "label": "Süleymaniye Camii",
+   "links": 69,
+   "value": 1550.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Süleymaniye Camii",
+   "place": [
+    "Fatih",
+    "İstanbul"
+   ],
+   "tr_views": 120909
+  },
+  {
+   "qid": "Q184534",
+   "label": "Selimiye Camii",
+   "links": 67,
+   "value": 1575.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Selimiye Camii",
+   "place": [
+    "Edirne"
+   ],
+   "tr_views": 117014
+  },
+  {
+   "qid": "Q274141",
+   "label": "Dolmabahçe Sarayı",
+   "links": 53,
+   "value": 1823.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dolmabahçe Sarayı",
+   "place": [
+    "Beşiktaş"
+   ],
+   "tr_views": 167409
+  },
+  {
+   "qid": "Q911720",
+   "label": "Yeni Cami",
+   "links": 41,
+   "value": 1597.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeni Cami",
+   "place": [
+    "Eminönü"
+   ],
+   "tr_views": 47782
+  },
+  {
+   "qid": "Q581641",
+   "label": "Divriği Ulu Camii ve Darüşşifası",
+   "links": 40,
+   "value": 1229.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Divriği Ulu Camii ve Darüşşifası",
+   "place": [
+    "Divriği"
+   ],
+   "tr_views": 72711
+  },
+  {
+   "qid": "Q853935",
+   "label": "Kocatepe Camii",
+   "links": 40,
+   "value": 1987.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kocatepe Camii",
+   "place": [
+    "Ankara"
+   ],
+   "tr_views": 20720
+  },
+  {
+   "qid": "Q176380",
+   "label": "Ortaköy Camii",
+   "links": 38,
+   "value": 1856.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük Mecidiye Camii",
+   "place": [
+    "Beşiktaş"
+   ],
+   "tr_views": 43615
+  },
+  {
+   "qid": "Q756189",
+   "label": "Fatih Camii",
+   "links": 38,
+   "value": 1464.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fatih Camii",
+   "place": [
+    "Fatih"
+   ],
+   "tr_views": 93778
+  },
+  {
+   "qid": "Q1144576",
+   "label": "Küçük Ayasofya Camii",
+   "links": 36,
+   "value": 526.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük Ayasofya Camii",
+   "place": [
+    "Fatih",
+    "İstanbul"
+   ],
+   "tr_views": 16761
+  },
+  {
+   "qid": "Q90801",
+   "label": "Rumeli Hisarı",
+   "links": 34,
+   "value": 1451.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rumeli Hisarı",
+   "place": [
+    "Sarıyer",
+    "İstanbul"
+   ],
+   "tr_views": 40533
+  },
+  {
+   "qid": "Q1137511",
+   "label": "Rüstem Paşa Camii",
+   "links": 33,
+   "value": 1561.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rüstem Paşa Camii",
+   "place": [
+    "Eminönü",
+    "Tahtakale"
+   ],
+   "tr_views": 14830
+  },
+  {
+   "qid": "Q1572472",
+   "label": "Sokollu Mehmed Paşa Camii",
+   "links": 33,
+   "value": 1665.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sokollu Mehmed Paşa Külliyesi",
+   "place": [
+    "Fatih",
+    "İstanbul"
+   ],
+   "tr_views": 6272
+  },
+  {
+   "qid": "Q273225",
+   "label": "Çırağan Sarayı",
+   "links": 33,
+   "value": 1863.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çırağan Sarayı",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 73465
+  },
+  {
+   "qid": "Q794349",
+   "label": "Beylerbeyi Sarayı",
+   "links": 33,
+   "value": 1865.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Beylerbeyi Sarayı",
+   "place": [
+    "Üsküdar"
+   ],
+   "tr_views": 59442
+  },
+  {
+   "qid": "Q911734",
+   "label": "Yıldız Sarayı",
+   "links": 33,
+   "value": 1790.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yıldız Sarayı",
+   "place": [
+    "Beşiktaş"
+   ],
+   "tr_views": 69456
+  },
+  {
+   "qid": "Q32339",
+   "label": "Bursa Ulu Camii",
+   "links": 32,
+   "value": 1396.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bursa Ulu Camii",
+   "place": [
+    "Bursa"
+   ],
+   "tr_views": 73951
+  },
+  {
+   "qid": "Q853064",
+   "label": "Bayezid Camii",
+   "links": 32,
+   "value": 1506.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayezid Camii",
+   "place": [
+    "Fatih"
+   ],
+   "tr_views": 21018
+  },
+  {
+   "qid": "Q1581190",
+   "label": "Mihrimah Sultan Camii",
+   "links": 31,
+   "value": 1562.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mihrimah Sultan Camii (Edirnekapı)",
+   "place": [
+    "Edirnekapı, Fatih",
+    "İstanbul"
+   ],
+   "tr_views": 15942
+  },
+  {
+   "qid": "Q197094",
+   "label": "Zeyrek Camii",
+   "links": 31,
+   "value": 1136.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zeyrek Camii",
+   "place": [
+    "Fatih",
+    "Zeyrek"
+   ],
+   "tr_views": 24731
+  },
+  {
+   "qid": "Q590900",
+   "label": "Laleli Camii",
+   "links": 31,
+   "value": 1763.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Laleli Camii",
+   "place": [
+    "Fatih",
+    "İstanbul"
+   ],
+   "tr_views": 8613
+  },
+  {
+   "qid": "Q1430090",
+   "label": "Nuruosmaniye Camii",
+   "links": 30,
+   "value": 1755.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nuruosmaniye Camii",
+   "place": [
+    "Fatih"
+   ],
+   "tr_views": 36000
+  },
+  {
+   "qid": "Q2086068",
+   "label": "Dolmabahçe Camii",
+   "links": 29,
+   "value": 1855.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dolmabahçe Camii",
+   "place": [
+    "Beyoğlu"
+   ],
+   "tr_views": 12299
+  },
+  {
+   "qid": "Q956677",
+   "label": "Eyüp Sultan Camii",
+   "links": 29,
+   "value": 1458.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eyüp Sultan Camii",
+   "place": [
+    "Eyüpsultan",
+    "İstanbul"
+   ],
+   "tr_views": 35585
+  },
+  {
+   "qid": "Q1113602",
+   "label": "Bodrum Kalesi",
+   "links": 28,
+   "value": 1522.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bodrum Kalesi",
+   "place": [
+    "Bodrum"
+   ],
+   "tr_views": 16283
+  },
+  {
+   "qid": "Q1568666",
+   "label": "Ayasofya Camii, Trabzon",
+   "links": 28,
+   "value": 1238.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ayasofya (Trabzon)",
+   "place": [
+    "Trabzon"
+   ],
+   "tr_views": 24248
+  },
+  {
+   "qid": "Q18341384",
+   "label": "Çamlıca Camii",
+   "links": 28,
+   "value": 2019.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çamlıca Camii",
+   "place": [
+    "Üsküdar"
+   ],
+   "tr_views": 53770
+  },
+  {
+   "qid": "Q1381468",
+   "label": "Sabancı Merkez Camii",
+   "links": 27,
+   "value": 1998.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sabancı Merkez Camii",
+   "place": [
+    "Adana"
+   ],
+   "tr_views": 18386
+  },
+  {
+   "qid": "Q1549086",
+   "label": "Yeşil Camii",
+   "links": 25,
+   "value": 1420.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeşil Cami (Bursa)",
+   "place": [
+    "Bursa"
+   ],
+   "tr_views": 21626
+  },
+  {
+   "qid": "Q3307794",
+   "label": "Eski Camii (Edirne)",
+   "links": 25,
+   "value": 1402.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eski Cami",
+   "place": [
+    "Edirne"
+   ],
+   "tr_views": 12303
+  },
+  {
+   "qid": "Q3308631",
+   "label": "Üç Şerefeli Cami",
+   "links": 25,
+   "value": 1438.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Üç Şerefeli Cami",
+   "place": [
+    "Edirne"
+   ],
+   "tr_views": 13315
+  },
+  {
+   "qid": "Q642478",
+   "label": "Arap Camii",
+   "links": 25,
+   "value": 1325.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arap Camii",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 23653
+  },
+  {
+   "qid": "Q1573438",
+   "label": "Yıldız Camii",
+   "links": 24,
+   "value": 1886.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yıldız Camii",
+   "place": [
+    "Beşiktaş",
+    "İstanbul"
+   ],
+   "tr_views": 12834
+  },
+  {
+   "qid": "Q2334567",
+   "label": "Yeni Valide Camii",
+   "links": 24,
+   "value": 1710.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeni Valide Camii",
+   "place": [
+    "Üsküdar"
+   ],
+   "tr_views": 14488
+  },
+  {
+   "qid": "Q2565329",
+   "label": "Yavuz Selim Camii",
+   "links": 24,
+   "value": 1527.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yavuz Selim Camii",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 25089
+  },
+  {
+   "qid": "Q1501534",
+   "label": "İshak Paşa Sarayı",
+   "links": 23,
+   "value": 1784.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İshak Paşa Sarayı",
+   "place": [
+    "Ağrı",
+    "Doğubayazıt",
+    "Yukarıtavla"
+   ],
+   "tr_views": 76825
+  },
+  {
+   "qid": "Q1572395",
+   "label": "Sinan Paşa Camii",
+   "links": 23,
+   "value": 1554.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sinan Paşa Camii (Beşiktaş)",
+   "place": [
+    "Beşiktaş",
+    "İstanbul"
+   ],
+   "tr_views": 7631
+  },
+  {
+   "qid": "Q2620007",
+   "label": "Alaeddin Camii",
+   "links": 23,
+   "value": 1235.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Alâeddin Camii (Konya)",
+   "place": [
+    "Konya"
+   ],
+   "tr_views": 12841
+  },
+  {
+   "qid": "Q2719785",
+   "label": "Pertevniyal Valide Sultan Camii",
+   "links": 23,
+   "value": 1871.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pertevniyal Valide Sultan Camii",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 28000
+  },
+  {
+   "qid": "Q1753844",
+   "label": "Yivli Minare",
+   "links": 22,
+   "value": 1230.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yivli Minare",
+   "place": [
+    "Antalya",
+    "Muratpaşa"
+   ],
+   "tr_views": 9603
+  },
+  {
+   "qid": "Q2537376",
+   "label": "Mihrimah Sultan Camii",
+   "links": 22,
+   "value": 1548.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mihrimah Sultan Camii (Üsküdar)",
+   "place": [
+    "Üsküdar"
+   ],
+   "tr_views": 29173
+  },
+  {
+   "qid": "Q3675546",
+   "label": "Ulu Camii",
+   "links": 22,
+   "value": 1091.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Diyarbakır Ulu Camii",
+   "place": [
+    "Diyarbakır",
+    "Sur"
+   ],
+   "tr_views": 32517
+  },
+  {
+   "qid": "Q196161",
+   "label": "Ani Katedrali",
+   "links": 21,
+   "value": 1001.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ani Katedrali",
+   "place": [
+    "Ani"
+   ],
+   "tr_views": 2580
+  },
+  {
+   "qid": "Q862848",
+   "label": "Kılıç Ali Paşa Camii",
+   "links": 21,
+   "value": 1578.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kılıç Ali Paşa Camii",
+   "place": [
+    "Beyoğlu",
+    "İstanbul"
+   ],
+   "tr_views": 14272
+  },
+  {
+   "qid": "Q1153320",
+   "label": "Zeynep Sultan Camii",
+   "links": 20,
+   "value": 1769.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zeynep Sultan Camii",
+   "place": [
+    "Fatih"
+   ],
+   "tr_views": 4120
+  },
+  {
+   "qid": "Q1572457",
+   "label": "Zal Mahmud Paşa Camii",
+   "links": 20,
+   "value": 1590.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zal Mahmud Paşa Camii",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 14224
+  },
+  {
+   "qid": "Q2705343",
+   "label": "Şakirin Camii",
+   "links": 20,
+   "value": 2009.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şakirin Camii",
+   "place": [
+    "Üsküdar"
+   ],
+   "tr_views": 12606
+  },
+  {
+   "qid": "Q1207606",
+   "label": "Emir Sultan Camii",
+   "links": 19,
+   "value": 1868.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Emir Sultan Camii",
+   "place": [
+    "Bursa",
+    "Yıldırım"
+   ],
+   "tr_views": 7432
+  },
+  {
+   "qid": "Q1572481",
+   "label": "Gazi Atik Ali Paşa Camii",
+   "links": 19,
+   "value": 1497.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gazi Atik Ali Paşa Camii",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 3802
+  },
+  {
+   "qid": "Q1673689",
+   "label": "İsa Bey Camii",
+   "links": 19,
+   "value": 1374.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İsa Bey Camii",
+   "place": [
+    "Selçuk",
+    "İzmir"
+   ],
+   "tr_views": 5911
+  },
+  {
+   "qid": "Q614237",
+   "label": "Nusretiye Camii",
+   "links": 19,
+   "value": 1826.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nusretiye Camii",
+   "place": [
+    "Beyoğlu",
+    "İstanbul"
+   ],
+   "tr_views": 13256
+  },
+  {
+   "qid": "Q1801490",
+   "label": "Namrun Kalesi",
+   "links": 18,
+   "value": 1071.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Namrun Kalesi",
+   "place": [
+    "Kilikya Ermeni Krallığı",
+    "Çamlıyayla"
+   ],
+   "tr_views": 2214
+  },
+  {
+   "qid": "Q2565317",
+   "label": "Firuz Ağa Camii",
+   "links": 18,
+   "value": 1491.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Firuz Ağa Camii",
+   "place": [
+    "Fatih"
+   ],
+   "tr_views": 3474
+  },
+  {
+   "qid": "Q2706762",
+   "label": "Atik Mustafa Paşa Camii",
+   "links": 18,
+   "value": 1059.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Atik Mustafa Paşa Camii",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 2133
+  },
+  {
+   "qid": "Q1572431",
+   "label": "Şemsi Paşa Camii",
+   "links": 17,
+   "value": 1581.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şemsi Paşa Camii",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 29945
+  },
+  {
+   "qid": "Q31190329",
+   "label": "Taksim Camii",
+   "links": 17,
+   "value": 2021.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Taksim Camii",
+   "place": [
+    "Beyoğlu"
+   ],
+   "tr_views": 15141
+  },
+  {
+   "qid": "Q6061170",
+   "label": "Şişli Camii",
+   "links": 17,
+   "value": 1949.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şişli Camii",
+   "place": [
+    "Şişli"
+   ],
+   "tr_views": 5749
+  },
+  {
+   "qid": "Q769575",
+   "label": "Hacı Bayram Camii",
+   "links": 17,
+   "value": 1428.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hacı Bayram Camii",
+   "place": [
+    "Ankara"
+   ],
+   "tr_views": 16035
+  },
+  {
+   "qid": "Q8080096",
+   "label": "İlyas Bey Camii",
+   "links": 17,
+   "value": 1403.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İlyas Bey Camii",
+   "place": [
+    "Didim"
+   ],
+   "tr_views": 1524
+  },
+  {
+   "qid": "Q2483550",
+   "label": "Eski Valide Camii",
+   "links": 16,
+   "value": 1586.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eski Valide Camii",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 9522
+  },
+  {
+   "qid": "Q2494934",
+   "label": "Eşrefoğlu Camii",
+   "links": 16,
+   "value": 1299.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eşrefoğlu Camii",
+   "place": [
+    "Beyşehir"
+   ],
+   "tr_views": 22736
+  },
+  {
+   "qid": "Q2058733",
+   "label": "Defterdar Camii",
+   "links": 15,
+   "value": 1542.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Defterdar Camii",
+   "place": [
+    "Defterdar",
+    "Eyüpsultan",
+    "İstanbul"
+   ],
+   "tr_views": 806
+  },
+  {
+   "qid": "Q2330055",
+   "label": "Ihlamur Kasrı",
+   "links": 15,
+   "value": 1855.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ihlamur Kasrı",
+   "place": [
+    "Beşiktaş",
+    "Türkali",
+    "İstanbul"
+   ],
+   "tr_views": 14194
+  },
+  {
+   "qid": "Q2719784",
+   "label": "Teşvikiye Camii",
+   "links": 15,
+   "value": 1794.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Teşvikiye Camii",
+   "place": [
+    "İstanbul",
+    "Şişli"
+   ],
+   "tr_views": 9619
+  },
+  {
+   "qid": "Q2719794",
+   "label": "Küçük Mecidiye Camii",
+   "links": 15,
+   "value": 1848.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük Mecidiye Camii",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 3468
+  },
+  {
+   "qid": "Q8053361",
+   "label": "İznik Yeşil Cami",
+   "links": 15,
+   "value": 1378.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeşil Cami (İznik)",
+   "place": [
+    "İznik"
+   ],
+   "tr_views": 7281
+  },
+  {
+   "qid": "Q1590626",
+   "label": "Burmalı Mescit",
+   "links": 14,
+   "value": 1550.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Burmalı Mescid Camii",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 1048
+  },
+  {
+   "qid": "Q4022219",
+   "label": "Adana Ulu Camii",
+   "links": 14,
+   "value": 1541.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Adana Ulu Camii",
+   "place": [
+    "Adana"
+   ],
+   "tr_views": 6000
+  },
+  {
+   "qid": "Q5626500",
+   "label": "Gökmedrese",
+   "links": 14,
+   "value": 1271.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gök Medrese (Sivas)",
+   "place": [
+    "Sivas"
+   ],
+   "tr_views": 15314
+  },
+  {
+   "qid": "Q6049880",
+   "label": "Bebek Camii",
+   "links": 14,
+   "value": 1913.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bebek Camii",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 3012
+  },
+  {
+   "qid": "Q8077521",
+   "label": "Çankaya Köşkü",
+   "links": 14,
+   "value": 1932.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çankaya Köşkü",
+   "place": [
+    "Çankaya"
+   ],
+   "tr_views": 44996
+  },
+  {
+   "qid": "Q12808583",
+   "label": "Askeri Müze",
+   "links": 12,
+   "value": 1846.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Askerî Müze (İstanbul)",
+   "place": [
+    "Şişli"
+   ],
+   "tr_views": 7496
+  },
+  {
+   "qid": "Q1295761",
+   "label": "Selimiye Camii",
+   "links": 12,
+   "value": 1558.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Selimiye Camii (Konya)",
+   "place": [
+    "Karatay"
+   ],
+   "tr_views": 8223
+  },
+  {
+   "qid": "Q131421221",
+   "label": "Beylerbeyi Camii",
+   "links": 12,
+   "value": 1429.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Beylerbeyi Camii (Edirne)",
+   "place": [
+    "Edirne"
+   ],
+   "tr_views": 356
+  },
+  {
+   "qid": "Q1420248",
+   "label": "Hoşap Kalesi",
+   "links": 12,
+   "value": 1643.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hoşap Kalesi",
+   "place": [
+    "Gürpınar",
+    "Hoşap",
+    "Van"
+   ],
+   "tr_views": 11861
+  },
+  {
+   "qid": "Q1572444",
+   "label": "Rum Mehmet Paşa Camii",
+   "links": 12,
+   "value": 1471.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rum Mehmed Paşa Camii",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 4122
+  },
+  {
+   "qid": "Q16901243",
+   "label": "Tarsus Ulu Camii",
+   "links": 12,
+   "value": 1579.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tarsus Ulu Camii",
+   "place": [
+    "Tarsus"
+   ],
+   "tr_views": 1475
+  },
+  {
+   "qid": "Q22083679",
+   "label": "Kurtuluş Camii",
+   "links": 12,
+   "value": 1892.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kurtuluş Camii",
+   "place": [
+    "Gaziantep"
+   ],
+   "tr_views": 4035
+  },
+  {
+   "qid": "Q5772358",
+   "label": "Hisar Camii",
+   "links": 12,
+   "value": 1597.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hisar Camii",
+   "place": [
+    "İzmir"
+   ],
+   "tr_views": 6265
+  },
+  {
+   "qid": "Q6063292",
+   "label": "Emirgan Hamid-i Evvel Camii",
+   "links": 12,
+   "value": 1781.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Emirgan Hamid-i Evvel Camii",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 2324
+  },
+  {
+   "qid": "Q6993506",
+   "label": "Şeyh Mutahhar Camii",
+   "links": 12,
+   "value": 1500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şeyh Mutahhar Camii",
+   "place": [
+    "Diyarbakır",
+    "Sur"
+   ],
+   "tr_views": 8011
+  },
+  {
+   "qid": "Q8047540",
+   "label": "Konak Camii",
+   "links": 12,
+   "value": 1774.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Konak Camii",
+   "place": [
+    "Konak"
+   ],
+   "tr_views": 2714
+  },
+  {
+   "qid": "Q1137517",
+   "label": "Ertuğrul Tekke Camii",
+   "links": 11,
+   "value": 1887.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ertuğrul Tekke Camii",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 3349
+  },
+  {
+   "qid": "Q38174028",
+   "label": "Sokollu Mehmed Paşa Camii",
+   "links": 11,
+   "value": 1569.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sokollu Mehmed Paşa Camii (Lüleburgaz)",
+   "place": [
+    "Lüleburgaz"
+   ],
+   "tr_views": 1971
+  },
+  {
+   "qid": "Q3906407",
+   "label": "Yağ Camii",
+   "links": 11,
+   "value": 1501.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yağ Camii",
+   "place": [
+    "Adana"
+   ],
+   "tr_views": 3988
+  },
+  {
+   "qid": "Q4832751",
+   "label": "Aziziye Camii",
+   "links": 11,
+   "value": 1874.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aziziye Camii (Konya)",
+   "place": [
+    "Karatay",
+    "Konya"
+   ],
+   "tr_views": 16359
+  },
+  {
+   "qid": "Q6043606",
+   "label": "Zağnos Paşa Camii",
+   "links": 11,
+   "value": 1461.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zağnos Paşa Camii",
+   "place": [
+    "Balıkesir"
+   ],
+   "tr_views": 26392
+  },
+  {
+   "qid": "Q6051512",
+   "label": "Altunizade Camii",
+   "links": 11,
+   "value": 1865.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Altunizade Camii",
+   "place": [
+    "Altunizade"
+   ],
+   "tr_views": 2015
+  },
+  {
+   "qid": "Q6055249",
+   "label": "Alaeddin Camii",
+   "links": 11,
+   "value": 1267.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Alâeddin Camii (Sinop)",
+   "place": [
+    "Sinop"
+   ],
+   "tr_views": 3184
+  },
+  {
+   "qid": "Q6071846",
+   "label": "Sokollu Mehmet Paşa Camii",
+   "links": 11,
+   "value": 1577.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sokollu Mehmet Paşa Camii (Azapkapı)",
+   "place": [
+    "Arap Cami",
+    "Beyoğlu",
+    "İstanbul"
+   ],
+   "tr_views": 8281
+  },
+  {
+   "qid": "Q6944533",
+   "label": "Muğdat Camii",
+   "links": 11,
+   "value": 1998.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Muğdat Camii",
+   "place": [
+    "Mersin"
+   ],
+   "tr_views": 4586
+  },
+  {
+   "qid": "Q7199786",
+   "label": "Piyale Paşa Camii",
+   "links": 11,
+   "value": 1573.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Piyale Paşa Camii",
+   "place": [
+    "Beyoğlu",
+    "İstanbul"
+   ],
+   "tr_views": 5039
+  },
+  {
+   "qid": "Q16858226",
+   "label": "Alaeddin Camii",
+   "links": 10,
+   "value": 1223.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Alâeddin Camii (Niğde)",
+   "place": [
+    "Niğde"
+   ],
+   "tr_views": 2477
+  },
+  {
+   "qid": "Q18209673",
+   "label": "Pertev Paşa Camii",
+   "links": 10,
+   "value": 1579.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pertev Paşa Camii",
+   "place": [
+    "İzmit"
+   ],
+   "tr_views": 5777
+  },
+  {
+   "qid": "Q31188753",
+   "label": "Sivrihisar Ulu Cami",
+   "links": 10,
+   "value": 1232.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sivrihisar Ulu Camii",
+   "place": [
+    "Eskişehir"
+   ],
+   "tr_views": 2079
+  },
+  {
+   "qid": "Q3409633",
+   "label": "Kazdağlı Camii",
+   "links": 10,
+   "value": 1779.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kazdağlı Camii",
+   "place": [
+    "Safranbolu"
+   ],
+   "tr_views": 436
+  },
+  {
+   "qid": "Q3675542",
+   "label": "Behram Paşa Camii",
+   "links": 10,
+   "value": 1572.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Behram Paşa Camii",
+   "place": [
+    "Diyarbakır"
+   ],
+   "tr_views": 1214
+  },
+  {
+   "qid": "Q46999764",
+   "label": "Melike Hatun Camii",
+   "links": 10,
+   "value": 2017.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Melike Hatun Camii",
+   "place": [
+    "Ankara"
+   ],
+   "tr_views": 7495
+  },
+  {
+   "qid": "Q4875350",
+   "label": "Başdurak Camii",
+   "links": 10,
+   "value": 1652.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Başdurak Camii",
+   "place": [
+    "Konak"
+   ],
+   "tr_views": 1470
+  },
+  {
+   "qid": "Q56907",
+   "label": "Mesih Paşa Camii",
+   "links": 10,
+   "value": 1585.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mesih Mehmed Paşa Camii",
+   "place": [
+    "Fatih",
+    "Karagümrük",
+    "İstanbul"
+   ],
+   "tr_views": 1422
+  },
+  {
+   "qid": "Q60785191",
+   "label": "Murat Paşa Camii",
+   "links": 10,
+   "value": 1471.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Murad Paşa Camii (İstanbul)",
+   "place": [
+    "Aksaray"
+   ],
+   "tr_views": 5726
+  },
+  {
+   "qid": "Q8082507",
+   "label": "Şeyh Süleyman Mescidi",
+   "links": 10,
+   "value": 1124.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şeyh Süleyman Mescidi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 1321
+  },
+  {
+   "qid": "Q14089145",
+   "label": "Merzifonlu Kara Mustafa Paşa Camii",
+   "links": 9,
+   "value": 1666.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Merzifonlu Kara Mustafa Paşa Cami (Merzifon)",
+   "place": [
+    "Amasya"
+   ],
+   "tr_views": 1166
+  },
+  {
+   "qid": "Q15227537",
+   "label": "Hüdavendigar Camii, Bursa",
+   "links": 9,
+   "value": 1366.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hüdavendigar Cami",
+   "place": [
+    "Bursa",
+    "Osmangazi"
+   ],
+   "tr_views": 2595
+  },
+  {
+   "qid": "Q18515442",
+   "label": "Çinili Camii",
+   "links": 9,
+   "value": 1640.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çinili Cami",
+   "place": [
+    "Üsküdar"
+   ],
+   "tr_views": 4154
+  },
+  {
+   "qid": "Q3906386",
+   "label": "Laal Paşa Camii",
+   "links": 9,
+   "value": 1444.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Laal Paşa Camii",
+   "place": [
+    "Mersin",
+    "Mut"
+   ],
+   "tr_views": 891
+  },
+  {
+   "qid": "Q43634803",
+   "label": "Tarsus Eski Cami",
+   "links": 9,
+   "value": 1102.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tarsus Eski Cami",
+   "place": [
+    "Tarsus"
+   ],
+   "tr_views": 965
+  },
+  {
+   "qid": "Q4952188",
+   "label": "Boyacı Camii",
+   "links": 9,
+   "value": 1357.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boyacı Camii",
+   "place": [
+    "Şahinbey"
+   ],
+   "tr_views": 1238
+  },
+  {
+   "qid": "Q5050393",
+   "label": "Kars Kalesi",
+   "links": 9,
+   "value": 1153.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kars Kalesi",
+   "place": [
+    "Kars"
+   ],
+   "tr_views": 7802
+  },
+  {
+   "qid": "Q5637427",
+   "label": "Hacı Özbek Camii",
+   "links": 9,
+   "value": 1334.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hacı Özbek Camii",
+   "place": [
+    "İznik"
+   ],
+   "tr_views": 4582
+  },
+  {
+   "qid": "Q5637873",
+   "label": "Hadım İbrahim Paşa Camii",
+   "links": 9,
+   "value": 1551.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hadım İbrahim Paşa Camii",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 2100
+  },
+  {
+   "qid": "Q5688442",
+   "label": "Hazreti Süleyman Camii",
+   "links": 9,
+   "value": 1160.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hazreti Süleyman Camii",
+   "place": [
+    "Diyarbakır",
+    "Sur"
+   ],
+   "tr_views": 4790
+  },
+  {
+   "qid": "Q6022200",
+   "label": "Atik Ali Paşa Camii",
+   "links": 9,
+   "value": 1512.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vasat Atik Ali Paşa Camii",
+   "place": [
+    "Karagümrük"
+   ],
+   "tr_views": 806
+  },
+  {
+   "qid": "Q6049801",
+   "label": "Sokullu Mehmet Paşa Camii (Büyükçekmece)",
+   "links": 9,
+   "value": 1566.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sokullu Mehmet Paşa Camii (Büyükçekmece)",
+   "place": [
+    "Büyükçekmece",
+    "İstanbul"
+   ],
+   "tr_views": 2229
+  },
+  {
+   "qid": "Q6064113",
+   "label": "Habib-i Neccar Camii",
+   "links": 9,
+   "value": 638.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Habib-i Neccar Camii",
+   "place": [
+    "Antakya",
+    "Hatay"
+   ],
+   "tr_views": 15884
+  },
+  {
+   "qid": "Q6070291",
+   "label": "Mahmutpaşa Camii",
+   "links": 9,
+   "value": 1464.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mahmud Paşa Camii",
+   "place": [
+    "Eminönü"
+   ],
+   "tr_views": 3795
+  },
+  {
+   "qid": "Q15261077",
+   "label": "Nasrullah Camii",
+   "links": 8,
+   "value": 1506.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nasrullah Camii",
+   "place": [
+    "Kastamonu"
+   ],
+   "tr_views": 7236
+  },
+  {
+   "qid": "Q24916011",
+   "label": "Piri Mehmed Paşa Camii",
+   "links": 8,
+   "value": 1530.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "place": [
+    "Piri Mehmet Paşa",
+    "Silivri",
+    "İstanbul"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q4735764",
+   "label": "Alsancak Hocazade Camii",
+   "links": 8,
+   "value": 1950.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Alsancak Hocazade Camii",
+   "place": [
+    "Konak"
+   ],
+   "tr_views": 1161
+  },
+  {
+   "qid": "Q6058053",
+   "label": "Kilitbahir Kalesi",
+   "links": 8,
+   "value": 1452.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kilitbahir Kalesi",
+   "place": [
+    "Eceabat",
+    "Çanakkale"
+   ],
+   "tr_views": 10692
+  },
+  {
+   "qid": "Q6104328",
+   "label": "İskenderpaşa Camii",
+   "links": 8,
+   "value": 1559.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İskenderpaşa Camii (Beykoz)",
+   "place": [
+    "Beykoz",
+    "Kanlıca",
+    "İstanbul"
+   ],
+   "tr_views": 2382
+  },
+  {
+   "qid": "Q7084560",
+   "label": "Mersin Eski Camii",
+   "links": 8,
+   "value": 1870.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mersin Eski Camii",
+   "place": [
+    "Akdeniz",
+    "Mersin"
+   ],
+   "tr_views": 563
+  },
+  {
+   "qid": "Q108000657",
+   "label": "Mimar Sinan Camii",
+   "links": 7,
+   "value": 2012.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mimar Sinan Camii",
+   "place": [
+    "Ataşehir"
+   ],
+   "tr_views": 7559
+  },
+  {
+   "qid": "Q118946730",
+   "label": "Barbaros Hayrettin Paşa Camii",
+   "links": 7,
+   "value": 2023.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Barbaros Hayrettin Paşa Camii",
+   "place": [
+    "Beşiktaş"
+   ],
+   "tr_views": 21981
+  },
+  {
+   "qid": "Q15197697",
+   "label": "İkinci Beyazıt Camii",
+   "links": 7,
+   "value": 1486.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Amasya İkinci Beyazıt Külliyesi",
+   "place": [
+    "Amasya"
+   ],
+   "tr_views": 2173
+  },
+  {
+   "qid": "Q16255881",
+   "label": "Amasya Ulu Camii",
+   "links": 7,
+   "value": 1247.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Amasya Ulu Camii",
+   "place": [
+    "Amasya"
+   ],
+   "tr_views": 53
+  },
+  {
+   "qid": "Q19897831",
+   "label": "Muradiye Camii",
+   "links": 7,
+   "value": 1435.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Muradiye Camii (Edirne)",
+   "place": [
+    "Edirne"
+   ],
+   "tr_views": 2015
+  },
+  {
+   "qid": "Q28221529",
+   "label": "İzzet Paşa Camii",
+   "links": 7,
+   "value": 1972.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İzzet Paşa Camii",
+   "place": [
+    "Elazığ"
+   ],
+   "tr_views": 871
+  },
+  {
+   "qid": "Q3866036",
+   "label": "Kırmızı Minare Camii",
+   "links": 7,
+   "value": 1591.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kırmızı Minare Camii",
+   "place": [
+    "Beyoğlu",
+    "Piripaşa",
+    "İstanbul"
+   ],
+   "tr_views": 856
+  },
+  {
+   "qid": "Q5995415",
+   "label": "Aydınoğlu Mehmet Bey Camii",
+   "links": 7,
+   "value": 1312.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aydınoğlu Mehmet Bey Camii",
+   "place": [
+    "Ödemiş"
+   ],
+   "tr_views": 1942
+  },
+  {
+   "qid": "Q7404289",
+   "label": "Salepçioğlu Camii",
+   "links": 7,
+   "value": 1905.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Salepçioğlu Camii",
+   "place": [
+    "Konak"
+   ],
+   "tr_views": 3574
+  },
+  {
+   "qid": "Q127788092",
+   "label": "Sitti Sultan Camii",
+   "links": 6,
+   "value": 1482.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sitti Şah Sultan Camii",
+   "place": [
+    "Edirne"
+   ],
+   "tr_views": 1029
+  },
+  {
+   "qid": "Q28221175",
+   "label": "Çeşme Kalesi",
+   "links": 6,
+   "value": 1508.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çeşme Kalesi",
+   "place": [
+    "Çeşme",
+    "İzmir"
+   ],
+   "tr_views": 4630
+  },
+  {
+   "qid": "Q28530450",
+   "label": "Venedik Sarayı",
+   "links": 6,
+   "value": 1695.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Venedik Sarayı (Beyoğlu)",
+   "place": [
+    "Beyoğlu"
+   ],
+   "tr_views": 2858
+  },
+  {
+   "qid": "Q30525093",
+   "label": "Hacıveyiszade Camii",
+   "links": 6,
+   "value": 1571.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hacıveyiszade Camii",
+   "place": [
+    "Selçuklu"
+   ],
+   "tr_views": 1407
+  },
+  {
+   "qid": "Q6045228",
+   "label": "Ali Paşa Camii",
+   "links": 6,
+   "value": 1571.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ali Paşa Camii (Tokat)",
+   "place": [
+    "Tokat"
+   ],
+   "tr_views": 2582
+  },
+  {
+   "qid": "Q6395213",
+   "label": "Kestanepazarı Camii",
+   "links": 6,
+   "value": 1667.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kestanepazarı Camii",
+   "place": [
+    "Konak"
+   ],
+   "tr_views": 3381
+  },
+  {
+   "qid": "Q7636705",
+   "label": "Hafsa Sultan Camii",
+   "links": 6,
+   "value": 1522.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "place": [
+    "Şehzadeler"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q8080272",
+   "label": "İzzet Mehmet Paşa Camii",
+   "links": 6,
+   "value": 1798.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İzzet Mehmet Paşa Camii",
+   "place": [
+    "Safranbolu"
+   ],
+   "tr_views": 1067
+  },
+  {
+   "qid": "Q24897657",
+   "label": "Hacı Beşir Ağa Camii",
+   "links": 5,
+   "value": 1745.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Beşir Ağa Külliyesi",
+   "place": [
+    "Alemdar",
+    "Fatih",
+    "İstanbul"
+   ],
+   "tr_views": 1033
+  },
+  {
+   "qid": "Q54987927",
+   "label": "İplikçi Camii",
+   "links": 5,
+   "value": 13.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İplikçi Camii",
+   "place": [
+    "Konya",
+    "Meram"
+   ],
+   "tr_views": 2522
+  },
+  {
+   "qid": "Q108134038",
+   "label": "Avcılar Merkez Ulu Camii",
+   "links": 4,
+   "value": 2019.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "place": [
+    "Avcılar"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q131582949",
+   "label": "Hasan Sezai Camii",
+   "links": 4,
+   "value": 1486.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hasan Sezai Camii",
+   "place": [
+    "Edirne"
+   ],
+   "tr_views": 326
+  },
+  {
+   "qid": "Q131582971",
+   "label": "Çakır Ağa Camii",
+   "links": 4,
+   "value": 1453.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çakır Ağa Camii",
+   "place": [
+    "Edirne"
+   ],
+   "tr_views": 471
+  },
+  {
+   "qid": "Q4938906",
+   "label": "Bolaman Kalesi",
+   "links": 4,
+   "value": 2009.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bolaman Kalesi",
+   "place": [
+    "Fatsa"
+   ],
+   "tr_views": 1313
+  },
+  {
+   "qid": "Q6065216",
+   "label": "Ahi Evran Zaviyesi",
+   "links": 4,
+   "value": 1482.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ahi Evran Camii ve Türbesi",
+   "place": [
+    "Kırşehir"
+   ],
+   "tr_views": 3617
+  },
+  {
+   "qid": "Q6066259",
+   "label": "Gülbahar Hatun Camii",
+   "links": 4,
+   "value": 1514.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gülbahar Hatun Camii",
+   "place": [
+    "Trabzon"
+   ],
+   "tr_views": 3814
+  },
+  {
+   "qid": "Q123247735",
+   "label": "Yeşilköy Mecidiye Camii",
+   "links": 3,
+   "value": 1909.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeşilköy Mecidiye Camii",
+   "place": [
+    "Bakırköy",
+    "Yeşilköy",
+    "İstanbul"
+   ],
+   "tr_views": 1131
+  },
+  {
+   "qid": "Q131760870",
+   "label": "Süleymaniye Camii, Edirne",
+   "links": 3,
+   "value": 1458.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Süleymaniye Camii (Edirne)",
+   "place": [
+    "Edirne"
+   ],
+   "tr_views": 1104
+  },
+  {
+   "qid": "Q6019534",
+   "label": "Zühtüpaşa Camii",
+   "links": 3,
+   "value": 1883.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zühtüpaşa Camii",
+   "place": [
+    "Kadıköy"
+   ],
+   "tr_views": 1298
+  },
+  {
+   "qid": "Q6039235",
+   "label": "Manisa Ulu Camii",
+   "links": 3,
+   "value": 1366.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Manisa Ulu Camii",
+   "place": [
+    "Manisa",
+    "Şehzadeler"
+   ],
+   "tr_views": 1100
+  },
+  {
+   "qid": "Q6044663",
+   "label": "Adana Yeni Camii",
+   "links": 3,
+   "value": 1724.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Adana Yeni Camii",
+   "place": [
+    "Seyhan"
+   ],
+   "tr_views": 763
+  },
+  {
+   "qid": "Q6049621",
+   "label": "Muğla Kurşunlu Camii",
+   "links": 3,
+   "value": 1495.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Muğla Kurşunlu Cami",
+   "place": [
+    "Muğla"
+   ],
+   "tr_views": 703
+  },
+  {
+   "qid": "Q6062573",
+   "label": "Haseki Camii, İstanbul",
+   "links": 3,
+   "value": 1539.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Haseki Sultan Camii",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 8559
+  },
+  {
+   "qid": "Q98091641",
+   "label": "Şarkışla Ulu Camii",
+   "links": 3,
+   "value": 1669.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şarkışla Ulu Camii",
+   "place": [
+    "Şarkışla"
+   ],
+   "tr_views": 513
+  },
+  {
+   "qid": "Q6003007",
+   "label": "İvaz Paşa Camii",
+   "links": 2,
+   "value": 1484.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İvaz Paşa Camii (Manisa)",
+   "place": [
+    "Yunusemre"
+   ],
+   "tr_views": 284
+  },
+  {
+   "qid": "Q6006036",
+   "label": "Firuzbey Camii",
+   "links": 2,
+   "value": 1394.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Firuzbey Camii",
+   "place": [
+    "Milas"
+   ],
+   "tr_views": 926
+  },
+  {
+   "qid": "Q6027114",
+   "label": "Emir Buhari Camii",
+   "links": 2,
+   "value": 1530.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Emir Buhari Camii",
+   "place": [
+    "Akşemsettin"
+   ],
+   "tr_views": 681
+  },
+  {
+   "qid": "Q6027957",
+   "label": "Bayezid Paşa Camii",
+   "links": 2,
+   "value": 1414.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayezid Paşa Camii (Amasya)",
+   "place": [
+    "Amasya"
+   ],
+   "tr_views": 197
+  },
+  {
+   "qid": "Q6029740",
+   "label": "Hacı Ahmet Paşa Camii",
+   "links": 2,
+   "value": 1573.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kurşunlu Cami (Kayseri)",
+   "place": [
+    "Kocasinan"
+   ],
+   "tr_views": 2151
+  },
+  {
+   "qid": "Q6030722",
+   "label": "Çeşnigir Camii",
+   "links": 2,
+   "value": 1474.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çeşnigir Camii",
+   "place": [
+    "Şehzadeler"
+   ],
+   "tr_views": 331
+  },
+  {
+   "qid": "Q6031050",
+   "label": "Ebulfazl Camii",
+   "links": 2,
+   "value": 1553.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ebulfazl Camii",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 633
+  },
+  {
+   "qid": "Q6031201",
+   "label": "Levent Camii",
+   "links": 2,
+   "value": 1954.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Levent Camii",
+   "place": [
+    "Beşiktaş"
+   ],
+   "tr_views": 2676
+  },
+  {
+   "qid": "Q6032910",
+   "label": "İshak Fakih Camii",
+   "links": 2,
+   "value": 1422.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İshak Fakih Camii",
+   "place": [
+    "Kütahya"
+   ],
+   "tr_views": 375
+  },
+  {
+   "qid": "Q6043937",
+   "label": "Fatih Camii",
+   "links": 2,
+   "value": 1996.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fatih Camii (İzmir)",
+   "place": [
+    "Konak"
+   ],
+   "tr_views": 619
+  },
+  {
+   "qid": "Q6046631",
+   "label": "Erzurum Derviş Ağa Camii",
+   "links": 2,
+   "value": 1717.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Derviş Ağa Camii (Erzurum)",
+   "place": [
+    "Yakutiye"
+   ],
+   "tr_views": 286
+  },
+  {
+   "qid": "Q6048574",
+   "label": "Erzurum Boyahane Camii",
+   "links": 2,
+   "value": 1566.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boyahane Camii",
+   "place": [
+    "Yakutiye"
+   ],
+   "tr_views": 234
+  },
+  {
+   "qid": "Q6048854",
+   "label": "Erzurum Ayazpaşa Camii",
+   "links": 2,
+   "value": 1558.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ayaz Paşa Camii",
+   "place": [
+    "Yakutiye"
+   ],
+   "tr_views": 743
+  },
+  {
+   "qid": "Q6051024",
+   "label": "Erzurum Kasım Paşa Camii",
+   "links": 2,
+   "value": 1667.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kasım Paşa Camii (Erzurum)",
+   "place": [
+    "Yakutiye"
+   ],
+   "tr_views": 165
+  },
+  {
+   "qid": "Q6054045",
+   "label": "Malatyalı İsmail Ağa Camii",
+   "links": 2,
+   "value": 1608.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Malatyalı İsmail Ağa Camii",
+   "place": [
+    "Üsküdar"
+   ],
+   "tr_views": 506
+  },
+  {
+   "qid": "Q6054746",
+   "label": "Bakırcı Camii (Erzurum)",
+   "links": 2,
+   "value": 1720.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bakırcı Camii",
+   "place": [
+    "Yakutiye"
+   ],
+   "tr_views": 514
+  },
+  {
+   "qid": "Q6054904",
+   "label": "Gürcü Kapı Camii",
+   "links": 2,
+   "value": 1608.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gürcü Kapı Camii",
+   "place": [
+    "Yakutiye"
+   ],
+   "tr_views": 188
+  },
+  {
+   "qid": "Q6056905",
+   "label": "Bürüngüz Camii",
+   "links": 2,
+   "value": 1977.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bürüngüz Camii",
+   "place": [
+    "Kayseri",
+    "Melikgazi"
+   ],
+   "tr_views": 1565
+  }
+ ]
+}

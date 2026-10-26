@@ -30,7 +30,7 @@ class RoundAnswer {
   final int points;
 
   bool get hit => isHit(low, high, question.answer);
-  ResultTier get tier => ResultTier.fromPoints(points);
+  ResultTier get tier => ResultTier.of(points: points, hit: hit);
 }
 
 /// State of one round (a list of questions answered in order).

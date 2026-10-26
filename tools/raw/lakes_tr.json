@@ -1,0 +1,417 @@
+{
+ "dataset": "lakes_tr",
+ "description": "Türkiye'deki göller, yüzölçümü (P2046)",
+ "property": "P2046",
+ "fetched_at": "2026-10-26T10:05:33+00:00",
+ "rows": [
+  {
+   "qid": "Q1334148",
+   "label": "Eğirdir Gölü",
+   "links": 35,
+   "value": 482000000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Eğirdir Gölü",
+   "place": [
+    "Isparta"
+   ],
+   "tr_views": 14331
+  },
+  {
+   "qid": "Q1334148",
+   "label": "Eğirdir Gölü",
+   "links": 35,
+   "value": 517000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eğirdir Gölü",
+   "place": [
+    "Isparta"
+   ],
+   "tr_views": 14331
+  },
+  {
+   "qid": "Q369923",
+   "label": "Beyşehir Gölü",
+   "links": 35,
+   "value": 650000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Beyşehir Gölü",
+   "place": [
+    "Isparta",
+    "Konya"
+   ],
+   "tr_views": 22155
+  },
+  {
+   "qid": "Q192369",
+   "label": "İznik Gölü",
+   "links": 29,
+   "value": 290000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İznik Gölü",
+   "place": [
+    "Orhangazi",
+    "İznik"
+   ],
+   "tr_views": 16374
+  },
+  {
+   "qid": "Q1010475",
+   "label": "Burdur Gölü",
+   "links": 26,
+   "value": 250000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Burdur Gölü",
+   "place": [
+    "Burdur",
+    "Isparta"
+   ],
+   "tr_views": 8781
+  },
+  {
+   "qid": "Q421825",
+   "label": "Aktaş Gölü",
+   "links": 26,
+   "value": 26300000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aktaş Gölü",
+   "place": [
+    "Ardahan",
+    "Samtshe-Cavaheti"
+   ],
+   "tr_views": 3570
+  },
+  {
+   "qid": "Q272986",
+   "label": "Çıldır Gölü",
+   "links": 25,
+   "value": 120000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çıldır Gölü",
+   "place": [
+    "Arpaçay",
+    "Çıldır"
+   ],
+   "tr_views": 19348
+  },
+  {
+   "qid": "Q30681483",
+   "label": "Akdoğan Gölü",
+   "links": 22,
+   "value": 10880000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Akdoğan Gölü",
+   "place": [
+    "Muş",
+    "Varto"
+   ],
+   "tr_views": 1076
+  },
+  {
+   "qid": "Q3234128",
+   "label": "Salda Gölü",
+   "links": 22,
+   "value": 43700000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Salda Gölü",
+   "place": [
+    "Yeşilova"
+   ],
+   "tr_views": 37882
+  },
+  {
+   "qid": "Q424815",
+   "label": "Akşehir Gölü",
+   "links": 22,
+   "value": 353000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Akşehir Gölü",
+   "place": [
+    "Afyonkarahisar",
+    "Konya"
+   ],
+   "tr_views": 6446
+  },
+  {
+   "qid": "Q2661366",
+   "label": "Köyceğiz Gölü",
+   "links": 21,
+   "value": 52000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Köyceğiz Gölü",
+   "place": [
+    "Köyceğiz (ilçe)",
+    "Muğla",
+    "Ortaca (ilçe)"
+   ],
+   "tr_views": 9520
+  },
+  {
+   "qid": "Q799781",
+   "label": "Bafa Gölü",
+   "links": 21,
+   "value": 176500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bafa Gölü",
+   "place": [
+    "Aydın",
+    "Didim",
+    "Milas",
+    "Muğla",
+    "Söke"
+   ],
+   "tr_views": 25187
+  },
+  {
+   "qid": "Q305501",
+   "label": "Abant Gölü",
+   "links": 20,
+   "value": 1250000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Abant Gölü",
+   "place": [
+    "Mudurnu"
+   ],
+   "tr_views": 12909
+  },
+  {
+   "qid": "Q1891954",
+   "label": "Manyas Kuşgölü",
+   "links": 19,
+   "value": 160000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Manyas Kuş Gölü",
+   "place": [
+    "Bandırma"
+   ],
+   "tr_views": 968
+  },
+  {
+   "qid": "Q1366366",
+   "label": "Erçek Gölü",
+   "links": 17,
+   "value": 106200000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Erçek Gölü",
+   "place": [
+    "Tuşba",
+    "Van",
+    "İpekyolu"
+   ],
+   "tr_views": 3903
+  },
+  {
+   "qid": "Q868012",
+   "label": "Sapanca Gölü",
+   "links": 16,
+   "value": 142648000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sapanca Gölü",
+   "place": [
+    "Kartepe",
+    "Sapanca",
+    "Serdivan"
+   ],
+   "tr_views": 18406
+  },
+  {
+   "qid": "Q1797436",
+   "label": "Küçükçekmece Gölü",
+   "links": 14,
+   "value": 16000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçükçekmece Gölü",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 7888
+  },
+  {
+   "qid": "Q3675845",
+   "label": "Balık Gölü",
+   "links": 14,
+   "value": 34000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Balık Gölü",
+   "place": [
+    "Ağrı",
+    "Iğdır"
+   ],
+   "tr_views": 5109
+  },
+  {
+   "qid": "Q1278759",
+   "label": "Eber Gölü",
+   "links": 12,
+   "value": 125000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eber Gölü",
+   "place": [
+    "Afyonkarahisar"
+   ],
+   "tr_views": 7609
+  },
+  {
+   "qid": "Q6587092",
+   "label": "Ladik Gölü",
+   "links": 12,
+   "value": 8700000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ladik Gölü",
+   "place": [
+    "Ladik"
+   ],
+   "tr_views": 3491
+  },
+  {
+   "qid": "Q272701",
+   "label": "Çavuşçu Gölü",
+   "links": 8,
+   "value": 27000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çavuşçu Gölü",
+   "place": [
+    "Konya"
+   ],
+   "tr_views": 1872
+  },
+  {
+   "qid": "Q30636395",
+   "label": "Bolluk Gölü",
+   "links": 8,
+   "value": 11500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bolluk Gölü",
+   "place": [
+    "Konya"
+   ],
+   "tr_views": 573
+  },
+  {
+   "qid": "Q14395861",
+   "label": "Gölcük Gölü",
+   "links": 7,
+   "value": 1050000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gölcük Gölü (Isparta)",
+   "place": [
+    "Isparta"
+   ],
+   "tr_views": 4623
+  },
+  {
+   "qid": "Q1740373",
+   "label": "Keşiş Gölü",
+   "links": 7,
+   "value": 7000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Keşiş Gölü",
+   "place": [
+    "Van",
+    "İpekyolu"
+   ],
+   "tr_views": 3017
+  },
+  {
+   "qid": "Q6004690",
+   "label": "Karataş Gölü",
+   "links": 7,
+   "value": 11900000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karataş Gölü",
+   "place": [
+    "Burdur"
+   ],
+   "tr_views": 1217
+  },
+  {
+   "qid": "Q6090377",
+   "label": "Palas Tuzla Gölü",
+   "links": 7,
+   "value": 25000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Palas Tuzla Gölü",
+   "place": [
+    "Kayseri"
+   ],
+   "tr_views": 3147
+  },
+  {
+   "qid": "Q20471086",
+   "label": "Aygır Gölü",
+   "links": 6,
+   "value": 1500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aygır Gölü (Kars)",
+   "place": [
+    "Kars"
+   ],
+   "tr_views": 1908
+  },
+  {
+   "qid": "Q1785613",
+   "label": "Kovada Gölü",
+   "links": 5,
+   "value": 11000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kovada Gölü",
+   "place": [
+    "Isparta"
+   ],
+   "tr_views": 5085
+  },
+  {
+   "qid": "Q6044485",
+   "label": "Dil Gölü",
+   "links": 5,
+   "value": 21000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dil Gölü",
+   "place": [
+    "Aydın"
+   ],
+   "tr_views": 606
+  },
+  {
+   "qid": "Q6028091",
+   "label": "Gala Gölü",
+   "links": 4,
+   "value": 23590000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gala Gölü",
+   "place": [
+    "Edirne"
+   ],
+   "tr_views": 2510
+  }
+ ]
+}

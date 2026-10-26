@@ -25,7 +25,7 @@
 
 **Faz 2 (v1.1, yayından sonra):** günlük bildirim, kategori seçimli pratik, rozetler.
 
-**Gelecek fikri: uygulama güncellemesi olmadan internetten yeni sorular** (not, 2026-10-24)
+**İnternetten yeni sorular** (not 2026-10-24, uygulandı 2026-10-26: `data/content_sync.dart`, `tools/publish_content.py`)
 - Fikir: Ek soru paketleri GitHub Pages'te statik JSON olarak tutulur (ücretsiz, sunucu yok). Uygulama ara sıra indirip cache'ler, internet yoksa gömülü bankayla devam eder.
 - Etkiledikleri:
   - INTERNET izni release manifest'e geri eklenmeli.

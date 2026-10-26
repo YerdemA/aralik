@@ -47,8 +47,6 @@ abstract final class AppStrings {
   // Generated questions
   static String distanceQuestion(String from, String to) =>
       '$from ile $to arası kuş uçuşu kaç kilometredir?';
-  static String placeWithCountry(String city, String country) =>
-      '$city ($country)';
   static const distanceFunFact =
       'Mesafe, iki şehrin Wikidata koordinatlarından hesaplandı.';
   static const kilometres = 'km';
@@ -56,6 +54,7 @@ abstract final class AppStrings {
   // Result
   static const hit = 'İsabet!';
   static const miss = 'Iska';
+  static const nearMiss = 'Kıl payı ıska';
   static const answer = 'Cevap';
   static const yourInterval = 'Aralığın';
   static const points = 'puan';

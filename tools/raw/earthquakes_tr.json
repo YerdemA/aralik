@@ -1,0 +1,998 @@
+{
+ "dataset": "earthquakes_tr",
+ "description": "Türkiye'deki depremler, tarih (P585)",
+ "property": "P585",
+ "fetched_at": "2026-10-26T10:14:13+00:00",
+ "rows": [
+  {
+   "qid": "Q101003145",
+   "label": "2020 Ege Denizi depremi",
+   "links": 40,
+   "value": 2020.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "2020 Ege Denizi depremi",
+   "tr_views": 46143
+  },
+  {
+   "qid": "Q189079",
+   "label": "Ekim 2011 Van depremi",
+   "links": 39,
+   "value": 2011.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ekim 2011 Van depremi",
+   "tr_views": 43027
+  },
+  {
+   "qid": "Q367449",
+   "label": "1999 Gölcük depremi",
+   "links": 38,
+   "value": 1999.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1999 Gölcük depremi",
+   "tr_views": 137546
+  },
+  {
+   "qid": "Q83557758",
+   "label": "2020 Elâzığ depremi",
+   "links": 35,
+   "value": 2020.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "2020 Elazığ depremi",
+   "tr_views": 26218
+  },
+  {
+   "qid": "Q3045050",
+   "label": "1939 Erzincan Depremi",
+   "links": 24,
+   "value": 1939.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1939 Erzincan depremi",
+   "tr_views": 100732
+  },
+  {
+   "qid": "Q1188930",
+   "label": "1509 Konstantinopolis depremi",
+   "links": 20,
+   "value": 1509.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1509 Konstantinopolis depremi",
+   "tr_views": 33677
+  },
+  {
+   "qid": "Q541723",
+   "label": "526 Antakya Depremi",
+   "links": 19,
+   "value": 526.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "526 Antakya depremi",
+   "tr_views": 3737
+  },
+  {
+   "qid": "Q924948",
+   "label": "2010 Elâzığ depremi",
+   "links": 19,
+   "value": 2010.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "2010 Elazığ depremi",
+   "tr_views": 2508
+  },
+  {
+   "qid": "Q134055936",
+   "label": "2025 İstanbul depremi",
+   "links": 17,
+   "value": 2025.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "2025 İstanbul depremi",
+   "tr_views": 66920
+  },
+  {
+   "qid": "Q4547511",
+   "label": "115 Antakya Depremi",
+   "links": 17,
+   "value": 115.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "115 Antakya depremi",
+   "tr_views": 7079
+  },
+  {
+   "qid": "Q85719776",
+   "label": "1668 Kuzey Anadolu depremi",
+   "links": 16,
+   "value": 1668.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1668 Kuzey Anadolu depremi",
+   "tr_views": 15911
+  },
+  {
+   "qid": "Q764222",
+   "label": "2011 Simav depremi",
+   "links": 15,
+   "value": 2011.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "2011 Simav depremi",
+   "tr_views": 8882
+  },
+  {
+   "qid": "Q33129341",
+   "label": "2017 Ege Denizi depremi",
+   "links": 14,
+   "value": 2017.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "2017 Ege Denizi depremi",
+   "tr_views": 8053
+  },
+  {
+   "qid": "Q1439471",
+   "label": "1268 Kilikya depremi",
+   "links": 11,
+   "value": 1268.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1268 Kilikya depremi",
+   "tr_views": 1965
+  },
+  {
+   "qid": "Q4561897",
+   "label": "1926 Kars depremi",
+   "links": 11,
+   "value": 1926.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1926 Kars depremi",
+   "tr_views": 2330
+  },
+  {
+   "qid": "Q128869",
+   "label": "1976 Çaldıran Depremi",
+   "links": 10,
+   "value": 1976.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1976 Çaldıran depremi",
+   "tr_views": 7585
+  },
+  {
+   "qid": "Q135687052",
+   "label": "2025 Balıkesir depremleri",
+   "links": 10,
+   "value": 2025.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "2025 Balıkesir depremleri",
+   "tr_views": 43624
+  },
+  {
+   "qid": "Q1491406",
+   "label": "557 İstanbul depremi",
+   "links": 10,
+   "value": 557.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "557 Konstantinopolis depremi",
+   "tr_views": 2240
+  },
+  {
+   "qid": "Q3666305",
+   "label": "1966 Varto depremi",
+   "links": 9,
+   "value": 1966.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1966 Varto depremi",
+   "tr_views": 6636
+  },
+  {
+   "qid": "Q1348861",
+   "label": "Gediz Depremi",
+   "links": 8,
+   "value": 1970.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1970 Gediz depremi",
+   "tr_views": 14155
+  },
+  {
+   "qid": "Q3505096",
+   "label": "1999 Düzce depremi",
+   "links": 8,
+   "value": 1999.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1999 Düzce depremi",
+   "tr_views": 25191
+  },
+  {
+   "qid": "Q3506205",
+   "label": "2003 Bingöl depremi",
+   "links": 8,
+   "value": 2003.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "2003 Bingöl depremi",
+   "tr_views": 7797
+  },
+  {
+   "qid": "Q3667156",
+   "label": "1975 Lice Depremi",
+   "links": 8,
+   "value": 1975.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1975 Lice depremi",
+   "tr_views": 7370
+  },
+  {
+   "qid": "Q6051642",
+   "label": "1766 Büyük İstanbul Depremi",
+   "links": 8,
+   "value": 1766.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1766 İstanbul depremi",
+   "tr_views": 22701
+  },
+  {
+   "qid": "Q68983825",
+   "label": "2019 İstanbul depremi",
+   "links": 8,
+   "value": 2019.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "2019 İstanbul depremi",
+   "tr_views": 22798
+  },
+  {
+   "qid": "Q115365900",
+   "label": "2022 Düzce depremi",
+   "links": 7,
+   "value": 2022.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "2022 Düzce depremi",
+   "tr_views": 9259
+  },
+  {
+   "qid": "Q3496756",
+   "label": "1998 Adana-Ceyhan depremi",
+   "links": 7,
+   "value": 1998.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1998 Adana-Ceyhan depremi",
+   "tr_views": 13455
+  },
+  {
+   "qid": "Q3667161",
+   "label": "1971 Bingöl depremi",
+   "links": 7,
+   "value": 1971.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1971 Bingöl depremi",
+   "tr_views": 3971
+  },
+  {
+   "qid": "Q3667179",
+   "label": "1983 Erzurum Depremi",
+   "links": 7,
+   "value": 1983.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1983 Erzurum depremi",
+   "tr_views": 8505
+  },
+  {
+   "qid": "Q3677888",
+   "label": "1930 Hakkari Depremi",
+   "links": 7,
+   "value": 1930.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1930 Hakkâri depremi",
+   "tr_views": 4189
+  },
+  {
+   "qid": "Q4651215",
+   "label": "MS 17 Lidya depremi",
+   "links": 7,
+   "value": 17.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "MS 17 Lidya depremi",
+   "tr_views": 1873
+  },
+  {
+   "qid": "Q101279639",
+   "label": "447 Konstantinopolis depremi",
+   "links": 6,
+   "value": 447.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "447 Konstantinopolis depremi",
+   "tr_views": 2126
+  },
+  {
+   "qid": "Q3236011",
+   "label": "1941 Van-Erciş Depremi",
+   "links": 6,
+   "value": 1941.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1941 Van-Erciş depremi",
+   "tr_views": 1228
+  },
+  {
+   "qid": "Q3668393",
+   "label": "1935 Digor depremi",
+   "links": 6,
+   "value": 1935.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1935 Digor depremi",
+   "tr_views": 520
+  },
+  {
+   "qid": "Q4346113",
+   "label": "1903 Malazgirt depremi",
+   "links": 6,
+   "value": 1903.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1903 Malazgirt depremi",
+   "tr_views": 3952
+  },
+  {
+   "qid": "Q85727957",
+   "label": "2002 Çay-Sultandağı depremi",
+   "links": 6,
+   "value": 2002.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "2002 Çay-Sultandağı depremi",
+   "tr_views": 8557
+  },
+  {
+   "qid": "Q16821218",
+   "label": "1894 Büyük İstanbul Depremi",
+   "links": 5,
+   "value": 1894.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1894 İstanbul depremi",
+   "tr_views": 16949
+  },
+  {
+   "qid": "Q19903045",
+   "label": "141 Likya depremi",
+   "links": 5,
+   "value": 141.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "141 Likya depremi",
+   "tr_views": 756
+  },
+  {
+   "qid": "Q26258",
+   "label": "1967 Mudurnu Depremi",
+   "links": 5,
+   "value": 1967.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1967 Mudurnu depremi",
+   "tr_views": 3403
+  },
+  {
+   "qid": "Q3666607",
+   "label": "1992 Erzincan Depremi",
+   "links": 5,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1992 Erzincan depremi",
+   "tr_views": 14676
+  },
+  {
+   "qid": "Q3678419",
+   "label": "1949 Karlıova Depremi",
+   "links": 5,
+   "value": 1949.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1949 Karlıova depremi",
+   "tr_views": 2033
+  },
+  {
+   "qid": "Q428208",
+   "label": "1953 Yenice-Gönen Depremi",
+   "links": 5,
+   "value": 1953.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1953 Yenice-Gönen depremi",
+   "tr_views": 6827
+  },
+  {
+   "qid": "Q4559501",
+   "label": "1912 Mürefte depremi",
+   "links": 5,
+   "value": 1912.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1912 Mürefte depremi",
+   "tr_views": 7466
+  },
+  {
+   "qid": "Q4567155",
+   "label": "1951 Çankırı Depremi",
+   "links": 5,
+   "value": 1951.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1951 Kurşunlu depremi",
+   "tr_views": 3708
+  },
+  {
+   "qid": "Q4816988",
+   "label": "1943 Tosya-Ladik depremi",
+   "links": 5,
+   "value": 1943.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1943 Tosya-Ladik depremi",
+   "tr_views": 9367
+  },
+  {
+   "qid": "Q4817027",
+   "label": "1944 Bolu-Gerede depremi",
+   "links": 5,
+   "value": 1944.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1944 Bolu-Gerede depremi",
+   "tr_views": 7204
+  },
+  {
+   "qid": "Q5943405",
+   "label": "1995 Dinar depremi",
+   "links": 5,
+   "value": 1995.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1995 Dinar depremi",
+   "tr_views": 20791
+  },
+  {
+   "qid": "Q97210710",
+   "label": "2020 Karlıova depremi",
+   "links": 5,
+   "value": 2020.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "2020 Karlıova depremi",
+   "tr_views": 1183
+  },
+  {
+   "qid": "Q110235937",
+   "label": "1872 Amik depremi",
+   "links": 4,
+   "value": 1872.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1872 Amik depremi",
+   "tr_views": 3049
+  },
+  {
+   "qid": "Q114773654",
+   "label": "1114 Maraş depremi",
+   "links": 4,
+   "value": 1114.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1114 Maraş depremi",
+   "tr_views": 4165
+  },
+  {
+   "qid": "Q116858171",
+   "label": "2023 Hatay depremi",
+   "links": 4,
+   "value": 2023.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "2023 Hatay depremi",
+   "tr_views": 7985
+  },
+  {
+   "qid": "Q3668403",
+   "label": "1924 Pasinler depremi",
+   "links": 4,
+   "value": 1924.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1924 Pasinler depremi",
+   "tr_views": 3254
+  },
+  {
+   "qid": "Q3673833",
+   "label": "1859 Erzurum depremi",
+   "links": 4,
+   "value": 1859.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1859 Erzurum depremi",
+   "tr_views": 1714
+  },
+  {
+   "qid": "Q38251185",
+   "label": "2017 Midilli Depremi",
+   "links": 4,
+   "value": 2017.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "tr_views": 0
+  },
+  {
+   "qid": "Q4551553",
+   "label": "1653 Doğu İzmir depremi",
+   "links": 4,
+   "value": 1653.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1653 Doğu İzmir depremi",
+   "tr_views": 2742
+  },
+  {
+   "qid": "Q4551876",
+   "label": "1688 İzmir depremi",
+   "links": 4,
+   "value": 1688.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1688 İzmir depremi",
+   "tr_views": 2430
+  },
+  {
+   "qid": "Q4554916",
+   "label": "1855 Bursa Depremi",
+   "links": 4,
+   "value": 1855.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1855 Bursa depremi",
+   "tr_views": 9799
+  },
+  {
+   "qid": "Q4559829",
+   "label": "1914 Afyon-Bolvadin depremi",
+   "links": 4,
+   "value": 1914.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1914 Afyon-Bolvadin depremi",
+   "tr_views": 2431
+  },
+  {
+   "qid": "Q4565830",
+   "label": "1946 Varto-Hınıs depremi",
+   "links": 4,
+   "value": 1946.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1946 Varto-Hınıs depremi",
+   "tr_views": 898
+  },
+  {
+   "qid": "Q4567459",
+   "label": "1952 Hasankale Depremi",
+   "links": 4,
+   "value": 1952.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1952 Hasankale depremi",
+   "tr_views": 974
+  },
+  {
+   "qid": "Q4568954",
+   "label": "1957 Abant Depremi",
+   "links": 4,
+   "value": 1957.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1957 Abant depremi",
+   "tr_views": 1879
+  },
+  {
+   "qid": "Q6961522",
+   "label": "2004 Doğubayazıt depremi",
+   "links": 4,
+   "value": 2004.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "2004 Doğubayazıt depremi",
+   "tr_views": 1719
+  },
+  {
+   "qid": "Q116810812",
+   "label": "1513 Maraş depremi",
+   "links": 3,
+   "value": 1513.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1513 Maraş depremi",
+   "tr_views": 4457
+  },
+  {
+   "qid": "Q117085798",
+   "label": "1598 Amasya-Çorum depremi",
+   "links": 3,
+   "value": 1598.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1598 Amasya-Çorum depremi",
+   "tr_views": 1050
+  },
+  {
+   "qid": "Q28220677",
+   "label": "262 Güneybatı Anadolu depremi",
+   "links": 3,
+   "value": 262.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "262 Güneybatı Anadolu depremi",
+   "tr_views": 926
+  },
+  {
+   "qid": "Q3675514",
+   "label": "Kasım 2011 Van depremi",
+   "links": 3,
+   "value": 2011.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kasım 2011 Van depremi",
+   "tr_views": 4202
+  },
+  {
+   "qid": "Q4563587",
+   "label": "1935 Erdek-Marmara Adaları depremi",
+   "links": 3,
+   "value": 1935.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1935 Erdek-Marmara Adaları depremi",
+   "tr_views": 2511
+  },
+  {
+   "qid": "Q4565102",
+   "label": "1942 Niksar-Erbaa depremi",
+   "links": 3,
+   "value": 1942.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1942 Niksar-Erbaa depremi",
+   "tr_views": 9683
+  },
+  {
+   "qid": "Q4565201",
+   "label": "1943 Adapazarı-Hendek depremi",
+   "links": 3,
+   "value": 1943.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1943 Adapazarı-Hendek depremi",
+   "tr_views": 2914
+  },
+  {
+   "qid": "Q4580937",
+   "label": "1983 Biga depremi",
+   "links": 3,
+   "value": 1983.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1983 Biga depremi",
+   "tr_views": 1637
+  },
+  {
+   "qid": "Q4816633",
+   "label": "1938 Kırşehir depremi",
+   "links": 3,
+   "value": 1938.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1938 Kırşehir depremi",
+   "tr_views": 4589
+  },
+  {
+   "qid": "Q5931448",
+   "label": "1969 Alaşehir depremi",
+   "links": 3,
+   "value": 1969.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1969 Alaşehir depremi",
+   "tr_views": 4457
+  },
+  {
+   "qid": "Q5931663",
+   "label": "1964 Manyas depremi",
+   "links": 3,
+   "value": 1964.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1964 Manyas depremi",
+   "tr_views": 6049
+  },
+  {
+   "qid": "Q5932096",
+   "label": "1967 Pülümür Depremi",
+   "links": 3,
+   "value": 1967.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1967 Pülümür depremi",
+   "tr_views": 2127
+  },
+  {
+   "qid": "Q6014679",
+   "label": "1957 Fethiye Depremi",
+   "links": 3,
+   "value": 1957.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1957 Fethiye depremleri",
+   "tr_views": 5559
+  },
+  {
+   "qid": "Q85738655",
+   "label": "840 Erzurum depremi",
+   "links": 3,
+   "value": 840.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "840 Erzurum depremi",
+   "tr_views": 303
+  },
+  {
+   "qid": "Q106776264",
+   "label": "1929 Suşehri depremi",
+   "links": 2,
+   "value": 1929.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1929 Suşehri depremi",
+   "tr_views": 3068
+  },
+  {
+   "qid": "Q111148503",
+   "label": "1944 Edremit Körfezi depremi",
+   "links": 2,
+   "value": 1944.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1944 Edremit Körfezi depremi",
+   "tr_views": 1306
+  },
+  {
+   "qid": "Q113456720",
+   "label": "1899 Aydın-Denizli depremi",
+   "links": 2,
+   "value": 1899.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1899 Aydın-Denizli depremi",
+   "tr_views": 6079
+  },
+  {
+   "qid": "Q116884969",
+   "label": "1968 Bartın depremi",
+   "links": 2,
+   "value": 1968.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1968 Bartın depremi",
+   "tr_views": 1798
+  },
+  {
+   "qid": "Q118538993",
+   "label": "1866 Bingöl depremi",
+   "links": 2,
+   "value": 1866.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1866 Bingöl depremi",
+   "tr_views": 798
+  },
+  {
+   "qid": "Q122452171",
+   "label": "1766 Marmara depremi",
+   "links": 2,
+   "value": 1766.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1766 Marmara depremi",
+   "tr_views": 6899
+  },
+  {
+   "qid": "Q130050710",
+   "label": "528 Antakya depremi",
+   "links": 2,
+   "value": 528.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "tr_views": 0
+  },
+  {
+   "qid": "Q20474005",
+   "label": "Ocak 1898 Balıkesir depremi",
+   "links": 2,
+   "value": 1898.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1898 Balıkesir depremi",
+   "tr_views": 6495
+  },
+  {
+   "qid": "Q55600410",
+   "label": "1883 Çeşme depremi",
+   "links": 2,
+   "value": 1883.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1883 Çeşme depremi",
+   "tr_views": 1370
+  },
+  {
+   "qid": "Q5917870",
+   "label": "1928 Torbalı depremi",
+   "links": 2,
+   "value": 1928.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1928 Torbalı depremi",
+   "tr_views": 4374
+  },
+  {
+   "qid": "Q85738526",
+   "label": "602 Surb Karapet Manastırı depremi",
+   "links": 2,
+   "value": 602.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "tr_views": 0
+  },
+  {
+   "qid": "Q85738600",
+   "label": "740 İstanbul depremi",
+   "links": 2,
+   "value": 740.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "tr_views": 0
+  },
+  {
+   "qid": "Q116890520",
+   "label": "1955 Söke depremi",
+   "links": 1,
+   "value": 1955.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1955 Söke depremi",
+   "tr_views": 2999
+  },
+  {
+   "qid": "Q117190915",
+   "label": "1893 Malatya Depremi",
+   "links": 1,
+   "value": 1893.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "tr_views": 0
+  },
+  {
+   "qid": "Q118459519",
+   "label": "1739 İzmir depremi",
+   "links": 1,
+   "value": 1739.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1739 İzmir depremi",
+   "tr_views": 381
+  },
+  {
+   "qid": "Q122640366",
+   "label": "2023 Kahramanmaraş depremlerindeki kayıplar",
+   "links": 1,
+   "value": 2023.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "2023 Kahramanmaraş depremlerindeki kayıplar",
+   "tr_views": 54593
+  },
+  {
+   "qid": "Q123208620",
+   "label": "1717 Kayseri depremi",
+   "links": 1,
+   "value": 1717.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1717 Kayseri depremi",
+   "tr_views": 2473
+  },
+  {
+   "qid": "Q124250189",
+   "label": "1875 Dinar depremi",
+   "links": 1,
+   "value": 1875.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "tr_views": 0
+  },
+  {
+   "qid": "Q5876351",
+   "label": "1900 Türkiye Depremi",
+   "links": 1,
+   "value": 1900.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "tr_views": 0
+  },
+  {
+   "qid": "Q5876731",
+   "label": "1903 Türkiye Depremi",
+   "links": 1,
+   "value": 1903.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "tr_views": 0
+  },
+  {
+   "qid": "Q5880976",
+   "label": "1945 Türkiye Depremi",
+   "links": 1,
+   "value": 1945.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "tr_views": 0
+  },
+  {
+   "qid": "Q85719675",
+   "label": "139 Mcurn depremi",
+   "links": 1,
+   "value": 139.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "tr_views": 0
+  },
+  {
+   "qid": "Q85738344",
+   "label": "461 Apahunik depremi",
+   "links": 1,
+   "value": 461.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "tr_views": 0
+  }
+ ]
+}

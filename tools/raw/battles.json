@@ -1,0 +1,2518 @@
+{
+ "dataset": "battles",
+ "description": "Muharebeler, tarih (P585)",
+ "property": "P585",
+ "fetched_at": "2026-10-26T10:37:32+00:00",
+ "rows": [
+  {
+   "qid": "Q48314",
+   "label": "Waterloo Muharebesi",
+   "links": 95,
+   "value": 1815.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Waterloo Muharebesi",
+   "tr_views": 42909
+  },
+  {
+   "qid": "Q52418",
+   "label": "Pearl Harbor Saldırısı",
+   "links": 88,
+   "value": 1941.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pearl Harbor Saldırısı",
+   "tr_views": 72331
+  },
+  {
+   "qid": "Q131969",
+   "label": "Termopylae Muharebesi",
+   "links": 83,
+   "value": -479.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Thermopylae Muharebesi",
+   "tr_views": 34300
+  },
+  {
+   "qid": "Q486124",
+   "label": "Bedir Muharebesi",
+   "links": 81,
+   "value": 624.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Bedir Muharebesi",
+   "tr_views": 54463
+  },
+  {
+   "qid": "Q83224",
+   "label": "Hastings Muharebesi",
+   "links": 81,
+   "value": 1066.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hastings Muharebesi",
+   "tr_views": 9321
+  },
+  {
+   "qid": "Q31900",
+   "label": "Maraton Muharebesi",
+   "links": 76,
+   "value": -489.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Maraton Muharebesi",
+   "tr_views": 9384
+  },
+  {
+   "qid": "Q31900",
+   "label": "Maraton Muharebesi",
+   "links": 76,
+   "value": -489.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Maraton Muharebesi",
+   "tr_views": 9384
+  },
+  {
+   "qid": "Q134114",
+   "label": "Austerlitz Muharebesi",
+   "links": 75,
+   "value": 1805.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Austerlitz Muharebesi",
+   "tr_views": 14531
+  },
+  {
+   "qid": "Q130861",
+   "label": "Kursk Muharebesi",
+   "links": 74,
+   "value": 1943.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kursk Muharebesi",
+   "tr_views": 16687
+  },
+  {
+   "qid": "Q33570",
+   "label": "Grunwald Savaşı",
+   "links": 72,
+   "value": 1410.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Grunwald Muharebesi",
+   "tr_views": 4841
+  },
+  {
+   "qid": "Q173077",
+   "label": "Puvatya Muharebesi",
+   "links": 69,
+   "value": 732.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Puvatya Muharebesi",
+   "tr_views": 10223
+  },
+  {
+   "qid": "Q178510",
+   "label": "Mohaç Meydan Muharebesi",
+   "links": 67,
+   "value": 1526.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mohaç Muharebesi (1526)",
+   "tr_views": 137757
+  },
+  {
+   "qid": "Q179591",
+   "label": "Cannae Muharebesi",
+   "links": 67,
+   "value": -215.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cannae Muharebesi",
+   "tr_views": 10332
+  },
+  {
+   "qid": "Q200032",
+   "label": "Malazgirt Zaferi Günü",
+   "links": 65,
+   "value": 1071.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Malazgirt Meydan Muharebesi",
+   "tr_views": 137068
+  },
+  {
+   "qid": "Q200855",
+   "label": "II. Viyana Kuşatması",
+   "links": 65,
+   "value": 1683.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "II. Viyana Kuşatması",
+   "tr_views": 97889
+  },
+  {
+   "qid": "Q87779",
+   "label": "Varus Muharebesi",
+   "links": 65,
+   "value": 9.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Teutoburg Ormanı Muharebesi",
+   "tr_views": 864
+  },
+  {
+   "qid": "Q179670",
+   "label": "Gaugamela Savaşı",
+   "links": 64,
+   "value": -330.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gaugamela Muharebesi",
+   "tr_views": 10825
+  },
+  {
+   "qid": "Q184320",
+   "label": "Borodino Muharebesi",
+   "links": 64,
+   "value": 1812.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Borodino Muharebesi",
+   "tr_views": 7551
+  },
+  {
+   "qid": "Q488278",
+   "label": "Uhud Muharebesi",
+   "links": 64,
+   "value": 625.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uhud Muharebesi",
+   "tr_views": 57300
+  },
+  {
+   "qid": "Q152486",
+   "label": "Poltova Muharebesi",
+   "links": 62,
+   "value": 1709.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Poltava Muharebesi",
+   "tr_views": 608
+  },
+  {
+   "qid": "Q188495",
+   "label": "Agincourt Muharebesi",
+   "links": 62,
+   "value": 1415.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Agincourt Muharebesi",
+   "tr_views": 11479
+  },
+  {
+   "qid": "Q626058",
+   "label": "Kerbelâ Olayı",
+   "links": 62,
+   "value": 680.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kerbelâ Olayı",
+   "tr_views": 176573
+  },
+  {
+   "qid": "Q179288",
+   "label": "I. Kosova Muharebesi",
+   "links": 61,
+   "value": 1389.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "I. Kosova Muharebesi",
+   "tr_views": 81508
+  },
+  {
+   "qid": "Q139808",
+   "label": "Katalon Savaşı",
+   "links": 59,
+   "value": 451.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Katalon Muharebesi",
+   "tr_views": 15628
+  },
+  {
+   "qid": "Q192660",
+   "label": "Okinawa Muharebesi",
+   "links": 58,
+   "value": 1945.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Okinawa Muharebesi",
+   "tr_views": 6211
+  },
+  {
+   "qid": "Q203233",
+   "label": "Plassey Muharebesi",
+   "links": 58,
+   "value": 1757.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Plassey Muharebesi",
+   "tr_views": 2660
+  },
+  {
+   "qid": "Q200056",
+   "label": "Zama Muharebesi",
+   "links": 57,
+   "value": -201.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zama Muharebesi",
+   "tr_views": 6503
+  },
+  {
+   "qid": "Q203729",
+   "label": "Kadeş Muharebesi",
+   "links": 56,
+   "value": -1273.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kadeş Muharebesi",
+   "tr_views": 9171
+  },
+  {
+   "qid": "Q203225",
+   "label": "Stamford Bridge Muharebesi",
+   "links": 55,
+   "value": 1066.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Stamford Köprüsü Muharebesi",
+   "tr_views": 6488
+  },
+  {
+   "qid": "Q209387",
+   "label": "Ankara Muharebesi",
+   "links": 55,
+   "value": 1402.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ankara Muharebesi",
+   "tr_views": 130321
+  },
+  {
+   "qid": "Q826083",
+   "label": "Hendek Muharebesi",
+   "links": 55,
+   "value": 627.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hendek Muharebesi",
+   "tr_views": 34522
+  },
+  {
+   "qid": "Q201526",
+   "label": "İssos Muharebesi",
+   "links": 54,
+   "value": -332.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İssos Muharebesi",
+   "tr_views": 10883
+  },
+  {
+   "qid": "Q210354",
+   "label": "Kulikovskaya Muharebesi",
+   "links": 53,
+   "value": 1380.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kulikovskaya Muharebesi",
+   "tr_views": 4282
+  },
+  {
+   "qid": "Q192473",
+   "label": "Edirne Savaşı",
+   "links": 52,
+   "value": 378.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hadrianapolis Muharebesi",
+   "tr_views": 4061
+  },
+  {
+   "qid": "Q201692",
+   "label": "Poitiers Muharebesi",
+   "links": 52,
+   "value": 1356.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Poitiers Muharebesi",
+   "tr_views": 1286
+  },
+  {
+   "qid": "Q204636",
+   "label": "Platea Muharebesi",
+   "links": 52,
+   "value": -478.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Platea Muharebesi",
+   "tr_views": 4506
+  },
+  {
+   "qid": "Q108102583",
+   "label": "Kabil'in Düşüşü",
+   "links": 51,
+   "value": 2021.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kabil'in Düşüşü (2021)",
+   "tr_views": 6936
+  },
+  {
+   "qid": "Q200716",
+   "label": "Heroneya Muharebesi (MÖ 338)",
+   "links": 51,
+   "value": -337.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Heroneya Muharebesi (MÖ 338)",
+   "tr_views": 908
+  },
+  {
+   "qid": "Q244356",
+   "label": "Aynicalut Muharebesi",
+   "links": 51,
+   "value": 1260.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ayn Calut Muharebesi",
+   "tr_views": 36352
+  },
+  {
+   "qid": "Q27759",
+   "label": "Crécy Muharebesi",
+   "links": 51,
+   "value": 1346.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Crécy Muharebesi",
+   "tr_views": 2209
+  },
+  {
+   "qid": "Q4373",
+   "label": "Beyaz Dağ Muharebesi",
+   "links": 51,
+   "value": 1620.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Beyaz Dağ Muharebesi",
+   "tr_views": 882
+  },
+  {
+   "qid": "Q734004",
+   "label": "Kara Ocak",
+   "links": 51,
+   "value": 1990.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara Ocak",
+   "tr_views": 10039
+  },
+  {
+   "qid": "Q213074",
+   "label": "Hidaspes Muharebesi",
+   "links": 50,
+   "value": -325.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hidaspes Muharebesi",
+   "tr_views": 3155
+  },
+  {
+   "qid": "Q154426",
+   "label": "Jena-Auerstedt Muharebesi",
+   "links": 49,
+   "value": 1806.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Jena-Auerstedt Muharebesi",
+   "tr_views": 1712
+  },
+  {
+   "qid": "Q205422",
+   "label": "Little Bighorn Muharebesi",
+   "links": 49,
+   "value": 1876.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Little Bighorn Muharebesi",
+   "tr_views": 3923
+  },
+  {
+   "qid": "Q205887",
+   "label": "Carrhae Muharebesi",
+   "links": 49,
+   "value": -52.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Carrhae Muharebesi",
+   "tr_views": 5388
+  },
+  {
+   "qid": "Q570204",
+   "label": "Kalka Nehri Muharebesi",
+   "links": 49,
+   "value": 1223.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kalka Nehri Muharebesi",
+   "tr_views": 7022
+  },
+  {
+   "qid": "Q14689",
+   "label": "Peipus Gölü Savaşı",
+   "links": 48,
+   "value": 1242.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Peipus Gölü Savaşı",
+   "tr_views": 1788
+  },
+  {
+   "qid": "Q192938",
+   "label": "Granikos Muharebesi",
+   "links": 48,
+   "value": -333.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Granikos Muharebesi",
+   "tr_views": 8195
+  },
+  {
+   "qid": "Q212220",
+   "label": "Niğbolu Muharebesi",
+   "links": 48,
+   "value": 1396.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Niğbolu Muharebesi (1396)",
+   "tr_views": 166431
+  },
+  {
+   "qid": "Q32832",
+   "label": "Varna Muharebesi",
+   "links": 48,
+   "value": 1444.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Varna Muharebesi",
+   "tr_views": 62586
+  },
+  {
+   "qid": "Q219697",
+   "label": "Las Navas de Tolosa Muharebesi",
+   "links": 47,
+   "value": 1212.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Las Navas de Tolosa Muharebesi",
+   "tr_views": 1993
+  },
+  {
+   "qid": "Q234188",
+   "label": "Sekigahara Muharebesi",
+   "links": 47,
+   "value": 1600.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sekigahara Muharebesi",
+   "tr_views": 3858
+  },
+  {
+   "qid": "Q273011",
+   "label": "Marengo Muharebesi",
+   "links": 47,
+   "value": 1800.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Marengo Muharebesi",
+   "tr_views": 1989
+  },
+  {
+   "qid": "Q605321",
+   "label": "Panipat Muharebesi (1526)",
+   "links": 47,
+   "value": 1526.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Panipat Muharebesi (1526)",
+   "tr_views": 3460
+  },
+  {
+   "qid": "Q821283",
+   "label": "Varşova Muharebesi",
+   "links": 47,
+   "value": 1920.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Varşova Muharebesi (1920)",
+   "tr_views": 1125
+  },
+  {
+   "qid": "Q203681",
+   "label": "Farsalus Muharebesi",
+   "links": 46,
+   "value": -47.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pharsalus Muharebesi",
+   "tr_views": 4312
+  },
+  {
+   "qid": "Q222013",
+   "label": "Bosworth Muharebesi",
+   "links": 46,
+   "value": 1485.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bosworth Muharebesi",
+   "tr_views": 1275
+  },
+  {
+   "qid": "Q302519",
+   "label": "Adowa Muharebesi",
+   "links": 45,
+   "value": 1896.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Adowa Muharebesi",
+   "tr_views": 2345
+  },
+  {
+   "qid": "Q332543",
+   "label": "Piramitler Muharebesi",
+   "links": 45,
+   "value": 1798.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Piramitler Muharebesi",
+   "tr_views": 6022
+  },
+  {
+   "qid": "Q392538",
+   "label": "Zellaka Muharebesi",
+   "links": 45,
+   "value": 1086.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ez-Zellaka Muharebesi",
+   "tr_views": 1362
+  },
+  {
+   "qid": "Q459447",
+   "label": "Yorktown Kuşatması",
+   "links": 45,
+   "value": 1781.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yorktown Kuşatması",
+   "tr_views": 3128
+  },
+  {
+   "qid": "Q1639459",
+   "label": "Mute Muharebesi",
+   "links": 44,
+   "value": 629.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mute Muharebesi",
+   "tr_views": 58351
+  },
+  {
+   "qid": "Q207250",
+   "label": "Trasimene Gölü Muharebesi",
+   "links": 44,
+   "value": -216.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Trasumennus Gölü Muharebesi",
+   "tr_views": 855
+  },
+  {
+   "qid": "Q270517",
+   "label": "Dieppe Baskını",
+   "links": 44,
+   "value": 1942.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dieppe Baskını",
+   "tr_views": 1137
+  },
+  {
+   "qid": "Q504172",
+   "label": "Guadalete Muharebesi",
+   "links": 44,
+   "value": 711.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Guadalete Muharebesi",
+   "tr_views": 4667
+  },
+  {
+   "qid": "Q745110",
+   "label": "Çaldıran Muharebesi",
+   "links": 44,
+   "value": 1514.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çaldıran Muharebesi",
+   "tr_views": 105495
+  },
+  {
+   "qid": "Q957186",
+   "label": "Covadonga Muharebesi",
+   "links": 44,
+   "value": 718.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Covadonga Muharebesi",
+   "tr_views": 1692
+  },
+  {
+   "qid": "Q957186",
+   "label": "Covadonga Muharebesi",
+   "links": 44,
+   "value": 722.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Covadonga Muharebesi",
+   "tr_views": 1692
+  },
+  {
+   "qid": "Q1133574",
+   "label": "Cemel Savaşı",
+   "links": 43,
+   "value": 656.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cemel Muharebesi",
+   "tr_views": 68069
+  },
+  {
+   "qid": "Q159512",
+   "label": "Legnica muharebesi",
+   "links": 43,
+   "value": 1241.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Legnica Muharebesi",
+   "tr_views": 7334
+  },
+  {
+   "qid": "Q162284",
+   "label": "Kiev Muharebesi",
+   "links": 43,
+   "value": 1941.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kiev Muharebesi (1941)",
+   "tr_views": 3823
+  },
+  {
+   "qid": "Q241108",
+   "label": "Friedland Muharebesi",
+   "links": 43,
+   "value": 1807.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Friedland Muharebesi",
+   "tr_views": 1730
+  },
+  {
+   "qid": "Q2649081",
+   "label": "Hollanda Muharebesi",
+   "links": 43,
+   "value": 1940.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hollanda Muharebesi",
+   "tr_views": 2172
+  },
+  {
+   "qid": "Q499626",
+   "label": "Stirling Köprüsü Muharebesi",
+   "links": 43,
+   "value": 1297.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Stirling Köprüsü Muharebesi",
+   "tr_views": 3064
+  },
+  {
+   "qid": "Q521799",
+   "label": "Neva Muharebesi",
+   "links": 43,
+   "value": 1240.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Neva Muharebesi",
+   "tr_views": 595
+  },
+  {
+   "qid": "Q589318",
+   "label": "Falkirk Savaşı",
+   "links": 43,
+   "value": 1298.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Falkirk Muharebesi",
+   "tr_views": 2638
+  },
+  {
+   "qid": "Q324916",
+   "label": "Solferino Savaşı",
+   "links": 42,
+   "value": 1859.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Solferino Muharebesi",
+   "tr_views": 2386
+  },
+  {
+   "qid": "Q543165",
+   "label": "Fort Sumter Muharebesi",
+   "links": 42,
+   "value": 1861.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fort Sumter Muharebesi",
+   "tr_views": 1218
+  },
+  {
+   "qid": "Q565661",
+   "label": "Hayber Muharebesi",
+   "links": 42,
+   "value": 628.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hayber Muharebesi",
+   "tr_views": 36867
+  },
+  {
+   "qid": "Q111012552",
+   "label": "Yılan Adası Muharebesi",
+   "links": 41,
+   "value": 2022.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "2022 Yılan Adası seferi",
+   "tr_views": 759
+  },
+  {
+   "qid": "Q271873",
+   "label": "Trebia Muharebesi",
+   "links": 41,
+   "value": -217.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Trebia Muharebesi",
+   "tr_views": 2492
+  },
+  {
+   "qid": "Q273069",
+   "label": "Lechfeld Muharebesi",
+   "links": 41,
+   "value": 955.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lechfeld Muharebesi",
+   "tr_views": 864
+  },
+  {
+   "qid": "Q461599",
+   "label": "Leuctra Muharebesi",
+   "links": 41,
+   "value": -370.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Leuctra Muharebesi",
+   "tr_views": 1012
+  },
+  {
+   "qid": "Q464512",
+   "label": "Balaklava Muharebesi",
+   "links": 41,
+   "value": 1854.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Balaklava Muharebesi",
+   "tr_views": 3746
+  },
+  {
+   "qid": "Q651919",
+   "label": "Culloden Savaşı",
+   "links": 41,
+   "value": 1746.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Culloden Muharebesi",
+   "tr_views": 5535
+  },
+  {
+   "qid": "Q719252",
+   "label": "Antietam Muharebesi",
+   "links": 41,
+   "value": 1862.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Antietam Muharebesi",
+   "tr_views": 1299
+  },
+  {
+   "qid": "Q1259218",
+   "label": "Panipat Muharebesi (1761)",
+   "links": 40,
+   "value": 1761.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Panipat Muharebesi (1761)",
+   "tr_views": 1284
+  },
+  {
+   "qid": "Q162357",
+   "label": "Smolensk Muharebesi",
+   "links": 40,
+   "value": 1941.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Smolensk Muharebesi (1941)",
+   "tr_views": 3102
+  },
+  {
+   "qid": "Q4411",
+   "label": "Valmy Muharebesi",
+   "links": 40,
+   "value": 1792.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Valmy Muharebesi",
+   "tr_views": 1245
+  },
+  {
+   "qid": "Q44732",
+   "label": "Altın Mahmuzlar Savaşı",
+   "links": 40,
+   "value": 1302.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Altın Mahmuzlar Savaşı",
+   "tr_views": 506
+  },
+  {
+   "qid": "Q482456",
+   "label": "Saygon'un Düşüşü",
+   "links": 40,
+   "value": 1975.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saygon'un Düşüşü",
+   "tr_views": 1806
+  },
+  {
+   "qid": "Q154942",
+   "label": "Königgrätz Muharebesi",
+   "links": 39,
+   "value": 1866.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Königgrätz Muharebesi",
+   "tr_views": 1151
+  },
+  {
+   "qid": "Q155103",
+   "label": "Budapeşte Muharebesi",
+   "links": 39,
+   "value": 1944.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Budapeşte Muharebesi",
+   "tr_views": 1987
+  },
+  {
+   "qid": "Q503982",
+   "label": "Mykale Muharebesi",
+   "links": 39,
+   "value": -478.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mykale Muharebesi",
+   "tr_views": 1657
+  },
+  {
+   "qid": "Q63468",
+   "label": "Pavia Muharebesi",
+   "links": 39,
+   "value": 1525.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pavia Muharebesi",
+   "tr_views": 4682
+  },
+  {
+   "qid": "Q644960",
+   "label": "Boyne Muharebesi",
+   "links": 39,
+   "value": 1690.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boyne Muharebesi",
+   "tr_views": 591
+  },
+  {
+   "qid": "Q705874",
+   "label": "Mohi Muharebesi",
+   "links": 39,
+   "value": 1241.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mohi Muharebesi",
+   "tr_views": 6121
+  },
+  {
+   "qid": "Q851504",
+   "label": "Vouillé Muharebesi",
+   "links": 39,
+   "value": 507.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vouillé Muharebesi",
+   "tr_views": 430
+  },
+  {
+   "qid": "Q167259",
+   "label": "Lützen Muharebesi",
+   "links": 38,
+   "value": 1632.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lützen Muharebesi (1632)",
+   "tr_views": 1448
+  },
+  {
+   "qid": "Q334029",
+   "label": "Bunker Hill Muharebesi",
+   "links": 38,
+   "value": 1775.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bunker Tepesi Muharebesi",
+   "tr_views": 1134
+  },
+  {
+   "qid": "Q733364",
+   "label": "Megiddo Muharebesi (MÖ 15. yüzyıl)",
+   "links": 38,
+   "value": -1456.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Megiddo Muharebesi (MÖ 15. yüzyıl)",
+   "tr_views": 1191
+  },
+  {
+   "qid": "Q830059",
+   "label": "Kızıl Kayalar Muharebesi",
+   "links": 38,
+   "value": 208.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kızıl Kayalar Muharebesi",
+   "tr_views": 1501
+  },
+  {
+   "qid": "Q847287",
+   "label": "Montgisard Muharebesi",
+   "links": 38,
+   "value": 1177.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Montgisard Muharebesi",
+   "tr_views": 19608
+  },
+  {
+   "qid": "Q111012383",
+   "label": "Çernobil Muharebesi",
+   "links": 37,
+   "value": 2022.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çernobil Muharebesi",
+   "tr_views": 1214
+  },
+  {
+   "qid": "Q221469",
+   "label": "Birinci Bull Run Savaşı",
+   "links": 37,
+   "value": 1861.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Birinci Bull Run Muharebesi",
+   "tr_views": 913
+  },
+  {
+   "qid": "Q2300090",
+   "label": "Huneyn Muharebesi",
+   "links": 37,
+   "value": 630.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Huneyn Muharebesi",
+   "tr_views": 16643
+  },
+  {
+   "qid": "Q319124",
+   "label": "İpsos Muharebesi",
+   "links": 37,
+   "value": -300.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İpsos Muharebesi",
+   "tr_views": 2543
+  },
+  {
+   "qid": "Q391087",
+   "label": "Kinoskefalai Muharebesi",
+   "links": 37,
+   "value": -196.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kinoskefalai Muharebesi",
+   "tr_views": 489
+  },
+  {
+   "qid": "Q47465940",
+   "label": "Zeytin Dalı Harekâtı",
+   "links": 37,
+   "value": 2019.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zeytin Dalı Harekâtı",
+   "tr_views": 54854
+  },
+  {
+   "qid": "Q846674",
+   "label": "Saratoga Muharebesi",
+   "links": 37,
+   "value": 1777.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saratoga Muharebesi",
+   "tr_views": 2270
+  },
+  {
+   "qid": "Q939570",
+   "label": "Çirmen Muharebesi",
+   "links": 37,
+   "value": 1371.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çirmen Muharebesi",
+   "tr_views": 108647
+  },
+  {
+   "qid": "Q1233475",
+   "label": "Roncevaux Geçidi Muharebesi",
+   "links": 36,
+   "value": 778.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Roncevaux Geçidi Muharebesi",
+   "tr_views": 811
+  },
+  {
+   "qid": "Q327061",
+   "label": "Bialistok-Minsk Muharebesi",
+   "links": 36,
+   "value": 1941.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bialistok-Minsk Muharebesi",
+   "tr_views": 1499
+  },
+  {
+   "qid": "Q517486",
+   "label": "Zenta Muharebesi",
+   "links": 36,
+   "value": 1697.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zenta Muharebesi",
+   "tr_views": 35662
+  },
+  {
+   "qid": "Q609030",
+   "label": "Peleliu Muharebesi",
+   "links": 36,
+   "value": 1944.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Peleliu Muharebesi",
+   "tr_views": 1853
+  },
+  {
+   "qid": "Q917811",
+   "label": "Magnesia Savaşı",
+   "links": 36,
+   "value": -189.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Magnesia Muharebesi",
+   "tr_views": 2405
+  },
+  {
+   "qid": "Q940026",
+   "label": "Arsuf Muharebesi",
+   "links": 36,
+   "value": 1191.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arsuf Muharebesi",
+   "tr_views": 4366
+  },
+  {
+   "qid": "Q1165502",
+   "label": "Edessa Muharebesi",
+   "links": 35,
+   "value": 260.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Edessa Muharebesi",
+   "tr_views": 2199
+  },
+  {
+   "qid": "Q12428",
+   "label": "Dorileon Muharebesi",
+   "links": 35,
+   "value": 1097.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dorileon Muharebesi (1097)",
+   "tr_views": 9207
+  },
+  {
+   "qid": "Q205379",
+   "label": "Breitenfeld Muharebesi",
+   "links": 35,
+   "value": 1631.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Breitenfeld Muharebesi (1631)",
+   "tr_views": 1166
+  },
+  {
+   "qid": "Q327099",
+   "label": "Kasserine Geçidi Muharebesi",
+   "links": 35,
+   "value": 1943.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kasserine Geçidi Muharebesi",
+   "tr_views": 1660
+  },
+  {
+   "qid": "Q504739",
+   "label": "Pidna Muharebesi",
+   "links": 35,
+   "value": -167.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pidna Muharebesi",
+   "tr_views": 895
+  },
+  {
+   "qid": "Q584047",
+   "label": "Belasitsa Muharebesi",
+   "links": 35,
+   "value": 1014.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Belasitsa Muharebesi",
+   "tr_views": 1234
+  },
+  {
+   "qid": "Q690470",
+   "label": "Mohaç Muharebesi",
+   "links": 35,
+   "value": 1687.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mohaç Muharebesi (1687)",
+   "tr_views": 18517
+  },
+  {
+   "qid": "Q697579",
+   "label": "Hasan Gölü Muharebesi",
+   "links": 35,
+   "value": 1938.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hasan Gölü Muharebesi",
+   "tr_views": 2400
+  },
+  {
+   "qid": "Q755966",
+   "label": "Ninova Muharebesi (627)",
+   "links": 35,
+   "value": 627.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ninova Muharebesi (627)",
+   "tr_views": 4220
+  },
+  {
+   "qid": "Q1509619",
+   "label": "Koyunhisar Muharebesi",
+   "links": 34,
+   "value": 1302.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bafeus Muharebesi",
+   "tr_views": 47264
+  },
+  {
+   "qid": "Q233414",
+   "label": "Panipat Muharebesi (1556)",
+   "links": 34,
+   "value": 1556.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Panipat Muharebesi (1556)",
+   "tr_views": 1225
+  },
+  {
+   "qid": "Q40144",
+   "label": "Coronel Deniz Muharebesi",
+   "links": 34,
+   "value": 1914.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Coronel Deniz Muharebesi",
+   "tr_views": 622
+  },
+  {
+   "qid": "Q751186",
+   "label": "Fredericksburg Muharebesi",
+   "links": 34,
+   "value": 1862.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fredericksburg Muharebesi",
+   "tr_views": 270
+  },
+  {
+   "qid": "Q1121532",
+   "label": "Vadisseyl Muharebesi",
+   "links": 33,
+   "value": 1578.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vadisseyl Muharebesi",
+   "tr_views": 15670
+  },
+  {
+   "qid": "Q169436",
+   "label": "Rostov Muharebesi",
+   "links": 33,
+   "value": 1941.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rostov Muharebesi (1941)",
+   "tr_views": 780
+  },
+  {
+   "qid": "Q233343",
+   "label": "İkinci Bull Run Muharebesi",
+   "links": 33,
+   "value": 1862.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İkinci Bull Run Muharebesi",
+   "tr_views": 603
+  },
+  {
+   "qid": "Q2355467",
+   "label": "Buksar Muharebesi",
+   "links": 33,
+   "value": 1764.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Buksar Muharebesi",
+   "tr_views": 1143
+  },
+  {
+   "qid": "Q378957",
+   "label": "Ticinus Muharebesi",
+   "links": 33,
+   "value": -217.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ticinus Muharebesi",
+   "tr_views": 1512
+  },
+  {
+   "qid": "Q714777",
+   "label": "Müttefiklerin İtalya'yı işgali",
+   "links": 33,
+   "value": 1943.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Müttefiklerin İtalya'yı işgali",
+   "tr_views": 1454
+  },
+  {
+   "qid": "Q932613",
+   "label": "Castillon Muharebesi",
+   "links": 33,
+   "value": 1453.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Castillon Muharebesi",
+   "tr_views": 1730
+  },
+  {
+   "qid": "Q170113",
+   "label": "Saint Gotthard Muharebesi",
+   "links": 32,
+   "value": 1664.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saint Gotthard Muharebesi (1664)",
+   "tr_views": 7532
+  },
+  {
+   "qid": "Q275019",
+   "label": "Suvorov Harekâtı",
+   "links": 32,
+   "value": 1943.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suvorov Harekâtı",
+   "tr_views": 834
+  },
+  {
+   "qid": "Q431205",
+   "label": "Cunaxa Muharebesi",
+   "links": 32,
+   "value": -400.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cunaxa Muharebesi",
+   "tr_views": 1112
+  },
+  {
+   "qid": "Q503347",
+   "label": "Mers-el-Kebir Deniz Muharebesi",
+   "links": 32,
+   "value": 1940.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mers-el-Kebir Deniz Muharebesi",
+   "tr_views": 1466
+  },
+  {
+   "qid": "Q516760",
+   "label": "Munda Muharebesi",
+   "links": 32,
+   "value": -44.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Munda Muharebesi",
+   "tr_views": 1055
+  },
+  {
+   "qid": "Q541506",
+   "label": "Prohorovka Muharebesi",
+   "links": 32,
+   "value": 1943.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Prohorovka Muharebesi",
+   "tr_views": 2631
+  },
+  {
+   "qid": "Q569953",
+   "label": "Fontenoy Muharebesi",
+   "links": 32,
+   "value": 1745.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fontenoy Savaşı",
+   "tr_views": 303
+  },
+  {
+   "qid": "Q655777",
+   "label": "Allia Muharebesi",
+   "links": 32,
+   "value": -386.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Allia Muharebesi",
+   "tr_views": 1534
+  },
+  {
+   "qid": "Q730553",
+   "label": "Miryokefalon Muharebesi",
+   "links": 32,
+   "value": 1176.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Miryokefalon Muharebesi",
+   "tr_views": 76690
+  },
+  {
+   "qid": "Q913604",
+   "label": "Alma Muharebesi",
+   "links": 32,
+   "value": 1854.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Alma Muharebesi",
+   "tr_views": 2203
+  },
+  {
+   "qid": "Q1071578",
+   "label": "Smolensk Muharebesi",
+   "links": 31,
+   "value": 1812.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Smolensk Muharebesi (1812)",
+   "tr_views": 1518
+  },
+  {
+   "qid": "Q1078359",
+   "label": "Yamen Muharebesi",
+   "links": 31,
+   "value": 1279.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yamen Muharebesi",
+   "tr_views": 1906
+  },
+  {
+   "qid": "Q1113659",
+   "label": "Fulford Muharebesi",
+   "links": 31,
+   "value": 1066.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fulford Muharebesi",
+   "tr_views": 711
+  },
+  {
+   "qid": "Q1127337",
+   "label": "Graupius Dağları Muharebesi",
+   "links": 31,
+   "value": 83.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Graupius Dağları Muharebesi",
+   "tr_views": 320
+  },
+  {
+   "qid": "Q1127337",
+   "label": "Graupius Dağları Muharebesi",
+   "links": 31,
+   "value": 84.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Graupius Dağları Muharebesi",
+   "tr_views": 320
+  },
+  {
+   "qid": "Q1160070",
+   "label": "Beneventum Savaşı",
+   "links": 31,
+   "value": -274.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Beneventum Savaşı",
+   "tr_views": 522
+  },
+  {
+   "qid": "Q18071930",
+   "label": "Kobani Kuşatması",
+   "links": 31,
+   "value": 2014.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kobani Kuşatması",
+   "tr_views": 31195
+  },
+  {
+   "qid": "Q1987213",
+   "label": "Dirrahion Muharebesi",
+   "links": 31,
+   "value": 1081.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dirrahion Muharebesi (1081)",
+   "tr_views": 6
+  },
+  {
+   "qid": "Q276059",
+   "label": "Vitoria Muharebesi",
+   "links": 31,
+   "value": 1813.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vitoria Muharebesi",
+   "tr_views": 1016
+  },
+  {
+   "qid": "Q316897",
+   "label": "Malplaquet Savaşı",
+   "links": 31,
+   "value": 1709.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Malplaquet Muharebesi",
+   "tr_views": 360
+  },
+  {
+   "qid": "Q603549",
+   "label": "Nihavend Savaşı",
+   "links": 31,
+   "value": 642.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nihâvend Muharebesi",
+   "tr_views": 7936
+  },
+  {
+   "qid": "Q670489",
+   "label": "Gorlice-Tarnów Taaruzu",
+   "links": 31,
+   "value": 1915.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gorlice-Tarnów Taarruzu",
+   "tr_views": 1085
+  },
+  {
+   "qid": "Q690308",
+   "label": "Kerensky Taarruzu",
+   "links": 31,
+   "value": 1917.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kerenski Taarruzu",
+   "tr_views": 700
+  },
+  {
+   "qid": "Q696900",
+   "label": "Guam Muharebesi (1944)",
+   "links": 31,
+   "value": 1944.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Guam Muharebesi (1944)",
+   "tr_views": 757
+  },
+  {
+   "qid": "Q744611",
+   "label": "Herakleia Muharebesi",
+   "links": 31,
+   "value": -279.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Herakleia Muharebesi",
+   "tr_views": 869
+  },
+  {
+   "qid": "Q849653",
+   "label": "Thapsus Muharebesi",
+   "links": 31,
+   "value": -45.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Thapsus Muharebesi",
+   "tr_views": 1429
+  },
+  {
+   "qid": "Q111078529",
+   "label": "Syevyerodonetsk Muharebesi",
+   "links": 30,
+   "value": 2022.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Syevyerodonetsk Muharebesi (2022)",
+   "tr_views": 303
+  },
+  {
+   "qid": "Q136344",
+   "label": "Kösedağ Muharebesi",
+   "links": 30,
+   "value": 1243.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kösedağ Muharebesi",
+   "tr_views": 75069
+  },
+  {
+   "qid": "Q14303815",
+   "label": "Itter Kalesi Muharebesi",
+   "links": 30,
+   "value": 1945.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Itter Kalesi Muharebesi",
+   "tr_views": 2191
+  },
+  {
+   "qid": "Q1500314",
+   "label": "Harran Muharebesi",
+   "links": 30,
+   "value": 1104.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Harran Muharebesi",
+   "tr_views": 2666
+  },
+  {
+   "qid": "Q161033",
+   "label": "Demyansk Cebi",
+   "links": 30,
+   "value": 1942.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Demyansk Cebi",
+   "tr_views": 400
+  },
+  {
+   "qid": "Q403416",
+   "label": "Pliska Savaşı",
+   "links": 30,
+   "value": 811.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pliska Muharebesi",
+   "tr_views": 1023
+  },
+  {
+   "qid": "Q4071923",
+   "label": "Ölülerin Atağı",
+   "links": 30,
+   "value": 1915.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ölü adamların saldırısı",
+   "tr_views": 2789
+  },
+  {
+   "qid": "Q428369",
+   "label": "Nagashino Muharebesi",
+   "links": 30,
+   "value": 1575.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nagashino Muharebesi",
+   "tr_views": 598
+  },
+  {
+   "qid": "Q634629",
+   "label": "Battle of Towton",
+   "links": 30,
+   "value": 1461.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Battle of Towton",
+   "tr_views": 100
+  },
+  {
+   "qid": "Q652320",
+   "label": "Toulouse Muharebesi",
+   "links": 30,
+   "value": 721.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Toulouse Muharebesi",
+   "tr_views": 742
+  },
+  {
+   "qid": "Q696931",
+   "label": "Manila Muharebesi (1945)",
+   "links": 30,
+   "value": 1945.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Manila Muharebesi (1945)",
+   "tr_views": 416
+  },
+  {
+   "qid": "Q734700",
+   "label": "Avarayr Muharebesi",
+   "links": 30,
+   "value": 451.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avarayr Muharebesi",
+   "tr_views": 1160
+  },
+  {
+   "qid": "Q778800",
+   "label": "Abukir Muharebesi",
+   "links": 30,
+   "value": 1799.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Abukir Muharebesi (1799)",
+   "tr_views": 3020
+  },
+  {
+   "qid": "Q841211",
+   "label": "Nedao Muharebesi",
+   "links": 30,
+   "value": 454.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nedao Muharebesi",
+   "tr_views": 5938
+  },
+  {
+   "qid": "Q112016",
+   "label": "Pers Geçidi Muharebesi",
+   "links": 29,
+   "value": -329.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pers Geçidi Muharebesi",
+   "tr_views": 1814
+  },
+  {
+   "qid": "Q1192616",
+   "label": "Didgori Muharebesi",
+   "links": 29,
+   "value": 1121.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Didgori Muharebesi",
+   "tr_views": 18232
+  },
+  {
+   "qid": "Q1341972",
+   "label": "Aljubarrota Muharebesi",
+   "links": 29,
+   "value": 1385.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aljubarrota Muharebesi",
+   "tr_views": 740
+  },
+  {
+   "qid": "Q149560",
+   "label": "Stallupönen Muharebesi",
+   "links": 29,
+   "value": 1914.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Stallupönen Muharebesi",
+   "tr_views": 534
+  },
+  {
+   "qid": "Q25628",
+   "label": "Uğra Çarpışması",
+   "links": 29,
+   "value": 1480.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ugra Savaşı",
+   "tr_views": 2764
+  },
+  {
+   "qid": "Q261776",
+   "label": "Birinci Rzhev-Vyazma Muharebesi",
+   "links": 29,
+   "value": 1942.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rjev Muharebeleri",
+   "tr_views": 2704
+  },
+  {
+   "qid": "Q289492",
+   "label": "Zap Suyu Muharebesi",
+   "links": 29,
+   "value": 750.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zap Suyu Muharebesi",
+   "tr_views": 5009
+  },
+  {
+   "qid": "Q385604",
+   "label": "Dara Savaşı",
+   "links": 29,
+   "value": 530.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dara Muharebesi",
+   "tr_views": 3742
+  },
+  {
+   "qid": "Q47299",
+   "label": "Korupedyon Muharebesi",
+   "links": 29,
+   "value": -280.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Korupedyon Muharebesi",
+   "tr_views": 1153
+  },
+  {
+   "qid": "Q653470",
+   "label": "Kafkasya Muharebesi",
+   "links": 29,
+   "value": 1943.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kafkasya Muharebesi",
+   "tr_views": 1220
+  },
+  {
+   "qid": "Q678227",
+   "label": "Fleurus Muharebesi",
+   "links": 29,
+   "value": 1794.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fleurus Muharebesi (1794)",
+   "tr_views": 361
+  },
+  {
+   "qid": "Q694379",
+   "label": "Krbava Muharebesi",
+   "links": 29,
+   "value": 1493.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Krbava Muharebesi",
+   "tr_views": 6331
+  },
+  {
+   "qid": "Q700032",
+   "label": "Savo Adası Muharebesi",
+   "links": 29,
+   "value": 1942.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Savo Adası Muharebesi",
+   "tr_views": 485
+  },
+  {
+   "qid": "Q705813",
+   "label": "Hohenlinden Muharebesi",
+   "links": 29,
+   "value": 1800.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hohenlinden Muharebesi",
+   "tr_views": 466
+  },
+  {
+   "qid": "Q776215",
+   "label": "Arausio Muharebesi",
+   "links": 29,
+   "value": -104.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arausio Muharebesi",
+   "tr_views": 398
+  },
+  {
+   "qid": "Q888904",
+   "label": "Ecnadeyn Muharebesi",
+   "links": 29,
+   "value": 634.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ecnadeyn Muharebesi",
+   "tr_views": 8703
+  },
+  {
+   "qid": "Q949724",
+   "label": "Naseby Muharebesi",
+   "links": 29,
+   "value": 1645.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Naseby Muharebesi",
+   "tr_views": 316
+  },
+  {
+   "qid": "Q971248",
+   "label": "Mercidabık Muharebesi",
+   "links": 29,
+   "value": 1516.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mercidâbık Muharebesi",
+   "tr_views": 37167
+  },
+  {
+   "qid": "Q127299",
+   "label": "Kolin Savaşı",
+   "links": 28,
+   "value": 1757.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kolin Muharebesi",
+   "tr_views": 237
+  },
+  {
+   "qid": "Q1327790",
+   "label": "Chickamauga Muharebesi",
+   "links": 28,
+   "value": 1863.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Chickamauga Muharebesi",
+   "tr_views": 823
+  },
+  {
+   "qid": "Q2309898",
+   "label": "Şebeş Muharebesi",
+   "links": 28,
+   "value": 1788.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şebeş Muharebesi",
+   "tr_views": 53152
+  },
+  {
+   "qid": "Q2456292",
+   "label": "Yemame Savaşı",
+   "links": 28,
+   "value": 632.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yemame Muharebesi",
+   "tr_views": 10808
+  },
+  {
+   "qid": "Q2604547",
+   "label": "Roma'nın Düşüşü",
+   "links": 28,
+   "value": 1870.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Roma'nın düşüşü",
+   "tr_views": 2525
+  },
+  {
+   "qid": "Q283062",
+   "label": "Benevento Muharebesi",
+   "links": 28,
+   "value": 1266.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Benevento Muharebesi",
+   "tr_views": 157
+  },
+  {
+   "qid": "Q349422",
+   "label": "Okehazama Muharebesi",
+   "links": 28,
+   "value": 1560.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Okehazama Muharebesi",
+   "tr_views": 221
+  },
+  {
+   "qid": "Q48202",
+   "label": "Custoza Muharebesi",
+   "links": 28,
+   "value": 1848.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Custoza Muharebesi (1848)",
+   "tr_views": 227
+  },
+  {
+   "qid": "Q582953",
+   "label": "Debrecen Muharebesi",
+   "links": 28,
+   "value": 1944.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Debrecen Muharebesi",
+   "tr_views": 591
+  },
+  {
+   "qid": "Q595320",
+   "label": "Badon Dağı Muharebesi",
+   "links": 28,
+   "value": 500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Badon Dağı Muharebesi",
+   "tr_views": 593
+  },
+  {
+   "qid": "Q633560",
+   "label": "Karkamış Muharebesi",
+   "links": 28,
+   "value": -604.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karkamış Muharebesi",
+   "tr_views": 1555
+  },
+  {
+   "qid": "Q662947",
+   "label": "Piave Nehri Muharebesi",
+   "links": 28,
+   "value": 1918.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Piave Nehri Muharebesi",
+   "tr_views": 328
+  },
+  {
+   "qid": "Q700960",
+   "label": "İkinci Kiev Muharebesi",
+   "links": 28,
+   "value": 1943.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İkinci Kiev Muharebesi",
+   "tr_views": 1151
+  },
+  {
+   "qid": "Q702377",
+   "label": "Sarı Deniz Muharebesi",
+   "links": 28,
+   "value": 1904.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sarı Deniz Muharebesi",
+   "tr_views": 1322
+  },
+  {
+   "qid": "Q757870",
+   "label": "Hafif Süvari Birliğinin Taarruzu",
+   "links": 28,
+   "value": 1854.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hafif Süvari Birliğinin Taarruzu",
+   "tr_views": 265
+  },
+  {
+   "qid": "Q767848",
+   "label": "Hadrianapolis Muharebesi (324)",
+   "links": 28,
+   "value": 324.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hadrianapolis Muharebesi (324)",
+   "tr_views": 397
+  },
+  {
+   "qid": "Q835881",
+   "label": "Bodenplatte Operasyonu",
+   "links": 28,
+   "value": 1945.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bodenplatte Operasyonu",
+   "tr_views": 1058
+  },
+  {
+   "qid": "Q917376",
+   "label": "Agrigentum Muharebesi",
+   "links": 28,
+   "value": -260.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Agrigentum Muharebesi",
+   "tr_views": 321
+  },
+  {
+   "qid": "Q1066650",
+   "label": "Los Angeles Muharebesi",
+   "links": 27,
+   "value": 1942.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Los Angeles Muharebesi",
+   "tr_views": 3993
+  },
+  {
+   "qid": "Q1127353",
+   "label": "Ad Decimum Muharebesi",
+   "links": 27,
+   "value": 533.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ad Decimum Muharebesi",
+   "tr_views": 1249
+  },
+  {
+   "qid": "Q1367199",
+   "label": "Strasbourg Muharebesi",
+   "links": 27,
+   "value": 357.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Strasbourg Muharebesi",
+   "tr_views": 152
+  },
+  {
+   "qid": "Q1421082",
+   "label": "Abritus Muharebesi",
+   "links": 27,
+   "value": 251.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Abritus Muharebesi",
+   "tr_views": 876
+  },
+  {
+   "qid": "Q145588",
+   "label": "Gumbinnen Muharebesi",
+   "links": 27,
+   "value": 1914.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gumbinnen Muharebesi",
+   "tr_views": 1130
+  },
+  {
+   "qid": "Q2091449",
+   "label": "Mactan Muharebesi",
+   "links": 27,
+   "value": 1521.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mactan Muharebesi",
+   "tr_views": 1087
+  },
+  {
+   "qid": "Q326989",
+   "label": "Morgarten Çarpışması",
+   "links": 27,
+   "value": 1315.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Morgarten Muharebesi",
+   "tr_views": 634
+  },
+  {
+   "qid": "Q427565",
+   "label": "Lade Deniz Muharebesi",
+   "links": 27,
+   "value": -493.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lade Deniz Muharebesi",
+   "tr_views": 2133
+  },
+  {
+   "qid": "Q597478",
+   "label": "Vorskla Nehri Muharebesi",
+   "links": 27,
+   "value": 1399.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vorskla Nehri Muharebesi",
+   "tr_views": 546
+  },
+  {
+   "qid": "Q622184",
+   "label": "Ager Sanguinis Muharebesi",
+   "links": 27,
+   "value": 1119.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ager Sanguinis Muharebesi",
+   "tr_views": 792
+  },
+  {
+   "qid": "Q639827",
+   "label": "Şam Kuşatması (634)",
+   "links": 27,
+   "value": 634.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şam Kuşatması (634)",
+   "tr_views": 2498
+  },
+  {
+   "qid": "Q769358",
+   "label": "Taginae Muharebesi",
+   "links": 27,
+   "value": 552.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Taginae Muharebesi",
+   "tr_views": 550
+  },
+  {
+   "qid": "Q855429",
+   "label": "Ligny Muharebesi",
+   "links": 27,
+   "value": 1815.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ligny Muharebesi",
+   "tr_views": 1004
+  },
+  {
+   "qid": "Q971507",
+   "label": "Zela Muharebesi",
+   "links": 27,
+   "value": -46.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zela Muharebesi",
+   "tr_views": 8318
+  },
+  {
+   "qid": "Q994316",
+   "label": "Meyselun Muharebesi",
+   "links": 27,
+   "value": 1920.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Meyselun Muharebesi",
+   "tr_views": 1631
+  },
+  {
+   "qid": "Q1116626",
+   "label": "Worcester Muharebesi",
+   "links": 26,
+   "value": 1651.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Worcester Muharebesi",
+   "tr_views": 798
+  },
+  {
+   "qid": "Q1137764",
+   "label": "Mons Lactarius Muharebesi",
+   "links": 26,
+   "value": 552.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mons Lactarius Muharebesi",
+   "tr_views": 374
+  },
+  {
+   "qid": "Q1140646",
+   "label": "Formigny Muharebesi",
+   "links": 26,
+   "value": 1450.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Formigny Muharebesi",
+   "tr_views": 907
+  },
+  {
+   "qid": "Q1273506",
+   "label": "Muye Muharebesi",
+   "links": 26,
+   "value": -1045.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Muye Muharebesi",
+   "tr_views": 698
+  },
+  {
+   "qid": "Q1427630",
+   "label": "Edirne Savaşı",
+   "links": 26,
+   "value": 1205.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hadrianapolis Muharebesi (1205)",
+   "tr_views": 865
+  },
+  {
+   "qid": "Q223622",
+   "label": "Prag Muharebesi (1757)",
+   "links": 26,
+   "value": 1757.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Prag Muharebesi (1757)",
+   "tr_views": 174
+  },
+  {
+   "qid": "Q2299845",
+   "label": "Tigranakert Muharebesi",
+   "links": 26,
+   "value": -68.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tigranakert Muharebesi",
+   "tr_views": 680
+  },
+  {
+   "qid": "Q26493",
+   "label": "Dandanakan Muharebesi",
+   "links": 26,
+   "value": 1040.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dandanakan Muharebesi",
+   "tr_views": 75261
+  },
+  {
+   "qid": "Q635028",
+   "label": "Bibracte muharebesi",
+   "links": 26,
+   "value": -57.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bibracte Muharebesi",
+   "tr_views": 433
+  },
+  {
+   "qid": "Q690391",
+   "label": "Petrovaradin Muharebesi",
+   "links": 26,
+   "value": 1716.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Petrovaradin Muharebesi",
+   "tr_views": 14085
+  },
+  {
+   "qid": "Q699093",
+   "label": "Ruhr Cebi Muharebesi",
+   "links": 26,
+   "value": 1945.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ruhr Cebi Muharebesi",
+   "tr_views": 411
+  },
+  {
+   "qid": "Q709484",
+   "label": "Rumyantsev Harekâtı",
+   "links": 26,
+   "value": 1943.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rumyantsev Harekâtı",
+   "tr_views": 1297
+  },
+  {
+   "qid": "Q906912",
+   "label": "Wakefield Muharebesi",
+   "links": 26,
+   "value": 1460.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Wakefield Muharebesi",
+   "tr_views": 110
+  },
+  {
+   "qid": "Q1057910",
+   "label": "Guandu Muharebesi",
+   "links": 25,
+   "value": 200.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Guandu Muharebesi",
+   "tr_views": 610
+  },
+  {
+   "qid": "Q1193959",
+   "label": "Toba-Fushimi Muharebesi",
+   "links": 25,
+   "value": 1868.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Toba-Fushimi Muharebesi",
+   "tr_views": 830
+  },
+  {
+   "qid": "Q128996",
+   "label": "Afyon (Akroinon) Savaşı",
+   "links": 25,
+   "value": 740.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Akroinon Muharebesi",
+   "tr_views": 5351
+  },
+  {
+   "qid": "Q131355384",
+   "label": "Halep Muharebesi",
+   "links": 25,
+   "value": 2024.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Halep Muharebesi (2024)",
+   "tr_views": 5250
+  },
+  {
+   "qid": "Q1330136",
+   "label": "II. Felluce Muharebesi",
+   "links": 25,
+   "value": 2004.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "II. Felluce Muharebesi",
+   "tr_views": 5448
+  },
+  {
+   "qid": "Q2484843",
+   "label": "Nehrevan Savaşı",
+   "links": 25,
+   "value": 659.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nehrevan Muharebesi",
+   "tr_views": 7967
+  },
+  {
+   "qid": "Q326417",
+   "label": "Marston Moor Muharebesi",
+   "links": 25,
+   "value": 1644.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Marston Moor Muharebesi",
+   "tr_views": 211
+  },
+  {
+   "qid": "Q382967",
+   "label": "Şam Kuşatması",
+   "links": 25,
+   "value": 1148.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şam Kuşatması (1148)",
+   "tr_views": 1099
+  },
+  {
+   "qid": "Q48163",
+   "label": "Custoza Muharebesi",
+   "links": 25,
+   "value": 1866.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Custoza Muharebesi (1866)",
+   "tr_views": 343
+  }
+ ]
+}

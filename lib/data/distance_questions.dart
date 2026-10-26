@@ -5,20 +5,38 @@ import '../core/strings.dart';
 import 'place.dart';
 import 'question.dart';
 
-/// On-device "kuş uçuşu" questions between two cities of the same group
-/// (Turkish province capitals, or world capitals). Thousands of pairs from a
-/// few KB of sourced coordinates; the answer is computed, never typed in.
+/// On-device "kuş uçuşu" questions: Turkish province capitals among
+/// themselves, world capitals among themselves, and major Turkish cities to
+/// world capitals. Thousands of pairs from a few KB of sourced coordinates;
+/// the answer is computed, never typed in.
 class DistanceQuestions {
-  DistanceQuestions(this.data);
+  DistanceQuestions(this.data)
+    : _major = [
+        for (final p in data.turkey)
+          if (p.major) p,
+      ],
+      _abroad = [
+        for (final p in data.world)
+          if (!data.turkey.any((t) => t.id == p.id) && p.country != _turkeyName)
+            p,
+      ];
+
+  static const _turkeyName = 'Türkiye';
 
   /// Pairs closer than this make trivial questions and are skipped.
   static const double minDistanceKm = 30;
 
   final PlaceData data;
+  final List<Place> _major;
+  final List<Place> _abroad;
 
   static int _pairs(int n) => n * (n - 1) ~/ 2;
 
-  int get pairCount => _pairs(data.turkey.length) + _pairs(data.world.length);
+  int get _turkeyPairs => _pairs(data.turkey.length);
+  int get _worldPairs => _pairs(data.world.length);
+  int get _mixedPairs => _major.length * _abroad.length;
+
+  int get pairCount => _turkeyPairs + _worldPairs + _mixedPairs;
 
   /// Stable id, independent of the order of the two places.
   static String idFor(Place a, Place b) {
@@ -49,23 +67,28 @@ class DistanceQuestions {
     bool Function(Question question, Place from, Place to)? accept,
     int maxAttempts = 200,
   }) {
-    final turkeyPairs = _pairs(data.turkey.length);
     if (pairCount == 0) return null;
     for (var attempt = 0; attempt < maxAttempts; attempt++) {
       // Weight the groups by their pair counts, so every pair is equally likely.
-      final inTurkey = rng.nextInt(pairCount) < turkeyPairs;
-      final group = inTurkey ? data.turkey : data.world;
-      final i = rng.nextInt(group.length);
-      final j = rng.nextInt(group.length - 1);
-      final from = group[i];
-      final to = group[j >= i ? j + 1 : j];
+      final r = rng.nextInt(pairCount);
+      final Place from, to;
+      if (r < _turkeyPairs + _worldPairs) {
+        final group = r < _turkeyPairs ? data.turkey : data.world;
+        final i = rng.nextInt(group.length);
+        final j = rng.nextInt(group.length - 1);
+        from = group[i];
+        to = group[j >= i ? j + 1 : j];
+      } else {
+        from = _major[rng.nextInt(_major.length)];
+        to = _abroad[rng.nextInt(_abroad.length)];
+      }
       if (greatCircleKm(from.lat, from.lon, to.lat, to.lon) < minDistanceKm) {
         continue;
       }
       final question = build(
         from,
         to,
-        category: inTurkey
+        category: r < _turkeyPairs
             ? QuestionCategory.turkey
             : QuestionCategory.geography,
       );

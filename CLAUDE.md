@@ -13,7 +13,8 @@ dediğinde gerçekten %90 isabet edip etmediğini ölçer.
 - Ayrıntılı yol haritası: `docs/PLAN.md`
 
 ## Temel ilkeler (her kararda bunlara uy)
-1. **Sıfır bütçe, sıfır backend.** Sunucu, Firebase, reklam SDK'sı, analytics yok. Uygulama tamamen offline çalışır.
+1. **Sıfır bütçe, sıfır backend.** Sunucu, Firebase, reklam SDK'sı, analytics yok. Uygulama internetsiz de eksiksiz çalışır.
+   Yeni sorular, uygulama güncellemesi gerekmeden GitHub Pages'teki statik dosyalardan indirilir (`data/content_sync.dart`). Hiçbir kişisel veri gönderilmez.
 2. **Küçük boyut.** Hedef: Play indirme boyutu < 8 MB. Yeni bir paket eklemeden önce gerekçesini yaz ve bana sor.
 3. **Net arayüz.** Her ekranda tek bir ana eylem olur. Büyük dokunma alanları kullan. Metin kısa olsun. Animasyonlar hafif tutulur (implicit animations).
 4. **Hız.** Soğuk açılış < 1 sn hissi. Soru bankası lazy değil ama tek seferde parse edilir ve cache'lenir.
@@ -85,11 +86,16 @@ test/
   Soruların ~1/3'ü **geçmiş günlerin** banka sorularından gelir (gelecek günler spoil olmaz), kalanı cihazda üretilir. Bir şehir bir turda en fazla bir kez geçer.
 - **Cihazda üretilen sorular:** Kaynaklı küçük veri tablolarından hesaplanır, sayı asla elle yazılmaz. İlk üretici: il merkezleri / başkentler arası kuş uçuşu mesafe (`data/distance_questions.dart`, id `dist:Q1:Q2`).
   Yeni üreticiler aynı kurala uyar: veri `tools/` ile Wikidata'dan çekilir, `assets/data/` altına gömülür, `source` iki öğenin de linkini içerir.
-- **Yeni soru akışı:** Günlük set herkes için aynı kalır (Wordle paylaşımı için). Banka her sürümde sona eklenerek büyür; serbest mod üreticiler sayesinde tükenmez.
+- **Yeni soru akışı:** Günlük set herkes için aynı kalır (Wordle paylaşımı için). Serbest mod, üreticiler sayesinde tükenmez.
+- **İnternetten içerik:** `python tools/publish_content.py` bankayı ve yer verisini `docs/content/` altına kopyalar ve `manifest.json` sürümünü artırır. Push edilince GitHub Pages'ten yayınlanır.
+  Uygulama en fazla 6 saatte bir manifest'e bakar. Yeni sürümü indirir, doğrular ve sonraki açılışta kullanır.
+  İndirilen banka, uygulamadaki bankanın birebir devamı olmak zorundadır (aynı id'ler, aynı sıra). Değilse reddedilir. Bu yüzden sorular yalnızca sona eklenir, asla silinmez veya yer değiştirmez.
 - **Giriş akışı:** (1) Kullanıcı en iyi tahminini kendi sayı klavyemizle girer. (2) Bir kaydırıcıyla aralığın genişliğini ayarlar. `magnitude` için kaydırıcı logaritmiktir, `year` için ±yıl olarak çalışır. Ekranda canlı olarak "4.500 – 5.500 m" gösterilir. (3) "Kilitle" butonu.
-- **Puan (`scoring.dart`):**
-  - `magnitude`: cevap aralıktaysa `max(10, round(100 − 25·log2(high/low)))`, değilse `0`.
-  - `year`: cevap aralıktaysa `max(10, 100 − 4·(high−low))`, değilse `0`.
+- **Puan (`scoring.dart`), interval score (α = 0,1):**
+  - Ceza `S = genişlik + 20 × (cevabın aralık dışında kalan mesafesi)`. `magnitude` için log2 ekseninde, `year` için yıl cinsinden.
+  - Puan `round(100 − k·S)`, −100…100 arasında kırpılır. `magnitude` için k = 10, `year` için k = 1.
+  - Bu kural matematiksel olarak dürüst %90 aralığı ödüllendirir. Bilerek dar aralık vermek kazandırmaz. Taban bu yüzden 0 değil, −100'dür: 0 tabanı uzak ıskaları bedava yapar ve dar aralığı yeniden kârlı kılar. Bu özellik `test/core/scoring_test.dart` içinde test edilir.
+  - Kıl payı ıska da puan alabilir. Uzak ıska eksi puandır.
   - Günlük maksimum 500.
 - **Kalibrasyon:** Tüm zamanlarda isabet eden aralıkların oranı. Hedef ~%90. Ekranda "%62, aralıkların fazla dar" ya da "%100, daha cesur ol" gibi geri bildirim gösterilir.
 - **Seri:** Günlük set tamamlanan ardışık günler.
@@ -99,7 +105,7 @@ test/
   🟩🟩🟨⬛🟩
   Kalibrasyon %80
   ```
-  🟩 ≥70 puan, 🟨 1–69 puan, ⬛ ıska.
+  🟩 isabet ve ≥70 puan, 🟨 isabet ve <70 puan, ⬛ ıska (puanı ne olursa olsun).
 
 ## Kod kuralları
 - Kod, değişken ve dosya adları İngilizce. Kullanıcıya görünen her metin Türkçe ve `core/strings.dart` içinde olur.
@@ -111,10 +117,10 @@ test/
 
 ## Release yapılandırması
 - `android/app/build.gradle.kts` (Kotlin DSL): `isMinifyEnabled = true`, `isShrinkResources = true`.
-- `android/app/src/release/AndroidManifest.xml`: INTERNET izni `tools:node="remove"` ile kaldırılır.
+- INTERNET izni ana manifest'tedir. Yalnızca içerik güncellemesi için kullanılır.
 - Build: `flutter build appbundle --release --obfuscate --split-debug-info=build/symbols`
-- Uygulama ikonu: `flutter_launcher_icons` (dev dependency, uygulamaya girmez).
-- Gizlilik politikası: `docs/privacy-policy.md`, GitHub Pages ile yayınlanır. Metni şudur: veri toplanmaz, tüm veriler cihazda kalır.
+- Uygulama ikonu: `tools/icon/render_icon_test.dart` Flutter'ın kendi çizim motoruyla üretir (paket yok). Uyarlanabilir, yuvarlak ve tek renkli (Android 13) sürümleri vardır. Play ikonu `docs/store/icon-512.png`.
+- Gizlilik politikası: `docs/privacy-policy.md`, GitHub Pages ile yayınlanır. Özü: kişisel veri toplanmaz, oyun verileri cihazda kalır, yalnızca soru güncellemeleri GitHub Pages'ten indirilir.
 
 ## Komutlar
 - Çalıştır: `flutter run`
@@ -124,3 +130,5 @@ test/
 - Soru bankası üret: `python tools/build_questions.py`
 - Yer verisini üret: `python tools/build_places.py`
 - Soru bankasını doğrula: `python tools/validate_questions.py`
+- İçeriği yayına hazırla: `python tools/publish_content.py` (sonra `docs/` commit + push)
+- Uygulama ikonunu üret: `flutter test tools/icon/render_icon_test.dart`

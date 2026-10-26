@@ -44,7 +44,7 @@ void main() {
         points: 50 + i,
       );
     }
-    expect(stats.dailyPoints(7), [50, 51, 52, 53]);
+    expect(stats.dailyResults(7).map((r) => r.points), [50, 51, 52, 53]);
     expect(stats.isDayComplete(7), isFalse);
     expect(stats.streak(7), 0);
 
@@ -61,7 +61,13 @@ void main() {
     expect(stats.lastCompletedDay(6), isNull);
 
     final reopened = await StatsStore.open();
-    expect(reopened.dailyPoints(7), [50, 51, 52, 53, 0]);
+    expect(reopened.dailyResults(7), [
+      (points: 50, hit: true),
+      (points: 51, hit: true),
+      (points: 52, hit: true),
+      (points: 53, hit: true),
+      (points: 0, hit: false),
+    ]);
     expect(reopened.completedDays, {7});
     expect(reopened.answered, 5);
     expect(reopened.hits, 4);
@@ -71,7 +77,7 @@ void main() {
     final stats = await StatsStore.open();
     await stats.recordAnswer(questionId: 'dist:Q1:Q2', hit: true);
     expect(stats.completedDays, isEmpty);
-    expect(stats.dailyPoints(0), isEmpty);
+    expect(stats.dailyResults(0), isEmpty);
   });
 
   test('seenIds is read-only', () async {

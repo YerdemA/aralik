@@ -2,7 +2,7 @@
  "dataset": "structures_world",
  "description": "Dünyadaki önemli yapılar, yükseklik (P2048)",
  "property": "P2048",
- "fetched_at": "2026-10-24T14:41:28+00:00",
+ "fetched_at": "2026-10-26T10:31:50+00:00",
  "rows": [
   {
    "qid": "Q243",
@@ -11,6 +11,7 @@
    "value": 300.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Eyfel Kulesi",
    "place": [
     "Paris'in 7. bölgesi"
    ],
@@ -19,7 +20,8 @@
    ],
    "opened": [
     1889
-   ]
+   ],
+   "tr_views": 67790
   },
   {
    "qid": "Q243",
@@ -28,6 +30,7 @@
    "value": 324.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Eyfel Kulesi",
    "place": [
     "Paris'in 7. bölgesi"
    ],
@@ -36,7 +39,8 @@
    ],
    "opened": [
     1889
-   ]
+   ],
+   "tr_views": 67790
   },
   {
    "qid": "Q243",
@@ -45,6 +49,7 @@
    "value": 330.0,
    "rank": "preferred",
    "value_year": null,
+   "tr_title": "Eyfel Kulesi",
    "place": [
     "Paris'in 7. bölgesi"
    ],
@@ -53,7 +58,8 @@
    ],
    "opened": [
     1889
-   ]
+   ],
+   "tr_views": 67790
   },
   {
    "qid": "Q9202",
@@ -62,13 +68,15 @@
    "value": 46.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Özgürlük Heykeli",
    "place": [
     "New York"
    ],
    "country": [
     "Amerika Birleşik Devletleri"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 58796
   },
   {
    "qid": "Q9202",
@@ -77,13 +85,15 @@
    "value": 47.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Özgürlük Heykeli",
    "place": [
     "New York"
    ],
    "country": [
     "Amerika Birleşik Devletleri"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 58796
   },
   {
    "qid": "Q12495",
@@ -92,6 +102,7 @@
    "value": 584.5,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Burc Halife",
    "place": [
     "Dubai"
    ],
@@ -100,7 +111,8 @@
    ],
    "opened": [
     2010
-   ]
+   ],
+   "tr_views": 32111
   },
   {
    "qid": "Q12495",
@@ -109,6 +121,7 @@
    "value": 828.0,
    "rank": "preferred",
    "value_year": null,
+   "tr_title": "Burc Halife",
    "place": [
     "Dubai"
    ],
@@ -117,7 +130,8 @@
    ],
    "opened": [
     2010
-   ]
+   ],
+   "tr_views": 32111
   },
   {
    "qid": "Q12495",
@@ -126,6 +140,7 @@
    "value": 829.8,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Burc Halife",
    "place": [
     "Dubai"
    ],
@@ -134,7 +149,8 @@
    ],
    "opened": [
     2010
-   ]
+   ],
+   "tr_views": 32111
   },
   {
    "qid": "Q9188",
@@ -143,6 +159,7 @@
    "value": 453.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Empire State Binası",
    "place": [
     "Manhattan"
    ],
@@ -151,7 +168,8 @@
    ],
    "opened": [
     1931
-   ]
+   ],
+   "tr_views": 17176
   },
   {
    "qid": "Q9188",
@@ -160,6 +178,7 @@
    "value": 457.2009,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Empire State Binası",
    "place": [
     "Manhattan"
    ],
@@ -168,7 +187,8 @@
    ],
    "opened": [
     1931
-   ]
+   ],
+   "tr_views": 17176
   },
   {
    "qid": "Q29294",
@@ -177,6 +197,7 @@
    "value": 442.1,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Willis Kulesi",
    "place": [
     "Şikago"
    ],
@@ -185,7 +206,8 @@
    ],
    "opened": [
     1973
-   ]
+   ],
+   "tr_views": 3213
   },
   {
    "qid": "Q41553",
@@ -194,13 +216,15 @@
    "value": 33.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Rodos Heykeli",
    "place": [
     "Rodos"
    ],
    "country": [
     "Yunanistan"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 24291
   },
   {
    "qid": "Q79961",
@@ -209,6 +233,7 @@
    "value": 8.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Kurtarıcı İsa",
    "place": [
     "Alto da Boa Vista"
    ],
@@ -217,7 +242,8 @@
    ],
    "opened": [
     1931
-   ]
+   ],
+   "tr_views": 23210
   },
   {
    "qid": "Q79961",
@@ -226,6 +252,7 @@
    "value": 30.1,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Kurtarıcı İsa",
    "place": [
     "Alto da Boa Vista"
    ],
@@ -234,7 +261,8 @@
    ],
    "opened": [
     1931
-   ]
+   ],
+   "tr_views": 23210
   },
   {
    "qid": "Q46239",
@@ -243,13 +271,15 @@
    "value": 12.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Zeus Heykeli",
    "place": [
     "Antik Olimpos belediyesi"
    ],
    "country": [
     "Yunanistan"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 14665
   },
   {
    "qid": "Q83063",
@@ -258,6 +288,7 @@
    "value": 452.0192898,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Petronas İkiz Kuleleri",
    "place": [
     "Kuala Lumpur"
    ],
@@ -266,7 +297,8 @@
    ],
    "opened": [
     1999
-   ]
+   ],
+   "tr_views": 7786
   },
   {
    "qid": "Q83101",
@@ -275,13 +307,15 @@
    "value": 2.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Taipei 101",
    "place": [],
    "country": [
     "Tayvan"
    ],
    "opened": [
     2005
-   ]
+   ],
+   "tr_views": 8345
   },
   {
    "qid": "Q83101",
@@ -290,13 +324,15 @@
    "value": 508.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Taipei 101",
    "place": [],
    "country": [
     "Tayvan"
    ],
    "opened": [
     2005
-   ]
+   ],
+   "tr_views": 8345
   },
   {
    "qid": "Q1030463",
@@ -305,6 +341,7 @@
    "value": 204.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Mode Gakuen Cocoon Tower",
    "place": [
     "Nishi-Shinjuku"
    ],
@@ -313,7 +350,8 @@
    ],
    "opened": [
     2008
-   ]
+   ],
+   "tr_views": 149
   },
   {
    "qid": "Q134883",
@@ -322,6 +360,7 @@
    "value": 447.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "CN Kulesi",
    "place": [
     "Toronto"
    ],
@@ -330,7 +369,8 @@
    ],
    "opened": [
     1976
-   ]
+   ],
+   "tr_views": 2958
   },
   {
    "qid": "Q134883",
@@ -339,6 +379,7 @@
    "value": 553.3,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "CN Kulesi",
    "place": [
     "Toronto"
    ],
@@ -347,7 +388,8 @@
    ],
    "opened": [
     1976
-   ]
+   ],
+   "tr_views": 2958
   },
   {
    "qid": "Q11274",
@@ -356,6 +398,7 @@
    "value": 252.3,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Chrysler Binası",
    "place": [
     "Manhattan"
    ],
@@ -364,7 +407,8 @@
    ],
    "opened": [
     1931
-   ]
+   ],
+   "tr_views": 5494
   },
   {
    "qid": "Q11274",
@@ -373,6 +417,7 @@
    "value": 282.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Chrysler Binası",
    "place": [
     "Manhattan"
    ],
@@ -381,7 +426,8 @@
    ],
    "opened": [
     1931
-   ]
+   ],
+   "tr_views": 5494
   },
   {
    "qid": "Q11274",
@@ -390,6 +436,7 @@
    "value": 318.9,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Chrysler Binası",
    "place": [
     "Manhattan"
    ],
@@ -398,7 +445,8 @@
    ],
    "opened": [
     1931
-   ]
+   ],
+   "tr_views": 5494
   },
   {
    "qid": "Q11245",
@@ -407,6 +455,7 @@
    "value": 386.5,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Özgürlük Kulesi",
    "place": [
     "Manhattan"
    ],
@@ -415,7 +464,8 @@
    ],
    "opened": [
     2014
-   ]
+   ],
+   "tr_views": 4972
   },
   {
    "qid": "Q11245",
@@ -424,6 +474,7 @@
    "value": 541.3,
    "rank": "preferred",
    "value_year": null,
+   "tr_title": "Özgürlük Kulesi",
    "place": [
     "Manhattan"
    ],
@@ -432,7 +483,8 @@
    ],
    "opened": [
     2014
-   ]
+   ],
+   "tr_views": 4972
   },
   {
    "qid": "Q11245",
@@ -441,6 +493,7 @@
    "value": 546.2,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Özgürlük Kulesi",
    "place": [
     "Manhattan"
    ],
@@ -449,7 +502,8 @@
    ],
    "opened": [
     2014
-   ]
+   ],
+   "tr_views": 4972
   },
   {
    "qid": "Q57965",
@@ -458,6 +512,7 @@
    "value": 634.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Tokyo Skytree",
    "place": [
     "Oshiage"
    ],
@@ -466,7 +521,8 @@
    ],
    "opened": [
     2012
-   ]
+   ],
+   "tr_views": 3439
   },
   {
    "qid": "Q42258",
@@ -475,6 +531,7 @@
    "value": 170.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Mirante do Vale",
    "place": [
     "São Paulo Merkez"
    ],
@@ -483,7 +540,8 @@
    ],
    "opened": [
     1966
-   ]
+   ],
+   "tr_views": 69
   },
   {
    "qid": "Q7604504",
@@ -492,13 +550,15 @@
    "value": 58.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Birlik Heykeli",
    "place": [
     "Gucerat"
    ],
    "country": [
     "Hindistan"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 4675
   },
   {
    "qid": "Q7604504",
@@ -507,13 +567,15 @@
    "value": 182.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Birlik Heykeli",
    "place": [
     "Gucerat"
    ],
    "country": [
     "Hindistan"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 4675
   },
   {
    "qid": "Q183536",
@@ -522,13 +584,15 @@
    "value": 332.6,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Tokyo Kulesi",
    "place": [],
    "country": [
     "Japonya"
    ],
    "opened": [
     1958
-   ]
+   ],
+   "tr_views": 6282
   },
   {
    "qid": "Q16318627",
@@ -537,6 +601,7 @@
    "value": 300.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Abeno Harukas",
    "place": [
     "Abenosuji"
    ],
@@ -545,7 +610,8 @@
    ],
    "opened": [
     2014
-   ]
+   ],
+   "tr_views": 139
   },
   {
    "qid": "Q80852",
@@ -554,6 +620,7 @@
    "value": 474.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Şanghay Dünya Finans Merkezi",
    "place": [
     "Pudong"
    ],
@@ -562,7 +629,8 @@
    ],
    "opened": [
     2008
-   ]
+   ],
+   "tr_views": 513
   },
   {
    "qid": "Q80852",
@@ -571,6 +639,7 @@
    "value": 492.0,
    "rank": "preferred",
    "value_year": null,
+   "tr_title": "Şanghay Dünya Finans Merkezi",
    "place": [
     "Pudong"
    ],
@@ -579,7 +648,8 @@
    ],
    "opened": [
     2008
-   ]
+   ],
+   "tr_views": 513
   },
   {
    "qid": "Q80852",
@@ -588,6 +658,7 @@
    "value": 494.3,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Şanghay Dünya Finans Merkezi",
    "place": [
     "Pudong"
    ],
@@ -596,7 +667,8 @@
    ],
    "opened": [
     2008
-   ]
+   ],
+   "tr_views": 513
   },
   {
    "qid": "Q181324",
@@ -605,13 +677,15 @@
    "value": 540.1,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Ostankino Kulesi",
    "place": [],
    "country": [
     "Rusya"
    ],
    "opened": [
     1967
-   ]
+   ],
+   "tr_views": 2301
   },
   {
    "qid": "Q18536",
@@ -620,6 +694,7 @@
    "value": 244.3,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "The Shard",
    "place": [
     "Londra",
     "Southwark"
@@ -630,7 +705,8 @@
    "opened": [
     2012,
     2013
-   ]
+   ],
+   "tr_views": 2356
   },
   {
    "qid": "Q18536",
@@ -639,6 +715,7 @@
    "value": 306.0,
    "rank": "preferred",
    "value_year": null,
+   "tr_title": "The Shard",
    "place": [
     "Londra",
     "Southwark"
@@ -649,7 +726,8 @@
    "opened": [
     2012,
     2013
-   ]
+   ],
+   "tr_views": 2356
   },
   {
    "qid": "Q189476",
@@ -658,6 +736,7 @@
    "value": 607.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Ebrac el-Beyt",
    "place": [
     "Mekke"
    ],
@@ -666,7 +745,8 @@
    ],
    "opened": [
     2011
-   ]
+   ],
+   "tr_views": 14560
   },
   {
    "qid": "Q151356",
@@ -675,6 +755,7 @@
    "value": 368.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Berliner Fernsehturm",
    "place": [
     "Berlin",
     "Berlin-Mitte"
@@ -684,7 +765,8 @@
    ],
    "opened": [
     1969
-   ]
+   ],
+   "tr_views": 2257
   },
   {
    "qid": "Q18547",
@@ -693,6 +775,7 @@
    "value": 632.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Şanghay Kulesi",
    "place": [
     "Şanghay"
    ],
@@ -701,7 +784,8 @@
    ],
    "opened": [
     2014
-   ]
+   ],
+   "tr_views": 2020
   },
   {
    "qid": "Q91274",
@@ -710,13 +794,15 @@
    "value": 62.59,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Galata Kulesi",
    "place": [
     "Beyoğlu"
    ],
    "country": [
     "Türkiye"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 157180
   },
   {
    "qid": "Q29272",
@@ -725,13 +811,15 @@
    "value": 323.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Ryugyong Oteli",
    "place": [
     "Pyongyang"
    ],
    "country": [
     "Kuzey Kore"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 1412
   },
   {
    "qid": "Q29272",
@@ -740,13 +828,15 @@
    "value": 335.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Ryugyong Oteli",
    "place": [
     "Pyongyang"
    ],
    "country": [
     "Kuzey Kore"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 1412
   },
   {
    "qid": "Q503823",
@@ -755,13 +845,15 @@
    "value": 17.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Askia'nın Türbesi",
    "place": [
     "Gao"
    ],
    "country": [
     "Mali"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 212
   },
   {
    "qid": "Q1601986",
@@ -770,13 +862,15 @@
    "value": 2.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Anavatan Çağırıyor",
    "place": [],
    "country": [
     "Rusya"
    ],
    "opened": [
     1967
-   ]
+   ],
+   "tr_views": 11659
   },
   {
    "qid": "Q1601986",
@@ -785,13 +879,15 @@
    "value": 85.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Anavatan Çağırıyor",
    "place": [],
    "country": [
     "Rusya"
    ],
    "opened": [
     1967
-   ]
+   ],
+   "tr_views": 11659
   },
   {
    "qid": "Q737945",
@@ -800,13 +896,15 @@
    "value": 1008.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Cidde Kulesi",
    "place": [
     "Cidde"
    ],
    "country": [
     "Suudi Arabistan"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 7047
   },
   {
    "qid": "Q168400",
@@ -815,13 +913,15 @@
    "value": 600.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Kanton Kulesi",
    "place": [],
    "country": [
     "Çin Halk Cumhuriyeti"
    ],
    "opened": [
     2010
-   ]
+   ],
+   "tr_views": 1141
   },
   {
    "qid": "Q208358",
@@ -830,13 +930,15 @@
    "value": 143.5,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Kefren Piramidi",
    "place": [
     "Gize"
    ],
    "country": [
     "Mısır"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 5256
   },
   {
    "qid": "Q223207",
@@ -845,13 +947,15 @@
    "value": 468.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Doğu'nun İncisi Kulesi",
    "place": [
     "Şanghay"
    ],
    "country": [
     "Çin Halk Cumhuriyeti"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 1062
   },
   {
    "qid": "Q80813",
@@ -860,6 +964,7 @@
    "value": 420.5,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Jin Mao Kulesi",
    "place": [
     "Şanghay"
    ],
@@ -868,7 +973,8 @@
    ],
    "opened": [
     1999
-   ]
+   ],
+   "tr_views": 481
   },
   {
    "qid": "Q80813",
@@ -877,6 +983,7 @@
    "value": 421.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Jin Mao Kulesi",
    "place": [
     "Şanghay"
    ],
@@ -885,7 +992,8 @@
    ],
    "opened": [
     1999
-   ]
+   ],
+   "tr_views": 481
   },
   {
    "qid": "Q167566",
@@ -894,6 +1002,7 @@
    "value": 230.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Kültür ve Bilim Sarayı",
    "place": [
     "Varşova",
     "Śródmieście"
@@ -903,7 +1012,8 @@
    ],
    "opened": [
     1955
-   ]
+   ],
+   "tr_views": 1718
   },
   {
    "qid": "Q216357",
@@ -912,6 +1022,7 @@
    "value": 110.9,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Arche de la Défense",
    "place": [
     "La Défense"
    ],
@@ -920,7 +1031,8 @@
    ],
    "opened": [
     1989
-   ]
+   ],
+   "tr_views": 261
   },
   {
    "qid": "Q169420",
@@ -929,6 +1041,7 @@
    "value": 161.22,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Banespa Binası",
    "place": [
     "São Paulo",
     "São Paulo Merkez"
@@ -938,7 +1051,8 @@
    ],
    "opened": [
     1947
-   ]
+   ],
+   "tr_views": 98
   },
   {
    "qid": "Q191161",
@@ -947,6 +1061,7 @@
    "value": 180.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "30 St Mary Axe",
    "place": [
     "Londra Şehri"
    ],
@@ -955,7 +1070,8 @@
    ],
    "opened": [
     2004
-   ]
+   ],
+   "tr_views": 848
   },
   {
    "qid": "Q170610",
@@ -964,6 +1080,7 @@
    "value": 165.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Edifício Itália",
    "place": [
     "São Paulo",
     "São Paulo Merkez"
@@ -973,7 +1090,8 @@
    ],
    "opened": [
     1965
-   ]
+   ],
+   "tr_views": 83
   },
   {
    "qid": "Q323767",
@@ -982,6 +1100,7 @@
    "value": 209.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Montparnasse Kulesi",
    "place": [
     "15. arrondissement",
     "Quartier Necker"
@@ -991,7 +1110,8 @@
    ],
    "opened": [
     1973
-   ]
+   ],
+   "tr_views": 836
   },
   {
    "qid": "Q842822",
@@ -1000,13 +1120,15 @@
    "value": 29.5,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Kız Kulesi (Bakü)",
    "place": [
     "Sebail"
    ],
    "country": [
     "Azerbaycan"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 6546
   },
   {
    "qid": "Q270066",
@@ -1015,6 +1137,7 @@
    "value": 225.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "7 Dünya Ticaret Merkezi",
    "place": [
     "Manhattan"
    ],
@@ -1023,7 +1146,8 @@
    ],
    "opened": [
     2006
-   ]
+   ],
+   "tr_views": 2180
   },
   {
    "qid": "Q317034",
@@ -1032,6 +1156,7 @@
    "value": 484.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Uluslararası Ticaret Merkezi",
    "place": [
     "Yau Tsim Mong"
    ],
@@ -1040,7 +1165,8 @@
    ],
    "opened": [
     2010
-   ]
+   ],
+   "tr_views": 783
   },
   {
    "qid": "Q192680",
@@ -1049,6 +1175,7 @@
    "value": 318.8,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "New York Times Binası",
    "place": [
     "Manhattan"
    ],
@@ -1057,7 +1184,8 @@
    ],
    "opened": [
     2007
-   ]
+   ],
+   "tr_views": 993
   },
   {
    "qid": "Q214855",
@@ -1066,6 +1194,7 @@
    "value": 367.4,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Bank of China Kulesi",
    "place": [
     "Hong Kong",
     "Orta ve Batı"
@@ -1075,7 +1204,8 @@
    ],
    "opened": [
     1990
-   ]
+   ],
+   "tr_views": 232
   },
   {
    "qid": "Q217652",
@@ -1084,6 +1214,7 @@
    "value": 241.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Woolworth Building",
    "place": [
     "Tribeca"
    ],
@@ -1092,7 +1223,8 @@
    ],
    "opened": [
     1913
-   ]
+   ],
+   "tr_views": 804
   },
   {
    "qid": "Q924174",
@@ -1101,11 +1233,13 @@
    "value": 25.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Buda İlkbahar Tapınağı",
    "place": [],
    "country": [
     "Çin Halk Cumhuriyeti"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 1882
   },
   {
    "qid": "Q924174",
@@ -1114,11 +1248,13 @@
    "value": 128.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Buda İlkbahar Tapınağı",
    "place": [],
    "country": [
     "Çin Halk Cumhuriyeti"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 1882
   },
   {
    "qid": "Q206435",
@@ -1127,6 +1263,7 @@
    "value": 190.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Turning Torso",
    "place": [
     "Malmö Belediyesi"
    ],
@@ -1135,7 +1272,8 @@
    ],
    "opened": [
     2005
-   ]
+   ],
+   "tr_views": 1078
   },
   {
    "qid": "Q750209",
@@ -1144,13 +1282,15 @@
    "value": 18.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Dev Memnon Heykelleri",
    "place": [
     "Teb"
    ],
    "country": [
     "Mısır"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 1358
   },
   {
    "qid": "Q151765",
@@ -1159,11 +1299,13 @@
    "value": 259.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Commerzbank Kulesi",
    "place": [],
    "country": [
     "Almanya"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 155
   },
   {
    "qid": "Q151765",
@@ -1172,11 +1314,13 @@
    "value": 300.1,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Commerzbank Kulesi",
    "place": [],
    "country": [
     "Almanya"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 155
   },
   {
    "qid": "Q4255374",
@@ -1185,6 +1329,7 @@
    "value": 462.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Lahta Center",
    "place": [
     "Sankt-Peterburg"
    ],
@@ -1193,7 +1338,8 @@
    ],
    "opened": [
     2022
-   ]
+   ],
+   "tr_views": 3605
   },
   {
    "qid": "Q745016",
@@ -1202,6 +1348,7 @@
    "value": 421.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Menara Kuala Lumpur",
    "place": [
     "Kuala Lumpur"
    ],
@@ -1210,7 +1357,8 @@
    ],
    "opened": [
     1996
-   ]
+   ],
+   "tr_views": 379
   },
   {
    "qid": "Q125846",
@@ -1219,6 +1367,7 @@
    "value": 322.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Q1 Tower",
    "place": [
     "Queensland"
    ],
@@ -1227,7 +1376,8 @@
    ],
    "opened": [
     2007
-   ]
+   ],
+   "tr_views": 23506
   },
   {
    "qid": "Q18640924",
@@ -1236,6 +1386,7 @@
    "value": 461.5,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Landmark 81",
    "place": [
     "Ho Chi Minh Kenti"
    ],
@@ -1244,7 +1395,8 @@
    ],
    "opened": [
     2018
-   ]
+   ],
+   "tr_views": 492
   },
   {
    "qid": "Q245246",
@@ -1253,13 +1405,15 @@
    "value": 390.2,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "CITIC Plaza",
    "place": [
     "Guangzhou"
    ],
    "country": [
     "Çin Halk Cumhuriyeti"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 298
   },
   {
    "qid": "Q328505",
@@ -1268,6 +1422,7 @@
    "value": 365.8,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Bank of America Kulesi (New York)",
    "place": [
     "Manhattan",
     "New York"
@@ -1277,7 +1432,8 @@
    ],
    "opened": [
     2009
-   ]
+   ],
+   "tr_views": 706
   },
   {
    "qid": "Q656743",
@@ -1286,13 +1442,15 @@
    "value": 302.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Kingdom Centre",
    "place": [
     "Riyad"
    ],
    "country": [
     "Suudi Arabistan"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 575
   },
   {
    "qid": "Q236201",
@@ -1301,13 +1459,15 @@
    "value": 384.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Shun Hing Square",
    "place": [],
    "country": [
     "Çin Halk Cumhuriyeti"
    ],
    "opened": [
     1996
-   ]
+   ],
+   "tr_views": 198
   },
   {
    "qid": "Q382121",
@@ -1316,6 +1476,7 @@
    "value": 316.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Nanjing Greenland Finans Merkezi",
    "place": [
     "Nankin"
    ],
@@ -1324,7 +1485,8 @@
    ],
    "opened": [
     2010
-   ]
+   ],
+   "tr_views": 293
   },
   {
    "qid": "Q382121",
@@ -1333,6 +1495,7 @@
    "value": 450.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Nanjing Greenland Finans Merkezi",
    "place": [
     "Nankin"
    ],
@@ -1341,7 +1504,8 @@
    ],
    "opened": [
     2010
-   ]
+   ],
+   "tr_views": 293
   },
   {
    "qid": "Q59483",
@@ -1350,13 +1514,15 @@
    "value": 338.8,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Mercury City Tower",
    "place": [
     "Moskova"
    ],
    "country": [
     "Rusya"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 387
   },
   {
    "qid": "Q1407274",
@@ -1365,13 +1531,15 @@
    "value": 310.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Bakü Televizyon Kulesi",
    "place": [
     "Bakü"
    ],
    "country": [
     "Azerbaycan"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 468
   },
   {
    "qid": "Q156198",
@@ -1380,13 +1548,15 @@
    "value": 256.5,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Messeturm",
    "place": [],
    "country": [
     "Almanya"
    ],
    "opened": [
     1990
-   ]
+   ],
+   "tr_views": 460
   },
   {
    "qid": "Q217727",
@@ -1395,13 +1565,15 @@
    "value": 344.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "John Hancock Merkezi",
    "place": [
     "Şikago"
    ],
    "country": [
     "Amerika Birleşik Devletleri"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 689
   },
   {
    "qid": "Q271695",
@@ -1410,6 +1582,7 @@
    "value": 346.3,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Aon Merkezi",
    "place": [
     "Şikago"
    ],
@@ -1418,7 +1591,8 @@
    ],
    "opened": [
     1973
-   ]
+   ],
+   "tr_views": 273
   },
   {
    "qid": "Q336246",
@@ -1427,13 +1601,15 @@
    "value": 144.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Torre Agbar",
    "place": [
     "El Parc i la Llacuna del Poblenou"
    ],
    "country": [
     "İspanya"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 812
   },
   {
    "qid": "Q546221",
@@ -1442,6 +1618,7 @@
    "value": 423.2,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Trump International Hotel & Tower (Chicago)",
    "place": [
     "Şikago"
    ],
@@ -1450,7 +1627,8 @@
    ],
    "opened": [
     2009
-   ]
+   ],
+   "tr_views": 492
   },
   {
    "qid": "Q57900",
@@ -1459,13 +1637,15 @@
    "value": 310.3,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "U.S. Bank Kulesi",
    "place": [
     "Los Angeles"
    ],
    "country": [
     "Amerika Birleşik Devletleri"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 340
   },
   {
    "qid": "Q606763",
@@ -1474,6 +1654,7 @@
    "value": 53.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Kâbus Anıtı",
    "place": [
     "Gülistan Eyaleti"
    ],
@@ -1482,7 +1663,8 @@
    ],
    "opened": [
     1006
-   ]
+   ],
+   "tr_views": 391
   },
   {
    "qid": "Q7969454",
@@ -1491,6 +1673,7 @@
    "value": 678.7909362,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Merdeka 118",
    "place": [
     "Kuala Lumpur"
    ],
@@ -1499,7 +1682,8 @@
    ],
    "opened": [
     2023
-   ]
+   ],
+   "tr_views": 1302
   },
   {
    "qid": "Q7969454",
@@ -1508,6 +1692,7 @@
    "value": 678.9,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Merdeka 118",
    "place": [
     "Kuala Lumpur"
    ],
@@ -1516,7 +1701,8 @@
    ],
    "opened": [
     2023
-   ]
+   ],
+   "tr_views": 1302
   },
   {
    "qid": "Q838780",
@@ -1525,6 +1711,7 @@
    "value": 363.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Almas Kulesi",
    "place": [
     "Dubai"
    ],
@@ -1533,7 +1720,8 @@
    ],
    "opened": [
     2009
-   ]
+   ],
+   "tr_views": 313
   },
   {
    "qid": "Q216865",
@@ -1542,13 +1730,15 @@
    "value": 260.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Transamerica Piramidi",
    "place": [
     "San Francisco"
    ],
    "country": [
     "Amerika Birleşik Devletleri"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 758
   },
   {
    "qid": "Q218305",
@@ -1557,13 +1747,15 @@
    "value": 284.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "40 Wall Street",
    "place": [
     "Manhattan"
    ],
    "country": [
     "Amerika Birleşik Devletleri"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 598
   },
   {
    "qid": "Q627114",
@@ -1572,11 +1764,13 @@
    "value": 25.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "İşçi ve Çiftçi Kadın Heykeli",
    "place": [],
    "country": [
     "Rusya"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 2341
   },
   {
    "qid": "Q337631",
@@ -1585,11 +1779,13 @@
    "value": 323.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Tuntex Sky Kulesi",
    "place": [],
    "country": [
     "Tayvan"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 185
   },
   {
    "qid": "Q557933",
@@ -1598,6 +1794,7 @@
    "value": 412.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Al Hamra Kulesi",
    "place": [
     "Kuveyt"
    ],
@@ -1606,7 +1803,8 @@
    ],
    "opened": [
     2015
-   ]
+   ],
+   "tr_views": 257
   },
   {
    "qid": "Q722125",
@@ -1615,6 +1813,7 @@
    "value": 328.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Sky Tower (Auckland)",
    "place": [
     "Auckland Bölgesi"
    ],
@@ -1623,7 +1822,8 @@
    ],
    "opened": [
     1997
-   ]
+   ],
+   "tr_views": 222
   },
   {
    "qid": "Q112640",
@@ -1632,6 +1832,7 @@
    "value": 374.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Central Plaza",
    "place": [
     "Wan Chai"
    ],
@@ -1640,7 +1841,8 @@
    ],
    "opened": [
     1992
-   ]
+   ],
+   "tr_views": 202
   },
   {
    "qid": "Q494895",
@@ -1649,6 +1851,7 @@
    "value": 554.5,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Lotte World Tower",
    "place": [
     "Songpa-gu"
    ],
@@ -1657,7 +1860,8 @@
    ],
    "opened": [
     2017
-   ]
+   ],
+   "tr_views": 538
   },
   {
    "qid": "Q494895",
@@ -1666,6 +1870,7 @@
    "value": 555.7,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Lotte World Tower",
    "place": [
     "Songpa-gu"
    ],
@@ -1674,7 +1879,8 @@
    ],
    "opened": [
     2017
-   ]
+   ],
+   "tr_views": 538
   },
   {
    "qid": "Q648338",
@@ -1683,6 +1889,7 @@
    "value": 333.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Rose Kulesi",
    "place": [
     "Dubai Emirliği"
    ],
@@ -1691,7 +1898,8 @@
    ],
    "opened": [
     2009
-   ]
+   ],
+   "tr_views": 380
   },
   {
    "qid": "Q754321",
@@ -1700,13 +1908,15 @@
    "value": 234.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "CCTV Genel Merkezi",
    "place": [],
    "country": [
     "Çin Halk Cumhuriyeti"
    ],
    "opened": [
     2012
-   ]
+   ],
+   "tr_views": 466
   },
   {
    "qid": "Q1043438",
@@ -1715,6 +1925,7 @@
    "value": 440.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Guangzhou Uluslararası Finans Merkezi",
    "place": [
     "Guangzhou"
    ],
@@ -1723,7 +1934,8 @@
    ],
    "opened": [
     2010
-   ]
+   ],
+   "tr_views": 145
   },
   {
    "qid": "Q1077308",
@@ -1732,13 +1944,15 @@
    "value": 599.05,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Ping An International Finance Centre",
    "place": [],
    "country": [
     "Çin Halk Cumhuriyeti"
    ],
    "opened": [
     2017
-   ]
+   ],
+   "tr_views": 774
   },
   {
    "qid": "Q262041",
@@ -1747,13 +1961,15 @@
    "value": 290.2,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "70 Pine Street",
    "place": [
     "Manhattan"
    ],
    "country": [
     "Amerika Birleşik Devletleri"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 213
   },
   {
    "qid": "Q587108",
@@ -1762,6 +1978,7 @@
    "value": 295.8,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Yokohama Landmark Tower",
    "place": [
     "Minatomirai"
    ],
@@ -1770,7 +1987,8 @@
    ],
    "opened": [
     1993
-   ]
+   ],
+   "tr_views": 199
   },
   {
    "qid": "Q680614",
@@ -1779,13 +1997,15 @@
    "value": 259.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Comcast Building",
    "place": [
     "Manhattan"
    ],
    "country": [
     "Amerika Birleşik Devletleri"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 403
   },
   {
    "qid": "Q201902",
@@ -1794,6 +2014,7 @@
    "value": 168.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Mole Antonelliana",
    "place": [
     "Torino"
    ],
@@ -1802,7 +2023,8 @@
    ],
    "opened": [
     1889
-   ]
+   ],
+   "tr_views": 497
   },
   {
    "qid": "Q464482",
@@ -1811,6 +2033,7 @@
    "value": 246.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "MetLife Building",
    "place": [
     "Manhattan"
    ],
@@ -1819,7 +2042,8 @@
    ],
    "opened": [
     1963
-   ]
+   ],
+   "tr_views": 596
   },
   {
    "qid": "Q652452",
@@ -1828,13 +2052,15 @@
    "value": 213.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "MetLife Tower",
    "place": [
     "Manhattan"
    ],
    "country": [
     "Amerika Birleşik Devletleri"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 173
   },
   {
    "qid": "Q830319",
@@ -1843,11 +2069,13 @@
    "value": 368.5,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Riga Radyo ve Televizyon Kulesi",
    "place": [],
    "country": [
     "Letonya"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 134
   },
   {
    "qid": "Q845182",
@@ -1856,6 +2084,7 @@
    "value": 355.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Emirlik Ofis Kulesi",
    "place": [
     "Dubai",
     "Dubai Emirliği"
@@ -1865,7 +2094,8 @@
    ],
    "opened": [
     2000
-   ]
+   ],
+   "tr_views": 227
   },
   {
    "qid": "Q941908",
@@ -1874,6 +2104,7 @@
    "value": 328.9,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "3 Dünya Ticaret Merkezi",
    "place": [
     "Manhattan"
    ],
@@ -1882,7 +2113,8 @@
    ],
    "opened": [
     2018
-   ]
+   ],
+   "tr_views": 471
   },
   {
    "qid": "Q19665",
@@ -1891,11 +2123,13 @@
    "value": 5.47,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Bremen Roland",
    "place": [],
    "country": [
     "Almanya"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 361
   },
   {
    "qid": "Q233940",
@@ -1904,13 +2138,15 @@
    "value": 425.5,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "432 Park Avenue",
    "place": [
     "Manhattan"
    ],
    "country": [
     "Amerika Birleşik Devletleri"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 463
   },
   {
    "qid": "Q391243",
@@ -1919,6 +2155,7 @@
    "value": 279.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Citigroup Center",
    "place": [
     "New York"
    ],
@@ -1927,7 +2164,8 @@
    ],
    "opened": [
     1977
-   ]
+   ],
+   "tr_views": 817
   },
   {
    "qid": "Q1165269",
@@ -1936,13 +2174,15 @@
    "value": 425.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Marina 101",
    "place": [
     "Dubai"
    ],
    "country": [
     "Birleşik Arap Emirlikleri"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 165
   },
   {
    "qid": "Q118214",
@@ -1951,13 +2191,15 @@
    "value": 310.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Menara Telekom",
    "place": [
     "Kuala Lumpur"
    ],
    "country": [
     "Malezya"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 137
   },
   {
    "qid": "Q1369185",
@@ -1966,6 +2208,7 @@
    "value": 385.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Kiev Televizyon Kulesi",
    "place": [
     "Kiev"
    ],
@@ -1974,7 +2217,8 @@
    ],
    "opened": [
     1973
-   ]
+   ],
+   "tr_views": 293
   },
   {
    "qid": "Q142917",
@@ -1983,13 +2227,15 @@
    "value": 40.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Ukrayna Ana",
    "place": [
     "Kiev"
    ],
    "country": [
     "Ukrayna"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 397
   },
   {
    "qid": "Q142917",
@@ -1998,13 +2244,15 @@
    "value": 62.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Ukrayna Ana",
    "place": [
     "Kiev"
    ],
    "country": [
     "Ukrayna"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 397
   },
   {
    "qid": "Q142917",
@@ -2013,13 +2261,15 @@
    "value": 108.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Ukrayna Ana",
    "place": [
     "Kiev"
    ],
    "country": [
     "Ukrayna"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 397
   },
   {
    "qid": "Q391648",
@@ -2028,6 +2278,7 @@
    "value": 306.4,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Cayan Kulesi",
    "place": [
     "Dubai Emirliği"
    ],
@@ -2036,7 +2287,8 @@
    ],
    "opened": [
     2013
-   ]
+   ],
+   "tr_views": 188
   },
   {
    "qid": "Q519568",
@@ -2045,13 +2297,15 @@
    "value": 248.3,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Torre Cepsa",
    "place": [
     "Madrid"
    ],
    "country": [
     "İspanya"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 117
   },
   {
    "qid": "Q130478",
@@ -2060,6 +2314,7 @@
    "value": 346.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "The Center",
    "place": [
     "Hong Kong"
    ],
@@ -2068,7 +2323,8 @@
    ],
    "opened": [
     1998
-   ]
+   ],
+   "tr_views": 193
   },
   {
    "qid": "Q499486",
@@ -2077,13 +2333,15 @@
    "value": 311.8,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Bank of America Plaza, Atlanta",
    "place": [
     "Atlanta"
    ],
    "country": [
     "Amerika Birleşik Devletleri"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 145
   },
   {
    "qid": "Q638512",
@@ -2092,6 +2350,7 @@
    "value": 265.5,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Bitexco Financial Tower",
    "place": [
     "Ho Chi Minh Kenti"
    ],
@@ -2100,7 +2359,8 @@
    ],
    "opened": [
     2010
-   ]
+   ],
+   "tr_views": 133
   },
   {
    "qid": "Q651362",
@@ -2109,6 +2369,7 @@
    "value": 187.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Singer Building",
    "place": [
     "Broadway",
     "Manhattan"
@@ -2116,7 +2377,8 @@
    "country": [
     "Amerika Birleşik Devletleri"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 548
   },
   {
    "qid": "Q69134",
@@ -2125,6 +2387,7 @@
    "value": 236.83,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "N Seul Kulesi",
    "place": [
     "Yongsan"
    ],
@@ -2133,7 +2396,8 @@
    ],
    "opened": [
     1980
-   ]
+   ],
+   "tr_views": 1152
   },
   {
    "qid": "Q80367",
@@ -2142,6 +2406,7 @@
    "value": 264.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Zafer Sarayı",
    "place": [
     "Moskova"
    ],
@@ -2150,7 +2415,8 @@
    ],
    "opened": [
     2007
-   ]
+   ],
+   "tr_views": 108
   },
   {
    "qid": "Q844324",
@@ -2159,6 +2425,7 @@
    "value": 262.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Trump World Tower",
    "place": [
     "Manhattan"
    ],
@@ -2167,7 +2434,8 @@
    ],
    "opened": [
     2001
-   ]
+   ],
+   "tr_views": 413
   },
   {
    "qid": "Q1033099",
@@ -2176,6 +2444,7 @@
    "value": 261.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Grand Lisboa",
    "place": [
     "Makao"
    ],
@@ -2184,7 +2453,8 @@
    ],
    "opened": [
     2008
-   ]
+   ],
+   "tr_views": 239
   },
   {
    "qid": "Q1127212",
@@ -2193,13 +2463,15 @@
    "value": 374.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "2 Dünya Ticaret Merkezi",
    "place": [
     "Manhattan"
    ],
    "country": [
     "Amerika Birleşik Devletleri"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 1295
   },
   {
    "qid": "Q1147179",
@@ -2208,13 +2480,15 @@
    "value": 20.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Kartlis Deda",
    "place": [
     "Tiflis"
    ],
    "country": [
     "Gürcistan"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 2952
   },
   {
    "qid": "Q1161278",
@@ -2223,6 +2497,7 @@
    "value": 333.3,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Shimao International Plaza",
    "place": [
     "Şanghay"
    ],
@@ -2231,7 +2506,27 @@
    ],
    "opened": [
     2005
-   ]
+   ],
+   "tr_views": 91
+  },
+  {
+   "qid": "Q1258275",
+   "label": "Avala Kulesi",
+   "links": 31,
+   "value": 204.68,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avala Kulesi",
+   "place": [
+    "Belgrad"
+   ],
+   "country": [
+    "Sırbistan"
+   ],
+   "opened": [
+    2010
+   ],
+   "tr_views": 685
   },
   {
    "qid": "Q1351208",
@@ -2240,6 +2535,7 @@
    "value": 297.7,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "4 Dünya Ticaret Merkezi",
    "place": [
     "Manhattan"
    ],
@@ -2248,7 +2544,8 @@
    ],
    "opened": [
     2013
-   ]
+   ],
+   "tr_views": 641
   },
   {
    "qid": "Q1470046",
@@ -2257,13 +2554,15 @@
    "value": 442.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "KK100",
    "place": [],
    "country": [
     "Çin Halk Cumhuriyeti"
    ],
    "opened": [
     2011
-   ]
+   ],
+   "tr_views": 139
   },
   {
    "qid": "Q1509747",
@@ -2272,6 +2571,7 @@
    "value": 231.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Tour First",
    "place": [
     "Courbevoie"
    ],
@@ -2280,7 +2580,8 @@
    ],
    "opened": [
     1974
-   ]
+   ],
+   "tr_views": 248
   },
   {
    "qid": "Q3142395",
@@ -2289,13 +2590,15 @@
    "value": 137.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Hôtel Hyatt Regency Paris Étoile",
    "place": [
     "17. arrondissement"
    ],
    "country": [
     "Fransa"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 112
   },
   {
    "qid": "Q3142395",
@@ -2304,13 +2607,15 @@
    "value": 190.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Hôtel Hyatt Regency Paris Étoile",
    "place": [
     "17. arrondissement"
    ],
    "country": [
     "Fransa"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 112
   },
   {
    "qid": "Q503477",
@@ -2319,13 +2624,15 @@
    "value": 235.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "One Canada Square",
    "place": [
     "Isle of Dogs"
    ],
    "country": [
     "Birleşik Krallık"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 225
   },
   {
    "qid": "Q632566",
@@ -2334,6 +2641,7 @@
    "value": 118.43,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Copan Apartman Kompleksi",
    "place": [
     "São Paulo",
     "São Paulo Merkez"
@@ -2343,7 +2651,8 @@
    ],
    "opened": [
     1966
-   ]
+   ],
+   "tr_views": 135
   },
   {
    "qid": "Q687413",
@@ -2352,6 +2661,7 @@
    "value": 246.5,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Condé Nast Binası",
    "place": [
     "Manhattan"
    ],
@@ -2360,7 +2670,8 @@
    ],
    "opened": [
     2000
-   ]
+   ],
+   "tr_views": 225
   },
   {
    "qid": "Q790278",
@@ -2369,13 +2680,1570 @@
    "value": 172.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Avaz Twist Tower",
    "place": [
     "Centar belediyesi"
    ],
    "country": [
     "Bosna Hersek"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 527
+  },
+  {
+   "qid": "Q1052475",
+   "label": "First Canadian Place",
+   "links": 30,
+   "value": 298.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "First Canadian Place",
+   "place": [
+    "Toronto"
+   ],
+   "country": [
+    "Kanada"
+   ],
+   "opened": [
+    1975
+   ],
+   "tr_views": 110
+  },
+  {
+   "qid": "Q1121720",
+   "label": "Varşova Radyo Kulesi",
+   "links": 30,
+   "value": 646.38,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Varşova Radyo Kulesi",
+   "place": [
+    "Konstantynów"
+   ],
+   "country": [
+    "Polonya",
+    "Polonya Halk Cumhuriyeti"
+   ],
+   "opened": [],
+   "tr_views": 1586
+  },
+  {
+   "qid": "Q1121971",
+   "label": "Two Prudential Plaza",
+   "links": 30,
+   "value": 303.3,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Two Prudential Plaza",
+   "place": [
+    "Illinois",
+    "Şikago"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [],
+   "tr_views": 99
+  },
+  {
+   "qid": "Q166882",
+   "label": "Istanbul Sapphire",
+   "links": 30,
+   "value": 261.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Istanbul Sapphire",
+   "place": [
+    "İstanbul"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "opened": [
+    2011
+   ],
+   "tr_views": 16470
+  },
+  {
+   "qid": "Q662367",
+   "label": "Şuhov Kulesi",
+   "links": 30,
+   "value": 160.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şuhov Kulesi",
+   "place": [
+    "Moskova"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "opened": [],
+   "tr_views": 188
+  },
+  {
+   "qid": "Q908703",
+   "label": "Columbia Center",
+   "links": 30,
+   "value": 284.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Columbia Center",
+   "place": [
+    "Seattle"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [
+    1985
+   ],
+   "tr_views": 105
+  },
+  {
+   "qid": "Q908703",
+   "label": "Columbia Center",
+   "links": 30,
+   "value": 294.8,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Columbia Center",
+   "place": [
+    "Seattle"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [
+    1985
+   ],
+   "tr_views": 105
+  },
+  {
+   "qid": "Q1138183",
+   "label": "Philadelphia City Hall",
+   "links": 29,
+   "value": 167.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Philadelphia City Hall",
+   "place": [
+    "Philadelphia"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [
+    1901
+   ],
+   "tr_views": 273
+  },
+  {
+   "qid": "Q1364354",
+   "label": "Torre Espacio",
+   "links": 29,
+   "value": 230.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Torre Espacio",
+   "place": [
+    "Madrid"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "opened": [],
+   "tr_views": 124
+  },
+  {
+   "qid": "Q1413217",
+   "label": "Žižkov Televizyon Kulesi",
+   "links": 29,
+   "value": 216.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Žižkov Televizyon Kulesi",
+   "place": [
+    "Prag 3"
+   ],
+   "country": [
+    "Çekya"
+   ],
+   "opened": [],
+   "tr_views": 132
+  },
+  {
+   "qid": "Q1542408",
+   "label": "Gran Torre Santiago",
+   "links": 29,
+   "value": 300.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gran Torre Santiago",
+   "place": [
+    "Santiago"
+   ],
+   "country": [
+    "Şili"
+   ],
+   "opened": [
+    2013
+   ],
+   "tr_views": 183
+  },
+  {
+   "qid": "Q571763",
+   "label": "Palacio Barolo",
+   "links": 29,
+   "value": 100.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Barolo Sarayı",
+   "place": [
+    "Buenos Aires"
+   ],
+   "country": [
+    "Arjantin"
+   ],
+   "opened": [
+    1923
+   ],
+   "tr_views": 157
+  },
+  {
+   "qid": "Q80495",
+   "label": "Millennium Tower",
+   "links": 29,
+   "value": 202.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Millennium Tower (Viyana)",
+   "place": [
+    "Viyana"
+   ],
+   "country": [
+    "Avusturya"
+   ],
+   "opened": [
+    2000
+   ],
+   "tr_views": 153
+  },
+  {
+   "qid": "Q875078",
+   "label": "Bloomberg Tower",
+   "links": 29,
+   "value": 245.7,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bloomberg Tower",
+   "place": [
+    "Midtown Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [
+    2004
+   ],
+   "tr_views": 136
+  },
+  {
+   "qid": "Q901058",
+   "label": "Vehicle Assembly Building",
+   "links": 29,
+   "value": 160.297683546,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vehicle Assembly Building",
+   "place": [
+    "Brevard ilçesi"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q901058",
+   "label": "Vehicle Assembly Building",
+   "links": 29,
+   "value": 160.3,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Vehicle Assembly Building",
+   "place": [
+    "Brevard ilçesi"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q953610",
+   "label": "Torre de Cristal",
+   "links": 29,
+   "value": 249.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Torre de Cristal",
+   "place": [
+    "Madrid"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "opened": [
+    2009
+   ],
+   "tr_views": 73
+  },
+  {
+   "qid": "Q134124",
+   "label": "Ocean Heights",
+   "links": 28,
+   "value": 310.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ocean Heights",
+   "place": [
+    "Dubai Emirliği"
+   ],
+   "country": [
+    "Birleşik Arap Emirlikleri"
+   ],
+   "opened": [
+    2010
+   ],
+   "tr_views": 92
+  },
+  {
+   "qid": "Q1365010",
+   "label": "Tallinn Televizyon Kulesi",
+   "links": 28,
+   "value": 314.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tallinn Televizyon Kulesi",
+   "place": [
+    "Tallinn"
+   ],
+   "country": [
+    "Estonya"
+   ],
+   "opened": [
+    1980
+   ],
+   "tr_views": 105
+  },
+  {
+   "qid": "Q168575",
+   "label": "CTF Finance Centre",
+   "links": 28,
+   "value": 530.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "CTF Finance Centre",
+   "place": [
+    "Guangzhou"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "opened": [
+    2016
+   ],
+   "tr_views": 146
+  },
+  {
+   "qid": "Q614684",
+   "label": "Kahire Kulesi",
+   "links": 28,
+   "value": 187.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kahire Kulesi",
+   "place": [
+    "Gize"
+   ],
+   "country": [
+    "Mısır"
+   ],
+   "opened": [
+    1961
+   ],
+   "tr_views": 468
+  },
+  {
+   "qid": "Q737602",
+   "label": "Aspire Tower",
+   "links": 28,
+   "value": 300.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aspire Tower",
+   "place": [
+    "Doha"
+   ],
+   "country": [
+    "Katar"
+   ],
+   "opened": [],
+   "tr_views": 136
+  },
+  {
+   "qid": "Q859452",
+   "label": "Hearst Kulesi",
+   "links": 28,
+   "value": 182.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hearst Kulesi (New York)",
+   "place": [
+    "New York"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [],
+   "tr_views": 446
+  },
+  {
+   "qid": "Q910101",
+   "label": "CitySpire Center",
+   "links": 28,
+   "value": 248.1,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "CitySpire Center",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [
+    1989
+   ],
+   "tr_views": 83
+  },
+  {
+   "qid": "Q935919",
+   "label": "JPMorgan Chase Tower",
+   "links": 28,
+   "value": 305.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "JPMorgan Chase Tower (Houston)",
+   "place": [
+    "Houston"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [],
+   "tr_views": 183
+  },
+  {
+   "qid": "Q1050074",
+   "label": "28 Liberty Street",
+   "links": 27,
+   "value": 247.8,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "28 Liberty Street",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [
+    1961
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q1140023",
+   "label": "Giotto Çan Kulesi",
+   "links": 27,
+   "value": 84.7,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Giotto'nun Çan Kulesi",
+   "place": [
+    "Firenze"
+   ],
+   "country": [
+    "İtalya"
+   ],
+   "opened": [],
+   "tr_views": 983
+  },
+  {
+   "qid": "Q1331574",
+   "label": "Tower 42",
+   "links": 27,
+   "value": 182.9,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tower 42",
+   "place": [
+    "Londra Şehri"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "opened": [
+    1980
+   ],
+   "tr_views": 149
+  },
+  {
+   "qid": "Q1368798",
+   "label": "SEG Plaza",
+   "links": 27,
+   "value": 291.6,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "SEG Plaza",
+   "place": [],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "opened": [
+    2000
+   ],
+   "tr_views": 70
+  },
+  {
+   "qid": "Q1374287",
+   "label": "Eurasia",
+   "links": 27,
+   "value": 308.9,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avrasya (gökdelen)",
+   "place": [
+    "Moskova"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "opened": [],
+   "tr_views": 262
+  },
+  {
+   "qid": "Q1639016",
+   "label": "Arnavutluk Ana (anıt)",
+   "links": 27,
+   "value": 12.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arnavutluk Ana (anıt)",
+   "place": [
+    "Tiran"
+   ],
+   "country": [
+    "Arnavutluk"
+   ],
+   "opened": [],
+   "tr_views": 87
+  },
+  {
+   "qid": "Q167195",
+   "label": "Posta Kulesi",
+   "links": 27,
+   "value": 162.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Posta Kulesi",
+   "place": [],
+   "country": [
+    "Almanya"
+   ],
+   "opened": [],
+   "tr_views": 192
+  },
+  {
+   "qid": "Q2023928",
+   "label": "One57",
+   "links": 27,
+   "value": 257.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "One57",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [],
+   "tr_views": 112
+  },
+  {
+   "qid": "Q2023928",
+   "label": "One57",
+   "links": 27,
+   "value": 306.324603,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "One57",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [],
+   "tr_views": 112
+  },
+  {
+   "qid": "Q572887",
+   "label": "8 Canada Square",
+   "links": 27,
+   "value": 199.51,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "8 Canada Square",
+   "place": [
+    "Tower Hamlets"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "opened": [
+    2002
+   ],
+   "tr_views": 144
+  },
+  {
+   "qid": "Q753776",
+   "label": "Atatürk Barajı ve Hidroelektrik Santrali",
+   "links": 27,
+   "value": 169.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Atatürk Barajı ve Hidroelektrik Santrali",
+   "place": [
+    "Adıyaman",
+    "Bozova"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "opened": [
+    1992
+   ],
+   "tr_views": 25143
+  },
+  {
+   "qid": "Q1120886",
+   "label": "KVLY-TV direği",
+   "links": 26,
+   "value": 605.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "KVLY-TV direği",
+   "place": [
+    "Blanchard",
+    "Kuzey Dakota"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [
+    1963
+   ],
+   "tr_views": 2595
+  },
+  {
+   "qid": "Q1120886",
+   "label": "KVLY-TV direği",
+   "links": 26,
+   "value": 605.6387922,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "KVLY-TV direği",
+   "place": [
+    "Blanchard",
+    "Kuzey Dakota"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [
+    1963
+   ],
+   "tr_views": 2595
+  },
+  {
+   "qid": "Q1165021",
+   "label": "Cengiz Han'ın atlı heykeli",
+   "links": 26,
+   "value": 10.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cengiz Han'ın atlı heykeli",
+   "place": [
+    "Nalayh"
+   ],
+   "country": [
+    "Moğolistan"
+   ],
+   "opened": [],
+   "tr_views": 3054
+  },
+  {
+   "qid": "Q1165021",
+   "label": "Cengiz Han'ın atlı heykeli",
+   "links": 26,
+   "value": 40.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cengiz Han'ın atlı heykeli",
+   "place": [
+    "Nalayh"
+   ],
+   "country": [
+    "Moğolistan"
+   ],
+   "opened": [],
+   "tr_views": 3054
+  },
+  {
+   "qid": "Q1364394",
+   "label": "Torre Picasso",
+   "links": 26,
+   "value": 157.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Torre Picasso",
+   "place": [
+    "Cuatro Caminos",
+    "Tetuan"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "opened": [
+    1988
+   ],
+   "tr_views": 235
+  },
+  {
+   "qid": "Q1470076",
+   "label": "HHHR Tower",
+   "links": 26,
+   "value": 317.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "HHHR Tower",
+   "place": [
+    "Dubai",
+    "Dubai Emirliği"
+   ],
+   "country": [
+    "Birleşik Arap Emirlikleri"
+   ],
+   "opened": [],
+   "tr_views": 158
+  },
+  {
+   "qid": "Q2166466",
+   "label": "Süyümbike Kulesi",
+   "links": 26,
+   "value": 58.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Süyümbike Kulesi",
+   "place": [
+    "Kazan"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "opened": [],
+   "tr_views": 749
+  },
+  {
+   "qid": "Q274916",
+   "label": "8 Spruce Street",
+   "links": 26,
+   "value": 300.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "8 Spruce Street",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [
+    2011
+   ],
+   "tr_views": 127
+  },
+  {
+   "qid": "Q333305",
+   "label": "One Raffles Place",
+   "links": 26,
+   "value": 280.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "One Raffles Place",
+   "place": [],
+   "country": [
+    "Singapur"
+   ],
+   "opened": [],
+   "tr_views": 77
+  },
+  {
+   "qid": "Q511612",
+   "label": "Bahreyn Dünya Ticaret Merkezi",
+   "links": 26,
+   "value": 240.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bahreyn Dünya Ticaret Merkezi",
+   "place": [
+    "Mename"
+   ],
+   "country": [
+    "Bahreyn"
+   ],
+   "opened": [
+    2008
+   ],
+   "tr_views": 756
+  },
+  {
+   "qid": "Q57767",
+   "label": "Wells Fargo Plaza",
+   "links": 26,
+   "value": 302.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Wells Fargo Plaza (Houston)",
+   "place": [
+    "Houston"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [
+    1983
+   ],
+   "tr_views": 126
+  },
+  {
+   "qid": "Q609140",
+   "label": "Keangnam Hanoi Landmark Tower",
+   "links": 26,
+   "value": 346.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Keangnam Hanoi Landmark Tower",
+   "place": [],
+   "country": [
+    "Vietnam"
+   ],
+   "opened": [
+    2011
+   ],
+   "tr_views": 153
+  },
+  {
+   "qid": "Q920809",
+   "label": "Pirelli Kulesi",
+   "links": 26,
+   "value": 110.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pirelli Kulesi",
+   "place": [
+    "Milano"
+   ],
+   "country": [
+    "İtalya"
+   ],
+   "opened": [
+    1960
+   ],
+   "tr_views": 226
+  },
+  {
+   "qid": "Q1113808",
+   "label": "Comcast Center",
+   "links": 25,
+   "value": 297.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Comcast Center",
+   "place": [
+    "Pensilvanya",
+    "Philadelphia"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [],
+   "tr_views": 262
+  },
+  {
+   "qid": "Q119942",
+   "label": "X-Seed 4000",
+   "links": 25,
+   "value": 4000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "X-Seed 4000",
+   "place": [
+    "Tokyo"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "opened": [],
+   "tr_views": 537
+  },
+  {
+   "qid": "Q190377",
+   "label": "Merkez Radyo ve Televizyon Kulesi",
+   "links": 25,
+   "value": 405.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Merkez Radyo ve Televizyon Kulesi",
+   "place": [],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "opened": [
+    1992
+   ],
+   "tr_views": 138
+  },
+  {
+   "qid": "Q1985903",
+   "label": "Evolution Tower",
+   "links": 25,
+   "value": 255.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Evolution Tower",
+   "place": [
+    "Moskova"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "opened": [
+    2014
+   ],
+   "tr_views": 259
+  },
+  {
+   "qid": "Q212831",
+   "label": "20 Exchange Place",
+   "links": 25,
+   "value": 226.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "20 Exchange Place",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [],
+   "tr_views": 94
+  },
+  {
+   "qid": "Q651643",
+   "label": "Torre PwC",
+   "links": 25,
+   "value": 236.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Torre PwC",
+   "place": [
+    "Madrid"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "opened": [],
+   "tr_views": 140
+  },
+  {
+   "qid": "Q702322",
+   "label": "Koryo Oteli",
+   "links": 25,
+   "value": 143.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Koryo Oteli",
+   "place": [
+    "Chung-guyok"
+   ],
+   "country": [
+    "Kuzey Kore"
+   ],
+   "opened": [
+    1985
+   ],
+   "tr_views": 99
+  },
+  {
+   "qid": "Q702322",
+   "label": "Koryo Oteli",
+   "links": 25,
+   "value": 148.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Koryo Oteli",
+   "place": [
+    "Chung-guyok"
+   ],
+   "country": [
+    "Kuzey Kore"
+   ],
+   "opened": [
+    1985
+   ],
+   "tr_views": 99
+  },
+  {
+   "qid": "Q797085",
+   "label": "BT Tower, Londra",
+   "links": 25,
+   "value": 189.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "BT Tower",
+   "place": [
+    "Camden, Londra"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "opened": [
+    1965
+   ],
+   "tr_views": 305
+  },
+  {
+   "qid": "Q1043966",
+   "label": "Carnegie Hall Tower",
+   "links": 24,
+   "value": 231.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Carnegie Hall Tower",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [],
+   "tr_views": 65
+  },
+  {
+   "qid": "Q1093913",
+   "label": "Moşe Aviv Kulesi",
+   "links": 24,
+   "value": 244.1,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Moşe Aviv Kulesi",
+   "place": [
+    "Ramat Gan"
+   ],
+   "country": [
+    "İsrail"
+   ],
+   "opened": [
+    2003
+   ],
+   "tr_views": 590
+  },
+  {
+   "qid": "Q1151808",
+   "label": "Umeda Sky Building",
+   "links": 24,
+   "value": 173.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Umeda Sky Building",
+   "place": [
+    "Ōyodo-Naka"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "opened": [
+    1993
+   ],
+   "tr_views": 213
+  },
+  {
+   "qid": "Q1357650",
+   "label": "Williams Tower",
+   "links": 24,
+   "value": 274.6,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Williams Tower",
+   "place": [
+    "Houston"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [],
+   "tr_views": 112
+  },
+  {
+   "qid": "Q1407311",
+   "label": "Erivan Televizyon Kulesi",
+   "links": 24,
+   "value": 311.7,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Erivan Televizyon Kulesi",
+   "place": [
+    "Erivan"
+   ],
+   "country": [
+    "Ermenistan"
+   ],
+   "opened": [
+    1977
+   ],
+   "tr_views": 181
+  },
+  {
+   "qid": "Q2303314",
+   "label": "Faysaliye Kulesi",
+   "links": 24,
+   "value": 267.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Faysaliye Kulesi",
+   "place": [
+    "Riyad"
+   ],
+   "country": [
+    "Suudi Arabistan"
+   ],
+   "opened": [],
+   "tr_views": 822
+  },
+  {
+   "qid": "Q2493262",
+   "label": "Empire",
+   "links": 24,
+   "value": 239.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Empire (gökdelen)",
+   "place": [
+    "Moskova"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "opened": [
+    2011
+   ],
+   "tr_views": 115
+  },
+  {
+   "qid": "Q368489",
+   "label": "Los Angeles Belediye Binası",
+   "links": 24,
+   "value": 138.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Los Angeles Belediye Binası",
+   "place": [
+    "Los Angeles"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [
+    1928
+   ],
+   "tr_views": 308
+  },
+  {
+   "qid": "Q374662",
+   "label": "Pentominium",
+   "links": 24,
+   "value": 516.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pentominium",
+   "place": [
+    "Dubai Emirliği"
+   ],
+   "country": [
+    "Birleşik Arap Emirlikleri"
+   ],
+   "opened": [],
+   "tr_views": 112
+  },
+  {
+   "qid": "Q622895",
+   "label": "Aqua",
+   "links": 24,
+   "value": 262.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aqua (gökdelen)",
+   "place": [
+    "Cook ilçesi",
+    "Illinois",
+    "Şikago"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [],
+   "tr_views": 119
+  },
+  {
+   "qid": "Q708060",
+   "label": "Tower 185",
+   "links": 24,
+   "value": 200.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tower 185",
+   "place": [],
+   "country": [
+    "Almanya"
+   ],
+   "opened": [
+    2011
+   ],
+   "tr_views": 128
+  },
+  {
+   "qid": "Q844813",
+   "label": "Torre Mayor",
+   "links": 24,
+   "value": 230.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Torre Mayor",
+   "place": [
+    "Meksiko"
+   ],
+   "country": [
+    "Meksika"
+   ],
+   "opened": [],
+   "tr_views": 74
+  },
+  {
+   "qid": "Q948178",
+   "label": "Torre Ejecutiva Pemex",
+   "links": 24,
+   "value": 211.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Torre Ejecutiva Pemex",
+   "place": [
+    "Meksiko"
+   ],
+   "country": [
+    "Meksika"
+   ],
+   "opened": [],
+   "tr_views": 72
+  },
+  {
+   "qid": "Q948178",
+   "label": "Torre Ejecutiva Pemex",
+   "links": 24,
+   "value": 214.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Torre Ejecutiva Pemex",
+   "place": [
+    "Meksiko"
+   ],
+   "country": [
+    "Meksika"
+   ],
+   "opened": [],
+   "tr_views": 72
+  },
+  {
+   "qid": "Q1138648",
+   "label": "One Penn Plaza",
+   "links": 23,
+   "value": 229.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "One Penn Plaza",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [],
+   "tr_views": 74
+  },
+  {
+   "qid": "Q1144187",
+   "label": "One Liberty Plaza",
+   "links": 23,
+   "value": 226.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "One Liberty Plaza",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [
+    1973
+   ],
+   "tr_views": 107
+  },
+  {
+   "qid": "Q1262622",
+   "label": "Ušće Kulesi",
+   "links": 23,
+   "value": 115.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ušće Kulesi",
+   "place": [
+    "Yeni Belgrad"
+   ],
+   "country": [
+    "Sırbistan"
+   ],
+   "opened": [],
+   "tr_views": 379
+  },
+  {
+   "qid": "Q1342690",
+   "label": "One Worlwide Plaza",
+   "links": 23,
+   "value": 237.1,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "One Worldwide Plaza",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [],
+   "tr_views": 108
+  },
+  {
+   "qid": "Q212834",
+   "label": "20 Fenchurch Street",
+   "links": 23,
+   "value": 160.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "20 Fenchurch Street",
+   "place": [
+    "Londra Şehri"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "opened": [
+    2014
+   ],
+   "tr_views": 135
+  },
+  {
+   "qid": "Q228242",
+   "label": "383 Madison Avenue",
+   "links": 23,
+   "value": 230.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "383 Madison Avenue",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [
+    2002
+   ],
+   "tr_views": 100
+  },
+  {
+   "qid": "Q2484373",
+   "label": "Wuhan Center",
+   "links": 23,
+   "value": 438.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Wuhan Center",
+   "place": [
+    "Vuhan"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "opened": [
+    2019
+   ],
+   "tr_views": 80
+  },
+  {
+   "qid": "Q684027",
+   "label": "Key Tower",
+   "links": 23,
+   "value": 288.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Key Tower",
+   "place": [
+    "Cleveland",
+    "Ohio"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [
+    1992
+   ],
+   "tr_views": 118
+  },
+  {
+   "qid": "Q743683",
+   "label": "Tour Total",
+   "links": 23,
+   "value": 187.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tour Total",
+   "place": [
+    "Courbevoie"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "opened": [],
+   "tr_views": 458
+  },
+  {
+   "qid": "Q806675",
+   "label": "Bank of America Plaza",
+   "links": 23,
+   "value": 281.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bank of America Plaza (Dallas)",
+   "place": [
+    "Dallas"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [],
+   "tr_views": 85
+  },
+  {
+   "qid": "Q18602",
+   "label": "22 Bishopsgate",
+   "links": 22,
+   "value": 278.2,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "22 Bishopsgate",
+   "place": [
+    "Londra Şehri"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "opened": [],
+   "tr_views": 123
+  },
+  {
+   "qid": "Q607743",
+   "label": "Aon Center",
+   "links": 22,
+   "value": 262.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aon Center (Los Angeles)",
+   "place": [
+    "Los Angeles"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "opened": [
+    1973
+   ],
+   "tr_views": 109
+  },
+  {
+   "qid": "Q947870",
+   "label": "Torre Latinoamericana",
+   "links": 22,
+   "value": 182.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Torre Latinoamericana",
+   "place": [
+    "Cuauhtémoc, Meksiko"
+   ],
+   "country": [
+    "Meksika"
+   ],
+   "opened": [
+    1956
+   ],
+   "tr_views": 192
+  },
+  {
+   "qid": "Q976172",
+   "label": "Carlton Centre",
+   "links": 22,
+   "value": 222.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Carlton Centre",
+   "place": [
+    "Johannesburg"
+   ],
+   "country": [
+    "Güney Afrika"
+   ],
+   "opened": [
+    1973
+   ],
+   "tr_views": 112
   }
  ]
 }

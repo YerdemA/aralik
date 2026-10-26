@@ -39,8 +39,8 @@ Question bankQuestion(String id) => Question(
 
 void main() {
   group('Place', () {
-    test('shows the country for world capitals', () {
-      expect(_x.displayName, 'Prag (Çekya)');
+    test('shows the city name only, without a country', () {
+      expect(_x.displayName, 'Prag');
       expect(_y.displayName, 'Singapur');
       expect(_a.displayName, 'Ankara');
     });
@@ -60,6 +60,31 @@ void main() {
       expect(q.kind, QuestionKind.magnitude);
       expect(q.source, contains('Q1'));
       expect(q.source, contains('Q2'));
+    });
+
+    test('pairs major Turkish cities with world capitals', () {
+      const istanbul = Place(
+        id: 'Q406',
+        name: 'İstanbul',
+        lat: 41,
+        lon: 29,
+        major: true,
+      );
+      const ankaraAbroad = Place(
+        id: 'Q3640',
+        name: 'Ankara',
+        country: 'Türkiye',
+        lat: 39.9,
+        lon: 32.8,
+      );
+      final g = generator(
+        turkey: const [istanbul, _b],
+        world: const [_x, ankaraAbroad],
+      );
+      // 1 Turkish pair + 1 world pair + İstanbul × Prag (not × Ankara).
+      expect(g.pairCount, 3);
+      final ids = {for (var i = 0; i < 200; i++) g.pick(math.Random(i))!.id};
+      expect(ids, contains(DistanceQuestions.idFor(istanbul, _x)));
     });
 
     test('ids do not depend on order', () {
@@ -160,8 +185,9 @@ void main() {
       File('assets/data/places.json').readAsStringSync(),
     );
     expect(data.turkey.length, greaterThanOrEqualTo(75));
-    expect(data.world.length, greaterThanOrEqualTo(90));
-    expect(DistanceQuestions(data).pairCount, greaterThan(5000));
+    expect(data.world.length, greaterThanOrEqualTo(30));
+    expect(DistanceQuestions(data).pairCount, greaterThan(4000));
+    expect(data.turkey.where((p) => p.major), hasLength(15));
     final ids = [...data.turkey, ...data.world].map((p) => p.id);
     expect(data.world.map((p) => p.id).toSet(), hasLength(data.world.length));
     expect(data.turkey.map((p) => p.id).toSet(), hasLength(data.turkey.length));

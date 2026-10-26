@@ -1,88 +1,106 @@
 {
  "dataset": "places_world",
  "description": "Egemen devletlerin başkentleri, koordinat (P625)",
- "fetched_at": "2026-10-24T18:45:41+00:00",
+ "fetched_at": "2026-10-26T10:20:20+00:00",
  "rows": [
   {
-   "country": "Q1050",
    "city": "Q101418",
+   "cityTitle": "Lobamba",
+   "country": "Q1050",
    "lat": "-26.44648",
    "lon": "31.206411",
    "links": "286",
    "countryLabel": "Esvatini",
-   "cityLabel": "Lobamba"
+   "cityLabel": "Lobamba",
+   "city_views": 949
   },
   {
-   "country": "Q734",
    "city": "Q10717",
+   "cityTitle": "Georgetown, Guyana",
+   "country": "Q734",
    "lat": "6.8058333333333",
    "lon": "-58.150833333333",
    "links": "286",
    "countryLabel": "Guyana",
-   "cityLabel": "Georgetown"
+   "cityLabel": "Georgetown",
+   "city_views": 1869
   },
   {
-   "country": "Q213",
    "city": "Q1085",
+   "cityTitle": "Prag",
+   "country": "Q213",
    "lat": "50.0875",
    "lon": "14.421388888889",
    "links": "355",
    "countryLabel": "Çekya",
-   "cityLabel": "Prag"
+   "cityLabel": "Prag",
+   "city_views": 63838
   },
   {
-   "country": "Q225",
    "city": "Q11194",
+   "cityTitle": "Saraybosna",
+   "country": "Q225",
    "lat": "43.856388888889",
    "lon": "18.413055555556",
    "links": "342",
    "countryLabel": "Bosna Hersek",
-   "cityLabel": "Saraybosna"
+   "cityLabel": "Saraybosna",
+   "city_views": 38449
   },
   {
-   "country": "Q983",
    "city": "Q1140136",
+   "cityTitle": "Ciudad de la Paz",
+   "country": "Q983",
    "lat": "1.5916666666667",
    "lon": "10.822222222222",
    "links": "284",
    "countryLabel": "Ekvator Ginesi",
-   "cityLabel": "Ciudad de la Paz"
+   "cityLabel": "Ciudad de la Paz",
+   "city_views": 2294
   },
   {
-   "country": "Q801",
    "city": "Q1218",
+   "cityTitle": "Kudüs",
+   "country": "Q801",
    "lat": "31.776679",
    "lon": "35.234156",
    "links": "380",
    "countryLabel": "İsrail",
-   "cityLabel": "Kudüs"
+   "cityLabel": "Kudüs",
+   "city_views": 124359
   },
   {
-   "country": "Q801",
    "city": "Q1218",
+   "cityTitle": "Kudüs",
+   "country": "Q801",
    "lat": "31.778888888889",
    "lon": "35.225555555556",
    "links": "380",
    "countryLabel": "İsrail",
-   "cityLabel": "Kudüs"
+   "cityLabel": "Kudüs",
+   "city_views": 124359
   },
   {
-   "country": "Q709",
    "city": "Q12919",
+   "cityTitle": "Majuro",
+   "country": "Q709",
    "lat": "7.0918",
    "lon": "171.3802",
    "links": "236",
    "countryLabel": "Marshall Adaları",
-   "cityLabel": "Majuro"
+   "cityLabel": "Majuro",
+   "city_views": 4086
   },
   {
-   "country": "Q710",
    "city": "Q131233",
+   "cityTitle": "Güney Tarava",
+   "country": "Q710",
    "lat": "1.3333333333333",
    "lon": "172.96666666667",
    "links": "249",
    "countryLabel": "Kiribati",
-   "cityLabel": "Güney Tarava"
+   "cityLabel": "Güney Tarava",
+   "city_views": 1121
   },
   {
    "country": "Q811",
@@ -91,1771 +109,2164 @@
    "lon": "-86.273725",
    "links": "282",
    "countryLabel": "Nikaragua",
-   "cityLabel": "Managua"
+   "cityLabel": "Managua",
+   "city_views": 0
   },
   {
-   "country": "Q805",
    "city": "Q131694",
+   "cityTitle": "Aden",
+   "country": "Q805",
    "lat": "12.8",
    "lon": "45.033333333333",
    "links": "316",
    "countryLabel": "Yemen",
-   "cityLabel": "Aden"
+   "cityLabel": "Aden",
+   "city_views": 10456
   },
   {
-   "country": "Q77",
    "city": "Q1335",
+   "cityTitle": "Montevideo",
+   "country": "Q77",
    "lat": "-34.905916666667",
    "lon": "-56.191311111111",
    "links": "324",
    "countryLabel": "Uruguay",
-   "cityLabel": "Montevideo"
+   "cityLabel": "Montevideo",
+   "city_views": 9540
   },
   {
-   "country": "Q902",
    "city": "Q1354",
+   "cityTitle": "Dakka",
+   "country": "Q902",
    "lat": "23.728888888889",
    "lon": "90.394444444444",
    "links": "349",
    "countryLabel": "Bangladeş",
-   "cityLabel": "Dakka"
+   "cityLabel": "Dakka",
+   "city_views": 12581
   },
   {
-   "country": "Q843",
    "city": "Q1362",
+   "cityTitle": "İslamabad",
+   "country": "Q843",
    "lat": "33.698888888889",
    "lon": "73.036944444444",
    "links": "356",
    "countryLabel": "Pakistan",
-   "cityLabel": "İslamabad"
+   "cityLabel": "İslamabad",
+   "city_views": 14307
   },
   {
-   "country": "Q224",
    "city": "Q1435",
+   "cityTitle": "Zagreb",
+   "country": "Q224",
    "lat": "45.813055555556",
    "lon": "15.977222222222",
    "links": "356",
    "countryLabel": "Hırvatistan",
-   "cityLabel": "Zagreb"
+   "cityLabel": "Zagreb",
+   "city_views": 14006
   },
   {
-   "country": "Q928",
    "city": "Q1461",
+   "cityTitle": "Manila",
+   "country": "Q928",
    "lat": "14.595833333333",
    "lon": "120.97722222222",
    "links": "334",
    "countryLabel": "Filipinler",
-   "cityLabel": "Manila"
+   "cityLabel": "Manila",
+   "city_views": 9028
   },
   {
-   "country": "Q414",
    "city": "Q1486",
+   "cityTitle": "Buenos Aires",
+   "country": "Q414",
    "lat": "-34.599722222222",
    "lon": "-58.381944444444",
    "links": "372",
    "countryLabel": "Arjantin",
-   "cityLabel": "Buenos Aires"
+   "cityLabel": "Buenos Aires",
+   "city_views": 23240
   },
   {
-   "country": "Q96",
    "city": "Q1489",
+   "cityTitle": "Meksiko",
+   "country": "Q96",
    "lat": "19.353773",
    "lon": "-99.13589",
    "links": "401",
    "countryLabel": "Meksika",
-   "cityLabel": "Meksiko"
+   "cityLabel": "Meksiko",
+   "city_views": 21975
   },
   {
-   "country": "Q17",
    "city": "Q1490",
+   "cityTitle": "Tokyo",
+   "country": "Q17",
    "lat": "35.689444444444",
    "lon": "139.69166666667",
    "links": "419",
    "countryLabel": "Japonya",
-   "cityLabel": "Tokyo"
+   "cityLabel": "Tokyo",
+   "city_views": 43036
   },
   {
-   "country": "Q750",
    "city": "Q1491",
+   "cityTitle": "La Paz",
+   "country": "Q750",
    "lat": "-16.495833333333",
    "lon": "-68.133333333333",
    "links": "313",
    "countryLabel": "Bolivya",
-   "cityLabel": "La Paz"
+   "cityLabel": "La Paz",
+   "city_views": 5998
   },
   {
-   "country": "Q878",
    "city": "Q1519",
+   "cityTitle": "Abu Dabi",
+   "country": "Q878",
    "lat": "24.451111111111",
    "lon": "54.396944444444",
    "links": "320",
    "countryLabel": "Birleşik Arap Emirlikleri",
-   "cityLabel": "Abu Dabi"
+   "cityLabel": "Abu Dabi",
+   "city_views": 30823
   },
   {
-   "country": "Q232",
    "city": "Q1520",
+   "cityTitle": "Astana",
+   "country": "Q232",
    "lat": "51.133333333333",
    "lon": "71.433333333333",
    "links": "350",
    "countryLabel": "Kazakistan",
-   "cityLabel": "Astana"
+   "cityLabel": "Astana",
+   "city_views": 18666
   },
   {
-   "country": "Q41",
    "city": "Q1524",
+   "cityTitle": "Atina",
+   "country": "Q41",
    "lat": "37.984166666667",
    "lon": "23.728055555556",
    "links": "378",
    "countryLabel": "Yunanistan",
-   "cityLabel": "Atina"
+   "cityLabel": "Atina",
+   "city_views": 33394
   },
   {
-   "country": "Q796",
    "city": "Q1530",
+   "cityTitle": "Bağdat",
+   "country": "Q796",
    "lat": "33.315277777778",
    "lon": "44.366111111111",
    "links": "350",
    "countryLabel": "Irak",
-   "cityLabel": "Bağdat"
+   "cityLabel": "Bağdat",
+   "city_views": 34233
   },
   {
-   "country": "Q717",
    "city": "Q1533",
+   "cityTitle": "Caracas",
+   "country": "Q717",
    "lat": "10.506111111111",
    "lon": "-66.914444444444",
    "links": "345",
    "countryLabel": "Venezuela",
-   "cityLabel": "Caracas"
+   "cityLabel": "Caracas",
+   "city_views": 17753
   },
   {
-   "country": "Q774",
    "city": "Q1555",
+   "cityTitle": "Guatemala (şehir)",
+   "country": "Q774",
    "lat": "14.641666666667",
    "lon": "-90.513333333333",
    "links": "281",
    "countryLabel": "Guatemala",
-   "cityLabel": "Guatemala"
+   "cityLabel": "Guatemala",
+   "city_views": 1951
   },
   {
-   "country": "Q241",
    "city": "Q1563",
+   "cityTitle": "Havana",
+   "country": "Q241",
    "lat": "23.136666666667",
    "lon": "-82.358888888889",
    "links": "312",
    "countryLabel": "Küba",
-   "cityLabel": "Havana"
+   "cityLabel": "Havana",
+   "city_views": 9121
   },
   {
-   "country": "Q219060",
    "city": "Q158119",
+   "cityTitle": "Ramallah",
+   "country": "Q219060",
    "lat": "31.896944444444",
    "lon": "35.201666666667",
    "links": "225",
    "countryLabel": "Filistin",
-   "cityLabel": "Ramallah"
+   "cityLabel": "Ramallah",
+   "city_views": 8966
   },
   {
-   "country": "Q967",
    "city": "Q167551",
+   "cityTitle": "Gitega",
+   "country": "Q967",
    "lat": "-3.4283333333333",
    "lon": "29.925",
    "links": "303",
    "countryLabel": "Burundi",
-   "cityLabel": "Gietaga"
+   "cityLabel": "Gietaga",
+   "city_views": 4200
   },
   {
-   "country": "Q40",
    "city": "Q1741",
+   "cityTitle": "Viyana",
+   "country": "Q40",
    "lat": "48.208333333333",
    "lon": "16.3725",
    "links": "372",
    "countryLabel": "Avusturya",
-   "cityLabel": "Viyana"
+   "cityLabel": "Viyana",
+   "city_views": 53972
   },
   {
-   "country": "Q756617",
    "city": "Q1748",
+   "cityTitle": "Kopenhag",
+   "country": "Q756617",
    "lat": "55.676111111111",
    "lon": "12.568888888889",
    "links": "55",
    "countryLabel": "Danimarka",
-   "cityLabel": "Kopenhag"
+   "cityLabel": "Kopenhag",
+   "city_views": 26593
   },
   {
-   "country": "Q34",
    "city": "Q1754",
+   "cityTitle": "Stockholm",
+   "country": "Q34",
    "lat": "59.329444444444",
    "lon": "18.068611111111",
    "links": "370",
    "countryLabel": "İsveç",
-   "cityLabel": "Stockholm"
+   "cityLabel": "Stockholm",
+   "city_views": 26116
   },
   {
-   "country": "Q33",
    "city": "Q1757",
+   "cityTitle": "Helsinki",
+   "country": "Q33",
    "lat": "60.170833333333",
    "lon": "24.9375",
    "links": "403",
    "countryLabel": "Finlandiya",
-   "cityLabel": "Helsinki"
+   "cityLabel": "Helsinki",
+   "city_views": 16074
   },
   {
-   "country": "Q27",
    "city": "Q1761",
+   "cityTitle": "Dublin",
+   "country": "Q27",
    "lat": "53.349722222222",
    "lon": "-6.2602777777778",
    "links": "342",
    "countryLabel": "İrlanda",
-   "cityLabel": "Dublin"
+   "cityLabel": "Dublin",
+   "city_views": 22741
   },
   {
-   "country": "Q189",
    "city": "Q1764",
+   "cityTitle": "Reykjavík",
+   "country": "Q189",
    "lat": "64.1475",
    "lon": "-21.935",
    "links": "355",
    "countryLabel": "İzlanda",
-   "cityLabel": "Reykjavík"
+   "cityLabel": "Reykjavík",
+   "city_views": 14567
   },
   {
-   "country": "Q191",
    "city": "Q1770",
+   "cityTitle": "Tallinn",
+   "country": "Q191",
    "lat": "59.437222222222",
    "lon": "24.745",
    "links": "354",
    "countryLabel": "Estonya",
-   "cityLabel": "Tallinn"
+   "cityLabel": "Tallinn",
+   "city_views": 16997
   },
   {
-   "country": "Q211",
    "city": "Q1773",
+   "cityTitle": "Riga",
+   "country": "Q211",
    "lat": "56.9475",
    "lon": "24.106944444444",
    "links": "336",
    "countryLabel": "Letonya",
-   "cityLabel": "Riga"
+   "cityLabel": "Riga",
+   "city_views": 13185
   },
   {
-   "country": "Q214",
    "city": "Q1780",
+   "cityTitle": "Bratislava",
+   "country": "Q214",
    "lat": "48.14816",
    "lon": "17.10674",
    "links": "341",
    "countryLabel": "Slovakya",
-   "cityLabel": "Bratislava"
+   "cityLabel": "Bratislava",
+   "city_views": 24946
   },
   {
-   "country": "Q214",
    "city": "Q1780",
+   "cityTitle": "Bratislava",
+   "country": "Q214",
    "lat": "48.1516988",
    "lon": "17.1093063",
    "links": "341",
    "countryLabel": "Slovakya",
-   "cityLabel": "Bratislava"
+   "cityLabel": "Bratislava",
+   "city_views": 24946
   },
   {
-   "country": "Q28",
    "city": "Q1781",
+   "cityTitle": "Budapeşte",
+   "country": "Q28",
    "lat": "47.498333333333",
    "lon": "19.040833333333",
    "links": "358",
    "countryLabel": "Macaristan",
-   "cityLabel": "Budapeşte"
+   "cityLabel": "Budapeşte",
+   "city_views": 69440
   },
   {
-   "country": "Q32",
    "city": "Q1842",
+   "cityTitle": "Lüksemburg (şehir)",
+   "country": "Q32",
    "lat": "49.611388888889",
    "lon": "6.13",
    "links": "335",
    "countryLabel": "Lüksemburg",
-   "cityLabel": "Lüksemburg"
+   "cityLabel": "Lüksemburg",
+   "city_views": 8004
   },
   {
-   "country": "Q347",
    "city": "Q1844",
+   "cityTitle": "Vaduz",
+   "country": "Q347",
    "lat": "47.140555555556",
    "lon": "9.5222222222222",
    "links": "316",
    "countryLabel": "Lihtenştayn",
-   "cityLabel": "Vaduz"
+   "cityLabel": "Vaduz",
+   "city_views": 10431
   },
   {
-   "country": "Q238",
    "city": "Q1848",
+   "cityTitle": "San Marino (şehir)",
+   "country": "Q238",
    "lat": "43.932011111111",
    "lon": "12.44845",
    "links": "314",
    "countryLabel": "San Marino",
-   "cityLabel": "San Marino"
+   "cityLabel": "San Marino",
+   "city_views": 1802
   },
   {
-   "country": "Q424",
    "city": "Q1850",
+   "cityTitle": "Punom Pen",
+   "country": "Q424",
    "lat": "11.569583333333",
    "lon": "104.92102777778",
    "links": "331",
    "countryLabel": "Kamboçya",
-   "cityLabel": "Phnom Penh"
+   "cityLabel": "Phnom Penh",
+   "city_views": 4588
   },
   {
-   "country": "Q881",
    "city": "Q1858",
+   "cityTitle": "Hanoi",
+   "country": "Q881",
    "lat": "21.0245",
    "lon": "105.84117",
    "links": "369",
    "countryLabel": "Vietnam",
-   "cityLabel": "Hanoi"
+   "cityLabel": "Hanoi",
+   "city_views": 10055
   },
   {
-   "country": "Q869",
    "city": "Q1861",
+   "cityTitle": "Bangkok",
+   "country": "Q869",
    "lat": "13.75",
    "lon": "100.51666666667",
    "links": "356",
    "countryLabel": "Tayland",
-   "cityLabel": "Bangkok"
+   "cityLabel": "Bangkok",
+   "city_views": 25425
   },
   {
-   "country": "Q228",
    "city": "Q1863",
+   "cityTitle": "Andorra la Vella",
+   "country": "Q228",
    "lat": "42.507222222222",
    "lon": "1.5222222222222",
    "links": "333",
    "countryLabel": "Andorra",
-   "cityLabel": "Andorra la Vella"
+   "cityLabel": "Andorra la Vella",
+   "city_views": 4468
   },
   {
-   "country": "Q833",
    "city": "Q1865",
+   "cityTitle": "Kuala Lumpur",
+   "country": "Q833",
    "lat": "3.1477777777778",
    "lon": "101.69527777778",
    "links": "340",
    "countryLabel": "Malezya",
-   "cityLabel": "Kuala Lumpur"
+   "cityLabel": "Kuala Lumpur",
+   "city_views": 15532
   },
   {
-   "country": "Q865",
    "city": "Q1867",
+   "cityTitle": "Taipei",
+   "country": "Q865",
    "lat": "25.0375",
    "lon": "121.5625",
    "links": "314",
    "countryLabel": "Tayvan",
-   "cityLabel": "Taipei"
+   "cityLabel": "Taipei",
+   "city_views": 9291
   },
   {
-   "country": "Q423",
    "city": "Q18808",
+   "cityTitle": "Pyongyang",
+   "country": "Q423",
    "lat": "39.016666666667",
    "lon": "125.7475",
    "links": "313",
    "countryLabel": "Kuzey Kore",
-   "cityLabel": "Pyongyang"
+   "cityLabel": "Pyongyang",
+   "city_views": 12716
   },
   {
-   "country": "Q212",
    "city": "Q1899",
+   "cityTitle": "Kiev",
+   "country": "Q212",
    "lat": "50.45",
    "lon": "30.523611111111",
    "links": "389",
    "countryLabel": "Ukrayna",
-   "cityLabel": "Kiev"
+   "cityLabel": "Kiev",
+   "city_views": 12578
   },
   {
-   "country": "Q16",
    "city": "Q1930",
+   "cityTitle": "Ottawa",
+   "country": "Q16",
    "lat": "45.424722222222",
    "lon": "-75.695",
    "links": "398",
    "countryLabel": "Kanada",
-   "cityLabel": "Ottawa"
+   "cityLabel": "Ottawa",
+   "city_views": 10514
   },
   {
-   "country": "Q958",
    "city": "Q1947",
+   "cityTitle": "Cuba",
+   "country": "Q958",
    "lat": "4.8538888888889",
    "lon": "31.5825",
    "links": "282",
    "countryLabel": "Güney Sudan",
-   "cityLabel": "Cuba"
+   "cityLabel": "Cuba",
+   "city_views": 2922
   },
   {
-   "country": "Q399",
    "city": "Q1953",
+   "cityTitle": "Erivan",
+   "country": "Q399",
    "lat": "40.181388888889",
    "lon": "44.514444444444",
    "links": "354",
    "countryLabel": "Ermenistan",
-   "cityLabel": "Erivan"
+   "cityLabel": "Erivan",
+   "city_views": 24407
   },
   {
-   "country": "Q1049",
    "city": "Q1963",
+   "cityTitle": "Hartum",
+   "country": "Q1049",
    "lat": "15.60308",
    "lon": "32.52654",
    "links": "334",
    "countryLabel": "Sudan",
-   "cityLabel": "Hartum"
+   "cityLabel": "Hartum",
+   "city_views": 7202
   },
   {
-   "country": "Q218",
    "city": "Q19660",
+   "cityTitle": "Bükreş",
+   "country": "Q218",
    "lat": "44.413361111111",
    "lon": "26.097777777778",
    "links": "349",
    "countryLabel": "Romanya",
-   "cityLabel": "Bükreş"
+   "cityLabel": "Bükreş",
+   "city_views": 22553
   },
   {
-   "country": "Q222",
    "city": "Q19689",
+   "cityTitle": "Tiran, Arnavutluk",
+   "country": "Q222",
    "lat": "41.328333333333",
    "lon": "19.818055555556",
    "links": "387",
    "countryLabel": "Arnavutluk",
-   "cityLabel": "Tiran"
+   "cityLabel": "Tiran",
+   "city_views": 24849
   },
   {
-   "country": "Q217",
    "city": "Q21197",
+   "cityTitle": "Kişinev",
+   "country": "Q217",
    "lat": "47.022777777778",
    "lon": "28.835277777778",
    "links": "331",
    "countryLabel": "Moldova",
-   "cityLabel": "Kişinev"
+   "cityLabel": "Kişinev",
+   "city_views": 10519
   },
   {
-   "country": "Q219060",
    "city": "Q212938",
+   "cityTitle": "Doğu Kudüs",
+   "country": "Q219060",
    "lat": "31.78336",
    "lon": "35.23388",
    "links": "225",
    "countryLabel": "Filistin",
-   "cityLabel": "Doğu Kudüs"
+   "cityLabel": "Doğu Kudüs",
+   "city_views": 8314
   },
   {
-   "country": "Q37",
    "city": "Q216",
+   "cityTitle": "Vilnius",
+   "country": "Q37",
    "lat": "54.687222222222",
    "lon": "25.28",
    "links": "352",
    "countryLabel": "Litvanya",
-   "cityLabel": "Vilnius"
+   "cityLabel": "Vilnius",
+   "city_views": 9544
   },
   {
-   "country": "Q38",
    "city": "Q220",
+   "cityTitle": "Roma",
+   "country": "Q38",
    "lat": "41.893055555556",
    "lon": "12.482777777778",
    "links": "409",
    "countryLabel": "İtalya",
-   "cityLabel": "Roma"
+   "cityLabel": "Roma",
+   "city_views": 61412
   },
   {
-   "country": "Q184",
    "city": "Q2280",
+   "cityTitle": "Minsk",
+   "country": "Q184",
    "lat": "53.902246",
    "lon": "27.561837",
    "links": "358",
    "countryLabel": "Belarus",
-   "cityLabel": "Minsk"
+   "cityLabel": "Minsk",
+   "city_views": 14493
   },
   {
-   "country": "Q711",
    "city": "Q23430",
+   "cityTitle": "Ulan Batur",
+   "country": "Q711",
    "lat": "47.921357",
    "lon": "106.905515",
    "links": "322",
    "countryLabel": "Moğolistan",
-   "cityLabel": "Ulan Batur"
+   "cityLabel": "Ulan Batur",
+   "city_views": 20427
   },
   {
-   "country": "Q874",
    "city": "Q23438",
+   "cityTitle": "Aşkabat",
+   "country": "Q874",
    "lat": "37.95",
    "lon": "58.383333333333",
    "links": "299",
    "countryLabel": "Türkmenistan",
-   "cityLabel": "Aşkabat"
+   "cityLabel": "Aşkabat",
+   "city_views": 18241
   },
   {
-   "country": "Q235",
    "city": "Q235",
+   "cityTitle": "Monako",
+   "country": "Q235",
    "lat": "43.731111111111",
    "lon": "7.42",
    "links": "321",
    "countryLabel": "Monako",
-   "cityLabel": "Monako"
+   "cityLabel": "Monako",
+   "city_views": 146196
   },
   {
-   "country": "Q236",
    "city": "Q23564",
+   "cityTitle": "Podgorica",
+   "country": "Q236",
    "lat": "42.441388888889",
    "lon": "19.262777777778",
    "links": "323",
    "countryLabel": "Karadağ",
-   "cityLabel": "Podgorica"
+   "cityLabel": "Podgorica",
+   "city_views": 19357
   },
   {
-   "country": "Q664",
    "city": "Q23661",
+   "cityTitle": "Wellington",
+   "country": "Q664",
    "lat": "-41.288888888889",
    "lon": "174.77722222222",
-   "links": "349",
+   "links": "351",
    "countryLabel": "Yeni Zelanda",
-   "cityLabel": "Wellington"
+   "cityLabel": "Wellington",
+   "city_views": 10242
   },
   {
-   "country": "Q237",
    "city": "Q237",
+   "cityTitle": "Vatikan",
+   "country": "Q237",
    "lat": "41.904",
    "lon": "12.453",
    "links": "343",
    "countryLabel": "Vatikan",
-   "cityLabel": "Vatikan"
+   "cityLabel": "Vatikan",
+   "city_views": 121375
   },
   {
-   "country": "Q233",
    "city": "Q23800",
+   "cityTitle": "Valletta",
+   "country": "Q233",
    "lat": "35.897777777778",
    "lon": "14.5125",
    "links": "327",
    "countryLabel": "Malta",
-   "cityLabel": "Valletta"
+   "cityLabel": "Valletta",
+   "city_views": 9168
   },
   {
-   "country": "Q31",
    "city": "Q239",
+   "cityTitle": "Brüksel Şehri",
+   "country": "Q31",
    "lat": "50.846666666667",
    "lon": "4.3516666666667",
    "links": "383",
    "countryLabel": "Belçika",
-   "cityLabel": "Brüksel Şehri"
+   "cityLabel": "Brüksel Şehri",
+   "city_views": 9165
   },
   {
-   "country": "Q1045",
    "city": "Q2449",
+   "cityTitle": "Mogadişu",
+   "country": "Q1045",
    "lat": "2.0391666666667",
    "lon": "45.341944444444",
    "links": "326",
    "countryLabel": "Somali",
-   "cityLabel": "Mogadişu"
+   "cityLabel": "Mogadişu",
+   "city_views": 10773
   },
   {
-   "country": "Q778",
    "city": "Q2467",
+   "cityTitle": "Nassau",
+   "country": "Q778",
    "lat": "25.078055555556",
    "lon": "-77.338611111111",
    "links": "280",
    "countryLabel": "Bahamalar",
-   "cityLabel": "Nassau"
+   "cityLabel": "Nassau",
+   "city_views": 3763
   },
   {
-   "country": "Q805",
    "city": "Q2471",
+   "cityTitle": "San'a",
+   "country": "Q805",
    "lat": "15.35",
    "lon": "44.2",
    "links": "316",
    "countryLabel": "Yemen",
-   "cityLabel": "Sana'a"
+   "cityLabel": "Sana'a",
+   "city_views": 8224
   },
   {
-   "country": "Q1246",
    "city": "Q25270",
+   "cityTitle": "Priştine",
+   "country": "Q1246",
    "lat": "42.666666666667",
    "lon": "21.166666666667",
    "links": "283",
    "countryLabel": "Kosova",
-   "cityLabel": "Priştine"
+   "cityLabel": "Priştine",
+   "city_views": 43431
   },
   {
-   "country": "Q265",
    "city": "Q269",
+   "cityTitle": "Taşkent",
+   "country": "Q265",
    "lat": "41.311111111111",
    "lon": "69.279722222222",
    "links": "310",
    "countryLabel": "Özbekistan",
-   "cityLabel": "Taşkent"
+   "cityLabel": "Taşkent",
+   "city_views": 21503
   },
   {
-   "country": "Q36",
    "city": "Q270",
+   "cityTitle": "Varşova",
+   "country": "Q36",
    "lat": "52.23",
    "lon": "21.011111111111",
    "links": "391",
    "countryLabel": "Polonya",
-   "cityLabel": "Varşova"
+   "cityLabel": "Varşova",
+   "city_views": 21676
   },
   {
-   "country": "Q29",
    "city": "Q2807",
+   "cityTitle": "Madrid",
+   "country": "Q29",
    "lat": "40.416944444444",
    "lon": "-3.7033333333333",
    "links": "396",
    "countryLabel": "İspanya",
-   "cityLabel": "Madrid"
+   "cityLabel": "Madrid",
+   "city_views": 38419
   },
   {
-   "country": "Q739",
    "city": "Q2841",
+   "cityTitle": "Bogotá",
+   "country": "Q739",
    "lat": "4.60971",
    "lon": "-74.08175",
    "links": "367",
    "countryLabel": "Kolombiya",
-   "cityLabel": "Bogotá"
+   "cityLabel": "Bogotá",
+   "city_views": 9335
   },
   {
-   "country": "Q155",
    "city": "Q2844",
+   "cityTitle": "Brasília",
+   "country": "Q155",
    "lat": "-15.793888888889",
    "lon": "-47.882777777778",
    "links": "387",
    "countryLabel": "Brezilya",
-   "cityLabel": "Brasília"
+   "cityLabel": "Brasília",
+   "city_views": 13290
   },
   {
-   "country": "Q419",
    "city": "Q2868",
+   "cityTitle": "Lima",
+   "country": "Q419",
    "lat": "-12.06",
    "lon": "-77.0375",
    "links": "333",
    "countryLabel": "Peru",
-   "cityLabel": "Lima"
+   "cityLabel": "Lima",
+   "city_views": 6528
   },
   {
-   "country": "Q298",
    "city": "Q2887",
+   "cityTitle": "Santiago, Şili",
+   "country": "Q298",
    "lat": "-33.4375",
    "lon": "-70.65",
    "links": "381",
    "countryLabel": "Şili",
-   "cityLabel": "Santiago"
+   "cityLabel": "Santiago",
+   "city_views": 8648
   },
   {
-   "country": "Q736",
    "city": "Q2900",
+   "cityTitle": "Quito",
+   "country": "Q736",
    "lat": "-0.22",
    "lon": "-78.5125",
    "links": "316",
    "countryLabel": "Ekvador",
-   "cityLabel": "Quito"
+   "cityLabel": "Quito",
+   "city_views": 6672
   },
   {
-   "country": "Q750",
    "city": "Q2907",
+   "cityTitle": "Sucre",
+   "country": "Q750",
    "lat": "-19.0475",
    "lon": "-65.26",
    "links": "313",
    "countryLabel": "Bolivya",
-   "cityLabel": "Sucre"
+   "cityLabel": "Sucre",
+   "city_views": 5294
   },
   {
-   "country": "Q733",
    "city": "Q2933",
+   "cityTitle": "Asunción",
+   "country": "Q733",
    "lat": "-25.28",
    "lon": "-57.634444444444",
    "links": "312",
    "countryLabel": "Paraguay",
-   "cityLabel": "Asunción"
+   "cityLabel": "Asunción",
+   "city_views": 5574
   },
   {
-   "country": "Q730",
    "city": "Q3001",
+   "cityTitle": "Paramaribo",
+   "country": "Q730",
    "lat": "5.8666666666667",
    "lon": "-55.166666666667",
    "links": "288",
    "countryLabel": "Surinam",
-   "cityLabel": "Paramaribo"
+   "cityLabel": "Paramaribo",
+   "city_views": 15468
   },
   {
-   "country": "Q837",
    "city": "Q3037",
+   "cityTitle": "Katmandu",
+   "country": "Q837",
    "lat": "27.71",
    "lon": "85.32",
    "links": "324",
    "countryLabel": "Nepal",
-   "cityLabel": "Katmandu"
+   "cityLabel": "Katmandu",
+   "city_views": 8542
   },
   {
-   "country": "Q242",
    "city": "Q3043",
+   "cityTitle": "Belmopan",
+   "country": "Q242",
    "lat": "17.25",
    "lon": "-88.7675",
    "links": "281",
    "countryLabel": "Belize",
-   "cityLabel": "Belmopán"
+   "cityLabel": "Belmopán",
+   "city_views": 1273
   },
   {
-   "country": "Q800",
    "city": "Q3070",
+   "cityTitle": "San José",
+   "country": "Q800",
    "lat": "9.9327388888889",
    "lon": "-84.079613888889",
    "links": "302",
    "countryLabel": "Kosta Rika",
-   "cityLabel": "San José"
+   "cityLabel": "San José",
+   "city_views": 1757
   },
   {
-   "country": "Q697",
    "city": "Q31026",
+   "cityTitle": "Yaren, Nauru",
+   "country": "Q697",
    "lat": "-0.5477",
    "lon": "166.920867",
    "links": "265",
    "countryLabel": "Nauru",
-   "cityLabel": "Yaren"
+   "cityLabel": "Yaren",
+   "city_views": 2262
   },
   {
-   "country": "Q792",
    "city": "Q3110",
+   "cityTitle": "San Salvador",
+   "country": "Q792",
    "lat": "13.697597222222",
    "lon": "-89.191155555556",
    "links": "287",
    "countryLabel": "El Salvador",
-   "cityLabel": "San Salvador"
+   "cityLabel": "San Salvador",
+   "city_views": 3753
   },
   {
-   "country": "Q408",
    "city": "Q3114",
+   "cityTitle": "Canberra",
+   "country": "Q408",
    "lat": "-35.293055555556",
    "lon": "149.12694444444",
    "links": "400",
    "countryLabel": "Avustralya",
-   "cityLabel": "Canberra"
+   "cityLabel": "Canberra",
+   "city_views": 19682
   },
   {
-   "country": "Q783",
    "city": "Q3238",
+   "cityTitle": "Tegucigalpa",
+   "country": "Q783",
    "lat": "14.105783333333",
    "lon": "-87.204705555556",
    "links": "299",
    "countryLabel": "Honduras",
-   "cityLabel": "Tegucigalpa"
+   "cityLabel": "Tegucigalpa",
+   "city_views": 1784
   },
   {
-   "country": "Q804",
    "city": "Q3306",
+   "cityTitle": "Panama (şehir)",
+   "country": "Q804",
    "lat": "8.9711111111111",
    "lon": "-79.534722222222",
    "links": "303",
    "countryLabel": "Panama",
-   "cityLabel": "Panama"
+   "cityLabel": "Panama",
+   "city_views": 3058
   },
   {
-   "country": "Q334",
    "city": "Q334",
+   "cityTitle": "Singapur",
+   "country": "Q334",
    "lat": "1.3",
    "lon": "103.8",
    "links": "333",
    "countryLabel": "Singapur",
-   "cityLabel": "Singapur"
+   "cityLabel": "Singapur",
+   "city_views": 137567
   },
   {
-   "country": "Q672",
    "city": "Q34126",
+   "cityTitle": "Funafuti",
+   "country": "Q672",
    "lat": "-8.5047777777778",
    "lon": "179.11736111111",
    "links": "252",
    "countryLabel": "Tuvalu",
-   "cityLabel": "Funafuti"
+   "cityLabel": "Funafuti",
+   "city_views": 4741
   },
   {
-   "country": "Q790",
    "city": "Q34261",
+   "cityTitle": "Port-au-Prince",
+   "country": "Q790",
    "lat": "18.546944444444",
    "lon": "-72.340277777778",
    "links": "291",
    "countryLabel": "Haiti",
-   "cityLabel": "Port-au-Prince"
+   "cityLabel": "Port-au-Prince",
+   "city_views": 2791
   },
   {
-   "country": "Q766",
    "city": "Q34692",
+   "cityTitle": "Kingston, Jamaika",
+   "country": "Q766",
    "lat": "17.971388888889",
    "lon": "-76.793055555556",
    "links": "281",
    "countryLabel": "Jamaika",
-   "cityLabel": "Kingston"
+   "cityLabel": "Kingston",
+   "city_views": 3257
   },
   {
-   "country": "Q786",
    "city": "Q34820",
+   "cityTitle": "Santo Domingo",
+   "country": "Q786",
    "lat": "18.4625",
    "lon": "-69.936111111111",
    "links": "280",
    "countryLabel": "Dominik Cumhuriyeti",
-   "cityLabel": "Santo Domingo"
+   "cityLabel": "Santo Domingo",
+   "city_views": 3639
   },
   {
-   "country": "Q817",
    "city": "Q35178",
+   "cityTitle": "Kuveyt (şehir)",
+   "country": "Q817",
    "lat": "29.375",
    "lon": "47.98",
    "links": "306",
    "countryLabel": "Kuveyt",
-   "cityLabel": "Kuveyt"
+   "cityLabel": "Kuveyt",
+   "city_views": 4369
   },
   {
-   "country": "Q854",
    "city": "Q35381",
+   "cityTitle": "Kolombo",
+   "country": "Q854",
    "lat": "6.9266666666667",
    "lon": "79.860555555556",
    "links": "309",
    "countryLabel": "Sri Lanka",
-   "cityLabel": "Kolombo"
+   "cityLabel": "Kolombo",
+   "city_views": 4107
   },
   {
-   "country": "Q1028",
    "city": "Q3551",
+   "cityTitle": "Rabat",
+   "country": "Q1028",
    "lat": "34.021111111111",
    "lon": "-6.8413888888889",
    "links": "334",
    "countryLabel": "Fas",
-   "cityLabel": "Rabat"
+   "cityLabel": "Rabat",
+   "city_views": 13858
   },
   {
-   "country": "Q262",
    "city": "Q3561",
+   "cityTitle": "Cezayir (şehir)",
+   "country": "Q262",
    "lat": "36.776388888889",
    "lon": "3.0586111111111",
    "links": "374",
    "countryLabel": "Cezayir",
-   "cityLabel": "Cezayir"
+   "cityLabel": "Cezayir",
+   "city_views": 12269
   },
   {
-   "country": "Q948",
    "city": "Q3572",
+   "cityTitle": "Tunus (şehir)",
+   "country": "Q948",
    "lat": "36.800833333333",
    "lon": "10.18",
    "links": "328",
    "countryLabel": "Tunus",
-   "cityLabel": "Tunus"
+   "cityLabel": "Tunus",
+   "city_views": 6081
   },
   {
-   "country": "Q1016",
    "city": "Q3579",
+   "cityTitle": "Trablus",
+   "country": "Q1016",
    "lat": "32.8875",
    "lon": "13.1875",
    "links": "334",
    "countryLabel": "Libya",
-   "cityLabel": "Trablus"
+   "cityLabel": "Trablus",
+   "city_views": 13780
   },
   {
-   "country": "Q977",
    "city": "Q3604",
+   "cityTitle": "Cibuti (şehir)",
+   "country": "Q977",
    "lat": "11.595",
    "lon": "43.148055555556",
    "links": "300",
    "countryLabel": "Cibuti",
-   "cityLabel": "Cibuti"
+   "cityLabel": "Cibuti",
+   "city_views": 3285
   },
   {
-   "country": "Q794",
    "city": "Q3616",
+   "cityTitle": "Tahran",
+   "country": "Q794",
    "lat": "35.688888888889",
    "lon": "51.389722222222",
    "links": "376",
    "countryLabel": "İran",
-   "cityLabel": "Tahran"
+   "cityLabel": "Tahran",
+   "city_views": 36161
   },
   {
-   "country": "Q244",
    "city": "Q36168",
+   "cityTitle": "Bridgetown",
+   "country": "Q244",
    "lat": "13.0975",
    "lon": "-59.616666666667",
    "links": "276",
    "countryLabel": "Barbados",
-   "cityLabel": "Bridgetown"
+   "cityLabel": "Bridgetown",
+   "city_views": 5044
   },
   {
-   "country": "Q115",
    "city": "Q3624",
+   "cityTitle": "Addis Ababa",
+   "country": "Q115",
    "lat": "9.0358333333333",
    "lon": "38.7525",
    "links": "347",
    "countryLabel": "Etiyopya",
-   "cityLabel": "Addis Ababa"
+   "cityLabel": "Addis Ababa",
+   "city_views": 13591
   },
   {
-   "country": "Q683",
    "city": "Q36260",
+   "cityTitle": "Apia",
+   "country": "Q683",
    "lat": "-13.833333333333",
    "lon": "-171.83333333333",
    "links": "261",
    "countryLabel": "Samoa",
-   "cityLabel": "Apia"
+   "cityLabel": "Apia",
+   "city_views": 3856
   },
   {
-   "country": "Q784",
    "city": "Q36281",
+   "cityTitle": "Roseau",
+   "country": "Q784",
    "lat": "15.3",
    "lon": "-61.383333333333",
    "links": "265",
    "countryLabel": "Dominika",
-   "cityLabel": "Roseau"
+   "cityLabel": "Roseau",
+   "city_views": 3372
   },
   {
-   "country": "Q252",
    "city": "Q3630",
+   "cityTitle": "Cakarta",
+   "country": "Q252",
    "lat": "-6.1752777777778",
    "lon": "106.82694444444",
    "links": "366",
    "countryLabel": "Endonezya",
-   "cityLabel": "Cakarta"
+   "cityLabel": "Cakarta",
+   "city_views": 27993
   },
   {
-   "country": "Q43",
    "city": "Q3640",
+   "cityTitle": "Ankara",
+   "country": "Q43",
    "lat": "39.93576",
    "lon": "32.83869",
-   "links": "427",
+   "links": "428",
    "countryLabel": "Türkiye",
-   "cityLabel": "Ankara"
+   "cityLabel": "Ankara",
+   "city_views": 247192
   },
   {
-   "country": "Q986",
    "city": "Q3642",
+   "cityTitle": "Asmara",
+   "country": "Q986",
    "lat": "15.333333333333",
    "lon": "38.916666666667",
    "links": "307",
    "countryLabel": "Eritre",
-   "cityLabel": "Asmara"
+   "cityLabel": "Asmara",
+   "city_views": 6645
   },
   {
-   "country": "Q691",
    "city": "Q36526",
+   "cityTitle": "Port Moresby",
+   "country": "Q691",
    "lat": "-9.4788888888889",
    "lon": "147.14944444444",
    "links": "285",
    "countryLabel": "Papua Yeni Gine",
-   "cityLabel": "Port Moresby"
+   "cityLabel": "Port Moresby",
+   "city_views": 2870
   },
   {
-   "country": "Q657",
    "city": "Q3659",
+   "cityTitle": "Encemine",
+   "country": "Q657",
    "lat": "12.11",
    "lon": "15.05",
    "links": "318",
    "countryLabel": "Çad",
-   "cityLabel": "Encemine"
+   "cityLabel": "Encemine",
+   "city_views": 3257
   },
   {
-   "country": "Q1032",
    "city": "Q3674",
+   "cityTitle": "Niamey",
+   "country": "Q1032",
    "lat": "13.515",
    "lon": "2.1175",
    "links": "302",
    "countryLabel": "Nijer",
-   "cityLabel": "Niamey"
+   "cityLabel": "Niamey",
+   "city_views": 2548
   },
   {
-   "country": "Q1025",
    "city": "Q3688",
+   "cityTitle": "Nuakşot",
+   "country": "Q1025",
    "lat": "18.08581",
    "lon": "-15.9785",
    "links": "305",
    "countryLabel": "Moritanya",
-   "cityLabel": "Nuakşot"
+   "cityLabel": "Nuakşot",
+   "city_views": 5463
   },
   {
-   "country": "Q851",
    "city": "Q3692",
+   "cityTitle": "Riyad",
+   "country": "Q851",
    "lat": "24.638333333333",
    "lon": "46.715",
    "links": "350",
    "countryLabel": "Suudi Arabistan",
-   "cityLabel": "Riyad"
+   "cityLabel": "Riyad",
+   "city_views": 25521
   },
   {
-   "country": "Q912",
    "city": "Q3703",
+   "cityTitle": "Bamako",
+   "country": "Q912",
    "lat": "12.645833333333",
    "lon": "-7.9922222222222",
    "links": "312",
    "countryLabel": "Mali",
-   "cityLabel": "Bamako"
+   "cityLabel": "Bamako",
+   "city_views": 3804
   },
   {
-   "country": "Q403",
    "city": "Q3711",
+   "cityTitle": "Belgrad",
+   "country": "Q403",
    "lat": "44.817777777778",
    "lon": "20.456944444444",
    "links": "352",
    "countryLabel": "Sırbistan",
-   "cityLabel": "Belgrad"
+   "cityLabel": "Belgrad",
+   "city_views": 64946
   },
   {
-   "country": "Q1041",
    "city": "Q3718",
+   "cityTitle": "Dakar",
+   "country": "Q1041",
    "lat": "14.672555555556",
    "lon": "-17.432",
    "links": "309",
    "countryLabel": "Senegal",
-   "cityLabel": "Dakar"
+   "cityLabel": "Dakar",
+   "city_views": 12758
   },
   {
-   "country": "Q1005",
    "city": "Q3726",
+   "cityTitle": "Banjul",
+   "country": "Q1005",
    "lat": "13.453055555556",
    "lon": "-16.5775",
    "links": "300",
    "countryLabel": "Gambiya",
-   "cityLabel": "Banjul"
+   "cityLabel": "Banjul",
+   "city_views": 5204
   },
   {
-   "country": "Q1006",
    "city": "Q3733",
+   "cityTitle": "Konakri",
+   "country": "Q1006",
    "lat": "9.5091666666667",
    "lon": "-13.712222222222",
    "links": "301",
    "countryLabel": "Gine",
-   "cityLabel": "Konakri"
+   "cityLabel": "Konakri",
+   "city_views": 5864
   },
   {
-   "country": "Q1007",
    "city": "Q3739",
+   "cityTitle": "Bissau",
+   "country": "Q1007",
    "lat": "11.86",
    "lon": "-15.583333333333",
    "links": "299",
    "countryLabel": "Gine-Bissau",
-   "cityLabel": "Bissau"
+   "cityLabel": "Bissau",
+   "city_views": 3040
   },
   {
-   "country": "Q836",
    "city": "Q37400",
+   "cityTitle": "Nepido",
+   "country": "Q836",
    "lat": "19.7475",
    "lon": "96.115",
    "links": "318",
    "countryLabel": "Myanmar",
-   "cityLabel": "Naypyidaw"
+   "cityLabel": "Naypyidaw",
+   "city_views": 3061
   },
   {
-   "country": "Q1014",
    "city": "Q3748",
+   "cityTitle": "Monrovia",
+   "country": "Q1014",
    "lat": "6.3105555555556",
    "lon": "-10.804722222222",
    "links": "292",
    "countryLabel": "Liberya",
-   "cityLabel": "Monrovia"
+   "cityLabel": "Monrovia",
+   "city_views": 6802
   },
   {
-   "country": "Q1011",
    "city": "Q3751",
+   "cityTitle": "Praia",
+   "country": "Q1011",
    "lat": "14.917719444444",
    "lon": "-23.509155555556",
    "links": "291",
    "countryLabel": "Cabo Verde",
-   "cityLabel": "Praia"
+   "cityLabel": "Praia",
+   "city_views": 9521
   },
   {
-   "country": "Q117",
    "city": "Q3761",
+   "cityTitle": "Akra",
+   "country": "Q117",
    "lat": "5.55602",
    "lon": "-0.1969",
    "links": "326",
    "countryLabel": "Gana",
-   "cityLabel": "Akra"
+   "cityLabel": "Akra",
+   "city_views": 4670
   },
   {
-   "country": "Q858",
    "city": "Q3766",
+   "cityTitle": "Şam",
+   "country": "Q858",
    "lat": "33.513",
    "lon": "36.292",
    "links": "337",
    "countryLabel": "Suriye",
-   "cityLabel": "Şam"
+   "cityLabel": "Şam",
+   "city_views": 38961
   },
   {
-   "country": "Q858",
    "city": "Q3766",
+   "cityTitle": "Şam",
+   "country": "Q858",
    "lat": "33.513055555556",
    "lon": "36.291944444444",
    "links": "337",
    "countryLabel": "Suriye",
-   "cityLabel": "Şam"
+   "cityLabel": "Şam",
+   "city_views": 38961
   },
   {
-   "country": "Q1008",
    "city": "Q3768",
+   "cityTitle": "Yamoussoukro",
+   "country": "Q1008",
    "lat": "6.8161111111111",
    "lon": "-5.2741666666667",
    "links": "313",
    "countryLabel": "Fildişi Sahili",
-   "cityLabel": "Yamoussoukro"
+   "cityLabel": "Yamoussoukro",
+   "city_views": 5923
   },
   {
-   "country": "Q258",
    "city": "Q37701",
+   "cityTitle": "Bloemfontein",
+   "country": "Q258",
    "lat": "-29.1",
    "lon": "26.216666666667",
    "links": "368",
    "countryLabel": "Güney Afrika",
-   "cityLabel": "Bloemfontein"
+   "cityLabel": "Bloemfontein",
+   "city_views": 6724
   },
   {
-   "country": "Q965",
    "city": "Q3777",
+   "cityTitle": "Vagadugu",
+   "country": "Q965",
    "lat": "12.368611111111",
    "lon": "-1.5275",
    "links": "309",
    "countryLabel": "Burkina Faso",
-   "cityLabel": "Ouagadougou"
+   "cityLabel": "Ouagadougou",
+   "city_views": 3671
   },
   {
-   "country": "Q1044",
    "city": "Q3780",
+   "cityTitle": "Freetown",
+   "country": "Q1044",
    "lat": "8.4872222222222",
    "lon": "-13.235555555556",
    "links": "294",
    "countryLabel": "Sierra Leone",
-   "cityLabel": "Freetown"
+   "cityLabel": "Freetown",
+   "city_views": 5710
   },
   {
-   "country": "Q686",
    "city": "Q37806",
+   "cityTitle": "Port Vila",
+   "country": "Q686",
    "lat": "-17.73333",
    "lon": "168.316667",
    "links": "263",
    "countryLabel": "Vanuatu",
-   "cityLabel": "Port Vila"
+   "cityLabel": "Port Vila",
+   "city_views": 1249
   },
   {
-   "country": "Q945",
    "city": "Q3792",
+   "cityTitle": "Lomé",
+   "country": "Q945",
    "lat": "6.13",
    "lon": "1.2158333333333",
    "links": "302",
    "countryLabel": "Togo",
-   "cityLabel": "Lomé"
+   "cityLabel": "Lomé",
+   "city_views": 1567
   },
   {
-   "country": "Q962",
    "city": "Q3799",
+   "cityTitle": "Porto-Novo",
+   "country": "Q962",
    "lat": "6.4833333333333",
    "lon": "2.6166666666667",
    "links": "308",
    "countryLabel": "Benin",
-   "cityLabel": "Porto-Novo"
+   "cityLabel": "Porto-Novo",
+   "city_views": 1945
   },
   {
-   "country": "Q810",
    "city": "Q3805",
+   "cityTitle": "Amman",
+   "country": "Q810",
    "lat": "31.930983",
    "lon": "35.926084",
    "links": "314",
    "countryLabel": "Ürdün",
-   "cityLabel": "Amman"
+   "cityLabel": "Amman",
+   "city_views": 16815
   },
   {
-   "country": "Q810",
    "city": "Q3805",
+   "cityTitle": "Amman",
+   "country": "Q810",
    "lat": "31.95",
    "lon": "35.933333333333",
    "links": "314",
    "countryLabel": "Ürdün",
-   "cityLabel": "Amman"
+   "cityLabel": "Amman",
+   "city_views": 16815
   },
   {
-   "country": "Q1009",
    "city": "Q3808",
+   "cityTitle": "Yaoundé",
+   "country": "Q1009",
    "lat": "3.8577777777778",
    "lon": "11.518055555556",
    "links": "314",
    "countryLabel": "Kamerun",
-   "cityLabel": "Yaunde"
+   "cityLabel": "Yaunde",
+   "city_views": 2481
   },
   {
-   "country": "Q822",
    "city": "Q3820",
+   "cityTitle": "Beyrut",
+   "country": "Q822",
    "lat": "33.886944444444",
    "lon": "35.513055555556",
    "links": "329",
    "countryLabel": "Lübnan",
-   "cityLabel": "Beyrut"
+   "cityLabel": "Beyrut",
+   "city_views": 28450
   },
   {
-   "country": "Q1000",
    "city": "Q3825",
+   "cityTitle": "Libreville",
+   "country": "Q1000",
    "lat": "0.40777777777778",
    "lon": "9.4402777777778",
    "links": "295",
    "countryLabel": "Gabon",
-   "cityLabel": "Libreville"
+   "cityLabel": "Libreville",
+   "city_views": 7100
   },
   {
-   "country": "Q842",
    "city": "Q3826",
+   "cityTitle": "Maskat",
+   "country": "Q842",
    "lat": "23.613888888889",
    "lon": "58.592222222222",
    "links": "297",
    "countryLabel": "Umman",
-   "cityLabel": "Maskat"
+   "cityLabel": "Maskat",
+   "city_views": 15560
   },
   {
-   "country": "Q929",
    "city": "Q3832",
+   "cityTitle": "Bangui",
+   "country": "Q929",
    "lat": "4.37325",
    "lon": "18.562833333333",
    "links": "301",
    "countryLabel": "Orta Afrika Cumhuriyeti",
-   "cityLabel": "Bangui"
+   "cityLabel": "Bangui",
+   "city_views": 5049
   },
   {
-   "country": "Q974",
    "city": "Q3838",
+   "cityTitle": "Kinşasa",
+   "country": "Q974",
    "lat": "-4.3219444444444",
    "lon": "15.311944444444",
    "links": "334",
    "countryLabel": "Kongo Demokratik Cumhuriyeti",
-   "cityLabel": "Kinşasa"
+   "cityLabel": "Kinşasa",
+   "city_views": 11580
   },
   {
-   "country": "Q221",
    "city": "Q384",
+   "cityTitle": "Üsküp",
+   "country": "Q221",
    "lat": "41.996111111111",
    "lon": "21.431666666667",
    "links": "327",
    "countryLabel": "Kuzey Makedonya",
-   "cityLabel": "Üsküp"
+   "cityLabel": "Üsküp",
+   "city_views": 48978
   },
   {
-   "country": "Q971",
    "city": "Q3844",
+   "cityTitle": "Brazzaville",
+   "country": "Q971",
    "lat": "-4.2694444444444",
    "lon": "15.271111111111",
    "links": "300",
    "countryLabel": "Kongo",
-   "cityLabel": "Brazzaville"
+   "cityLabel": "Brazzaville",
+   "city_views": 8391
   },
   {
-   "country": "Q229",
    "city": "Q3856",
+   "cityTitle": "Lefkoşa",
+   "country": "Q229",
    "lat": "35.1725",
    "lon": "33.365",
    "links": "326",
    "countryLabel": "Kıbrıs",
-   "cityLabel": "Lefkoşa"
+   "cityLabel": "Lefkoşa",
+   "city_views": 43271
   },
   {
-   "country": "Q1037",
    "city": "Q3859",
+   "cityTitle": "Kigali",
+   "country": "Q1037",
    "lat": "-1.9525",
    "lon": "30.115",
    "links": "303",
    "countryLabel": "Ruanda",
-   "cityLabel": "Kigali"
+   "cityLabel": "Kigali",
+   "city_views": 5483
   },
   {
-   "country": "Q846",
    "city": "Q3861",
+   "cityTitle": "Doha",
+   "country": "Q846",
    "lat": "25.286111111111",
    "lon": "51.529444444444",
    "links": "291",
    "countryLabel": "Katar",
-   "cityLabel": "Doha"
+   "cityLabel": "Doha",
+   "city_views": 11971
   },
   {
-   "country": "Q924",
    "city": "Q3866",
+   "cityTitle": "Dodoma",
+   "country": "Q924",
    "lat": "-6.1835",
    "lon": "35.746",
    "links": "320",
    "countryLabel": "Tanzanya",
-   "cityLabel": "Dodoma"
+   "cityLabel": "Dodoma",
+   "city_views": 3622
   },
   {
-   "country": "Q114",
    "city": "Q3870",
+   "cityTitle": "Nairobi",
+   "country": "Q114",
    "lat": "-1.2863888888889",
    "lon": "36.817222222222",
    "links": "337",
    "countryLabel": "Kenya",
-   "cityLabel": "Nairobi"
+   "cityLabel": "Nairobi",
+   "city_views": 11496
   },
   {
-   "country": "Q1020",
    "city": "Q3876",
+   "cityTitle": "Lilongwe",
+   "country": "Q1020",
    "lat": "-13.986388888889",
    "lon": "33.768055555556",
    "links": "297",
    "countryLabel": "Malavi",
-   "cityLabel": "Lilongwe"
+   "cityLabel": "Lilongwe",
+   "city_views": 1202
   },
   {
-   "country": "Q712",
    "city": "Q38807",
+   "cityTitle": "Suva",
+   "country": "Q712",
    "lat": "-18.133333333333",
    "lon": "178.43333333333",
    "links": "280",
    "countryLabel": "Fiji",
-   "cityLabel": "Suva"
+   "cityLabel": "Suva",
+   "city_views": 4556
   },
   {
-   "country": "Q953",
    "city": "Q3881",
+   "cityTitle": "Lusaka",
+   "country": "Q953",
    "lat": "-15.416666666667",
    "lon": "28.283333333333",
    "links": "309",
    "countryLabel": "Zambiya",
-   "cityLabel": "Lusaka"
+   "cityLabel": "Lusaka",
+   "city_views": 4541
   },
   {
-   "country": "Q398",
    "city": "Q3882",
+   "cityTitle": "Manama",
+   "country": "Q398",
    "lat": "26.216666666667",
    "lon": "50.583333333333",
    "links": "306",
    "countryLabel": "Bahreyn",
-   "cityLabel": "Mename"
+   "cityLabel": "Mename",
+   "city_views": 4774
   },
   {
-   "country": "Q678",
    "city": "Q38834",
+   "cityTitle": "Nuku'alofa",
+   "country": "Q678",
    "lat": "-21.1343401",
    "lon": "-175.201808",
    "links": "260",
    "countryLabel": "Tonga",
-   "cityLabel": "Nuku'alofa"
+   "cityLabel": "Nuku'alofa",
+   "city_views": 1186
   },
   {
-   "country": "Q1029",
    "city": "Q3889",
+   "cityTitle": "Maputo",
+   "country": "Q1029",
    "lat": "-25.968888888889",
    "lon": "32.573333333333",
    "links": "301",
    "countryLabel": "Mozambik",
-   "cityLabel": "Maputo"
+   "cityLabel": "Maputo",
+   "city_views": 2956
   },
   {
-   "country": "Q1036",
    "city": "Q3894",
+   "cityTitle": "Kampala",
+   "country": "Q1036",
    "lat": "0.31361111111111",
    "lon": "32.581111111111",
    "links": "312",
    "countryLabel": "Uganda",
-   "cityLabel": "Kampala"
+   "cityLabel": "Kampala",
+   "city_views": 15930
   },
   {
-   "country": "Q916",
    "city": "Q3897",
+   "cityTitle": "Luanda",
+   "country": "Q916",
    "lat": "-8.8383333333333",
    "lon": "13.234444444444",
    "links": "323",
    "countryLabel": "Angola",
-   "cityLabel": "Luanda"
+   "cityLabel": "Luanda",
+   "city_views": 6574
   },
   {
-   "country": "Q970",
    "city": "Q3901",
+   "cityTitle": "Moroni",
+   "country": "Q970",
    "lat": "-11.703611111111",
    "lon": "43.253611111111",
    "links": "284",
    "countryLabel": "Komorlar",
-   "cityLabel": "Moroni"
+   "cityLabel": "Moroni",
+   "city_views": 1150
   },
   {
-   "country": "Q1050",
    "city": "Q3904",
+   "cityTitle": "Mbabane",
+   "country": "Q1050",
    "lat": "-26.316666666667",
    "lon": "31.133333333333",
    "links": "286",
    "countryLabel": "Esvatini",
-   "cityLabel": "Mbabane"
+   "cityLabel": "Mbabane",
+   "city_views": 4509
   },
   {
-   "country": "Q1013",
    "city": "Q3909",
+   "cityTitle": "Maseru",
+   "country": "Q1013",
    "lat": "-29.31",
    "lon": "27.48",
    "links": "280",
    "countryLabel": "Lesotho",
-   "cityLabel": "Maseru"
+   "cityLabel": "Maseru",
+   "city_views": 4374
   },
   {
-   "country": "Q1013",
    "city": "Q3909",
+   "cityTitle": "Maseru",
+   "country": "Q1013",
    "lat": "-29.31667",
    "lon": "27.48333",
    "links": "280",
    "countryLabel": "Lesotho",
-   "cityLabel": "Maseru"
+   "cityLabel": "Maseru",
+   "city_views": 4374
   },
   {
-   "country": "Q1019",
    "city": "Q3915",
+   "cityTitle": "Antananarivo",
+   "country": "Q1019",
    "lat": "-18.91",
    "lon": "47.525",
    "links": "321",
    "countryLabel": "Madagaskar",
-   "cityLabel": "Antananarivo"
+   "cityLabel": "Antananarivo",
+   "city_views": 8174
   },
   {
-   "country": "Q754",
    "city": "Q39178",
+   "cityTitle": "Port of Spain",
+   "country": "Q754",
    "lat": "10.666666666667",
    "lon": "-61.516666666667",
    "links": "251",
    "countryLabel": "Trinidad ve Tobago",
-   "cityLabel": "Port of Spain"
+   "cityLabel": "Port of Spain",
+   "city_views": 2407
   },
   {
-   "country": "Q963",
    "city": "Q3919",
+   "cityTitle": "Gaborone",
+   "country": "Q963",
    "lat": "-24.656944444444",
    "lon": "25.908611111111",
    "links": "315",
    "countryLabel": "Botsvana",
-   "cityLabel": "Gaborone"
+   "cityLabel": "Gaborone",
+   "city_views": 4715
   },
   {
-   "country": "Q954",
    "city": "Q3921",
+   "cityTitle": "Harare",
+   "country": "Q954",
    "lat": "-17.829166666667",
    "lon": "31.052222222222",
    "links": "320",
    "countryLabel": "Zimbabve",
-   "cityLabel": "Harare"
+   "cityLabel": "Harare",
+   "city_views": 5503
   },
   {
-   "country": "Q258",
    "city": "Q3926",
+   "cityTitle": "Pretoria",
+   "country": "Q258",
    "lat": "-25.746388888889",
    "lon": "28.188055555556",
    "links": "368",
    "countryLabel": "Güney Afrika",
-   "cityLabel": "Pretoria"
+   "cityLabel": "Pretoria",
+   "city_views": 7979
   },
   {
-   "country": "Q1027",
    "city": "Q3929",
+   "cityTitle": "Port Louis",
+   "country": "Q1027",
    "lat": "-20.161944444444",
    "lon": "57.498888888889",
    "links": "283",
    "countryLabel": "Mauritius",
-   "cityLabel": "Port Louis"
+   "cityLabel": "Port Louis",
+   "city_views": 3326
   },
   {
-   "country": "Q1039",
    "city": "Q3932",
+   "cityTitle": "São Tomé",
+   "country": "Q1039",
    "lat": "0.3375",
    "lon": "6.7283333333333",
    "links": "274",
    "countryLabel": "São Tomé ve Príncipe",
-   "cityLabel": "São Tomé"
+   "cityLabel": "São Tomé",
+   "city_views": 1202
   },
   {
-   "country": "Q1030",
    "city": "Q3935",
+   "cityTitle": "Windhoek",
+   "country": "Q1030",
    "lat": "-22.57",
    "lon": "17.083611111111",
    "links": "315",
    "countryLabel": "Namibya",
-   "cityLabel": "Windhoek"
+   "cityLabel": "Windhoek",
+   "city_views": 5713
   },
   {
-   "country": "Q1042",
    "city": "Q3940",
+   "cityTitle": "Victoria, Seyşeller",
+   "country": "Q1042",
    "lat": "-4.6236111111111",
    "lon": "55.454444444444",
    "links": "278",
    "countryLabel": "Seyşeller",
-   "cityLabel": "Victoria"
+   "cityLabel": "Victoria",
+   "city_views": 1093
   },
   {
-   "country": "Q685",
    "city": "Q40921",
+   "cityTitle": "Honiara",
+   "country": "Q685",
    "lat": "-9.433333",
    "lon": "159.95",
    "links": "245",
    "countryLabel": "Solomon Adaları",
-   "cityLabel": "Honiara"
+   "cityLabel": "Honiara",
+   "city_views": 3567
   },
   {
-   "country": "Q763",
    "city": "Q41295",
+   "cityTitle": "Basseterre",
+   "country": "Q763",
    "lat": "17.298333333333",
    "lon": "-62.734166666667",
    "links": "239",
    "countryLabel": "Saint Kitts ve Nevis",
-   "cityLabel": "Basseterre"
+   "cityLabel": "Basseterre",
+   "city_views": 964
   },
   {
-   "country": "Q757",
    "city": "Q41474",
+   "cityTitle": "Kingstown",
+   "country": "Q757",
    "lat": "13.15527",
    "lon": "-61.22742",
    "links": "238",
    "countryLabel": "Saint Vincent ve Grenadinler",
-   "cityLabel": "Kingstown"
+   "cityLabel": "Kingstown",
+   "city_views": 719
   },
   {
-   "country": "Q769",
    "city": "Q41547",
+   "cityTitle": "St. George's, Grenada",
+   "country": "Q769",
    "lat": "12.0525",
    "lon": "-61.753055555556",
    "links": "251",
    "countryLabel": "Grenada",
-   "cityLabel": "Saint George's"
+   "cityLabel": "Saint George's",
+   "city_views": 406
   },
   {
-   "country": "Q760",
    "city": "Q41699",
+   "cityTitle": "Castries",
+   "country": "Q760",
    "lat": "14.010833333333",
    "lon": "-60.989444444444",
    "links": "235",
    "countryLabel": "Saint Lucia",
-   "cityLabel": "Castries"
+   "cityLabel": "Castries",
+   "city_views": 3538
   },
   {
-   "country": "Q854",
    "city": "Q41963",
+   "cityTitle": "Sri Jayawardenapura-Kotte",
+   "country": "Q854",
    "lat": "6.9",
    "lon": "79.916388888889",
    "links": "309",
    "countryLabel": "Sri Lanka",
-   "cityLabel": "Sri Jayawardenapura-Kotte"
+   "cityLabel": "Sri Jayawardenapura-Kotte",
+   "city_views": 1472
   },
   {
-   "country": "Q702",
    "city": "Q42751",
+   "cityTitle": "Palikir",
+   "country": "Q702",
    "lat": "6.9177777777778",
    "lon": "158.185",
    "links": "221",
    "countryLabel": "Mikronezya",
-   "cityLabel": "Palikir"
+   "cityLabel": "Palikir",
+   "city_views": 1439
   },
   {
-   "country": "Q215",
    "city": "Q437",
+   "cityTitle": "Ljubljana",
+   "country": "Q215",
    "lat": "46.051388888889",
    "lon": "14.506111111111",
    "links": "331",
    "countryLabel": "Slovenya",
-   "cityLabel": "Ljubljana"
+   "cityLabel": "Ljubljana",
+   "city_views": 24951
   },
   {
-   "country": "Q219",
    "city": "Q472",
+   "cityTitle": "Sofya",
+   "country": "Q219",
    "lat": "42.697886",
    "lon": "23.321726",
    "links": "361",
    "countryLabel": "Bulgaristan",
-   "cityLabel": "Sofya"
+   "cityLabel": "Sofya",
+   "city_views": 22562
   },
   {
-   "country": "Q695",
    "city": "Q515229",
+   "cityTitle": "Ngerulmud",
+   "country": "Q695",
    "lat": "7.500556",
    "lon": "134.624167",
    "links": "256",
    "countryLabel": "Palau",
-   "cityLabel": "Ngerulmud"
+   "cityLabel": "Ngerulmud",
+   "city_views": 2180
   },
   {
-   "country": "Q258",
    "city": "Q5465",
+   "cityTitle": "Cape Town",
+   "country": "Q258",
    "lat": "-33.925277777778",
    "lon": "18.423888888889",
    "links": "368",
    "countryLabel": "Güney Afrika",
-   "cityLabel": "Kap Şehri"
+   "cityLabel": "Kap Şehri",
+   "city_views": 29645
   },
   {
-   "country": "Q889",
    "city": "Q5838",
+   "cityTitle": "Kâbil",
+   "country": "Q889",
    "lat": "34.532777777778",
    "lon": "69.165833333333",
    "links": "363",
    "countryLabel": "Afganistan",
-   "cityLabel": "Kabil"
+   "cityLabel": "Kabil",
+   "city_views": 14362
   },
   {
-   "country": "Q45",
    "city": "Q597",
+   "cityTitle": "Lizbon",
+   "country": "Q45",
    "lat": "38.708042",
    "lon": "-9.139016",
    "links": "371",
    "countryLabel": "Portekiz",
-   "cityLabel": "Lizbon"
+   "cityLabel": "Lizbon",
+   "city_views": 28394
   },
   {
-   "country": "Q30",
    "city": "Q61",
+   "cityTitle": "Washington, DC",
+   "country": "Q30",
    "lat": "38.895",
    "lon": "-77.036666666667",
    "links": "427",
    "countryLabel": "Amerika Birleşik Devletleri",
-   "cityLabel": "Washington"
+   "cityLabel": "Washington",
+   "city_views": 56099
   },
   {
-   "country": "Q183",
    "city": "Q64",
+   "cityTitle": "Berlin",
+   "country": "Q183",
    "lat": "52.516666666667",
    "lon": "13.383333333333",
    "links": "405",
    "countryLabel": "Almanya",
-   "cityLabel": "Berlin"
+   "cityLabel": "Berlin",
+   "city_views": 52811
   },
   {
-   "country": "Q159",
    "city": "Q649",
+   "cityTitle": "Moskova",
+   "country": "Q159",
    "lat": "55.750555555556",
    "lon": "37.6175",
    "links": "421",
    "countryLabel": "Rusya",
-   "cityLabel": "Moskova"
+   "cityLabel": "Moskova",
+   "city_views": 50843
   },
   {
-   "country": "Q39",
    "city": "Q70",
+   "cityTitle": "Bern",
+   "country": "Q39",
    "lat": "46.94798",
    "lon": "7.44743",
    "links": "387",
    "countryLabel": "İsviçre",
-   "cityLabel": "Bern"
+   "cityLabel": "Bern",
+   "city_views": 18652
   },
   {
-   "country": "Q29999",
    "city": "Q727",
+   "cityTitle": "Amsterdam",
+   "country": "Q29999",
    "lat": "52.366666666667",
    "lon": "4.8833333333333",
    "links": "107",
    "countryLabel": "Hollanda Krallığı",
-   "cityLabel": "Amsterdam"
+   "cityLabel": "Amsterdam",
+   "city_views": 28638
   },
   {
-   "country": "Q145",
    "city": "Q84",
+   "cityTitle": "Londra",
+   "country": "Q145",
    "lat": "51.507222222222",
    "lon": "-0.1275",
    "links": "396",
    "countryLabel": "Birleşik Krallık",
-   "cityLabel": "Londra"
+   "cityLabel": "Londra",
+   "city_views": 57906
   },
   {
-   "country": "Q79",
    "city": "Q85",
+   "cityTitle": "Kahire",
+   "country": "Q79",
    "lat": "30.044444444444",
    "lon": "31.235833333333",
    "links": "392",
    "countryLabel": "Mısır",
-   "cityLabel": "Kahire"
+   "cityLabel": "Kahire",
+   "city_views": 35674
   },
   {
-   "country": "Q884",
    "city": "Q8684",
+   "cityTitle": "Seul",
+   "country": "Q884",
    "lat": "37.56",
    "lon": "126.99",
    "links": "356",
    "countryLabel": "Güney Kore",
-   "cityLabel": "Seul"
+   "cityLabel": "Seul",
+   "city_views": 20779
   },
   {
-   "country": "Q142",
    "city": "Q90",
+   "cityTitle": "Paris",
+   "country": "Q142",
    "lat": "48.856666666667",
    "lon": "2.3522222222222",
    "links": "428",
    "countryLabel": "Fransa",
-   "cityLabel": "Paris"
+   "cityLabel": "Paris",
+   "city_views": 64046
   },
   {
-   "country": "Q227",
    "city": "Q9248",
+   "cityTitle": "Bakü",
+   "country": "Q227",
    "lat": "40.366655555556",
    "lon": "49.835183333333",
    "links": "362",
    "countryLabel": "Azerbaycan",
-   "cityLabel": "Bakü"
+   "cityLabel": "Bakü",
+   "city_views": 38921
   },
   {
-   "country": "Q917",
    "city": "Q9270",
+   "cityTitle": "Thimphu",
+   "country": "Q917",
    "lat": "27.47135",
    "lon": "89.63367",
    "links": "305",
    "countryLabel": "Butan",
-   "cityLabel": "Thimphu"
+   "cityLabel": "Thimphu",
+   "city_views": 5415
   },
   {
-   "country": "Q921",
    "city": "Q9279",
+   "cityTitle": "Bandar Seri Begavan",
+   "country": "Q921",
    "lat": "4.9166666666667",
    "lon": "114.91666666667",
    "links": "298",
    "countryLabel": "Bruney",
-   "cityLabel": "Bandar Seri Begavan"
+   "cityLabel": "Bandar Seri Begavan",
+   "city_views": 2027
   },
   {
-   "country": "Q574",
    "city": "Q9310",
+   "cityTitle": "Dili",
+   "country": "Q574",
    "lat": "-8.5536111111111",
    "lon": "125.57833333333",
    "links": "291",
    "countryLabel": "Doğu Timor",
-   "cityLabel": "Dili"
+   "cityLabel": "Dili",
+   "city_views": 4920
   },
   {
-   "country": "Q819",
    "city": "Q9326",
+   "cityTitle": "Vientiane",
+   "country": "Q819",
    "lat": "17.98",
    "lon": "102.63",
    "links": "316",
    "countryLabel": "Laos",
-   "cityLabel": "Vientiane"
+   "cityLabel": "Vientiane",
+   "city_views": 5531
   },
   {
-   "country": "Q826",
    "city": "Q9347",
+   "cityTitle": "Malé",
+   "country": "Q826",
    "lat": "4.175",
    "lon": "73.508333333333",
    "links": "290",
    "countryLabel": "Maldivler",
-   "cityLabel": "Malé"
+   "cityLabel": "Malé",
+   "city_views": 4524
   },
   {
-   "country": "Q813",
    "city": "Q9361",
+   "cityTitle": "Bişkek",
+   "country": "Q813",
    "lat": "42.866666666667",
    "lon": "74.566666666667",
    "links": "320",
    "countryLabel": "Kırgızistan",
-   "cityLabel": "Bişkek"
+   "cityLabel": "Bişkek",
+   "city_views": 12204
   },
   {
-   "country": "Q863",
    "city": "Q9365",
+   "cityTitle": "Duşanbe",
+   "country": "Q863",
    "lat": "38.573055555556",
    "lon": "68.786388888889",
    "links": "307",
    "countryLabel": "Tacikistan",
-   "cityLabel": "Duşanbe"
+   "cityLabel": "Duşanbe",
+   "city_views": 11005
   },
   {
-   "country": "Q148",
    "city": "Q956",
+   "cityTitle": "Pekin",
+   "country": "Q148",
    "lat": "39.90403",
    "lon": "116.407526",
    "links": "400",
    "countryLabel": "Çin Halk Cumhuriyeti",
-   "cityLabel": "Pekin"
+   "cityLabel": "Pekin",
+   "city_views": 28605
   },
   {
-   "country": "Q668",
    "city": "Q987",
+   "cityTitle": "Yeni Delhi",
+   "country": "Q668",
    "lat": "28.613888888889",
    "lon": "77.208888888889",
    "links": "404",
    "countryLabel": "Hindistan",
-   "cityLabel": "Yeni Delhi"
+   "cityLabel": "Yeni Delhi",
+   "city_views": 12737
   },
   {
-   "country": "Q230",
    "city": "Q994",
+   "cityTitle": "Tiflis",
+   "country": "Q230",
    "lat": "41.7225",
    "lon": "44.7925",
    "links": "349",
    "countryLabel": "Gürcistan",
-   "cityLabel": "Tiflis"
+   "cityLabel": "Tiflis",
+   "city_views": 52295
   }
  ]
 }

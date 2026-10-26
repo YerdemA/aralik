@@ -1,0 +1,1998 @@
+{
+ "dataset": "universities_tr",
+ "description": "Türkiye'deki üniversiteler, kuruluş yılı (P571)",
+ "property": "P571",
+ "fetched_at": "2026-10-26T10:10:12+00:00",
+ "rows": [
+  {
+   "qid": "Q192964",
+   "label": "İstanbul Üniversitesi",
+   "links": 61,
+   "value": 1453.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İstanbul Üniversitesi",
+   "place": [
+    "Fatih"
+   ],
+   "tr_views": 75405
+  },
+  {
+   "qid": "Q192964",
+   "label": "İstanbul Üniversitesi",
+   "links": 61,
+   "value": 1846.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İstanbul Üniversitesi",
+   "place": [
+    "Fatih"
+   ],
+   "tr_views": 75405
+  },
+  {
+   "qid": "Q192964",
+   "label": "İstanbul Üniversitesi",
+   "links": 61,
+   "value": 1933.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İstanbul Üniversitesi",
+   "place": [
+    "Fatih"
+   ],
+   "tr_views": 75405
+  },
+  {
+   "qid": "Q1060621",
+   "label": "Ankara Üniversitesi",
+   "links": 40,
+   "value": 1946.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ankara Üniversitesi",
+   "place": [
+    "Ankara"
+   ],
+   "tr_views": 32048
+  },
+  {
+   "qid": "Q344334",
+   "label": "İstanbul Teknik Üniversitesi",
+   "links": 40,
+   "value": 1773.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İstanbul Teknik Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 49971
+  },
+  {
+   "qid": "Q896267",
+   "label": "Boğaziçi Üniversitesi",
+   "links": 39,
+   "value": 1863.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Boğaziçi Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 42182
+  },
+  {
+   "qid": "Q896267",
+   "label": "Boğaziçi Üniversitesi",
+   "links": 39,
+   "value": 1971.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boğaziçi Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 42182
+  },
+  {
+   "qid": "Q1424081",
+   "label": "Marmara Üniversitesi",
+   "links": 36,
+   "value": 1883.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Marmara Üniversitesi",
+   "place": [
+    "Eğitim",
+    "Kadıköy",
+    "İstanbul"
+   ],
+   "tr_views": 31376
+  },
+  {
+   "qid": "Q1496654",
+   "label": "Gaziantep Üniversitesi",
+   "links": 33,
+   "value": 1973.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gaziantep Üniversitesi",
+   "place": [
+    "Gaziantep"
+   ],
+   "tr_views": 8200
+  },
+  {
+   "qid": "Q756126",
+   "label": "Orta Doğu Teknik Üniversitesi",
+   "links": 33,
+   "value": 1956.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Orta Doğu Teknik Üniversitesi",
+   "place": [
+    "Ankara"
+   ],
+   "tr_views": 53491
+  },
+  {
+   "qid": "Q272614",
+   "label": "Çankaya Üniversitesi",
+   "links": 27,
+   "value": 1997.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çankaya Üniversitesi",
+   "place": [
+    "Ankara"
+   ],
+   "tr_views": 6243
+  },
+  {
+   "qid": "Q1093258",
+   "label": "Yıldız Teknik Üniversitesi",
+   "links": 26,
+   "value": 1911.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yıldız Teknik Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 33734
+  },
+  {
+   "qid": "Q861904",
+   "label": "Bilkent Üniversitesi",
+   "links": 26,
+   "value": 1984.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bilkent Üniversitesi",
+   "place": [
+    "Ankara"
+   ],
+   "tr_views": 28041
+  },
+  {
+   "qid": "Q483758",
+   "label": "Anadolu Üniversitesi",
+   "links": 24,
+   "value": 1958.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Anadolu Üniversitesi",
+   "place": [
+    "Eskişehir"
+   ],
+   "tr_views": 27401
+  },
+  {
+   "qid": "Q1496662",
+   "label": "Gazi Üniversitesi",
+   "links": 23,
+   "value": 1926.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gazi Üniversitesi",
+   "place": [
+    "Ankara"
+   ],
+   "tr_views": 33476
+  },
+  {
+   "qid": "Q1567050",
+   "label": "Hacettepe Üniversitesi",
+   "links": 21,
+   "value": 1967.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hacettepe Üniversitesi",
+   "place": [
+    "Ankara"
+   ],
+   "tr_views": 33434
+  },
+  {
+   "qid": "Q1193155",
+   "label": "Koç Üniversitesi",
+   "links": 20,
+   "value": 1993.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Koç Üniversitesi",
+   "place": [
+    "Sarıyer"
+   ],
+   "tr_views": 15773
+  },
+  {
+   "qid": "Q1936057",
+   "label": "Mimar Sinan Güzel Sanatlar Üniversitesi",
+   "links": 19,
+   "value": 1882.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mimar Sinan Güzel Sanatlar Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 31776
+  },
+  {
+   "qid": "Q1491731",
+   "label": "Galatasaray Üniversitesi",
+   "links": 17,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Galatasaray Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 24855
+  },
+  {
+   "qid": "Q3674310",
+   "label": "Erzincan Binali Yıldırım Üniversitesi",
+   "links": 15,
+   "value": 2006.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Erzincan Binali Yıldırım Üniversitesi",
+   "place": [
+    "Erzincan"
+   ],
+   "tr_views": 4862
+  },
+  {
+   "qid": "Q169939",
+   "label": "Akdeniz Üniversitesi",
+   "links": 14,
+   "value": 1982.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Akdeniz Üniversitesi",
+   "place": [
+    "Antalya"
+   ],
+   "tr_views": 17789
+  },
+  {
+   "qid": "Q170171",
+   "label": "Başkent Üniversitesi",
+   "links": 14,
+   "value": 1994.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Başkent Üniversitesi",
+   "place": [
+    "Ankara"
+   ],
+   "tr_views": 12686
+  },
+  {
+   "qid": "Q344262",
+   "label": "İstanbul Bilgi Üniversitesi",
+   "links": 14,
+   "value": 1996.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İstanbul Bilgi Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 65201
+  },
+  {
+   "qid": "Q1235258",
+   "label": "Dokuz Eylül Üniversitesi",
+   "links": 13,
+   "value": 1982.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dokuz Eylül Üniversitesi",
+   "place": [
+    "İzmir"
+   ],
+   "tr_views": 24766
+  },
+  {
+   "qid": "Q753778",
+   "label": "Atatürk Üniversitesi",
+   "links": 13,
+   "value": 1957.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Atatürk Üniversitesi",
+   "place": [
+    "Erzurum"
+   ],
+   "tr_views": 20122
+  },
+  {
+   "qid": "Q2254240",
+   "label": "Doğuş Üniversitesi",
+   "links": 12,
+   "value": 1997.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Doğuş Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 8090
+  },
+  {
+   "qid": "Q3021766",
+   "label": "TOBB Ekonomi ve Teknoloji Üniversitesi",
+   "links": 12,
+   "value": 2003.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "TOBB Ekonomi ve Teknoloji Üniversitesi",
+   "place": [
+    "Söğütözü"
+   ],
+   "tr_views": 7814
+  },
+  {
+   "qid": "Q4823749",
+   "label": "Karadeniz Teknik Üniversitesi",
+   "links": 12,
+   "value": 1955.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karadeniz Teknik Üniversitesi",
+   "place": [
+    "Trabzon"
+   ],
+   "tr_views": 16408
+  },
+  {
+   "qid": "Q7395882",
+   "label": "Sabancı Üniversitesi",
+   "links": 12,
+   "value": 1999.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sabancı Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 9453
+  },
+  {
+   "qid": "Q1297001",
+   "label": "Ege Üniversitesi",
+   "links": 11,
+   "value": 1955.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ege Üniversitesi",
+   "place": [
+    "İzmir"
+   ],
+   "tr_views": 23106
+  },
+  {
+   "qid": "Q272951",
+   "label": "Çukurova Üniversitesi",
+   "links": 11,
+   "value": 1973.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çukurova Üniversitesi",
+   "place": [
+    "Adana"
+   ],
+   "tr_views": 12518
+  },
+  {
+   "qid": "Q30253989",
+   "label": "İstanbul Medipol Üniversitesi",
+   "links": 11,
+   "value": 2009.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İstanbul Medipol Üniversitesi",
+   "place": [],
+   "tr_views": 13807
+  },
+  {
+   "qid": "Q853151",
+   "label": "İstanbul Beykent Üniversitesi",
+   "links": 11,
+   "value": 1997.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İstanbul Beykent Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 11449
+  },
+  {
+   "qid": "Q1142874",
+   "label": "Fırat Üniversitesi",
+   "links": 10,
+   "value": 1975.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fırat Üniversitesi",
+   "place": [],
+   "tr_views": 7977
+  },
+  {
+   "qid": "Q130499",
+   "label": "Dicle Üniversitesi",
+   "links": 10,
+   "value": 1974.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dicle Üniversitesi",
+   "place": [
+    "Diyarbakır"
+   ],
+   "tr_views": 8767
+  },
+  {
+   "qid": "Q3409570",
+   "label": "Bahçeşehir Üniversitesi",
+   "links": 10,
+   "value": 1998.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bahçeşehir Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 13511
+  },
+  {
+   "qid": "Q344405",
+   "label": "İzmir Yüksek Teknoloji Enstitüsü",
+   "links": 10,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İzmir Yüksek Teknoloji Enstitüsü",
+   "place": [
+    "Urla"
+   ],
+   "tr_views": 7885
+  },
+  {
+   "qid": "Q478948",
+   "label": "Yeditepe Üniversitesi",
+   "links": 10,
+   "value": 1996.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeditepe Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 14535
+  },
+  {
+   "qid": "Q6074590",
+   "label": "Adana Alparslan Türkeş Bilim ve Teknoloji Üniversitesi",
+   "links": 10,
+   "value": 2011.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Adana Alparslan Türkeş Bilim ve Teknoloji Üniversitesi",
+   "place": [
+    "Adana"
+   ],
+   "tr_views": 5943
+  },
+  {
+   "qid": "Q863852",
+   "label": "Bingöl Üniversitesi",
+   "links": 10,
+   "value": 2007.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bingöl Üniversitesi",
+   "place": [
+    "Bingöl"
+   ],
+   "tr_views": 2367
+  },
+  {
+   "qid": "Q1550686",
+   "label": "Kocaeli Üniversitesi",
+   "links": 9,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kocaeli Üniversitesi",
+   "place": [
+    "İzmit"
+   ],
+   "tr_views": 12896
+  },
+  {
+   "qid": "Q1718685",
+   "label": "Sakarya Üniversitesi",
+   "links": 9,
+   "value": 1970.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sakarya Üniversitesi",
+   "place": [
+    "Adapazarı"
+   ],
+   "tr_views": 10083
+  },
+  {
+   "qid": "Q3242620",
+   "label": "Kadir Has Üniversitesi",
+   "links": 9,
+   "value": 1997.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kadir Has Üniversitesi",
+   "place": [
+    "Fatih"
+   ],
+   "tr_views": 14198
+  },
+  {
+   "qid": "Q3247377",
+   "label": "Bursa Uludağ Üniversitesi",
+   "links": 9,
+   "value": 1975.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bursa Uludağ Üniversitesi",
+   "place": [
+    "Bursa"
+   ],
+   "tr_views": 17314
+  },
+  {
+   "qid": "Q343987",
+   "label": "İnönü Üniversitesi",
+   "links": 9,
+   "value": 1975.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İnönü Üniversitesi",
+   "place": [
+    "Battalgazi"
+   ],
+   "tr_views": 7492
+  },
+  {
+   "qid": "Q4386612",
+   "label": "Hacettepe Üniversitesi Ankara Devlet Konservatuvarı",
+   "links": 9,
+   "value": 1936.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hacettepe Üniversitesi Ankara Devlet Konservatuvarı",
+   "place": [],
+   "tr_views": 10168
+  },
+  {
+   "qid": "Q595840",
+   "label": "Kastamonu Üniversitesi",
+   "links": 9,
+   "value": 2006.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kastamonu Üniversitesi",
+   "place": [
+    "Kastamonu"
+   ],
+   "tr_views": 4138
+  },
+  {
+   "qid": "Q6083428",
+   "label": "Abdullah Gül Üniversitesi",
+   "links": 9,
+   "value": 2010.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Abdullah Gül Üniversitesi",
+   "place": [
+    "Kayseri",
+    "Kocasinan"
+   ],
+   "tr_views": 4472
+  },
+  {
+   "qid": "Q1278023",
+   "label": "Pamukkale Üniversitesi",
+   "links": 8,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pamukkale Üniversitesi",
+   "place": [
+    "Denizli"
+   ],
+   "tr_views": 7780
+  },
+  {
+   "qid": "Q1509957",
+   "label": "Süleyman Demirel Üniversitesi",
+   "links": 8,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Süleyman Demirel Üniversitesi",
+   "place": [],
+   "tr_views": 6708
+  },
+  {
+   "qid": "Q1627814",
+   "label": "Selçuk Üniversitesi",
+   "links": 8,
+   "value": 1975.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Selçuk Üniversitesi",
+   "place": [
+    "Konya"
+   ],
+   "tr_views": 15928
+  },
+  {
+   "qid": "Q1922090",
+   "label": "Mersin Üniversitesi",
+   "links": 8,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mersin Üniversitesi",
+   "place": [
+    "Mersin"
+   ],
+   "tr_views": 5677
+  },
+  {
+   "qid": "Q19612850",
+   "label": "Sağlık Bilimleri Üniversitesi",
+   "links": 8,
+   "value": 2015.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sağlık Bilimleri Üniversitesi",
+   "place": [],
+   "tr_views": 18329
+  },
+  {
+   "qid": "Q2756518",
+   "label": "Altınbaş Üniversitesi",
+   "links": 8,
+   "value": 2008.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Altınbaş Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 6351
+  },
+  {
+   "qid": "Q3674409",
+   "label": "Kafkas Üniversitesi",
+   "links": 8,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kafkas Üniversitesi (Türkiye)",
+   "place": [
+    "Kars"
+   ],
+   "tr_views": 5207
+  },
+  {
+   "qid": "Q380454",
+   "label": "Adıyaman Üniversitesi",
+   "links": 8,
+   "value": 2006.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Adıyaman Üniversitesi",
+   "place": [
+    "Adıyaman"
+   ],
+   "tr_views": 2560
+  },
+  {
+   "qid": "Q52162280",
+   "label": "Tarsus Üniversitesi",
+   "links": 8,
+   "value": 2018.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tarsus Üniversitesi",
+   "place": [
+    "Tarsus"
+   ],
+   "tr_views": 2109
+  },
+  {
+   "qid": "Q6586561",
+   "label": "Mardin Artuklu Üniversitesi",
+   "links": 8,
+   "value": 2007.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mardin Artuklu Üniversitesi",
+   "place": [
+    "Mardin"
+   ],
+   "tr_views": 3354
+  },
+  {
+   "qid": "Q845682",
+   "label": "Trakya Üniversitesi",
+   "links": 8,
+   "value": 1982.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Trakya Üniversitesi",
+   "place": [
+    "Edirne"
+   ],
+   "tr_views": 11426
+  },
+  {
+   "qid": "Q11136363",
+   "label": "Karabük Üniversitesi",
+   "links": 7,
+   "value": 2007.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karabük Üniversitesi",
+   "place": [
+    "Karabük"
+   ],
+   "tr_views": 5164
+  },
+  {
+   "qid": "Q25477770",
+   "label": "İbn Haldun Üniversitesi",
+   "links": 7,
+   "value": 2015.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İbn Haldun Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 7467
+  },
+  {
+   "qid": "Q305507",
+   "label": "Abant İzzet Baysal Üniversitesi",
+   "links": 7,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bolu Abant İzzet Baysal Üniversitesi",
+   "place": [
+    "Bolu"
+   ],
+   "tr_views": 6317
+  },
+  {
+   "qid": "Q3306835",
+   "label": "Eskişehir Osmangazi Üniversitesi",
+   "links": 7,
+   "value": 1993.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eskişehir Osmangazi Üniversitesi",
+   "place": [
+    "Eskişehir"
+   ],
+   "tr_views": 15720
+  },
+  {
+   "qid": "Q4701750",
+   "label": "Aksaray Üniversitesi",
+   "links": 7,
+   "value": 2006.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aksaray Üniversitesi",
+   "place": [
+    "Aksaray"
+   ],
+   "tr_views": 3314
+  },
+  {
+   "qid": "Q4810943",
+   "label": "Erciyes Üniversitesi",
+   "links": 7,
+   "value": 1978.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Erciyes Üniversitesi",
+   "place": [
+    "Kayseri"
+   ],
+   "tr_views": 8659
+  },
+  {
+   "qid": "Q5529157",
+   "label": "Tokat Gaziosmanpaşa Üniversitesi",
+   "links": 7,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tokat Gaziosmanpaşa Üniversitesi",
+   "place": [
+    "Tokat"
+   ],
+   "tr_views": 5807
+  },
+  {
+   "qid": "Q6063394",
+   "label": "Üsküdar Üniversitesi",
+   "links": 7,
+   "value": 2011.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Üsküdar Üniversitesi",
+   "place": [
+    "Üsküdar"
+   ],
+   "tr_views": 7009
+  },
+  {
+   "qid": "Q6081316",
+   "label": "Düzce Üniversitesi",
+   "links": 7,
+   "value": 2006.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Düzce Üniversitesi",
+   "place": [
+    "Düzce"
+   ],
+   "tr_views": 5059
+  },
+  {
+   "qid": "Q6084324",
+   "label": "Yıldırım Beyazıt Üniversitesi",
+   "links": 7,
+   "value": 2010.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ankara Yıldırım Beyazıt Üniversitesi",
+   "place": [
+    "Ankara"
+   ],
+   "tr_views": 13237
+  },
+  {
+   "qid": "Q6088135",
+   "label": "Bayburt Üniversitesi",
+   "links": 7,
+   "value": 2008.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayburt Üniversitesi",
+   "place": [
+    "Bayburt"
+   ],
+   "tr_views": 3548
+  },
+  {
+   "qid": "Q6088582",
+   "label": "İstanbul Aydın Üniversitesi",
+   "links": 7,
+   "value": 2003.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İstanbul Aydın Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 14775
+  },
+  {
+   "qid": "Q6552441",
+   "label": "Munzur Üniversitesi",
+   "links": 7,
+   "value": 2008.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Munzur Üniversitesi",
+   "place": [
+    "Tunceli"
+   ],
+   "tr_views": 8548
+  },
+  {
+   "qid": "Q6859802",
+   "label": "Batman Üniversitesi",
+   "links": 7,
+   "value": 2007.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Batman Üniversitesi",
+   "place": [
+    "Batman"
+   ],
+   "tr_views": 2358
+  },
+  {
+   "qid": "Q819402",
+   "label": "Işık Üniversitesi",
+   "links": 7,
+   "value": 1996.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Işık Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 8189
+  },
+  {
+   "qid": "Q10952014",
+   "label": "Hatay Mustafa Kemal Üniversitesi",
+   "links": 6,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hatay Mustafa Kemal Üniversitesi",
+   "place": [
+    "Hatay"
+   ],
+   "tr_views": 5403
+  },
+  {
+   "qid": "Q19610523",
+   "label": "Ankara Sosyal Bilimler Üniversitesi",
+   "links": 6,
+   "value": 2013.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ankara Sosyal Bilimler Üniversitesi",
+   "place": [
+    "Ankara"
+   ],
+   "tr_views": 6346
+  },
+  {
+   "qid": "Q1964403",
+   "label": "Namık Kemal Üniversitesi",
+   "links": 6,
+   "value": 2006.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tekirdağ Namık Kemal Üniversitesi",
+   "place": [
+    "Tekirdağ"
+   ],
+   "tr_views": 6757
+  },
+  {
+   "qid": "Q272576",
+   "label": "Çanakkale Onsekiz Mart Üniversitesi",
+   "links": 6,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çanakkale Onsekiz Mart Üniversitesi",
+   "place": [
+    "Çanakkale"
+   ],
+   "tr_views": 9936
+  },
+  {
+   "qid": "Q281155",
+   "label": "Gebze Teknik Üniversitesi",
+   "links": 6,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gebze Teknik Üniversitesi",
+   "place": [
+    "Gebze"
+   ],
+   "tr_views": 8191
+  },
+  {
+   "qid": "Q3073363",
+   "label": "İstanbul Ticaret Üniversitesi",
+   "links": 6,
+   "value": 2001.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İstanbul Ticaret Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 8604
+  },
+  {
+   "qid": "Q359735",
+   "label": "Aydın Adnan Menderes Üniversitesi",
+   "links": 6,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aydın Adnan Menderes Üniversitesi",
+   "place": [
+    "Efeler"
+   ],
+   "tr_views": 7469
+  },
+  {
+   "qid": "Q5057509",
+   "label": "Manisa Celal Bayar Üniversitesi",
+   "links": 6,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Manisa Celal Bayar Üniversitesi",
+   "place": [
+    "Manisa"
+   ],
+   "tr_views": 11551
+  },
+  {
+   "qid": "Q5299037",
+   "label": "Ufuk Üniversitesi",
+   "links": 6,
+   "value": 1999.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ufuk Üniversitesi",
+   "place": [
+    "Ankara"
+   ],
+   "tr_views": 4037
+  },
+  {
+   "qid": "Q5663864",
+   "label": "Harran Üniversitesi",
+   "links": 6,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Harran Üniversitesi",
+   "place": [
+    "Şanlıurfa"
+   ],
+   "tr_views": 10960
+  },
+  {
+   "qid": "Q6065828",
+   "label": "Erzurum Teknik Üniversitesi",
+   "links": 6,
+   "value": 2010.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Erzurum Teknik Üniversitesi",
+   "place": [
+    "Erzurum"
+   ],
+   "tr_views": 2190
+  },
+  {
+   "qid": "Q6073295",
+   "label": "İstanbul Sabahattin Zaim Üniversitesi",
+   "links": 6,
+   "value": 2010.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İstanbul Sabahattin Zaim Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 7035
+  },
+  {
+   "qid": "Q6085866",
+   "label": "Yozgat Bozok Üniversitesi",
+   "links": 6,
+   "value": 2006.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yozgat Bozok Üniversitesi",
+   "place": [
+    "Yozgat"
+   ],
+   "tr_views": 3388
+  },
+  {
+   "qid": "Q6100422",
+   "label": "Ordu Üniversitesi",
+   "links": 6,
+   "value": 2006.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ordu Üniversitesi",
+   "place": [],
+   "tr_views": 4432
+  },
+  {
+   "qid": "Q6103572",
+   "label": "Hitit Üniversitesi",
+   "links": 6,
+   "value": 2006.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hitit Üniversitesi",
+   "place": [
+    "Çorum"
+   ],
+   "tr_views": 3855
+  },
+  {
+   "qid": "Q8079161",
+   "label": "Özyeğin Üniversitesi",
+   "links": 6,
+   "value": 2007.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Özyeğin Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 8331
+  },
+  {
+   "qid": "Q8082628",
+   "label": "Şırnak Üniversitesi",
+   "links": 6,
+   "value": 2008.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şırnak Üniversitesi",
+   "place": [
+    "Şırnak"
+   ],
+   "tr_views": 2783
+  },
+  {
+   "qid": "Q12808547",
+   "label": "Ardahan Üniversitesi",
+   "links": 5,
+   "value": 2008.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ardahan Üniversitesi",
+   "place": [
+    "Ardahan"
+   ],
+   "tr_views": 2478
+  },
+  {
+   "qid": "Q1304582",
+   "label": "Türk-Alman Üniversitesi",
+   "links": 5,
+   "value": 2006.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Türk-Alman Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 8625
+  },
+  {
+   "qid": "Q1304582",
+   "label": "Türk-Alman Üniversitesi",
+   "links": 5,
+   "value": 2010.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Türk-Alman Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 8625
+  },
+  {
+   "qid": "Q16827443",
+   "label": "Bitlis Eren Üniversitesi",
+   "links": 5,
+   "value": 2007.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bitlis Eren Üniversitesi",
+   "place": [
+    "Bitlis"
+   ],
+   "tr_views": 5528
+  },
+  {
+   "qid": "Q16850737",
+   "label": "İzmir Kâtip Çelebi Üniversitesi",
+   "links": 5,
+   "value": 2010.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İzmir Kâtip Çelebi Üniversitesi",
+   "place": [
+    "İzmir"
+   ],
+   "tr_views": 10319
+  },
+  {
+   "qid": "Q19610800",
+   "label": "Biruni Üniversitesi",
+   "links": 5,
+   "value": 2014.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Biruni Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 7204
+  },
+  {
+   "qid": "Q20757715",
+   "label": "Bandırma Onyedi Eylül Üniversitesi",
+   "links": 5,
+   "value": 2015.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bandırma Onyedi Eylül Üniversitesi",
+   "place": [
+    "Bandırma"
+   ],
+   "tr_views": 4332
+  },
+  {
+   "qid": "Q28221720",
+   "label": "İzmir Demokrasi Üniversitesi",
+   "links": 5,
+   "value": 2016.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İzmir Demokrasi Üniversitesi",
+   "place": [
+    "Karabağlar",
+    "İzmir"
+   ],
+   "tr_views": 10379
+  },
+  {
+   "qid": "Q28846425",
+   "label": "Millî Savunma Üniversitesi",
+   "links": 5,
+   "value": 2016.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Milli Savunma Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 26736
+  },
+  {
+   "qid": "Q3018624",
+   "label": "İstanbul Üniversitesi Devlet Konservatuarı",
+   "links": 5,
+   "value": 1917.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İstanbul Üniversitesi Devlet Konservatuvarı",
+   "place": [
+    "Kadıköy",
+    "İstanbul"
+   ],
+   "tr_views": 9343
+  },
+  {
+   "qid": "Q30312829",
+   "label": "İstanbul Kent Üniversitesi",
+   "links": 5,
+   "value": 2016.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İstanbul Kent Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 5057
+  },
+  {
+   "qid": "Q3671573",
+   "label": "Yüzüncü Yıl Üniversitesi",
+   "links": 5,
+   "value": 1982.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Van Yüzüncü Yıl Üniversitesi",
+   "place": [
+    "Van"
+   ],
+   "tr_views": 9043
+  },
+  {
+   "qid": "Q3674354",
+   "label": "Ağrı İbrahim Çeçen Üniversitesi",
+   "links": 5,
+   "value": 2007.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ağrı İbrahim Çeçen Üniversitesi",
+   "place": [
+    "Ağrı"
+   ],
+   "tr_views": 4534
+  },
+  {
+   "qid": "Q4276748",
+   "label": "Recep Tayyip Erdoğan Üniversitesi",
+   "links": 5,
+   "value": 2006.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Recep Tayyip Erdoğan Üniversitesi",
+   "place": [
+    "Rize"
+   ],
+   "tr_views": 6017
+  },
+  {
+   "qid": "Q4822444",
+   "label": "İzmir Ekonomi Üniversitesi",
+   "links": 5,
+   "value": 2001.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İzmir Ekonomi Üniversitesi",
+   "place": [
+    "İzmir"
+   ],
+   "tr_views": 7180
+  },
+  {
+   "qid": "Q4853224",
+   "label": "Balıkesir Üniversitesi",
+   "links": 5,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Balıkesir Üniversitesi",
+   "place": [
+    "Balıkesir"
+   ],
+   "tr_views": 6815
+  },
+  {
+   "qid": "Q5000560",
+   "label": "Bursa Teknik Üniversitesi",
+   "links": 5,
+   "value": 2010.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bursa Teknik Üniversitesi",
+   "place": [
+    "Bursa"
+   ],
+   "tr_views": 4466
+  },
+  {
+   "qid": "Q52162250",
+   "label": "Atlas Üniversitesi",
+   "links": 5,
+   "value": 2018.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İstanbul Atlas Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 6931
+  },
+  {
+   "qid": "Q52236336",
+   "label": "Sakarya Uygulamalı Bilimler Üniversitesi",
+   "links": 5,
+   "value": 2018.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sakarya Uygulamalı Bilimler Üniversitesi",
+   "place": [
+    "Sakarya"
+   ],
+   "tr_views": 5079
+  },
+  {
+   "qid": "Q52236385",
+   "label": "Konya Teknik Üniversitesi",
+   "links": 5,
+   "value": 2018.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Konya Teknik Üniversitesi",
+   "place": [
+    "Konya"
+   ],
+   "tr_views": 3692
+  },
+  {
+   "qid": "Q52236613",
+   "label": "Ankara Hacı Bayram Veli Üniversitesi",
+   "links": 5,
+   "value": 2018.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ankara Hacı Bayram Veli Üniversitesi",
+   "place": [
+    "Ankara"
+   ],
+   "tr_views": 21568
+  },
+  {
+   "qid": "Q5437801",
+   "label": "Fatih Üniversitesi",
+   "links": 5,
+   "value": 1996.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fatih Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 12032
+  },
+  {
+   "qid": "Q5443327",
+   "label": "Fenerbahçe Üniversitesi",
+   "links": 5,
+   "value": 2016.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fenerbahçe Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 8891
+  },
+  {
+   "qid": "Q5640536",
+   "label": "Hakkâri Üniversitesi",
+   "links": 5,
+   "value": 2008.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hakkari Üniversitesi",
+   "place": [],
+   "tr_views": 2138
+  },
+  {
+   "qid": "Q6035202",
+   "label": "Çağ Üniversitesi",
+   "links": 5,
+   "value": 1997.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çağ Üniversitesi",
+   "place": [
+    "Mersin",
+    "Yenice"
+   ],
+   "tr_views": 3912
+  },
+  {
+   "qid": "Q6085143",
+   "label": "Mevlana Üniversitesi",
+   "links": 5,
+   "value": 2009.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mevlana Üniversitesi",
+   "place": [
+    "Selçuklu"
+   ],
+   "tr_views": 3225
+  },
+  {
+   "qid": "Q6089124",
+   "label": "Necmettin Erbakan Üniversitesi",
+   "links": 5,
+   "value": 2010.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Necmettin Erbakan Üniversitesi",
+   "place": [
+    "Konya"
+   ],
+   "tr_views": 9915
+  },
+  {
+   "qid": "Q6103376",
+   "label": "Iğdır Üniversitesi",
+   "links": 5,
+   "value": 2008.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Iğdır Üniversitesi",
+   "place": [
+    "Iğdır"
+   ],
+   "tr_views": 2297
+  },
+  {
+   "qid": "Q6944545",
+   "label": "Muş Alparslan Üniversitesi",
+   "links": 5,
+   "value": 2017.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Muş Alparslan Üniversitesi",
+   "place": [
+    "Muş"
+   ],
+   "tr_views": 2161
+  },
+  {
+   "qid": "Q7855223",
+   "label": "Hava Harp Okulu",
+   "links": 5,
+   "value": 1951.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hava Harp Okulu",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 16714
+  },
+  {
+   "qid": "Q7855292",
+   "label": "Polis Akademisi",
+   "links": 5,
+   "value": 1937.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Polis Akademisi (Türkiye)",
+   "place": [
+    "Ankara"
+   ],
+   "tr_views": 17773
+  },
+  {
+   "qid": "Q7855295",
+   "label": "Deniz Harp Okulu",
+   "links": 5,
+   "value": 1773.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Deniz Harp Okulu",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 17445
+  },
+  {
+   "qid": "Q8047517",
+   "label": "Yalova Üniversitesi",
+   "links": 5,
+   "value": 2006.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yalova Üniversitesi",
+   "place": [
+    "Yalova"
+   ],
+   "tr_views": 2600
+  },
+  {
+   "qid": "Q8052280",
+   "label": "İstanbul Yeni Yüzyıl Üniversitesi",
+   "links": 5,
+   "value": 2009.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İstanbul Yeni Yüzyıl Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 3810
+  },
+  {
+   "qid": "Q12809694",
+   "label": "Giresun Üniversitesi",
+   "links": 4,
+   "value": 2006.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Giresun Üniversitesi",
+   "place": [
+    "Giresun"
+   ],
+   "tr_views": 4592
+  },
+  {
+   "qid": "Q1697376",
+   "label": "Maltepe Üniversitesi",
+   "links": 4,
+   "value": 1997.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Maltepe Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 6050
+  },
+  {
+   "qid": "Q21523975",
+   "label": "Alanya Alaaddin Keykubat Üniversitesi",
+   "links": 4,
+   "value": 2015.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Alanya Alaaddin Keykubat Üniversitesi",
+   "place": [
+    "Alanya"
+   ],
+   "tr_views": 5794
+  },
+  {
+   "qid": "Q28054180",
+   "label": "İzmir Bakırçay Üniversitesi",
+   "links": 4,
+   "value": 2016.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İzmir Bakırçay Üniversitesi",
+   "place": [
+    "İzmir"
+   ],
+   "tr_views": 9292
+  },
+  {
+   "qid": "Q28159696",
+   "label": "Beykoz Üniversitesi",
+   "links": 4,
+   "value": 2016.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Beykoz Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 2013
+  },
+  {
+   "qid": "Q28160625",
+   "label": "İstinye Üniversitesi",
+   "links": 4,
+   "value": 2015.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İstinye Üniversitesi",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 7583
+  },
+  {
+   "qid": "Q31211727",
+   "label": "Türk-Japon Bilim ve Teknoloji Üniversitesi",
+   "links": 4,
+   "value": 2017.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Türk-Japon Bilim ve Teknoloji Üniversitesi",
+   "place": [
+    "Ankara"
+   ],
+   "tr_views": 8389
+  },
+  {
+   "qid": "Q3674402",
+   "label": "Kahramanmaraş Sütçü İmam Üniversitesi",
+   "links": 4,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kahramanmaraş Sütçü İmam Üniversitesi",
+   "place": [
+    "Kahramanmaraş"
+   ],
+   "tr_views": 3625
+  },
+  {
+   "qid": "Q4690863",
+   "label": "Afyon Kocatepe Üniversitesi",
+   "links": 4,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Afyon Kocatepe Üniversitesi",
+   "place": [
+    "Afyonkarahisar"
+   ],
+   "tr_views": 5397
+  },
+  {
+   "qid": "Q5005278",
+   "label": "Zonguldak Bülent Ecevit Üniversitesi",
+   "links": 4,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zonguldak Bülent Ecevit Üniversitesi",
+   "place": [
+    "Zonguldak"
+   ],
+   "tr_views": 7729
+  },
+  {
+   "qid": "Q5194072",
+   "label": "Sivas Cumhuriyet Üniversitesi",
+   "links": 4,
+   "value": 1974.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sivas Cumhuriyet Üniversitesi",
+   "place": [
+    "Sivas"
+   ],
+   "tr_views": 7442
+  },
+  {
+   "qid": "Q52162263",
+   "label": "Kahramanmaraş İstiklal Üniversitesi",
+   "links": 4,
+   "value": 2018.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kahramanmaraş İstiklal Üniversitesi",
+   "place": [
+    "Kahramanmaraş"
+   ],
+   "tr_views": 2295
+  },
+  {
+   "qid": "Q52162277",
+   "label": "Trabzon Üniversitesi",
+   "links": 4,
+   "value": 2018.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Trabzon Üniversitesi",
+   "place": [
+    "Trabzon"
+   ],
+   "tr_views": 3617
+  },
+  {
+   "qid": "Q52236662",
+   "label": "Samsun Üniversitesi",
+   "links": 4,
+   "value": 2018.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Samsun Üniversitesi",
+   "place": [
+    "Samsun"
+   ],
+   "tr_views": 5036
+  },
+  {
+   "qid": "Q5626894",
+   "label": "Gümüşhane Üniversitesi",
+   "links": 4,
+   "value": 2008.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gümüşhane Üniversitesi",
+   "place": [
+    "Gümüşhane"
+   ],
+   "tr_views": 2759
+  },
+  {
+   "qid": "Q603581",
+   "label": "Kırklareli Üniversitesi",
+   "links": 4,
+   "value": 2007.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kırklareli Üniversitesi",
+   "place": [
+    "Kırklareli"
+   ],
+   "tr_views": 4348
+  },
+  {
+   "qid": "Q6073794",
+   "label": "Amasya Üniversitesi",
+   "links": 4,
+   "value": 2006.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Amasya Üniversitesi",
+   "place": [
+    "Amasya"
+   ],
+   "tr_views": 2917
+  },
+  {
+   "qid": "Q6079964",
+   "label": "İstanbul Üniversitesi-Cerrahpaşa",
+   "links": 4,
+   "value": 2018.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İstanbul Üniversitesi-Cerrahpaşa",
+   "place": [
+    "Fatih"
+   ],
+   "tr_views": 18073
+  },
+  {
+   "qid": "Q6088997",
+   "label": "Ahi Evran Üniversitesi",
+   "links": 4,
+   "value": 2006.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kırşehir Ahi Evran Üniversitesi",
+   "place": [
+    "Kırşehir"
+   ],
+   "tr_views": 4855
+  },
+  {
+   "qid": "Q6089196",
+   "label": "Bartın Üniversitesi",
+   "links": 4,
+   "value": 2008.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bartın Üniversitesi",
+   "place": [
+    "Bartın"
+   ],
+   "tr_views": 2798
+  },
+  {
+   "qid": "Q6089196",
+   "label": "Bartın Üniversitesi",
+   "links": 4,
+   "value": 2009.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bartın Üniversitesi",
+   "place": [
+    "Bartın"
+   ],
+   "tr_views": 2798
+  },
+  {
+   "qid": "Q6096546",
+   "label": "Bilecik Şeyh Edebali Üniversitesi",
+   "links": 4,
+   "value": 2007.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bilecik Şeyh Edebali Üniversitesi",
+   "place": [
+    "Bilecik"
+   ],
+   "tr_views": 3210
+  },
+  {
+   "qid": "Q6103980",
+   "label": "Artvin Çoruh Üniversitesi",
+   "links": 4,
+   "value": 2007.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Artvin Çoruh Üniversitesi",
+   "place": [],
+   "tr_views": 3248
+  },
+  {
+   "qid": "Q6407000",
+   "label": "Kilis 7 Aralık Üniversitesi",
+   "links": 4,
+   "value": 2007.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kilis 7 Aralık Üniversitesi",
+   "place": [
+    "Kilis Merkez"
+   ],
+   "tr_views": 2255
+  },
+  {
+   "qid": "Q6944541",
+   "label": "Muğla Sıtkı Koçman Üniversitesi",
+   "links": 4,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Muğla Sıtkı Koçman Üniversitesi",
+   "place": [
+    "Muğla"
+   ],
+   "tr_views": 8854
+  },
+  {
+   "qid": "Q7092215",
+   "label": "Ondokuz Mayıs Üniversitesi",
+   "links": 4,
+   "value": 1975.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ondokuz Mayıs Üniversitesi",
+   "place": [
+    "Samsun"
+   ],
+   "tr_views": 11120
+  },
+  {
+   "qid": "Q7513486",
+   "label": "Siirt Üniversitesi",
+   "links": 4,
+   "value": 2007.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Siirt Üniversitesi",
+   "place": [
+    "Siirt"
+   ],
+   "tr_views": 2095
+  },
+  {
+   "qid": "Q7905547",
+   "label": "Uşak Üniversitesi",
+   "links": 4,
+   "value": 2006.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uşak Üniversitesi",
+   "place": [
+    "Uşak"
+   ],
+   "tr_views": 4022
+  },
+  {
+   "qid": "Q924465",
+   "label": "Burdur Mehmet Akif Ersoy Üniversitesi",
+   "links": 4,
+   "value": 2006.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Burdur Mehmet Akif Ersoy Üniversitesi",
+   "place": [],
+   "tr_views": 6290
+  }
+ ]
+}

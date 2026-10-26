@@ -1,7 +1,5 @@
 import 'dart:convert';
 
-import '../core/strings.dart';
-
 /// A city with sourced coordinates, from assets/data/places.json.
 class Place {
   const Place({
@@ -10,6 +8,7 @@ class Place {
     required this.lat,
     required this.lon,
     this.country,
+    this.major = false,
   });
 
   /// Wikidata QID, e.g. `Q3640` (Ankara).
@@ -21,10 +20,13 @@ class Place {
   /// Set for world capitals.
   final String? country;
 
-  /// `Prag (Çekya)`; just the name when it equals the country (Singapur).
-  String get displayName => country == null || country == name
-      ? name
-      : AppStrings.placeWithCountry(name, country!);
+  /// One of the best-known Turkish cities; also paired with world capitals.
+  final bool major;
+
+  /// The city name alone. Only well-known capitals are used, so no country
+  /// is needed, and leaving it out keeps the question neutral where
+  /// sovereignty is disputed (Kudüs, Lefkoşa).
+  String get displayName => name;
 
   String get source => 'https://www.wikidata.org/wiki/$id';
 
@@ -34,6 +36,7 @@ class Place {
     lat: (json['lat'] as num).toDouble(),
     lon: (json['lon'] as num).toDouble(),
     country: json['country'] as String?,
+    major: json['major'] as bool? ?? false,
   );
 }
 

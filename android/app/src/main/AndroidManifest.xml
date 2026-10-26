@@ -1,4 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Downloads new questions from GitHub Pages (lib/data/content_sync.dart).
+         The app works fully offline with the bundled bank. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:label="Aralık"
         android:name="${applicationName}"

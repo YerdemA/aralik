@@ -11,11 +11,17 @@ void main() {
       expect(
         dailyShareText(
           dayIndex: 41,
-          points: [93, 75, 40, 0, 72],
+          results: [
+            (points: 93, hit: true),
+            (points: 75, hit: true),
+            (points: 40, hit: true),
+            (points: -20, hit: false),
+            (points: 72, hit: true),
+          ],
           hits: 80,
           answered: 100,
         ),
-        'Aralık #42 · 280/500\n🟩🟩🟨⬛🟩\nKalibrasyon %80',
+        'Aralık #42 · 260/500\n🟩🟩🟨⬛🟩\nKalibrasyon %80',
       );
     });
 
@@ -23,11 +29,17 @@ void main() {
       expect(
         dailyShareText(
           dayIndex: 0,
-          points: [100, 0, 0, 0, 10],
+          results: [
+            (points: 100, hit: true),
+            (points: 85, hit: false),
+            (points: 0, hit: false),
+            (points: 0, hit: false),
+            (points: 10, hit: true),
+          ],
           hits: 2,
           answered: 5,
         ),
-        'Aralık #1 · 110/500\n🟩⬛⬛⬛🟨',
+        'Aralık #1 · 195/500\n🟩⬛⬛⬛🟨',
       );
     });
 
@@ -35,7 +47,7 @@ void main() {
       expect(
         dailyShareText(
           dayIndex: -3,
-          points: [0, 0, 0, 0, 0],
+          results: [for (var i = 0; i < 5; i++) (points: 0, hit: false)],
           hits: 0,
           answered: 5,
         ),

@@ -39,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   String _shareText(int day) => dailyShareText(
     dayIndex: day,
-    points: _stats.dailyPoints(day),
+    results: _stats.dailyResults(day),
     hits: _stats.hits,
     answered: _stats.answered,
   );
@@ -61,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future<void> _playDaily() => _guarded(() async {
     final day = _today;
-    final done = _stats.dailyPoints(day).length;
+    final done = _stats.dailyResults(day).length;
     final remaining = (await _repository.dailySet(day)).skip(done).toList();
     if (!mounted || remaining.isEmpty) return;
     final answers = await Navigator.of(context).push<List<RoundAnswer>>(
@@ -85,7 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Future<void> _showDaySummary(int day) => Navigator.of(context).push(
     MaterialPageRoute<SummaryAction>(
       builder: (_) => SummaryScreen(
-        points: _stats.dailyPoints(day),
+        results: _stats.dailyResults(day),
         hits: _stats.hits,
         answered: _stats.answered,
         shareText: _shareText(day),
@@ -116,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
       final action = await Navigator.of(context).push<SummaryAction>(
         MaterialPageRoute(
           builder: (_) => SummaryScreen(
-            points: [for (final a in answers) a.points],
+            results: [for (final a in answers) (points: a.points, hit: a.hit)],
             hits: _stats.hits,
             answered: _stats.answered,
           ),
@@ -208,7 +208,7 @@ class _TodayAction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (stats.isDayComplete(today)) {
-      final total = stats.dailyPoints(today).fold(0, (sum, p) => sum + p);
+      final total = totalPoints(stats.dailyResults(today));
       return Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -226,7 +226,7 @@ class _TodayAction extends StatelessWidget {
         ],
       );
     }
-    final done = stats.dailyPoints(today).length;
+    final done = stats.dailyResults(today).length;
     return FilledButton(
       onPressed: loading ? null : onPlay,
       child: Text(
@@ -249,7 +249,7 @@ class _StatsRow extends StatelessWidget {
     final last = stats.lastCompletedDay(today);
     final lastScore = last == null
         ? AppStrings.noValue
-        : '${stats.dailyPoints(last).fold(0, (sum, p) => sum + p)}';
+        : '${totalPoints(stats.dailyResults(last))}';
     final calibration = stats.answered == 0
         ? AppStrings.noValue
         : formatPercent(stats.hits / stats.answered);

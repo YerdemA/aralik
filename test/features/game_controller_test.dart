@@ -1,3 +1,4 @@
+import 'package:aralik/core/scoring.dart';
 import 'package:aralik/data/question.dart';
 import 'package:aralik/features/game/game_controller.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -55,11 +56,11 @@ void main() {
 
     game.setWidth(0.0413926851582); // ×1,1 → 4.500 – 5.500
     expect(game.interval, (low: 4500, high: 5500));
-    expect(game.potentialPoints, 93);
+    expect(game.potentialPoints, 97);
 
     final first = game.lock();
     expect(first.hit, isTrue);
-    expect(first.points, 93);
+    expect(first.points, 97);
     expect(game.isLast, isFalse);
 
     game.next();
@@ -72,9 +73,9 @@ void main() {
     game.setWidth(0); // 1900 – 1900
     final second = game.lock();
     expect(second.hit, isFalse);
-    expect(second.points, 0);
+    expect(second.points, minPointsPerQuestion); // 23 years off
     expect(game.isLast, isTrue);
-    expect(game.totalPoints, 93);
+    expect(game.totalPoints, 97 + minPointsPerQuestion);
     expect(game.answers, hasLength(2));
   });
 

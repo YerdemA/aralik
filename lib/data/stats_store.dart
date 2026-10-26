@@ -4,10 +4,11 @@ import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../core/daily.dart';
+import '../core/scoring.dart';
 
 /// On-device player history (shared_preferences). Nothing leaves the device.
 class StatsStore extends ChangeNotifier {
-  StatsStore._(this._prefs)
+  StatsStore(this._prefs)
     : _seenIds = {...?_prefs.getStringList(_seenKey)},
       _answered = _prefs.getInt(_answeredKey) ?? 0,
       _hits = _prefs.getInt(_hitsKey) ?? 0,
@@ -17,13 +18,13 @@ class StatsStore extends ChangeNotifier {
       };
 
   static Future<StatsStore> open() async =>
-      StatsStore._(await SharedPreferences.getInstance());
+      StatsStore(await SharedPreferences.getInstance());
 
   static const _seenKey = 'seen_ids';
   static const _answeredKey = 'answered';
   static const _hitsKey = 'hits';
   static const _completedKey = 'completed_days';
-  static String _dailyKey(int day) => 'daily_points_$day';
+  static String _dailyKey(int day) => 'daily_results_$day';
 
   final SharedPreferences _prefs;
   final Set<String> _seenIds;
@@ -44,10 +45,11 @@ class StatsStore extends ChangeNotifier {
   /// Day indices whose daily set was finished.
   Set<int> get completedDays => UnmodifiableSetView(_completedDays);
 
-  /// Points of the daily questions locked so far on [day], in order.
-  List<int> dailyPoints(int day) => List.unmodifiable([
-    for (final p in _prefs.getStringList(_dailyKey(day)) ?? const [])
-      int.parse(p),
+  /// Results of the daily questions locked so far on [day], in order.
+  /// Stored as `"85:1"` (points:hit).
+  List<QuestionResult> dailyResults(int day) => List.unmodifiable([
+    for (final entry in _prefs.getStringList(_dailyKey(day)) ?? const [])
+      (points: int.parse(entry.split(':').first), hit: entry.endsWith(':1')),
   ]);
 
   bool isDayComplete(int day) => _completedDays.contains(day);
@@ -77,10 +79,10 @@ class StatsStore extends ChangeNotifier {
       _prefs.setInt(_hitsKey, _hits),
     ];
     if (dailyDay != null) {
-      final daily = [...dailyPoints(dailyDay), points];
+      final daily = [...dailyResults(dailyDay), (points: points, hit: hit)];
       writes.add(
         _prefs.setStringList(_dailyKey(dailyDay), [
-          for (final p in daily) '$p',
+          for (final r in daily) '${r.points}:${r.hit ? 1 : 0}',
         ]),
       );
       if (daily.length >= questionsPerDay && _completedDays.add(dailyDay)) {

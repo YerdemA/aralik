@@ -1,0 +1,1310 @@
+{
+ "dataset": "stadiums_tr",
+ "description": "Türkiye'deki stadyumlar, kapasite (P1083)",
+ "property": "P1083",
+ "fetched_at": "2026-10-26T10:41:28+00:00",
+ "rows": [
+  {
+   "qid": "Q81492",
+   "label": "Rams Park",
+   "links": 71,
+   "value": 52652.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ali Sami Yen Spor Kompleksi",
+   "place": [
+    "Sarıyer"
+   ],
+   "tr_views": 101530
+  },
+  {
+   "qid": "Q222865",
+   "label": "Şükrü Saracoğlu Stadyumu",
+   "links": 46,
+   "value": 50530.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fenerbahçe Şükrü Saracoğlu Stadyumu",
+   "place": [
+    "Kadıköy"
+   ],
+   "tr_views": 124896
+  },
+  {
+   "qid": "Q221122",
+   "label": "Atatürk Olimpiyat Stadyumu",
+   "links": 44,
+   "value": 80597.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Atatürk Olimpiyat Stadyumu",
+   "place": [
+    "Başakşehir"
+   ],
+   "tr_views": 132320
+  },
+  {
+   "qid": "Q14914703",
+   "label": "Beşiktaş Stadyumu",
+   "links": 38,
+   "value": 41903.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Beşiktaş Park",
+   "place": [
+    "Beşiktaş"
+   ],
+   "tr_views": 72914
+  },
+  {
+   "qid": "Q751820",
+   "label": "BJK İnönü Stadyumu",
+   "links": 27,
+   "value": 32145.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "BJK İnönü Stadyumu",
+   "place": [
+    "Vişnezade"
+   ],
+   "tr_views": 34441
+  },
+  {
+   "qid": "Q259830",
+   "label": "İzmir Atatürk Stadyumu",
+   "links": 22,
+   "value": 70000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İzmir Atatürk Stadyumu",
+   "place": [
+    "Konak"
+   ],
+   "tr_views": 19148
+  },
+  {
+   "qid": "Q1770357",
+   "label": "Recep Tayyip Erdoğan Stadyumu",
+   "links": 20,
+   "value": 14234.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Recep Tayyip Erdoğan Stadyumu",
+   "place": [
+    "Kasımpaşa",
+    "İstanbul"
+   ],
+   "tr_views": 16825
+  },
+  {
+   "qid": "Q1070800",
+   "label": "Ali Sami Yen Stadyumu",
+   "links": 19,
+   "value": 15000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ali Sami Yen Stadyumu",
+   "place": [
+    "Mecidiyeköy"
+   ],
+   "tr_views": 40787
+  },
+  {
+   "qid": "Q4818017",
+   "label": "Timsah Arena",
+   "links": 19,
+   "value": 43877.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bursa Büyükşehir Belediye Stadyumu",
+   "place": [
+    "Bursa"
+   ],
+   "tr_views": 25341
+  },
+  {
+   "qid": "Q1652487",
+   "label": "Hüseyin Avni Aker Stadyumu",
+   "links": 18,
+   "value": 24169.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hüseyin Avni Aker Stadyumu",
+   "place": [
+    "Trabzon"
+   ],
+   "tr_views": 11195
+  },
+  {
+   "qid": "Q7005353",
+   "label": "Antalya Stadyumu",
+   "links": 18,
+   "value": 41703.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Antalya Stadyumu",
+   "place": [
+    "Antalya"
+   ],
+   "tr_views": 13036
+  },
+  {
+   "qid": "Q7012155",
+   "label": "Papara Park",
+   "links": 18,
+   "value": 41500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şenol Güneş Spor Kompleksi",
+   "place": [
+    "Trabzon"
+   ],
+   "tr_views": 22828
+  },
+  {
+   "qid": "Q1016967",
+   "label": "Bursa Atatürk Stadyumu",
+   "links": 17,
+   "value": 25213.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bursa Atatürk Stadyumu",
+   "place": [
+    "Bursa"
+   ],
+   "tr_views": 7327
+  },
+  {
+   "qid": "Q1493501",
+   "label": "Kayseri Kadir Has Şehir Stadyumu",
+   "links": 17,
+   "value": 32864.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kayseri Kadir Has Şehir Stadyumu",
+   "place": [
+    "Kayseri"
+   ],
+   "tr_views": 11379
+  },
+  {
+   "qid": "Q7009690",
+   "label": "Konya Büyükşehir Belediye Stadyumu",
+   "links": 17,
+   "value": 42276.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Konya Büyükşehir Belediye Stadyumu",
+   "place": [
+    "Konya",
+    "Selçuklu"
+   ],
+   "tr_views": 12823
+  },
+  {
+   "qid": "Q1585196",
+   "label": "Mardan Spor Kompleksi",
+   "links": 16,
+   "value": 7428.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mardan Spor Kompleksi",
+   "place": [
+    "Aksu"
+   ],
+   "tr_views": 4079
+  },
+  {
+   "qid": "Q556417",
+   "label": "Ankara 19 Mayıs Stadyumu",
+   "links": 16,
+   "value": 19219.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ankara 19 Mayıs Stadyumu",
+   "place": [
+    "Altındağ",
+    "Ankara"
+   ],
+   "tr_views": 17965
+  },
+  {
+   "qid": "Q17512849",
+   "label": "Gaziantep Stadyumu",
+   "links": 15,
+   "value": 33502.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gaziantep Stadyumu",
+   "place": [
+    "Şehitkâmil"
+   ],
+   "tr_views": 9548
+  },
+  {
+   "qid": "Q5995439",
+   "label": "Gürsel Aksel Stadyumu",
+   "links": 15,
+   "value": 20040.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gürsel Aksel Stadyumu",
+   "place": [
+    "Konak"
+   ],
+   "tr_views": 19258
+  },
+  {
+   "qid": "Q1543487",
+   "label": "Alsancak Mustafa Denizli Stadyumu",
+   "links": 14,
+   "value": 15358.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Alsancak Mustafa Denizli Stadyumu",
+   "place": [
+    "Konak"
+   ],
+   "tr_views": 11895
+  },
+  {
+   "qid": "Q1367845",
+   "label": "Eskişehir Atatürk Stadyumu",
+   "links": 13,
+   "value": 13520.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eskişehir Atatürk Stadyumu",
+   "place": [
+    "Eskişehir"
+   ],
+   "tr_views": 3016
+  },
+  {
+   "qid": "Q4450209",
+   "label": "Taksim Stadı",
+   "links": 13,
+   "value": 8000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Taksim Stadyumu",
+   "place": [
+    "Beyoğlu"
+   ],
+   "tr_views": 13135
+  },
+  {
+   "qid": "Q597945",
+   "label": "4 Eylül Stadyumu",
+   "links": 13,
+   "value": 14998.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "4 Eylül Stadyumu",
+   "place": [
+    "Sivas"
+   ],
+   "tr_views": 1512
+  },
+  {
+   "qid": "Q1187869",
+   "label": "Denizli Atatürk Stadyumu",
+   "links": 12,
+   "value": 15427.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Denizli Atatürk Stadyumu",
+   "place": [
+    "Denizli"
+   ],
+   "tr_views": 4018
+  },
+  {
+   "qid": "Q1505486",
+   "label": "Kamil Ocak Stadyumu",
+   "links": 12,
+   "value": 16981.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kâmil Ocak Stadyumu",
+   "place": [
+    "Gaziantep"
+   ],
+   "tr_views": 2336
+  },
+  {
+   "qid": "Q17512831",
+   "label": "Yeni Eskişehir Stadyumu",
+   "links": 12,
+   "value": 34930.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Prof. Dr. Fethi Heper Stadyumu",
+   "place": [
+    "Eskişehir"
+   ],
+   "tr_views": 4203
+  },
+  {
+   "qid": "Q1420267",
+   "label": "Yeni Rize Şehir Stadyumu",
+   "links": 11,
+   "value": 15558.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çaykur Didi Stadyumu",
+   "place": [
+    "Rize"
+   ],
+   "tr_views": 8092
+  },
+  {
+   "qid": "Q3462866",
+   "label": "Mersin Stadyumu",
+   "links": 11,
+   "value": 25497.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mersin Stadyumu",
+   "place": [
+    "Mersin"
+   ],
+   "tr_views": 5194
+  },
+  {
+   "qid": "Q6099597",
+   "label": "Samsun 19 Mayıs Stadyumu",
+   "links": 11,
+   "value": 33919.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Samsun 19 Mayıs Stadyumu",
+   "place": [
+    "Tekkeköy"
+   ],
+   "tr_views": 16422
+  },
+  {
+   "qid": "Q1135276",
+   "label": "Dr. Necmettin Şeyhoğlu Stadyumu",
+   "links": 10,
+   "value": 7593.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dr. Necmettin Şeyhoğlu Stadyumu",
+   "place": [
+    "Karabük"
+   ],
+   "tr_views": 3673
+  },
+  {
+   "qid": "Q1135276",
+   "label": "Dr. Necmettin Şeyhoğlu Stadyumu",
+   "links": 10,
+   "value": 8000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dr. Necmettin Şeyhoğlu Stadyumu",
+   "place": [
+    "Karabük"
+   ],
+   "tr_views": 3673
+  },
+  {
+   "qid": "Q1135276",
+   "label": "Dr. Necmettin Şeyhoğlu Stadyumu",
+   "links": 10,
+   "value": 16000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dr. Necmettin Şeyhoğlu Stadyumu",
+   "place": [
+    "Karabük"
+   ],
+   "tr_views": 3673
+  },
+  {
+   "qid": "Q1467574",
+   "label": "5 Ocak Stadyumu",
+   "links": 10,
+   "value": 14085.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "5 Ocak Fatih Terim Stadyumu",
+   "place": [
+    "Adana"
+   ],
+   "tr_views": 3362
+  },
+  {
+   "qid": "Q1507977",
+   "label": "Manisa 19 Mayıs Stadyumu",
+   "links": 10,
+   "value": 16597.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Manisa 19 Mayıs Stadyumu",
+   "place": [
+    "Şehzadeler"
+   ],
+   "tr_views": 4997
+  },
+  {
+   "qid": "Q1535701",
+   "label": "İsmetpaşa Stadyumu",
+   "links": 10,
+   "value": 16750.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İsmetpaşa Stadyumu",
+   "place": [
+    "İzmit"
+   ],
+   "tr_views": 4932
+  },
+  {
+   "qid": "Q417007",
+   "label": "Akdeniz Üniversitesi Stadyumu",
+   "links": 10,
+   "value": 7100.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Akdeniz Üniversitesi Stadyumu",
+   "place": [
+    "Antalya"
+   ],
+   "tr_views": 1750
+  },
+  {
+   "qid": "Q570842",
+   "label": "Antalya Atatürk Stadyumu",
+   "links": 10,
+   "value": 11137.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Antalya Atatürk Stadyumu",
+   "place": [
+    "Antalya",
+    "Muratpaşa"
+   ],
+   "tr_views": 3728
+  },
+  {
+   "qid": "Q1325035",
+   "label": "Elazığ Atatürk Stadyumu",
+   "links": 9,
+   "value": 14467.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Elazığ Atatürk Stadyumu",
+   "place": [
+    "Elazığ"
+   ],
+   "tr_views": 5325
+  },
+  {
+   "qid": "Q1875713",
+   "label": "Malatya İnönü Stadyumu",
+   "links": 9,
+   "value": 13000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Malatya İnönü Stadyumu",
+   "place": [
+    "Malatya"
+   ],
+   "tr_views": 915
+  },
+  {
+   "qid": "Q2407470",
+   "label": "Tevfik Sırrı Gür Stadyumu",
+   "links": 9,
+   "value": 10128.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tevfik Sırrı Gür Stadyumu",
+   "place": [
+    "Mersin"
+   ],
+   "tr_views": 2151
+  },
+  {
+   "qid": "Q388470",
+   "label": "11 Nisan Stadyumu",
+   "links": 9,
+   "value": 28965.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "11 Nisan Stadyumu",
+   "place": [
+    "Şanlıurfa"
+   ],
+   "tr_views": 5932
+  },
+  {
+   "qid": "Q668147",
+   "label": "Konya Atatürk Stadyumu",
+   "links": 9,
+   "value": 21968.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Konya Atatürk Stadyumu",
+   "place": [
+    "Konya"
+   ],
+   "tr_views": 2290
+  },
+  {
+   "qid": "Q840044",
+   "label": "Yenikent ASAŞ Stadyumu",
+   "links": 9,
+   "value": 19626.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Osmanlı Stadyumu",
+   "place": [
+    "Ankara"
+   ],
+   "tr_views": 6785
+  },
+  {
+   "qid": "Q915241",
+   "label": "Samsun 19 Mayıs Stadyumu (1975)",
+   "links": 9,
+   "value": 16480.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Samsun 19 Mayıs Stadyumu (1975)",
+   "place": [
+    "Samsun"
+   ],
+   "tr_views": 2689
+  },
+  {
+   "qid": "Q2074256",
+   "label": "Bolu Atatürk Stadyumu",
+   "links": 8,
+   "value": 9000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bolu Atatürk Stadyumu",
+   "place": [
+    "Bolu"
+   ],
+   "tr_views": 2330
+  },
+  {
+   "qid": "Q4853221",
+   "label": "Balıkesir Atatürk Stadyumu",
+   "links": 8,
+   "value": 15800.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Balıkesir Atatürk Stadyumu",
+   "place": [
+    "Balıkesir"
+   ],
+   "tr_views": 2567
+  },
+  {
+   "qid": "Q6025379",
+   "label": "Kemal Kaynaş Stadyumu",
+   "links": 8,
+   "value": 2256.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kemal Kaynaş Stadyumu",
+   "place": [
+    "Karaman"
+   ],
+   "tr_views": 569
+  },
+  {
+   "qid": "Q6025379",
+   "label": "Kemal Kaynaş Stadyumu",
+   "links": 8,
+   "value": 3024.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kemal Kaynaş Stadyumu",
+   "place": [
+    "Karaman"
+   ],
+   "tr_views": 569
+  },
+  {
+   "qid": "Q6381835",
+   "label": "Kâzım Karabekir Stadyumu",
+   "links": 8,
+   "value": 23700.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kâzım Karabekir Stadyumu",
+   "place": [
+    "Erzurum"
+   ],
+   "tr_views": 13955
+  },
+  {
+   "qid": "Q1231799",
+   "label": "Diyarbakır Atatürk Stadyumu",
+   "links": 7,
+   "value": 12963.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Diyarbakır Atatürk Stadyumu",
+   "place": [
+    "Diyarbakır"
+   ],
+   "tr_views": 2084
+  },
+  {
+   "qid": "Q1526701",
+   "label": "Giresun Atatürk Stadyumu",
+   "links": 7,
+   "value": 12191.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Giresun Atatürk Stadyumu",
+   "place": [
+    "Giresun"
+   ],
+   "tr_views": 1012
+  },
+  {
+   "qid": "Q2753064",
+   "label": "Cebeci İnönü Stadyumu",
+   "links": 7,
+   "value": 15000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cebeci İnönü Stadyumu",
+   "place": [
+    "Ankara"
+   ],
+   "tr_views": 5145
+  },
+  {
+   "qid": "Q11173914",
+   "label": "Vefa Stadyumu",
+   "links": 6,
+   "value": 12500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vefa Stadyumu",
+   "place": [
+    "Karagümrük"
+   ],
+   "tr_views": 6156
+  },
+  {
+   "qid": "Q1518636",
+   "label": "19 Eylül Stadyumu",
+   "links": 6,
+   "value": 11024.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "19 Eylül Stadyumu (1967)",
+   "place": [
+    "Ordu"
+   ],
+   "tr_views": 824
+  },
+  {
+   "qid": "Q840040",
+   "label": "Rize Atatürk Stadyumu",
+   "links": 6,
+   "value": 10500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rize Atatürk Stadyumu",
+   "place": [
+    "Rize"
+   ],
+   "tr_views": 650
+  },
+  {
+   "qid": "Q997619",
+   "label": "Buca Arena",
+   "links": 6,
+   "value": 10500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeni Buca Stadyumu",
+   "place": [
+    "Buca"
+   ],
+   "tr_views": 3222
+  },
+  {
+   "qid": "Q15977874",
+   "label": "Yusuf Ziya Öniş Stadı",
+   "links": 5,
+   "value": 10000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yusuf Ziya Öniş Stadyumu",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 7092
+  },
+  {
+   "qid": "Q3495633",
+   "label": "Isparta Atatürk Şehir Stadyumu",
+   "links": 5,
+   "value": 10000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Isparta Atatürk Şehir Stadyumu",
+   "place": [
+    "Isparta"
+   ],
+   "tr_views": 2025
+  },
+  {
+   "qid": "Q417663",
+   "label": "Akhisar Şehir Stadyumu",
+   "links": 5,
+   "value": 2918.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Akhisar Şehir Stadyumu",
+   "place": [
+    "Akhisar",
+    "Manisa"
+   ],
+   "tr_views": 797
+  },
+  {
+   "qid": "Q417663",
+   "label": "Akhisar Şehir Stadyumu",
+   "links": 5,
+   "value": 5000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Akhisar Şehir Stadyumu",
+   "place": [
+    "Akhisar",
+    "Manisa"
+   ],
+   "tr_views": 797
+  },
+  {
+   "qid": "Q574897",
+   "label": "Kartal Stadyumu",
+   "links": 5,
+   "value": 7195.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kartal Stadyumu",
+   "place": [
+    "Kartal"
+   ],
+   "tr_views": 1098
+  },
+  {
+   "qid": "Q6039509",
+   "label": "Fikret Karabudak Stadyumu",
+   "links": 5,
+   "value": 5402.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fikret Karabudak Stadyumu",
+   "place": [
+    "Kırıkkale"
+   ],
+   "tr_views": 1127
+  },
+  {
+   "qid": "Q6045919",
+   "label": "Dumlupınar Stadyumu",
+   "links": 5,
+   "value": 11495.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dumlupınar Stadyumu",
+   "place": [
+    "Kütahya"
+   ],
+   "tr_views": 3928
+  },
+  {
+   "qid": "Q937866",
+   "label": "Sakarya Atatürk Stadı",
+   "links": 5,
+   "value": 13216.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sakarya Atatürk Stadyumu",
+   "place": [
+    "Adapazarı"
+   ],
+   "tr_views": 1243
+  },
+  {
+   "qid": "Q1676185",
+   "label": "Iğdır Şehir Stadyumu",
+   "links": 4,
+   "value": 3530.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Iğdır Şehir Stadyumu",
+   "place": [
+    "Iğdır"
+   ],
+   "tr_views": 5322
+  },
+  {
+   "qid": "Q4702053",
+   "label": "Akçaabat Fatih Stadyumu",
+   "links": 4,
+   "value": 6200.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Akçaabat Fatih Stadyumu",
+   "place": [
+    "Akçaabat"
+   ],
+   "tr_views": 1674
+  },
+  {
+   "qid": "Q494472",
+   "label": "Kayseri Atatürk Stadyumu",
+   "links": 4,
+   "value": 26500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kayseri Atatürk Stadyumu",
+   "place": [
+    "Kayseri"
+   ],
+   "tr_views": 2384
+  },
+  {
+   "qid": "Q5338331",
+   "label": "25 Kasım Stadyumu",
+   "links": 4,
+   "value": 4000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "25 Kasım Stadyumu",
+   "place": [
+    "Edirne"
+   ],
+   "tr_views": 584
+  },
+  {
+   "qid": "Q6063007",
+   "label": "12 Şubat Stadyumu",
+   "links": 4,
+   "value": 15000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "12 Şubat Stadyumu",
+   "place": [
+    "Kahramanmaraş"
+   ],
+   "tr_views": 1389
+  },
+  {
+   "qid": "Q6067394",
+   "label": "İlkadım Atletizm Stadyumu",
+   "links": 4,
+   "value": 2000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İlkadım Atletizm Stadyumu",
+   "place": [],
+   "tr_views": 787
+  },
+  {
+   "qid": "Q8069966",
+   "label": "Zeytinburnu Stadyumu",
+   "links": 4,
+   "value": 16000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zeytinburnu Stadyumu",
+   "place": [
+    "Zeytinburnu"
+   ],
+   "tr_views": 2766
+  },
+  {
+   "qid": "Q15056737",
+   "label": "Ünye İlçe Stadyumu",
+   "links": 3,
+   "value": 10340.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ünye İlçe Stadyumu",
+   "place": [
+    "Ordu"
+   ],
+   "tr_views": 779
+  },
+  {
+   "qid": "Q16611580",
+   "label": "Yeni İzmir Atatürk Stadyumu",
+   "links": 3,
+   "value": 41540.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeni İzmir Atatürk Stadyumu",
+   "place": [
+    "İzmir"
+   ],
+   "tr_views": 4272
+  },
+  {
+   "qid": "Q388845",
+   "label": "Şenlikköy Stadyumu",
+   "links": 3,
+   "value": 8000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şenlikköy Stadyumu",
+   "place": [
+    "Bakırköy"
+   ],
+   "tr_views": 1591
+  },
+  {
+   "qid": "Q4026180",
+   "label": "Mimar Yahya Baş Stadyumu",
+   "links": 3,
+   "value": 7589.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mimar Yahya Baş Stadyumu",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 1433
+  },
+  {
+   "qid": "Q4683899",
+   "label": "Adnan Menderes Stadyumu",
+   "links": 3,
+   "value": 15000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Adnan Menderes Stadyumu",
+   "place": [
+    "Aydın"
+   ],
+   "tr_views": 1234
+  },
+  {
+   "qid": "Q6016760",
+   "label": "Bafra Şehir Stadyumu",
+   "links": 3,
+   "value": 5000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bafra Şehir Stadyumu",
+   "place": [
+    "Samsun"
+   ],
+   "tr_views": 409
+  },
+  {
+   "qid": "Q6039793",
+   "label": "Fethiye İlçe Stadyumu",
+   "links": 3,
+   "value": 10000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fethiye İlçe Stadyumu",
+   "place": [],
+   "tr_views": 4127
+  },
+  {
+   "qid": "Q6047060",
+   "label": "15 Temmuz Stadyumu",
+   "links": 3,
+   "value": 1920.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "15 Temmuz Stadyumu",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 2045
+  },
+  {
+   "qid": "Q6053768",
+   "label": "Burhanettin Kocamaz Stadyumu",
+   "links": 3,
+   "value": 4200.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Burhanettin Kocamaz Stadyumu",
+   "place": [
+    "Tarsus"
+   ],
+   "tr_views": 646
+  },
+  {
+   "qid": "Q6056478",
+   "label": "5 Temmuz Stadyumu",
+   "links": 3,
+   "value": 12390.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "5 Temmuz Stadyumu",
+   "place": [
+    "İskenderun"
+   ],
+   "tr_views": 777
+  },
+  {
+   "qid": "Q72284952",
+   "label": "Küçükçekmece Kemal Aktaş Stadı",
+   "links": 3,
+   "value": 1500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçükçekmece Belediyesi Yeşilova Kemal Aktaş Stadyumu",
+   "place": [
+    "Küçükçekmece"
+   ],
+   "tr_views": 1013
+  },
+  {
+   "qid": "Q7813519",
+   "label": "Tokat Gaziosmanpaşa Stadyumu",
+   "links": 3,
+   "value": 7500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gaziosmanpaşa Stadyumu",
+   "place": [
+    "Tokat"
+   ],
+   "tr_views": 1826
+  },
+  {
+   "qid": "Q109452443",
+   "label": "Çorum Şehir Stadyumu",
+   "links": 2,
+   "value": 15000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çorum Şehir Stadyumu",
+   "place": [
+    "Çorum"
+   ],
+   "tr_views": 8977
+  },
+  {
+   "qid": "Q2831096",
+   "label": "Gaski Stadyumu",
+   "links": 2,
+   "value": 1250.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "GASKİ Stadyumu",
+   "place": [
+    "Gaziantep"
+   ],
+   "tr_views": 317
+  },
+  {
+   "qid": "Q5303863",
+   "label": "Doğan Seyfi Atlı Stadyumu",
+   "links": 2,
+   "value": 2000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Doğan Seyfi Atlı Stadyumu",
+   "place": [
+    "Denizli"
+   ],
+   "tr_views": 513
+  },
+  {
+   "qid": "Q6012604",
+   "label": "Siirt Atatürk Stadyumu",
+   "links": 2,
+   "value": 7000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Siirt Atatürk Stadyumu",
+   "place": [
+    "İstanbul"
+   ],
+   "tr_views": 1116
+  },
+  {
+   "qid": "Q6027194",
+   "label": "Ahi Stadyumu",
+   "links": 2,
+   "value": 7500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kırşehir Ahi Stadyumu",
+   "place": [
+    "Kırşehir"
+   ],
+   "tr_views": 1367
+  },
+  {
+   "qid": "Q6028680",
+   "label": "Başpınar Stadyumu",
+   "links": 2,
+   "value": 15450.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Başpınar Stadyumu",
+   "place": [
+    "Kırıkkale"
+   ],
+   "tr_views": 1919
+  },
+  {
+   "qid": "Q6374779",
+   "label": "Gazi Stadyumu",
+   "links": 2,
+   "value": 4000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gazi Stadyumu",
+   "place": [
+    "Kastamonu"
+   ],
+   "tr_views": 980
+  },
+  {
+   "qid": "Q8082488",
+   "label": "Şeref Stadyumu",
+   "links": 2,
+   "value": 6000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şeref Stadyumu",
+   "place": [
+    "Beşiktaş"
+   ],
+   "tr_views": 9479
+  },
+  {
+   "qid": "Q16632727",
+   "label": "Siirt Atatürk Stadı",
+   "links": 1,
+   "value": 7000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "place": [
+    "Siirt"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q21888113",
+   "label": "Hopa Şehir Stadyumu",
+   "links": 1,
+   "value": 3200.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hopa Şehir Stadyumu",
+   "place": [
+    "Hopa"
+   ],
+   "tr_views": 518
+  },
+  {
+   "qid": "Q24912043",
+   "label": "Özer Türk Stadyumu",
+   "links": 1,
+   "value": 8000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "place": [
+    "Aydın"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q25476726",
+   "label": "Arhavi Şehir Stadyumu",
+   "links": 1,
+   "value": 3000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arhavi Şehir Stadyumu",
+   "place": [
+    "Arhavi"
+   ],
+   "tr_views": 324
+  },
+  {
+   "qid": "Q6032905",
+   "label": "İTÜ Stadyumu",
+   "links": 1,
+   "value": 5100.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İTÜ Stadyumu",
+   "place": [
+    "Sarıyer"
+   ],
+   "tr_views": 2003
+  },
+  {
+   "qid": "Q71739914",
+   "label": "Vali Lütfü Yiğenoğlu Stadyumu",
+   "links": 1,
+   "value": 10000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vali Lütfü Yiğenoğlu Stadyumu",
+   "place": [
+    "Ağrı"
+   ],
+   "tr_views": 980
+  },
+  {
+   "qid": "Q72285196",
+   "label": "Muğla Atatürk Std.",
+   "links": 1,
+   "value": 7755.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Muğla Atatürk Stadyumu",
+   "place": [
+    "Muğla"
+   ],
+   "tr_views": 1293
+  },
+  {
+   "qid": "Q139906265",
+   "label": "Karşıyaka Zübeyde Hanım Stadyumu",
+   "links": 0,
+   "value": 15000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "place": [
+    "Karşıyaka"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q71739616",
+   "label": "Ceyhan Şehir Stadı",
+   "links": 0,
+   "value": 3930.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "place": [
+    "Ceyhan"
+   ],
+   "tr_views": 0
+  }
+ ]
+}

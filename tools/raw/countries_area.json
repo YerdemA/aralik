@@ -1,0 +1,3230 @@
+{
+ "dataset": "countries_area",
+ "description": "Egemen devletler, yüzölçümü (P2046)",
+ "property": "P2046",
+ "fetched_at": "2026-10-26T10:17:49+00:00",
+ "rows": [
+  {
+   "qid": "Q142",
+   "label": "Fransa",
+   "links": 428,
+   "value": 643801000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fransa",
+   "capital": [
+    "Paris"
+   ],
+   "tr_views": 201927
+  },
+  {
+   "qid": "Q43",
+   "label": "Türkiye",
+   "links": 428,
+   "value": 783356000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Türkiye",
+   "capital": [
+    "Ankara"
+   ],
+   "tr_views": 1741336
+  },
+  {
+   "qid": "Q43",
+   "label": "Türkiye",
+   "links": 428,
+   "value": 783562000000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Türkiye",
+   "capital": [
+    "Ankara"
+   ],
+   "tr_views": 1741336
+  },
+  {
+   "qid": "Q43",
+   "label": "Türkiye",
+   "links": 428,
+   "value": 783562052960.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Türkiye",
+   "capital": [
+    "Ankara"
+   ],
+   "tr_views": 1741336
+  },
+  {
+   "qid": "Q30",
+   "label": "Amerika Birleşik Devletleri",
+   "links": 427,
+   "value": 9826675000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Amerika Birleşik Devletleri",
+   "capital": [
+    "Washington"
+   ],
+   "tr_views": 466354
+  },
+  {
+   "qid": "Q159",
+   "label": "Rusya",
+   "links": 421,
+   "value": 17075400000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Rusya",
+   "capital": [
+    "Moskova"
+   ],
+   "tr_views": 222411
+  },
+  {
+   "qid": "Q17",
+   "label": "Japonya",
+   "links": 419,
+   "value": 377972280000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Japonya",
+   "capital": [
+    "Tokyo"
+   ],
+   "tr_views": 198994
+  },
+  {
+   "qid": "Q17",
+   "label": "Japonya",
+   "links": 419,
+   "value": 377973680000.0,
+   "rank": "preferred",
+   "value_year": 2026,
+   "tr_title": "Japonya",
+   "capital": [
+    "Tokyo"
+   ],
+   "tr_views": 198994
+  },
+  {
+   "qid": "Q38",
+   "label": "İtalya",
+   "links": 409,
+   "value": 302068000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İtalya",
+   "capital": [
+    "Roma"
+   ],
+   "tr_views": 166208
+  },
+  {
+   "qid": "Q183",
+   "label": "Almanya",
+   "links": 405,
+   "value": 349390000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Almanya",
+   "capital": [
+    "Berlin"
+   ],
+   "tr_views": 251697
+  },
+  {
+   "qid": "Q183",
+   "label": "Almanya",
+   "links": 405,
+   "value": 357170000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Almanya",
+   "capital": [
+    "Berlin"
+   ],
+   "tr_views": 251697
+  },
+  {
+   "qid": "Q183",
+   "label": "Almanya",
+   "links": 405,
+   "value": 357587770000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Almanya",
+   "capital": [
+    "Berlin"
+   ],
+   "tr_views": 251697
+  },
+  {
+   "qid": "Q668",
+   "label": "Hindistan",
+   "links": 404,
+   "value": 3287263000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hindistan",
+   "capital": [
+    "Yeni Delhi"
+   ],
+   "tr_views": 150436
+  },
+  {
+   "qid": "Q33",
+   "label": "Finlandiya",
+   "links": 403,
+   "value": 34515060000.0,
+   "rank": "normal",
+   "value_year": 2023,
+   "tr_title": "Finlandiya",
+   "capital": [
+    "Helsinki"
+   ],
+   "tr_views": 98930
+  },
+  {
+   "qid": "Q33",
+   "label": "Finlandiya",
+   "links": 403,
+   "value": 52427080000.0,
+   "rank": "normal",
+   "value_year": 2023,
+   "tr_title": "Finlandiya",
+   "capital": [
+    "Helsinki"
+   ],
+   "tr_views": 98930
+  },
+  {
+   "qid": "Q33",
+   "label": "Finlandiya",
+   "links": 403,
+   "value": 303947000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Finlandiya",
+   "capital": [
+    "Helsinki"
+   ],
+   "tr_views": 98930
+  },
+  {
+   "qid": "Q33",
+   "label": "Finlandiya",
+   "links": 403,
+   "value": 303963280000.0,
+   "rank": "normal",
+   "value_year": 2023,
+   "tr_title": "Finlandiya",
+   "capital": [
+    "Helsinki"
+   ],
+   "tr_views": 98930
+  },
+  {
+   "qid": "Q33",
+   "label": "Finlandiya",
+   "links": 403,
+   "value": 338145000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Finlandiya",
+   "capital": [
+    "Helsinki"
+   ],
+   "tr_views": 98930
+  },
+  {
+   "qid": "Q33",
+   "label": "Finlandiya",
+   "links": 403,
+   "value": 338478340000.0,
+   "rank": "preferred",
+   "value_year": 2023,
+   "tr_title": "Finlandiya",
+   "capital": [
+    "Helsinki"
+   ],
+   "tr_views": 98930
+  },
+  {
+   "qid": "Q33",
+   "label": "Finlandiya",
+   "links": 403,
+   "value": 390905420000.0,
+   "rank": "normal",
+   "value_year": 2023,
+   "tr_title": "Finlandiya",
+   "capital": [
+    "Helsinki"
+   ],
+   "tr_views": 98930
+  },
+  {
+   "qid": "Q96",
+   "label": "Meksika",
+   "links": 401,
+   "value": 1964375000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Meksika",
+   "capital": [
+    "Meksiko"
+   ],
+   "tr_views": 117110
+  },
+  {
+   "qid": "Q96",
+   "label": "Meksika",
+   "links": 401,
+   "value": 1972550000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Meksika",
+   "capital": [
+    "Meksiko"
+   ],
+   "tr_views": 117110
+  },
+  {
+   "qid": "Q148",
+   "label": "Çin Halk Cumhuriyeti",
+   "links": 400,
+   "value": 9596961000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çin",
+   "capital": [
+    "Pekin"
+   ],
+   "tr_views": 209698
+  },
+  {
+   "qid": "Q408",
+   "label": "Avustralya",
+   "links": 400,
+   "value": 410977000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avustralya",
+   "capital": [
+    "Canberra"
+   ],
+   "tr_views": 178062
+  },
+  {
+   "qid": "Q408",
+   "label": "Avustralya",
+   "links": 400,
+   "value": 7659861000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avustralya",
+   "capital": [
+    "Canberra"
+   ],
+   "tr_views": 178062
+  },
+  {
+   "qid": "Q408",
+   "label": "Avustralya",
+   "links": 400,
+   "value": 7692024000000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Avustralya",
+   "capital": [
+    "Canberra"
+   ],
+   "tr_views": 178062
+  },
+  {
+   "qid": "Q408",
+   "label": "Avustralya",
+   "links": 400,
+   "value": 8148250000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avustralya",
+   "capital": [
+    "Canberra"
+   ],
+   "tr_views": 178062
+  },
+  {
+   "qid": "Q16",
+   "label": "Kanada",
+   "links": 398,
+   "value": 9984670000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kanada",
+   "capital": [
+    "Ottawa"
+   ],
+   "tr_views": 144677
+  },
+  {
+   "qid": "Q145",
+   "label": "Birleşik Krallık",
+   "links": 396,
+   "value": 242495000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Birleşik Krallık",
+   "capital": [
+    "Londra"
+   ],
+   "tr_views": 240790
+  },
+  {
+   "qid": "Q29",
+   "label": "İspanya",
+   "links": 396,
+   "value": 505990000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İspanya",
+   "capital": [
+    "Madrid"
+   ],
+   "tr_views": 253187
+  },
+  {
+   "qid": "Q20",
+   "label": "Norveç",
+   "links": 394,
+   "value": 365400000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Norveç",
+   "capital": [],
+   "tr_views": 144171
+  },
+  {
+   "qid": "Q20",
+   "label": "Norveç",
+   "links": 394,
+   "value": 1210000000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Norveç",
+   "capital": [],
+   "tr_views": 144171
+  },
+  {
+   "qid": "Q20",
+   "label": "Norveç",
+   "links": 394,
+   "value": 2674800000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Norveç",
+   "capital": [],
+   "tr_views": 144171
+  },
+  {
+   "qid": "Q20",
+   "label": "Norveç",
+   "links": 394,
+   "value": 9648000000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Norveç",
+   "capital": [],
+   "tr_views": 144171
+  },
+  {
+   "qid": "Q20",
+   "label": "Norveç",
+   "links": 394,
+   "value": 18488000000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Norveç",
+   "capital": [],
+   "tr_views": 144171
+  },
+  {
+   "qid": "Q20",
+   "label": "Norveç",
+   "links": 394,
+   "value": 18905000000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Norveç",
+   "capital": [],
+   "tr_views": 144171
+  },
+  {
+   "qid": "Q20",
+   "label": "Norveç",
+   "links": 394,
+   "value": 126384000000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Norveç",
+   "capital": [],
+   "tr_views": 144171
+  },
+  {
+   "qid": "Q20",
+   "label": "Norveç",
+   "links": 394,
+   "value": 144848000000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Norveç",
+   "capital": [],
+   "tr_views": 144171
+  },
+  {
+   "qid": "Q20",
+   "label": "Norveç",
+   "links": 394,
+   "value": 240014000000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Norveç",
+   "capital": [],
+   "tr_views": 144171
+  },
+  {
+   "qid": "Q20",
+   "label": "Norveç",
+   "links": 394,
+   "value": 323808000000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Norveç",
+   "capital": [],
+   "tr_views": 144171
+  },
+  {
+   "qid": "Q20",
+   "label": "Norveç",
+   "links": 394,
+   "value": 385207000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Norveç",
+   "capital": [],
+   "tr_views": 144171
+  },
+  {
+   "qid": "Q20",
+   "label": "Norveç",
+   "links": 394,
+   "value": 385207000000.0,
+   "rank": "preferred",
+   "value_year": 2019,
+   "tr_title": "Norveç",
+   "capital": [],
+   "tr_views": 144171
+  },
+  {
+   "qid": "Q79",
+   "label": "Mısır",
+   "links": 392,
+   "value": 1010407870000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mısır",
+   "capital": [
+    "Kahire"
+   ],
+   "tr_views": 167166
+  },
+  {
+   "qid": "Q36",
+   "label": "Polonya",
+   "links": 391,
+   "value": 312683000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Polonya",
+   "capital": [
+    "Varşova"
+   ],
+   "tr_views": 106791
+  },
+  {
+   "qid": "Q212",
+   "label": "Ukrayna",
+   "links": 389,
+   "value": 603550000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ukrayna",
+   "capital": [
+    "Kiev"
+   ],
+   "tr_views": 92253
+  },
+  {
+   "qid": "Q155",
+   "label": "Brezilya",
+   "links": 387,
+   "value": 8515767000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Brezilya",
+   "capital": [
+    "Brasília"
+   ],
+   "tr_views": 168429
+  },
+  {
+   "qid": "Q222",
+   "label": "Arnavutluk",
+   "links": 387,
+   "value": 28748000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arnavutluk",
+   "capital": [
+    "Tiran"
+   ],
+   "tr_views": 153226
+  },
+  {
+   "qid": "Q39",
+   "label": "İsviçre",
+   "links": 387,
+   "value": 41291000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İsviçre",
+   "capital": [
+    "Bern"
+   ],
+   "tr_views": 161699
+  },
+  {
+   "qid": "Q31",
+   "label": "Belçika",
+   "links": 383,
+   "value": 30528000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Belçika",
+   "capital": [
+    "Brüksel Şehri"
+   ],
+   "tr_views": 112237
+  },
+  {
+   "qid": "Q31",
+   "label": "Belçika",
+   "links": 383,
+   "value": 30688000000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Belçika",
+   "capital": [
+    "Brüksel Şehri"
+   ],
+   "tr_views": 112237
+  },
+  {
+   "qid": "Q298",
+   "label": "Şili",
+   "links": 381,
+   "value": 756102000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şili",
+   "capital": [
+    "Santiago"
+   ],
+   "tr_views": 57355
+  },
+  {
+   "qid": "Q801",
+   "label": "İsrail",
+   "links": 380,
+   "value": 20770000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İsrail",
+   "capital": [
+    "Kudüs"
+   ],
+   "tr_views": 251596
+  },
+  {
+   "qid": "Q41",
+   "label": "Yunanistan",
+   "links": 378,
+   "value": 131957000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yunanistan",
+   "capital": [
+    "Atina"
+   ],
+   "tr_views": 215584
+  },
+  {
+   "qid": "Q794",
+   "label": "İran",
+   "links": 376,
+   "value": 1648195000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İran",
+   "capital": [
+    "Tahran"
+   ],
+   "tr_views": 414177
+  },
+  {
+   "qid": "Q262",
+   "label": "Cezayir",
+   "links": 374,
+   "value": 2381741000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cezayir",
+   "capital": [
+    "Cezayir"
+   ],
+   "tr_views": 102323
+  },
+  {
+   "qid": "Q40",
+   "label": "Avusturya",
+   "links": 372,
+   "value": 83878990000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Avusturya",
+   "capital": [
+    "Viyana"
+   ],
+   "tr_views": 99347
+  },
+  {
+   "qid": "Q414",
+   "label": "Arjantin",
+   "links": 372,
+   "value": 2780400000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arjantin",
+   "capital": [
+    "Buenos Aires"
+   ],
+   "tr_views": 171936
+  },
+  {
+   "qid": "Q45",
+   "label": "Portekiz",
+   "links": 371,
+   "value": 92225000000.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "tr_title": "Portekiz",
+   "capital": [
+    "Lizbon"
+   ],
+   "tr_views": 133556
+  },
+  {
+   "qid": "Q34",
+   "label": "İsveç",
+   "links": 370,
+   "value": 122577500000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "İsveç",
+   "capital": [
+    "Stockholm"
+   ],
+   "tr_views": 107742
+  },
+  {
+   "qid": "Q34",
+   "label": "İsveç",
+   "links": 370,
+   "value": 407283590000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "İsveç",
+   "capital": [
+    "Stockholm"
+   ],
+   "tr_views": 107742
+  },
+  {
+   "qid": "Q34",
+   "label": "İsveç",
+   "links": 370,
+   "value": 447425160000.0,
+   "rank": "preferred",
+   "value_year": 2022,
+   "tr_title": "İsveç",
+   "capital": [
+    "Stockholm"
+   ],
+   "tr_views": 107742
+  },
+  {
+   "qid": "Q34",
+   "label": "İsveç",
+   "links": 370,
+   "value": 528861060000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "İsveç",
+   "capital": [
+    "Stockholm"
+   ],
+   "tr_views": 107742
+  },
+  {
+   "qid": "Q881",
+   "label": "Vietnam",
+   "links": 369,
+   "value": 331690000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vietnam",
+   "capital": [
+    "Hanoi"
+   ],
+   "tr_views": 122370
+  },
+  {
+   "qid": "Q258",
+   "label": "Güney Afrika",
+   "links": 368,
+   "value": 1221037000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Güney Afrika Cumhuriyeti",
+   "capital": [
+    "Bloemfontein",
+    "Kap Şehri",
+    "Pretoria"
+   ],
+   "tr_views": 108390
+  },
+  {
+   "qid": "Q739",
+   "label": "Kolombiya",
+   "links": 367,
+   "value": 1141748000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kolombiya",
+   "capital": [
+    "Bogotá"
+   ],
+   "tr_views": 115229
+  },
+  {
+   "qid": "Q252",
+   "label": "Endonezya",
+   "links": 366,
+   "value": 1904570000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Endonezya",
+   "capital": [
+    "Cakarta"
+   ],
+   "tr_views": 160594
+  },
+  {
+   "qid": "Q889",
+   "label": "Afganistan",
+   "links": 363,
+   "value": 652230000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Afganistan",
+   "capital": [
+    "Kabil"
+   ],
+   "tr_views": 168380
+  },
+  {
+   "qid": "Q227",
+   "label": "Azerbaycan",
+   "links": 362,
+   "value": 86600000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Azerbaycan",
+   "capital": [
+    "Bakü"
+   ],
+   "tr_views": 267307
+  },
+  {
+   "qid": "Q219",
+   "label": "Bulgaristan",
+   "links": 361,
+   "value": 110993600000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bulgaristan",
+   "capital": [
+    "Sofya"
+   ],
+   "tr_views": 173797
+  },
+  {
+   "qid": "Q184",
+   "label": "Belarus",
+   "links": 358,
+   "value": 207596760000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Belarus",
+   "capital": [
+    "Minsk"
+   ],
+   "tr_views": 73459
+  },
+  {
+   "qid": "Q184",
+   "label": "Belarus",
+   "links": 358,
+   "value": 207600496983.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Belarus",
+   "capital": [
+    "Minsk"
+   ],
+   "tr_views": 73459
+  },
+  {
+   "qid": "Q28",
+   "label": "Macaristan",
+   "links": 358,
+   "value": 93011400000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Macaristan",
+   "capital": [
+    "Budapeşte"
+   ],
+   "tr_views": 128255
+  },
+  {
+   "qid": "Q28",
+   "label": "Macaristan",
+   "links": 358,
+   "value": 93030000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Macaristan",
+   "capital": [
+    "Budapeşte"
+   ],
+   "tr_views": 128255
+  },
+  {
+   "qid": "Q224",
+   "label": "Hırvatistan",
+   "links": 356,
+   "value": 56594000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hırvatistan",
+   "capital": [
+    "Zagreb"
+   ],
+   "tr_views": 73549
+  },
+  {
+   "qid": "Q843",
+   "label": "Pakistan",
+   "links": 356,
+   "value": 881913000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pakistan",
+   "capital": [
+    "İslamabad"
+   ],
+   "tr_views": 167129
+  },
+  {
+   "qid": "Q869",
+   "label": "Tayland",
+   "links": 356,
+   "value": 513119500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tayland",
+   "capital": [
+    "Bangkok"
+   ],
+   "tr_views": 104350
+  },
+  {
+   "qid": "Q884",
+   "label": "Güney Kore",
+   "links": 356,
+   "value": 100295000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Güney Kore",
+   "capital": [
+    "Seul"
+   ],
+   "tr_views": 141739
+  },
+  {
+   "qid": "Q189",
+   "label": "İzlanda",
+   "links": 355,
+   "value": 103004000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İzlanda",
+   "capital": [
+    "Reykjavík"
+   ],
+   "tr_views": 144189
+  },
+  {
+   "qid": "Q213",
+   "label": "Çekya",
+   "links": 355,
+   "value": 78871000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çekya",
+   "capital": [
+    "Prag"
+   ],
+   "tr_views": 91408
+  },
+  {
+   "qid": "Q191",
+   "label": "Estonya",
+   "links": 354,
+   "value": 45335000000.0,
+   "rank": "preferred",
+   "value_year": 2024,
+   "tr_title": "Estonya",
+   "capital": [
+    "Tallinn"
+   ],
+   "tr_views": 59171
+  },
+  {
+   "qid": "Q191",
+   "label": "Estonya",
+   "links": 354,
+   "value": 45339000000.0,
+   "rank": "normal",
+   "value_year": 2015,
+   "tr_title": "Estonya",
+   "capital": [
+    "Tallinn"
+   ],
+   "tr_views": 59171
+  },
+  {
+   "qid": "Q399",
+   "label": "Ermenistan",
+   "links": 354,
+   "value": 29743423459.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ermenistan",
+   "capital": [
+    "Erivan"
+   ],
+   "tr_views": 128909
+  },
+  {
+   "qid": "Q37",
+   "label": "Litvanya",
+   "links": 352,
+   "value": 65300000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Litvanya",
+   "capital": [
+    "Vilnius"
+   ],
+   "tr_views": 84587
+  },
+  {
+   "qid": "Q403",
+   "label": "Sırbistan",
+   "links": 352,
+   "value": 88361000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sırbistan",
+   "capital": [
+    "Belgrad"
+   ],
+   "tr_views": 107016
+  },
+  {
+   "qid": "Q403",
+   "label": "Sırbistan",
+   "links": 352,
+   "value": 88499000000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Sırbistan",
+   "capital": [
+    "Belgrad"
+   ],
+   "tr_views": 107016
+  },
+  {
+   "qid": "Q664",
+   "label": "Yeni Zelanda",
+   "links": 351,
+   "value": 268021000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeni Zelanda",
+   "capital": [
+    "Wellington"
+   ],
+   "tr_views": 96956
+  },
+  {
+   "qid": "Q232",
+   "label": "Kazakistan",
+   "links": 350,
+   "value": 2724900000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kazakistan",
+   "capital": [
+    "Astana"
+   ],
+   "tr_views": 171160
+  },
+  {
+   "qid": "Q796",
+   "label": "Irak",
+   "links": 350,
+   "value": 437072000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Irak",
+   "capital": [
+    "Bağdat"
+   ],
+   "tr_views": 164092
+  },
+  {
+   "qid": "Q851",
+   "label": "Suudi Arabistan",
+   "links": 350,
+   "value": 2250000000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suudi Arabistan",
+   "capital": [
+    "Riyad"
+   ],
+   "tr_views": 161983
+  },
+  {
+   "qid": "Q1033",
+   "label": "Nijerya",
+   "links": 349,
+   "value": 923768000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nijerya",
+   "capital": [],
+   "tr_views": 118809
+  },
+  {
+   "qid": "Q218",
+   "label": "Romanya",
+   "links": 349,
+   "value": 238397000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Romanya",
+   "capital": [
+    "Bükreş"
+   ],
+   "tr_views": 117476
+  },
+  {
+   "qid": "Q230",
+   "label": "Gürcistan",
+   "links": 349,
+   "value": 69700000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gürcistan",
+   "capital": [
+    "Tiflis"
+   ],
+   "tr_views": 163563
+  },
+  {
+   "qid": "Q902",
+   "label": "Bangladeş",
+   "links": 349,
+   "value": 147570000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bangladeş",
+   "capital": [
+    "Dakka"
+   ],
+   "tr_views": 89768
+  },
+  {
+   "qid": "Q115",
+   "label": "Etiyopya",
+   "links": 347,
+   "value": 1104300000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Etiyopya",
+   "capital": [
+    "Addis Ababa"
+   ],
+   "tr_views": 95943
+  },
+  {
+   "qid": "Q717",
+   "label": "Venezuela",
+   "links": 345,
+   "value": 912050000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Venezuela",
+   "capital": [
+    "Caracas"
+   ],
+   "tr_views": 392465
+  },
+  {
+   "qid": "Q237",
+   "label": "Vatikan",
+   "links": 343,
+   "value": 490000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vatikan",
+   "capital": [
+    "Vatikan"
+   ],
+   "tr_views": 121375
+  },
+  {
+   "qid": "Q225",
+   "label": "Bosna Hersek",
+   "links": 342,
+   "value": 10000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bosna-Hersek",
+   "capital": [
+    "Saraybosna"
+   ],
+   "tr_views": 176058
+  },
+  {
+   "qid": "Q225",
+   "label": "Bosna Hersek",
+   "links": 342,
+   "value": 51187000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bosna-Hersek",
+   "capital": [
+    "Saraybosna"
+   ],
+   "tr_views": 176058
+  },
+  {
+   "qid": "Q225",
+   "label": "Bosna Hersek",
+   "links": 342,
+   "value": 51209200000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bosna-Hersek",
+   "capital": [
+    "Saraybosna"
+   ],
+   "tr_views": 176058
+  },
+  {
+   "qid": "Q27",
+   "label": "İrlanda",
+   "links": 342,
+   "value": 69797000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İrlanda",
+   "capital": [
+    "Dublin"
+   ],
+   "tr_views": 94263
+  },
+  {
+   "qid": "Q214",
+   "label": "Slovakya",
+   "links": 341,
+   "value": 49033720839.0,
+   "rank": "preferred",
+   "value_year": 2025,
+   "tr_title": "Slovakya",
+   "capital": [
+    "Bratislava"
+   ],
+   "tr_views": 60971
+  },
+  {
+   "qid": "Q214",
+   "label": "Slovakya",
+   "links": 341,
+   "value": 49034000000.0,
+   "rank": "normal",
+   "value_year": 2024,
+   "tr_title": "Slovakya",
+   "capital": [
+    "Bratislava"
+   ],
+   "tr_views": 60971
+  },
+  {
+   "qid": "Q214",
+   "label": "Slovakya",
+   "links": 341,
+   "value": 49035000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Slovakya",
+   "capital": [
+    "Bratislava"
+   ],
+   "tr_views": 60971
+  },
+  {
+   "qid": "Q833",
+   "label": "Malezya",
+   "links": 340,
+   "value": 330803000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Malezya",
+   "capital": [
+    "Kuala Lumpur"
+   ],
+   "tr_views": 84896
+  },
+  {
+   "qid": "Q114",
+   "label": "Kenya",
+   "links": 337,
+   "value": 581309000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kenya",
+   "capital": [
+    "Nairobi"
+   ],
+   "tr_views": 47203
+  },
+  {
+   "qid": "Q858",
+   "label": "Suriye",
+   "links": 337,
+   "value": 185180000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suriye",
+   "capital": [
+    "Şam"
+   ],
+   "tr_views": 208657
+  },
+  {
+   "qid": "Q211",
+   "label": "Letonya",
+   "links": 336,
+   "value": 61760390000.0,
+   "rank": "preferred",
+   "value_year": 2026,
+   "tr_title": "Letonya",
+   "capital": [
+    "Riga"
+   ],
+   "tr_views": 102862
+  },
+  {
+   "qid": "Q211",
+   "label": "Letonya",
+   "links": 336,
+   "value": 62226850000.0,
+   "rank": "normal",
+   "value_year": 2025,
+   "tr_title": "Letonya",
+   "capital": [
+    "Riga"
+   ],
+   "tr_views": 102862
+  },
+  {
+   "qid": "Q211",
+   "label": "Letonya",
+   "links": 336,
+   "value": 62226920000.0,
+   "rank": "normal",
+   "value_year": 2024,
+   "tr_title": "Letonya",
+   "capital": [
+    "Riga"
+   ],
+   "tr_views": 102862
+  },
+  {
+   "qid": "Q211",
+   "label": "Letonya",
+   "links": 336,
+   "value": 64593760000.0,
+   "rank": "normal",
+   "value_year": 2025,
+   "tr_title": "Letonya",
+   "capital": [
+    "Riga"
+   ],
+   "tr_views": 102862
+  },
+  {
+   "qid": "Q211",
+   "label": "Letonya",
+   "links": 336,
+   "value": 64593770000.0,
+   "rank": "preferred",
+   "value_year": 2026,
+   "tr_title": "Letonya",
+   "capital": [
+    "Riga"
+   ],
+   "tr_views": 102862
+  },
+  {
+   "qid": "Q211",
+   "label": "Letonya",
+   "links": 336,
+   "value": 64593790000.0,
+   "rank": "normal",
+   "value_year": 2022,
+   "tr_title": "Letonya",
+   "capital": [
+    "Riga"
+   ],
+   "tr_views": 102862
+  },
+  {
+   "qid": "Q32",
+   "label": "Lüksemburg",
+   "links": 335,
+   "value": 2586360000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lüksemburg",
+   "capital": [
+    "Lüksemburg"
+   ],
+   "tr_views": 92740
+  },
+  {
+   "qid": "Q32",
+   "label": "Lüksemburg",
+   "links": 335,
+   "value": 2593050000.0,
+   "rank": "preferred",
+   "value_year": 2024,
+   "tr_title": "Lüksemburg",
+   "capital": [
+    "Lüksemburg"
+   ],
+   "tr_views": 92740
+  },
+  {
+   "qid": "Q1016",
+   "label": "Libya",
+   "links": 334,
+   "value": 1759541000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Libya",
+   "capital": [
+    "Trablus"
+   ],
+   "tr_views": 84733
+  },
+  {
+   "qid": "Q1028",
+   "label": "Fas",
+   "links": 334,
+   "value": 446550000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fas",
+   "capital": [
+    "Rabat"
+   ],
+   "tr_views": 180672
+  },
+  {
+   "qid": "Q1049",
+   "label": "Sudan",
+   "links": 334,
+   "value": 1840687000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sudan",
+   "capital": [
+    "Hartum"
+   ],
+   "tr_views": 91321
+  },
+  {
+   "qid": "Q1049",
+   "label": "Sudan",
+   "links": 334,
+   "value": 1886068000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sudan",
+   "capital": [
+    "Hartum"
+   ],
+   "tr_views": 91321
+  },
+  {
+   "qid": "Q928",
+   "label": "Filipinler",
+   "links": 334,
+   "value": 343448000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Filipinler",
+   "capital": [
+    "Manila"
+   ],
+   "tr_views": 84956
+  },
+  {
+   "qid": "Q974",
+   "label": "Kongo Demokratik Cumhuriyeti",
+   "links": 334,
+   "value": 2344858000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kongo Demokratik Cumhuriyeti",
+   "capital": [
+    "Kinşasa"
+   ],
+   "tr_views": 140689
+  },
+  {
+   "qid": "Q228",
+   "label": "Andorra",
+   "links": 333,
+   "value": 468000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Andorra",
+   "capital": [
+    "Andorra la Vella"
+   ],
+   "tr_views": 69162
+  },
+  {
+   "qid": "Q334",
+   "label": "Singapur",
+   "links": 333,
+   "value": 719100000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Singapur",
+   "capital": [
+    "Singapur"
+   ],
+   "tr_views": 137567
+  },
+  {
+   "qid": "Q419",
+   "label": "Peru",
+   "links": 333,
+   "value": 1285216000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Peru",
+   "capital": [
+    "Lima"
+   ],
+   "tr_views": 48993
+  },
+  {
+   "qid": "Q215",
+   "label": "Slovenya",
+   "links": 331,
+   "value": 20271000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Slovenya",
+   "capital": [
+    "Ljubljana"
+   ],
+   "tr_views": 69287
+  },
+  {
+   "qid": "Q217",
+   "label": "Moldova",
+   "links": 331,
+   "value": 33843500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Moldova",
+   "capital": [
+    "Kişinev"
+   ],
+   "tr_views": 82044
+  },
+  {
+   "qid": "Q424",
+   "label": "Kamboçya",
+   "links": 331,
+   "value": 181035000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kamboçya",
+   "capital": [
+    "Phnom Penh"
+   ],
+   "tr_views": 72397
+  },
+  {
+   "qid": "Q822",
+   "label": "Lübnan",
+   "links": 329,
+   "value": 10452000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lübnan",
+   "capital": [
+    "Beyrut"
+   ],
+   "tr_views": 145642
+  },
+  {
+   "qid": "Q948",
+   "label": "Tunus",
+   "links": 328,
+   "value": 163610000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tunus",
+   "capital": [
+    "Tunus"
+   ],
+   "tr_views": 59378
+  },
+  {
+   "qid": "Q221",
+   "label": "Kuzey Makedonya",
+   "links": 327,
+   "value": 25713000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kuzey Makedonya",
+   "capital": [
+    "Üsküp"
+   ],
+   "tr_views": 161609
+  },
+  {
+   "qid": "Q233",
+   "label": "Malta",
+   "links": 327,
+   "value": 316000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Malta",
+   "capital": [
+    "Valletta"
+   ],
+   "tr_views": 102610
+  },
+  {
+   "qid": "Q1045",
+   "label": "Somali",
+   "links": 326,
+   "value": 637657000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Somali",
+   "capital": [
+    "Mogadişu"
+   ],
+   "tr_views": 78766
+  },
+  {
+   "qid": "Q117",
+   "label": "Gana",
+   "links": 326,
+   "value": 238535000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gana",
+   "capital": [
+    "Akra"
+   ],
+   "tr_views": 46272
+  },
+  {
+   "qid": "Q229",
+   "label": "Kıbrıs",
+   "links": 326,
+   "value": 9242450000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kıbrıs Cumhuriyeti",
+   "capital": [
+    "Lefkoşa"
+   ],
+   "tr_views": 189624
+  },
+  {
+   "qid": "Q77",
+   "label": "Uruguay",
+   "links": 324,
+   "value": 176215000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uruguay",
+   "capital": [
+    "Montevideo"
+   ],
+   "tr_views": 60228
+  },
+  {
+   "qid": "Q837",
+   "label": "Nepal",
+   "links": 324,
+   "value": 147181254346.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nepal",
+   "capital": [
+    "Katmandu"
+   ],
+   "tr_views": 102395
+  },
+  {
+   "qid": "Q236",
+   "label": "Karadağ",
+   "links": 323,
+   "value": 13883000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karadağ",
+   "capital": [
+    "Podgorica"
+   ],
+   "tr_views": 157469
+  },
+  {
+   "qid": "Q916",
+   "label": "Angola",
+   "links": 323,
+   "value": 1246700000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Angola",
+   "capital": [
+    "Luanda"
+   ],
+   "tr_views": 39641
+  },
+  {
+   "qid": "Q711",
+   "label": "Moğolistan",
+   "links": 322,
+   "value": 1564116000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Moğolistan",
+   "capital": [
+    "Ulan Batur"
+   ],
+   "tr_views": 109724
+  },
+  {
+   "qid": "Q1019",
+   "label": "Madagaskar",
+   "links": 321,
+   "value": 587295000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Madagaskar",
+   "capital": [
+    "Antananarivo"
+   ],
+   "tr_views": 72794
+  },
+  {
+   "qid": "Q235",
+   "label": "Monako",
+   "links": 321,
+   "value": 2080000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Monako",
+   "capital": [
+    "Monako"
+   ],
+   "tr_views": 146196
+  },
+  {
+   "qid": "Q813",
+   "label": "Kırgızistan",
+   "links": 320,
+   "value": 199951000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kırgızistan",
+   "capital": [
+    "Bişkek"
+   ],
+   "tr_views": 92115
+  },
+  {
+   "qid": "Q878",
+   "label": "Birleşik Arap Emirlikleri",
+   "links": 320,
+   "value": 83600000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Birleşik Arap Emirlikleri",
+   "capital": [
+    "Abu Dabi"
+   ],
+   "tr_views": 171771
+  },
+  {
+   "qid": "Q924",
+   "label": "Tanzanya",
+   "links": 320,
+   "value": 947303000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tanzanya",
+   "capital": [
+    "Dodoma"
+   ],
+   "tr_views": 72114
+  },
+  {
+   "qid": "Q954",
+   "label": "Zimbabve",
+   "links": 320,
+   "value": 390757000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zimbabve",
+   "capital": [
+    "Harare"
+   ],
+   "tr_views": 30469
+  },
+  {
+   "qid": "Q657",
+   "label": "Çad",
+   "links": 318,
+   "value": 1284000000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çad",
+   "capital": [
+    "Encemine"
+   ],
+   "tr_views": 42577
+  },
+  {
+   "qid": "Q836",
+   "label": "Myanmar",
+   "links": 318,
+   "value": 676577200000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Myanmar",
+   "capital": [
+    "Naypyidaw"
+   ],
+   "tr_views": 61222
+  },
+  {
+   "qid": "Q347",
+   "label": "Lihtenştayn",
+   "links": 316,
+   "value": 160000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lihtenştayn",
+   "capital": [
+    "Vaduz"
+   ],
+   "tr_views": 138110
+  },
+  {
+   "qid": "Q736",
+   "label": "Ekvador",
+   "links": 316,
+   "value": 255586910000.0,
+   "rank": "normal",
+   "value_year": 2010,
+   "tr_title": "Ekvador",
+   "capital": [
+    "Quito"
+   ],
+   "tr_views": 48732
+  },
+  {
+   "qid": "Q736",
+   "label": "Ekvador",
+   "links": 316,
+   "value": 257204270000.0,
+   "rank": "preferred",
+   "value_year": 2022,
+   "tr_title": "Ekvador",
+   "capital": [
+    "Quito"
+   ],
+   "tr_views": 48732
+  },
+  {
+   "qid": "Q805",
+   "label": "Yemen",
+   "links": 316,
+   "value": 455503000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yemen",
+   "capital": [
+    "Aden",
+    "Sana'a"
+   ],
+   "tr_views": 79841
+  },
+  {
+   "qid": "Q819",
+   "label": "Laos",
+   "links": 316,
+   "value": 236800000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Laos",
+   "capital": [
+    "Vientiane"
+   ],
+   "tr_views": 44644
+  },
+  {
+   "qid": "Q1030",
+   "label": "Namibya",
+   "links": 315,
+   "value": 825615000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Namibya",
+   "capital": [
+    "Windhoek"
+   ],
+   "tr_views": 31497
+  },
+  {
+   "qid": "Q963",
+   "label": "Botsvana",
+   "links": 315,
+   "value": 581737000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Botsvana",
+   "capital": [
+    "Gaborone"
+   ],
+   "tr_views": 27091
+  },
+  {
+   "qid": "Q1009",
+   "label": "Kamerun",
+   "links": 314,
+   "value": 475442000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kamerun",
+   "capital": [
+    "Yaunde"
+   ],
+   "tr_views": 44215
+  },
+  {
+   "qid": "Q238",
+   "label": "San Marino",
+   "links": 314,
+   "value": 61200000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "San Marino",
+   "capital": [
+    "San Marino"
+   ],
+   "tr_views": 50526
+  },
+  {
+   "qid": "Q810",
+   "label": "Ürdün",
+   "links": 314,
+   "value": 89341000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ürdün",
+   "capital": [
+    "Amman"
+   ],
+   "tr_views": 84300
+  },
+  {
+   "qid": "Q865",
+   "label": "Tayvan",
+   "links": 314,
+   "value": 36193000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tayvan",
+   "capital": [
+    "Taipei"
+   ],
+   "tr_views": 112160
+  },
+  {
+   "qid": "Q1008",
+   "label": "Fildişi Sahili",
+   "links": 313,
+   "value": 322463000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fildişi Sahili",
+   "capital": [
+    "Yamoussoukro"
+   ],
+   "tr_views": 89905
+  },
+  {
+   "qid": "Q423",
+   "label": "Kuzey Kore",
+   "links": 313,
+   "value": 120540000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kuzey Kore",
+   "capital": [
+    "Pyongyang"
+   ],
+   "tr_views": 148849
+  },
+  {
+   "qid": "Q750",
+   "label": "Bolivya",
+   "links": 313,
+   "value": 1098581000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bolivya",
+   "capital": [
+    "La Paz",
+    "Sucre"
+   ],
+   "tr_views": 50947
+  },
+  {
+   "qid": "Q1036",
+   "label": "Uganda",
+   "links": 312,
+   "value": 241038000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uganda",
+   "capital": [
+    "Kampala"
+   ],
+   "tr_views": 204305
+  },
+  {
+   "qid": "Q241",
+   "label": "Küba",
+   "links": 312,
+   "value": 109884000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küba",
+   "capital": [
+    "Havana"
+   ],
+   "tr_views": 112598
+  },
+  {
+   "qid": "Q733",
+   "label": "Paraguay",
+   "links": 312,
+   "value": 406756000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Paraguay",
+   "capital": [
+    "Asunción"
+   ],
+   "tr_views": 124216
+  },
+  {
+   "qid": "Q912",
+   "label": "Mali",
+   "links": 312,
+   "value": 1240192000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mali",
+   "capital": [
+    "Bamako"
+   ],
+   "tr_views": 49059
+  },
+  {
+   "qid": "Q265",
+   "label": "Özbekistan",
+   "links": 310,
+   "value": 448978000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Özbekistan",
+   "capital": [
+    "Taşkent"
+   ],
+   "tr_views": 156989
+  },
+  {
+   "qid": "Q1041",
+   "label": "Senegal",
+   "links": 309,
+   "value": 196722000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Senegal",
+   "capital": [
+    "Dakar"
+   ],
+   "tr_views": 97640
+  },
+  {
+   "qid": "Q854",
+   "label": "Sri Lanka",
+   "links": 309,
+   "value": 65610000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sri Lanka",
+   "capital": [
+    "Kolombo",
+    "Sri Jayawardenapura-Kotte"
+   ],
+   "tr_views": 85358
+  },
+  {
+   "qid": "Q953",
+   "label": "Zambiya",
+   "links": 309,
+   "value": 752618000000.0,
+   "rank": "normal",
+   "value_year": 2004,
+   "tr_title": "Zambiya",
+   "capital": [
+    "Lusaka"
+   ],
+   "tr_views": 19486
+  },
+  {
+   "qid": "Q965",
+   "label": "Burkina Faso",
+   "links": 309,
+   "value": 274200000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Burkina Faso",
+   "capital": [
+    "Ouagadougou"
+   ],
+   "tr_views": 62473
+  },
+  {
+   "qid": "Q962",
+   "label": "Benin",
+   "links": 308,
+   "value": 114763000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Benin",
+   "capital": [
+    "Porto-Novo"
+   ],
+   "tr_views": 35027
+  },
+  {
+   "qid": "Q863",
+   "label": "Tacikistan",
+   "links": 307,
+   "value": 143100000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tacikistan",
+   "capital": [
+    "Duşanbe"
+   ],
+   "tr_views": 82048
+  },
+  {
+   "qid": "Q986",
+   "label": "Eritre",
+   "links": 307,
+   "value": 117600000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eritre",
+   "capital": [
+    "Asmara"
+   ],
+   "tr_views": 48733
+  },
+  {
+   "qid": "Q398",
+   "label": "Bahreyn",
+   "links": 306,
+   "value": 786500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bahreyn",
+   "capital": [
+    "Mename"
+   ],
+   "tr_views": 103045
+  },
+  {
+   "qid": "Q817",
+   "label": "Kuveyt",
+   "links": 306,
+   "value": 17818000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kuveyt",
+   "capital": [
+    "Kuveyt"
+   ],
+   "tr_views": 62908
+  },
+  {
+   "qid": "Q1025",
+   "label": "Moritanya",
+   "links": 305,
+   "value": 1030700000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Moritanya",
+   "capital": [
+    "Nuakşot"
+   ],
+   "tr_views": 51390
+  },
+  {
+   "qid": "Q917",
+   "label": "Butan",
+   "links": 305,
+   "value": 38394000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bhutan",
+   "capital": [
+    "Thimphu"
+   ],
+   "tr_views": 47217
+  },
+  {
+   "qid": "Q1037",
+   "label": "Ruanda",
+   "links": 303,
+   "value": 26338000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ruanda",
+   "capital": [
+    "Kigali"
+   ],
+   "tr_views": 39348
+  },
+  {
+   "qid": "Q804",
+   "label": "Panama",
+   "links": 303,
+   "value": 74177300000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Panama",
+   "capital": [
+    "Panama"
+   ],
+   "tr_views": 44603
+  },
+  {
+   "qid": "Q967",
+   "label": "Burundi",
+   "links": 303,
+   "value": 27834000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Burundi",
+   "capital": [
+    "Gietaga"
+   ],
+   "tr_views": 32329
+  },
+  {
+   "qid": "Q1032",
+   "label": "Nijer",
+   "links": 302,
+   "value": 1267000000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nijer",
+   "capital": [
+    "Niamey"
+   ],
+   "tr_views": 40264
+  },
+  {
+   "qid": "Q800",
+   "label": "Kosta Rika",
+   "links": 302,
+   "value": 51179920000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kosta Rika",
+   "capital": [
+    "San José"
+   ],
+   "tr_views": 32477
+  },
+  {
+   "qid": "Q945",
+   "label": "Togo",
+   "links": 302,
+   "value": 56785000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Togo",
+   "capital": [
+    "Lomé"
+   ],
+   "tr_views": 24619
+  },
+  {
+   "qid": "Q1006",
+   "label": "Gine",
+   "links": 301,
+   "value": 245857000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gine",
+   "capital": [
+    "Konakri"
+   ],
+   "tr_views": 25574
+  },
+  {
+   "qid": "Q1029",
+   "label": "Mozambik",
+   "links": 301,
+   "value": 801590000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mozambik",
+   "capital": [
+    "Maputo"
+   ],
+   "tr_views": 39505
+  },
+  {
+   "qid": "Q929",
+   "label": "Orta Afrika Cumhuriyeti",
+   "links": 301,
+   "value": 622984000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Orta Afrika Cumhuriyeti",
+   "capital": [
+    "Bangui"
+   ],
+   "tr_views": 20349
+  },
+  {
+   "qid": "Q1005",
+   "label": "Gambiya",
+   "links": 300,
+   "value": 11300000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gambiya",
+   "capital": [
+    "Banjul"
+   ],
+   "tr_views": 28314
+  },
+  {
+   "qid": "Q971",
+   "label": "Kongo",
+   "links": 300,
+   "value": 342000000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kongo Cumhuriyeti",
+   "capital": [
+    "Brazzaville"
+   ],
+   "tr_views": 43572
+  },
+  {
+   "qid": "Q977",
+   "label": "Cibuti",
+   "links": 300,
+   "value": 23200000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cibuti",
+   "capital": [
+    "Cibuti"
+   ],
+   "tr_views": 43532
+  },
+  {
+   "qid": "Q1007",
+   "label": "Gine-Bissau",
+   "links": 299,
+   "value": 36125000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gine-Bissau",
+   "capital": [
+    "Bissau"
+   ],
+   "tr_views": 28016
+  },
+  {
+   "qid": "Q783",
+   "label": "Honduras",
+   "links": 299,
+   "value": 112492000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Honduras",
+   "capital": [
+    "Tegucigalpa"
+   ],
+   "tr_views": 29347
+  },
+  {
+   "qid": "Q874",
+   "label": "Türkmenistan",
+   "links": 299,
+   "value": 491210000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Türkmenistan",
+   "capital": [
+    "Aşkabat"
+   ],
+   "tr_views": 157486
+  },
+  {
+   "qid": "Q921",
+   "label": "Bruney",
+   "links": 298,
+   "value": 5765313533.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Brunei",
+   "capital": [
+    "Bandar Seri Begavan"
+   ],
+   "tr_views": 62050
+  },
+  {
+   "qid": "Q1020",
+   "label": "Malavi",
+   "links": 297,
+   "value": 118484000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Malavi",
+   "capital": [
+    "Lilongwe"
+   ],
+   "tr_views": 24125
+  },
+  {
+   "qid": "Q842",
+   "label": "Umman",
+   "links": 297,
+   "value": 309500000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Umman",
+   "capital": [
+    "Maskat"
+   ],
+   "tr_views": 139214
+  },
+  {
+   "qid": "Q1000",
+   "label": "Gabon",
+   "links": 295,
+   "value": 267667000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gabon",
+   "capital": [
+    "Libreville"
+   ],
+   "tr_views": 37562
+  },
+  {
+   "qid": "Q1044",
+   "label": "Sierra Leone",
+   "links": 294,
+   "value": 71740000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sierra Leone",
+   "capital": [
+    "Freetown"
+   ],
+   "tr_views": 36903
+  },
+  {
+   "qid": "Q1014",
+   "label": "Liberya",
+   "links": 292,
+   "value": 111369000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Liberya",
+   "capital": [
+    "Monrovia"
+   ],
+   "tr_views": 39391
+  },
+  {
+   "qid": "Q1011",
+   "label": "Cabo Verde",
+   "links": 291,
+   "value": 4033000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeşil Burun Adaları",
+   "capital": [
+    "Praia"
+   ],
+   "tr_views": 407347
+  },
+  {
+   "qid": "Q574",
+   "label": "Doğu Timor",
+   "links": 291,
+   "value": 14918720000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Doğu Timor",
+   "capital": [
+    "Dili"
+   ],
+   "tr_views": 32307
+  },
+  {
+   "qid": "Q790",
+   "label": "Haiti",
+   "links": 291,
+   "value": 27750000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Haiti",
+   "capital": [
+    "Port-au-Prince"
+   ],
+   "tr_views": 62907
+  },
+  {
+   "qid": "Q846",
+   "label": "Katar",
+   "links": 291,
+   "value": 11437000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Katar",
+   "capital": [
+    "Doha"
+   ],
+   "tr_views": 76788
+  },
+  {
+   "qid": "Q826",
+   "label": "Maldivler",
+   "links": 290,
+   "value": 298000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Maldivler",
+   "capital": [
+    "Malé"
+   ],
+   "tr_views": 82130
+  },
+  {
+   "qid": "Q730",
+   "label": "Surinam",
+   "links": 288,
+   "value": 163270000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Surinam",
+   "capital": [
+    "Paramaribo"
+   ],
+   "tr_views": 53258
+  },
+  {
+   "qid": "Q792",
+   "label": "El Salvador",
+   "links": 287,
+   "value": 21041000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "El Salvador",
+   "capital": [
+    "San Salvador"
+   ],
+   "tr_views": 51804
+  },
+  {
+   "qid": "Q1050",
+   "label": "Esvatini",
+   "links": 286,
+   "value": 17364000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Esvatini",
+   "capital": [
+    "Lobamba",
+    "Mbabane"
+   ],
+   "tr_views": 35624
+  },
+  {
+   "qid": "Q734",
+   "label": "Guyana",
+   "links": 286,
+   "value": 214970000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Guyana",
+   "capital": [
+    "Georgetown"
+   ],
+   "tr_views": 38048
+  },
+  {
+   "qid": "Q691",
+   "label": "Papua Yeni Gine",
+   "links": 285,
+   "value": 462840000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Papua Yeni Gine",
+   "capital": [
+    "Port Moresby"
+   ],
+   "tr_views": 38704
+  },
+  {
+   "qid": "Q970",
+   "label": "Komorlar",
+   "links": 284,
+   "value": 2034000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Komorlar",
+   "capital": [
+    "Moroni"
+   ],
+   "tr_views": 27931
+  },
+  {
+   "qid": "Q983",
+   "label": "Ekvator Ginesi",
+   "links": 284,
+   "value": 28051000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ekvator Ginesi",
+   "capital": [
+    "Ciudad de la Paz"
+   ],
+   "tr_views": 27710
+  },
+  {
+   "qid": "Q1027",
+   "label": "Mauritius",
+   "links": 283,
+   "value": 2040000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mauritius",
+   "capital": [
+    "Port Louis"
+   ],
+   "tr_views": 96579
+  },
+  {
+   "qid": "Q1246",
+   "label": "Kosova",
+   "links": 283,
+   "value": 10909000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kosova",
+   "capital": [
+    "Priştine"
+   ],
+   "tr_views": 349334
+  },
+  {
+   "qid": "Q811",
+   "label": "Nikaragua",
+   "links": 282,
+   "value": 120340000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nikaragua",
+   "capital": [
+    "Managua"
+   ],
+   "tr_views": 33732
+  },
+  {
+   "qid": "Q958",
+   "label": "Güney Sudan",
+   "links": 282,
+   "value": 644329000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Güney Sudan",
+   "capital": [
+    "Cuba"
+   ],
+   "tr_views": 36407
+  },
+  {
+   "qid": "Q242",
+   "label": "Belize",
+   "links": 281,
+   "value": 22966000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Belize",
+   "capital": [
+    "Belmopán"
+   ],
+   "tr_views": 25437
+  },
+  {
+   "qid": "Q766",
+   "label": "Jamaika",
+   "links": 281,
+   "value": 10991909540.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Jamaika",
+   "capital": [
+    "Kingston"
+   ],
+   "tr_views": 49885
+  },
+  {
+   "qid": "Q774",
+   "label": "Guatemala",
+   "links": 281,
+   "value": 108889000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Guatemala",
+   "capital": [
+    "Guatemala"
+   ],
+   "tr_views": 33914
+  },
+  {
+   "qid": "Q1013",
+   "label": "Lesotho",
+   "links": 280,
+   "value": 30355000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lesotho",
+   "capital": [
+    "Maseru"
+   ],
+   "tr_views": 31444
+  },
+  {
+   "qid": "Q712",
+   "label": "Fiji",
+   "links": 280,
+   "value": 18274000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fiji",
+   "capital": [
+    "Suva"
+   ],
+   "tr_views": 39845
+  },
+  {
+   "qid": "Q778",
+   "label": "Bahamalar",
+   "links": 280,
+   "value": 13878000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bahamalar",
+   "capital": [
+    "Nassau"
+   ],
+   "tr_views": 28913
+  },
+  {
+   "qid": "Q786",
+   "label": "Dominik Cumhuriyeti",
+   "links": 280,
+   "value": 48670820000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dominik Cumhuriyeti",
+   "capital": [
+    "Santo Domingo"
+   ],
+   "tr_views": 58671
+  },
+  {
+   "qid": "Q1042",
+   "label": "Seyşeller",
+   "links": 278,
+   "value": 459000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Seyşeller",
+   "capital": [
+    "Victoria"
+   ],
+   "tr_views": 51404
+  },
+  {
+   "qid": "Q244",
+   "label": "Barbados",
+   "links": 276,
+   "value": 439000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Barbados",
+   "capital": [
+    "Bridgetown"
+   ],
+   "tr_views": 32210
+  },
+  {
+   "qid": "Q1039",
+   "label": "São Tomé ve Príncipe",
+   "links": 274,
+   "value": 1001000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "São Tomé ve Príncipe",
+   "capital": [
+    "São Tomé"
+   ],
+   "tr_views": 17424
+  },
+  {
+   "qid": "Q781",
+   "label": "Antigua ve Barbuda",
+   "links": 266,
+   "value": 440290000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Antigua ve Barbuda",
+   "capital": [],
+   "tr_views": 17396
+  },
+  {
+   "qid": "Q697",
+   "label": "Nauru",
+   "links": 265,
+   "value": 21000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nauru",
+   "capital": [
+    "Yaren"
+   ],
+   "tr_views": 47475
+  },
+  {
+   "qid": "Q784",
+   "label": "Dominika",
+   "links": 265,
+   "value": 751096551.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dominika",
+   "capital": [
+    "Roseau"
+   ],
+   "tr_views": 15715
+  },
+  {
+   "qid": "Q686",
+   "label": "Vanuatu",
+   "links": 263,
+   "value": 12190000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vanuatu",
+   "capital": [
+    "Port Vila"
+   ],
+   "tr_views": 24438
+  },
+  {
+   "qid": "Q683",
+   "label": "Samoa",
+   "links": 261,
+   "value": 2842000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Samoa",
+   "capital": [
+    "Apia"
+   ],
+   "tr_views": 15235
+  },
+  {
+   "qid": "Q678",
+   "label": "Tonga",
+   "links": 260,
+   "value": 748506563.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tonga",
+   "capital": [
+    "Nuku'alofa"
+   ],
+   "tr_views": 16162
+  },
+  {
+   "qid": "Q695",
+   "label": "Palau",
+   "links": 256,
+   "value": 465550362.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Palau",
+   "capital": [
+    "Ngerulmud"
+   ],
+   "tr_views": 27321
+  },
+  {
+   "qid": "Q672",
+   "label": "Tuvalu",
+   "links": 252,
+   "value": 25140000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tuvalu",
+   "capital": [
+    "Funafuti"
+   ],
+   "tr_views": 33588
+  },
+  {
+   "qid": "Q754",
+   "label": "Trinidad ve Tobago",
+   "links": 251,
+   "value": 5128000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Trinidad ve Tobago",
+   "capital": [
+    "Port of Spain"
+   ],
+   "tr_views": 42933
+  },
+  {
+   "qid": "Q769",
+   "label": "Grenada",
+   "links": 251,
+   "value": 348500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Grenada",
+   "capital": [
+    "Saint George's"
+   ],
+   "tr_views": 19482
+  },
+  {
+   "qid": "Q710",
+   "label": "Kiribati",
+   "links": 249,
+   "value": 811000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kiribati",
+   "capital": [
+    "Güney Tarava"
+   ],
+   "tr_views": 23850
+  },
+  {
+   "qid": "Q685",
+   "label": "Solomon Adaları",
+   "links": 245,
+   "value": 28400000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Solomon Adaları",
+   "capital": [
+    "Honiara"
+   ],
+   "tr_views": 13322
+  },
+  {
+   "qid": "Q763",
+   "label": "Saint Kitts ve Nevis",
+   "links": 239,
+   "value": 269358763.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saint Kitts ve Nevis",
+   "capital": [
+    "Basseterre"
+   ],
+   "tr_views": 17042
+  },
+  {
+   "qid": "Q757",
+   "label": "Saint Vincent ve Grenadinler",
+   "links": 238,
+   "value": 389000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saint Vincent ve Grenadinler",
+   "capital": [
+    "Kingstown"
+   ],
+   "tr_views": 8429
+  },
+  {
+   "qid": "Q709",
+   "label": "Marshall Adaları",
+   "links": 236,
+   "value": 181430000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Marshall Adaları",
+   "capital": [
+    "Majuro"
+   ],
+   "tr_views": 16597
+  },
+  {
+   "qid": "Q760",
+   "label": "Saint Lucia",
+   "links": 235,
+   "value": 617012867.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saint Lucia",
+   "capital": [
+    "Castries"
+   ],
+   "tr_views": 16395
+  },
+  {
+   "qid": "Q219060",
+   "label": "Filistin",
+   "links": 225,
+   "value": 6020000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Filistin",
+   "capital": [
+    "Doğu Kudüs",
+    "Ramallah"
+   ],
+   "tr_views": 85350
+  },
+  {
+   "qid": "Q702",
+   "label": "Mikronezya",
+   "links": 221,
+   "value": 702000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mikronezya Federal Devletleri",
+   "capital": [
+    "Palikir"
+   ],
+   "tr_views": 18563
+  },
+  {
+   "qid": "Q34266",
+   "label": "Rus İmparatorluğu",
+   "links": 156,
+   "value": 21800251000000.0,
+   "rank": "normal",
+   "value_year": 1914,
+   "tr_title": "Rus İmparatorluğu",
+   "capital": [
+    "Sankt-Peterburg"
+   ],
+   "tr_views": 67490
+  },
+  {
+   "qid": "Q34266",
+   "label": "Rus İmparatorluğu",
+   "links": 156,
+   "value": 22800000000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rus İmparatorluğu",
+   "capital": [
+    "Sankt-Peterburg"
+   ],
+   "tr_views": 67490
+  },
+  {
+   "qid": "Q34266",
+   "label": "Rus İmparatorluğu",
+   "links": 156,
+   "value": 23700000000000.0,
+   "rank": "preferred",
+   "value_year": 1865,
+   "tr_title": "Rus İmparatorluğu",
+   "capital": [
+    "Sankt-Peterburg"
+   ],
+   "tr_views": 67490
+  },
+  {
+   "qid": "Q29999",
+   "label": "Hollanda Krallığı",
+   "links": 107,
+   "value": 42201000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hollanda Krallığı",
+   "capital": [
+    "Amsterdam"
+   ],
+   "tr_views": 51549
+  },
+  {
+   "qid": "Q172107",
+   "label": "Polonya-Litvanya Birliği",
+   "links": 104,
+   "value": 718000000000.0,
+   "rank": "normal",
+   "value_year": 1771,
+   "tr_title": "Polonya-Litvanya Birliği",
+   "capital": [
+    "Kraków",
+    "Varşova",
+    "Vilnius"
+   ],
+   "tr_views": 16264
+  },
+  {
+   "qid": "Q172107",
+   "label": "Polonya-Litvanya Birliği",
+   "links": 104,
+   "value": 865000000000.0,
+   "rank": "normal",
+   "value_year": 1580,
+   "tr_title": "Polonya-Litvanya Birliği",
+   "capital": [
+    "Kraków",
+    "Varşova",
+    "Vilnius"
+   ],
+   "tr_views": 16264
+  },
+  {
+   "qid": "Q172107",
+   "label": "Polonya-Litvanya Birliği",
+   "links": 104,
+   "value": 878000000000.0,
+   "rank": "normal",
+   "value_year": 1650,
+   "tr_title": "Polonya-Litvanya Birliği",
+   "capital": [
+    "Kraków",
+    "Varşova",
+    "Vilnius"
+   ],
+   "tr_views": 16264
+  },
+  {
+   "qid": "Q756617",
+   "label": "Danimarka",
+   "links": 55,
+   "value": 2220930000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Danimarka Krallığı",
+   "capital": [
+    "Kopenhag"
+   ],
+   "tr_views": 11513
+  }
+ ]
+}

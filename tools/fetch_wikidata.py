@@ -10,7 +10,11 @@ endpoint:
      Turkish Wikipedia article (keeps it fast and favours items a Turkish
      player may know). Ranked by sitelink count, a fame proxy.
   2. Details for the top candidates via VALUES: Turkish label, every
-     non-deprecated value statement with its rank, and extra fields.
+     non-deprecated value statement with its rank, extra fields and the
+     Turkish Wikipedia article title.
+Then the article's page views over the last 12 months are added
+(Wikimedia REST API). build_questions.py ranks by them: they say far more
+about what a Turkish player knows than sitelink counts.
 
 Each dataset is saved as tools/raw/<name>.json with one row per value
 statement, so build_questions.py can resolve ambiguous values itself.
@@ -29,9 +33,16 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ENDPOINT = "https://query.wikidata.org/sparql"
+PAGEVIEWS = (
+    "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/"
+    "tr.wikipedia.org/all-access/user/{title}/monthly/{start}/{end}"
+)
+# Last 12 full months before the fetch.
+VIEWS_START, VIEWS_END = "2025100100", "2026093000"
 USER_AGENT = "AralikQuestionBot/0.1 (https://github.com/YerdemA/aralik)"
 RAW_DIR = Path(__file__).resolve().parent / "raw"
 IN_TURKEY = "?item wdt:P17 wd:Q43 ."
+VIEWS_CACHE = RAW_DIR / "pageviews_cache.json"
 DETAIL_CHUNK = 60
 PAUSE_SECONDS = 2  # be polite to the public endpoint
 
@@ -39,6 +50,11 @@ MOUNTAIN_TYPES = ("Q8502", "Q8072", "Q169358")  # mountain, volcano, stratovolca
 RIVER_TYPES = ("Q4022",)  # river
 # skyscraper, tower, lattice tower, television tower, pyramid, colossal statue, dam
 STRUCTURE_TYPES = ("Q11303", "Q12518", "Q1440476", "Q11166728", "Q12516", "Q1779653", "Q12323")
+UNIVERSITY_TYPES = ("Q3918", "Q875538", "Q902104")  # university, public, private
+CLUB_TYPES = ("Q476028", "Q847017")  # association football club, sports club
+HISTORIC_BUILDING_TYPES = ("Q32815", "Q23413", "Q16560")  # mosque, castle, palace
+BRIDGE_TYPES = ("Q12280", "Q12570", "Q158555")  # bridge, suspension, cable-stayed
+STADIUM_TYPES = ("Q483110", "Q1154710", "Q1049757")  # stadium, football, multi-purpose
 
 
 @dataclass(frozen=True)
@@ -47,7 +63,7 @@ class Dataset:
     description: str
     # instance of (P31) any of these types.
     types: tuple[str, ...]
-    # Quantity property of the question, e.g. P2044 (elevation).
+    # Property of the question, e.g. P2044 (elevation) or P571 (inception).
     prop: str
     # Keep only the N candidates with the most sitelinks.
     limit: int
@@ -61,6 +77,8 @@ class Dataset:
     # mountains). False: a single query over all types, left to the
     # optimizer, which is much faster for the structure types.
     per_type_scan: bool = True
+    # "quantity" or "year" (a date property; only year precision or finer).
+    value_kind: str = "quantity"
 
 
 DATASETS = [
@@ -69,16 +87,17 @@ DATASETS = [
         description="Türkiye'deki dağlar, yükseklik (P2044)",
         types=MOUNTAIN_TYPES,
         prop="P2044",
-        limit=80,
+        limit=150,
         where=IN_TURKEY,
         extras={"place": ("wdt:P131", "label")},
+        per_type_scan=False,
     ),
     Dataset(
         name="mountains_world",
         description="Dünyadaki bilinen dağlar, yükseklik (P2044)",
         types=MOUNTAIN_TYPES,
         prop="P2044",
-        limit=120,
+        limit=200,
         extras={"country": ("wdt:P17", "label")},
     ),
     Dataset(
@@ -86,16 +105,17 @@ DATASETS = [
         description="Türkiye'den geçen nehirler, uzunluk (P2043)",
         types=RIVER_TYPES,
         prop="P2043",
-        limit=60,
+        limit=100,
         where=IN_TURKEY,
         extras={"mouth": ("wdt:P403", "label")},
+        per_type_scan=False,
     ),
     Dataset(
         name="rivers_world",
         description="Dünyadaki bilinen nehirler, uzunluk (P2043)",
         types=RIVER_TYPES,
         prop="P2043",
-        limit=120,
+        limit=200,
         extras={"mouth": ("wdt:P403", "label"), "country": ("wdt:P17", "label")},
     ),
     Dataset(
@@ -112,7 +132,7 @@ DATASETS = [
         description="Türkiye'deki yapılar, yükseklik (P2048)",
         types=STRUCTURE_TYPES,
         prop="P2048",
-        limit=80,
+        limit=150,
         where=IN_TURKEY,
         extras={"place": ("wdt:P131", "label"), "opened": ("wdt:P1619", "year")},
         per_type_scan=False,
@@ -122,13 +142,122 @@ DATASETS = [
         description="Dünyadaki önemli yapılar, yükseklik (P2048)",
         types=STRUCTURE_TYPES,
         prop="P2048",
-        limit=120,
+        limit=200,
         extras={
             "place": ("wdt:P131", "label"),
             "country": ("wdt:P17", "label"),
             "opened": ("wdt:P1619", "year"),
         },
         per_type_scan=False,
+    ),
+    Dataset(
+        name="bridges_tr",
+        description="Türkiye'deki köprüler, uzunluk (P2043)",
+        types=BRIDGE_TYPES,
+        prop="P2043",
+        limit=120,
+        where=IN_TURKEY,
+        extras={"place": ("wdt:P131", "label"), "opened": ("wdt:P1619", "year")},
+        per_type_scan=False,
+    ),
+    Dataset(
+        name="lakes_tr",
+        description="Türkiye'deki göller, yüzölçümü (P2046)",
+        types=("Q23397",),
+        prop="P2046",
+        limit=100,
+        where=IN_TURKEY,
+        extras={"place": ("wdt:P131", "label")},
+        per_type_scan=False,
+    ),
+    Dataset(
+        name="stadiums_tr",
+        description="Türkiye'deki stadyumlar, kapasite (P1083)",
+        types=STADIUM_TYPES,
+        prop="P1083",
+        limit=100,
+        where=IN_TURKEY,
+        normalized=False,
+        extras={"place": ("wdt:P131", "label")},
+        per_type_scan=False,
+    ),
+    Dataset(
+        name="countries_population",
+        description="Egemen devletler, nüfus (P1082)",
+        types=("Q3624078",),
+        prop="P1082",
+        limit=200,
+        normalized=False,
+        extras={"capital": ("wdt:P36", "label")},
+        per_type_scan=False,
+    ),
+    Dataset(
+        name="countries_area",
+        description="Egemen devletler, yüzölçümü (P2046)",
+        types=("Q3624078",),
+        prop="P2046",
+        limit=200,
+        extras={"capital": ("wdt:P36", "label")},
+        per_type_scan=False,
+    ),
+    Dataset(
+        name="clubs_tr",
+        description="Türkiye'deki spor kulüpleri, kuruluş yılı (P571)",
+        types=CLUB_TYPES,
+        prop="P571",
+        limit=120,
+        where=IN_TURKEY,
+        extras={"place": ("wdt:P131", "label")},
+        per_type_scan=False,
+        value_kind="year",
+    ),
+    Dataset(
+        name="universities_tr",
+        description="Türkiye'deki üniversiteler, kuruluş yılı (P571)",
+        types=UNIVERSITY_TYPES,
+        prop="P571",
+        limit=150,
+        where=IN_TURKEY,
+        extras={"place": ("wdt:P131", "label")},
+        per_type_scan=False,
+        value_kind="year",
+    ),
+    Dataset(
+        name="historic_buildings_tr",
+        description="Türkiye'deki cami, kale ve saraylar, yapım yılı (P571)",
+        types=HISTORIC_BUILDING_TYPES,
+        prop="P571",
+        limit=200,
+        where=IN_TURKEY,
+        extras={"place": ("wdt:P131", "label")},
+        per_type_scan=False,
+        value_kind="year",
+    ),
+    Dataset(
+        name="battles",
+        description="Muharebeler, tarih (P585)",
+        types=("Q178561",),
+        prop="P585",
+        limit=250,
+        value_kind="year",
+    ),
+    Dataset(
+        name="wars",
+        description="Savaşlar, başlangıç (P580)",
+        types=("Q198",),
+        prop="P580",
+        limit=200,
+        value_kind="year",
+    ),
+    Dataset(
+        name="earthquakes_tr",
+        description="Türkiye'deki depremler, tarih (P585)",
+        types=("Q7944",),
+        prop="P585",
+        limit=100,
+        where=IN_TURKEY,
+        per_type_scan=False,
+        value_kind="year",
     ),
 ]
 
@@ -162,9 +291,17 @@ LIMIT {ds.limit}
 
 
 def details_query(ds: Dataset, qids: list[str]) -> str:
-    value_path = (
-        f"psn:{ds.prop}/wikibase:quantityAmount" if ds.normalized else f"ps:{ds.prop}"
-    )
+    if ds.value_kind == "year":
+        # Only dates known at least to the year (precision 9 = year).
+        value_pattern = (
+            f"psv:{ds.prop} [ wikibase:timeValue ?date ; wikibase:timePrecision ?precision ] .\n"
+            "  FILTER(?precision >= 9)\n"
+            "  BIND(YEAR(?date) AS ?value)"
+        )
+    elif ds.normalized:
+        value_pattern = f"psn:{ds.prop}/wikibase:quantityAmount ?value ."
+    else:
+        value_pattern = f"ps:{ds.prop} ?value ."
     extra_select = []
     extra_where = []
     for name, (path, kind) in ds.extras.items():
@@ -184,12 +321,13 @@ def details_query(ds: Dataset, qids: list[str]) -> str:
     extras = "\n  ".join(extra_where)
 
     return f"""
-SELECT ?item ?label ?value ?rank ?valueYear {' '.join(extra_select)} WHERE {{
+SELECT ?item ?label ?value ?rank ?valueYear (SAMPLE(?title_v) AS ?title) {' '.join(extra_select)} WHERE {{
   VALUES ?item {{ {values} }}
   ?item rdfs:label ?label . FILTER(LANG(?label) = "tr")
   ?item p:{ds.prop} ?st .
-  ?st wikibase:rank ?rank ; {value_path} ?value .
+  ?st wikibase:rank ?rank ; {value_pattern}
   FILTER(?rank != wikibase:DeprecatedRank)
+  OPTIONAL {{ ?article schema:about ?item ; schema:isPartOf <https://tr.wikipedia.org/> ; schema:name ?title_v . }}
   OPTIONAL {{ ?st pq:P585 ?time . BIND(YEAR(?time) AS ?valueYear) }}
   {extras}
 }}
@@ -254,6 +392,7 @@ def simplify(ds: Dataset, binding: dict, links: int) -> dict:
         "value": float(get("value")),
         "rank": "preferred" if get("rank").endswith("PreferredRank") else "normal",
         "value_year": int(get("valueYear")) if get("valueYear") else None,
+        "tr_title": get("title"),
     }
     for name, (_, kind) in ds.extras.items():
         raw = get(name)
@@ -271,6 +410,7 @@ def fetch(ds: Dataset) -> Path:
         for b in run_query(details_query(ds, chunk)):
             rows.append(simplify(ds, b, candidates[qid_of(b)]))
         time.sleep(PAUSE_SECONDS)
+    add_page_views(rows, "tr_title", "tr_views")
     rows.sort(key=lambda r: (-r["links"], r["qid"], r["value"]))
 
     out = RAW_DIR / f"{ds.name}.json"
@@ -287,26 +427,61 @@ def fetch(ds: Dataset) -> Path:
     return out
 
 
+def page_views(titles: set[str]) -> dict[str, int]:
+    """12-month Turkish Wikipedia page views per article title (cached)."""
+    cache = json.loads(VIEWS_CACHE.read_text(encoding="utf-8")) if VIEWS_CACHE.exists() else {}
+    known = cache.setdefault(f"{VIEWS_START}-{VIEWS_END}", {})
+    missing = sorted(t for t in titles if t not in known)
+    for i, title in enumerate(missing):
+        url = PAGEVIEWS.format(
+            title=urllib.parse.quote(title.replace(" ", "_"), safe=""),
+            start=VIEWS_START,
+            end=VIEWS_END,
+        )
+        request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                items = json.load(response)["items"]
+            known[title] = sum(item["views"] for item in items)
+        except urllib.error.HTTPError as error:
+            if error.code != 404:  # 404: no views recorded
+                raise
+            known[title] = 0
+        time.sleep(0.05)
+        if i % 50 == 49:
+            print(f"    okunma sayıları: {i + 1}/{len(missing)}", flush=True)
+            VIEWS_CACHE.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
+    VIEWS_CACHE.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
+    return {t: known[t] for t in titles}
+
+
+def add_page_views(rows: list[dict], title_key: str, views_key: str) -> None:
+    views = page_views({r[title_key] for r in rows if r.get(title_key)})
+    for row in rows:
+        row[views_key] = views.get(row.get(title_key) or "", 0)
+
+
 # Coordinates for on-device distance questions (see tools/build_places.py).
 # One row per coordinate statement; the builder drops ambiguous places.
 PLACE_QUERIES = {
     "places_tr": (
         "Türkiye il merkezleri, koordinat (P625)",
         """
-SELECT ?province ?plate ?city ?cityLabel ?lat ?lon WHERE {
+SELECT ?province ?plate ?city ?cityLabel ?cityTitle ?lat ?lon WHERE {
   ?province wdt:P31 wd:Q48336 ; wdt:P36 ?city .
   OPTIONAL { ?province wdt:P395 ?plate . }
   ?city p:P625 ?st .
   ?st wikibase:rank ?rank ; psv:P625 [ wikibase:geoLatitude ?lat ; wikibase:geoLongitude ?lon ] .
   FILTER(?rank != wikibase:DeprecatedRank)
   ?city rdfs:label ?cityLabel . FILTER(LANG(?cityLabel) = "tr")
+  OPTIONAL { ?cityArticle schema:about ?city ; schema:isPartOf <https://tr.wikipedia.org/> ; schema:name ?cityTitle . }
 }
 """,
     ),
     "places_world": (
         "Egemen devletlerin başkentleri, koordinat (P625)",
         """
-SELECT ?country ?countryLabel ?links ?city ?cityLabel ?lat ?lon WHERE {
+SELECT ?country ?countryLabel ?links ?city ?cityLabel ?cityTitle ?lat ?lon WHERE {
   ?country wdt:P31 wd:Q3624078 ; wdt:P36 ?city ; wikibase:sitelinks ?links .
   FILTER NOT EXISTS { ?country wdt:P576 [] . }
   ?country rdfs:label ?countryLabel . FILTER(LANG(?countryLabel) = "tr")
@@ -314,6 +489,7 @@ SELECT ?country ?countryLabel ?links ?city ?cityLabel ?lat ?lon WHERE {
   ?st wikibase:rank ?rank ; psv:P625 [ wikibase:geoLatitude ?lat ; wikibase:geoLongitude ?lon ] .
   FILTER(?rank != wikibase:DeprecatedRank)
   ?city rdfs:label ?cityLabel . FILTER(LANG(?cityLabel) = "tr")
+  OPTIONAL { ?cityArticle schema:about ?city ; schema:isPartOf <https://tr.wikipedia.org/> ; schema:name ?cityTitle . }
 }
 """,
     ),
@@ -331,7 +507,8 @@ def fetch_places(name: str) -> Path:
                 value = value.rsplit("/", 1)[-1]
             row[key] = value
         rows.append(row)
-    rows.sort(key=lambda r: tuple(sorted(r.items())))
+    add_page_views(rows, "cityTitle", "city_views")
+    rows.sort(key=lambda r: tuple(sorted((k, str(v)) for k, v in r.items())))
     out = RAW_DIR / f"{name}.json"
     payload = {
         "dataset": name,

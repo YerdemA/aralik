@@ -21,7 +21,11 @@ RAW_DIR = ROOT / "tools" / "raw"
 OUT_PATH = ROOT / "assets" / "data" / "places.json"
 
 MAX_SPREAD_KM = 5
-WORLD_LIMIT = 100  # best-known capitals by sitelink count
+# Capitals by Turkish Wikipedia reads: Paris yes, Paramaribo no.
+WORLD_LIMIT = 40
+# The best-read province capitals also pair with world capitals
+# ("İstanbul ile Londra arası").
+MAJOR_TR_CITIES = 15
 
 
 def km(a: tuple[float, float], b: tuple[float, float]) -> float:
@@ -56,8 +60,19 @@ def turkish_places() -> list[dict]:
             print(f"  atlandı (koordinatlar tutarsız): {city_rows[0]['cityLabel']}")
             continue
         places.append(
-            {"id": city, "name": city_rows[0]["cityLabel"], "lat": coordinate[0], "lon": coordinate[1]}
+            {
+                "id": city,
+                "name": city_rows[0]["cityLabel"],
+                "lat": coordinate[0],
+                "lon": coordinate[1],
+                "_views": max(int(r.get("city_views", 0)) for r in city_rows),
+            }
         )
+    by_views = sorted(places, key=lambda p: (-p["_views"], p["id"]))
+    for place in by_views[:MAJOR_TR_CITIES]:
+        place["major"] = True
+    for place in places:
+        del place["_views"]
     return places
 
 
@@ -79,7 +94,7 @@ def world_places() -> list[dict]:
         city = country_rows[0]
         candidates.append(
             (
-                int(city["links"]),
+                max(int(r.get("city_views", 0)) for r in country_rows),
                 {
                     "id": city["city"],
                     "name": city["cityLabel"],
@@ -108,7 +123,8 @@ def main() -> int:
     OUT_PATH.write_text(
         json.dumps(payload, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8"
     )
-    pairs = len(tr) * (len(tr) - 1) // 2 + len(world) * (len(world) - 1) // 2
+    major = sum(1 for p in tr if p.get("major"))
+    pairs = len(tr) * (len(tr) - 1) // 2 + len(world) * (len(world) - 1) // 2 + major * len(world)
     size = OUT_PATH.stat().st_size
     print(f"{len(tr)} il merkezi, {len(world)} başkent, ~{pairs} mesafe çifti, {size / 1024:.1f} KB")
     print(f"Yazıldı: {OUT_PATH.relative_to(ROOT)}")

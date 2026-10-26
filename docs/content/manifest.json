@@ -1,0 +1,9 @@
+{
+ "version": 1,
+ "questions": "questions.json",
+ "places": "places.json",
+ "hashes": {
+  "questions.json": "d37f0f71b73672bfcfc1d24209bd0c7cdc921f201f5ac936204e7c7add777832",
+  "places.json": "9c6f6f8b3b361e167cca743f3bf668a008730d93335914d57bf1b283058c2617"
+ }
+}

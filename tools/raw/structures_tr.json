@@ -2,7 +2,7 @@
  "dataset": "structures_tr",
  "description": "Türkiye'deki yapılar, yükseklik (P2048)",
  "property": "P2048",
- "fetched_at": "2026-10-24T14:41:06+00:00",
+ "fetched_at": "2026-10-26T10:04:47+00:00",
  "rows": [
   {
    "qid": "Q91274",
@@ -11,10 +11,12 @@
    "value": 62.59,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Galata Kulesi",
    "place": [
     "Beyoğlu"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 157180
   },
   {
    "qid": "Q166882",
@@ -23,12 +25,14 @@
    "value": 261.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Istanbul Sapphire",
    "place": [
     "İstanbul"
    ],
    "opened": [
     2011
-   ]
+   ],
+   "tr_views": 16470
   },
   {
    "qid": "Q753776",
@@ -37,13 +41,15 @@
    "value": 169.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Atatürk Barajı ve Hidroelektrik Santrali",
    "place": [
     "Adıyaman",
     "Bozova"
    ],
    "opened": [
     1992
-   ]
+   ],
+   "tr_views": 25143
   },
   {
    "qid": "Q853029",
@@ -52,11 +58,13 @@
    "value": 85.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Beyazıt Kulesi",
    "place": [
     "Fatih",
     "İstanbul"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 8926
   },
   {
    "qid": "Q48816032",
@@ -65,11 +73,13 @@
    "value": 42.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Atatürk Maskı (İzmir)",
    "place": [
     "Buca",
     "Konak"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 11452
   },
   {
    "qid": "Q1518263",
@@ -78,10 +88,12 @@
    "value": 53.2,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Seyhan Barajı ve Hidroelektrik Santrali",
    "place": [
     "Yüreğir"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 8276
   },
   {
    "qid": "Q28657490",
@@ -90,10 +102,12 @@
    "value": 369.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Çamlıca Kulesi",
    "place": [
     "Üsküdar"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 35625
   },
   {
    "qid": "Q1208733",
@@ -102,12 +116,14 @@
    "value": 311.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Rams Beyond",
    "place": [
     "İstanbul"
    ],
    "opened": [
     2015
-   ]
+   ],
+   "tr_views": 1179
   },
   {
    "qid": "Q12811774",
@@ -116,8 +132,10 @@
    "value": 163.4,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Selçuklu Kulesi",
    "place": [],
-   "opened": []
+   "opened": [],
+   "tr_views": 3416
   },
   {
    "qid": "Q4822225",
@@ -126,10 +144,12 @@
    "value": 142.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Hilton İzmir",
    "place": [
     "Konak"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 5003
   },
   {
    "qid": "Q30752740",
@@ -138,10 +158,12 @@
    "value": 216.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Mistral Ofis Kulesi",
    "place": [
     "Konak"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 4051
   },
   {
    "qid": "Q131388493",
@@ -150,10 +172,12 @@
    "value": 354.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "TCMB Kule",
    "place": [
     "Ümraniye"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 23624
   },
   {
    "qid": "Q104804875",
@@ -162,10 +186,12 @@
    "value": 301.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": null,
    "place": [
     "Ataşehir"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 0
   },
   {
    "qid": "Q116046933",
@@ -174,11 +200,13 @@
    "value": 25.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Mermer Kule",
    "place": [
     "Fatih",
     "İstanbul"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 1316
   },
   {
    "qid": "Q25472424",
@@ -187,12 +215,14 @@
    "value": 35.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Atatürk Maskı (Antalya)",
    "place": [
     "Kepez"
    ],
    "opened": [
     2008
-   ]
+   ],
+   "tr_views": 3042
   },
   {
    "qid": "Q3511624",
@@ -201,10 +231,12 @@
    "value": 153.6,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Süzer Plaza",
    "place": [
     "Şişli"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 14519
   },
   {
    "qid": "Q19312065",
@@ -213,11 +245,13 @@
    "value": 115.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Zeytinova Barajı",
    "place": [
     "Bayındır",
     "İzmir"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 432
   },
   {
    "qid": "Q19613310",
@@ -226,10 +260,12 @@
    "value": 98.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Çanakkale Televizyon Kulesi",
    "place": [
     "Çanakkale"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 1627
   },
   {
    "qid": "Q21600725",
@@ -238,10 +274,12 @@
    "value": 193.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Point Bornova",
    "place": [
     "İzmir"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 4256
   },
   {
    "qid": "Q49105436",
@@ -250,13 +288,15 @@
    "value": 197.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Atatürk Cumhuriyet Kulesi",
    "place": [
     "Ankara",
     "Keçiören"
    ],
    "opened": [
     2024
-   ]
+   ],
+   "tr_views": 5090
   },
   {
    "qid": "Q107717743",
@@ -265,10 +305,12 @@
    "value": 240.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": null,
    "place": [
     "Konak"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 0
   },
   {
    "qid": "Q113987374",
@@ -277,10 +319,12 @@
    "value": 150.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": null,
    "place": [
     "Ataşehir"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 0
   },
   {
    "qid": "Q116028173",
@@ -289,10 +333,12 @@
    "value": 168.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": null,
    "place": [
     "Şişli"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 0
   },
   {
    "qid": "Q122395199",
@@ -301,10 +347,12 @@
    "value": 5.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": null,
    "place": [
     "Selçuk"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 0
   },
   {
    "qid": "Q122492132",
@@ -313,10 +361,12 @@
    "value": 10.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": null,
    "place": [
     "Bornova"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 0
   },
   {
    "qid": "Q122492132",
@@ -325,10 +375,12 @@
    "value": 16.5,
    "rank": "normal",
    "value_year": null,
+   "tr_title": null,
    "place": [
     "Bornova"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 0
   },
   {
    "qid": "Q135471481",
@@ -337,10 +389,12 @@
    "value": 151.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": null,
    "place": [
     "Bayraklı"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 0
   },
   {
    "qid": "Q135471590",
@@ -349,10 +403,12 @@
    "value": 150.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": null,
    "place": [
     "Konak"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 0
   },
   {
    "qid": "Q135472629",
@@ -361,10 +417,12 @@
    "value": 143.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": null,
    "place": [
     "Konak"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 0
   },
   {
    "qid": "Q140967576",
@@ -373,10 +431,12 @@
    "value": 150.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": null,
    "place": [
     "Ataşehir"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 0
   },
   {
    "qid": "Q6009493",
@@ -385,10 +445,12 @@
    "value": 92.3,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Rahmanlar Barajı",
    "place": [
     "Ödemiş"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 592
   },
   {
    "qid": "Q6021330",
@@ -397,10 +459,12 @@
    "value": 132.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": null,
    "place": [
     "Selçuklu"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 0
   },
   {
    "qid": "Q6053142",
@@ -409,10 +473,12 @@
    "value": 51.6,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Salman Barajı",
    "place": [
     "Karaburun"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 355
   },
   {
    "qid": "Q89362207",
@@ -421,10 +487,12 @@
    "value": 154.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": null,
    "place": [
     "Konak"
    ],
-   "opened": []
+   "opened": [],
+   "tr_views": 0
   }
  ]
 }

@@ -1,695 +1,867 @@
 {
  "dataset": "places_tr",
  "description": "Türkiye il merkezleri, koordinat (P625)",
- "fetched_at": "2026-10-24T18:45:31+00:00",
+ "fetched_at": "2026-10-26T10:18:34+00:00",
  "rows": [
   {
-   "province": "Q483100",
    "city": "Q107401",
+   "cityTitle": "Sivas",
+   "province": "Q483100",
    "lat": "39.75",
    "lon": "37.016666666667",
    "cityLabel": "Sivas",
-   "plate": "58"
+   "plate": "58",
+   "city_views": 72215
   },
   {
-   "province": "Q131387",
    "city": "Q118995",
+   "cityTitle": "Muş",
+   "province": "Q131387",
    "lat": "38.733333333333",
    "lon": "41.491111111111",
    "cityLabel": "Muş",
-   "plate": "49"
+   "plate": "49",
+   "city_views": 36507
   },
   {
-   "province": "Q376797",
    "city": "Q122803",
+   "cityTitle": "Erzurum",
+   "province": "Q376797",
    "lat": "39.909722222222",
    "lon": "41.275555555556",
    "cityLabel": "Erzurum",
-   "plate": "25"
+   "plate": "25",
+   "city_views": 71170
   },
   {
-   "province": "Q83077",
    "city": "Q127063",
+   "cityTitle": "Kars",
+   "province": "Q83077",
    "lat": "40.607777777778",
    "lon": "43.095833333333",
    "cityLabel": "Kars",
-   "plate": "36"
+   "plate": "36",
+   "city_views": 67825
   },
   {
-   "province": "Q83965",
    "city": "Q129649",
+   "cityTitle": "İzmit",
+   "province": "Q83965",
    "lat": "40.7718818",
    "lon": "29.9497846",
    "cityLabel": "İzmit",
-   "plate": "41"
+   "plate": "41",
+   "city_views": 47695
   },
   {
-   "province": "Q647378",
    "city": "Q131495",
+   "cityTitle": "Şırnak",
+   "province": "Q647378",
    "lat": "37.516388888889",
    "lon": "42.461111111111",
    "cityLabel": "Şırnak",
-   "plate": "73"
+   "plate": "73",
+   "city_views": 26933
   },
   {
-   "province": "Q388469",
    "city": "Q133118",
+   "cityTitle": "Şanlıurfa",
+   "province": "Q388469",
    "lat": "37.158333333333",
    "lon": "38.791666666667",
    "cityLabel": "Şanlıurfa",
-   "plate": "63"
+   "plate": "63",
+   "city_views": 78804
   },
   {
-   "province": "Q132637",
    "city": "Q134291",
+   "cityTitle": "Mersin",
+   "province": "Q132637",
    "lat": "36.8",
    "lon": "34.616666666667",
    "cityLabel": "Mersin",
-   "plate": "33"
+   "plate": "33",
+   "city_views": 57581
   },
   {
-   "province": "Q482834",
    "city": "Q134703",
+   "cityTitle": "Kahramanmaraş",
+   "province": "Q482834",
    "lat": "37.5875",
    "lon": "36.945277777778",
    "cityLabel": "Kahramanmaraş",
-   "plate": "46"
+   "plate": "46",
+   "city_views": 50161
   },
   {
-   "province": "Q483173",
    "city": "Q136217",
+   "cityTitle": "Erzincan",
+   "province": "Q483173",
    "lat": "39.746388888889",
    "lon": "39.491388888889",
    "cityLabel": "Erzincan",
-   "plate": "24"
+   "plate": "24",
+   "city_views": 52788
   },
   {
-   "province": "Q130553",
    "city": "Q147089",
+   "cityTitle": "Manisa",
+   "province": "Q130553",
    "lat": "38.611944444444",
    "lon": "27.426388888889",
    "cityLabel": "Manisa",
-   "plate": "45"
+   "plate": "45",
+   "city_views": 72620
   },
   {
-   "province": "Q483191",
    "city": "Q155915",
+   "cityTitle": "Kastamonu",
+   "province": "Q483191",
    "lat": "41.383333333333",
    "lon": "33.783333333333",
    "cityLabel": "Kastamonu",
-   "plate": "37"
+   "plate": "37",
+   "city_views": 57777
   },
   {
-   "province": "Q80370",
    "city": "Q159835",
+   "cityTitle": "Batman",
+   "province": "Q80370",
    "lat": "37.883333333333",
    "lon": "41.133333333333",
    "cityLabel": "Batman",
-   "plate": "72"
+   "plate": "72",
+   "city_views": 47238
   },
   {
-   "province": "Q483040",
    "city": "Q160450",
+   "cityTitle": "Samsun",
+   "province": "Q483040",
    "lat": "41.286666666667",
    "lon": "36.33",
    "cityLabel": "Samsun",
-   "plate": "55"
+   "plate": "55",
+   "city_views": 69298
   },
   {
-   "province": "Q131384",
    "city": "Q165995",
+   "cityTitle": "Malatya",
+   "province": "Q131384",
    "lat": "38.35062",
    "lon": "38.3094",
    "cityLabel": "Malatya",
-   "plate": "44"
+   "plate": "44",
+   "city_views": 61980
   },
   {
-   "province": "Q45220",
    "city": "Q166824",
+   "cityTitle": "Afyonkarahisar",
+   "province": "Q45220",
    "lat": "38.758055555556",
    "lon": "30.538611111111",
    "cityLabel": "Afyonkarahisar",
-   "plate": "03"
+   "plate": "03",
+   "city_views": 63727
   },
   {
-   "province": "Q43924",
    "city": "Q168197",
+   "cityTitle": "Adıyaman",
+   "province": "Q43924",
    "lat": "37.76339",
    "lon": "38.27714",
    "cityLabel": "Adıyaman",
-   "plate": "02"
+   "plate": "02",
+   "city_views": 33140
   },
   {
-   "province": "Q483053",
    "city": "Q168866",
+   "cityTitle": "Eskişehir",
+   "province": "Q483053",
    "lat": "39.776666666667",
    "lon": "30.520555555556",
    "cityLabel": "Eskişehir",
-   "plate": "26"
+   "plate": "26",
+   "city_views": 96428
   },
   {
-   "province": "Q79846",
    "city": "Q170457",
+   "cityTitle": "Aydın",
+   "province": "Q79846",
    "lat": "37.848055555556",
    "lon": "27.845277777778",
    "cityLabel": "Aydın",
-   "plate": "09"
+   "plate": "09",
+   "city_views": 37450
   },
   {
-   "province": "Q80036",
    "city": "Q170532",
+   "cityTitle": "Amasya",
+   "province": "Q80036",
    "lat": "40.65",
    "lon": "35.833333333333",
    "cityLabel": "Amasya",
-   "plate": "05"
+   "plate": "05",
+   "city_views": 67053
   },
   {
-   "province": "Q80036",
    "city": "Q170532",
+   "cityTitle": "Amasya",
+   "province": "Q80036",
    "lat": "40.678674",
    "lon": "35.8278",
    "cityLabel": "Amasya",
-   "plate": "05"
+   "plate": "05",
+   "city_views": 67053
   },
   {
-   "province": "Q82096",
    "city": "Q170967",
+   "cityTitle": "Denizli",
+   "province": "Q82096",
    "lat": "37.783333333333",
    "lon": "29.096388888889",
    "cityLabel": "Denizli",
-   "plate": "20"
+   "plate": "20",
+   "city_views": 52307
   },
   {
-   "province": "Q268043",
    "city": "Q171031",
+   "cityTitle": "Isparta",
+   "province": "Q268043",
    "lat": "37.766666666667",
    "lon": "30.55",
    "cityLabel": "Isparta",
-   "plate": "32"
+   "plate": "32",
+   "city_views": 39136
   },
   {
-   "province": "Q483091",
    "city": "Q174060",
+   "cityTitle": "Elazığ",
+   "province": "Q483091",
    "lat": "38.666666666667",
    "lon": "39.216666666667",
    "cityLabel": "Elazığ",
-   "plate": "23"
+   "plate": "23",
+   "city_views": 43280
   },
   {
-   "province": "Q83069",
    "city": "Q175323",
+   "cityTitle": "Adapazarı",
+   "province": "Q83069",
    "lat": "40.77625",
    "lon": "30.40256",
    "cityLabel": "Adapazarı",
-   "plate": "54"
+   "plate": "54",
+   "city_views": 23632
   },
   {
-   "province": "Q281206",
    "city": "Q181379",
+   "cityTitle": "Osmaniye",
+   "province": "Q281206",
    "lat": "37.075",
    "lon": "36.25",
    "cityLabel": "Osmaniye",
-   "plate": "80"
+   "plate": "80",
+   "city_views": 27737
   },
   {
-   "province": "Q129387",
    "city": "Q182009",
+   "cityTitle": "Tekirdağ",
+   "province": "Q129387",
    "lat": "40.983333333333",
    "lon": "27.516666666667",
    "cityLabel": "Tekirdağ",
-   "plate": "59"
+   "plate": "59",
+   "city_views": 40447
   },
   {
-   "province": "Q83073",
    "city": "Q182025",
+   "cityTitle": "Aksaray",
+   "province": "Q83073",
    "lat": "38.3686",
    "lon": "34.0297",
    "cityLabel": "Aksaray",
-   "plate": "68"
+   "plate": "68",
+   "city_views": 43630
   },
   {
-   "province": "Q483195",
    "city": "Q183651",
+   "cityTitle": "Tokat (şehir)",
+   "province": "Q483195",
    "lat": "40.309722222222",
    "lon": "36.554166666667",
    "cityLabel": "Tokat",
-   "plate": "60"
+   "plate": "60",
+   "city_views": 42284
   },
   {
-   "province": "Q483180",
    "city": "Q184539",
+   "cityTitle": "Ordu (şehir)",
+   "province": "Q483180",
    "lat": "40.983333333333",
    "lon": "37.883333333333",
    "cityLabel": "Ordu",
-   "plate": "52"
+   "plate": "52",
+   "city_views": 20497
   },
   {
-   "province": "Q482825",
    "city": "Q185084",
+   "cityTitle": "Siirt",
+   "province": "Q482825",
    "lat": "37.841666666667",
    "lon": "41.945833333333",
    "cityLabel": "Siirt",
-   "plate": "56"
+   "plate": "56",
+   "city_views": 24147
   },
   {
-   "province": "Q219956",
    "city": "Q187895",
+   "cityTitle": "Zonguldak",
+   "province": "Q219956",
    "lat": "41.45",
    "lon": "31.783333333333",
    "cityLabel": "Zonguldak",
-   "plate": "67"
+   "plate": "67",
+   "city_views": 33407
   },
   {
-   "province": "Q131293",
    "city": "Q188022",
+   "cityTitle": "Mardin",
+   "province": "Q131293",
    "lat": "37.313055555556",
    "lon": "40.735",
    "cityLabel": "Mardin",
-   "plate": "47"
+   "plate": "47",
+   "city_views": 65732
   },
   {
-   "province": "Q126874",
    "city": "Q188894",
+   "cityTitle": "Kütahya",
+   "province": "Q126874",
    "lat": "39.424166666667",
    "lon": "29.983333333333",
    "cityLabel": "Kütahya",
-   "plate": "43"
+   "plate": "43",
+   "city_views": 46214
   },
   {
-   "province": "Q483078",
    "city": "Q189134",
+   "cityTitle": "Uşak",
+   "province": "Q483078",
    "lat": "38.683333333333",
    "lon": "29.4",
    "cityLabel": "Uşak",
-   "plate": "62"
+   "plate": "62",
+   "city_views": 24332
   },
   {
-   "province": "Q483168",
    "city": "Q189697",
+   "cityTitle": "Karabük",
+   "province": "Q483168",
    "lat": "41.2",
    "lon": "32.633333333333",
    "cityLabel": "Karabük",
-   "plate": "78"
+   "plate": "78",
+   "city_views": 30989
   },
   {
-   "province": "Q43745",
    "city": "Q193445",
+   "cityTitle": "Artvin",
+   "province": "Q43745",
    "lat": "41.1830811",
    "lon": "41.8287448",
    "cityLabel": "Artvin",
-   "plate": "08"
+   "plate": "08",
+   "city_views": 36218
   },
   {
-   "province": "Q155219",
    "city": "Q194146",
+   "cityTitle": "Niğde",
+   "province": "Q155219",
    "lat": "37.966666666667",
    "lon": "34.679166666667",
    "cityLabel": "Niğde",
-   "plate": "51"
+   "plate": "51",
+   "city_views": 33850
   },
   {
-   "province": "Q80051",
    "city": "Q199575",
+   "cityTitle": "Ağrı",
+   "province": "Q80051",
    "lat": "39.7225",
    "lon": "43.054444444444",
    "cityLabel": "Ağrı",
-   "plate": "04"
+   "plate": "04",
+   "city_views": 32350
   },
   {
-   "province": "Q47813",
    "city": "Q199712",
+   "cityTitle": "Çanakkale",
+   "province": "Q47813",
    "lat": "40.15",
    "lon": "26.4",
    "cityLabel": "Çanakkale",
-   "plate": "17"
+   "plate": "17",
+   "city_views": 61796
   },
   {
-   "province": "Q47117",
    "city": "Q199723",
+   "cityTitle": "Balıkesir",
+   "province": "Q47117",
    "lat": "39.651111111111",
    "lon": "27.884166666667",
    "cityLabel": "Balıkesir",
-   "plate": "10"
+   "plate": "10",
+   "city_views": 80793
   },
   {
-   "province": "Q82089",
    "city": "Q200951",
+   "cityTitle": "Bolu",
+   "province": "Q82089",
    "lat": "40.733333333333",
    "lon": "31.6",
    "cityLabel": "Bolu",
-   "plate": "14"
+   "plate": "14",
+   "city_views": 37386
   },
   {
-   "province": "Q482779",
    "city": "Q201095",
+   "cityTitle": "Giresun",
+   "province": "Q482779",
    "lat": "40.9",
    "lon": "38.416666666667",
    "cityLabel": "Giresun",
-   "plate": "28"
+   "plate": "28",
+   "city_views": 100614
   },
   {
-   "province": "Q483481",
    "city": "Q201101",
+   "cityTitle": "Rize",
+   "province": "Q483481",
    "lat": "41.0248249",
    "lon": "40.5199142",
    "cityLabel": "Rize",
-   "plate": "53"
+   "plate": "53",
+   "city_views": 39462
   },
   {
-   "province": "Q79840",
    "city": "Q202188",
+   "cityTitle": "Ardahan",
+   "province": "Q79840",
    "lat": "41.116666666667",
    "lon": "42.7",
    "cityLabel": "Ardahan",
-   "plate": "75"
+   "plate": "75",
+   "city_views": 44580
   },
   {
-   "province": "Q620742",
    "city": "Q202195",
+   "cityTitle": "Tunceli",
+   "province": "Q620742",
    "lat": "39.106111111111",
    "lon": "39.548055555556",
    "cityLabel": "Tunceli",
-   "plate": "62"
+   "plate": "62",
+   "city_views": 37011
   },
   {
-   "province": "Q483083",
    "city": "Q205942",
+   "cityTitle": "Yalova",
+   "province": "Q483083",
    "lat": "40.655555555556",
    "lon": "29.275",
    "cityLabel": "Yalova",
-   "plate": "77"
+   "plate": "77",
+   "city_views": 45242
   },
   {
-   "province": "Q430693",
    "city": "Q206879",
+   "cityTitle": "Nevşehir",
+   "province": "Q430693",
    "lat": "38.625",
    "lon": "34.712222222222",
    "cityLabel": "Nevşehir",
-   "plate": "50"
+   "plate": "50",
+   "city_views": 36616
   },
   {
-   "province": "Q128978",
    "city": "Q206881",
+   "cityTitle": "Kilis",
+   "province": "Q128978",
    "lat": "36.716666666667",
    "lon": "37.116666666667",
    "cityLabel": "Kilis Merkez",
-   "plate": "79"
+   "plate": "79",
+   "city_views": 44333
   },
   {
-   "province": "Q432391",
    "city": "Q206885",
+   "cityTitle": "Düzce",
+   "province": "Q432391",
    "lat": "40.841666666667",
    "lon": "31.158333333333",
    "cityLabel": "Düzce",
-   "plate": "81"
+   "plate": "81",
+   "city_views": 32244
   },
   {
-   "province": "Q484392",
    "city": "Q206891",
+   "cityTitle": "Kırıkkale",
+   "province": "Q484392",
    "lat": "39.841666666667",
    "lon": "33.513888888889",
    "cityLabel": "Kırıkkale",
-   "plate": "71"
+   "plate": "71",
+   "city_views": 31551
   },
   {
-   "province": "Q93209",
    "city": "Q206895",
+   "cityTitle": "Hakkâri",
+   "province": "Q93209",
    "lat": "37.574444444444",
    "lon": "43.740833333333",
    "cityLabel": "Hakkâri",
-   "plate": "30"
+   "plate": "30",
+   "city_views": 32710
   },
   {
-   "province": "Q272947",
    "city": "Q206900",
+   "cityTitle": "Çorum",
+   "province": "Q272947",
    "lat": "40.548888888889",
    "lon": "34.953333333333",
    "cityLabel": "Çorum",
-   "plate": "19"
+   "plate": "19",
+   "city_views": 53260
   },
   {
-   "province": "Q131597",
    "city": "Q206903",
+   "cityTitle": "Kırklareli",
+   "province": "Q131597",
    "lat": "41.734722222222",
    "lon": "27.225277777778",
    "cityLabel": "Kırklareli",
-   "plate": "39"
+   "plate": "39",
+   "city_views": 41195
   },
   {
-   "province": "Q134187",
    "city": "Q208005",
+   "cityTitle": "Kırşehir",
+   "province": "Q134187",
    "lat": "39.145",
    "lon": "34.160833333333",
    "cityLabel": "Kırşehir",
-   "plate": "40"
+   "plate": "40",
+   "city_views": 32929
   },
   {
-   "province": "Q46763",
    "city": "Q208006",
+   "cityTitle": "Bilecik",
+   "province": "Q46763",
    "lat": "40.143055555556",
    "lon": "29.979166666667",
    "cityLabel": "Bilecik",
-   "plate": "11"
+   "plate": "11",
+   "city_views": 47647
   },
   {
-   "province": "Q272662",
    "city": "Q209925",
+   "cityTitle": "Çankırı",
+   "province": "Q272662",
    "lat": "40.6",
    "lon": "33.616666666667",
    "cityLabel": "Çankırı",
-   "plate": "18"
+   "plate": "18",
+   "city_views": 36556
   },
   {
-   "province": "Q272662",
    "city": "Q209925",
+   "cityTitle": "Çankırı",
+   "province": "Q272662",
    "lat": "40.647446",
    "lon": "33.514489",
    "cityLabel": "Çankırı",
-   "plate": "18"
+   "plate": "18",
+   "city_views": 36556
   },
   {
-   "province": "Q75445",
    "city": "Q210292",
+   "cityTitle": "Yozgat",
+   "province": "Q75445",
    "lat": "39.820833333333",
    "lon": "34.808333333333",
    "cityLabel": "Yozgat",
-   "plate": "66"
+   "plate": "66",
+   "city_views": 39383
   },
   {
-   "province": "Q83342",
    "city": "Q211805",
+   "cityTitle": "Bartın",
+   "province": "Q83342",
    "lat": "41.634444444444",
    "lon": "32.3375",
    "cityLabel": "Bartın",
-   "plate": "74"
+   "plate": "74",
+   "city_views": 33070
   },
   {
-   "province": "Q80088",
    "city": "Q211811",
+   "cityTitle": "Burdur",
+   "province": "Q80088",
    "lat": "37.716666666667",
    "lon": "30.283333333333",
    "cityLabel": "Burdur",
-   "plate": "15"
+   "plate": "15",
+   "city_views": 34895
   },
   {
-   "province": "Q483063",
    "city": "Q211828",
+   "cityTitle": "Bayburt",
+   "province": "Q483063",
    "lat": "40.254638888889",
    "lon": "40.226",
    "cityLabel": "Bayburt",
-   "plate": "69"
+   "plate": "69",
+   "city_views": 49080
   },
   {
-   "province": "Q482788",
    "city": "Q214303",
+   "cityTitle": "Gümüşhane",
+   "province": "Q482788",
    "lat": "40.459722222222",
    "lon": "39.477777777778",
    "cityLabel": "Gümüşhane",
-   "plate": "29"
+   "plate": "29",
+   "city_views": 29777
   },
   {
-   "province": "Q123934",
    "city": "Q216912",
+   "cityTitle": "Muğla",
+   "province": "Q123934",
    "lat": "37.216666666667",
    "lon": "28.366666666667",
    "cityLabel": "Muğla",
-   "plate": "48"
+   "plate": "48",
+   "city_views": 42946
   },
   {
-   "province": "Q482975",
    "city": "Q262579",
+   "cityTitle": "Karaman",
+   "province": "Q482975",
    "lat": "37.183333333333",
    "lon": "33.216666666667",
    "cityLabel": "Karaman",
-   "plate": "70"
+   "plate": "70",
+   "city_views": 45294
   },
   {
-   "province": "Q344490",
    "city": "Q35997",
+   "cityTitle": "İzmir",
+   "province": "Q344490",
    "lat": "38.41273",
    "lon": "27.13838",
    "cityLabel": "İzmir",
-   "plate": "35"
+   "plate": "35",
+   "city_views": 122071
   },
   {
-   "province": "Q2297724",
    "city": "Q3640",
+   "cityTitle": "Ankara",
+   "province": "Q2297724",
    "lat": "39.93576",
    "lon": "32.83869",
    "cityLabel": "Ankara",
-   "plate": "06"
+   "plate": "06",
+   "city_views": 247192
   },
   {
-   "province": "Q40549",
    "city": "Q38545",
+   "cityTitle": "Adana",
+   "province": "Q40549",
    "lat": "36.98615",
    "lon": "35.32531",
    "cityLabel": "Adana",
-   "plate": "01"
+   "plate": "01",
+   "city_views": 93651
   },
   {
-   "province": "Q40549",
    "city": "Q38545",
+   "cityTitle": "Adana",
+   "province": "Q40549",
    "lat": "36.9863599",
    "lon": "35.3252861",
    "cityLabel": "Adana",
-   "plate": "01"
+   "plate": "01",
+   "city_views": 93651
   },
   {
-   "province": "Q40549",
    "city": "Q38545",
+   "cityTitle": "Adana",
+   "province": "Q40549",
    "lat": "36.986559",
    "lon": "35.338677",
    "cityLabel": "Adana",
-   "plate": "01"
+   "plate": "01",
+   "city_views": 93651
   },
   {
-   "province": "Q534799",
    "city": "Q406",
+   "cityTitle": "İstanbul",
+   "province": "Q534799",
    "lat": "41.01",
    "lon": "28.960277777778",
    "cityLabel": "İstanbul",
-   "plate": "34"
+   "plate": "34",
+   "city_views": 555465
   },
   {
-   "province": "Q43690",
    "city": "Q40738",
+   "cityTitle": "Bursa",
+   "province": "Q43690",
    "lat": "40.191330555556",
    "lon": "29.080538888889",
    "cityLabel": "Bursa",
-   "plate": "16"
+   "plate": "16",
+   "city_views": 120516
   },
   {
-   "province": "Q83102",
    "city": "Q43387",
+   "cityTitle": "Edirne",
+   "province": "Q83102",
    "lat": "41.67304",
    "lon": "26.57361",
    "cityLabel": "Edirne",
-   "plate": "22"
+   "plate": "22",
+   "city_views": 58649
   },
   {
-   "province": "Q388995",
    "city": "Q45301",
+   "cityTitle": "Trabzon",
+   "province": "Q388995",
    "lat": "41.005",
    "lon": "39.7225",
    "cityLabel": "Trabzon",
-   "plate": "61"
+   "plate": "61",
+   "city_views": 104167
   },
   {
-   "province": "Q125506",
    "city": "Q483331",
+   "cityTitle": "Iğdır",
+   "province": "Q125506",
    "lat": "39.92371",
    "lon": "44.045",
    "cityLabel": "Iğdır",
-   "plate": "76"
+   "plate": "76",
+   "city_views": 50814
   },
   {
-   "province": "Q483472",
    "city": "Q48338",
+   "cityTitle": "Kayseri",
+   "province": "Q483472",
    "lat": "38.7225",
    "lon": "35.4875",
    "cityLabel": "Kayseri",
-   "plate": "38"
+   "plate": "38",
+   "city_views": 64881
   },
   {
-   "province": "Q134413",
    "city": "Q599416",
+   "cityTitle": "Sinop",
+   "province": "Q134413",
    "lat": "42.026666666667",
    "lon": "35.151111111111",
    "cityLabel": "Sinop",
-   "plate": "57"
+   "plate": "57",
+   "city_views": 47666
   },
   {
-   "province": "Q40249",
    "city": "Q6487",
+   "cityTitle": "Antalya",
+   "province": "Q40249",
    "lat": "36.90812",
    "lon": "30.69556",
    "cityLabel": "Antalya",
-   "plate": "07"
+   "plate": "07",
+   "city_views": 100368
   },
   {
-   "province": "Q81551",
    "city": "Q79857",
+   "cityTitle": "Konya",
+   "province": "Q81551",
    "lat": "37.847054",
    "lon": "32.5161",
    "cityLabel": "Konya",
-   "plate": "53"
+   "plate": "53",
+   "city_views": 97318
   },
   {
-   "province": "Q81551",
    "city": "Q79857",
+   "cityTitle": "Konya",
+   "province": "Q81551",
    "lat": "37.872769444444",
    "lon": "32.492138888889",
    "cityLabel": "Konya",
-   "plate": "53"
+   "plate": "53",
+   "city_views": 97318
   },
   {
-   "province": "Q83274",
    "city": "Q80561",
+   "cityTitle": "Antakya",
+   "province": "Q83274",
    "lat": "36.2025",
    "lon": "36.160555555556",
    "cityLabel": "Antakya",
-   "plate": "31"
+   "plate": "31",
+   "city_views": 25063
   },
   {
-   "province": "Q80550",
    "city": "Q83061",
+   "cityTitle": "Van",
+   "province": "Q80550",
    "lat": "38.501944444444",
    "lon": "43.416666666667",
    "cityLabel": "Van",
-   "plate": "65"
+   "plate": "65",
+   "city_views": 55615
   },
   {
-   "province": "Q83081",
    "city": "Q83387",
+   "cityTitle": "Diyarbakır",
+   "province": "Q83081",
    "lat": "37.910833333333",
    "lon": "40.236666666667",
    "cityLabel": "Diyarbakır",
-   "plate": "21"
+   "plate": "21",
+   "city_views": 111952
   },
   {
-   "province": "Q83081",
    "city": "Q83387",
+   "cityTitle": "Diyarbakır",
+   "province": "Q83081",
    "lat": "37.91583",
    "lon": "40.21889",
    "cityLabel": "Diyarbakır",
-   "plate": "21"
+   "plate": "21",
+   "city_views": 111952
   },
   {
-   "province": "Q83239",
    "city": "Q83531",
+   "cityTitle": "Bitlis",
+   "province": "Q83239",
    "lat": "38.4",
    "lon": "42.116666666667",
    "cityLabel": "Bitlis",
-   "plate": "13"
+   "plate": "13",
+   "city_views": 31346
   },
   {
-   "province": "Q483154",
    "city": "Q93338",
+   "cityTitle": "Gaziantep",
+   "province": "Q483154",
    "lat": "37.062777777778",
    "lon": "37.379166666667",
    "cityLabel": "Gaziantep",
-   "plate": "27"
+   "plate": "27",
+   "city_views": 351062
   }
  ]
 }

@@ -1,0 +1,2038 @@
+{
+ "dataset": "wars",
+ "description": "Savaşlar, başlangıç (P580)",
+ "property": "P580",
+ "fetched_at": "2026-10-26T10:40:17+00:00",
+ "rows": [
+  {
+   "qid": "Q110999040",
+   "label": "Rusya'nın Ukrayna'yı işgali",
+   "links": 176,
+   "value": 2022.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rusya'nın Ukrayna'yı işgali",
+   "tr_views": 99190
+  },
+  {
+   "qid": "Q8663",
+   "label": "Kore Savaşı",
+   "links": 145,
+   "value": 1950.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kore Savaşı",
+   "tr_views": 121912
+  },
+  {
+   "qid": "Q12551",
+   "label": "Yüz Yıl Savaşı",
+   "links": 128,
+   "value": 1337.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yüz Yıl Savaşı",
+   "tr_views": 31067
+  },
+  {
+   "qid": "Q15860072",
+   "label": "2014 Rusya'nın Ukrayna'ya askerî müdahalesi",
+   "links": 121,
+   "value": 2014.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rusya-Ukrayna Savaşı",
+   "tr_views": 163589
+  },
+  {
+   "qid": "Q122962941",
+   "label": "Gazze Savaşı",
+   "links": 120,
+   "value": 2023.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gazze Savaşı",
+   "tr_views": 79738
+  },
+  {
+   "qid": "Q37643",
+   "label": "Körfez Savaşı",
+   "links": 114,
+   "value": 1990.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Körfez Savaşı",
+   "tr_views": 85982
+  },
+  {
+   "qid": "Q545449",
+   "label": "Irak Savaşı",
+   "links": 111,
+   "value": 2003.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Irak Savaşı",
+   "tr_views": 80097
+  },
+  {
+   "qid": "Q49077",
+   "label": "Altı Gün Savaşı",
+   "links": 109,
+   "value": 1967.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Altı Gün Savaşı",
+   "tr_views": 59424
+  },
+  {
+   "qid": "Q83085",
+   "label": "Sovyet-Afgan Savaşı",
+   "links": 101,
+   "value": 1979.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sovyetler Birliği'nin Afganistan'a müdahalesi",
+   "tr_views": 28474
+  },
+  {
+   "qid": "Q254106",
+   "label": "Kırım Savaşı",
+   "links": 100,
+   "value": 1853.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kırım Savaşı",
+   "tr_views": 66189
+  },
+  {
+   "qid": "Q80330",
+   "label": "İngiliz İç Savaşı",
+   "links": 100,
+   "value": 1642.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İngiliz İç Savaşı",
+   "tr_views": 7986
+  },
+  {
+   "qid": "Q33143",
+   "label": "Yedi Yıl Savaşı",
+   "links": 98,
+   "value": 1756.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yedi Yıl Savaşı",
+   "tr_views": 22611
+  },
+  {
+   "qid": "Q46083",
+   "label": "Fransa-Prusya Savaşı",
+   "links": 97,
+   "value": 1870.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fransa-Prusya Savaşı",
+   "tr_views": 14042
+  },
+  {
+   "qid": "Q82664",
+   "label": "İran-Irak Savaşı",
+   "links": 96,
+   "value": 1980.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Irak-İran Savaşı",
+   "tr_views": 64882
+  },
+  {
+   "qid": "Q49100",
+   "label": "1973 Arap-İsrail Savaşı",
+   "links": 95,
+   "value": 1973.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yom Kippur Savaşı",
+   "tr_views": 38742
+  },
+  {
+   "qid": "Q134949",
+   "label": "Kış Savaşı",
+   "links": 93,
+   "value": 1939.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kış Savaşı",
+   "tr_views": 15664
+  },
+  {
+   "qid": "Q159950",
+   "label": "Rus-Japon Savaşı",
+   "links": 93,
+   "value": 1904.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rus-Japon Savaşı",
+   "tr_views": 20098
+  },
+  {
+   "qid": "Q170314",
+   "label": "Çin-Japon Savaşı",
+   "links": 90,
+   "value": 1937.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İkinci Çin-Japon Savaşı",
+   "tr_views": 23759
+  },
+  {
+   "qid": "Q189266",
+   "label": "Büyük Vatanseverlik Savaşı",
+   "links": 90,
+   "value": 1941.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Doğu Cephesi (II. Dünya Savaşı)",
+   "tr_views": 17151
+  },
+  {
+   "qid": "Q12583",
+   "label": "İspanya-Amerika Savaşı",
+   "links": 89,
+   "value": 1898.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İspanya-Amerika Savaşı",
+   "tr_views": 11455
+  },
+  {
+   "qid": "Q26013",
+   "label": "1812 Savaşı",
+   "links": 89,
+   "value": 1812.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1812 Savaşı",
+   "tr_views": 8294
+  },
+  {
+   "qid": "Q182865",
+   "label": "Afganistan Savaşı",
+   "links": 84,
+   "value": 2001.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Afganistan Savaşı (2001-2021)",
+   "tr_views": 40333
+  },
+  {
+   "qid": "Q620735",
+   "label": "2008 Güney Osetya Savaşı",
+   "links": 84,
+   "value": 2008.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rusya-Gürcistan Savaşı",
+   "tr_views": 14508
+  },
+  {
+   "qid": "Q33745",
+   "label": "Peloponez Savaşı",
+   "links": 82,
+   "value": -430.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Peloponez Savaşı",
+   "tr_views": 16473
+  },
+  {
+   "qid": "Q127751",
+   "label": "Güller Savaşı",
+   "links": 81,
+   "value": 1455.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Güller Savaşı",
+   "tr_views": 16419
+  },
+  {
+   "qid": "Q29269",
+   "label": "Birinci Çeçen Savaşı",
+   "links": 80,
+   "value": 1994.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Birinci Çeçen Savaşı",
+   "tr_views": 24352
+  },
+  {
+   "qid": "Q151616",
+   "label": "Büyük Kuzey Savaşı",
+   "links": 79,
+   "value": 1700.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük Kuzey Savaşı",
+   "tr_views": 10627
+  },
+  {
+   "qid": "Q179250",
+   "label": "Napolyon'un Rusya Seferi",
+   "links": 79,
+   "value": 1812.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Napolyon'un Rusya seferi",
+   "tr_views": 21512
+  },
+  {
+   "qid": "Q177918",
+   "label": "Birinci Balkan Savaşı",
+   "links": 78,
+   "value": 1912.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Birinci Balkan Savaşı",
+   "tr_views": 53722
+  },
+  {
+   "qid": "Q134900605",
+   "label": "On İki Gün Savaşı",
+   "links": 77,
+   "value": 2025.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "On İki Gün Savaşı",
+   "tr_views": 49240
+  },
+  {
+   "qid": "Q178687",
+   "label": "Birinci Çin-Japon Savaşı",
+   "links": 77,
+   "value": 1894.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Birinci Çin-Japon Savaşı",
+   "tr_views": 9172
+  },
+  {
+   "qid": "Q191282",
+   "label": "Afyon Savaşı",
+   "links": 77,
+   "value": 1839.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "I. Afyon Savaşı",
+   "tr_views": 15150
+  },
+  {
+   "qid": "Q6271",
+   "label": "İkinci Pön Savaşı",
+   "links": 76,
+   "value": -217.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İkinci Pön Savaşı",
+   "tr_views": 8034
+  },
+  {
+   "qid": "Q6683",
+   "label": "Meksika-Amerika Savaşı",
+   "links": 76,
+   "value": 1846.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Meksika-Amerika Savaşı",
+   "tr_views": 11681
+  },
+  {
+   "qid": "Q185729",
+   "label": "terörizmle savaş",
+   "links": 74,
+   "value": 2001.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Terörizmle Savaş",
+   "tr_views": 10203
+  },
+  {
+   "qid": "Q49104",
+   "label": "2006 Lübnan Savaşı",
+   "links": 74,
+   "value": 2006.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "2006 Lübnan Savaşı",
+   "tr_views": 12994
+  },
+  {
+   "qid": "Q190029",
+   "label": "1998-1999 Kosova Savaşı",
+   "links": 73,
+   "value": 1998.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kosova Savaşı",
+   "tr_views": 48659
+  },
+  {
+   "qid": "Q99659280",
+   "label": "2020 Dağlık Karabağ savaşı",
+   "links": 73,
+   "value": 2020.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İkinci Dağlık Karabağ Savaşı",
+   "tr_views": 60611
+  },
+  {
+   "qid": "Q186284",
+   "label": "Sovyet-Polonya Savaşı",
+   "links": 71,
+   "value": 1919.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sovyet-Polonya Savaşı",
+   "tr_views": 4982
+  },
+  {
+   "qid": "Q184183",
+   "label": "İkinci Balkan Savaşı",
+   "links": 70,
+   "value": 1913.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İkinci Balkan Savaşı",
+   "tr_views": 34383
+  },
+  {
+   "qid": "Q153650",
+   "label": "Prusya-Avusturya Savaşı",
+   "links": 68,
+   "value": 1866.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avusturya-Prusya Savaşı",
+   "tr_views": 5586
+  },
+  {
+   "qid": "Q32929",
+   "label": "Avusturya Veraset Savaşı",
+   "links": 67,
+   "value": 1740.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avusturya Veraset Savaşı",
+   "tr_views": 4332
+  },
+  {
+   "qid": "Q32929",
+   "label": "Avusturya Veraset Savaşı",
+   "links": 67,
+   "value": 1740.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Avusturya Veraset Savaşı",
+   "tr_views": 4332
+  },
+  {
+   "qid": "Q371394",
+   "label": "Bangladeş Kurtuluş Savaşı",
+   "links": 67,
+   "value": 1971.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bangladeş Kurtuluş Savaşı",
+   "tr_views": 6980
+  },
+  {
+   "qid": "Q381375",
+   "label": "Karabağ Savaşı",
+   "links": 67,
+   "value": 1988.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Birinci Dağlık Karabağ Savaşı",
+   "tr_views": 26232
+  },
+  {
+   "qid": "Q418151",
+   "label": "II. Afyon Savaşı",
+   "links": 67,
+   "value": 1856.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "II. Afyon Savaşı",
+   "tr_views": 6145
+  },
+  {
+   "qid": "Q748780",
+   "label": "Birinci Çinhindi Savaşı",
+   "links": 67,
+   "value": 1946.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Birinci Çinhindi Savaşı",
+   "tr_views": 11614
+  },
+  {
+   "qid": "Q152004",
+   "label": "Pasifik Savaşı",
+   "links": 66,
+   "value": 1879.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pasifik Savaşı (1879-1884)",
+   "tr_views": 3398
+  },
+  {
+   "qid": "Q215112",
+   "label": "II. Boer Savaşı",
+   "links": 66,
+   "value": 1899.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İkinci Boer Savaşı",
+   "tr_views": 2570
+  },
+  {
+   "qid": "Q49097",
+   "label": "1948 Filistin Savaşı",
+   "links": 65,
+   "value": 1947.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1948 Filistin Savaşı",
+   "tr_views": 4244
+  },
+  {
+   "qid": "Q120843",
+   "label": "İkinci Çeçen Savaşı",
+   "links": 64,
+   "value": 1999.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İkinci Çeçen Savaşı",
+   "tr_views": 19430
+  },
+  {
+   "qid": "Q6286",
+   "label": "Birinci Pön Savaşı",
+   "links": 64,
+   "value": -263.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Birinci Pön Savaşı",
+   "tr_views": 3605
+  },
+  {
+   "qid": "Q68969",
+   "label": "Hırvatistan Savaşı",
+   "links": 64,
+   "value": 1991.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hırvatistan Savaşı",
+   "tr_views": 6114
+  },
+  {
+   "qid": "Q170682",
+   "label": "Gazze Savaşı (2008-2009)",
+   "links": 62,
+   "value": 2008.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dökme Kurşun Harekâtı",
+   "tr_views": 5697
+  },
+  {
+   "qid": "Q203824",
+   "label": "Trablusgarp Savaşı",
+   "links": 62,
+   "value": 1911.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Trablusgarp Savaşı",
+   "tr_views": 85489
+  },
+  {
+   "qid": "Q6334",
+   "label": "Üçüncü Pön Savaşı",
+   "links": 62,
+   "value": -148.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Üçüncü Pön Savaşı",
+   "tr_views": 2795
+  },
+  {
+   "qid": "Q1413732",
+   "label": "Keşmir çatışması",
+   "links": 60,
+   "value": 1947.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Keşmir çatışması",
+   "tr_views": 1996
+  },
+  {
+   "qid": "Q202161",
+   "label": "Galya Savaşları",
+   "links": 60,
+   "value": -57.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Galya Savaşları",
+   "tr_views": 6834
+  },
+  {
+   "qid": "Q233583",
+   "label": "II. Hindistan-Pakistan Savaşı",
+   "links": 60,
+   "value": 1965.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "II. Hindistan-Pakistan Savaşı",
+   "tr_views": 2613
+  },
+  {
+   "qid": "Q58947",
+   "label": "Üçlü İttifak Savaşı",
+   "links": 60,
+   "value": 1864.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Üçlü İttifak Savaşı",
+   "tr_views": 6032
+  },
+  {
+   "qid": "Q214456",
+   "label": "Filipin-Amerikan Savaşı",
+   "links": 59,
+   "value": 1899.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Filipin-Amerikan Savaşı",
+   "tr_views": 4386
+  },
+  {
+   "qid": "Q207318",
+   "label": "Fransız Devrim Savaşları",
+   "links": 58,
+   "value": 1792.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fransız Devrim Savaşları",
+   "tr_views": 12434
+  },
+  {
+   "qid": "Q246863",
+   "label": "Livonya Savaşı",
+   "links": 58,
+   "value": 1558.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Livonya Savaşı",
+   "tr_views": 3706
+  },
+  {
+   "qid": "Q887684",
+   "label": "İran'da İslam",
+   "links": 57,
+   "value": 633.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Müslümanların İran'ı fethi",
+   "tr_views": 13351
+  },
+  {
+   "qid": "Q94916",
+   "label": "II. İtalya-Habeşistan Savaşı",
+   "links": 57,
+   "value": 1935.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "II. İtalya-Habeşistan Savaşı",
+   "tr_views": 12173
+  },
+  {
+   "qid": "Q154697",
+   "label": "Fransız-Kızılderili Savaşı",
+   "links": 56,
+   "value": 1754.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fransız-Kızılderili Savaşı",
+   "tr_views": 3068
+  },
+  {
+   "qid": "Q208694",
+   "label": "Çin-Hindistan Savaşı",
+   "links": 56,
+   "value": 1962.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çin-Hindistan Savaşı",
+   "tr_views": 4710
+  },
+  {
+   "qid": "Q49103",
+   "label": "1982 Lübnan Savaşı",
+   "links": 55,
+   "value": 1982.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1982 Lübnan Savaşı",
+   "tr_views": 7888
+  },
+  {
+   "qid": "Q87138",
+   "label": "Türk Kurtuluş Savaşı Batı Cephesi",
+   "links": 55,
+   "value": 1919.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Türk Kurtuluş Savaşı Batı Cephesi",
+   "tr_views": 69837
+  },
+  {
+   "qid": "Q152218",
+   "label": "Dokuz Yıl Savaşı",
+   "links": 54,
+   "value": 1688.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dokuz Yıl Savaşı",
+   "tr_views": 3613
+  },
+  {
+   "qid": "Q194378",
+   "label": "III. Köle Savaşı",
+   "links": 54,
+   "value": -72.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "III. Köle Savaşı",
+   "tr_views": 28406
+  },
+  {
+   "qid": "Q404517",
+   "label": "Kargil Savaşı",
+   "links": 54,
+   "value": 1999.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kargil Savaşı",
+   "tr_views": 4131
+  },
+  {
+   "qid": "Q74623",
+   "label": "Osmanlı-Kutsal İttifak Savaşları",
+   "links": 54,
+   "value": 1683.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Osmanlı-Kutsal İttifak savaşları",
+   "tr_views": 34341
+  },
+  {
+   "qid": "Q154940",
+   "label": "Laponya Savaşı",
+   "links": 53,
+   "value": 1944.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Laponya Savaşı",
+   "tr_views": 3260
+  },
+  {
+   "qid": "Q329203",
+   "label": "I. Boer Savaşı",
+   "links": 52,
+   "value": 1880.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Birinci Boer Savaşı",
+   "tr_views": 268
+  },
+  {
+   "qid": "Q382116",
+   "label": "Kafkas Savaşı",
+   "links": 52,
+   "value": 1763.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kafkas Savaşı",
+   "tr_views": 4967
+  },
+  {
+   "qid": "Q138107",
+   "label": "Altıncı Koalisyon Savaşı",
+   "links": 51,
+   "value": 1813.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Altıncı Koalisyon",
+   "tr_views": 1995
+  },
+  {
+   "qid": "Q154981",
+   "label": "İkinci Schleswig-Holstein Savaşı",
+   "links": 51,
+   "value": 1864.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İkinci Schleswig-Holstein Savaşı",
+   "tr_views": 2383
+  },
+  {
+   "qid": "Q1922071",
+   "label": "1971 Hindistan-Pakistan Savaşı",
+   "links": 51,
+   "value": 1971.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1971 Hindistan-Pakistan Savaşı",
+   "tr_views": 1678
+  },
+  {
+   "qid": "Q223085",
+   "label": "Futbol Savaşı",
+   "links": 51,
+   "value": 1969.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Futbol Savaşı",
+   "tr_views": 3680
+  },
+  {
+   "qid": "Q249232",
+   "label": "Üçüncü Koalisyon",
+   "links": 51,
+   "value": 1805.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Üçüncü Koalisyon",
+   "tr_views": 5000
+  },
+  {
+   "qid": "Q422082",
+   "label": "Filipin Devrimi",
+   "links": 51,
+   "value": 1896.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Filipin Devrimi",
+   "tr_views": 840
+  },
+  {
+   "qid": "Q75756",
+   "label": "İkinci Kongo Savaşı",
+   "links": 51,
+   "value": 1998.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İkinci Kongo Savaşı",
+   "tr_views": 4990
+  },
+  {
+   "qid": "Q122100",
+   "label": "Devam Savaşı",
+   "links": 50,
+   "value": 1941.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Devam Savaşı",
+   "tr_views": 4980
+  },
+  {
+   "qid": "Q223126",
+   "label": "Chaco Savaşı",
+   "links": 50,
+   "value": 1932.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Chaco Savaşı",
+   "tr_views": 2916
+  },
+  {
+   "qid": "Q462964",
+   "label": "Kasım Ayaklanması",
+   "links": 50,
+   "value": 1830.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kasım Ayaklanması",
+   "tr_views": 1575
+  },
+  {
+   "qid": "Q49092",
+   "label": "1948 Arap-İsrail Savaşı",
+   "links": 50,
+   "value": 1948.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1948 Arap-İsrail Savaşı",
+   "tr_views": 25569
+  },
+  {
+   "qid": "Q623171",
+   "label": "Çin-Vietnam Savaşı",
+   "links": 50,
+   "value": 1979.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çin-Vietnam Savaşı",
+   "tr_views": 5467
+  },
+  {
+   "qid": "Q652285",
+   "label": "I. Hindistan-Pakistan Savaşı",
+   "links": 50,
+   "value": 1947.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "I. Hindistan-Pakistan Savaşı",
+   "tr_views": 5064
+  },
+  {
+   "qid": "Q989092",
+   "label": "Birinci İngiliz-Afgan Savaşı",
+   "links": 50,
+   "value": 1839.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "I. İngiliz-Afgan Savaşı",
+   "tr_views": 3505
+  },
+  {
+   "qid": "Q212658",
+   "label": "Lehistan Veraset Savaşı",
+   "links": 49,
+   "value": 1733.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lehistan Veraset Savaşı",
+   "tr_views": 1414
+  },
+  {
+   "qid": "Q477973",
+   "label": "Gotlar Savaşı",
+   "links": 49,
+   "value": 535.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gotlar Savaşı (535-554)",
+   "tr_views": 3309
+  },
+  {
+   "qid": "Q1332160",
+   "label": "Endonezya Ulusal Devrimi",
+   "links": 48,
+   "value": 1945.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Endonezya Ulusal Devrimi",
+   "tr_views": 2388
+  },
+  {
+   "qid": "Q1455917",
+   "label": "Emeviler'in İberya'yı fethi",
+   "links": 47,
+   "value": 711.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Müslümanların İberya'yı fethi",
+   "tr_views": 2586
+  },
+  {
+   "qid": "Q18817",
+   "label": "Birinci Koalisyon",
+   "links": 47,
+   "value": 1792.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Birinci Koalisyon",
+   "tr_views": 2975
+  },
+  {
+   "qid": "Q223604",
+   "label": "Yunan-İtalyan Savaşı",
+   "links": 47,
+   "value": 1940.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yunan-İtalyan Savaşı",
+   "tr_views": 4016
+  },
+  {
+   "qid": "Q228911",
+   "label": "Anglo-Zulu Savaşı",
+   "links": 47,
+   "value": 1879.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İngiliz-Zulu Savaşı",
+   "tr_views": 3859
+  },
+  {
+   "qid": "Q322607",
+   "label": "Yıpratma Savaşı",
+   "links": 47,
+   "value": 1967.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yıpratma Savaşı",
+   "tr_views": 4002
+  },
+  {
+   "qid": "Q322607",
+   "label": "Yıpratma Savaşı",
+   "links": 47,
+   "value": 1969.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yıpratma Savaşı",
+   "tr_views": 4002
+  },
+  {
+   "qid": "Q605977",
+   "label": "Dördüncü Koalisyon",
+   "links": 47,
+   "value": 1806.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dördüncü Koalisyon",
+   "tr_views": 3197
+  },
+  {
+   "qid": "Q123070",
+   "label": "1768-1774 Osmanlı-Rus Savaşı",
+   "links": 46,
+   "value": 1768.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1768-1774 Osmanlı-Rus Savaşı",
+   "tr_views": 23925
+  },
+  {
+   "qid": "Q26749",
+   "label": "İkinci Koalisyon",
+   "links": 46,
+   "value": 1798.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İkinci Koalisyon",
+   "tr_views": 2397
+  },
+  {
+   "qid": "Q318250",
+   "label": "Ogaden Savaşı",
+   "links": 46,
+   "value": 1977.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ogaden Savaşı",
+   "tr_views": 3033
+  },
+  {
+   "qid": "Q576338",
+   "label": "Imjin Savaşı",
+   "links": 46,
+   "value": 1592.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Japonya'nın Kore'yi istilaları (1592-1598)",
+   "tr_views": 3372
+  },
+  {
+   "qid": "Q635533",
+   "label": "Kamboçya-Vietnam Savaşı",
+   "links": 46,
+   "value": 1977.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kamboçya-Vietnam Savaşı",
+   "tr_views": 5811
+  },
+  {
+   "qid": "Q684324",
+   "label": "Beşinci Koalisyon Savaşı",
+   "links": 46,
+   "value": 1809.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Beşinci Koalisyon",
+   "tr_views": 1831
+  },
+  {
+   "qid": "Q736268",
+   "label": "Finlandiya Savaşı",
+   "links": 46,
+   "value": 1808.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Finlandiya Savaşı",
+   "tr_views": 1982
+  },
+  {
+   "qid": "Q989115",
+   "label": "I. İtalya-Habeşistan Savaşı",
+   "links": 46,
+   "value": 1894.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "I. İtalya-Habeşistan Savaşı",
+   "tr_views": 2800
+  },
+  {
+   "qid": "Q209312",
+   "label": "1806-1812 Osmanlı-Rus Savaşı",
+   "links": 45,
+   "value": 1806.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1806-1812 Osmanlı-Rus Savaşı",
+   "tr_views": 18535
+  },
+  {
+   "qid": "Q233507",
+   "label": "II. İngiliz-Afgan Savaşı",
+   "links": 45,
+   "value": 1878.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "II. İngiliz-Afgan Savaşı",
+   "tr_views": 2584
+  },
+  {
+   "qid": "Q287942",
+   "label": "1828-1829 Osmanlı-Rus Savaşı",
+   "links": 45,
+   "value": 1828.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1828-1829 Osmanlı-Rus Savaşı",
+   "tr_views": 15821
+  },
+  {
+   "qid": "Q646322",
+   "label": "Fransa-Hollanda Savaşı",
+   "links": 45,
+   "value": 1672.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fransa-Hollanda Savaşı",
+   "tr_views": 570
+  },
+  {
+   "qid": "Q838695",
+   "label": "Birinci Kongo Savaşı",
+   "links": 45,
+   "value": 1996.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Birinci Kongo Savaşı",
+   "tr_views": 3714
+  },
+  {
+   "qid": "Q2092093",
+   "label": "Moğol istilaları",
+   "links": 44,
+   "value": 1206.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Moğol istilaları",
+   "tr_views": 16591
+  },
+  {
+   "qid": "Q51650",
+   "label": "Halkın Haçlı Seferi",
+   "links": 44,
+   "value": 1096.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Halkın Haçlı Seferi",
+   "tr_views": 2290
+  },
+  {
+   "qid": "Q208261",
+   "label": "İyon Ayaklanması",
+   "links": 43,
+   "value": -498.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İyonya Ayaklanması",
+   "tr_views": 2238
+  },
+  {
+   "qid": "Q638587",
+   "label": "1735-1739 Osmanlı-Rus-Avusturya Savaşı",
+   "links": 43,
+   "value": 1736.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1735-1739 Osmanlı-Rus Savaşı",
+   "tr_views": 14596
+  },
+  {
+   "qid": "Q651008",
+   "label": "Korint Savaşı",
+   "links": 43,
+   "value": -394.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Korint Savaşı",
+   "tr_views": 1789
+  },
+  {
+   "qid": "Q735349",
+   "label": "Rusya Çarlığı'nın Sibirya'ya müdahalesi",
+   "links": 43,
+   "value": 1580.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rusya'nın Sibirya'yı fethi",
+   "tr_views": 1487
+  },
+  {
+   "qid": "Q654006",
+   "label": "II. Kuzey Savaşı",
+   "links": 42,
+   "value": 1655.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "II. Kuzey Savaşı",
+   "tr_views": 1055
+  },
+  {
+   "qid": "Q31944",
+   "label": "Mahdist Savaşı",
+   "links": 41,
+   "value": 1881.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mehdi Savaşı",
+   "tr_views": 3527
+  },
+  {
+   "qid": "Q631799",
+   "label": "Astrahan Seferi",
+   "links": 41,
+   "value": 1568.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Astrahan Seferi",
+   "tr_views": 12823
+  },
+  {
+   "qid": "Q677316",
+   "label": "Müttefikler Savaşı (MÖ 91-87)",
+   "links": 41,
+   "value": -90.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Müttefikler Savaşı (MÖ 91-87)",
+   "tr_views": 279
+  },
+  {
+   "qid": "Q1420115",
+   "label": "1826-1828 Fars-Rus Savaşı",
+   "links": 40,
+   "value": 1826.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1826-1828 İran-Rus Savaşı",
+   "tr_views": 1814
+  },
+  {
+   "qid": "Q168556",
+   "label": "Schmalkaldic Savaşı",
+   "links": 40,
+   "value": 1546.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Schmalkaldic Savaşı",
+   "tr_views": 732
+  },
+  {
+   "qid": "Q631991",
+   "label": "1654-1667 Lehistan-Rusya Savaşı",
+   "links": 40,
+   "value": 1654.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1654-1667 Lehistan-Rusya Savaşı",
+   "tr_views": 1186
+  },
+  {
+   "qid": "Q657055",
+   "label": "1897 Osmanlı-Yunan Savaşı",
+   "links": 40,
+   "value": 1897.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Osmanlı-Yunan Savaşı (1897)",
+   "tr_views": 33916
+  },
+  {
+   "qid": "Q696848",
+   "label": "Anglo-Irak Savaşı",
+   "links": 40,
+   "value": 1941.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Anglo-Irak Savaşı",
+   "tr_views": 3574
+  },
+  {
+   "qid": "Q842774",
+   "label": "Polonya-Ukrayna Savaşı",
+   "links": 40,
+   "value": 1918.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Polonya-Ukrayna Savaşı",
+   "tr_views": 1588
+  },
+  {
+   "qid": "Q1069736",
+   "label": "Boşnak-Hırvat Savaşı",
+   "links": 39,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boşnak-Hırvat Savaşı",
+   "tr_views": 4917
+  },
+  {
+   "qid": "Q179275",
+   "label": "Veziristan Savaşı",
+   "links": 39,
+   "value": 2004.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Veziristan Savaşı",
+   "tr_views": 10492
+  },
+  {
+   "qid": "Q54434",
+   "label": "Jenkins'in Kulağı Savaşı",
+   "links": 39,
+   "value": 1739.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Jenkins'in Kulağı Savaşı",
+   "tr_views": 520
+  },
+  {
+   "qid": "Q660004",
+   "label": "1676-1681 Osmanlı-Rus Savaşı",
+   "links": 39,
+   "value": 1676.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1676-1681 Osmanlı-Rus Savaşı",
+   "tr_views": 14107
+  },
+  {
+   "qid": "Q766437",
+   "label": "Rif Savaşı",
+   "links": 39,
+   "value": 1911.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rif Savaşı",
+   "tr_views": 4780
+  },
+  {
+   "qid": "Q829104",
+   "label": "1686-1700 Osmanlı-Rus Savaşı",
+   "links": 39,
+   "value": 1686.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1686-1700 Osmanlı-Rus Savaşı",
+   "tr_views": 6760
+  },
+  {
+   "qid": "Q832273",
+   "label": "Eritre-Etiyopya Savaşı",
+   "links": 39,
+   "value": 1998.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eritre-Etiyopya Savaşı",
+   "tr_views": 1350
+  },
+  {
+   "qid": "Q1044829",
+   "label": "1605-1618 Lehistan-Rusya Savaşı",
+   "links": 38,
+   "value": 1605.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1605-1618 Lehistan-Rusya Savaşı",
+   "tr_views": 2274
+  },
+  {
+   "qid": "Q1044829",
+   "label": "1605-1618 Lehistan-Rusya Savaşı",
+   "links": 38,
+   "value": 1609.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1605-1618 Lehistan-Rusya Savaşı",
+   "tr_views": 2274
+  },
+  {
+   "qid": "Q1209169",
+   "label": "Abhazya Savaşı",
+   "links": 38,
+   "value": 1992.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Abhazya Savaşı (1992-1993)",
+   "tr_views": 5322
+  },
+  {
+   "qid": "Q123210",
+   "label": "1787-1792 Osmanlı-Rus Savaşı",
+   "links": 38,
+   "value": 1787.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1787-1792 Osmanlı-Rus Savaşı",
+   "tr_views": 17272
+  },
+  {
+   "qid": "Q1259237",
+   "label": "III. İngiliz Afgan Savaşı",
+   "links": 38,
+   "value": 1919.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "III. İngiliz Afgan Savaşı",
+   "tr_views": 3814
+  },
+  {
+   "qid": "Q1616064",
+   "label": "Mithridatis Savaşları",
+   "links": 38,
+   "value": -87.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mithridatis Savaşları",
+   "tr_views": 1539
+  },
+  {
+   "qid": "Q609836",
+   "label": "Portekiz Sömürge Savaşları",
+   "links": 38,
+   "value": 1961.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Portekiz Sömürge Savaşları",
+   "tr_views": 4548
+  },
+  {
+   "qid": "Q630259",
+   "label": "Bizans-Osmanlı savaşları",
+   "links": 38,
+   "value": 1265.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bizans-Osmanlı savaşları",
+   "tr_views": 7688
+  },
+  {
+   "qid": "Q916495",
+   "label": "İkinci Hollanda-İngiltere Savaşı",
+   "links": 38,
+   "value": 1665.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İkinci Hollanda-İngiltere Savaşı",
+   "tr_views": 536
+  },
+  {
+   "qid": "Q957586",
+   "label": "Türk Kurtuluş Savaşı Doğu Cephesi",
+   "links": 38,
+   "value": 1920.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Türk Kurtuluş Savaşı Doğu Cephesi",
+   "tr_views": 42403
+  },
+  {
+   "qid": "Q1139887",
+   "label": "1804-1813 Rus-İran Savaşı",
+   "links": 37,
+   "value": 1804.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1804-1813 Rus-İran Savaşı",
+   "tr_views": 2129
+  },
+  {
+   "qid": "Q202465",
+   "label": "Uganda-Tanzanya Savaşı",
+   "links": 37,
+   "value": 1978.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uganda-Tanzanya Savaşı",
+   "tr_views": 2446
+  },
+  {
+   "qid": "Q2326099",
+   "label": "Bizans-Sasani Savaşı (602-628)",
+   "links": 37,
+   "value": 602.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bizans-Sasani Savaşı (602-628)",
+   "tr_views": 12479
+  },
+  {
+   "qid": "Q937255",
+   "label": "Leh-Litvan-Töton Savaşı",
+   "links": 37,
+   "value": 1409.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Leh-Litvan-Töton Savaşı",
+   "tr_views": 1118
+  },
+  {
+   "qid": "Q1151913",
+   "label": "Birinci Hollanda-İngiltere Savaşı",
+   "links": 36,
+   "value": 1652.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Birinci Hollanda-İngiltere Savaşı",
+   "tr_views": 398
+  },
+  {
+   "qid": "Q1348630",
+   "label": "Ridde Savaşları",
+   "links": 36,
+   "value": 632.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ridde Savaşları",
+   "tr_views": 11666
+  },
+  {
+   "qid": "Q2354629",
+   "label": "Malaya İç Savaşı",
+   "links": 36,
+   "value": 1948.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Malaya İç Savaşı",
+   "tr_views": 532
+  },
+  {
+   "qid": "Q248984",
+   "label": "Müslümanların Levant'ı fethi",
+   "links": 36,
+   "value": 633.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Müslümanların Levant'ı fethi",
+   "tr_views": 5738
+  },
+  {
+   "qid": "Q430726",
+   "label": "İngiliz-İspanyol Savaşı",
+   "links": 36,
+   "value": 1585.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İngiliz-İspanyol Savaşı (1585-1604)",
+   "tr_views": 1814
+  },
+  {
+   "qid": "Q486831",
+   "label": "Roma-Seleukos Savaşı",
+   "links": 36,
+   "value": -191.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Roma-Seleukos Savaşı",
+   "tr_views": 978
+  },
+  {
+   "qid": "Q631163",
+   "label": "Tufan",
+   "links": 36,
+   "value": 1655.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tufan (tarih)",
+   "tr_views": 1210
+  },
+  {
+   "qid": "Q685683",
+   "label": "Birinci Schleswig-Holstein Savaşı",
+   "links": 36,
+   "value": 1848.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Birinci Schleswig-Holstein Savaşı",
+   "tr_views": 974
+  },
+  {
+   "qid": "Q690361",
+   "label": "1593-1606 Osmanlı-Avusturya Savaşı",
+   "links": 36,
+   "value": 1593.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1593-1606 Osmanlı-Avusturya Savaşı",
+   "tr_views": 33211
+  },
+  {
+   "qid": "Q699602",
+   "label": "Girit Savaşı",
+   "links": 36,
+   "value": 1645.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1645-1669 Osmanlı-Venedik Savaşı",
+   "tr_views": 14608
+  },
+  {
+   "qid": "Q827612",
+   "label": "Jugurthine Savaşı",
+   "links": 36,
+   "value": -110.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Jugurthine Savaşı",
+   "tr_views": 429
+  },
+  {
+   "qid": "Q933963",
+   "label": "Markoman Savaşları",
+   "links": 36,
+   "value": 166.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Markoman Savaşları",
+   "tr_views": 2077
+  },
+  {
+   "qid": "Q1136575",
+   "label": "Vandallar Savaşı",
+   "links": 35,
+   "value": 533.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vandallar Savaşı",
+   "tr_views": 2129
+  },
+  {
+   "qid": "Q196409",
+   "label": "Livonya Haçlı Seferi",
+   "links": 35,
+   "value": 1198.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Livonya Haçlı Seferi",
+   "tr_views": 328
+  },
+  {
+   "qid": "Q28365",
+   "label": "Lamya Savaşı",
+   "links": 35,
+   "value": -322.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lamya Savaşı",
+   "tr_views": 356
+  },
+  {
+   "qid": "Q315921",
+   "label": "On Üç Yıl Savaşı (1454-1466)",
+   "links": 35,
+   "value": 1454.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "On Üç Yıl Savaşı (1454-1466)",
+   "tr_views": 559
+  },
+  {
+   "qid": "Q768496",
+   "label": "Muz Savaşları",
+   "links": 35,
+   "value": 1898.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Muz Savaşları",
+   "tr_views": 2491
+  },
+  {
+   "qid": "Q157548",
+   "label": "Bavyera Veraset Savaşı",
+   "links": 34,
+   "value": 1778.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bavyera Veraset Savaşı",
+   "tr_views": 491
+  },
+  {
+   "qid": "Q1993848",
+   "label": "Güney Afrika Sınır Savaşı",
+   "links": 34,
+   "value": 1966.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Güney Afrika Sınır Savaşı",
+   "tr_views": 867
+  },
+  {
+   "qid": "Q385676",
+   "label": "Ōnin Savaşı",
+   "links": 34,
+   "value": 1467.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ōnin Savaşı",
+   "tr_views": 1142
+  },
+  {
+   "qid": "Q468293",
+   "label": "Birinci Berberi Savaşı",
+   "links": 34,
+   "value": 1801.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Birinci Berberi Savaşı",
+   "tr_views": 4897
+  },
+  {
+   "qid": "Q631795",
+   "label": "Kalmar Savaşı",
+   "links": 34,
+   "value": 1611.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kalmar Savaşı",
+   "tr_views": 348
+  },
+  {
+   "qid": "Q1501724",
+   "label": "Portekiz Restorasyon Savaşı",
+   "links": 33,
+   "value": 1640.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Portekiz Restorasyon Savaşı",
+   "tr_views": 2818
+  },
+  {
+   "qid": "Q221941",
+   "label": "Dörtlü İttifak Savaşı",
+   "links": 33,
+   "value": 1718.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dörtlü İttifak Savaşı",
+   "tr_views": 263
+  },
+  {
+   "qid": "Q6542740",
+   "label": "1787-1791 Osmanlı-Avusturya Savaşı",
+   "links": 33,
+   "value": 1788.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1787-1791 Osmanlı-Avusturya Savaşı",
+   "tr_views": 8730
+  },
+  {
+   "qid": "Q780845",
+   "label": "Fransa-Tayland Savaşı",
+   "links": 33,
+   "value": 1940.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fransa-Tayland Savaşı",
+   "tr_views": 816
+  },
+  {
+   "qid": "Q925960",
+   "label": "Müslümanların Mağrip'i fethi",
+   "links": 33,
+   "value": 647.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Müslümanların Mağrip'i fethi",
+   "tr_views": 1191
+  },
+  {
+   "qid": "Q961430",
+   "label": "Osmanlı-Venedik Savaşı",
+   "links": 33,
+   "value": 1570.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Osmanlı-Venedik Savaşı (1570-1573)",
+   "tr_views": 15117
+  },
+  {
+   "qid": "Q976827",
+   "label": "Karnatik Savaşları",
+   "links": 33,
+   "value": 1746.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karnatik Savaşları",
+   "tr_views": 311
+  },
+  {
+   "qid": "Q1418582",
+   "label": "Rus-İran Savaşı",
+   "links": 32,
+   "value": 1722.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rus-Safevî Savaşı (1722-1723)",
+   "tr_views": 1283
+  },
+  {
+   "qid": "Q165136",
+   "label": "Swabian Savaşı",
+   "links": 32,
+   "value": 1499.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Svabya Savaşı",
+   "tr_views": 952
+  },
+  {
+   "qid": "Q2577772",
+   "label": "Üç Krallık Savaşları",
+   "links": 32,
+   "value": 1638.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Üç Krallık Savaşları",
+   "tr_views": 2578
+  },
+  {
+   "qid": "Q655480",
+   "label": "Quasi Savaşı",
+   "links": 32,
+   "value": 1798.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Quasi Savaşı",
+   "tr_views": 407
+  },
+  {
+   "qid": "Q696389",
+   "label": "Sovyetler Birliği-Japonya sınır çatışmaları",
+   "links": 32,
+   "value": 1932.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sovyetler Birliği-Japonya sınır çatışmaları",
+   "tr_views": 1453
+  },
+  {
+   "qid": "Q617333",
+   "label": "Fransa-İspanya Savaşı (1635-59)",
+   "links": 31,
+   "value": 1635.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fransa-İspanya Savaşı (1635-1659)",
+   "tr_views": 1423
+  },
+  {
+   "qid": "Q698281",
+   "label": "İtalya Savaşı (1521-1526)",
+   "links": 31,
+   "value": 1521.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İtalya Savaşı (1521-1526)",
+   "tr_views": 994
+  },
+  {
+   "qid": "Q177109",
+   "label": "Slovak-Macar Savaşı",
+   "links": 30,
+   "value": 1939.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Slovak-Macar Savaşı",
+   "tr_views": 130
+  },
+  {
+   "qid": "Q29242",
+   "label": "Gürcistan - Güney Osetya Sorunu",
+   "links": 30,
+   "value": 1989.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gürcistan-Güney Osetya çatışması",
+   "tr_views": 1416
+  },
+  {
+   "qid": "Q431177",
+   "label": "Harezmşahlar'ın Moğollar tarafından istilası",
+   "links": 30,
+   "value": 1219.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Moğollar'ın Harezmşahlar'ı istilası",
+   "tr_views": 0
+  },
+  {
+   "qid": "Q688308",
+   "label": "İsveç Bağımsızlık Savaşı",
+   "links": 30,
+   "value": 1521.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İsveç Bağımsızlık Savaşı",
+   "tr_views": 1187
+  },
+  {
+   "qid": "Q694835",
+   "label": "1715-1718 Osmanlı-Avusturya-Venedik Savaşı",
+   "links": 30,
+   "value": 1714.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1714-1718 Osmanlı-Venedik Savaşı",
+   "tr_views": 2762
+  },
+  {
+   "qid": "Q856168",
+   "label": "Pastane Savaşı",
+   "links": 30,
+   "value": 1838.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pastane Savaşı",
+   "tr_views": 1094
+  },
+  {
+   "qid": "Q862257",
+   "label": "Kral Philip'in Savaşı",
+   "links": 30,
+   "value": 1675.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kral Philip Savaşı",
+   "tr_views": 270
+  },
+  {
+   "qid": "Q903199",
+   "label": "Kimberek Savaşı",
+   "links": 30,
+   "value": -112.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kimberek Savaşı",
+   "tr_views": 827
+  },
+  {
+   "qid": "Q1143379",
+   "label": "1991–1992 Güney Osetya Savaşı",
+   "links": 29,
+   "value": 1991.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1991-1992 Güney Osetya Savaşı",
+   "tr_views": 981
+  },
+  {
+   "qid": "Q1366196",
+   "label": "Gotlar Savaşı (376-382)",
+   "links": 29,
+   "value": 376.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gotlar Savaşı (376-382)",
+   "tr_views": 1655
+  },
+  {
+   "qid": "Q1429256",
+   "label": "Konyak Ligi Savaşı",
+   "links": 29,
+   "value": 1526.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Konyak Ligi Savaşı",
+   "tr_views": 473
+  },
+  {
+   "qid": "Q1647768",
+   "label": "Birinci Mithridatis Savaşı",
+   "links": 29,
+   "value": -88.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Birinci Mithridatis Savaşı",
+   "tr_views": 1103
+  },
+  {
+   "qid": "Q17512479",
+   "label": "Arap Kışı",
+   "links": 29,
+   "value": 2012.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arap Kışı",
+   "tr_views": 3329
+  },
+  {
+   "qid": "Q1809288",
+   "label": "Osmanlı-Suudi Savaşları",
+   "links": 29,
+   "value": 1811.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Osmanlı-Suudi Savaşları",
+   "tr_views": 11263
+  },
+  {
+   "qid": "Q1962709",
+   "label": "İngria Savaşı",
+   "links": 29,
+   "value": 1610.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İngria Savaşı",
+   "tr_views": 286
+  },
+  {
+   "qid": "Q617772",
+   "label": "İngiltere-İran Savaşı",
+   "links": 29,
+   "value": 1856.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İngiltere-İran Savaşı",
+   "tr_views": 1082
+  },
+  {
+   "qid": "Q759988",
+   "label": "Zenci Ayaklanması",
+   "links": 29,
+   "value": 869.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zenc İsyanı",
+   "tr_views": 6803
+  }
+ ]
+}

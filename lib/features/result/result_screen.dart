@@ -40,7 +40,11 @@ class ResultScreen extends StatelessWidget {
               children: [
                 const Spacer(),
                 Text(
-                  answer.hit ? AppStrings.hit : AppStrings.miss,
+                  answer.hit
+                      ? AppStrings.hit
+                      : answer.points > 0
+                      ? AppStrings.nearMiss
+                      : AppStrings.miss,
                   style: theme.textTheme.headlineMedium?.copyWith(color: color),
                   textAlign: TextAlign.center,
                 ),

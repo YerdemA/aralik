@@ -41,7 +41,7 @@ void main() {
     await pumpHome(
       tester,
       prefs: {
-        'daily_points_$today': ['80', '0'],
+        'daily_results_$today': ['80:1', '-20:0'],
       },
     );
     expect(find.text(AppStrings.continueToday(2, 5)), findsOneWidget);
@@ -51,7 +51,7 @@ void main() {
     await pumpHome(
       tester,
       prefs: {
-        'daily_points_$today': ['100', '75', '40', '0', '72'],
+        'daily_results_$today': ['100:1', '75:1', '40:1', '0:0', '72:1'],
         'completed_days': ['$today'],
         'answered': 5,
         'hits': 4,

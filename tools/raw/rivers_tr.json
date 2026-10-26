@@ -2,7 +2,7 @@
  "dataset": "rivers_tr",
  "description": "Türkiye'den geçen nehirler, uzunluk (P2043)",
  "property": "P2043",
- "fetched_at": "2026-10-24T14:22:27+00:00",
+ "fetched_at": "2026-10-26T10:04:22+00:00",
  "rows": [
   {
    "qid": "Q34589",
@@ -11,9 +11,11 @@
    "value": 2800000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Fırat",
    "mouth": [
     "Şattülarap"
-   ]
+   ],
+   "tr_views": 96084
   },
   {
    "qid": "Q35591",
@@ -22,9 +24,11 @@
    "value": 1850000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Dicle",
    "mouth": [
     "Şattülarap"
-   ]
+   ],
+   "tr_views": 101954
   },
   {
    "qid": "Q156557",
@@ -33,9 +37,11 @@
    "value": 1360000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Kura Nehri",
    "mouth": [
     "Hazar Denizi"
-   ]
+   ],
+   "tr_views": 14837
   },
   {
    "qid": "Q179751",
@@ -44,9 +50,11 @@
    "value": 1072000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Aras",
    "mouth": [
     "Kura Nehri"
-   ]
+   ],
+   "tr_views": 22481
   },
   {
    "qid": "Q257785",
@@ -55,9 +63,11 @@
    "value": 1355000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Kızılırmak",
    "mouth": [
     "Karadeniz"
-   ]
+   ],
+   "tr_views": 77380
   },
   {
    "qid": "Q204347",
@@ -66,9 +76,11 @@
    "value": 490000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Meriç",
    "mouth": [
     "Trakya Denizi"
-   ]
+   ],
+   "tr_views": 20207
   },
   {
    "qid": "Q188871",
@@ -77,9 +89,11 @@
    "value": 571000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Asi Nehri",
    "mouth": [
     "Akdeniz"
-   ]
+   ],
+   "tr_views": 17527
   },
   {
    "qid": "Q211089",
@@ -88,9 +102,11 @@
    "value": 548000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Büyük Menderes",
    "mouth": [
     "Ege Denizi"
-   ]
+   ],
+   "tr_views": 15896
   },
   {
    "qid": "Q217466",
@@ -99,9 +115,11 @@
    "value": 824000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Sakarya Nehri",
    "mouth": [
     "Karadeniz"
-   ]
+   ],
+   "tr_views": 38264
   },
   {
    "qid": "Q756018",
@@ -110,9 +128,11 @@
    "value": 473000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Zap Suyu",
    "mouth": [
     "Dicle Nehri"
-   ]
+   ],
+   "tr_views": 12757
   },
   {
    "qid": "Q1996981",
@@ -121,9 +141,11 @@
    "value": 186000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Arpaçay",
    "mouth": [
     "Aras Nehri"
-   ]
+   ],
+   "tr_views": 7491
   },
   {
    "qid": "Q70970",
@@ -132,9 +154,11 @@
    "value": 438000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Çoruh",
    "mouth": [
     "Karadeniz"
-   ]
+   ],
+   "tr_views": 20732
   },
   {
    "qid": "Q731777",
@@ -143,9 +167,11 @@
    "value": 283000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Tunca",
    "mouth": [
     "Meriç"
-   ]
+   ],
+   "tr_views": 5835
   },
   {
    "qid": "Q1145293",
@@ -154,9 +180,11 @@
    "value": 519000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Yeşilırmak",
    "mouth": [
     "Karadeniz"
-   ]
+   ],
+   "tr_views": 55113
   },
   {
    "qid": "Q913193",
@@ -165,9 +193,11 @@
    "value": 722000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Murat Nehri",
    "mouth": [
     "Fırat"
-   ]
+   ],
+   "tr_views": 18725
   },
   {
    "qid": "Q1351474",
@@ -176,9 +206,11 @@
    "value": 401000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Gediz Nehri",
    "mouth": [
     "İzmir Körfezi"
-   ]
+   ],
+   "tr_views": 13578
   },
   {
    "qid": "Q910975",
@@ -187,9 +219,11 @@
    "value": 560000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Seyhan Nehri",
    "mouth": [
     "Akdeniz"
-   ]
+   ],
+   "tr_views": 14655
   },
   {
    "qid": "Q1057961",
@@ -198,9 +232,11 @@
    "value": 474000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Ceyhan Nehri",
    "mouth": [
     "Akdeniz"
-   ]
+   ],
+   "tr_views": 15152
   },
   {
    "qid": "Q732201",
@@ -209,9 +245,11 @@
    "value": 260000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Göksu",
    "mouth": [
     "Akdeniz"
-   ]
+   ],
+   "tr_views": 9607
   },
   {
    "qid": "Q2890912",
@@ -220,9 +258,11 @@
    "value": 112000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Mutludere",
    "mouth": [
     "Karadeniz"
-   ]
+   ],
+   "tr_views": 1620
   },
   {
    "qid": "Q2455311",
@@ -231,9 +271,11 @@
    "value": 147000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Kocadere (Kırklareli)",
    "mouth": [
     "Karadeniz"
-   ]
+   ],
+   "tr_views": 254
   },
   {
    "qid": "Q387842",
@@ -242,9 +284,11 @@
    "value": 131000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Afrin Çayı",
    "mouth": [
     "Asi Nehri"
-   ]
+   ],
+   "tr_views": 2282
   },
   {
    "qid": "Q922382",
@@ -253,9 +297,11 @@
    "value": 114000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Küçük Menderes",
    "mouth": [
     "Ege Denizi"
-   ]
+   ],
+   "tr_views": 7455
   },
   {
    "qid": "Q923929",
@@ -264,9 +310,11 @@
    "value": 25000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Sart Çayı",
    "mouth": [
     "Gediz Nehri"
-   ]
+   ],
+   "tr_views": 5589
   },
   {
    "qid": "Q385473",
@@ -275,9 +323,11 @@
    "value": 183000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Köprüçay",
    "mouth": [
     "Akdeniz"
-   ]
+   ],
+   "tr_views": 2581
   },
   {
    "qid": "Q153675",
@@ -286,9 +336,11 @@
    "value": 93000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Manavgat Nehri",
    "mouth": [
     "Akdeniz"
-   ]
+   ],
+   "tr_views": 4589
   },
   {
    "qid": "Q1728989",
@@ -297,9 +349,11 @@
    "value": 470000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Karasu Nehri",
    "mouth": [
     "Fırat"
-   ]
+   ],
+   "tr_views": 9866
   },
   {
    "qid": "Q1268444",
@@ -308,9 +362,11 @@
    "value": 80000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Biga Çayı",
    "mouth": [
     "Marmara Denizi"
-   ]
+   ],
+   "tr_views": 2825
   },
   {
    "qid": "Q3033332",
@@ -319,9 +375,11 @@
    "value": 108000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Sacır Çayı",
    "mouth": [
     "Fırat"
-   ]
+   ],
+   "tr_views": 501
   },
   {
    "qid": "Q3515829",
@@ -330,9 +388,11 @@
    "value": 124000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Berdan (nehir)",
    "mouth": [
     "Akdeniz"
-   ]
+   ],
+   "tr_views": 2526
   },
   {
    "qid": "Q396585",
@@ -341,9 +401,11 @@
    "value": 283000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Ergene",
    "mouth": [
     "Meriç"
-   ]
+   ],
+   "tr_views": 5327
   },
   {
    "qid": "Q2004311",
@@ -352,9 +414,11 @@
    "value": 115000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Batman Çayı",
    "mouth": [
     "Dicle Nehri"
-   ]
+   ],
+   "tr_views": 1382
   },
   {
    "qid": "Q1752576",
@@ -363,9 +427,11 @@
    "value": 37000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Maçahel Suyu",
    "mouth": [
     "Çoruh Nehri"
-   ]
+   ],
+   "tr_views": 166
   },
   {
    "qid": "Q2488636",
@@ -374,9 +440,11 @@
    "value": 110000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Karamenderes Nehri",
    "mouth": [
     "Çanakkale Boğazı"
-   ]
+   ],
+   "tr_views": 2070
   },
   {
    "qid": "Q421630",
@@ -385,9 +453,11 @@
    "value": 162000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Aksu Çayı",
    "mouth": [
     "Akdeniz"
-   ]
+   ],
+   "tr_views": 2635
   },
   {
    "qid": "Q1436746",
@@ -396,9 +466,11 @@
    "value": 129000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Bakırçay",
    "mouth": [
     "Çandarlı Körfezi"
-   ]
+   ],
+   "tr_views": 3939
   },
   {
    "qid": "Q2720896",
@@ -407,9 +479,11 @@
    "value": 448000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Porsuk Çayı",
    "mouth": [
     "Sakarya Nehri"
-   ]
+   ],
+   "tr_views": 20096
   },
   {
    "qid": "Q3045328",
@@ -418,9 +492,11 @@
    "value": 356000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Kelkit Çayı",
    "mouth": [
     "Yeşilırmak"
-   ]
+   ],
+   "tr_views": 10176
   },
   {
    "qid": "Q3181444",
@@ -429,9 +505,11 @@
    "value": 321000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Simav Çayı Havzası",
    "mouth": [
     "Mustafakemalpaşa Çayı"
-   ]
+   ],
+   "tr_views": 4874
   },
   {
    "qid": "Q2850284",
@@ -440,9 +518,11 @@
    "value": 140000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Ankara Çayı",
    "mouth": [
     "Sakarya Nehri"
-   ]
+   ],
+   "tr_views": 6516
   },
   {
    "qid": "Q3021654",
@@ -451,9 +531,11 @@
    "value": 426000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Delice Irmağı",
    "mouth": [
     "Kızılırmak"
-   ]
+   ],
+   "tr_views": 2129
   },
   {
    "qid": "Q3775655",
@@ -462,9 +544,11 @@
    "value": 60000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Limonlu Çayı",
    "mouth": [
     "Akdeniz"
-   ]
+   ],
+   "tr_views": 974
   },
   {
    "qid": "Q894622",
@@ -473,9 +557,11 @@
    "value": 268000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Botan Çayı",
    "mouth": [
     "Dicle Nehri"
-   ]
+   ],
+   "tr_views": 5208
   },
   {
    "qid": "Q2560421",
@@ -484,9 +570,11 @@
    "value": 308000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Zamantı",
    "mouth": [
     "Seyhan Nehri"
-   ]
+   ],
+   "tr_views": 7257
   },
   {
    "qid": "Q2886191",
@@ -495,9 +583,11 @@
    "value": 100000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Bartın Çayı",
    "mouth": [
     "Karadeniz"
-   ]
+   ],
+   "tr_views": 3559
   },
   {
    "qid": "Q4896971",
@@ -506,9 +596,11 @@
    "value": 221000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Gökırmak",
    "mouth": [
     "Kızılırmak"
-   ]
+   ],
+   "tr_views": 2696
   },
   {
    "qid": "Q18689526",
@@ -517,9 +609,11 @@
    "value": 35000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Terme Çayı",
    "mouth": [
     "Karadeniz"
-   ]
+   ],
+   "tr_views": 1129
   },
   {
    "qid": "Q3327955",
@@ -528,9 +622,11 @@
    "value": 144000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Munzur Çayı",
    "mouth": [
     "Peri Çayı"
-   ]
+   ],
+   "tr_views": 7907
   },
   {
    "qid": "Q18690050",
@@ -539,9 +635,11 @@
    "value": 120000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Eşen Çayı",
    "mouth": [
     "Akdeniz"
-   ]
+   ],
+   "tr_views": 3521
   },
   {
    "qid": "Q3532553",
@@ -550,9 +648,11 @@
    "value": 112000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Tortum Çayı",
    "mouth": [
     "Oltu Çayı"
-   ]
+   ],
+   "tr_views": 803
   },
   {
    "qid": "Q4213436",
@@ -561,9 +661,11 @@
    "value": 70000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Karadere",
    "mouth": [
     "Karadeniz"
-   ]
+   ],
+   "tr_views": 964
   },
   {
    "qid": "Q4701849",
@@ -572,9 +674,11 @@
    "value": 60000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Aksu Deresi",
    "mouth": [
     "Karadeniz"
-   ]
+   ],
+   "tr_views": 828
   },
   {
    "qid": "Q4896922",
@@ -583,9 +687,11 @@
    "value": 300000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Çekerek Çayı",
    "mouth": [
     "Yeşilırmak"
-   ]
+   ],
+   "tr_views": 3484
   },
   {
    "qid": "Q770193",
@@ -594,9 +700,11 @@
    "value": 60000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Dim Çayı",
    "mouth": [
     "Akdeniz"
-   ]
+   ],
+   "tr_views": 7822
   },
   {
    "qid": "Q12809886",
@@ -605,9 +713,11 @@
    "value": 137000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Harşit Çayı",
    "mouth": [
     "Karadeniz"
-   ]
+   ],
+   "tr_views": 3071
   },
   {
    "qid": "Q12809886",
@@ -616,9 +726,11 @@
    "value": 143000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Harşit Çayı",
    "mouth": [
     "Karadeniz"
-   ]
+   ],
+   "tr_views": 3071
   },
   {
    "qid": "Q13055247",
@@ -627,9 +739,11 @@
    "value": 144000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Oltu Çayı",
    "mouth": [
     "Çoruh Nehri"
-   ]
+   ],
+   "tr_views": 463
   },
   {
    "qid": "Q2413236",
@@ -638,9 +752,11 @@
    "value": 203000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Nilüfer Çayı",
    "mouth": [
     "Simav Çayı"
-   ]
+   ],
+   "tr_views": 5395
   },
   {
    "qid": "Q18676664",
@@ -649,9 +765,11 @@
    "value": 229000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Dalaman Çayı",
    "mouth": [
     "Akdeniz"
-   ]
+   ],
+   "tr_views": 3683
   },
   {
    "qid": "Q20583371",
@@ -660,9 +778,11 @@
    "value": 170000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Kotur Çayı",
    "mouth": [
     "Aras Nehri"
-   ]
+   ],
+   "tr_views": 343
   },
   {
    "qid": "Q56629",
@@ -671,9 +791,531 @@
    "value": 63000.0,
    "rank": "normal",
    "value_year": null,
+   "tr_title": "Posof Çayı",
    "mouth": [
     "Kura Nehri"
-   ]
+   ],
+   "tr_views": 591
+  },
+  {
+   "qid": "Q16385241",
+   "label": "Kars Çayı",
+   "links": 7,
+   "value": 93000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kars Çayı",
+   "mouth": [
+    "Arpaçay"
+   ],
+   "tr_views": 1407
+  },
+  {
+   "qid": "Q16385241",
+   "label": "Kars Çayı",
+   "links": 7,
+   "value": 167000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kars Çayı",
+   "mouth": [
+    "Arpaçay"
+   ],
+   "tr_views": 1407
+  },
+  {
+   "qid": "Q2025722",
+   "label": "Fırtına Deresi",
+   "links": 7,
+   "value": 68000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fırtına Deresi",
+   "mouth": [],
+   "tr_views": 16131
+  },
+  {
+   "qid": "Q252710",
+   "label": "Gönen Çayı",
+   "links": 7,
+   "value": 134000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gönen Çayı",
+   "mouth": [
+    "Marmara Denizi"
+   ],
+   "tr_views": 1378
+  },
+  {
+   "qid": "Q3141685",
+   "label": "Engil Çayı",
+   "links": 7,
+   "value": 113000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Engil Çayı",
+   "mouth": [
+    "Van Gölü"
+   ],
+   "tr_views": 557
+  },
+  {
+   "qid": "Q3375358",
+   "label": "Peri Çayı",
+   "links": 7,
+   "value": 230000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Peri Çayı",
+   "mouth": [
+    "Murat Nehri"
+   ],
+   "tr_views": 2309
+  },
+  {
+   "qid": "Q3572165",
+   "label": "Filyos Çayı",
+   "links": 7,
+   "value": 288000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Filyos Çayı",
+   "mouth": [
+    "Karadeniz"
+   ],
+   "tr_views": 2943
+  },
+  {
+   "qid": "Q5153735",
+   "label": "Yağlıdere",
+   "links": 7,
+   "value": 90000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yağlıdere (akarsu)",
+   "mouth": [
+    "Karadeniz"
+   ],
+   "tr_views": 418
+  },
+  {
+   "qid": "Q1555463",
+   "label": "Göksu",
+   "links": 6,
+   "value": 200000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Göksu (Seyhan Nehri)",
+   "mouth": [
+    "Seyhan Nehri"
+   ],
+   "tr_views": 3010
+  },
+  {
+   "qid": "Q3530391",
+   "label": "Tohma Çayı",
+   "links": 6,
+   "value": 150000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tohma Çayı",
+   "mouth": [],
+   "tr_views": 4304
+  },
+  {
+   "qid": "Q3548109",
+   "label": "Melendiz Çayı",
+   "links": 6,
+   "value": 120000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Melendiz Çayı",
+   "mouth": [],
+   "tr_views": 3426
+  },
+  {
+   "qid": "Q5530425",
+   "label": "Gelevera Deresi",
+   "links": 6,
+   "value": 80000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gelevera",
+   "mouth": [
+    "Karadeniz"
+   ],
+   "tr_views": 11645
+  },
+  {
+   "qid": "Q6025620",
+   "label": "Aksu Nehri",
+   "links": 6,
+   "value": 115000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aksu Nehri",
+   "mouth": [
+    "Ceyhan Nehri"
+   ],
+   "tr_views": 1933
+  },
+  {
+   "qid": "Q6067556",
+   "label": "Melen Çayı",
+   "links": 6,
+   "value": 100000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Melen Çayı",
+   "mouth": [
+    "Karadeniz"
+   ],
+   "tr_views": 6833
+  },
+  {
+   "qid": "Q18816479",
+   "label": "Barhal Çayı",
+   "links": 5,
+   "value": 60000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Barhal Çayı",
+   "mouth": [
+    "Çoruh Nehri"
+   ],
+   "tr_views": 751
+  },
+  {
+   "qid": "Q19285342",
+   "label": "Hemşin Deresi",
+   "links": 5,
+   "value": 38500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hemşin Deresi",
+   "mouth": [],
+   "tr_views": 378
+  },
+  {
+   "qid": "Q19296191",
+   "label": "Melet Cayi",
+   "links": 5,
+   "value": 170000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Melet Irmağı",
+   "mouth": [
+    "Karadeniz"
+   ],
+   "tr_views": 2570
+  },
+  {
+   "qid": "Q19309185",
+   "label": "Skamandros",
+   "links": 5,
+   "value": 97000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "mouth": [],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q3577263",
+   "label": "Çine Çayı",
+   "links": 5,
+   "value": 359000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çine Çayı",
+   "mouth": [
+    "Büyük Menderes Nehri"
+   ],
+   "tr_views": 1050
+  },
+  {
+   "qid": "Q1207044",
+   "label": "Devrez",
+   "links": 4,
+   "value": 211000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Devrez",
+   "mouth": [
+    "Kızılırmak"
+   ],
+   "tr_views": 2594
+  },
+  {
+   "qid": "Q19259711",
+   "label": "Arılı Deresi",
+   "links": 4,
+   "value": 31500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arılı Deresi",
+   "mouth": [],
+   "tr_views": 321
+  },
+  {
+   "qid": "Q19312199",
+   "label": "Çağlayan Deresi",
+   "links": 4,
+   "value": 34700.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çağlayan Deresi",
+   "mouth": [],
+   "tr_views": 525
+  },
+  {
+   "qid": "Q21211318",
+   "label": "Tuzla Çayı",
+   "links": 4,
+   "value": 87000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "mouth": [
+    "Karasu Nehri"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q21211318",
+   "label": "Tuzla Çayı",
+   "links": 4,
+   "value": 100000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "mouth": [
+    "Karasu Nehri"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q2829186",
+   "label": "Akçay",
+   "links": 4,
+   "value": 116000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Akçay Nehri",
+   "mouth": [
+    "Büyük Menderes Nehri"
+   ],
+   "tr_views": 1158
+  },
+  {
+   "qid": "Q3124551",
+   "label": "Göksun Çayı",
+   "links": 4,
+   "value": 115000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Göksun Çayı",
+   "mouth": [
+    "Ceyhan Nehri"
+   ],
+   "tr_views": 1176
+  },
+  {
+   "qid": "Q3577255",
+   "label": "Çarşamba Çayı",
+   "links": 4,
+   "value": 105000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çarşamba Çayı",
+   "mouth": [],
+   "tr_views": 4114
+  },
+  {
+   "qid": "Q13050776",
+   "label": "Deli Çay",
+   "links": 3,
+   "value": 30000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "mouth": [
+    "Van Gölü"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q16374286",
+   "label": "Bitlis Çayı",
+   "links": 3,
+   "value": 105000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "mouth": [
+    "Dicle Nehri"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q16384854",
+   "label": "Karahan Çayı",
+   "links": 3,
+   "value": 58000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "mouth": [
+    "Arpaçay"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q16951738",
+   "label": "Mezitli Deresi",
+   "links": 3,
+   "value": 20000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mezitli Çayı",
+   "mouth": [
+    "Akdeniz"
+   ],
+   "tr_views": 664
+  },
+  {
+   "qid": "Q19275597",
+   "label": "Bolaman Irmağı",
+   "links": 3,
+   "value": 80000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bolaman Irmağı",
+   "mouth": [],
+   "tr_views": 986
+  },
+  {
+   "qid": "Q19278150",
+   "label": "Devrekâni Çayı",
+   "links": 3,
+   "value": 160000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Devrekani Çayı",
+   "mouth": [],
+   "tr_views": 959
+  },
+  {
+   "qid": "Q19278152",
+   "label": "Değirmendere (akarsu)",
+   "links": 3,
+   "value": 60000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Değirmendere (akarsu)",
+   "mouth": [
+    "Karadeniz"
+   ],
+   "tr_views": 690
+  },
+  {
+   "qid": "Q19308341",
+   "label": "Sabuncular Deresi",
+   "links": 3,
+   "value": 46000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sabuncular Deresi",
+   "mouth": [
+    "Karadeniz"
+   ],
+   "tr_views": 482
+  },
+  {
+   "qid": "Q19312265",
+   "label": "İyidere Deresi",
+   "links": 3,
+   "value": 78400.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İyidere Deresi",
+   "mouth": [],
+   "tr_views": 1109
+  },
+  {
+   "qid": "Q21127429",
+   "label": "Kocaçay",
+   "links": 3,
+   "value": 150000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kocaçay",
+   "mouth": [
+    "Simav Çayı"
+   ],
+   "tr_views": 1033
+  },
+  {
+   "qid": "Q3480566",
+   "label": "Serçeme Çayı",
+   "links": 3,
+   "value": 60000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "mouth": [
+    "Karasu Nehri"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q6006657",
+   "label": "Araç Çayı",
+   "links": 3,
+   "value": 100000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Araç Çayı",
+   "mouth": [],
+   "tr_views": 619
+  },
+  {
+   "qid": "Q6014726",
+   "label": "Alakır Çayı",
+   "links": 3,
+   "value": 62000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Alakır Çayı",
+   "mouth": [],
+   "tr_views": 973
+  },
+  {
+   "qid": "Q6037781",
+   "label": "Banaz Çayı",
+   "links": 3,
+   "value": 159000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Banaz Çayı",
+   "mouth": [
+    "Büyük Menderes Nehri"
+   ],
+   "tr_views": 1353
+  },
+  {
+   "qid": "Q810839",
+   "label": "Batlama Deresi",
+   "links": 3,
+   "value": 40000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Batlama Deresi",
+   "mouth": [
+    "Karadeniz"
+   ],
+   "tr_views": 744
   }
  ]
 }

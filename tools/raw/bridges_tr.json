@@ -1,0 +1,338 @@
+{
+ "dataset": "bridges_tr",
+ "description": "Türkiye'deki köprüler, uzunluk (P2043)",
+ "property": "P2043",
+ "fetched_at": "2026-10-26T10:40:43+00:00",
+ "rows": [
+  {
+   "qid": "Q4484",
+   "label": "15 Temmuz Şehitler Köprüsü",
+   "links": 58,
+   "value": 1559.9694708,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "15 Temmuz Şehitler Köprüsü",
+   "place": [
+    "İstanbul"
+   ],
+   "opened": [
+    1973
+   ],
+   "tr_views": 90360
+  },
+  {
+   "qid": "Q4484",
+   "label": "15 Temmuz Şehitler Köprüsü",
+   "links": 58,
+   "value": 1560.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "15 Temmuz Şehitler Köprüsü",
+   "place": [
+    "İstanbul"
+   ],
+   "opened": [
+    1973
+   ],
+   "tr_views": 90360
+  },
+  {
+   "qid": "Q8077503",
+   "label": "1915 Çanakkale Köprüsü",
+   "links": 47,
+   "value": 4608.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1915 Çanakkale Köprüsü",
+   "place": [
+    "Gelibolu",
+    "Lapseki"
+   ],
+   "opened": [
+    2022
+   ],
+   "tr_views": 55095
+  },
+  {
+   "qid": "Q369967",
+   "label": "Fatih Sultan Mehmet Köprüsü",
+   "links": 42,
+   "value": 1510.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fatih Sultan Mehmet Köprüsü",
+   "place": [
+    "İstanbul"
+   ],
+   "opened": [
+    1988
+   ],
+   "tr_views": 52077
+  },
+  {
+   "qid": "Q25338950",
+   "label": "Osmangazi Köprüsü",
+   "links": 25,
+   "value": 2682.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Osmangazi Köprüsü",
+   "place": [
+    "Dilovası"
+   ],
+   "opened": [
+    2016
+   ],
+   "tr_views": 53474
+  },
+  {
+   "qid": "Q6076527",
+   "label": "Haliç Metro Köprüsü",
+   "links": 17,
+   "value": 919.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Haliç Metro Köprüsü",
+   "place": [
+    "İstanbul"
+   ],
+   "opened": [
+    2014
+   ],
+   "tr_views": 5402
+  },
+  {
+   "qid": "Q5642498",
+   "label": "Haliç Köprüsü",
+   "links": 12,
+   "value": 995.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Haliç Köprüsü",
+   "place": [
+    "İstanbul"
+   ],
+   "opened": [
+    1974
+   ],
+   "tr_views": 8956
+  },
+  {
+   "qid": "Q6053470",
+   "label": "Uzunköprü",
+   "links": 12,
+   "value": 1392.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uzun Köprü",
+   "place": [
+    "Edirne"
+   ],
+   "opened": [],
+   "tr_views": 5272
+  },
+  {
+   "qid": "Q6015752",
+   "label": "Meriç Köprüsü",
+   "links": 9,
+   "value": 263.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Meriç Köprüsü",
+   "place": [
+    "Edirne"
+   ],
+   "opened": [],
+   "tr_views": 6644
+  },
+  {
+   "qid": "Q16851611",
+   "label": "Kanuni Köprüsü",
+   "links": 8,
+   "value": 60.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kanuni Köprüsü",
+   "place": [
+    "Edirne"
+   ],
+   "opened": [],
+   "tr_views": 1098
+  },
+  {
+   "qid": "Q17017335",
+   "label": "Nissibi Köprüsü",
+   "links": 7,
+   "value": 610.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nissibi Köprüsü",
+   "place": [
+    "Gerger",
+    "Siverek"
+   ],
+   "opened": [
+    2015
+   ],
+   "tr_views": 6533
+  },
+  {
+   "qid": "Q18209534",
+   "label": "Eski Köprü (Hasankeyf)",
+   "links": 4,
+   "value": 200.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "place": [],
+   "opened": [],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q39058038",
+   "label": "Tunca Köprüsü",
+   "links": 4,
+   "value": 136.3,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tunca Köprüsü",
+   "place": [
+    "Edirne"
+   ],
+   "opened": [],
+   "tr_views": 1848
+  },
+  {
+   "qid": "Q6036371",
+   "label": "Clandras Köprüsü",
+   "links": 4,
+   "value": 24.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Clandras Köprüsü",
+   "place": [
+    "Karahallı",
+    "Uşak"
+   ],
+   "opened": [],
+   "tr_views": 8066
+  },
+  {
+   "qid": "Q104621750",
+   "label": "Yeni Kömürhan Köprüsü",
+   "links": 3,
+   "value": 660.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeni Kömürhan Köprüsü",
+   "place": [
+    "Elazığ",
+    "Malatya"
+   ],
+   "opened": [
+    2021
+   ],
+   "tr_views": 979
+  },
+  {
+   "qid": "Q30680414",
+   "label": "Tekgöz Köprüsü",
+   "links": 3,
+   "value": 120.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "place": [
+    "Kocasinan"
+   ],
+   "opened": [],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q55613159",
+   "label": "Şehit Kerem Oğuz Erbay Üst Geçidi",
+   "links": 3,
+   "value": 125.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Göztepe Şehit Kerem Oğuz Erbay Üst Geçidi",
+   "place": [
+    "Konak"
+   ],
+   "opened": [],
+   "tr_views": 609
+  },
+  {
+   "qid": "Q6001702",
+   "label": "Altıgöz Köprüsü",
+   "links": 3,
+   "value": 44.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Altıgöz Köprüsü",
+   "place": [
+    "Afyonkarahisar"
+   ],
+   "opened": [],
+   "tr_views": 213
+  },
+  {
+   "qid": "Q20473361",
+   "label": "Haramidere Köprüsü",
+   "links": 2,
+   "value": 74.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Harâmidere Köprüsü",
+   "place": [
+    "Beylikdüzü"
+   ],
+   "opened": [],
+   "tr_views": 5445
+  },
+  {
+   "qid": "Q19613015",
+   "label": "Yahşihan Demir Köprü",
+   "links": 1,
+   "value": 98.75,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yahşihan Demir Köprü",
+   "place": [
+    "Kırıkkale",
+    "Yahşihan"
+   ],
+   "opened": [],
+   "tr_views": 423
+  },
+  {
+   "qid": "Q91773482",
+   "label": "Halilviran Köprüsü",
+   "links": 1,
+   "value": 101.2,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Halilviran Köprüsü",
+   "place": [
+    "Diyarbakır",
+    "Yenişehir"
+   ],
+   "opened": [],
+   "tr_views": 217
+  },
+  {
+   "qid": "Q131748430",
+   "label": "Sazlıdere Köprüsü",
+   "links": 0,
+   "value": 860.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "place": [
+    "Başakşehir"
+   ],
+   "opened": [],
+   "tr_views": 0
+  }
+ ]
+}

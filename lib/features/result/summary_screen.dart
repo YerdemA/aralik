@@ -13,14 +13,14 @@ enum SummaryAction { newRound, home }
 class SummaryScreen extends StatelessWidget {
   const SummaryScreen({
     super.key,
-    required this.points,
+    required this.results,
     required this.hits,
     required this.answered,
     this.shareText,
   });
 
-  /// Points per question, in order.
-  final List<int> points;
+  /// Outcome per question, in order.
+  final List<QuestionResult> results;
 
   /// All-time calibration counts.
   final int hits;
@@ -34,8 +34,8 @@ class SummaryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final total = points.fold(0, (sum, p) => sum + p);
-    final max = points.length * maxPointsPerQuestion;
+    final total = totalPoints(results);
+    final max = results.length * maxPointsPerQuestion;
 
     return Scaffold(
       body: SafeArea(
@@ -57,7 +57,7 @@ class SummaryScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 20),
-              _TierRow(points: points),
+              _TierRow(results: results),
               const SizedBox(height: 24),
               Text(
                 calibrationSummary(hits, answered),
@@ -105,9 +105,9 @@ class SummaryScreen extends StatelessWidget {
 
 /// Coloured squares matching the share card.
 class _TierRow extends StatelessWidget {
-  const _TierRow({required this.points});
+  const _TierRow({required this.results});
 
-  final List<int> points;
+  final List<QuestionResult> results;
 
   @override
   Widget build(BuildContext context) {
@@ -115,16 +115,16 @@ class _TierRow extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        for (final p in points)
+        for (final r in results)
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 4),
             child: Tooltip(
-              message: '$p ${AppStrings.points}',
+              message: '${r.points} ${AppStrings.points}',
               child: Container(
                 width: 40,
                 height: 40,
                 decoration: BoxDecoration(
-                  color: colors.forTier(ResultTier.fromPoints(p)),
+                  color: colors.forTier(r.tier),
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
