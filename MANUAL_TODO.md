@@ -13,19 +13,13 @@ Açık oturum klasörü kullandığı için yeniden adlandırma oturum içinden 
 4. Claude Code'u yeni klasörde aç. (Claude'un proje hafızası eski yola bağlı. İstersen
    `C:\Users\yusuf\.claude\projects\D--Yazilim-Mobil-Aral-k\memory\` içeriğini yeni projenin klasörüne kopyala.)
 
-## 2. GitHub Pages'i aç (internetten soru güncellemesi bunun üzerinden çalışır)
-1. https://github.com/YerdemA/aralik/settings/pages adresine git.
-2. "Build and deployment" altında **Source: Deploy from a branch**, **Branch: main**, klasör **/docs** seç ve kaydet.
-3. Birkaç dakika sonra şu adresler açılmalı:
-   - https://yerdema.github.io/aralik/content/manifest.json (uygulamanın baktığı dosya)
-   - https://yerdema.github.io/aralik/privacy-policy (Play Console'a girilecek gizlilik linki)
-
 ## 3. Soru bankasına göz at (31 Ekim'e kadar, isteğe bağlı)
 Banka 2026-10-26'da Türkçe Vikipedi okunma sayılarına göre yeniden kuruldu (213 soru).
 `python tools/build_questions.py --fresh --dry-run --report` her veri setinde seçilenleri ve sınırda kalanları okunma sayılarıyla listeler.
 Çıkarmak istediğin soruları id'leriyle Claude'a söylemen yeterli.
 
-## 3b. TÜİK il nüfusu verisi
+## 3b. (Ertelendi) TÜİK il nüfusu verisi
+Portalda JSON indirme yolu bulunamadı (2026-10-26). Zorunlu değil, il nüfusu soruları olmadan banka yeterli.
 TÜİK veri portalında "nüfus yoğunluğu" değil, il bazında **toplam nüfus** veren ADNKS göstergesini bul ve **JSON** olarak indir
 (JSON uygun, dönüştürücüyü Claude yazar). Dosyayı `tools\tuik\` altına koy.
 
