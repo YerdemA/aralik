@@ -2,6 +2,7 @@ import 'package:aralik/core/daily.dart';
 import 'package:aralik/core/strings.dart';
 import 'package:aralik/core/theme.dart';
 import 'package:aralik/data/question_repository.dart';
+import 'package:aralik/data/settings_store.dart';
 import 'package:aralik/data/stats_store.dart';
 import 'package:aralik/features/home/home_screen.dart';
 import 'package:aralik/features/settings/settings_screen.dart';
@@ -22,7 +23,11 @@ Future<StatsStore> pumpHome(
   await tester.pumpWidget(
     MaterialApp(
       theme: AppTheme.light,
-      home: HomeScreen(repository: QuestionRepository(), stats: stats),
+      home: HomeScreen(
+        repository: QuestionRepository(),
+        stats: stats,
+        settings: await SettingsStore.open(),
+      ),
     ),
   );
   return stats;
@@ -33,6 +38,7 @@ void main() {
 
   testWidgets('fresh install offers today\'s set', (tester) async {
     await pumpHome(tester);
+    expect(find.text(AppStrings.previewEdition), findsNothing);
     expect(find.text(AppStrings.playToday), findsOneWidget);
     expect(find.text(AppStrings.freePlay), findsOneWidget);
     expect(find.text(AppStrings.streakDays(0)), findsOneWidget);

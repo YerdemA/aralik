@@ -112,6 +112,7 @@ abstract final class AppStrings {
   static const categoryOther = 'Diğer';
 
   // Settings
+  static const appearance = 'Görünüm';
   static const theme = 'Tema';
   static const themeSystem = 'Sistem';
   static const themeLight = 'Açık';

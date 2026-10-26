@@ -70,10 +70,11 @@ lib/
     attributions.dart       # atıf listesi (assets/data/attributions.json)
     content_sync.dart       # GitHub Pages'ten içerik güncellemesi
     stats_store.dart        # shared_preferences sarmalayıcısı (ChangeNotifier)
+    settings_store.dart     # ayarlar (tema), shared_preferences
     distance_questions.dart # cihazda mesafe sorusu üreticisi
     place.dart              # yer modeli
   features/                 # ekranlar: home, game (+ GameController), result, stats, settings
-  widgets/                  # ortak parçalar (sayı klavyesi, aralık çubuğu, manzara, ...)
+  widgets/                  # ortak parçalar (sayı klavyesi, aralık çubuğu, kategori etiketi, ...)
 ```
 - **Katmanlar:** `core` saf Dart'tır ve Flutter widget'larını bilmez. Böylece iş mantığı hızlı birim testleriyle doğrulanır. `data` kalıcılık ve G/Ç işlerini yapar. `features` yalnızca bunları çağırır ve çizer.
 - **Metinler:** Kod, değişken ve dosya adları İngilizcedir. Kullanıcıya görünen her metin `core/strings.dart` içindedir.
@@ -121,7 +122,7 @@ lib/
   - aynı öğe hakkında en fazla 1 soru (ör. bir şirketin kuruluş yılı ve çalışan sayısı aynı güne düşmez)
 - Herkes aynı gün aynı soruları görür ve bunun için sunucu gerekmez. Bunun bedeli şudur: **takvim ve banka yalnızca sona eklenebilir.** Bir günü ya da soruyu değiştirmek, farklı oyunculara aynı gün farklı sorular gösterir.
 - Mevcut takvim 45 gündür. Uzatmak için yeni kolay sorular gerekir (bkz. PLAN.md).
-- Kapalı test sırasında (`dayIndex < 0`) set "(deneme)" olarak işaretlenir.
+- Kapalı test sırasında (`dayIndex < 0`) ana ekranda gün numarası gösterilmez, paylaşım metninde "(deneme)" yazar.
 
 ### 5.2 Aralık girişi (`core/interval.dart`)
 - **Büyüklük:** logaritmik kaydırıcı. `t ∈ [0,1]` için aralık `tahmin ÷ f … tahmin × f`, burada `f = 10^t`. Sınırlar dışa doğru "güzel" adımlara (1, 2, 5 × 10ⁿ) yuvarlanır. Bu yüzden ekranda `4.545 – 5.500` yerine `4.500 – 5.500` görünür. Ekranda görünen sınırlar puanlanan sınırların ta kendisidir.
@@ -232,14 +233,13 @@ validate_questions.py (banka + takvim)        publish_content.py → docs/conten
 - **`GameColors`:** sonuç kademesi renkleri (🟩🟨⬛ ile eşleşir) ve seri rengi için bir ThemeExtension.
 - **Kategori stili:** Her kategorinin bir Material ikonu ve açık/koyu tema için birer rengi vardır.
 - **Çizimler:**
-  - `widgets/landscape.dart`: ikondaki manzara. Koyu temada gece hâline geçer.
   - `widgets/range_mark.dart`: logonun altındaki aralık işareti.
   - `widgets/interval_bar.dart`: sonuçtaki aralık çubuğu.
   - `features/stats/calibration_chart.dart`: kalibrasyon grafiği.
   - Hepsi `CustomPaint` ile çizilir.
-- **Animasyonlar:** Yalnızca implicit animasyonlar kullanılır (`TweenAnimationBuilder`, `AnimatedContainer`, `AnimatedSwitcher`). Rozet zıplaması, sayarak artan puan, sırayla beliren kareler ve yükselen manzara bunlarla yapılır. AnimationController ya da paket yok.
+- **Animasyonlar:** Yalnızca implicit animasyonlar kullanılır (`TweenAnimationBuilder`, `AnimatedContainer`, `AnimatedSwitcher`). Rozet zıplaması, sayarak artan puan, sırayla beliren kareler ve logonun açılan aralık işareti bunlarla yapılır. AnimationController ya da paket yok.
 - **Titreşim:** Tuşlarda `selectionClick`, kilitlemede `mediumImpact`. Ses yok.
-- **Ayarlar:** Şimdilik yalnızca "Hakkında" bölümü var: veri kaynakları ve lisanslar ekranı, Flutter'ın yerleşik açık kaynak lisansları sayfası (`showLicensePage`) ve gizlilik politikası. Linkler tarayıcıda açılmaz, çünkü bunun için `url_launcher` paketi gerekir. Bunun yerine seçilebilir metin olarak gösterilir ve yanlarında bir kopyalama düğmesi bulunur (`widgets/link_text.dart`).
+- **Ayarlar:** "Görünüm" bölümünde tema seçimi var: sistem, açık ya da koyu. Seçim `data/settings_store.dart` ile `shared_preferences`'ta saklanır, uygulama anında geçer. "Hakkında" bölümünde veri kaynakları ve lisanslar ekranı, Flutter'ın yerleşik açık kaynak lisansları sayfası (`showLicensePage`) ve gizlilik politikası. Linkler tarayıcıda açılmaz, çünkü bunun için `url_launcher` paketi gerekir. Bunun yerine seçilebilir metin olarak gösterilir ve yanlarında bir kopyalama düğmesi bulunur (`widgets/link_text.dart`).
 - **Erişilebilirlik:** Grafik bir `Semantics` etiketiyle oranları okutur. Sayarak artan metin ekran okuyucuya son değeri söyler. Süs çizimleri `ExcludeSemantics` içindedir.
 
 ## 9. Test

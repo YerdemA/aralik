@@ -3,33 +3,15 @@ import 'package:flutter/material.dart';
 import '../data/question.dart';
 import 'scoring.dart';
 
-/// The app icon's world: sky, mountains, a terracotta tower, a green plain
-/// and a pink brain. The UI reuses these colours so the app and its icon
-/// feel like one thing.
+/// Colours of the app icon (tools/icon/render_icon_test.dart): the tower's
+/// roof seeds the theme, the others colour the result burst. The UI reuses
+/// them so the app and its icon feel like one thing.
 abstract final class Palette {
-  static const ink = Color(0xFF1C2742);
   static const roof = Color(0xFF3E5683);
-  static const nearMountain = Color(0xFF5B7DB1);
-  static const farMountain = Color(0xFF7D9CC7);
-  static const snow = Color(0xFFF4F8FF);
   static const skyTop = Color(0xFF8EC5FF);
-  static const skyBottom = Color(0xFFDDEFFF);
   static const tower = Color(0xFFD9825B);
-  static const castle = Color(0xFFB08A63);
   static const plain = Color(0xFF8BCB72);
-  static const plainLight = Color(0xFFA9DA8F);
   static const brain = Color(0xFFF6A5C6);
-  static const brainLine = Color(0xFFC0507E);
-
-  // Night versions for the dark theme.
-  static const nightSkyTop = Color(0xFF0E1526);
-  static const nightSkyBottom = Color(0xFF1C2742);
-  static const nightFarMountain = Color(0xFF2A3A5E);
-  static const nightNearMountain = Color(0xFF22304F);
-  static const nightSnow = Color(0xFFB9C7E3);
-  static const nightPlain = Color(0xFF2D4A35);
-  static const nightPlainLight = Color(0xFF365A40);
-  static const moon = Color(0xFFF3EBC8);
 }
 
 /// App-wide light and dark themes (Material 3, system font).

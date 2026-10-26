@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'app.dart';
 import 'data/content_sync.dart';
 import 'data/question_repository.dart';
+import 'data/settings_store.dart';
 import 'data/stats_store.dart';
 
 Future<void> main() async {
@@ -13,7 +14,13 @@ Future<void> main() async {
   final repository = QuestionRepository(remote: content);
   // Warm the bank cache. A failure is retried on play.
   repository.load().ignore();
-  runApp(AralikApp(repository: repository, stats: StatsStore(prefs)));
+  runApp(
+    AralikApp(
+      repository: repository,
+      stats: StatsStore(prefs),
+      settings: SettingsStore(prefs),
+    ),
+  );
 
   // Look for new questions in the background; used from the next launch.
   content.sync(accept: repository.acceptsContent).ignore();

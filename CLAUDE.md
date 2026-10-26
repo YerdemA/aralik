@@ -47,6 +47,7 @@ lib/
     question.dart           # model + fromJson
     question_repository.dart
     stats_store.dart        # shared_preferences sarmalayıcısı
+    settings_store.dart     # ayarlar (tema)
   features/
     home/                   # ana ekran: günün seti, seri, kalibrasyon
     game/                   # soru ekranı + tahmin/aralık girişi

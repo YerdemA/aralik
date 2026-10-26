@@ -63,7 +63,8 @@ Yeni sorular uygulama güncellemesi gerekmeden GitHub Pages'ten indirilir. Gizli
 - Serbest mod: takvimin önümüzdeki 60 gününde olmayan banka soruları ve turda en fazla 1 mesafe sorusu (79 Türkiye şehri, 40 başkent)
 - İnternetten içerik güncelleme (GitHub Pages, 6 saatte bir kontrol)
 - İstatistik ekranı: kalibrasyon grafiği, ıska yönü, kategori bazında isabet
-- Görsel kimlik: ikondaki manzaradan türetilen renkler, kodla çizilen manzara, kategori renkleri ve hafif animasyonlar
+- Görsel kimlik: uygulama ikonundan türetilen renkler, kategori renkleri ve hafif animasyonlar
+- Ayarlar: tema seçimi (sistem, açık, koyu), veri kaynakları ve lisanslar, gizlilik politikası
 - Uygulama ikonu (uyarlanabilir, yuvarlak, Android 13 tek renkli), gizlilik politikası
 - İmzalı release paketi (AAB)
 - 139 birim ve widget testi, `flutter analyze` sıfır uyarı
@@ -72,7 +73,7 @@ Yeni sorular uygulama güncellemesi gerekmeden GitHub Pages'ten indirilir. Gizli
 - Google Play kapalı teste yükleme (14 gün, en az 12 test kullanıcısı)
 - Açık geri bildirim: puanlama kolay görünüyor. Ayrıntılar [docs/PLAN.md](docs/PLAN.md) içinde.
 - Yeni veri kaynakları ([docs/SOURCES.md](docs/SOURCES.md), 3. adım ve sonrası): AnAge, USDA FoodData, NASA, OurAirports, openfootball, Dünya Bankası, FAOSTAT, İBB, TÜİK. Takvimi uzatmak için en çok kolay sorulara ihtiyaç var.
-- Ayarların geri kalanı (tema seçimi, nasıl oynanır) ve ilk açılış tanıtımı
+- "Nasıl oynanır" ekranı ve ilk açılış tanıtımı
 - Boyut ölçümü (hedef: indirme boyutu < 8 MB) ve mağaza sayfası
 - Faz 2: günlük hatırlatma bildirimi, kategori seçimli pratik, rozetler
 
@@ -83,7 +84,7 @@ lib/
   core/                   # saf iş mantığı: puan, aralık, günlük seçim, sayı biçimi, istatistik, tema, metinler
   data/                   # soru modeli, soru deposu, içerik senkronu, istatistik deposu, mesafe üreticisi
   features/               # ekranlar: home, game, result, stats
-  widgets/                # ortak parçalar: sayı klavyesi, aralık çubuğu, manzara, kutucuklar
+  widgets/                # ortak parçalar: sayı klavyesi, aralık çubuğu, kutucuklar
 assets/                   # soru bankası ve yer verisi (JSON)
 tools/                    # Python veri hattı ve ikon üretici (uygulamaya dahil değil)
 docs/                     # plan, gizlilik politikası, mağaza ikonu, yayınlanan içerik (GitHub Pages)

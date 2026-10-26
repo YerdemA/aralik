@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 
 import '../../core/strings.dart';
+import '../../data/settings_store.dart';
 import '../../widgets/link_text.dart';
 import 'attributions_screen.dart';
 
-/// Settings. For now only "Hakkında": data sources and licenses,
+/// Settings: the theme, and "Hakkında" with data sources and licenses,
 /// open-source licenses and the privacy policy.
 class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({super.key});
+  const SettingsScreen({super.key, required this.settings});
+
+  final SettingsStore settings;
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +21,47 @@ class SettingsScreen extends StatelessWidget {
         child: ListView(
           padding: const EdgeInsets.fromLTRB(20, 8, 20, 24),
           children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(4, 0, 4, 8),
-              child: Text(AppStrings.about, style: theme.textTheme.titleLarge),
+            const _SectionTitle(AppStrings.appearance),
+            Card(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(16, 12, 16, 16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Text(AppStrings.theme, style: theme.textTheme.titleMedium),
+                    const SizedBox(height: 12),
+                    ListenableBuilder(
+                      listenable: settings,
+                      builder: (context, _) => SegmentedButton<ThemeMode>(
+                        segments: const [
+                          ButtonSegment(
+                            value: ThemeMode.system,
+                            icon: Icon(Icons.brightness_auto_rounded),
+                            label: Text(AppStrings.themeSystem),
+                          ),
+                          ButtonSegment(
+                            value: ThemeMode.light,
+                            icon: Icon(Icons.light_mode_rounded),
+                            label: Text(AppStrings.themeLight),
+                          ),
+                          ButtonSegment(
+                            value: ThemeMode.dark,
+                            icon: Icon(Icons.dark_mode_rounded),
+                            label: Text(AppStrings.themeDark),
+                          ),
+                        ],
+                        selected: {settings.themeMode},
+                        showSelectedIcon: false,
+                        onSelectionChanged: (s) =>
+                            settings.setThemeMode(s.single),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
+            const SizedBox(height: 24),
+            const _SectionTitle(AppStrings.about),
             Card(
               clipBehavior: Clip.antiAlias,
               child: Column(
@@ -64,4 +104,16 @@ class SettingsScreen extends StatelessWidget {
       ),
     );
   }
+}
+
+class _SectionTitle extends StatelessWidget {
+  const _SectionTitle(this.text);
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) => Padding(
+    padding: const EdgeInsets.fromLTRB(4, 0, 4, 8),
+    child: Text(text, style: Theme.of(context).textTheme.titleLarge),
+  );
 }

@@ -10,9 +10,9 @@ import '../../core/share_text.dart';
 import '../../core/strings.dart';
 import '../../core/theme.dart';
 import '../../data/question_repository.dart';
+import '../../data/settings_store.dart';
 import '../../data/stats_store.dart';
 import '../../widgets/calibration_text.dart';
-import '../../widgets/landscape.dart';
 import '../../widgets/range_mark.dart';
 import '../../widgets/stat_tile.dart';
 import '../game/game_controller.dart';
@@ -24,10 +24,16 @@ import '../stats/stats_screen.dart';
 /// Today's set (play / continue / done + share), streak, last score,
 /// calibration, and free play.
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key, required this.repository, required this.stats});
+  const HomeScreen({
+    super.key,
+    required this.repository,
+    required this.stats,
+    required this.settings,
+  });
 
   final QuestionRepository repository;
   final StatsStore stats;
+  final SettingsStore settings;
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -146,8 +152,11 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   });
 
-  void _openSettings() => Navigator.of(context)
-      .push(MaterialPageRoute<void>(builder: (_) => const SettingsScreen()));
+  void _openSettings() => Navigator.of(context).push(
+    MaterialPageRoute<void>(
+      builder: (_) => SettingsScreen(settings: widget.settings),
+    ),
+  );
 
   void _openStats() => Navigator.of(context).push(
     MaterialPageRoute<void>(
@@ -179,11 +188,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           Row(
                             children: [
-                              _DayChip(
-                                label: number > 0
-                                    ? '#$number'
-                                    : AppStrings.previewEdition,
-                              ),
+                              // The puzzle number from day 1 on; nothing
+                              // during the closed test.
+                              if (number > 0) _DayChip(label: '#$number'),
                               const Spacer(),
                               IconButton.filledTonal(
                                 onPressed: _openSettings,
@@ -198,6 +205,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ],
                           ),
+                          const Spacer(),
                           Text(
                             AppStrings.appName,
                             style: textTheme.displayLarge?.copyWith(
@@ -216,9 +224,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           const SizedBox(height: 20),
                           _StatsCard(stats: _stats, today: today),
-                          const SizedBox(height: 16),
-                          const Expanded(child: Landscape()),
-                          const SizedBox(height: 16),
+                          const Spacer(),
+                          const SizedBox(height: 24),
                           _TodayAction(
                             stats: _stats,
                             today: today,
@@ -254,7 +261,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-/// "#42" (or "(deneme)") in a small pill.
+/// "#42" in a small pill.
 class _DayChip extends StatelessWidget {
   const _DayChip({required this.label});
 
