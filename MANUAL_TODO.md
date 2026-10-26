@@ -2,10 +2,12 @@
 
 Claude'un yapamadığı ya da senin kararını bekleyen işler. Bitenleri sil.
 
-## 3. Soru bankasına göz at (31 Ekim'e kadar, isteğe bağlı)
-Banka 2026-10-26'da Türkçe Vikipedi okunma sayılarına göre yeniden kuruldu (213 soru).
-`python tools/build_questions.py --fresh --dry-run --report` her veri setinde seçilenleri ve sınırda kalanları okunma sayılarıyla listeler.
-Çıkarmak istediğin soruları id'leriyle Claude'a söylemen yeterli.
+## 3. Soru bankasına göz at (kapalı test başlamadan, isteğe bağlı)
+Banka 2026-10-26'da yeniden kuruldu: 456 soru, 45 günlük takvim. Kapalı test başladıktan sonra
+takvimdeki günler değiştirilemez (yalnızca sona eklenir), o yüzden gözden geçirmek için en iyi zaman şimdi.
+`python tools/build_questions.py --fresh --dry-run --report` her veri setinde seçilenleri, zorluklarını ve sınırda kalanları listeler.
+Çıkarmak istediğin ya da zorluğunu yanlış bulduğun soruları id'leriyle Claude'a söylemen yeterli
+(zorluk düzeltmeleri `tools/difficulty_overrides.json`).
 
 ## 3b. (Ertelendi) TÜİK il nüfusu verisi
 Portalda JSON indirme yolu bulunamadı (2026-10-26). Zorunlu değil, il nüfusu soruları olmadan banka yeterli.
