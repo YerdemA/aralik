@@ -54,3 +54,7 @@ app.*.map.json
 
 # Python
 __pycache__/
+
+# Play Store assets made by hand or for the store (screenshots, graphics,
+# video, listing drafts, release bundles). Kept out of git.
+/play-store/

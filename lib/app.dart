@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'core/strings.dart';
 import 'core/theme.dart';
@@ -30,6 +31,14 @@ class KabacaApp extends StatelessWidget {
         theme: AppTheme.light,
         darkTheme: AppTheme.dark,
         themeMode: settings.themeMode,
+        // Status bar icons follow the theme (dark icons on the light
+        // theme); the intro sets its own light icons on navy.
+        builder: (context, child) => AnnotatedRegion<SystemUiOverlayStyle>(
+          value: Theme.of(context).brightness == Brightness.dark
+              ? SystemUiOverlayStyle.light
+              : SystemUiOverlayStyle.dark,
+          child: child!,
+        ),
         home: IntroScreen(
           next: HomeScreen(
             repository: repository,

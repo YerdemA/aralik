@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../data/question.dart';
 import 'scoring.dart';
@@ -73,6 +74,11 @@ abstract final class AppTheme {
         titleMedium: text.titleMedium?.copyWith(fontWeight: FontWeight.w600),
       ),
       appBarTheme: AppBarTheme(
+        // A transparent app bar cannot guess the icon colour from its
+        // background, so set it from the theme: dark icons when light.
+        systemOverlayStyle: isLight
+            ? SystemUiOverlayStyle.dark
+            : SystemUiOverlayStyle.light,
         backgroundColor: Colors.transparent,
         surfaceTintColor: Colors.transparent,
         centerTitle: true,
