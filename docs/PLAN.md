@@ -34,6 +34,24 @@
   - HTTP için yeni paket gerekmez, `dart:io` `HttpClient` yeterli.
 - Kural: İndirilen sorular da `validate_questions.py` ile doğrulanır ve kaynaklıdır. Paketler imzalanmalı ya da en azından sürüm ve sağlama toplamı (hash) ile kontrol edilmeli. Günlük setler gömülü bankadan gelmeye devam eder, böylece herkes aynı soruları görür. İndirilen paketler yalnızca serbest modu besler.
 
+## Açık geri bildirimler (2026-10-26)
+Geliştiricinin emülatörde oynadıktan sonra aldığı notlar. Henüz karar verilmedi, çözülmedi.
+
+1. **Günlük 5 soru hâlâ çok zor.**
+   - Banka (213 soru) Türkçe Vikipedi okunma sayısına göre seçildi. Yine de sorular ülke nüfusu/yüzölçümü, köprü uzunluğu, savaş yılı gibi çoğu oyuncunun hiç düşünmediği büyüklükler ağırlıklı.
+   - Dağılım dengesiz: coğrafya 95, tarih 52, spor 32, türkiye 30, gündelik 4, bilim 0.
+   - Olası yönler: "gündelik" ve "türkiye" gibi sezgiyle tahmin edilebilir soruları artırmak, setin içinde kolaydan zora sıralamak, her güne en az bir kolay soru koymak, okunma eşiğini yükseltmek.
+   - Banka yalnızca sona eklenebildiği için kapalı test başlamadan önce karar vermek en ucuzu. O zamana kadar `--fresh` ile baştan kurulabilir.
+2. **Serbest moddaki bütün sorular kuş uçuşu mesafe.**
+   - Neden: serbest mod soruların ~1/3'ünü *geçmiş günlerin* banka sorularından alır (`core/free_play.dart`, `bankShare`). Oyun 2026-11-01'de başladığı için bugün geçmiş gün yok (`practiceIndices` boş döner), bu yüzden turun tamamı mesafe üreticisinden geliyor.
+   - Yayından sonra da ilk haftalarda geçmiş soru az olacak ve tek üretici mesafe olduğu için çeşit sınırlı kalacak.
+   - Olası yönler: yeni cihaz üreticileri (il nüfusu, ülke nüfusu/yüzölçümü karşılaştırması, dağ yükseklikleri gibi kaynaklı tablolardan), günlük sete hiç girmeyecek ayrı bir "serbest mod bankası", tek turda en fazla 1–2 mesafe sorusu sınırı.
+3. **Aralık vererek puan almak kolay görünüyor (emin değil).**
+   - Rakamlar: kaydırıcının varsayılan konumu (0,3) tahminin ÷2 … ×2 aralığını verir (log2 genişlik 2). İsabette bu 80 puan ve 🟩 eder. En geniş aralık (÷10 … ×10) bile isabette 34 puan alır. Ekran görüntüsünde 240 – 1.000 km (4 kat geniş) aralık 79 puan aldı.
+   - Puanlama kuralı dürüst %90 aralığını ödüllendirecek şekilde kurulu (`test/core/scoring_test.dart`). Bu yüzden "kolay" hissi büyük olasılıkla kuraldan değil, ölçekten geliyor: k = 10 ve 🟩 eşiği ≥70.
+   - Değiştirilebilecekler: k'yı büyütmek (aynı genişlik daha az puan), 🟩 eşiğini yükseltmek, varsayılan kaydırıcı konumunu daraltmak. k ile −100 tabanı birlikte ayarlanmalı, yoksa dürüst aralığın en iyi strateji olma özelliği bozulur. Değişiklikten sonra test yeniden doğrulanmalı.
+   - Karar vermeden önce birkaç gün gerçek oyun verisine (istatistik ekranı) bakmak faydalı olur.
+
 ## Takvim (14 gün)
 > Kapalı test 14 gün kesintisiz sürmeli ve en az 12 test kullanıcısı gerekiyor. Bu yüzden **5. günde** kapalı teste çıkılır, geliştirme test sürerken devam eder.
 
