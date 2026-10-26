@@ -1,7 +1,7 @@
 # Kabaca — Proje Planı
 
 > Günlük Türkçe tahmin oyunu: Tek bir sayı tahmin etme, **%90 emin olduğun aralığı** ver.
-> Repo: `YerdemA/aralik` · Paket: `com.yerdema.aralik`
+> Repo: `YerdemA/aralik` · Paket: `com.yerdema.kabaca`
 
 ## Neden farklı?
 - Piyasadaki bilgi yarışmaları "doğru/yanlış" mantığıyla çalışır. Kabaca ise **ne kadar emin olduğunu** ölçer.

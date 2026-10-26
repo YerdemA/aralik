@@ -1,4 +1,4 @@
-package com.yerdema.aralik
+package com.yerdema.kabaca
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -11,7 +11,7 @@ Aralık cevabı içeriyorsa puan alırsın. Aralık ne kadar darsa puan o kadar 
 **kalibrasyonunu** ölçer: "%90 eminim" dediğinde gerçekten 10 sorunun 9'unu tutturuyor musun?
 
 - Geliştirici: Yusuf Erdem Aykaç ([YerdemA](https://github.com/YerdemA))
-- Paket: `com.yerdema.aralik` · Hedef: Google Play, Android 7.0+ (minSdk 24)
+- Paket: `com.yerdema.kabaca` · Hedef: Google Play, Android 7.0+ (minSdk 24)
 - Teknik belge: [TECHNICAL.md](TECHNICAL.md) · Yol haritası: [docs/PLAN.md](docs/PLAN.md)
 
 ## Neden?

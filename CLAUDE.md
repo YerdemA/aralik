@@ -8,7 +8,7 @@ darsa puan o kadar yüksek olur. Uzun vadede kullanıcının **kalibrasyonunu**,
 dediğinde gerçekten %90 isabet edip etmediğini ölçer.
 
 - Geliştirici: Yusuf Erdem Aykaç (GitHub: YerdemA)
-- Paket adı: `com.yerdema.aralik` (uygulamanın ilk adından kalma; kullanıcıya görünmez, depo adı ve GitHub Pages adresleri de `aralik`)
+- Paket adı: `com.yerdema.kabaca`. Depo adı, GitHub Pages adresleri ve Dart paket adı (`package:aralik/...`) uygulamanın ilk adından kalma `aralik`; kullanıcıya görünmezler.
 - Hedef: Google Play, Android (minSdk 24, Flutter 3.47'nin desteklediği en düşük sürüm)
 - Ayrıntılı yol haritası: `docs/PLAN.md`
 
