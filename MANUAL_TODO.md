@@ -20,7 +20,7 @@ Veri çekerken görülen hatalar. Wikidata'da düzeltilirse bir sonraki çekimde
 
 ## 5. Kapalı teste yükle (5. gün)
 İmzalı paket hazır: `build\app\outputs\bundle\release\app-release.aab` (upload anahtarıyla imzalı, 2026-10-26 doğrulandı).
-1. Play Console → uygulama oluştur (`com.yerdema.aralik`) → Test → Kapalı test → yeni sürüm → AAB'yi yükle.
+1. Play Console → uygulama oluştur: ad **Kabaca** (mağaza başlığı önerisi: "Kabaca: Günlük Tahmin Oyunu"), paket `com.yerdema.aralik` → Test → Kapalı test → yeni sürüm → AAB'yi yükle.
 2. `build\symbols` klasörünü sakla (çökme raporlarını çözmek için gerekli, git'e girmez).
 3. Test kullanıcılarının (en az 12) e-postalarını listeye ekle. 14 günlük sayaç yayınlandığı an başlar.
 4. Gizlilik politikası URL'si: GitHub Pages'teki `privacy-policy` sayfası. Veri güvenliği formu: veri toplanmıyor.

@@ -2,7 +2,7 @@ import '../data/question.dart';
 
 /// Every user-facing Turkish string lives here.
 abstract final class AppStrings {
-  static const appName = 'Aralık';
+  static const appName = 'Kabaca';
   static const tagline = '%90 emin olduğun aralığı ver.';
 
   // Number formatting
@@ -68,7 +68,7 @@ abstract final class AppStrings {
   static const share = 'Paylaş';
   static const newRound = 'Yeni tur';
   static const backHome = 'Ana ekran';
-  static const shareSubject = 'Aralık skorum';
+  static const shareSubject = 'Kabaca skorum';
 
   // Calibration feedback
   static const calibrationTooNarrow = 'Aralıkların fazla dar.';

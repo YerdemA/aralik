@@ -71,9 +71,9 @@ def main() -> int:
     APP_PATH.write_text(json.dumps(app, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
     lines = [
-        "# Aralık: Veri kaynakları ve lisanslar",
+        "# Kabaca: Veri kaynakları ve lisanslar",
         "",
-        "Aralık'taki sorular ve cevapları aşağıdaki kaynaklara dayanır. Her soruda, cevabın",
+        "Kabaca'daki sorular ve cevapları aşağıdaki kaynaklara dayanır. Her soruda, cevabın",
         "görüldüğü sayfanın bağlantısı ayrıca gösterilir. Bu liste `tools/sources.json`",
         "dosyasından üretilir; uygulamada Ayarlar → Veri kaynakları ve lisanslar ekranında",
         "aynı liste yer alır.",

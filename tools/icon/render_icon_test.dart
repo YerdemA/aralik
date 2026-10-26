@@ -6,12 +6,11 @@
 // Android 13 monochrome layer) into android/app/src/main/res/ and a 512 px
 // Play Store icon into docs/store/icon-512.png.
 //
-// Design: a small stick figure in front, a simple brain inside its head;
-// behind it the kind of things the questions are about: mountains, a
-// tower, a castle and a plain.
+// Design: a thinking philosopher (bald, white beard, eyes closed, one brow
+// raised) in a terracotta toga on the app's navy, with a thought bubble
+// holding a question mark.
 
 import 'dart:io';
-import 'dart:math' as math;
 import 'dart:ui' as ui;
 
 import 'package:flutter/painting.dart';
@@ -28,241 +27,356 @@ const _densities = {
   'xxxhdpi': (192, 432),
 };
 
-// Palette.
-const _skyTop = Color(0xFF8EC5FF);
-const _skyBottom = Color(0xFFDDEFFF);
-const _farMountain = Color(0xFF7D9CC7);
-const _nearMountain = Color(0xFF5B7DB1);
-const _snow = Color(0xFFF4F8FF);
-const _tower = Color(0xFFD9825B);
-const _towerRoof = Color(0xFF3E5683);
-const _castle = Color(0xFFB08A63);
-const _castleDark = Color(0xFF7A5C40);
-const _plain = Color(0xFF8BCB72);
-const _plainLight = Color(0xFFA9DA8F);
 const _ink = Color(0xFF1C2742);
-const _brain = Color(0xFFF6A5C6);
-const _brainLine = Color(0xFFC0507E);
+const _navyTop = Color(0xFF34477D);
+const _navyBottom = Color(0xFF22305A);
+const _skin = Color(0xFFF2C29B);
+const _skinShade = Color(0xFFDDA27A);
+const _beard = Color(0xFFF7F3EC);
+const _beardShade = Color(0xFFDCD5CB);
+const _toga = Color(0xFFE0784A);
+const _togaShade = Color(0xFFC25E33);
+const _white = Color(0xFFFFFFFF);
 
-/// Everything is drawn on a 1024 × 1024 design grid that maps to the
-/// 108 dp adaptive icon canvas. Android shows at least the central 72 dp
-/// (a circle of radius ≈ 341 around the centre), so the figure stays there.
+/// Outline half-width, in design units (the visible icon is 1 × 1).
+const double _outline = 0.016;
+
+/// While painting the monochrome layer every shape is white and the ink
+/// lines are cut out, so the face survives as line art when tinted.
+bool _mono = false;
+
+Paint _fill(Color c) => Paint()..color = _mono ? _white : c;
+
+Paint _line(Color c, double width) => Paint()
+  ..color = _mono ? _white : c
+  ..blendMode = _mono ? BlendMode.clear : BlendMode.srcOver
+  ..style = PaintingStyle.stroke
+  ..strokeWidth = width
+  ..strokeCap = StrokeCap.round
+  ..strokeJoin = StrokeJoin.round;
+
+/// A filled shape with a cartoon outline.
+void _outlined(Canvas c, Path p, Color color) {
+  c.drawPath(p, _line(_ink, _outline * 2));
+  c.drawPath(p, _fill(color));
+}
+
+/// Union of circles (beard, hair, cloud) as one path.
+Path _blob(List<(double, double, double)> circles) {
+  var p = Path();
+  for (final (x, y, r) in circles) {
+    p = Path.combine(
+      PathOperation.union,
+      p,
+      Path()..addOval(Rect.fromCircle(center: Offset(x, y), radius: r)),
+    );
+  }
+  return p;
+}
+
+/// The design uses a unit square for the visible icon: Android shows at
+/// least the central 72 of the 108 dp adaptive canvas (1024 px grid).
+void _toDesignUnits(Canvas canvas) {
+  canvas.translate(512, 512);
+  canvas.scale(1024 * 72 / 108);
+  canvas.translate(-0.5, -0.5);
+}
+
 void paintBackground(Canvas canvas) {
-  const full = Rect.fromLTWH(0, 0, 1024, 1024);
   canvas.drawRect(
-    full,
+    const Rect.fromLTWH(0, 0, 1024, 1024),
     Paint()
-      ..shader = ui.Gradient.linear(const Offset(0, 0), const Offset(0, 760), [
-        _skyTop,
-        _skyBottom,
+      ..shader = ui.Gradient.linear(const Offset(0, 0), const Offset(0, 1024), [
+        _navyTop,
+        _navyBottom,
       ]),
   );
+}
 
-  Path triangle(Offset a, Offset b, Offset c) => Path()
-    ..moveTo(a.dx, a.dy)
-    ..lineTo(b.dx, b.dy)
-    ..lineTo(c.dx, c.dy)
-    ..close();
+void paintForeground(Canvas canvas, {bool monochrome = false}) {
+  _mono = monochrome;
+  canvas.saveLayer(const Rect.fromLTWH(0, 0, 1024, 1024), Paint());
+  canvas.save();
+  _toDesignUnits(canvas);
+  _philosopher(canvas, const Offset(0.4, 0.52), 1.25);
+  // Inside the 66 dp safe circle (radius ≈ 0.46 here) every launcher shows.
+  _thought(canvas, const Offset(0.6, 0.33), const Offset(0.71, 0.24), 0.14);
+  canvas.restore();
+  canvas.restore();
+  _mono = false;
+}
 
-  // Mountains: a far range and a big peak with snow.
-  canvas.drawPath(
-    triangle(
-      const Offset(330, 820),
-      const Offset(640, 300),
-      const Offset(1060, 820),
-    ),
-    Paint()..color = _farMountain,
-  );
-  canvas.drawPath(
-    triangle(
-      const Offset(-20, 820),
-      const Offset(380, 250),
-      const Offset(760, 820),
-    ),
-    Paint()..color = _nearMountain,
-  );
-  canvas.drawPath(
-    Path()
-      ..moveTo(380, 250)
-      ..lineTo(452, 357)
-      ..lineTo(418, 340)
-      ..lineTo(384, 372)
-      ..lineTo(350, 338)
-      ..lineTo(312, 351)
-      ..close(),
-    Paint()..color = _snow,
-  );
-  canvas.drawPath(
-    Path()
-      ..moveTo(640, 300)
-      ..lineTo(700, 389)
-      ..lineTo(668, 375)
-      ..lineTo(640, 398)
-      ..lineTo(612, 374)
-      ..lineTo(580, 389)
-      ..close(),
-    Paint()..color = _snow,
-  );
-
-  // Tower (left): round body, conical roof, a few windows.
-  canvas.drawRRect(
-    RRect.fromLTRBR(222, 462, 298, 790, const Radius.circular(10)),
-    Paint()..color = _tower,
-  );
-  canvas.drawRect(
-    const Rect.fromLTRB(210, 450, 310, 478),
-    Paint()..color = _tower,
-  );
-  canvas.drawPath(
-    triangle(
-      const Offset(202, 454),
-      const Offset(260, 346),
-      const Offset(318, 454),
-    ),
-    Paint()..color = _towerRoof,
-  );
-  for (final y in [510.0, 584.0, 658.0]) {
-    canvas.drawRRect(
-      RRect.fromLTRBR(249, y, 271, y + 34, const Radius.circular(11)),
-      Paint()..color = _towerRoof,
+/// Thought bubble: two dots trailing from [from] to a cloud at [at].
+void _thought(Canvas c, Offset from, Offset at, double size) {
+  final dir = at - from;
+  for (final (t, r) in [(0.0, 0.022), (0.28, 0.032)]) {
+    _outlined(
+      c,
+      Path()..addOval(Rect.fromCircle(center: from + dir * t, radius: r)),
+      _white,
     );
   }
-
-  // Castle (right): wall, two towers, battlements, gate.
-  final castle = Paint()..color = _castle;
-  canvas.drawRect(const Rect.fromLTRB(722, 600, 822, 800), castle);
-  canvas.drawRect(const Rect.fromLTRB(690, 530, 742, 800), castle);
-  canvas.drawRect(const Rect.fromLTRB(802, 530, 854, 800), castle);
-  for (final x in [690.0, 724.0, 802.0, 836.0]) {
-    canvas.drawRect(Rect.fromLTWH(x, 508, 18, 26), castle);
-  }
-  for (final x in [748.0, 782.0]) {
-    canvas.drawRect(Rect.fromLTWH(x, 580, 20, 24), castle);
-  }
-  canvas.drawPath(
-    Path()
-      ..moveTo(750, 800)
-      ..lineTo(750, 728)
-      ..arcToPoint(const Offset(794, 728), radius: const Radius.circular(22))
-      ..lineTo(794, 800)
-      ..close(),
-    Paint()..color = _castleDark,
+  final s = size;
+  _outlined(
+    c,
+    _blob([
+      (at.dx - s * 0.42, at.dy + s * 0.05, s * 0.32),
+      (at.dx - s * 0.12, at.dy - s * 0.22, s * 0.36),
+      (at.dx + s * 0.25, at.dy - s * 0.15, s * 0.34),
+      (at.dx + s * 0.45, at.dy + s * 0.12, s * 0.3),
+      (at.dx + s * 0.05, at.dy + s * 0.2, s * 0.36),
+    ]),
+    _white,
   );
+  _questionMark(c, at, s * 0.82);
+}
 
-  // Plain in front.
-  canvas.drawPath(
-    Path()
-      ..moveTo(0, 760)
-      ..quadraticBezierTo(300, 720, 560, 752)
-      ..quadraticBezierTo(820, 784, 1024, 744)
-      ..lineTo(1024, 1024)
-      ..lineTo(0, 1024)
-      ..close(),
-    Paint()..color = _plain,
-  );
-  canvas.drawPath(
-    Path()
-      ..moveTo(0, 860)
-      ..quadraticBezierTo(360, 820, 700, 866)
-      ..quadraticBezierTo(880, 890, 1024, 860)
-      ..lineTo(1024, 1024)
-      ..lineTo(0, 1024)
-      ..close(),
-    Paint()..color = _plainLight,
+/// A bold "?" of height [h] centred at [at].
+void _questionMark(Canvas c, Offset at, double h) {
+  final r = h * 0.22;
+  final cx = at.dx;
+  final top = at.dy - h * 0.42;
+  final hook = Path()
+    ..moveTo(cx - r, top + r)
+    ..arcToPoint(Offset(cx + r, top + r), radius: Radius.circular(r))
+    ..cubicTo(cx + r, top + r * 1.8, cx, top + r * 1.7, cx, top + r * 2.45)
+    ..lineTo(cx, top + r * 2.6);
+  c.drawPath(hook, _line(_ink, h * 0.15));
+  c.drawCircle(
+    Offset(cx, at.dy + h * 0.36),
+    h * 0.085,
+    Paint()
+      ..color = _ink
+      ..blendMode = _mono ? BlendMode.clear : BlendMode.srcOver,
   );
 }
 
-/// The stick figure with a brain in its head. [monochrome] draws a single
-/// colour silhouette for Android 13 themed icons.
-void paintForeground(Canvas canvas, {bool monochrome = false}) {
-  final ink = monochrome ? const Color(0xFFFFFFFF) : _ink;
-  final line = Paint()
-    ..color = ink
-    ..style = PaintingStyle.stroke
-    ..strokeWidth = 30
-    ..strokeCap = StrokeCap.round
-    ..strokeJoin = StrokeJoin.round;
+/// Bald head at [h], white beard, closed thinking eyes, toga; [k] scales.
+void _philosopher(Canvas c, Offset h, double k) {
+  double s(double v) => v * k;
+  final hx = h.dx, hy = h.dy;
+  const bottom = 1.3; // below the visible area: room for launcher parallax
 
-  const head = Offset(512, 372);
-  const headRadius = 128.0;
-
-  // Body, arms (one hand on the chin: thinking), legs.
-  canvas.drawLine(const Offset(512, 500), const Offset(512, 690), line);
-  canvas.drawPath(
+  // Toga and shoulders, with a drape line.
+  _outlined(
+    c,
     Path()
-      ..moveTo(512, 560)
-      ..lineTo(600, 600)
-      ..lineTo(574, 506),
-    line,
+      ..moveTo(hx - s(0.36), bottom)
+      ..cubicTo(
+        hx - s(0.34),
+        hy + s(0.34),
+        hx - s(0.2),
+        hy + s(0.27),
+        hx,
+        hy + s(0.27),
+      )
+      ..cubicTo(
+        hx + s(0.2),
+        hy + s(0.27),
+        hx + s(0.34),
+        hy + s(0.34),
+        hx + s(0.36),
+        bottom,
+      )
+      ..close(),
+    _toga,
   );
-  canvas.drawLine(const Offset(512, 560), const Offset(420, 650), line);
-  canvas.drawLine(const Offset(512, 690), const Offset(444, 820), line);
-  canvas.drawLine(const Offset(512, 690), const Offset(580, 820), line);
-
-  // Head.
-  if (!monochrome) {
-    canvas.drawCircle(
-      head,
-      headRadius,
-      Paint()..color = const Color(0xFFFFFFFF),
+  if (!_mono) {
+    c.drawPath(
+      Path()
+        ..moveTo(hx - s(0.27), hy + s(0.36))
+        ..quadraticBezierTo(hx + s(0.02), hy + s(0.56), hx + s(0.3), bottom),
+      _line(_togaShade, s(0.022)),
     );
   }
-  canvas.drawCircle(head, headRadius, line);
 
-  // Brain: a bumpy cloud with a centre groove and a few folds.
-  final brain = Path();
-  const centre = Offset(512, 366);
-  const bumps = 9;
-  for (var i = 0; i <= bumps; i++) {
-    final angle = 2 * math.pi * i / bumps;
-    final point = centre + Offset(math.cos(angle) * 84, math.sin(angle) * 62);
-    if (i == 0) {
-      brain.moveTo(point.dx, point.dy);
-    } else {
-      final mid = 2 * math.pi * (i - 0.5) / bumps;
-      final control = centre + Offset(math.cos(mid) * 112, math.sin(mid) * 86);
-      brain.quadraticBezierTo(control.dx, control.dy, point.dx, point.dy);
+  // Ears and the white tufts above them.
+  for (final side in [-1.0, 1.0]) {
+    _outlined(
+      c,
+      Path()..addOval(
+        Rect.fromCenter(
+          center: Offset(hx + side * s(0.165), hy + s(0.03)),
+          width: s(0.075),
+          height: s(0.11),
+        ),
+      ),
+      _skin,
+    );
+  }
+  for (final side in [-1.0, 1.0]) {
+    _outlined(
+      c,
+      _blob([
+        (hx + side * s(0.16), hy - s(0.045), s(0.05)),
+        (hx + side * s(0.175), hy, s(0.045)),
+        (hx + side * s(0.145), hy - s(0.08), s(0.04)),
+      ]),
+      _beard,
+    );
+  }
+
+  // Head, its shine and a thinking wrinkle.
+  _outlined(
+    c,
+    Path()..addOval(
+      Rect.fromCenter(
+        center: Offset(hx, hy - s(0.02)),
+        width: s(0.29),
+        height: s(0.33),
+      ),
+    ),
+    _skin,
+  );
+  if (!_mono) {
+    c.drawPath(
+      Path()..addArc(
+        Rect.fromCenter(
+          center: Offset(hx - s(0.045), hy - s(0.12)),
+          width: s(0.09),
+          height: s(0.06),
+        ),
+        3.6,
+        1.2,
+      ),
+      _line(_white.withValues(alpha: 0.7), s(0.016)),
+    );
+    c.drawPath(
+      Path()
+        ..moveTo(hx - s(0.05), hy - s(0.105))
+        ..quadraticBezierTo(hx, hy - s(0.125), hx + s(0.05), hy - s(0.105)),
+      _line(_skinShade, s(0.012)),
+    );
+  }
+
+  // Beard with a few strands.
+  _outlined(
+    c,
+    _blob([
+      (hx - s(0.115), hy + s(0.09), s(0.06)),
+      (hx + s(0.115), hy + s(0.09), s(0.06)),
+      (hx - s(0.1), hy + s(0.16), s(0.07)),
+      (hx + s(0.1), hy + s(0.16), s(0.07)),
+      (hx - s(0.05), hy + s(0.23), s(0.07)),
+      (hx + s(0.05), hy + s(0.23), s(0.07)),
+      (hx, hy + s(0.28), s(0.06)),
+      (hx, hy + s(0.13), s(0.08)),
+    ]),
+    _beard,
+  );
+  if (!_mono) {
+    for (final (x, y) in [(-0.06, 0.2), (0.04, 0.24), (0.0, 0.17)]) {
+      c.drawPath(
+        Path()
+          ..moveTo(hx + s(x), hy + s(y))
+          ..quadraticBezierTo(
+            hx + s(x + 0.015),
+            hy + s(y + 0.03),
+            hx + s(x),
+            hy + s(y + 0.055),
+          ),
+        _line(_beardShade, s(0.012)),
+      );
     }
   }
-  if (monochrome) {
-    canvas.drawPath(
-      brain,
-      Paint()
-        ..color = ink
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = 14,
+
+  // Moustache, then the nose on top of it.
+  _outlined(
+    c,
+    Path()
+      ..moveTo(hx, hy + s(0.07))
+      ..cubicTo(
+        hx - s(0.03),
+        hy + s(0.05),
+        hx - s(0.09),
+        hy + s(0.06),
+        hx - s(0.1),
+        hy + s(0.1),
+      )
+      ..cubicTo(
+        hx - s(0.07),
+        hy + s(0.095),
+        hx - s(0.03),
+        hy + s(0.11),
+        hx,
+        hy + s(0.09),
+      )
+      ..cubicTo(
+        hx + s(0.03),
+        hy + s(0.11),
+        hx + s(0.07),
+        hy + s(0.095),
+        hx + s(0.1),
+        hy + s(0.1),
+      )
+      ..cubicTo(
+        hx + s(0.09),
+        hy + s(0.06),
+        hx + s(0.03),
+        hy + s(0.05),
+        hx,
+        hy + s(0.07),
+      )
+      ..close(),
+    _beard,
+  );
+  _outlined(
+    c,
+    Path()
+      ..moveTo(hx - s(0.008), hy - s(0.01))
+      ..quadraticBezierTo(hx - s(0.035), hy + s(0.055), hx, hy + s(0.06))
+      ..quadraticBezierTo(
+        hx + s(0.03),
+        hy + s(0.058),
+        hx + s(0.015),
+        hy + s(0.035),
+      ),
+    _skin,
+  );
+
+  // Closed eyes; the right brow raised in thought.
+  final eye = _line(_ink, s(0.016));
+  for (final side in [-1.0, 1.0]) {
+    c.drawPath(
+      Path()..addArc(
+        Rect.fromCenter(
+          center: Offset(hx + side * s(0.062), hy - s(0.005)),
+          width: s(0.06),
+          height: s(0.04),
+        ),
+        0.2,
+        2.74,
+      ),
+      eye,
     );
-    return;
   }
-  canvas.drawPath(brain, Paint()..color = _brain);
-  final fold = Paint()
-    ..color = _brainLine
-    ..style = PaintingStyle.stroke
-    ..strokeWidth = 10
-    ..strokeCap = StrokeCap.round;
-  canvas.drawPath(brain, fold);
-  canvas.drawPath(
-    Path()
-      ..moveTo(512, 300)
-      ..quadraticBezierTo(498, 336, 514, 366)
-      ..quadraticBezierTo(530, 398, 512, 432),
-    fold,
+  c.drawLine(
+    Offset(hx - s(0.095), hy - s(0.06)),
+    Offset(hx - s(0.035), hy - s(0.055)),
+    eye,
   );
-  canvas.drawPath(
+  c.drawPath(
     Path()
-      ..moveTo(452, 334)
-      ..quadraticBezierTo(474, 350, 462, 378),
-    fold,
-  );
-  canvas.drawPath(
-    Path()
-      ..moveTo(570, 330)
-      ..quadraticBezierTo(552, 352, 572, 380),
-    fold,
+      ..moveTo(hx + s(0.032), hy - s(0.065))
+      ..quadraticBezierTo(
+        hx + s(0.065),
+        hy - s(0.09),
+        hx + s(0.098),
+        hy - s(0.07),
+      ),
+    eye,
   );
 }
 
-enum _Layer { background, foreground, monochrome, full, round, store }
+enum _Layer {
+  background,
+  foreground,
+  monochrome,
+  monoPreview,
+  full,
+  round,
+  store,
+}
 
 Future<void> _render(_Layer layer, int size, String path) async {
   final recorder = ui.PictureRecorder();
@@ -276,6 +390,21 @@ Future<void> _render(_Layer layer, int size, String path) async {
       paintForeground(canvas);
     case _Layer.monochrome:
       paintForeground(canvas, monochrome: true);
+    case _Layer.monoPreview:
+      // How Android 13 themed icons tint the monochrome layer.
+      canvas.drawRect(
+        const Rect.fromLTWH(0, 0, 1024, 1024),
+        Paint()..color = const Color(0xFFD6E3FF),
+      );
+      canvas.saveLayer(const Rect.fromLTWH(0, 0, 1024, 1024), Paint());
+      paintForeground(canvas, monochrome: true);
+      canvas.drawRect(
+        const Rect.fromLTWH(0, 0, 1024, 1024),
+        Paint()
+          ..color = const Color(0xFF1B3A6B)
+          ..blendMode = BlendMode.srcIn,
+      );
+      canvas.restore();
     case _Layer.full || _Layer.round || _Layer.store:
       // Legacy icons show what the adaptive mask shows: the central 72 of
       // 108 dp.
@@ -333,6 +462,7 @@ void main() {
     await _render(_Layer.full, 1024, 'build/icon_preview/full.png');
     await _render(_Layer.round, 256, 'build/icon_preview/round-256.png');
     await _render(_Layer.full, 96, 'build/icon_preview/full-96.png');
+    await _render(_Layer.monoPreview, 432, 'build/icon_preview/mono-432.png');
   });
 }
 

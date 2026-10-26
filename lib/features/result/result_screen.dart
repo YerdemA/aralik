@@ -228,10 +228,10 @@ class _BurstPainter extends CustomPainter {
   final double t;
 
   static const _colors = [
-    Palette.tower,
-    Palette.brain,
-    Palette.plain,
-    Palette.skyTop,
+    Palette.terracotta,
+    Palette.pink,
+    Palette.green,
+    Palette.sky,
     Color(0xFFF2C94C),
   ];
 

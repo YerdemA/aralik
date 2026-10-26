@@ -7,8 +7,8 @@ import 'data/settings_store.dart';
 import 'data/stats_store.dart';
 import 'features/home/home_screen.dart';
 
-class AralikApp extends StatelessWidget {
-  const AralikApp({
+class KabacaApp extends StatelessWidget {
+  const KabacaApp({
     super.key,
     required this.repository,
     required this.stats,

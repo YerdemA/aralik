@@ -1,8 +1,8 @@
-# Aralık
+# Kabaca
 
 **%90 emin olduğun aralığı ver.**
 
-Aralık, 5–10 dakikalık beklemelerde oynanan Türkçe bir günlük tahmin oyunudur (Android, Flutter).
+Kabaca, 5–10 dakikalık beklemelerde oynanan Türkçe bir günlük tahmin oyunudur (Android, Flutter).
 Sayısal bir soruya tek bir sayıyla değil, **%90 emin olduğun bir aralıkla** cevap verirsin:
 
 > Ağrı Dağı kaç metre yüksekliktedir? → **4.500 – 5.500 m**
@@ -15,7 +15,7 @@ Aralık cevabı içeriyorsa puan alırsın. Aralık ne kadar darsa puan o kadar 
 - Teknik belge: [TECHNICAL.md](TECHNICAL.md) · Yol haritası: [docs/PLAN.md](docs/PLAN.md)
 
 ## Neden?
-- Bilgi yarışmaları "doğru / yanlış" mantığıyla çalışır. Aralık ise **ne kadar emin olduğunu** ölçer. Bu ölçüm, bildiğin şeyden çok kendini ne kadar iyi tanıdığını gösterir.
+- Bilgi yarışmaları "doğru / yanlış" mantığıyla çalışır. Kabaca ise **ne kadar emin olduğunu** ölçer. Bu ölçüm, bildiğin şeyden çok kendini ne kadar iyi tanıdığını gösterir.
 - İçerik Türkçe ve yereldir: Türkiye coğrafyası, tarihi, sporu.
 - Wordle gibi herkes aynı gün aynı soruları çözer. Skorunu emoji kartıyla paylaşabilirsin.
 - **Sıfır bütçe, sıfır backend.** Sunucu, hesap, reklam ve analytics yok. Oyun internetsiz de eksiksiz çalışır ve hiçbir kişisel veri cihazdan çıkmaz.
@@ -29,7 +29,7 @@ Aralık cevabı içeriyorsa puan alırsın. Aralık ne kadar darsa puan o kadar 
 
 **Paylaşım kartı:**
 ```
-Aralık #42 · 380/500
+Kabaca #42 · 380/500
 🟩🟩🟨⬛🟩
 Kalibrasyon %80
 ```

@@ -21,7 +21,7 @@ void main() {
           hits: 80,
           answered: 100,
         ),
-        'Aralık #42 · 260/500\n🟩🟩🟨⬛🟩\nKalibrasyon %80',
+        'Kabaca #42 · 260/500\n🟩🟩🟨⬛🟩\nKalibrasyon %80',
       );
     });
 
@@ -39,7 +39,7 @@ void main() {
           hits: 2,
           answered: 5,
         ),
-        'Aralık #1 · 195/500\n🟩⬛⬛⬛🟨',
+        'Kabaca #1 · 195/500\n🟩⬛⬛⬛🟨',
       );
     });
 
@@ -51,7 +51,7 @@ void main() {
           hits: 0,
           answered: 5,
         ),
-        startsWith('Aralık (deneme) · 0/500'),
+        startsWith('Kabaca (deneme) · 0/500'),
       );
     });
   });

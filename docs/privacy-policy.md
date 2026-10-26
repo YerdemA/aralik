@@ -1,12 +1,12 @@
 ---
-title: Aralık – Gizlilik Politikası
+title: Kabaca – Gizlilik Politikası
 ---
 
-# Aralık – Gizlilik Politikası
+# Kabaca – Gizlilik Politikası
 
 Son güncelleme: 26 Ekim 2026
 
-Aralık, Yusuf Erdem Aykaç tarafından geliştirilen bir tahmin oyunudur. Bu politika uygulamanın hangi verileri nasıl kullandığını açıklar.
+Kabaca, Yusuf Erdem Aykaç tarafından geliştirilen bir tahmin oyunudur. Bu politika uygulamanın hangi verileri nasıl kullandığını açıklar.
 
 ## Kısaca
 - **Kişisel veri toplamayız.** Hesap, giriş, reklam, analiz ya da takip aracı yoktur.

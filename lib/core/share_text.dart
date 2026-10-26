@@ -6,7 +6,7 @@ import 'strings.dart';
 /// Wordle-style share card:
 ///
 /// ```
-/// Aralık #42 · 380/500
+/// Kabaca #42 · 380/500
 /// 🟩🟩🟨⬛🟩
 /// Kalibrasyon %80
 /// ```

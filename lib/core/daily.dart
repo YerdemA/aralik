@@ -22,7 +22,7 @@ int dayIndexFor(DateTime now) {
   return today.difference(start).inDays;
 }
 
-/// Public puzzle number shown in the share text ("Aralık #1" on day 0).
+/// Public puzzle number shown in the share text ("Kabaca #1" on day 0).
 /// Zero or negative before the epoch (closed test).
 int puzzleNumber(int dayIndex) => dayIndex + 1;
 

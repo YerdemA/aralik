@@ -1,4 +1,4 @@
-# Aralık: Teknik Belge
+# Kabaca: Teknik Belge
 
 Bu belge uygulamanın nasıl kurulduğunu, hangi teknolojilerin neden seçildiğini ve geliştirme sırasında
 karşılaşılan sorunların nasıl çözüldüğünü anlatır. Oyunun ne olduğu için [README.md](README.md),
@@ -229,7 +229,7 @@ validate_questions.py (banka + takvim)        publish_content.py → docs/conten
 - **Kural:** Sayılar yalnızca ham Wikidata dökümlerinden gelir. Bir dil modeli en fazla soru metnini akıcılaştırmak için kullanılabilir. **Sayılar asla dil modelinden alınmaz.**
 
 ## 8. Arayüz
-- **Tema:** `core/theme.dart` içindeki `Palette`, uygulama ikonunun renklerinden türetilmiştir: gökyüzü, dağlar, kiremit rengi kule, yeşil ova, pembe beyin. Material 3 şeması `DynamicSchemeVariant.fidelity` ile lacivert tohum renginden üretilir, tertiary renk kule tonuna ayarlanır. Açık ve koyu tema sisteme göre seçilir.
+- **Tema:** Material 3 şeması `DynamicSchemeVariant.fidelity` ile lacivert tohum renginden (`Palette.navy`, aynı zamanda uygulama ikonunun zemini) üretilir, tertiary renk ikondaki filozofun togasıyla aynı kiremit tonuna ayarlanır. Açık ve koyu tema sisteme göre seçilir.
 - **`GameColors`:** sonuç kademesi renkleri (🟩🟨⬛ ile eşleşir) ve seri rengi için bir ThemeExtension.
 - **Kategori stili:** Her kategorinin bir Material ikonu ve açık/koyu tema için birer rengi vardır.
 - **Çizimler:**
@@ -258,7 +258,7 @@ validate_questions.py (banka + takvim)        publish_content.py → docs/conten
   `build/symbols` çökme raporlarını çözmek için saklanmalıdır.
 - **İmza:** Release, `android/key.properties` içindeki upload anahtarıyla imzalanır. Bu dosya ve `.jks` git'e girmez. Dosya yoksa build debug anahtarına düşer.
 - **İzin:** INTERNET izni ana manifest'tedir ve yalnızca içerik güncellemesi için kullanılır.
-- **Uygulama ikonu:** `flutter test tools/icon/render_icon_test.dart` ikonu Flutter'ın kendi çizim motoruyla üretir, paket gerekmez. Çıktılar: klasik, yuvarlak, uyarlanabilir (ön ve arka plan) ve Android 13 tek renkli katmanlar her yoğunlukta, ayrıca Play için `docs/store/icon-512.png`.
+- **Uygulama ikonu:** `flutter test tools/icon/render_icon_test.dart` ikonu Flutter'ın kendi çizim motoruyla üretir, paket gerekmez. Tasarım: lacivert zemin üzerinde düşünen bir filozof (kel, beyaz sakallı, gözleri kapalı, kiremit rengi toga) ve içinde "?" olan bir düşünce balonu. Çıktılar: klasik, yuvarlak, uyarlanabilir (ön ve arka plan) ve Android 13 tek renkli katmanlar her yoğunlukta, ayrıca Play için `docs/store/icon-512.png`. Tek renkli katmanda çizgiler oyulur, böylece tema renginde de yüz okunur.
 - **Gizlilik politikası:** `docs/privacy-policy.md`, GitHub Pages ile yayınlanır.
 - **Boyut:** Yüklenen AAB tüm işlemci mimarilerini içerdiği için büyüktür (~45 MB). Asıl hedef, Play'in cihaza özel ürettiği indirme boyutudur (< 8 MB). Bu ölçüm henüz yapılmadı.
 

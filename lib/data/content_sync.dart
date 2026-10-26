@@ -115,7 +115,7 @@ class ContentSync implements RemoteContent {
 Future<String> defaultHttpGet(Uri uri) async {
   final client = HttpClient()
     ..connectionTimeout = const Duration(seconds: 8)
-    ..userAgent = 'Aralik-Android';
+    ..userAgent = 'Kabaca-Android';
   try {
     final request = await client.getUrl(uri);
     final response = await request.close().timeout(const Duration(seconds: 15));

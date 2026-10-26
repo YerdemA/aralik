@@ -1,14 +1,14 @@
-# CLAUDE.md — Aralık
+# CLAUDE.md — Kabaca
 
 ## Proje
-**Aralık**, 5–10 dakikalık beklemelerde oynanan Türkçe bir günlük tahmin oyunu (Android, Flutter).
+**Kabaca**, 5–10 dakikalık beklemelerde oynanan Türkçe bir günlük tahmin oyunu (Android, Flutter).
 Kullanıcı sayısal bir soruya tek bir sayıyla değil, **%90 emin olduğu bir aralıkla** cevap verir
 ("Ağrı Dağı kaç metre?" → 4.500 – 5.500 m). Aralık cevabı içeriyorsa puan alır. Aralık ne kadar
 darsa puan o kadar yüksek olur. Uzun vadede kullanıcının **kalibrasyonunu**, yani "%90 emin"
 dediğinde gerçekten %90 isabet edip etmediğini ölçer.
 
 - Geliştirici: Yusuf Erdem Aykaç (GitHub: YerdemA)
-- Paket adı: `com.yerdema.aralik`
+- Paket adı: `com.yerdema.aralik` (uygulamanın ilk adından kalma; kullanıcıya görünmez, depo adı ve GitHub Pages adresleri de `aralik`)
 - Hedef: Google Play, Android (minSdk 24, Flutter 3.47'nin desteklediği en düşük sürüm)
 - Ayrıntılı yol haritası: `docs/PLAN.md`
 
@@ -110,7 +110,7 @@ test/
 - **Seri:** Günlük set tamamlanan ardışık günler.
 - **Paylaşım metni (Wordle tarzı):**
   ```
-  Aralık #42 · 380/500
+  Kabaca #42 · 380/500
   🟩🟩🟨⬛🟩
   Kalibrasyon %80
   ```

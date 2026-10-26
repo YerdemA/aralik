@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 import '../data/question.dart';
 import 'scoring.dart';
 
-/// Colours of the app icon (tools/icon/render_icon_test.dart): the tower's
-/// roof seeds the theme, the others colour the result burst. The UI reuses
-/// them so the app and its icon feel like one thing.
+/// Brand colours. The navy seeds the theme and is the app icon's
+/// background (tools/icon/render_icon_test.dart); the terracotta matches
+/// the philosopher's toga. All of them colour the result burst.
 abstract final class Palette {
-  static const roof = Color(0xFF3E5683);
-  static const skyTop = Color(0xFF8EC5FF);
-  static const tower = Color(0xFFD9825B);
-  static const plain = Color(0xFF8BCB72);
-  static const brain = Color(0xFFF6A5C6);
+  static const navy = Color(0xFF3E5683);
+  static const sky = Color(0xFF8EC5FF);
+  static const terracotta = Color(0xFFD9825B);
+  static const green = Color(0xFF8BCB72);
+  static const pink = Color(0xFFF6A5C6);
 }
 
 /// App-wide light and dark themes (Material 3, system font).
@@ -23,11 +23,11 @@ abstract final class AppTheme {
     final isLight = brightness == Brightness.light;
     final scheme =
         ColorScheme.fromSeed(
-          seedColor: Palette.roof,
+          seedColor: Palette.navy,
           brightness: brightness,
           dynamicSchemeVariant: DynamicSchemeVariant.fidelity,
         ).copyWith(
-          // Warm accents from the tower and the brain.
+          // Warm accents, like the toga in the app icon.
           tertiary: isLight ? const Color(0xFFB4532A) : const Color(0xFFFFB590),
           tertiaryContainer: isLight
               ? const Color(0xFFFFDBCB)

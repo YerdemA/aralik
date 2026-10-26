@@ -1,4 +1,4 @@
-# Aralık — Veri Kaynakları ve Lisanslar
+# Kabaca — Veri Kaynakları ve Lisanslar
 
 *Hazırlanma: 2026-10-26 · Hedef dosya: `docs/SOURCES.md`*
 

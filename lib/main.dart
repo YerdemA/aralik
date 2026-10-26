@@ -15,7 +15,7 @@ Future<void> main() async {
   // Warm the bank cache. A failure is retried on play.
   repository.load().ignore();
   runApp(
-    AralikApp(
+    KabacaApp(
       repository: repository,
       stats: StatsStore(prefs),
       settings: SettingsStore(prefs),

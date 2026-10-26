@@ -49,7 +49,7 @@ PAGEVIEWS = (
 )
 # Last 12 full months before the fetch.
 VIEWS_START, VIEWS_END = "2025100100", "2026093000"
-USER_AGENT = "AralikQuestionBot/0.1 (https://github.com/YerdemA/aralik)"
+USER_AGENT = "KabacaQuestionBot/0.1 (https://github.com/YerdemA/aralik)"
 RAW_ROOT = Path(__file__).resolve().parent / "raw"
 RAW_DIR = RAW_ROOT / "wikidata"
 VIEWS_DIR = RAW_ROOT / "wikimedia_pageviews"

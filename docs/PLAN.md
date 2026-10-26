@@ -1,10 +1,10 @@
-# Aralık — Proje Planı
+# Kabaca — Proje Planı
 
 > Günlük Türkçe tahmin oyunu: Tek bir sayı tahmin etme, **%90 emin olduğun aralığı** ver.
 > Repo: `YerdemA/aralik` · Paket: `com.yerdema.aralik`
 
 ## Neden farklı?
-- Piyasadaki bilgi yarışmaları "doğru/yanlış" mantığıyla çalışır. Aralık ise **ne kadar emin olduğunu** ölçer.
+- Piyasadaki bilgi yarışmaları "doğru/yanlış" mantığıyla çalışır. Kabaca ise **ne kadar emin olduğunu** ölçer.
 - Türkçe ve yerel içerik sunar (TÜİK, Türkiye coğrafyası ve tarihi).
 - Wordle gibi herkes aynı gün aynı soruları çözer. Bu, arkadaş arasında karşılaştırmayı ve paylaşımı doğal hâle getirir.
 - Kalibrasyon skoru, kullanıcının kendini tanımasını sağlayan ve geri dönme sebebi olan bir metriktir.

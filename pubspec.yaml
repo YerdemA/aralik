@@ -1,5 +1,5 @@
 name: aralik
-description: "Aralık: %90 emin olduğun aralığı tahmin et."
+description: "Kabaca: %90 emin olduğun aralığı tahmin et."
 publish_to: 'none'
 
 version: 1.0.0+1
