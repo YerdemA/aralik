@@ -18,19 +18,16 @@ Veri çekerken görülen hatalar. Wikidata'da düzeltilirse bir sonraki çekimde
 - Bingöl ilinin "başkent" (P36) bilgisi yok, bu yüzden mesafe sorularında Bingöl yok.
 - Çankırı şehrinin birbirinden >5 km farklı iki koordinatı var, bu yüzden Çankırı da şimdilik dışarıda.
 
-## 5. Kapalı teste yükle (5. gün)
-İmzalı paket hazır: `build\app\outputs\bundle\release\app-release.aab` (upload anahtarıyla imzalı, 2026-10-26 doğrulandı).
-1. Play Console → uygulama oluştur: ad **Kabaca** (mağaza başlığı önerisi: "Kabaca: Günlük Tahmin Oyunu"), paket `com.yerdema.aralik` → Test → Kapalı test → yeni sürüm → AAB'yi yükle.
-2. `build\symbols` klasörünü sakla (çökme raporlarını çözmek için gerekli, git'e girmez).
-3. Test kullanıcılarının (en az 12) e-postalarını listeye ekle. 14 günlük sayaç yayınlandığı an başlar.
-4. Gizlilik politikası URL'si: GitHub Pages'teki `privacy-policy` sayfası. Veri güvenliği formu: veri toplanmıyor.
-5. `android/key.properties` ve `aralik-upload.jks` dosyalarını güvenli bir yere yedekle. Kaybolursa güncelleme yüklenemez.
+## 5. Kapalı teste yükle (öncelikli: 14 günlük sayaç ancak yayınla başlar)
+Her şey `play-store/` klasöründe hazır (git'e girmez):
+- Adım adım rehber: `play-store/listing/play-console-rehberi.md` (uygulama oluşturma, içerik derecelendirmesi, veri güvenliği, kapalı test, 14 gün)
+- Mağaza metinleri: `play-store/listing/magaza-metinleri.md`
+- Paket: `play-store/release/kabaca-1.0.0+1.aab` (upload anahtarıyla imzalı) ve `kabaca-1.0.0+1-mapping.txt`
+- Görseller: `play-store/graphics/` (simge, öne çıkan görsel), `play-store/screenshots/play/` (8 ekran görüntüsü)
+- Test davet mesajı: `play-store/listing/test-daveti.md`
+- Video (isteğe bağlı): `play-store/video/video-taslagi.md`
+Upload anahtarını (`aralik-upload.jks`) ve `android/key.properties` dosyasını yedeklemeyi unutma.
 
-## 6. Yeni içeriği yayına al ve linkleri kontrol et (push sonrası)
-Banka 456 soruya, takvim 45 güne çıktı. `docs/content/` yerelde `--reset` ile hazırlandı (sürüm 2).
-1. `docs/` dahil commit'i GitHub'a push et.
-2. Tarayıcıda aç ve sayfaların açıldığını kontrol et (uygulama bu adresleri gösteriyor):
-   - https://yerdema.github.io/aralik/privacy-policy.html
-   - https://yerdema.github.io/aralik/attributions.html
-   - https://yerdema.github.io/aralik/content/manifest.json (`"version": 2` ve `"schedule"` görünmeli)
-3. GitHub Pages kapalıysa: repo → Settings → Pages → Branch: `main`, klasör: `/docs`.
+## 6. Takvimi 15 Aralık 2026'dan önce uzat
+Takvim 45 gün (1 Kasım – 15 Aralık). Uzatılmazsa 16 Aralık'ta günlük sorular başa sarar.
+Yeni kolay sorular gerekiyor (SOURCES.md 3. adım ve sonrası), sonra `build_schedule.py` + `publish_content.py` + push. Uygulama güncellemesi gerekmez.

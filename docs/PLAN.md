@@ -52,6 +52,10 @@ Geliştiricinin emülatörde oynadıktan sonra aldığı notlar.
    - Değiştirilebilecekler: k'yı büyütmek (aynı genişlik daha az puan), 🟩 eşiğini yükseltmek, varsayılan kaydırıcı konumunu daraltmak. k ile −100 tabanı birlikte ayarlanmalı, yoksa dürüst aralığın en iyi strateji olma özelliği bozulur. Değişiklikten sonra test yeniden doğrulanmalı.
    - Karar vermeden önce birkaç gün gerçek oyun verisine (istatistik ekranı) bakmak faydalı olur.
 
+## Takvim uyarısı (2026-10-26)
+Günlük takvim 45 gün: 2026-11-01 – 2026-12-15. **15 Aralık'tan önce uzatılmalı**, yoksa 16 Aralık'ta sorular başa sarar.
+Uzatmak için kolay soru arzı darboğaz (her gün 2 kolay soru). Yeni kaynaklar: SOURCES.md 3. adım ve sonrası.
+
 ## Takvim (14 gün)
 > Kapalı test 14 gün kesintisiz sürmeli ve en az 12 test kullanıcısı gerekiyor. Bu yüzden **5. günde** kapalı teste çıkılır, geliştirme test sürerken devam eder.
 
