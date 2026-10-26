@@ -69,6 +69,11 @@ abstract final class AppStrings {
   static const newRound = 'Yeni tur';
   static const backHome = 'Ana ekran';
   static const shareSubject = 'Kabaca skorum';
+  static const shareImage = 'Görseli paylaş';
+  static const shareTextOnly = 'Metni paylaş';
+  static const shareCardScoreLabel = 'Bugünkü skorum';
+  static const shareCardPreview = 'Deneme';
+  static const shareCardInvite = 'Sen de dene: Kabaca';
 
   // Calibration feedback
   static const calibrationTooNarrow = 'Aralıkların fazla dar.';

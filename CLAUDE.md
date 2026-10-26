@@ -49,6 +49,7 @@ lib/
     stats_store.dart        # shared_preferences sarmalayıcısı
     settings_store.dart     # ayarlar (tema)
   features/
+    intro/                  # soğuk açılışta kısa giriş animasyonu (atlanabilir)
     home/                   # ana ekran: günün seti, seri, kalibrasyon
     game/                   # soru ekranı + tahmin/aralık girişi
     result/                 # soru sonucu + gün özeti + paylaş
@@ -108,6 +109,7 @@ test/
   - Günlük maksimum 500.
 - **Kalibrasyon:** Tüm zamanlarda isabet eden aralıkların oranı. Hedef ~%90. Ekranda "%62, aralıkların fazla dar" ya da "%100, daha cesur ol" gibi geri bildirim gösterilir.
 - **Seri:** Günlük set tamamlanan ardışık günler.
+- **Paylaşım:** Gün özetindeki "Paylaş" bir önizleme açar. İki seçenek var: görsel kart (`features/result/share_card.dart`, 1080 × 1920, hikâye/durum için; metin açıklama olarak eklenir) ya da yalnızca metin. Görsel `share_plus` ile bellekten paylaşılır, ek paket yok.
 - **Paylaşım metni (Wordle tarzı):**
   ```
   Kabaca #42 · 380/500

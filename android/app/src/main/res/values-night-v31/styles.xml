@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android 12+ splash screen: the mascot without the icon's own
+         background on the same navy, in light and dark mode alike. The
+         Flutter intro (lib/features/intro) continues from this frame. -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@drawable/launch_background</item>
+        <item name="android:windowSplashScreenBackground">@color/splash_navy</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_foreground</item>
+    </style>
+    <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <!-- Navy like the launch screen, so the hand-over to Flutter never flashes white or black. -->
+        <item name="android:windowBackground">@color/splash_navy</item>
+    </style>
+</resources>

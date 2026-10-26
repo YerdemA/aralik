@@ -1,11 +1,16 @@
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 
+import '../../core/daily.dart';
 import '../../core/scoring.dart';
+import '../../core/share_text.dart';
 import '../../core/strings.dart';
 import '../../core/theme.dart';
 import '../../widgets/calibration_text.dart';
 import '../../widgets/count_up.dart';
+import 'share_card.dart';
 
 enum SummaryAction { newRound, home }
 
@@ -17,7 +22,7 @@ class SummaryScreen extends StatelessWidget {
     required this.results,
     required this.hits,
     required this.answered,
-    this.shareText,
+    this.dayIndex,
   });
 
   /// Outcome per question, in order.
@@ -27,10 +32,11 @@ class SummaryScreen extends StatelessWidget {
   final int hits;
   final int answered;
 
-  /// Set for the daily set: the main action becomes "Paylaş".
-  final String? shareText;
+  /// Set for the daily set: the main action becomes "Paylaş" (image card
+  /// or Wordle-style text).
+  final int? dayIndex;
 
-  bool get _isDaily => shareText != null;
+  bool get _isDaily => dayIndex != null;
 
   /// Green when calibrated, amber when off, neutral without enough data.
   Color _calibrationColor(ThemeData theme) {
@@ -116,10 +122,17 @@ class SummaryScreen extends StatelessWidget {
               const Spacer(),
               if (_isDaily)
                 FilledButton.icon(
-                  onPressed: () => SharePlus.instance.share(
-                    ShareParams(
-                      text: shareText,
-                      subject: AppStrings.shareSubject,
+                  onPressed: () => showModalBottomSheet<void>(
+                    context: context,
+                    isScrollControlled: true,
+                    showDragHandle: true,
+                    builder: (_) => ShareSheet(
+                      card: ShareCardData(
+                        dayIndex: dayIndex!,
+                        results: results,
+                        hits: hits,
+                        answered: answered,
+                      ),
                     ),
                   ),
                   icon: const Icon(Icons.share_outlined),
@@ -196,6 +209,111 @@ class _TierRow extends StatelessWidget {
             ),
           ),
       ],
+    );
+  }
+}
+
+/// Preview of the story card with two ways to share: the image (with the
+/// text as caption) or the Wordle-style text alone.
+class ShareSheet extends StatefulWidget {
+  const ShareSheet({
+    super.key,
+    required this.card,
+    this.render = renderShareCard,
+  });
+
+  final ShareCardData card;
+
+  /// Injectable for tests.
+  final Future<Uint8List> Function(ShareCardData) render;
+
+  @override
+  State<ShareSheet> createState() => _ShareSheetState();
+}
+
+class _ShareSheetState extends State<ShareSheet> {
+  late final Future<Uint8List> _png = widget.render(widget.card);
+
+  String get _text => dailyShareText(
+    dayIndex: widget.card.dayIndex,
+    results: widget.card.results,
+    hits: widget.card.hits,
+    answered: widget.card.answered,
+  );
+
+  String get _fileName {
+    final number = puzzleNumber(widget.card.dayIndex);
+    return number > 0 ? 'kabaca-$number.png' : 'kabaca.png';
+  }
+
+  Future<void> _share(Uint8List? png) async {
+    final navigator = Navigator.of(context);
+    await SharePlus.instance.share(
+      ShareParams(
+        text: _text,
+        subject: AppStrings.shareSubject,
+        files: png == null
+            ? null
+            : [XFile.fromData(png, mimeType: 'image/png', name: _fileName)],
+      ),
+    );
+    if (mounted) navigator.pop();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final height = MediaQuery.sizeOf(context).height * 0.5;
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+        child: FutureBuilder(
+          future: _png,
+          builder: (context, snapshot) {
+            final png = snapshot.data;
+            return Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                SizedBox(
+                  height: height,
+                  child: Center(
+                    child: AspectRatio(
+                      aspectRatio: shareCardSize.aspectRatio,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: png == null
+                            ? ColoredBox(
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .surfaceContainerHighest,
+                                child: snapshot.hasError
+                                    ? null
+                                    : const Center(
+                                        child: CircularProgressIndicator(),
+                                      ),
+                              )
+                            : Image.memory(png, gaplessPlayback: true),
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                FilledButton.icon(
+                  onPressed: png == null ? null : () => _share(png),
+                  icon: const Icon(Icons.image_outlined),
+                  label: const Text(AppStrings.shareImage),
+                ),
+                const SizedBox(height: 8),
+                OutlinedButton.icon(
+                  onPressed: () => _share(null),
+                  icon: const Icon(Icons.notes_rounded),
+                  label: const Text(AppStrings.shareTextOnly),
+                ),
+              ],
+            );
+          },
+        ),
+      ),
     );
   }
 }

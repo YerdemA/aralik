@@ -27,7 +27,9 @@ Aralık cevabı içeriyorsa puan alırsın. Aralık ne kadar darsa puan o kadar 
 
 **Puan:** İsabette en fazla 100 puan alırsın, dar aralık daha çok puan getirir. Kıl payı ıska yine puan alabilir, uzak ıska eksi puandır (en düşük −100). Kural bilerek dar aralık vermeyi kârsız kılar. En iyi strateji gerçekten %90 emin olduğun aralığı vermektir.
 
-**Paylaşım kartı:**
+**Paylaşım:** Gün bitince sonuç iki şekilde paylaşılabilir:
+- **Görsel:** Instagram hikâyesi ve WhatsApp durumu için 1080 × 1920'lik bir kart. Kartta filozof maskotu, günün skoru, renkli kareler ve kalibrasyon var. Metin de açıklama olarak eklenir.
+- **Metin (Wordle tarzı):**
 ```
 Kabaca #42 · 380/500
 🟩🟩🟨⬛🟩
@@ -59,7 +61,8 @@ Yeni sorular uygulama güncellemesi gerekmeden GitHub Pages'ten indirilir. Gizli
 - Atıf altyapısı: tek kaynak listesi (`tools/sources.json`), Ayarlar → Veri kaynakları ve lisanslar ekranı, `docs/attributions.md`
 - Soru ekranı: kendi sayı klavyesi, logaritmik/yıl kaydırıcısı, kilitleme
 - Puanlama: interval score, birim testleriyle doğrulanmış
-- Sonuç ekranı, gün/tur özeti, paylaşım, yarıda kalan seti sürdürme
+- Sonuç ekranı, gün/tur özeti, yarıda kalan seti sürdürme
+- Paylaşım: hikâye/durum için görsel kart (önizlemeli) ya da Wordle tarzı metin
 - Serbest mod: takvimin önümüzdeki 60 gününde olmayan banka soruları ve turda en fazla 1 mesafe sorusu (79 Türkiye şehri, 40 başkent)
 - İnternetten içerik güncelleme (GitHub Pages, 6 saatte bir kontrol)
 - İstatistik ekranı: kalibrasyon grafiği, ıska yönü, kategori bazında isabet
@@ -84,7 +87,7 @@ lib/
   core/                   # saf iş mantığı: puan, aralık, günlük seçim, sayı biçimi, istatistik, tema, metinler
   data/                   # soru modeli, soru deposu, içerik senkronu, istatistik deposu, mesafe üreticisi
   features/               # ekranlar: home, game, result, stats
-  widgets/                # ortak parçalar: sayı klavyesi, aralık çubuğu, kutucuklar
+  widgets/                # ortak parçalar: sayı klavyesi, aralık çubuğu, filozof maskotu, kutucuklar
 assets/                   # soru bankası ve yer verisi (JSON)
 tools/                    # Python veri hattı ve ikon üretici (uygulamaya dahil değil)
 docs/                     # plan, gizlilik politikası, mağaza ikonu, yayınlanan içerik (GitHub Pages)

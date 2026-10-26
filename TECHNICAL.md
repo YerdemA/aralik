@@ -60,7 +60,7 @@ lib/
     free_play.dart          # serbest mod turu oluşturma
     stats.dart              # istatistik hesapları (blok isabet, kategori, ıska yönü)
     number_format.dart      # Türkçe sayı biçimi
-    share_text.dart         # Wordle tarzı paylaşım metni
+    share_text.dart         # Wordle tarzı paylaşım metni (görsel kart: features/result/share_card.dart)
     geo.dart                # haversine mesafe
     theme.dart              # Palette, tema, GameColors, kategori renk ve ikonları
     strings.dart            # kullanıcıya görünen tüm Türkçe metinler
@@ -73,8 +73,8 @@ lib/
     settings_store.dart     # ayarlar (tema), shared_preferences
     distance_questions.dart # cihazda mesafe sorusu üreticisi
     place.dart              # yer modeli
-  features/                 # ekranlar: home, game (+ GameController), result, stats, settings
-  widgets/                  # ortak parçalar (sayı klavyesi, aralık çubuğu, kategori etiketi, ...)
+  features/                 # ekranlar: intro, home, game (+ GameController), result, stats, settings
+  widgets/                  # ortak parçalar (sayı klavyesi, aralık çubuğu, kategori etiketi, filozof maskotu, ...)
 ```
 - **Katmanlar:** `core` saf Dart'tır ve Flutter widget'larını bilmez. Böylece iş mantığı hızlı birim testleriyle doğrulanır. `data` kalıcılık ve G/Ç işlerini yapar. `features` yalnızca bunları çağırır ve çizer.
 - **Metinler:** Kod, değişken ve dosya adları İngilizcedir. Kullanıcıya görünen her metin `core/strings.dart` içindedir.
@@ -233,20 +233,39 @@ validate_questions.py (banka + takvim)        publish_content.py → docs/conten
 - **`GameColors`:** sonuç kademesi renkleri (🟩🟨⬛ ile eşleşir) ve seri rengi için bir ThemeExtension.
 - **Kategori stili:** Her kategorinin bir Material ikonu ve açık/koyu tema için birer rengi vardır.
 - **Çizimler:**
+  - `widgets/philosopher.dart`: filozof maskotu. Uygulama ikonu (`tools/icon/render_icon_test.dart`) ve paylaşım kartı aynı kodu kullanır, bu yüzden ikisi hep aynı karakteri çizer.
   - `widgets/range_mark.dart`: logonun altındaki aralık işareti.
   - `widgets/interval_bar.dart`: sonuçtaki aralık çubuğu.
   - `features/stats/calibration_chart.dart`: kalibrasyon grafiği.
   - Hepsi `CustomPaint` ile çizilir.
 - **Animasyonlar:** Yalnızca implicit animasyonlar kullanılır (`TweenAnimationBuilder`, `AnimatedContainer`, `AnimatedSwitcher`). Rozet zıplaması, sayarak artan puan, sırayla beliren kareler ve logonun açılan aralık işareti bunlarla yapılır. AnimationController ya da paket yok.
+- **Açılış:**
+  - Android'in açılış ekranı ikonun laciverdinde (`#2B3B6C`), ortasında filozof var.
+    - Android 12 ve üstü: `values-v31` ve `values-night-v31` içindeki `windowSplashScreen*` ayarları.
+    - Daha eski sürümler: `drawable/launch_background.xml` (288 dp).
+    - Görünen alan her sürümde 192 dp.
+  - Flutter penceresinin zemini (`NormalTheme`) de aynı lacivert. Böylece açılış ekranı kalkarken araya beyaz ya da siyah bir kare girmez.
+  - `features/intro/intro_screen.dart` aynı karede devam eder. Filozof piksel piksel aynı yerde kalır (ölçüldü):
+    - balon hafifçe sallanır
+    - altında ana ekran logosuyla aynı stilde (yumuşak açık mavi, kalın) "Kabaca" yazısı ve açılan aralık işareti belirir
+    - ana ekrana kısa bir geçiş olur
+  - Süre: 0,65 sn animasyon + 0,25 sn geçiş. Dokununca atlanır, yalnızca soğuk açılışta oynar.
+  - Toplam açılış süresinin asıl belirleyicisi Flutter motorunun başlangıcıdır (Android ekranı bu sürede görünür). Bu, GPU'suz emülatörde ~3 sn, gerçek telefonlarda tipik olarak 1 sn'nin altındadır.
+  - Tek bir `TweenAnimationBuilder` kullanılır, AnimationController yok.
+- **Paylaşım kartı (`features/result/share_card.dart`):**
+  - 1080 × 1920 (9:16) PNG, doğrudan canvas'a çizilir. Hikâye ve durum boyutudur.
+  - İçerik: lacivert zemin ve hafif "?" ile "≈" süsleri, "Kabaca" yazısı, aralık işareti, gün numarası (kapalı testte "Deneme"), skor kartının üstünden bakan filozof, büyük skor, renkli kareler ve her sorunun puanı, kalibrasyon (en az 10 cevaptan sonra), slogan.
+  - Gün özetindeki "Paylaş" bir alt sayfa açar. Kartın önizlemesi gösterilir; "Görseli paylaş" görseli ve Wordle metnini birlikte, "Metni paylaş" yalnızca metni gönderir.
+  - Görsel `XFile.fromData` ile bellekten verilir; `share_plus` onu geçici bir dosyaya kendisi yazar. Ek paket gerekmez.
 - **Titreşim:** Tuşlarda `selectionClick`, kilitlemede `mediumImpact`. Ses yok.
 - **Ayarlar:** "Görünüm" bölümünde tema seçimi var: sistem, açık ya da koyu. Seçim `data/settings_store.dart` ile `shared_preferences`'ta saklanır, uygulama anında geçer. "Hakkında" bölümünde veri kaynakları ve lisanslar ekranı, Flutter'ın yerleşik açık kaynak lisansları sayfası (`showLicensePage`) ve gizlilik politikası. Linkler tarayıcıda açılmaz, çünkü bunun için `url_launcher` paketi gerekir. Bunun yerine seçilebilir metin olarak gösterilir ve yanlarında bir kopyalama düğmesi bulunur (`widgets/link_text.dart`).
 - **Erişilebilirlik:** Grafik bir `Semantics` etiketiyle oranları okutur. Sayarak artan metin ekran okuyucuya son değeri söyler. Süs çizimleri `ExcludeSemantics` içindedir.
 
 ## 9. Test
-- `flutter test` 139 test çalıştırır:
+- `flutter test` 148 test çalıştırır:
   - `test/core`: puanlama (dürüstlük özelliği dahil), aralık, takvim, serbest mod turu, sayı biçimi, paylaşım metni, istatistik, coğrafya
   - `test/data`: soru modeli (yeni alanlar ve "diğer" geri düşüşü dahil), içerik senkronu (sahte HTTP ve saatle, takvim reddi senaryolarıyla), gömülü takvim-banka tutarlılığı, istatistik deposu, mesafe üreticisi
-  - `test/features`: ana ekran, soru ekranı, istatistik ekranı, ayarlar ve kaynaklar ekranları
+  - `test/features`: ana ekran, soru ekranı, istatistik ekranı, ayarlar ve kaynaklar ekranları, açılış animasyonu, paylaşım kartı (PNG boyutu) ve paylaşım sayfası
 - `flutter analyze` sıfır uyarı vermelidir. Commit öncesi `dart format .` çalıştırılır.
 - Saf iş mantığı için birim test zorunludur.
 

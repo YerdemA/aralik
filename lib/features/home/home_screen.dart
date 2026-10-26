@@ -6,7 +6,6 @@ import '../../core/daily.dart';
 import '../../core/free_play.dart';
 import '../../core/number_format.dart';
 import '../../core/scoring.dart';
-import '../../core/share_text.dart';
 import '../../core/strings.dart';
 import '../../core/theme.dart';
 import '../../data/question_repository.dart';
@@ -48,13 +47,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   // Read on every build, so the screen rolls over at midnight on resume.
   int get _today => dayIndexFor(DateTime.now());
-
-  String _shareText(int day) => dailyShareText(
-    dayIndex: day,
-    results: _stats.dailyResults(day),
-    hits: _stats.hits,
-    answered: _stats.answered,
-  );
 
   Future<void> _guarded(Future<void> Function() action) async {
     if (_loading) return;
@@ -101,7 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
         results: _stats.dailyResults(day),
         hits: _stats.hits,
         answered: _stats.answered,
-        shareText: _shareText(day),
+        dayIndex: day,
       ),
     ),
   );

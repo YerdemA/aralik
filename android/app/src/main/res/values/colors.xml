@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Launch screen background: the app icon's navy (see lib/features/intro). -->
+    <color name="splash_navy">#2B3B6C</color>
+</resources>
