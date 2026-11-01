@@ -91,7 +91,7 @@ test/
 ## Oyun kuralları
 - **Günlük set:** Her gün 5 soru. `dayIndex = gün(yerel saat) − 2026-11-01`. Günün soruları `schedule.json` içindeki `days[dayIndex]` id'leridir (`core/daily.dart`, `Schedule`). Herkes aynı gün aynı soruları görür ve backend gerekmez. Takvim biterse başa sarılır, kapalı testteki negatif günler sondan sayılır.
   Takvimi `tools/build_schedule.py` kurar: her gün 2 kolay + 2 orta + 1 zor, en az 3 kategori, aynı veri setinden en fazla 1 soru, kolaydan zora sıralı. Takvim yalnızca sona gün eklenerek uzar.
-- **Serbest mod** (eski adıyla pratik modu): Sınırsız, 5'erli turlar. Kişiye özeldir ve oyuncunun daha önce kilitlediği hiçbir soru (hiçbir modda) tekrar gelmez (`StatsStore.seenIds`).
+- **Serbest mod** (arayüzde "Bir tur at", eski adıyla pratik modu): Sınırsız, 5'erli turlar. Kişiye özeldir ve oyuncunun daha önce kilitlediği hiçbir soru (hiçbir modda) tekrar gelmez (`StatsStore.seenIds`).
   Banka soruları takvimin önümüzdeki 60 gününde olmayanlardan gelir (geçmiş günler ve takvime girmemiş sorular dahil). Turda her üreticiden en fazla 1, toplamda en fazla 2 üretilmiş soru olur. Banka havuzu biterse tur kısalır.
 - **Cihazda üretilen sorular:** Kaynaklı küçük veri tablolarından hesaplanır, sayı asla elle yazılmaz. İlk üretici: il merkezleri / başkentler arası kuş uçuşu mesafe (`data/distance_questions.dart`, id `dist:Q1:Q2`).
   Yeni üreticiler aynı kurala uyar: veri `tools/` ile Wikidata'dan çekilir, `assets/data/` altına gömülür, `source` iki öğenin de linkini içerir.
@@ -145,3 +145,4 @@ test/
 - Bankayı ve takvimi doğrula: `python tools/validate_questions.py`
 - İçeriği yayına hazırla: `python tools/publish_content.py [--reset]` (sonra `docs/` commit + push; `--reset` yalnızca ilk oyuncudan önce)
 - Uygulama ikonunu üret: `flutter test tools/icon/render_icon_test.dart`
+- Mağaza görsellerini üret: `flutter test tools/store/render_store_test.dart` (`play-store/screenshots/` içindeki ham ekran görüntülerinden)

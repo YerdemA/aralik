@@ -4,11 +4,23 @@ import 'package:flutter/services.dart';
 import '../data/question.dart';
 import 'scoring.dart';
 
-/// Brand colours. The navy seeds the theme and is the app icon's
-/// background (tools/icon/render_icon_test.dart); the terracotta matches
-/// the philosopher's toga. All of them colour the result burst.
+/// Brand colours. The indigo seeds the theme; the terracotta matches the
+/// philosopher's toga. The last group colours the result burst.
 abstract final class Palette {
-  static const navy = Color(0xFF3E5683);
+  static const indigo = Color(0xFF4338CA);
+
+  /// Today's card on the home screen, the same in both themes.
+  static const heroTop = Color(0xFF5140E6);
+  static const heroBottom = Color(0xFF2C209E);
+
+  /// The main button on that card, with dark text.
+  static const sun = Color(0xFFFFC53D);
+  static const onSun = Color(0xFF2B2100);
+
+  /// The free play card; white text stays readable on both ends.
+  static const roundStart = Color(0xFFCF3F1A);
+  static const roundEnd = Color(0xFFC22F66);
+
   static const sky = Color(0xFF8EC5FF);
   static const terracotta = Color(0xFFD9825B);
   static const green = Color(0xFF8BCB72);
@@ -24,19 +36,20 @@ abstract final class AppTheme {
     final isLight = brightness == Brightness.light;
     final scheme =
         ColorScheme.fromSeed(
-          seedColor: Palette.navy,
+          seedColor: Palette.indigo,
           brightness: brightness,
           dynamicSchemeVariant: DynamicSchemeVariant.fidelity,
         ).copyWith(
           // Warm accents, like the toga in the app icon.
-          tertiary: isLight ? const Color(0xFFB4532A) : const Color(0xFFFFB590),
+          tertiary: isLight ? const Color(0xFFC2410C) : const Color(0xFFFFB590),
           tertiaryContainer: isLight
               ? const Color(0xFFFFDBCB)
               : const Color(0xFF6E3218),
           onTertiaryContainer: isLight
               ? const Color(0xFF3A1100)
               : const Color(0xFFFFDBCB),
-          surface: isLight ? const Color(0xFFF6F9FF) : const Color(0xFF111827),
+          surface: isLight ? const Color(0xFFFFF9F1) : const Color(0xFF14152B),
+          surfaceContainer: isLight ? null : const Color(0xFF1F2140),
         );
     final base = ThemeData(colorScheme: scheme, useMaterial3: true);
     const largeTarget = Size(64, 58);

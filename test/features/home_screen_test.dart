@@ -65,11 +65,44 @@ void main() {
         'hits': 4,
       },
     );
-    expect(find.text('${AppStrings.todayDone}: 287 / 500'), findsOneWidget);
+    expect(find.text(AppStrings.todayDone), findsOneWidget);
+    expect(find.text(AppStrings.scoreOutOf(287, 500)), findsOneWidget);
     expect(find.text(AppStrings.share), findsOneWidget);
     expect(find.text(AppStrings.playToday), findsNothing);
+    // Free play takes over as the main card.
+    expect(find.text(AppStrings.freePlay), findsOneWidget);
+    expect(find.text(AppStrings.newRound), findsOneWidget);
+    expect(find.text(AppStrings.todayTitle), findsNothing);
     expect(find.text(AppStrings.streakDays(1)), findsOneWidget);
     expect(find.text('287'), findsOneWidget); // last score
+  });
+
+  testWidgets('the date and puzzle number are on today\'s card', (
+    tester,
+  ) async {
+    await pumpHome(tester);
+    final number = puzzleNumber(today);
+    expect(find.text(dayLabel(DateTime.now(), number)), findsOneWidget);
+  });
+
+  testWidgets('fits a small phone without overflowing', (tester) async {
+    await pumpHome(tester);
+    tester.view.physicalSize = const Size(960, 1600); // 320 x 533 dp
+    await tester.pumpAndSettle();
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('a finished day fits a small phone too', (tester) async {
+    await pumpHome(
+      tester,
+      prefs: {
+        'daily_results_$today': ['100:1', '75:1', '40:1', '0:0', '72:1'],
+        'completed_days': ['$today'],
+      },
+    );
+    tester.view.physicalSize = const Size(960, 1600); // 320 x 533 dp
+    await tester.pumpAndSettle();
+    expect(tester.takeException(), isNull);
   });
 
   testWidgets('the chart icon opens the stats screen', (tester) async {

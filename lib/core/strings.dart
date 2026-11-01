@@ -17,15 +17,18 @@ abstract final class AppStrings {
   static const todayDone = 'Bugünkü seti bitirdin';
   static const comeBackTomorrow = 'Yarın 5 yeni soru seni bekliyor.';
   static const previewEdition = '(deneme)';
+  static const todayTitle = 'Bugünün 5 sorusu';
+  static const todayHint = 'Herkes bugün aynı soruları çözüyor.';
+  static String scoreOutOf(int points, int max) => '$points / $max';
   static String streakDays(int days) => '$days gün';
   static const noValue = '–';
   static const streak = 'Seri';
   static const lastScore = 'Son skor';
   static const calibration = 'Kalibrasyon';
-  static const freePlay = 'Serbest mod';
-  static const freePlayHint = 'Sınırsız tur, hep yeni sorular';
+  static const freePlay = 'Bir tur at';
+  static const freePlayHint = '5 yeni soru, sınır yok';
   static const freePlayEmpty =
-      'Serbest modda yeni soru kalmadı. Yarın yenileri açılır.';
+      'Şimdilik yeni soru kalmadı. Yarın yenileri açılır.';
   static const loadError = 'Sorular yüklenemedi. Tekrar dene.';
   static String roundTotal(int points, int max) => '$points / $max puan';
   static const stats = 'İstatistikler';
@@ -146,6 +149,27 @@ abstract final class AppStrings {
   static const onboarding3 =
       '%90 emin olduğun aralığı ver. Uzun vadede 10 sorunun 9\'unu tutturmalısın.';
   static const start = 'Başla';
+}
+
+const _months = [
+  'Ocak',
+  'Şubat',
+  'Mart',
+  'Nisan',
+  'Mayıs',
+  'Haziran',
+  'Temmuz',
+  'Ağustos',
+  'Eylül',
+  'Ekim',
+  'Kasım',
+  'Aralık',
+];
+
+/// "1 Kasım · #42", or only the date without a puzzle number (closed test).
+String dayLabel(DateTime date, int number) {
+  final day = '${date.day} ${_months[date.month - 1]}';
+  return number > 0 ? '$day · #$number' : day;
 }
 
 /// Display name of a question category.

@@ -12,7 +12,7 @@ import '../../data/question_repository.dart';
 import '../../data/settings_store.dart';
 import '../../data/stats_store.dart';
 import '../../widgets/calibration_text.dart';
-import '../../widgets/range_mark.dart';
+import '../../widgets/mascot.dart';
 import '../../widgets/stat_tile.dart';
 import '../game/game_controller.dart';
 import '../game/game_screen.dart';
@@ -20,8 +20,9 @@ import '../result/summary_screen.dart';
 import '../settings/settings_screen.dart';
 import '../stats/stats_screen.dart';
 
-/// Today's set (play / continue / done + share), streak, last score,
-/// calibration, and free play.
+/// The main card with the mascot, then streak, last score and calibration.
+/// The main card is today's set; once it is done, today shrinks to a strip
+/// with the score and share, and free play becomes the main card.
 class HomeScreen extends StatefulWidget {
   const HomeScreen({
     super.key,
@@ -166,85 +167,108 @@ class _HomeScreenState extends State<HomeScreen> {
           listenable: _stats,
           builder: (context, _) {
             final today = _today;
-            final number = puzzleNumber(today);
-            // Scrolls only when the screen is too short for everything.
+            final results = _stats.dailyResults(today);
+            final finished = _stats.isDayComplete(today);
+            // Scrolls only when the screen is too short for everything;
+            // otherwise the main card takes up the spare height.
             return LayoutBuilder(
-              builder: (context, constraints) => SingleChildScrollView(
-                child: ConstrainedBox(
-                  constraints: BoxConstraints(minHeight: constraints.maxHeight),
-                  child: IntrinsicHeight(
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(20, 8, 20, 16),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Row(
-                            children: [
-                              // The puzzle number from day 1 on; nothing
-                              // during the closed test.
-                              if (number > 0) _DayChip(label: '#$number'),
-                              const Spacer(),
-                              IconButton.filledTonal(
-                                onPressed: _openSettings,
-                                tooltip: AppStrings.settings,
-                                icon: const Icon(Icons.settings_rounded),
+              builder: (context, constraints) {
+                final mascotSize = (constraints.maxHeight * 0.26).clamp(
+                  110.0,
+                  200.0,
+                );
+                return SingleChildScrollView(
+                  child: ConstrainedBox(
+                    constraints: BoxConstraints(
+                      minHeight: constraints.maxHeight,
+                    ),
+                    child: IntrinsicHeight(
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: Padding(
+                                    padding: const EdgeInsets.only(left: 4),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          AppStrings.appName,
+                                          style: textTheme.headlineMedium
+                                              ?.copyWith(
+                                                color:
+                                                    theme.colorScheme.primary,
+                                                fontWeight: FontWeight.w800,
+                                                letterSpacing: -1,
+                                                height: 1.1,
+                                              ),
+                                        ),
+                                        Text(
+                                          AppStrings.tagline,
+                                          style: textTheme.bodySmall?.copyWith(
+                                            color: theme
+                                                .colorScheme
+                                                .onSurfaceVariant,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                IconButton.filledTonal(
+                                  onPressed: _openStats,
+                                  tooltip: AppStrings.stats,
+                                  icon: const Icon(Icons.bar_chart_rounded),
+                                ),
+                                const SizedBox(width: 4),
+                                IconButton.filledTonal(
+                                  onPressed: _openSettings,
+                                  tooltip: AppStrings.settings,
+                                  icon: const Icon(Icons.settings_rounded),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 14),
+                            if (finished) ...[
+                              _TodayDoneStrip(
+                                results: results,
+                                onShare: _loading
+                                    ? null
+                                    : () => _showDaySummary(today),
                               ),
-                              const SizedBox(width: 8),
-                              IconButton.filledTonal(
-                                onPressed: _openStats,
-                                tooltip: AppStrings.stats,
-                                icon: const Icon(Icons.bar_chart_rounded),
+                              const SizedBox(height: 12),
+                              Expanded(
+                                child: _FreePlayHero(
+                                  mascotSize: mascotSize,
+                                  onPlay: _loading ? null : _playFree,
+                                ),
                               ),
+                            ] else ...[
+                              Expanded(
+                                child: _TodayCard(
+                                  results: results,
+                                  today: today,
+                                  mascotSize: mascotSize,
+                                  onPlay: _loading ? null : _playDaily,
+                                ),
+                              ),
+                              const SizedBox(height: 12),
+                              _FreePlayCard(onTap: _loading ? null : _playFree),
                             ],
-                          ),
-                          const Spacer(),
-                          Text(
-                            AppStrings.appName,
-                            style: textTheme.displayLarge?.copyWith(
-                              color: theme.colorScheme.primary,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                          const Center(child: RangeMark()),
-                          const SizedBox(height: 10),
-                          Text(
-                            AppStrings.tagline,
-                            style: textTheme.bodyLarge?.copyWith(
-                              color: theme.colorScheme.onSurfaceVariant,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                          const SizedBox(height: 20),
-                          _StatsCard(stats: _stats, today: today),
-                          const Spacer(),
-                          const SizedBox(height: 24),
-                          _TodayAction(
-                            stats: _stats,
-                            today: today,
-                            loading: _loading,
-                            onPlay: _playDaily,
-                            onShowSummary: () => _showDaySummary(today),
-                          ),
-                          const SizedBox(height: 12),
-                          OutlinedButton.icon(
-                            onPressed: _loading ? null : _playFree,
-                            icon: const Icon(Icons.all_inclusive_rounded),
-                            label: const Text(AppStrings.freePlay),
-                          ),
-                          const SizedBox(height: 6),
-                          Text(
-                            AppStrings.freePlayHint,
-                            style: textTheme.bodySmall?.copyWith(
-                              color: theme.colorScheme.onSurfaceVariant,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
+                            const SizedBox(height: 12),
+                            _StatsCard(stats: _stats, today: today),
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ),
+                );
+              },
             );
           },
         ),
@@ -253,86 +277,386 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-/// "#42" in a small pill.
-class _DayChip extends StatelessWidget {
-  const _DayChip({required this.label});
+/// A big card with the mascot peeking over its main button.
+class _MascotCard extends StatelessWidget {
+  const _MascotCard({
+    required this.colors,
+    required this.mascotSize,
+    required this.children,
+    required this.button,
+    this.footer,
+  });
+
+  final List<Color> colors;
+  final double mascotSize;
+
+  /// Top of the card, never covered by the mascot.
+  final List<Widget> children;
+
+  /// Sits to the mascot's left, just above [button].
+  final Widget? footer;
+  final Widget button;
+
+  static const _padding = 18.0;
+  static const _buttonHeight = 58.0;
+  static const _mascotOverlap = 10.0;
+  static const _footerHeight = 22.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      clipBehavior: Clip.antiAlias,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(28),
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: colors,
+        ),
+      ),
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          // The toga ends behind the button.
+          Positioned(
+            right: 0,
+            bottom: _padding + _buttonHeight - _mascotOverlap,
+            child: Mascot(size: mascotSize),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(_padding),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                ...children,
+                const Spacer(),
+                // Room for the mascot, so he never covers the text. His
+                // bubble starts 16% down his square.
+                SizedBox(
+                  height: mascotSize * 0.84 - _mascotOverlap - _footerHeight,
+                ),
+                SizedBox(
+                  height: _footerHeight,
+                  child: Align(alignment: Alignment.topLeft, child: footer),
+                ),
+                SizedBox(width: double.infinity, child: button),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// The sunny main button of a [_MascotCard].
+class _SunButton extends StatelessWidget {
+  const _SunButton({
+    required this.onPressed,
+    required this.icon,
+    required this.label,
+  });
+
+  final VoidCallback? onPressed;
+  final IconData icon;
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return FilledButton.icon(
+      style: FilledButton.styleFrom(
+        backgroundColor: Palette.sun,
+        foregroundColor: Palette.onSun,
+      ),
+      onPressed: onPressed,
+      icon: Icon(icon, size: 28),
+      label: Text(label),
+    );
+  }
+}
+
+/// The screen's main action until today's set is done: the date, progress
+/// and the button that plays or continues it.
+class _TodayCard extends StatelessWidget {
+  const _TodayCard({
+    required this.results,
+    required this.today,
+    required this.mascotSize,
+    required this.onPlay,
+  });
+
+  final List<QuestionResult> results;
+  final int today;
+  final double mascotSize;
+  final VoidCallback? onPlay;
+
+  @override
+  Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
+    final done = results.length;
+    return _MascotCard(
+      colors: const [Palette.heroTop, Palette.heroBottom],
+      mascotSize: mascotSize,
+      footer: _ProgressPips(results: results),
+      button: _SunButton(
+        onPressed: onPlay,
+        icon: Icons.play_arrow_rounded,
+        label: done == 0
+            ? AppStrings.playToday
+            : AppStrings.continueToday(done, questionsPerDay),
+      ),
+      children: [
+        _DayPill(label: dayLabel(DateTime.now(), puzzleNumber(today))),
+        const SizedBox(height: 12),
+        Text(
+          AppStrings.todayTitle,
+          style: textTheme.headlineSmall?.copyWith(
+            color: Colors.white,
+            fontWeight: FontWeight.w800,
+          ),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          AppStrings.todayHint,
+          style: textTheme.bodyMedium?.copyWith(
+            color: Colors.white.withValues(alpha: .85),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+/// Today's set once it is done: a slim strip with the score and share.
+class _TodayDoneStrip extends StatelessWidget {
+  const _TodayDoneStrip({required this.results, required this.onShare});
+
+  final List<QuestionResult> results;
+  final VoidCallback? onShare;
+
+  @override
+  Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
+    return Container(
+      padding: const EdgeInsets.fromLTRB(18, 14, 14, 14),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(24),
+        gradient: const LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [Palette.heroTop, Palette.heroBottom],
+        ),
+      ),
+      child: Row(
+        children: [
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  AppStrings.todayDone,
+                  style: textTheme.labelLarge?.copyWith(color: Colors.white),
+                ),
+                Text(
+                  AppStrings.scoreOutOf(totalPoints(results), maxDailyPoints),
+                  style: textTheme.headlineSmall?.copyWith(
+                    color: Palette.sun,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+                const SizedBox(height: 6),
+                _ProgressPips(results: results),
+              ],
+            ),
+          ),
+          const SizedBox(width: 8),
+          FilledButton.icon(
+            style: FilledButton.styleFrom(
+              minimumSize: const Size(0, 48),
+              padding: const EdgeInsets.symmetric(horizontal: 14),
+              backgroundColor: Colors.white.withValues(alpha: .18),
+              foregroundColor: Colors.white,
+              textStyle: textTheme.titleSmall?.copyWith(
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            onPressed: onShare,
+            icon: const Icon(Icons.share_rounded, size: 20),
+            label: const Text(AppStrings.share),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// The date and puzzle number on today's card.
+class _DayPill extends StatelessWidget {
+  const _DayPill({required this.label});
 
   final String label;
 
   @override
   Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
       decoration: BoxDecoration(
-        color: scheme.tertiaryContainer,
+        color: Colors.white.withValues(alpha: .16),
         borderRadius: BorderRadius.circular(99),
       ),
       child: Text(
         label,
-        style: Theme.of(context).textTheme.labelLarge?.copyWith(
-          color: scheme.onTertiaryContainer,
-          fontWeight: FontWeight.w700,
+        style: Theme.of(context).textTheme.labelLarge
+            ?.copyWith(color: Colors.white, fontWeight: FontWeight.w700),
+      ),
+    );
+  }
+}
+
+/// One pip per question of the day, coloured by result like the share
+/// squares. The button's "2 / 5" says the same to screen readers.
+class _ProgressPips extends StatelessWidget {
+  const _ProgressPips({required this.results});
+
+  final List<QuestionResult> results;
+
+  @override
+  Widget build(BuildContext context) {
+    return ExcludeSemantics(
+      child: FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: Alignment.centerLeft,
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            for (var i = 0; i < questionsPerDay; i++)
+              Container(
+                width: 22,
+                height: 8,
+                margin: const EdgeInsets.only(right: 5),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(4),
+                  color: i < results.length
+                      ? GameColors.dark.forTier(
+                          ResultTier.of(
+                            points: results[i].points,
+                            hit: results[i].hit,
+                          ),
+                        )
+                      : Colors.white.withValues(alpha: .22),
+                ),
+              ),
+          ],
         ),
       ),
     );
   }
 }
 
-/// The single main action for today's set.
-class _TodayAction extends StatelessWidget {
-  const _TodayAction({
-    required this.stats,
-    required this.today,
-    required this.loading,
-    required this.onPlay,
-    required this.onShowSummary,
-  });
+/// Free play as the main card, once today's set is done.
+class _FreePlayHero extends StatelessWidget {
+  const _FreePlayHero({required this.mascotSize, required this.onPlay});
 
-  final StatsStore stats;
-  final int today;
-  final bool loading;
-  final VoidCallback onPlay;
-  final VoidCallback onShowSummary;
+  final double mascotSize;
+  final VoidCallback? onPlay;
 
   @override
   Widget build(BuildContext context) {
-    if (stats.isDayComplete(today)) {
-      final total = totalPoints(stats.dailyResults(today));
-      final good = Theme.of(context).extension<GameColors>()!.good;
-      return Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(Icons.check_circle_rounded, color: good),
-              const SizedBox(width: 8),
-              Flexible(
-                child: Text(
-                  '${AppStrings.todayDone}: $total / $maxDailyPoints',
-                  style: Theme.of(context).textTheme.titleMedium,
-                ),
+    final textTheme = Theme.of(context).textTheme;
+    return _MascotCard(
+      colors: const [Palette.roundStart, Palette.roundEnd],
+      mascotSize: mascotSize,
+      button: _SunButton(
+        onPressed: onPlay,
+        icon: Icons.play_arrow_rounded,
+        label: AppStrings.newRound,
+      ),
+      children: [
+        Text(
+          AppStrings.freePlay,
+          style: textTheme.headlineSmall?.copyWith(
+            color: Colors.white,
+            fontWeight: FontWeight.w800,
+          ),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          AppStrings.freePlayHint,
+          style: textTheme.bodyMedium?.copyWith(color: Colors.white),
+        ),
+      ],
+    );
+  }
+}
+
+/// Free play: the whole card starts a round.
+class _FreePlayCard extends StatelessWidget {
+  const _FreePlayCard({required this.onTap});
+
+  final VoidCallback? onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
+    final radius = BorderRadius.circular(24);
+    final circle = Colors.white.withValues(alpha: .2);
+    return AnimatedOpacity(
+      opacity: onTap == null ? .6 : 1,
+      duration: const Duration(milliseconds: 150),
+      child: Material(
+        type: MaterialType.transparency,
+        child: Ink(
+          decoration: BoxDecoration(
+            borderRadius: radius,
+            gradient: const LinearGradient(
+              colors: [Palette.roundStart, Palette.roundEnd],
+            ),
+          ),
+          child: InkWell(
+            borderRadius: radius,
+            onTap: onTap,
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(14, 14, 16, 14),
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    radius: 24,
+                    backgroundColor: circle,
+                    foregroundColor: Colors.white,
+                    child: const Icon(Icons.all_inclusive_rounded, size: 26),
+                  ),
+                  const SizedBox(width: 14),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          AppStrings.freePlay,
+                          style: textTheme.titleLarge?.copyWith(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                        Text(
+                          AppStrings.freePlayHint,
+                          style: textTheme.bodyMedium?.copyWith(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  const Icon(
+                    Icons.arrow_forward_rounded,
+                    color: Colors.white,
+                    size: 28,
+                  ),
+                ],
               ),
-            ],
+            ),
           ),
-          const SizedBox(height: 12),
-          FilledButton.icon(
-            onPressed: loading ? null : onShowSummary,
-            icon: const Icon(Icons.share_outlined),
-            label: const Text(AppStrings.share),
-          ),
-        ],
-      );
-    }
-    final done = stats.dailyResults(today).length;
-    return FilledButton.icon(
-      onPressed: loading ? null : onPlay,
-      icon: const Icon(Icons.play_arrow_rounded, size: 28),
-      label: Text(
-        done == 0
-            ? AppStrings.playToday
-            : AppStrings.continueToday(done, questionsPerDay),
+        ),
       ),
     );
   }
@@ -358,7 +682,7 @@ class _StatsCard extends StatelessWidget {
         : formatPercent(stats.hits / stats.answered);
     return Card(
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(12, 16, 12, 14),
+        padding: const EdgeInsets.fromLTRB(12, 14, 12, 12),
         child: Column(
           children: [
             Row(

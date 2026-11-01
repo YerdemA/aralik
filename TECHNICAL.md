@@ -229,16 +229,17 @@ validate_questions.py (banka + takvim)        publish_content.py → docs/conten
 - **Kural:** Sayılar yalnızca ham Wikidata dökümlerinden gelir. Bir dil modeli en fazla soru metnini akıcılaştırmak için kullanılabilir. **Sayılar asla dil modelinden alınmaz.**
 
 ## 8. Arayüz
-- **Tema:** Material 3 şeması `DynamicSchemeVariant.fidelity` ile lacivert tohum renginden (`Palette.navy`, aynı zamanda uygulama ikonunun zemini) üretilir, tertiary renk ikondaki filozofun togasıyla aynı kiremit tonuna ayarlanır. Açık ve koyu tema sisteme göre seçilir.
+- **Tema:** Material 3 şeması `DynamicSchemeVariant.fidelity` ile çivit tohum renginden (`Palette.indigo`) üretilir, tertiary renk filozofun togasıyla aynı kiremit tonuna ayarlanır. Zemin açık temada krem, koyu temada gece mavisidir. Açık ve koyu tema sisteme göre seçilir. Uygulama ikonu, açılış ekranı ve paylaşım kartı lacivert kalır.
+- **Ana ekran:** Üstte küçük "Kabaca" yazısı ve slogan, altında boş alanı dolduran çivit "bugün" kartı (tarih ve gün numarası, ilerleme çizgileri, düğmenin arkasından bakan maskot, güneş sarısı ana düğme). Onun altında serbest modu başlatan mercan "Bir tur at" kartı, en altta seri, son skor ve kalibrasyon. Maskot, kartın içindeki boşluk ayrılarak yerleştirilir, küçük ekranda da metnin üstüne binmez. Günün seti bitince "bugün" kartı skor, ilerleme çizgileri ve paylaş düğmesinden oluşan ince bir şeride döner; maskotlu büyük kart "Bir tur at" olur.
 - **`GameColors`:** sonuç kademesi renkleri (🟩🟨⬛ ile eşleşir) ve seri rengi için bir ThemeExtension.
 - **Kategori stili:** Her kategorinin bir Material ikonu ve açık/koyu tema için birer rengi vardır.
 - **Çizimler:**
-  - `widgets/philosopher.dart`: filozof maskotu. Uygulama ikonu (`tools/icon/render_icon_test.dart`) ve paylaşım kartı aynı kodu kullanır, bu yüzden ikisi hep aynı karakteri çizer.
-  - `widgets/range_mark.dart`: logonun altındaki aralık işareti.
+  - `widgets/philosopher.dart`: filozof maskotu. Uygulama ikonu (`tools/icon/render_icon_test.dart`), paylaşım kartı ve `widgets/mascot.dart` aynı kodu kullanır, bu yüzden hepsi aynı karakteri çizer.
+  - `widgets/mascot.dart`: maskotun ekrandaki hâli (ana ekran ve açılış), balonu bir kez sallanır.
   - `widgets/interval_bar.dart`: sonuçtaki aralık çubuğu.
   - `features/stats/calibration_chart.dart`: kalibrasyon grafiği.
   - Hepsi `CustomPaint` ile çizilir.
-- **Animasyonlar:** Yalnızca implicit animasyonlar kullanılır (`TweenAnimationBuilder`, `AnimatedContainer`, `AnimatedSwitcher`). Rozet zıplaması, sayarak artan puan, sırayla beliren kareler ve logonun açılan aralık işareti bunlarla yapılır. AnimationController ya da paket yok.
+- **Animasyonlar:** Yalnızca implicit animasyonlar kullanılır (`TweenAnimationBuilder`, `AnimatedContainer`, `AnimatedSwitcher`). Rozet zıplaması, sayarak artan puan, sırayla beliren kareler ve maskotun sallanan balonu bunlarla yapılır. AnimationController ya da paket yok.
 - **Açılış:**
   - Android'in açılış ekranı ikonun laciverdinde (`#2B3B6C`), ortasında filozof var.
     - Android 12 ve üstü: `values-v31` ve `values-night-v31` içindeki `windowSplashScreen*` ayarları.
@@ -247,14 +248,14 @@ validate_questions.py (banka + takvim)        publish_content.py → docs/conten
   - Flutter penceresinin zemini (`NormalTheme`) de aynı lacivert. Böylece açılış ekranı kalkarken araya beyaz ya da siyah bir kare girmez.
   - `features/intro/intro_screen.dart` aynı karede devam eder. Filozof piksel piksel aynı yerde kalır (ölçüldü):
     - balon hafifçe sallanır
-    - altında ana ekran logosuyla aynı stilde (yumuşak açık mavi, kalın) "Kabaca" yazısı ve açılan aralık işareti belirir
+    - altında yumuşak açık mavi, kalın "Kabaca" yazısı belirir
     - ana ekrana kısa bir geçiş olur
   - Süre: 0,65 sn animasyon + 0,25 sn geçiş. Dokununca atlanır, yalnızca soğuk açılışta oynar.
   - Toplam açılış süresinin asıl belirleyicisi Flutter motorunun başlangıcıdır (Android ekranı bu sürede görünür). Bu, GPU'suz emülatörde ~3 sn, gerçek telefonlarda tipik olarak 1 sn'nin altındadır.
   - Tek bir `TweenAnimationBuilder` kullanılır, AnimationController yok.
 - **Paylaşım kartı (`features/result/share_card.dart`):**
   - 1080 × 1920 (9:16) PNG, doğrudan canvas'a çizilir. Hikâye ve durum boyutudur.
-  - İçerik: lacivert zemin ve hafif "?" ile "≈" süsleri, "Kabaca" yazısı, aralık işareti, gün numarası (kapalı testte "Deneme"), skor kartının üstünden bakan filozof, büyük skor, renkli kareler ve her sorunun puanı, kalibrasyon (en az 10 cevaptan sonra), slogan.
+  - İçerik: lacivert zemin ve hafif "?" ile "≈" süsleri, "Kabaca" yazısı, gün numarası (kapalı testte "Deneme"), skor kartının üstünden bakan filozof, büyük skor, renkli kareler ve her sorunun puanı, kalibrasyon (en az 10 cevaptan sonra), slogan.
   - Gün özetindeki "Paylaş" bir alt sayfa açar. Kartın önizlemesi gösterilir; "Görseli paylaş" görseli ve Wordle metnini birlikte, "Metni paylaş" yalnızca metni gönderir.
   - Görsel `XFile.fromData` ile bellekten verilir; `share_plus` onu geçici bir dosyaya kendisi yazar. Ek paket gerekmez.
 - **Titreşim:** Tuşlarda `selectionClick`, kilitlemede `mediumImpact`. Ses yok.

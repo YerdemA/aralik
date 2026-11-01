@@ -30,6 +30,11 @@ Her şey `play-store/` klasöründe hazır (git'e girmez):
 - Video (isteğe bağlı): `play-store/video/video-taslagi.md`
 Upload anahtarını (`aralik-upload.jks`) ve `android/key.properties` dosyasını yedeklemeyi unutma.
 
+## 5b. Yeni arayüzü yükle
+Ana ekran ve renkler değişti (2026-11-01), logo kalktı, serbest modun adı "Bir tur at" oldu. `.aab`, `.apk`, ekran görüntüleri ve öne çıkan görsel yenilendi.
+- Hepsini Play Console'a yükle (bkz. 5. madde).
+- `play-store/video/` taslakları hâlâ eski aralık işaretinden söz ediyor.
+
 ## 6. Takvimi 15 Aralık 2026'dan önce uzat
 Takvim 45 gün (1 Kasım – 15 Aralık). Uzatılmazsa 16 Aralık'ta günlük sorular başa sarar.
 Yeni kolay sorular gerekiyor (SOURCES.md 3. adım ve sonrası), sonra `build_schedule.py` + `publish_content.py` + push. Uygulama güncellemesi gerekmez.

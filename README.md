@@ -41,7 +41,7 @@ Kalibrasyon %80
 | Mod | Açıklama |
 |---|---|
 | **Günün seti** | Her gün 5 soru. Herkes aynı gün aynı soruları görür. Yarıda bırakılırsa kaldığı yerden devam eder. Tamamlanan ardışık günler **seriyi** oluşturur. |
-| **Serbest mod** | Sınırsız, 5'erli turlar. Daha önce cevapladığın hiçbir soru tekrar gelmez. Sorular geçmiş günlerin bankasından ve cihazda üretilen kuş uçuşu mesafe sorularından gelir. |
+| **Bir tur at** (serbest mod) | Sınırsız, 5'erli turlar. Daha önce cevapladığın hiçbir soru tekrar gelmez. Sorular geçmiş günlerin bankasından ve cihazda üretilen kuş uçuşu mesafe sorularından gelir. |
 | **İstatistikler** | Oynanan gün, seri, en uzun seri, ortalama ve en iyi gün. Ayrıca zaman içindeki kalibrasyon grafiği, ıskaların yönü (tahminin fazla mı yüksek, fazla mı düşük) ve kategori bazında isabet. |
 
 ## Veri doğruluğu

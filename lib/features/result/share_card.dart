@@ -89,7 +89,7 @@ void paintShareCard(Canvas c, ShareCardData data) {
     );
   }
 
-  // Title, the range mark and the day.
+  // Title and the day.
   _text(
     c,
     AppStrings.appName,
@@ -100,12 +100,11 @@ void paintShareCard(Canvas c, ShareCardData data) {
     letterSpacing: -4,
     centred: true,
   );
-  _rangeMark(c, const Offset(w / 2, 345));
   final number = puzzleNumber(data.dayIndex);
   _pill(
     c,
     number > 0 ? '#$number' : AppStrings.shareCardPreview,
-    const Offset(w / 2, 430),
+    const Offset(w / 2, 385),
   );
 
   // The mascot, its toga running behind the score card.
@@ -274,33 +273,6 @@ void _score(Canvas c, int total, Offset topCentre) {
   final p = builder.build()
     ..layout(const ui.ParagraphConstraints(width: width));
   c.drawParagraph(p, Offset(topCentre.dx - width / 2, topCentre.dy));
-}
-
-/// The home screen's range mark: a track, a band, two handles.
-void _rangeMark(Canvas c, Offset centre) {
-  const half = 170.0, t = 16.0;
-  final track = RRect.fromLTRBR(
-    centre.dx - half,
-    centre.dy - t / 2,
-    centre.dx + half,
-    centre.dy + t / 2,
-    const Radius.circular(t / 2),
-  );
-  c.drawRRect(track, Paint()..color = Colors.white.withValues(alpha: 0.22));
-  c.drawRRect(
-    RRect.fromLTRBR(
-      centre.dx - 95,
-      centre.dy - t / 2,
-      centre.dx + 95,
-      centre.dy + t / 2,
-      const Radius.circular(t / 2),
-    ),
-    Paint()..color = Palette.terracotta,
-  );
-  for (final x in [centre.dx - 95, centre.dx + 95]) {
-    c.drawCircle(Offset(x, centre.dy), 24, Paint()..color = Colors.white);
-    c.drawCircle(Offset(x, centre.dy), 10, Paint()..color = _navyText);
-  }
 }
 
 /// "#42" in a terracotta pill centred on [centre].
