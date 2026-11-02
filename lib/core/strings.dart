@@ -117,6 +117,9 @@ abstract final class AppStrings {
   static const categoryEveryday = 'Gündelik';
   static const categoryAnimals = 'Hayvanlar';
   static const categoryCompanies = 'Şirketler';
+  static const categoryOttoman = 'Osmanlı';
+  static const categoryArchitecture = 'Mimari';
+  static const categoryArt = 'Sanat';
   static const categoryOther = 'Diğer';
 
   // Settings
@@ -182,5 +185,8 @@ String categoryName(QuestionCategory c) => switch (c) {
   QuestionCategory.everyday => AppStrings.categoryEveryday,
   QuestionCategory.animals => AppStrings.categoryAnimals,
   QuestionCategory.companies => AppStrings.categoryCompanies,
+  QuestionCategory.ottoman => AppStrings.categoryOttoman,
+  QuestionCategory.architecture => AppStrings.categoryArchitecture,
+  QuestionCategory.art => AppStrings.categoryArt,
   QuestionCategory.other => AppStrings.categoryOther,
 };

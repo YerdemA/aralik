@@ -30,10 +30,10 @@ Her şey `play-store/` klasöründe hazır (git'e girmez):
 - Video (isteğe bağlı): `play-store/video/video-taslagi.md`
 Upload anahtarını (`aralik-upload.jks`) ve `android/key.properties` dosyasını yedeklemeyi unutma.
 
-## 5b. Yeni arayüzü yükle
-Ana ekran ve renkler değişti (2026-11-01), logo kalktı, serbest modun adı "Bir tur at" oldu. `.aab`, `.apk`, ekran görüntüleri ve öne çıkan görsel yenilendi.
-- Hepsini Play Console'a yükle (bkz. 5. madde).
-- `play-store/video/` taslakları hâlâ eski aralık işaretinden söz ediyor.
+## 5b. Yeni sürümü yükle (1.0.1+2)
+Ana ekran ve renkler değişti, serbest modun adı "Bir tur at" oldu, yeni kategoriler geldi (Osmanlı, Mimari, Sanat). Sorular yayında; eski sürümde yeni kategoriler "Diğer" görünür.
+- Yükle: `play-store/release/kabaca-1.0.1+2.aab`, mapping ve symbols dosyaları; sürüm notu `play-store/listing/play-console-rehberi.md` içinde.
+- Mağaza girişini güncelle: `magaza-metinleri.md` uzun açıklaması, `play-store/graphics/`, `play-store/screenshots/play/`.
 
 ## 6. Takvimi 15 Aralık 2026'dan önce uzat
 Takvim 45 gün (1 Kasım – 15 Aralık). Uzatılmazsa 16 Aralık'ta günlük sorular başa sarar.

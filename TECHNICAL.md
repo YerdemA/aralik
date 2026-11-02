@@ -97,14 +97,14 @@ lib/
 }
 ```
 - `kind`: `magnitude` (pozitif büyüklük) veya `year` (yıl, MÖ için negatif).
-- Kategoriler: `coğrafya`, `tarih`, `türkiye`, `bilim`, `spor`, `gündelik`, `hayvanlar`, `şirketler`.
+- Kategoriler: `coğrafya`, `tarih`, `türkiye`, `bilim`, `spor`, `gündelik`, `hayvanlar`, `şirketler`, `osmanlı`, `mimari`, `sanat`.
 - Opsiyonel alanlar:
   - `difficulty`: 1 kolay, 2 orta, 3 zor (bkz. 7. bölüm).
   - `dataset`: sorunun geldiği veri seti. `tools/sources.json` içinde kullanımdaki bir kaynağa bağlı olmalıdır, böylece her sorunun atfı uygulamada görünür.
   - `anchor`: `{text, value, unit, source}`, oyuncuya ölçek veren kaynaklı bir çapa değer. Model ve doğrulama hazır, henüz doldurulmuyor ve gösterilmiyor.
 - `Question.fromJson` alan tiplerini, bilinen `kind` değerini, büyüklüğün pozitif ve yılın tam sayı olduğunu denetler.
 - **Bilinmeyen kategori:** Uygulama tanımadığı bir kategoriyi reddetmez, `diğer` (`QuestionCategory.other`) altında gösterir. Böylece içerik güncellemesiyle yeni bir kategori eklendiğinde eski sürümdeki oyuncular yeni soruları kaybetmez. `diğer` bankaya asla yazılmaz, doğrulayıcı bunu reddeder. Bilinmeyen bir `kind` ise kurtarılamaz, çünkü puanlama türe bağlıdır.
-- Mevcut banka 456 sorudan oluşur: 254 büyüklük, 202 yıl. Kategorilere göre coğrafya 150, tarih 96, spor 51, türkiye 49, şirketler 37, bilim 36, hayvanlar 23, gündelik 14.
+- Mevcut banka 1001 sorudan oluşur: 282 büyüklük, 719 yıl. Kategorilere göre tarih 269, coğrafya 150, osmanlı 132, türkiye 120, mimari 91, sanat 55, spor 51, bilim 49, şirketler 41, hayvanlar 29, gündelik 14.
 
 `assets/questions/schedule.json`: günlük takvim, `{"days": [[5 id], ...]}`. Dizideki sıra gün indeksidir.
 

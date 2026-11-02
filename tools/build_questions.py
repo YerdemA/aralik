@@ -82,6 +82,9 @@ CATEGORY_EASE = {
     "bilim": -0.2,
     "hayvanlar": 0.2,
     "şirketler": 0.0,
+    "osmanlı": 0.2,
+    "mimari": 0.0,
+    "sanat": 0.0,
 }
 KIND_EASE = {"year": 0.0, "magnitude": -0.1}
 UNIT_EASE = {"kişi": -0.6, "km²": -0.6}

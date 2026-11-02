@@ -15,4 +15,9 @@ aynı liste yer alır.
 - Lisans: [CC0 1.0](https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews)
 - Adres: https://wikimedia.org/api/rest_v1/
 
-*Son güncelleme: 2026-10-26*
+## Vikipedi
+- Vikipedi gönüllüleri (tarih, mimari, sanat ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0
+- Lisans: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+- Adres: https://tr.wikipedia.org/
+
+*Son güncelleme: 2026-11-02*

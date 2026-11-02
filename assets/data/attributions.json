@@ -12,5 +12,12 @@
   "license": "CC0 1.0",
   "license_url": "https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews",
   "url": "https://wikimedia.org/api/rest_v1/"
+ },
+ {
+  "name": "Vikipedi",
+  "attribution": "Vikipedi gönüllüleri (tarih, mimari, sanat ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "url": "https://tr.wikipedia.org/"
  }
 ]

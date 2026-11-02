@@ -83,7 +83,7 @@ test/
 }
 ```
 - `kind`: `magnitude` (pozitif büyüklük: nüfus, km, m, adet) veya `year` (tarih/yıl).
-- Kategoriler: `coğrafya`, `tarih`, `türkiye`, `bilim`, `spor`, `gündelik`, `hayvanlar`, `şirketler`.
+- Kategoriler: `coğrafya`, `tarih`, `türkiye`, `bilim`, `spor`, `gündelik`, `hayvanlar`, `şirketler`, `osmanlı`, `mimari`, `sanat`.
   Uygulama bilmediği bir kategoriyi (içerik güncellemesiyle gelen yeni bir kategori) `diğer` altında gösterir. `diğer` bankaya asla yazılmaz.
 - Opsiyonel alanlar: `difficulty` (1 kolay, 2 orta, 3 zor; `build_questions.py` okunma sayısı, kategori ve türden tahmin eder, `tools/difficulty_overrides.json` elle düzeltir), `dataset` (veri seti adı; `tools/sources.json` içinde kullanımdaki bir kaynağa bağlı olmalı), `anchor` (`{text, value, unit, source}`, kaynaklı çapa değer; henüz doldurulmuyor).
 - `questions.json` yalnızca sona eklenir: id'ler asla silinmez, yer değiştirmez. Hangi sorunun hangi gün geleceğine takvim karar verir.
@@ -139,6 +139,7 @@ test/
 - Analiz: `flutter analyze`
 - Wikidata ham verisini çek: `python tools/fetch_wikidata.py [veri_seti ...]`
 - Soru bankası üret: `python tools/build_questions.py [--fresh] [--dry-run] [--report]`
+- Elle seçilmiş soruları Vikipedi'den doğrulayıp ekle: `python tools/import_curated.py [--dry-run] [--report DOSYA]` (liste: `tools/curated/selection.txt`; `build_questions.py --fresh` bu soruları siler)
 - Günlük takvimi üret: `python tools/build_schedule.py [--days N] [--fresh] [--dry-run]`
 - Atıf listesini üret: `python tools/build_attributions.py`
 - Yer verisini üret: `python tools/build_places.py`

@@ -56,7 +56,7 @@ Yeni sorular uygulama güncellemesi gerekmeden GitHub Pages'ten indirilir. Gizli
 ## Gelinen nokta (2026-10-26)
 **Tamamlananlar**
 - Proje iskeleti, Türkçe sayı biçimi, tema (açık/koyu, sisteme göre)
-- Wikidata veri hattı ve 456 soruluk banka: coğrafya, tarih, spor, Türkiye, gündelik, bilim (elementler, Nobel), şirketler, hayvanlar
+- Wikidata veri hattı ve 1001 soruluk banka: coğrafya, tarih, Osmanlı, mimari, sanat, spor, Türkiye, gündelik, bilim (elementler, Nobel), şirketler, hayvanlar
 - Zorluk tahmini (kolay/orta/zor) ve dengeli günlük takvim: her gün 2 kolay + 2 orta + 1 zor, en az 3 kategori (45 gün)
 - Atıf altyapısı: tek kaynak listesi (`tools/sources.json`), Ayarlar → Veri kaynakları ve lisanslar ekranı, `docs/attributions.md`
 - Soru ekranı: kendi sayı klavyesi, logaritmik/yıl kaydırıcısı, kilitleme

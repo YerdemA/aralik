@@ -1,0 +1,616 @@
+# Elle seçilmiş sorular (kaynak adayları: soru-adaylari/). tools/import_curated.py okur.
+# Bölüm: "# veri_seti|kategori". Satır: zorluk|cevap|birim|dil:Vikipedi maddesi|soru metni
+# Birim boşsa soru "year" türündedir. Cevap maddede geçmiyorsa soru bankaya girmez.
+
+# history_to_1000|tarih
+2|395||en:Theodosius I|Roma İmparatorluğu Doğu ve Batı olarak hangi yıl kesin biçimde ikiye ayrılmıştır?
+1|476||en:Fall of the Western Roman Empire|Batı Roma İmparatorluğu hangi yıl yıkılmıştır?
+1|622||en:Hijrah|Hicret hangi yıl gerçekleşmiştir?
+2|636||en:Battle of the Yarmuk|Yermük Savaşı hangi yıl yapılmıştır?
+3|642||en:Battle of Nihawand|Nihavend Savaşı hangi yıl yapılmıştır?
+3|674||en:First Arab siege of Constantinople|Emeviler İstanbul'u ilk kez hangi yıl kuşatmaya başlamıştır?
+2|800||en:Charlemagne|Şarlman hangi yıl imparator olarak taç giymiştir?
+3|793||en:Lindisfarne|Vikingler Lindisfarne Manastırı'na hangi yıl saldırmıştır?
+2|843||en:Treaty of Verdun|Verdun Antlaşması hangi yıl imzalanmıştır?
+3|987||en:Hugh Capet|Hugh Capet hangi yıl Fransa kralı seçilmiştir?
+3|627||en:Battle of Nineveh (627)|Sasaniler ile Doğu Roma arasındaki Ninova Savaşı hangi yıl yapılmıştır?
+2|750||en:Abbasid Revolution|Abbasiler Emevi hanedanına hangi yıl son vermiştir?
+3|929||en:Caliphate of Córdoba|III. Abdurrahman hangi yıl halifeliğini ilan etmiştir?
+3|878||en:Battle of Edington|Büyük Alfred Vikingleri Edington'da hangi yıl yenmiştir?
+3|955||en:Battle of Lechfeld|Lechfeld Savaşı hangi yıl yapılmıştır?
+2|988||en:Christianization of Kievan Rus'|Kiev Rus hangi yıl Hristiyanlığı kabul etmiştir?
+3|726||en:Byzantine Iconoclasm|Bizans'ta İkonoklazm politikası hangi yıl başlamıştır?
+1|325||en:First Council of Nicaea|Birinci İznik Konsili hangi yıl toplanmıştır?
+2|380||en:Edict of Thessalonica|Selanik Fermanı hangi yıl yayımlanmıştır?
+2|313||en:Edict of Milan|Milano Fermanı hangi yıl ilan edilmiştir?
+2|628||en:Treaty of Hudaybiyyah|Hudeybiye Antlaşması hangi yıl imzalanmıştır?
+3|655||en:Battle of the Masts|Zatü's-Sevari Deniz Savaşı hangi yıl yapılmıştır?
+2|657||en:Battle of Siffin|Sıffin Savaşı hangi yıl yapılmıştır?
+2|661||en:Muawiya I|Muaviye hangi yıl halife olmuştur?
+2|711||en:Battle of Guadalete|Tarık bin Ziyad'ın kazandığı Guadalete Savaşı hangi yıl yapılmıştır?
+1|732||en:Battle of Tours|Puvatya (Tours) Savaşı hangi yıl yapılmıştır?
+1|751||en:Battle of Talas|Talas Savaşı hangi yıl yapılmıştır?
+3|911||en:Duchy of Normandy|Normandiya Dükalığı hangi yıl kurulmuştur?
+2|962||en:Otto I|I. Otto hangi yıl Kutsal Roma imparatoru olarak taç giymiştir?
+3|966||en:Christianization of Poland|Polonya hükümdarı I. Mieszko hangi yıl Hristiyanlığı kabul etmiştir?
+2|64||en:Great Fire of Rome|Büyük Roma Yangını hangi yıl çıkmıştır?
+2|117||en:Roman Empire|Roma İmparatorluğu en geniş sınırlarına hangi yıl ulaşmıştır?
+3|354||en:Augustine of Hippo|Aziz Augustinus hangi yıl doğmuştur?
+1|632||en:Muhammad|Hz. Muhammed hangi yıl vefat etmiştir?
+2|681||en:First Bulgarian Empire|Tuna Bulgar Devleti hangi yıl kurulmuştur?
+3|645||en:Taika Reform|Japonya'da Taika Reformları hangi yıl başlamıştır?
+3|668||en:Unified Silla|Silla Krallığı Kore'yi hangi yıl birleştirmiştir?
+2|532||en:Nika riots|Bizans'taki Nika Ayaklanması hangi yıl çıkmıştır?
+3|945||en:Buyid dynasty|Büveyhoğulları Bağdat'ı hangi yıl ele geçirmiştir?
+2|960||en:Song dynasty|Çin'de Song Hanedanı hangi yıl kurulmuştur?
+3|937||en:Battle of Brunanburh|Brunanburh Savaşı hangi yıl yapılmıştır?
+3|867||en:Basil I|Makedon Hanedanı'nın kurucusu I. Basileios hangi yıl tahta çıkmıştır?
+3|985||en:Erik the Red|Kızıl Erik Grönland'daki ilk yerleşimi hangi yıl kurmuştur?
+3|529||en:Monte Cassino|Aziz Benedict Monte Cassino Manastırı'nı hangi yıl kurmuştur?
+3|909||en:Fatimid Caliphate|Fatımi Devleti hangi yıl kurulmuştur?
+3|774||en:Kingdom of the Lombards|Lombard Krallığı Franklar tarafından hangi yıl yıkılmıştır?
+3|755||en:An Lushan rebellion|Çin'de An Lushan İsyanı hangi yıl başlamıştır?
+3|836||en:Samarra|Abbasiler başkenti hangi yıl Samarra'ya taşımıştır?
+
+# history_1000_1200|tarih
+2|1000||en:Stephen I of Hungary|Macaristan Krallığı'nın kuruluşu kabul edilen taç giyme hangi yıl olmuştur?
+1|1054||en:East–West Schism|Katolik ve Ortodoks kiliselerinin ayrıldığı Büyük Bölünme hangi yıl olmuştur?
+1|1066||en:Battle of Hastings|Hastings Muharebesi hangi yıl yapılmıştır?
+1|1071||en:Battle of Manzikert|Malazgirt Meydan Muharebesi hangi yıl yapılmıştır?
+1|1096||en:First Crusade|Birinci Haçlı Seferi hangi yıl başlamıştır?
+2|1099||en:Siege of Jerusalem (1099)|Haçlılar Kudüs'ü hangi yıl ele geçirmiştir?
+1|1037||en:Avicenna|İbn Sina hangi yıl vefat etmiştir?
+3|1077||en:Road to Canossa|IV. Henry'nin papadan af dilediği Canossa Olayı hangi yıl olmuştur?
+3|1086||en:Domesday Book|Domesday Book hangi yıl tamamlanmıştır?
+2|1072||en:Alp Arslan|Sultan Alparslan hangi yıl vefat etmiştir?
+2|1092||en:Nizam al-Mulk|Siyasetname'nin yazarı Nizamülmülk hangi yıl öldürülmüştür?
+2|1092||en:Malik-Shah I|Melikşah hangi yıl vefat etmiştir?
+2|1069||en:Kutadgu Bilig|Kutadgu Bilig hangi yıl tamamlanmıştır?
+3|1057||en:Macbeth, King of Scotland|İskoçya Kralı Macbeth hangi yıl öldürülmüştür?
+2|1088||en:University of Bologna|Bologna Üniversitesi'nin geleneksel kuruluş yılı hangisidir?
+3|1091||en:Battle of Levounion|Bizans'ın Peçenekleri yendiği Levunion Muharebesi hangi yıl yapılmıştır?
+2|1086||en:Suleiman ibn Qutalmish|Kutalmışoğlu Süleyman Şah hangi yıl vefat etmiştir?
+3|1079||en:Jalali calendar|Ömer Hayyam'ın da hazırladığı Celali takvimi hangi yıl kabul edilmiştir?
+3|1094||en:El Cid|El Cid Valencia'yı hangi yıl ele geçirmiştir?
+3|1035||en:Cnut|Büyük Knud hangi yıl vefat etmiştir?
+2|1095||en:Council of Clermont|Haçlı çağrısının yapıldığı Clermont Konsili hangi yıl toplanmıştır?
+3|1018||en:Basil II|II. Basileios Bulgar İmparatorluğu'na hangi yıl son vermiştir?
+3|1085||en:Alfonso VI of León and Castile|VI. Alfonso Toledo'yu hangi yıl almıştır?
+3|1081||en:Alexios I Komnenos|I. Aleksios Komnenos hangi yıl tahta çıkmıştır?
+3|1120||en:White Ship|Beyaz Gemi faciası hangi yıl yaşanmıştır?
+2|1147||en:Second Crusade|İkinci Haçlı Seferi hangi yıl başlamıştır?
+2|1141||en:Battle of Qatwan|Katvan Savaşı hangi yıl yapılmıştır?
+2|1157||en:Ahmad Sanjar|Sultan Sencer hangi yıl vefat etmiştir?
+3|1144||en:Siege of Edessa (1144)|İmadeddin Zengi Urfa'yı hangi yıl almıştır?
+1|1187||en:Battle of Hattin|Hıttin Savaşı hangi yıl yapılmıştır?
+2|1189||en:Third Crusade|Üçüncü Haçlı Seferi hangi yıl başlamıştır?
+2|1190||en:Frederick Barbarossa|Barbarossa Göksu Nehri'nde hangi yıl boğulmuştur?
+3|1170||en:Thomas Becket|Thomas Becket hangi yıl öldürülmüştür?
+3|1143||en:Treaty of Zamora|Portekiz'in bağımsızlığını tanıyan Zamora Antlaşması hangi yıl imzalanmıştır?
+2|1198||en:Averroes|İbn Rüşd hangi yıl vefat etmiştir?
+2|1111||en:Al-Ghazali|İmam Gazali hangi yıl vefat etmiştir?
+3|1130||en:Roger II of Sicily|II. Roger hangi yıl Sicilya kralı olarak taç giymiştir?
+3|1154||en:Henry II of England|II. Henry hangi yıl İngiltere kralı olmuştur?
+3|1122||en:Concordat of Worms|Worms Konkordatosu hangi yıl imzalanmıştır?
+3|1184||en:Tamar of Georgia|Gürcistan Kraliçesi Tamar hangi yıl tek başına tahta geçmiştir?
+2|1107||en:Kilij Arslan I|I. Kılıçarslan hangi yıl vefat etmiştir?
+3|1192||en:Treaty of Jaffa (1192)|Selahaddin Eyyubi ile Aslan Yürekli Richard'ın Yafa Antlaşması hangi yıl imzalanmıştır?
+3|1195||en:Battle of Alarcos|Alarcos Muharebesi hangi yıl yapılmıştır?
+3|1127||en:Jingkang incident|Çin'deki Jingkang Olayı hangi yıl yaşanmıştır?
+
+# history_1200_1400|tarih
+1|1204||en:Fourth Crusade|Dördüncü Haçlı Seferi'nde İstanbul hangi yıl yağmalanmıştır?
+1|1215||en:Magna Carta|Magna Carta hangi yıl imzalanmıştır?
+1|1227||en:Genghis Khan|Cengiz Han hangi yıl ölmüştür?
+3|1221||en:Battle of the Indus|Celaleddin Harezmşah'ın yenildiği İndus Muharebesi hangi yıl yapılmıştır?
+2|1230||en:Battle of Yassıçemen|Yassıçemen Savaşı hangi yıl yapılmıştır?
+2|1240||en:Babai revolt|Babailer İsyanı hangi yıl çıkmıştır?
+1|1258||en:Siege of Baghdad (1258)|Moğollar Bağdat'ı hangi yıl almıştır?
+2|1271||en:Marco Polo|Marco Polo Çin'e doğru hangi yıl yola çıkmıştır?
+1|1273||en:Rumi|Mevlânâ hangi yıl vefat etmiştir?
+2|1261||en:Reconquest of Constantinople|Bizans İstanbul'u Latinlerden hangi yıl geri almıştır?
+2|1265||en:Dante Alighieri|Dante hangi yıl doğmuştur?
+3|1229||en:Sixth Crusade|Altıncı Haçlı Seferi hangi yıl sonuçlanmıştır?
+3|1248||en:Seventh Crusade|Yedinci Haçlı Seferi hangi yıl başlamıştır?
+2|1291||en:Siege of Acre (1291)|Haçlılar Akka'yı hangi yıl kaybetmiştir?
+2|1297||en:Battle of Stirling Bridge|William Wallace'ın kazandığı Stirling Köprüsü Savaşı hangi yıl yapılmıştır?
+2|1271||en:Yuan dynasty|Kubilay Han Yuan Hanedanı'nı hangi yıl kurmuştur?
+3|1295||en:Model Parliament|İngiltere'de Model Parlamento hangi yıl toplanmıştır?
+3|1270||en:Eighth Crusade|Sekizinci Haçlı Seferi hangi yıl yapılmıştır?
+3|1298||en:Battle of Falkirk|William Wallace'ın yenildiği Falkirk Savaşı hangi yıl yapılmıştır?
+2|1274||en:Thomas Aquinas|Thomas Aquinas hangi yıl vefat etmiştir?
+1|1277||tr:Karamanoğlu Mehmet Bey|Karamanoğlu Mehmet Bey Türkçeyi hangi yıl resmî dil ilan etmiştir?
+3|1259||en:Michael VIII Palaiologos|VIII. Mihail Paleologos hangi yıl tahta çıkmıştır?
+3|1282||en:War of the Sicilian Vespers|Sicilya Vesperleri ayaklanması hangi yıl olmuştur?
+3|1248||en:Siege of Seville|Kastilya Sevilla'yı hangi yıl almıştır?
+3|1253||en:College of Sorbonne|Sorbonne Koleji hangi yıl kurulmuştur?
+3|1265||en:Battle of Evesham|Evesham Savaşı hangi yıl yapılmıştır?
+2|1277||en:Battle of Elbistan|Baybars'ın Moğolları yendiği Elbistan Muharebesi hangi yıl yapılmıştır?
+2|1240||en:Siege of Kyiv (1240)|Moğollar Kiev'i hangi yıl yıkmıştır?
+2|1321||en:Divine Comedy|Dante İlahi Komedya'yı hangi yıl tamamlamıştır?
+1|1347||en:Black Death|Kara Ölüm Avrupa'ya hangi yıl ulaşmıştır?
+2|1346||en:Battle of Crécy|Crécy Savaşı hangi yıl yapılmıştır?
+2|1381||en:Peasants' Revolt|İngiliz Köylü Ayaklanması hangi yıl olmuştur?
+3|1315||en:Battle of Morgarten|Morgarten Savaşı hangi yıl yapılmıştır?
+3|1309||en:Avignon Papacy|Papalığın Avignon dönemi hangi yıl başlamıştır?
+3|1378||en:Western Schism|Katolik Kilisesi'nde Büyük Batı Bölünmesi hangi yıl başlamıştır?
+2|1368||en:Ming dynasty|Ming Hanedanı hangi yıl kurulmuştur?
+2|1398||en:Sack of Delhi (1398)|Timur Delhi'yi hangi yıl almıştır?
+3|1380||en:Battle of Kulikovo|Kulikovo Savaşı hangi yıl yapılmıştır?
+2|1377||en:Muqaddimah|İbn Haldun Mukaddime'yi hangi yıl yazmıştır?
+3|1374||en:Petrarch|Petrarca hangi yıl vefat etmiştir?
+3|1375||en:Giovanni Boccaccio|Boccaccio hangi yıl vefat etmiştir?
+3|1356||en:Golden Bull of 1356|IV. Karl Altın Boğa fermanını hangi yıl yayımlamıştır?
+3|1358||en:Jacquerie|Fransa'daki Jacquerie Ayaklanması hangi yıl başlamıştır?
+3|1356||en:Battle of Poitiers|Fransız Kralı II. Jean'ın esir düştüğü Poitiers Savaşı hangi yıl yapılmıştır?
+2|1325||en:Tenochtitlan|Azteklerin başkenti Tenochtitlan hangi yıl kurulmuştur?
+3|1397||en:Kalmar Union|Kalmar Birliği hangi yıl kurulmuştur?
+3|1385||en:Battle of Aljubarrota|Aljubarrota Savaşı hangi yıl yapılmıştır?
+3|1399||en:Henry IV of England|IV. Henry hangi yıl İngiltere tahtına çıkmıştır?
+3|1348||en:Charles University|Prag'daki Charles Üniversitesi hangi yıl kurulmuştur?
+2|1397||en:Medici Bank|Medici Bankası hangi yıl kurulmuştur?
+3|1385||en:Union of Krewo|Polonya ve Litvanya'yı bağlayan Krewo Birliği hangi yıl kurulmuştur?
+3|1395||en:Battle of the Terek River|Timur Toktamış'ı Terek Nehri'nde hangi yıl yenmiştir?
+
+# ottoman_early|osmanlı
+1|1299||en:Ottoman Empire|Osmanlı Beyliği'nin geleneksel kuruluş yılı hangisidir?
+1|1326||en:Siege of Bursa|Bursa hangi yıl Osmanlı hâkimiyetine girmiştir?
+2|1329||en:Battle of Pelekanon|Maltepe (Pelekanon) Muharebesi hangi yıl yapılmıştır?
+2|1331||en:Siege of Nicaea (1328–1331)|İznik hangi yıl fethedilmiştir?
+3|1337||en:Siege of Nicomedia|İzmit hangi yıl Osmanlı hâkimiyetine girmiştir?
+3|1364||tr:Sırpsındığı Muharebesi|Sırpsındığı Savaşı hangi yıl yapılmıştır?
+3|1395||en:Battle of Rovine|Rovine Savaşı hangi yıl yapılmıştır?
+2|1403||en:Bayezid I|Yıldırım Bayezid hangi yıl vefat etmiştir?
+2|1413||en:Ottoman Interregnum|Fetret Devri hangi yıl sona ermiştir?
+2|1430||en:Siege of Thessalonica (1422–1430)|Selanik hangi yıl Osmanlı hâkimiyetine girmiştir?
+2|1444||en:Peace of Szeged|Edirne-Segedin Antlaşması hangi yıl imzalanmıştır?
+2|1448||en:Battle of Kosovo (1448)|II. Kosova Muharebesi hangi yıl yapılmıştır?
+2|1444||en:Mehmed II|Fatih Sultan Mehmed ilk kez hangi yıl tahta çıkmıştır?
+1|1453||en:Fall of Constantinople|İstanbul hangi yıl fethedilmiştir?
+1|1452||en:Rumelihisarı|Rumeli Hisarı hangi yıl tamamlanmıştır?
+2|1456||en:Siege of Belgrade (1456)|Fatih Belgrad'ı hangi yıl kuşatmıştır?
+3|1459||en:Serbian Despotate|Sırbistan Despotluğu hangi yıl Osmanlı hâkimiyetine girmiştir?
+3|1460||en:Despotate of the Morea|Mora Despotluğu hangi yıl Osmanlı hâkimiyetine girmiştir?
+1|1461||en:Empire of Trebizond|Trabzon Rum İmparatorluğu hangi yıl yıkılmıştır?
+2|1463||en:Kingdom of Bosnia|Bosna Krallığı hangi yıl fethedilmiştir?
+1|1473||en:Battle of Otlukbeli|Otlukbeli Muharebesi hangi yıl yapılmıştır?
+3|1480||en:Ottoman invasion of Otranto|Otranto hangi yıl Osmanlılarca ele geçirilmiştir?
+2|1481||en:Bayezid II|II. Bayezid hangi yıl tahta çıkmıştır?
+2|1495||en:Cem Sultan|Cem Sultan hangi yıl vefat etmiştir?
+2|1492||en:Alhambra Decree|İspanya'nın Yahudileri sürdüğü Elhamra Fermanı hangi yıl yayımlanmıştır?
+3|1493||en:Battle of Krbava Field|Krbava Muharebesi hangi yıl yapılmıştır?
+2|1421||en:Murad II|II. Murad hangi yıl tahta çıkmıştır?
+3|1470||tr:Sahn-ı Seman Medresesi|Sahn-ı Seman Medreseleri hangi yıl tamamlanmıştır?
+3|1461||en:Isfendiyarids|Candaroğulları Beyliği hangi yıl Osmanlı topraklarına katılmıştır?
+3|1429||en:Germiyanids|Germiyanoğulları Beyliği hangi yıl Osmanlı topraklarına katılmıştır?
+1|1517||en:Battle of Ridaniya|Ridaniye Muharebesi hangi yıl yapılmıştır?
+1|1520||en:Suleiman the Magnificent|Kanuni Sultan Süleyman hangi yıl tahta çıkmıştır?
+2|1521||en:Siege of Belgrade (1521)|Belgrad hangi yıl fethedilmiştir?
+2|1522||en:Siege of Rhodes (1522)|Rodos hangi yıl fethedilmiştir?
+1|1529||en:Siege of Vienna (1529)|I. Viyana Kuşatması hangi yıl yapılmıştır?
+2|1533||en:Hayreddin Barbarossa|Barbaros Hayreddin hangi yıl kaptan-ı derya olmuştur?
+1|1538||en:Battle of Preveza|Preveze Deniz Zaferi hangi yıl kazanılmıştır?
+2|1555||en:Peace of Amasya|Amasya Antlaşması hangi yıl imzalanmıştır?
+2|1560||en:Battle of Djerba|Cerbe Deniz Zaferi hangi yıl kazanılmıştır?
+2|1565||en:Great Siege of Malta|Malta Kuşatması hangi yıl yapılmıştır?
+2|1566||en:Siege of Szigetvár|Kanuni'nin vefat ettiği Zigetvar Kuşatması hangi yıl yapılmıştır?
+2|1566||en:Selim II|II. Selim hangi yıl tahta çıkmıştır?
+1|1571||en:Battle of Lepanto|İnebahtı Deniz Savaşı hangi yıl yapılmıştır?
+2|1571||en:Siege of Famagusta|Kıbrıs'ın fethini tamamlayan Magosa Kuşatması hangi yıl sona ermiştir?
+2|1574||en:Murad III|III. Murad hangi yıl tahta çıkmıştır?
+3|1577||en:Constantinople observatory of Taqi ad-Din|Takiyüddin'in İstanbul Rasathanesi hangi yıl kurulmuştur?
+2|1577||en:Mehmed Paša Sokolović Bridge|Drina Köprüsü hangi yıl tamamlanmıştır?
+2|1579||en:Sokollu Mehmed Pasha|Sokullu Mehmed Paşa hangi yıl öldürülmüştür?
+3|1590||en:Treaty of Constantinople (1590)|Ferhat Paşa Antlaşması hangi yıl imzalanmıştır?
+2|1595||en:Mehmed III|III. Mehmed hangi yıl tahta çıkmıştır?
+2|1596||en:Battle of Keresztes|Haçova Meydan Muharebesi hangi yıl yapılmıştır?
+1|1513||en:Piri Reis map|Piri Reis dünya haritasını hangi yıl çizmiştir?
+2|1511||en:Şahkulu rebellion|Şahkulu İsyanı hangi yıl çıkmıştır?
+1|1512||en:Selim I|Yavuz Sultan Selim hangi yıl tahta çıkmıştır?
+3|1515||en:Battle of Turnadağ|Turnadağ Muharebesi hangi yıl yapılmıştır?
+2|1536||en:Pargalı Ibrahim Pasha|Pargalı İbrahim Paşa hangi yıl idam edilmiştir?
+1|1553||en:Şehzade Mustafa (son of Suleiman the Magnificent)|Şehzade Mustafa hangi yıl öldürülmüştür?
+
+# ottoman_late|osmanlı
+2|1606||en:Peace of Zsitvatorok|Zitvatorok Antlaşması hangi yıl imzalanmıştır?
+3|1612||en:Treaty of Nasuh Pasha|Nasuh Paşa Antlaşması hangi yıl imzalanmıştır?
+2|1622||en:Osman II|Genç Osman hangi yıl öldürülmüştür?
+1|1623||en:Murad IV|IV. Murad hangi yıl tahta çıkmıştır?
+2|1638||en:Capture of Baghdad (1638)|IV. Murad Bağdat'ı hangi yıl fethetmiştir?
+1|1639||en:Treaty of Zuhab|Kasr-ı Şirin Antlaşması hangi yıl imzalanmıştır?
+2|1656||en:Köprülü Mehmed Pasha|Köprülü Mehmed Paşa hangi yıl sadrazam olmuştur?
+3|1664||en:Peace of Vasvár|Vasvar Antlaşması hangi yıl imzalanmıştır?
+2|1669||en:Siege of Candia|Girit'in fethi hangi yıl tamamlanmıştır?
+3|1672||en:Treaty of Buchach|Bucaş Antlaşması hangi yıl imzalanmıştır?
+3|1681||en:Treaty of Bakhchisarai|Bahçesaray Antlaşması hangi yıl imzalanmıştır?
+3|1684||en:Holy League (1684)|Osmanlıya karşı Kutsal İttifak hangi yıl kurulmuştur?
+3|1688||en:Siege of Belgrade (1688)|Belgrad Avusturya'nın eline hangi yıl geçmiştir?
+1|1699||en:Treaty of Karlowitz|Karlofça Antlaşması hangi yıl imzalanmıştır?
+3|1700||en:Treaty of Constantinople (1700)|Rusya ile İstanbul Antlaşması hangi yıl imzalanmıştır?
+2|1703||en:Edirne event|Edirne Vakası hangi yıl olmuştur?
+2|1648||en:Mehmed IV|IV. Mehmed hangi yıl tahta çıkmıştır?
+2|1648||en:Ibrahim of the Ottoman Empire|Sultan İbrahim hangi yıl tahttan indirilmiştir?
+2|1703||en:Ahmed III|III. Ahmed hangi yıl tahta çıkmıştır?
+1|1711||en:Treaty of the Pruth|Prut Antlaşması hangi yıl imzalanmıştır?
+1|1718||en:Treaty of Passarowitz|Lale Devri'ni başlatan Pasarofça Antlaşması hangi yıl imzalanmıştır?
+2|1718||en:Nevşehirli Damat Ibrahim Pasha|Nevşehirli Damat İbrahim Paşa hangi yıl sadrazam olmuştur?
+1|1729||en:Ibrahim Muteferrika|Matbaada basılan ilk kitap Vankulu Lügati hangi yıl basılmıştır?
+2|1728||en:Fountain of Ahmed III|III. Ahmed Çeşmesi hangi yıl yapılmıştır?
+1|1730||en:Patrona Halil|Patrona Halil İsyanı hangi yıl çıkmıştır?
+3|1730||en:Mahmud I|I. Mahmud hangi yıl tahta çıkmıştır?
+2|1739||en:Treaty of Belgrade|Belgrad Antlaşması hangi yıl imzalanmıştır?
+1|1774||en:Treaty of Küçük Kaynarca|Küçük Kaynarca Antlaşması hangi yıl imzalanmıştır?
+3|1779||en:Treaty of Aynalıkavak|Aynalıkavak Tenkihnamesi hangi yıl imzalanmıştır?
+2|1770||en:Battle of Chesma|Çeşme Baskını hangi yıl olmuştur?
+2|1783||en:Annexation of Crimea by the Russian Empire|Rusya Kırım'ı hangi yıl ilhak etmiştir?
+2|1789||en:Selim III|III. Selim hangi yıl tahta çıkmıştır?
+3|1792||en:Treaty of Jassy|Yaş Antlaşması hangi yıl imzalanmıştır?
+2|1793||tr:Nizam-ı Cedid|Nizam-ı Cedid ordusu hangi yıl kurulmaya başlanmıştır?
+1|1798||en:French invasion of Egypt and Syria|Fransa Mısır'ı hangi yıl işgal etmiştir?
+2|1799||en:Siege of Acre (1799)|Napolyon'un Akka Kuşatması hangi yıl yapılmıştır?
+2|1804||en:First Serbian Uprising|Birinci Sırp İsyanı hangi yıl başlamıştır?
+2|1808||en:Charter of Alliance|Sened-i İttifak hangi yıl imzalanmıştır?
+3|1812||en:Treaty of Bucharest (1812)|Bükreş Antlaşması hangi yıl imzalanmıştır?
+1|1821||en:Greek War of Independence|Yunan İsyanı hangi yıl başlamıştır?
+1|1826||en:Auspicious Incident|Yeniçeri Ocağı'nın kaldırıldığı Vaka-i Hayriye hangi yıl olmuştur?
+1|1827||en:Battle of Navarino|Navarin Baskını hangi yıl olmuştur?
+2|1829||en:Treaty of Adrianople (1829)|Edirne Antlaşması hangi yıl imzalanmıştır?
+1|1830||en:French conquest of Algeria|Fransa Cezayir'i hangi yıl işgal etmiştir?
+2|1833||en:Treaty of Hünkâr İskelesi|Hünkâr İskelesi Antlaşması hangi yıl imzalanmıştır?
+2|1838||en:Treaty of Balta Liman|Baltalimanı Ticaret Antlaşması hangi yıl imzalanmıştır?
+1|1839||en:Edict of Gülhane|Tanzimat Fermanı hangi yıl ilan edilmiştir?
+2|1841||en:London Straits Convention|Londra Boğazlar Sözleşmesi hangi yıl imzalanmıştır?
+1|1853||en:Battle of Sinop|Sinop Baskını hangi yıl olmuştur?
+1|1856||en:Imperial Reform Edict|Islahat Fermanı hangi yıl ilan edilmiştir?
+2|1856||en:Treaty of Paris (1856)|Kırım Savaşı'nı bitiren Paris Antlaşması hangi yıl imzalanmıştır?
+2|1861||en:Abdulaziz|Sultan Abdülaziz hangi yıl tahta çıkmıştır?
+1|1876||en:Ottoman constitution of 1876|Kanun-ı Esasi hangi yıl kabul edilmiştir?
+1|1876||en:Abdul Hamid II|II. Abdülhamid hangi yıl tahta çıkmıştır?
+1|1877||en:Russo-Turkish War (1877–1878)|93 Harbi hangi yıl başlamıştır?
+1|1878||en:Treaty of San Stefano|Ayastefanos Antlaşması hangi yıl imzalanmıştır?
+2|1878||en:Treaty of Berlin (1878)|Berlin Antlaşması hangi yıl imzalanmıştır?
+2|1878||en:Cyprus Convention|Kıbrıs'ın yönetimi İngiltere'ye hangi yıl bırakılmıştır?
+2|1881||en:French conquest of Tunisia|Fransa Tunus'u hangi yıl işgal etmiştir?
+1|1881||en:Ottoman Public Debt Administration|Düyun-ı Umumiye İdaresi hangi yıl kurulmuştur?
+2|1882||en:Anglo-Egyptian War|İngiltere Mısır'ı hangi yıl işgal etmiştir?
+2|1885||en:Unification of Bulgaria|Doğu Rumeli hangi yıl Bulgaristan ile birleşmiştir?
+2|1897||en:Greco-Turkish War (1897)|Osmanlı-Yunan Savaşı hangi yıl yapılmıştır?
+3|1860||tr:Tercüman-ı Ahvâl|Tercüman-ı Ahvâl gazetesi hangi yıl yayımlanmaya başlamıştır?
+3|1862||tr:Tasvîr-i Efkâr|Tasvir-i Efkâr gazetesi hangi yıl yayımlanmaya başlamıştır?
+2|1868||en:Galatasaray High School|Mekteb-i Sultani (Galatasaray Lisesi) hangi yıl açılmıştır?
+2|1869||en:Mecelle|Mecelle hangi yıl yayımlanmaya başlamıştır?
+2|1873||en:Darüşşafaka High School|Darüşşafaka hangi yıl açılmıştır?
+2|1882||en:Mimar Sinan Fine Arts University|Sanayi-i Nefise Mektebi hangi yıl kurulmuştur?
+2|1900||en:Hejaz railway|Hicaz Demiryolu'nun yapımı hangi yıl başlamıştır?
+1|1831||en:Takvim-i Vekayi|İlk resmî Osmanlı gazetesi Takvim-i Vekayi hangi yıl yayımlanmıştır?
+3|1891||en:Hamidiye (cavalry)|Hamidiye Alayları hangi yıl kurulmaya başlanmıştır?
+1|1908||en:Second Constitutional Era|II. Meşrutiyet hangi yıl ilan edilmiştir?
+1|1909||en:31 March incident|31 Mart Vakası hangi yıl olmuştur?
+1|1915||en:Naval operations in the Dardanelles campaign|Çanakkale Deniz Zaferi hangi yıl kazanılmıştır?
+2|1916||en:Siege of Kut|Kûtü'l-Amare Zaferi hangi yıl kazanılmıştır?
+1|1918||en:Armistice of Mudros|Mondros Ateşkes Antlaşması hangi yıl imzalanmıştır?
+
+# turkey_republic|türkiye
+1|1919||en:Amasya Circular|Amasya Genelgesi hangi yıl yayımlanmıştır?
+1|1919||en:Erzurum Congress|Erzurum Kongresi hangi yıl toplanmıştır?
+1|1919||en:Sivas Congress|Sivas Kongresi hangi yıl toplanmıştır?
+1|1920||en:Grand National Assembly of Turkey|TBMM hangi yıl açılmıştır?
+1|1920||en:Misak-ı Millî|Misak-ı Millî hangi yıl kabul edilmiştir?
+1|1920||en:Treaty of Sèvres|Sevr Antlaşması hangi yıl imzalanmıştır?
+2|1921||en:First Battle of İnönü|I. İnönü Muharebesi hangi yıl yapılmıştır?
+1|1921||en:Battle of Sakarya|Sakarya Meydan Muharebesi hangi yıl kazanılmıştır?
+2|1921||en:Treaty of Ankara (1921)|Fransa ile Ankara Antlaşması hangi yıl imzalanmıştır?
+1|1922||en:Great Offensive|Büyük Taarruz hangi yıl yapılmıştır?
+1|1922||en:Armistice of Mudanya|Mudanya Ateşkes Antlaşması hangi yıl imzalanmıştır?
+1|1923||en:Treaty of Lausanne|Lozan Antlaşması hangi yıl imzalanmıştır?
+1|1923||en:Ankara|Ankara hangi yıl başkent ilan edilmiştir?
+2|1924||en:Progressive Republican Party (Turkey)|Terakkiperver Cumhuriyet Fırkası hangi yıl kurulmuştur?
+1|1925||en:Sheikh Said rebellion|Şeyh Said İsyanı hangi yıl çıkmıştır?
+1|1925||tr:Şapka Kanunu|Şapka Kanunu hangi yıl kabul edilmiştir?
+1|1926||tr:Türk Medeni Kanunu|Türk Medeni Kanunu ilk olarak hangi yıl kabul edilmiştir?
+2|1926||tr:Kabotaj Kanunu|Kabotaj Kanunu hangi yıl kabul edilmiştir?
+3|1926||tr:Alpullu Şeker Fabrikası|Alpullu Şeker Fabrikası hangi yıl üretime başlamıştır?
+1|1927||en:Nutuk|Atatürk Nutuk'u hangi yıl okumuştur?
+1|1928||en:Turkish alphabet|Yeni Türk alfabesi hangi yıl kabul edilmiştir?
+1|29|harf|tr:Türk alfabesi|Türk alfabesinde kaç harf vardır?
+2|1931||en:Central Bank of the Republic of Turkey|Merkez Bankası hangi yıl faaliyete geçmiştir?
+2|1932||tr:Halkevleri|Halkevleri hangi yıl kurulmuştur?
+2|1933||en:Sümerbank|Sümerbank hangi yıl kurulmuştur?
+1|1934||en:Surname Law (Turkey)|Soyadı Kanunu hangi yıl kabul edilmiştir?
+1|1934||tr:Türkiye'de kadınların seçme ve seçilme hakkı|Türk kadınları milletvekili seçme ve seçilme hakkını hangi yıl kazanmıştır?
+1|1936||en:Montreux Convention Regarding the Regime of the Straits|Montrö Boğazlar Sözleşmesi hangi yıl imzalanmıştır?
+2|1938||en:Hatay State|Hatay Devleti hangi yıl kurulmuştur?
+1|1938||en:Death and state funeral of Mustafa Kemal Atatürk|Atatürk hangi yıl vefat etmiştir?
+2|1938||en:İsmet İnönü|İsmet İnönü hangi yıl cumhurbaşkanı seçilmiştir?
+1|1940||en:Village Institutes|Köy Enstitüleri hangi yıl kurulmuştur?
+1|1942||en:Varlık Vergisi|Varlık Vergisi hangi yıl çıkarılmıştır?
+1|1946||en:Democrat Party (Turkey, 1946–1961)|Demokrat Parti hangi yıl kurulmuştur?
+1|1950||en:1950 Turkish general election|Demokrat Parti hangi yıl iktidara gelmiştir?
+2|1953||en:Balkan Pact (1953)|Balkan Paktı hangi yıl kurulmuştur?
+2|1955||en:Baghdad Pact|Bağdat Paktı hangi yıl imzalanmıştır?
+1|1955||en:Istanbul pogrom|6-7 Eylül Olayları hangi yıl yaşanmıştır?
+2|1944||en:Yapı Kredi|Yapı Kredi Bankası hangi yıl kurulmuştur?
+2|1959||en:London and Zürich Agreements|Zürih ve Londra Antlaşmaları hangi yıl imzalanmıştır?
+1|1960||en:1960 Turkish coup d'état|27 Mayıs Darbesi hangi yıl olmuştur?
+2|1968||en:Television in Turkey|Türkiye'de televizyon yayınları hangi yıl başlamıştır?
+3|1953||tr:Halıcı Kız|Türkiye'nin ilk renkli filmlerinden Halıcı Kız hangi yıl gösterime girmiştir?
+1|1961||en:Devrim (automobile)|İlk yerli otomobil Devrim hangi yıl üretilmiştir?
+2|1963||en:Bloody Christmas (1963)|Kıbrıs'taki Kanlı Noel olayları hangi yıl yaşanmıştır?
+2|1964||en:Turkish Radio and Television Corporation|TRT hangi yıl kurulmuştur?
+1|1975||en:Turkey in the Eurovision Song Contest|Türkiye Eurovision'a ilk kez hangi yıl katılmıştır?
+2|1965||en:1965 Turkish general election|Adalet Partisi hangi yıl tek başına iktidara gelmiştir?
+2|1966||en:Anadol|Anadol otomobili hangi yıl piyasaya çıkmıştır?
+1|1971||en:1971 Turkish military memorandum|12 Mart Muhtırası hangi yıl verilmiştir?
+1|1974||en:Turkish invasion of Cyprus|Kıbrıs Barış Harekâtı hangi yıl yapılmıştır?
+1|1977||en:Taksim Square massacre|Kanlı 1 Mayıs hangi yıl yaşanmıştır?
+1|1980||en:1980 Turkish coup d'état|12 Eylül Darbesi hangi yıl olmuştur?
+2|1980||tr:24 Ocak Kararları|24 Ocak Kararları hangi yıl açıklanmıştır?
+1|1983||en:1983 Turkish general election|Turgut Özal'ın ANAP'ı hangi yıl iktidara gelmiştir?
+1|1983||en:Northern Cyprus|KKTC hangi yıl ilan edilmiştir?
+1|1990||en:Star TV (Turkish TV channel)|Türkiye'nin ilk özel televizyonu Star 1 hangi yıl yayına başlamıştır?
+2|1993||en:Internet in Turkey|Türkiye internete hangi yıl bağlanmıştır?
+1|1997||en:1997 Turkish military memorandum|28 Şubat süreci hangi yıl yaşanmıştır?
+1|1999||en:Abdullah Öcalan|Abdullah Öcalan hangi yıl yakalanmıştır?
+1|1999||en:1999 İzmit earthquake|17 Ağustos Marmara Depremi hangi yıl olmuştur?
+1|2000||en:Ahmet Necdet Sezer|Ahmet Necdet Sezer hangi yıl cumhurbaşkanı seçilmiştir?
+1|2002||en:2002 Turkish general election|AK Parti ilk kez hangi yıl iktidara gelmiştir?
+1|2005||en:Turkish lira|Liradan altı sıfır hangi yıl atılmıştır?
+2|2005||en:Accession of Turkey to the European Union|Türkiye ile AB tam üyelik müzakereleri hangi yıl başlamıştır?
+2|2008||en:Türksat 3A|Türksat 3A hangi yıl fırlatılmıştır?
+2|2009||en:High-speed rail in Turkey|Ankara-Eskişehir hızlı tren seferleri hangi yıl başlamıştır?
+1|2014||en:2014 Turkish presidential election|Cumhurbaşkanı halk oyuyla ilk kez hangi yıl seçilmiştir?
+1|2016||en:2016 Turkish coup attempt|15 Temmuz darbe girişimi hangi yıl yaşanmıştır?
+1|2017||en:2017 Turkish constitutional referendum|Cumhurbaşkanlığı Hükümet Sistemi referandumu hangi yıl yapılmıştır?
+2|2020||en:Sakarya gas field|Karadeniz'deki Sakarya doğal gaz keşfi hangi yıl duyurulmuştur?
+1|2019||en:Togg|Togg'un ilk prototipleri hangi yıl tanıtılmıştır?
+1|2024||en:Alper Gezeravcı|Alper Gezeravcı uzaya hangi yıl gitmiştir?
+
+# history_modern|tarih
+1|1789||en:French Revolution|Fransız İhtilali hangi yıl başlamıştır?
+1|1869||en:Suez Canal|Süveyş Kanalı hangi yıl açılmıştır?
+1|1912||en:Titanic|Titanic hangi yıl batmıştır?
+1|1914||en:World War I|I. Dünya Savaşı hangi yıl başlamıştır?
+1|1917||en:October Revolution|Bolşevik Devrimi hangi yıl olmuştur?
+2|1922||en:March on Rome|Mussolini'nin Roma Yürüyüşü hangi yıl olmuştur?
+1|1922||en:Soviet Union|Sovyetler Birliği hangi yıl kurulmuştur?
+1|1929||en:Great Depression|Büyük Buhran hangi yıl başlamıştır?
+1|1939||en:World War II|II. Dünya Savaşı hangi yıl başlamıştır?
+1|1945||en:United Nations|Birleşmiş Milletler hangi yıl kurulmuştur?
+2|1947||en:Truman Doctrine|Truman Doktrini hangi yıl ilan edilmiştir?
+1|1949||en:NATO|NATO hangi yıl kurulmuştur?
+2|1956||en:Suez Crisis|Süveyş Krizi hangi yıl yaşanmıştır?
+2|1957||en:Treaty of Rome|Avrupa Ekonomik Topluluğu'nu kuran Roma Antlaşması hangi yıl imzalanmıştır?
+1|1962||en:Cuban Missile Crisis|Küba Füze Krizi hangi yıl yaşanmıştır?
+1|1963||en:Assassination of John F. Kennedy|John F. Kennedy hangi yıl öldürülmüştür?
+2|1963||en:March on Washington for Jobs and Freedom|Martin Luther King'in Washington Yürüyüşü hangi yıl yapılmıştır?
+2|1968||en:Prague Spring|Prag Baharı hangi yıl yaşanmıştır?
+1|1975||en:Fall of Saigon|Saygon hangi yıl düşmüştür?
+1|1979||en:Iranian Revolution|İran İslam Devrimi hangi yıl olmuştur?
+1|1986||en:Chernobyl disaster|Çernobil kazası hangi yıl olmuştur?
+1|1989||en:Fall of the Berlin Wall|Berlin Duvarı hangi yıl yıkılmıştır?
+1|1991||en:Dissolution of the Soviet Union|Sovyetler Birliği hangi yıl dağılmıştır?
+2|1992||en:Maastricht Treaty|Maastricht Antlaşması hangi yıl imzalanmıştır?
+1|2002||en:Euro|Euro banknotları hangi yıl tedavüle girmiştir?
+1|2008||en:Bankruptcy of Lehman Brothers|Lehman Brothers hangi yıl batmıştır?
+1|2008||en:2008 United States presidential election|Barack Obama ilk kez hangi yıl başkan seçilmiştir?
+2|2010||en:Tunisian revolution|Arap Baharı'nı tetikleyen Tunus devrimi hangi yıl başlamıştır?
+2|2015||en:Paris Agreement|Paris İklim Anlaşması hangi yıl kabul edilmiştir?
+
+# science_modern|bilim
+1|1903||en:Wright Flyer|Wright kardeşler ilk motorlu uçuşu hangi yıl yapmıştır?
+2|1905||en:Special relativity|Einstein özel görelilik teorisini hangi yıl yayımlamıştır?
+3|1926||en:John Logie Baird|John Logie Baird televizyonu ilk kez hangi yıl göstermiştir?
+1|1928||en:Alexander Fleming|Fleming penisilini hangi yıl keşfetmiştir?
+2|1930||en:Pluto|Pluto hangi yıl keşfedilmiştir?
+1|1957||en:Sputnik 1|Sputnik 1 hangi yıl fırlatılmıştır?
+1|1958||en:NASA|NASA hangi yıl kurulmuştur?
+1|1969||en:Apollo 11|İnsan Ay'a ilk kez hangi yıl ayak basmıştır?
+2|1967||en:Heart transplantation|İlk insandan insana kalp nakli hangi yıl yapılmıştır?
+2|2003||en:Human Genome Project|İnsan Genom Projesi hangi yıl tamamlanmıştır?
+2|2012||en:Higgs boson|Higgs bozonunun keşfi hangi yıl duyurulmuştur?
+1|2019||en:COVID-19 pandemic|COVID-19'un ilk vakaları hangi yıl görülmüştür?
+1|2021||en:James Webb Space Telescope|James Webb Uzay Teleskobu hangi yıl fırlatılmıştır?
+1|206|kemik|en:Human skeleton|Yetişkin bir insanda kaç kemik vardır?
+
+# tech_companies|şirketler
+1|2004||en:Facebook|Facebook hangi yıl kurulmuştur?
+1|2005||en:YouTube|YouTube hangi yıl kurulmuştur?
+1|2007||en:IPhone (1st generation)|İlk iPhone hangi yıl tanıtılmıştır?
+2|1888||en:Ziraat Bank|Ziraat Bankası hangi yıl kurulmuştur?
+
+# architecture_years|mimari
+1|80||en:Colosseum|Kolezyum hangi yıl açılmıştır?
+2|126||en:Pantheon, Rome|Roma'daki Pantheon'un bugünkü yapısı hangi yıl tamamlanmıştır?
+3|315||en:Arch of Constantine|Konstantin Takı hangi yıl tamamlanmıştır?
+3|216||en:Baths of Caracalla|Caracalla Hamamları hangi yıl açılmıştır?
+1|537||en:Hagia Sophia|Ayasofya'nın bugünkü yapısı hangi yıl tamamlanmıştır?
+2|691||en:Dome of the Rock|Kubbetü's-Sahre hangi yıl tamamlanmıştır?
+2|784||en:Mosque–Cathedral of Córdoba|Kurtuba Ulu Camii'nin yapımı hangi yıl başlamıştır?
+1|1163||en:Notre-Dame de Paris|Notre-Dame Katedrali'nin yapımı hangi yıl başlamıştır?
+3|1220||en:Salisbury Cathedral|Salisbury Katedrali'nin yapımı hangi yıl başlamıştır?
+1|1173||en:Leaning Tower of Pisa|Pisa Kulesi'nin yapımı hangi yıl başlamıştır?
+2|1248||en:Cologne Cathedral|Köln Katedrali'nin yapımı hangi yıl başlamıştır?
+3|1194||en:Chartres Cathedral|Chartres Katedrali'nin yeniden yapımı hangi yıl başlamıştır?
+2|1436||en:Florence Cathedral|Floransa Katedrali'nin kubbesi hangi yıl tamamlanmıştır?
+3|1245||en:Westminster Abbey|Westminster Abbey'nin bugünkü Gotik yapısı hangi yıl başlamıştır?
+3|1147||en:Kutubiyya Mosque|Fas'taki Kütübiyye Camii'nin yapımı hangi yıl başlamıştır?
+2|1199||en:Qutb Minar|Kutub Minar'ın yapımı hangi yıl başlamıştır?
+1|1406||en:Forbidden City|Yasak Şehir'in yapımı hangi yıl başlamıştır?
+2|1561||en:Saint Basil's Cathedral|Aziz Vasil Katedrali hangi yıl tamamlanmıştır?
+1|1889||en:Eiffel Tower|Eyfel Kulesi hangi yıl tamamlanmıştır?
+1|1931||en:Empire State Building|Empire State Building hangi yıl tamamlanmıştır?
+1|1973||en:Sydney Opera House|Sidney Opera Binası hangi yıl açılmıştır?
+1|2010||en:Burj Khalifa|Burj Khalifa hangi yıl açılmıştır?
+1|1998||en:Petronas Towers|Petronas İkiz Kuleleri hangi yıl tamamlanmıştır?
+1|1632||en:Taj Mahal|Tac Mahal'in yapımı hangi yıl başlamıştır?
+3|1571||en:Fatehpur Sikri|Fatehpur Sikri'nin başkent olarak yapımı hangi yıl başlamıştır?
+2|1638||en:Red Fort|Delhi'deki Kızıl Kale'nin yapımı hangi yıl başlamıştır?
+3|1656||en:Jama Masjid, Delhi|Delhi'deki Cuma Mescidi hangi yıl tamamlanmıştır?
+2|1420||en:Ulugh Beg Madrasa|Semerkant'taki Uluğ Bey Medresesi hangi yıl tamamlanmıştır?
+2|1404||en:Gur-e-Amir|Timur'un türbesi Gur Emir hangi yıl tamamlanmıştır?
+1|1557||en:Süleymaniye Mosque|Süleymaniye Camii hangi yıl tamamlanmıştır?
+1|1609||en:Blue Mosque, Istanbul|Sultanahmet Camii'nin yapımı hangi yıl başlamıştır?
+2|1611||en:Shah Mosque (Isfahan)|İsfahan'daki Şah Camii'nin yapımı hangi yıl başlamıştır?
+2|1673||en:Badshahi Mosque|Lahor'daki Badşahi Camii hangi yıl tamamlanmıştır?
+2|1386||en:Milan Cathedral|Milano Katedrali'nin yapımı hangi yıl başlamıştır?
+3|1401||en:Seville Cathedral|Sevilla Katedrali'nin yapımı hangi yıl başlamıştır?
+2|1506||en:St. Peter's Basilica|Aziz Petrus Bazilikası'nın bugünkü yapısı hangi yıl başlamıştır?
+2|1710||en:St Paul's Cathedral|St. Paul Katedrali hangi yıl tamamlanmıştır?
+2|1869||en:Neuschwanstein Castle|Neuschwanstein Şatosu'nun yapımı hangi yıl başlamıştır?
+1|1894||en:Tower Bridge|Londra'daki Tower Bridge hangi yıl açılmıştır?
+1|1937||en:Golden Gate Bridge|Golden Gate Köprüsü hangi yıl açılmıştır?
+2|1883||en:Brooklyn Bridge|Brooklyn Köprüsü hangi yıl açılmıştır?
+2|1932||en:Sydney Harbour Bridge|Sidney Liman Köprüsü hangi yıl açılmıştır?
+2|2004||en:Millau Viaduct|Millau Viyadüğü hangi yıl açılmıştır?
+2|1930||en:Chrysler Building|Chrysler Building hangi yıl tamamlanmıştır?
+1|2014||en:One World Trade Center|One World Trade Center hangi yıl açılmıştır?
+2|2015||en:Shanghai Tower|Şanghay Kulesi hangi yıl tamamlanmıştır?
+2|2004||en:Taipei 101|Taipei 101 hangi yıl açılmıştır?
+2|1922||en:Lincoln Memorial|Lincoln Anıtı hangi yıl tamamlanmıştır?
+3|1907||en:Great Mosque of Djenné|Mali'deki Cenne Camii'nin bugünkü yapısı hangi yıl tamamlanmıştır?
+1|1882||en:Sagrada Família|Sagrada Família'nın yapımı hangi yıl başlamıştır?
+2|1997||en:Guggenheim Museum Bilbao|Guggenheim Bilbao Müzesi hangi yıl açılmıştır?
+2|2008||en:Shanghai World Financial Center|Şanghay Dünya Finans Merkezi hangi yıl tamamlanmıştır?
+2|2010||en:Canton Tower|Canton Tower hangi yıl tamamlanmıştır?
+1|1999||en:Burj Al Arab|Burj Al Arab oteli hangi yıl açılmıştır?
+2|532||en:Basilica Cistern|Yerebatan Sarnıcı hangi yıl yapılmıştır?
+1|1856||en:Dolmabahçe Palace|Dolmabahçe Sarayı hangi yıl tamamlanmıştır?
+1|1953||en:Anıtkabir|Anıtkabir hangi yıl tamamlanmıştır?
+1|1574||en:Selimiye Mosque|Edirne'deki Selimiye Camii hangi yıl tamamlanmıştır?
+1|1274||en:Mevlana Museum|Konya'daki Mevlânâ Türbesi hangi yıl yapılmıştır?
+2|1228||en:Divriği Great Mosque|Divriği Ulu Camii ve Darüşşifası hangi yıl tamamlanmıştır?
+3|1584||en:El Escorial|İspanya'daki El Escorial Manastırı hangi yıl tamamlanmıştır?
+2|1791||en:Brandenburg Gate|Brandenburg Kapısı hangi yıl tamamlanmıştır?
+2|1609||en:Himeji Castle|Himeji Kalesi'nin bugünkü yapısı hangi yıl tamamlanmıştır?
+3|1397||en:Kinkaku-ji|Kyoto'daki Altın Köşk'ün ilk yapısı hangi yıl yapılmıştır?
+3|1986||en:Lotus Temple|Hindistan'daki Lotus Tapınağı hangi yıl açılmıştır?
+3|1420||en:Temple of Heaven|Pekin'deki Cennet Tapınağı hangi yıl tamamlanmıştır?
+3|1395||en:Gyeongbokgung|Seul'deki Gyeongbokgung Sarayı ilk olarak hangi yıl tamamlanmıştır?
+2|1591||en:Rialto Bridge|Venedik'teki Rialto Köprüsü hangi yıl tamamlanmıştır?
+2|1357||en:Charles Bridge|Prag'daki Karl Köprüsü'nün yapımı hangi yıl başlamıştır?
+3|1849||en:Széchenyi Chain Bridge|Budapeşte'deki Zincir Köprü hangi yıl açılmıştır?
+3|1943||en:Howrah Bridge|Hindistan'daki Howrah Köprüsü hangi yıl açılmıştır?
+2|1998||en:Akashi Kaikyō Bridge|Akashi Kaikyō Köprüsü hangi yıl açılmıştır?
+2|1762||en:Trevi Fountain|Trevi Çeşmesi hangi yıl tamamlanmıştır?
+2|1902||en:Flatiron Building|New York'taki Flatiron Building hangi yıl tamamlanmıştır?
+2|1959||en:Solomon R. Guggenheim Museum|New York Guggenheim Müzesi hangi yıl açılmıştır?
+2|1251||en:Karatay Madrasa|Konya'daki Karatay Medresesi hangi yıl yapılmıştır?
+2|1548||en:Şehzade Mosque|Şehzade Camii hangi yıl tamamlanmıştır?
+2|1419||en:Green Mosque, Bursa|Bursa Yeşil Cami hangi yıl tamamlanmıştır?
+2|1447||en:Üç Şerefeli Mosque|Edirne'deki Üç Şerefeli Cami hangi yıl tamamlanmıştır?
+2|1911||en:Machu Picchu|Hiram Bingham Machu Picchu'ya hangi yıl ulaşmıştır?
+3|1968||en:Abu Simbel|Ebu Simbel tapınaklarının taşınması hangi yıl tamamlanmıştır?
+2|1840||en:Palace of Westminster|Westminster Sarayı'nın bugünkü yapısı hangi yıl başlamıştır?
+
+# architecture_sizes|mimari
+2|48|m|en:Colosseum|Kolezyum'un dış cephesi kaç metre yüksekliğindedir?
+2|43.3|m|en:Pantheon, Rome|Pantheon'un kubbesinin iç çapı kaç metredir?
+2|56|m|en:Leaning Tower of Pisa|Pisa Kulesi kaç metre yüksekliğindedir?
+2|157|m|en:Cologne Cathedral|Köln Katedrali kaç metre yüksekliğindedir?
+2|73|m|en:Qutb Minar|Kutub Minar kaç metre yüksekliğindedir?
+1|330|m|en:Eiffel Tower|Eyfel Kulesi anteniyle kaç metre yüksekliğindedir?
+3|7300|t|en:Eiffel Tower|Eyfel Kulesi'nin metal iskeleti kaç ton ağırlığındadır?
+1|443|m|en:Empire State Building|Empire State Building anteniyle kaç metre yüksekliğindedir?
+1|828|m|en:Burj Khalifa|Burj Khalifa kaç metre yüksekliğindedir?
+1|163|kat|en:Burj Khalifa|Burj Khalifa kaç katlıdır?
+2|452|m|en:Petronas Towers|Petronas İkiz Kuleleri kaç metre yüksekliğindedir?
+3|88|kat|en:Petronas Towers|Petronas İkiz Kuleleri'nin her biri kaç katlıdır?
+3|65|m|en:Tower Bridge|Tower Bridge'in kuleleri kaç metre yüksekliğindedir?
+2|1280|m|en:Golden Gate Bridge|Golden Gate Köprüsü'nün ana açıklığı kaç metredir?
+3|486|m|en:Brooklyn Bridge|Brooklyn Köprüsü'nün ana açıklığı kaç metredir?
+3|503|m|en:Sydney Harbour Bridge|Sidney Liman Köprüsü'nün ana kemer açıklığı kaç metredir?
+2|319|m|en:Chrysler Building|Chrysler Building kaç metre yüksekliğindedir?
+2|541|m|en:One World Trade Center|One World Trade Center kaç metre yüksekliğindedir?
+2|632|m|en:Shanghai Tower|Şanghay Kulesi kaç metre yüksekliğindedir?
+3|128|kat|en:Shanghai Tower|Şanghay Kulesi kaç katlıdır?
+2|508|m|en:Taipei 101|Taipei 101 kaç metre yüksekliğindedir?
+3|492|m|en:Shanghai World Financial Center|Şanghay Dünya Finans Merkezi kaç metre yüksekliğindedir?
+3|442|m|en:Willis Tower|Willis Tower kaç metre yüksekliğindedir?
+3|604|m|en:Canton Tower|Canton Tower kaç metre yüksekliğindedir?
+2|601|m|en:Abraj Al Bait|Mekke'deki Saat Kulesi kaç metre yüksekliğindedir?
+3|65|m|en:Pyramid of the Sun|Teotihuacan'daki Güneş Piramidi kaç metre yüksekliğindedir?
+3|43|m|en:Pyramid of the Moon|Teotihuacan'daki Ay Piramidi kaç metre yüksekliğindedir?
+1|93|m|en:Statue of Liberty|Özgürlük Heykeli kaidesiyle kaç metre yüksekliğindedir?
+2|1991|m|en:Akashi Kaikyō Bridge|Akashi Kaikyō Köprüsü'nün ana açıklığı kaç metredir?
+3|49|m|en:Pont du Gard|Fransa'daki Pont du Gard su kemeri kaç metre yüksekliğindedir?
+2|73|m|en:Great Sphinx of Giza|Büyük Sfenks kaç metre uzunluğundadır?
+1|146.6|m|en:Great Pyramid of Giza|Büyük Piramit ilk yapıldığında kaç metre yüksekliğindeydi?
+3|2300000|blok|en:Great Pyramid of Giza|Büyük Piramit'in yapımında tahminen kaç taş blok kullanılmıştır?
+3|69.5|m|en:Parthenon|Parthenon'un uzun kenarı kaç metredir?
+2|21196|km|en:Great Wall of China|Çin Seddi'nin tüm bölümleriyle toplam uzunluğu kaç kilometredir?
+3|1794|km|en:Grand Canal (China)|Çin'deki Büyük Kanal kaç kilometre uzunluğundadır?
+2|365|basamak|en:El Castillo, Chichen Itza|Chichén Itzá'daki Kukulkan Piramidi'nde toplam kaç basamak vardır?
+
+# art_people|sanat
+2|1669||en:Rembrandt|Rembrandt hangi yıl vefat etmiştir?
+2|1520||en:Raphael|Raffaello hangi yıl vefat etmiştir?
+3|1828||en:Francisco Goya|Francisco Goya hangi yıl vefat etmiştir?
+1|1910||en:Osman Hamdi Bey|Osman Hamdi Bey hangi yıl vefat etmiştir?
+3|1907||en:Şeker Ahmed Pasha|Şeker Ahmet Paşa hangi yıl vefat etmiştir?
+3|1930||en:Hoca Ali Rıza|Hoca Ali Rıza hangi yıl vefat etmiştir?
+1|2015||en:Yaşar Kemal|Yaşar Kemal hangi yıl vefat etmiştir?
+2|1977||en:Oğuz Atay|Tutunamayanlar'ın yazarı Oğuz Atay hangi yıl vefat etmiştir?
+2|1962||en:Ahmet Hamdi Tanpınar|Huzur'un yazarı Ahmet Hamdi Tanpınar hangi yıl vefat etmiştir?
+1|1948||en:Sabahattin Ali|Kürk Mantolu Madonna'nın yazarı Sabahattin Ali hangi yıl vefat etmiştir?
+2|1945||en:Halit Ziya Uşaklıgil|Aşk-ı Memnu'nun yazarı Halit Ziya Uşaklıgil hangi yıl vefat etmiştir?
+2|1956||en:Reşat Nuri Güntekin|Çalıkuşu'nun yazarı Reşat Nuri Güntekin hangi yıl vefat etmiştir?
+2|1970||en:Orhan Kemal|Orhan Kemal hangi yıl vefat etmiştir?
+2|1974||en:Yakup Kadri Karaosmanoğlu|Yaban'ın yazarı Yakup Kadri Karaosmanoğlu hangi yıl vefat etmiştir?
+2|1961||en:Peyami Safa|Dokuzuncu Hariciye Koğuşu'nun yazarı Peyami Safa hangi yıl vefat etmiştir?
+1|1963||en:Nâzım Hikmet|Nâzım Hikmet hangi yıl vefat etmiştir?
+2|1958||en:Yahya Kemal Beyatlı|Yahya Kemal Beyatlı hangi yıl vefat etmiştir?
+1|1950||en:Orhan Veli Kanık|Orhan Veli Kanık hangi yıl vefat etmiştir?
+2|1983||en:Necip Fazıl Kısakürek|Necip Fazıl Kısakürek hangi yıl vefat etmiştir?
+2|2005||en:Attilâ İlhan|Attilâ İlhan hangi yıl vefat etmiştir?
+3|1933||en:Ahmet Haşim|Ahmet Hâşim hangi yıl vefat etmiştir?
+3|2008||en:Fazıl Hüsnü Dağlarca|Fazıl Hüsnü Dağlarca hangi yıl vefat etmiştir?
+2|1990||en:Cemal Süreya|Cemal Süreya hangi yıl vefat etmiştir?
+1|1936||en:Mehmet Akif Ersoy|Mehmet Akif Ersoy hangi yıl vefat etmiştir?
+1|1996||en:Zeki Müren|Zeki Müren hangi yıl vefat etmiştir?
+1|1999||en:Barış Manço|Barış Manço hangi yıl vefat etmiştir?
+1|2004||en:Cem Karaca|Cem Karaca hangi yıl vefat etmiştir?
+3|1985||en:Cemal Reşit Rey|Cemal Reşit Rey hangi yıl vefat etmiştir?
+3|1972||en:Ulvi Cemal Erkin|Ulvi Cemal Erkin hangi yıl vefat etmiştir?
+3|1991||en:Ahmet Adnan Saygun|Yunus Emre Oratoryosu'nun bestecisi Adnan Saygun hangi yıl vefat etmiştir?
+3|1999||en:Necil Kazım Akses|Necil Kazım Akses hangi yıl vefat etmiştir?
+2|1840||en:Claude Monet|Claude Monet hangi yıl doğmuştur?
+2|1904||en:Salvador Dalí|Salvador Dalí hangi yıl doğmuştur?
+3|1632||en:Johannes Vermeer|Johannes Vermeer hangi yıl doğmuştur?
+2|1475||en:Michelangelo|Michelangelo hangi yıl doğmuştur?
+1|1452||en:Leonardo da Vinci|Leonardo da Vinci hangi yıl doğmuştur?
+1|1881||en:Pablo Picasso|Pablo Picasso hangi yıl doğmuştur?
+1|1853||en:Vincent van Gogh|Vincent van Gogh hangi yıl doğmuştur?
+2|1928||en:Andy Warhol|Andy Warhol hangi yıl doğmuştur?
+2|1907||en:Frida Kahlo|Frida Kahlo hangi yıl doğmuştur?
+3|1887||en:Georgia O'Keeffe|Georgia O'Keeffe hangi yıl doğmuştur?
+3|1593||en:Artemisia Gentileschi|Artemisia Gentileschi hangi yıl doğmuştur?
+2|1571||en:Caravaggio|Caravaggio hangi yıl doğmuştur?
+3|1840||en:Auguste Rodin|Auguste Rodin hangi yıl doğmuştur?
+
+# art_works|sanat
+1|1503||en:Mona Lisa|Mona Lisa'nın yapımına hangi yıl başlanmıştır?
+1|1889||en:The Starry Night|Van Gogh'un Yıldızlı Gece tablosu hangi yıl yapılmıştır?
+1|1893||en:The Scream|Munch'un Çığlık tablosunun ilk versiyonu hangi yıl yapılmıştır?
+1|1937||en:Guernica (Picasso)|Picasso'nun Guernica tablosu hangi yıl yapılmıştır?
+2|1656||en:Las Meninas|Velázquez'in Las Meninas tablosu hangi yıl yapılmıştır?
+2|1512||en:The Creation of Adam|Adem'in Yaratılışı hangi yıl tamamlanmıştır?
+2|1498||en:The Last Supper (Leonardo)|Son Akşam Yemeği hangi yıl tamamlanmıştır?
+1|450|milyon $|en:Salvator Mundi (Leonardo)|Salvator Mundi 2017'de yaklaşık kaç milyon dolara satılmıştır?
+3|44|milyon $|en:Jimson Weed/White Flower No. 1|O'Keeffe'nin Jimson Weed tablosu 2014'te yaklaşık kaç milyon dolara satılmıştır?
+2|1872||en:Impression, Sunrise|Monet'nin İzlenim: Gün Doğumu tablosu hangi yıl yapılmıştır?
+2|1931||en:The Persistence of Memory|Dalí'nin Belleğin Azmi tablosu hangi yıl yapılmıştır?
+2|1642||en:The Night Watch|Rembrandt'ın Gece Devriyesi hangi yıl tamamlanmıştır?
+2|1511||en:The School of Athens|Raffaello'nun Atina Okulu hangi yıl tamamlanmıştır?
+
+# animals_curated|hayvanlar
+2|22|ay|en:Elephant|Bir filin gebelik süresi yaklaşık kaç aydır?
+2|283|gün|en:Cattle|Bir ineğin gebelik süresi yaklaşık kaç gündür?
+1|63|gün|en:Canine reproduction|Bir köpeğin gebelik süresi yaklaşık kaç gündür?
+1|270|°|en:Owl|Bir baykuş kafasını kaç derece döndürebilir?
+2|44|diş|en:Horse teeth|Yetişkin bir atta en çok kaç diş bulunabilir?
+3|2000|yumurta|en:Queen bee|Bir kraliçe arı günde yaklaşık kaç yumurta bırakabilir?
+3|95|%|en:Jellyfish|Deniz anasının vücudunun yüzde kaçı sudur?
+2|850|m|en:Beaver dam|Bilinen en uzun kunduz barajı yaklaşık kaç metredir?
+3|1500|g|en:Common ostrich|Bir deve kuşu yumurtası yaklaşık kaç gramdır?
+2|115|cm|en:Emperor penguin|Bir imparator pengueninin boyu yaklaşık kaç santimetredir?
+3|45|cm|en:Giraffe|Bir zürafanın dili yaklaşık kaç santimetredir?

@@ -43,7 +43,7 @@ Uygulama Google Play'de yayınlanacağı için **ücretsiz olsa bile ticari dağ
 | 17 | PubChem | Kamu malı + katkıcı hakları | Kısmen | — | **Wikidata üzerinden kullan** |
 | 18 | Open Food Facts | ODbL (share-alike) | Evet ama paylaşım zorunluluğu | Zorunlu | **Kullanma** |
 | 19 | Guinness World Records sitesi | Tüm hakları saklı | Hayır | — | **Yalnızca elle referans** |
-| 20 | Vikipedi metni | CC BY-SA 4.0 | Evet ama metin kopyalanırsa share-alike | Zorunlu | **Yalnızca referans, metin kopyalama** |
+| 20 | Vikipedi metni | CC BY-SA 4.0 | Evet ama metin kopyalanırsa share-alike | Zorunlu | **Elle seçilen soruların doğrulaması; metin kopyalama** |
 
 ---
 

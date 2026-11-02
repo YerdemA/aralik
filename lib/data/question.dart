@@ -18,6 +18,9 @@ enum QuestionCategory {
   everyday('gündelik'),
   animals('hayvanlar'),
   companies('şirketler'),
+  ottoman('osmanlı'),
+  architecture('mimari'),
+  art('sanat'),
 
   /// Fallback for a category this app version does not know yet (added by
   /// a content update). The question stays playable and is shown under
