@@ -7,5 +7,6 @@
   "questions.json": "1819b13520d419227a103406fc1f19f3f244899623a3d0c241e6781a0481c58c",
   "places.json": "9c6f6f8b3b361e167cca743f3bf668a008730d93335914d57bf1b283058c2617",
   "schedule.json": "2a13814a66d03cd9b3303e64238df10058396b8298483f6fcdd25c6236db4b2e"
- }
+ },
+ "leaderboard": "https://kabaca-leaderboard.yusuferdemaykacc.workers.dev"
 }

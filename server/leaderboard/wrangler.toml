@@ -22,4 +22,4 @@ REGISTER_LIMIT = "5"
 binding = "DB"
 database_name = "kabaca-leaderboard"
 # Filled in after `npx wrangler d1 create kabaca-leaderboard` (see README.md).
-database_id = "REPLACE_WITH_DATABASE_ID"
+database_id = "33c22d8e-4c17-4a60-8fc0-cee7208cf1bc"
