@@ -2,6 +2,10 @@ name = "kabaca-leaderboard"
 main = "src/index.js"
 compatibility_date = "2026-11-01"
 workers_dev = true
+# Optional: serve on your own domain too (its DNS must be on this Cloudflare
+# account and the name must not have a DNS record yet). Must stay above the
+# [sections] below.
+# routes = [{ pattern = "kabaca.example.com", custom_domain = true }]
 
 # Daily clean-up of the hashed IPs used by the registration limit.
 [triggers]

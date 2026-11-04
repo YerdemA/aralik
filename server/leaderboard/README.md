@@ -24,11 +24,13 @@ PowerShell, bu klasörde (`server\leaderboard`):
 ```powershell
 npm install
 npx wrangler login                              # tarayıcıda Cloudflare hesabına izin ver
-npx wrangler d1 create kabaca-leaderboard       # çıktıdaki database_id'yi wrangler.toml'a yaz
+npx wrangler d1 create kabaca-leaderboard       # config'e eklemeyi sorarsa hayır de; database_id'yi wrangler.toml'a yaz
 npm run db:init                                 # tabloları kur
-npx wrangler secret put IP_SALT                 # rastgele uzun bir metin yapıştır (IP özetleri için)
 npm run deploy                                  # adresi yazar: https://kabaca-leaderboard.<hesap>.workers.dev
+npx wrangler secret put IP_SALT                 # rastgele uzun bir metin yapıştır (IP özetleri için)
 ```
+Kendi alan adını kullanmak için (alanın DNS'i aynı hesapta olmalı) `wrangler.toml`'daki `routes` satırını aç ve
+yeniden `npm run deploy` çalıştır. DNS kaydını ve sertifikayı Cloudflare kendisi kurar.
 
 Sonra adresi uygulamalara duyur (depo kökünde):
 

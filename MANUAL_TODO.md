@@ -43,19 +43,18 @@ Yeni kolay sorular gerekiyor (SOURCES.md 3. adım ve sonrası), sonra `build_sch
 ## 7. Süre sınırı + Günün liderleri (1.0.2+3) — sırayla
 Kod, testler, sunucu ve paket hazır. Kalan her adım senin hesaplarınla ilgili. Ayrıntılı komutlar: `server/leaderboard/README.md`.
 
-**b) Cloudflare hesabı aç** (ücretsiz, kart istemez): https://dash.cloudflare.com/sign-up
-Workers bölümüne ilk girişte bir `workers.dev` alt alan adı seçmen istenir (ör. `yerdema`). Sunucu adresi `https://kabaca-leaderboard.<alt-alan>.workers.dev` olur.
+**b) Cloudflare:** Mevcut hesabın kullanılır. Adres ya hesabın `workers.dev` alt alanı (`https://kabaca-leaderboard.<alt-alan>.workers.dev`) ya da alan adının bir alt alanı olur (ör. `https://kabaca.<alan-adın>`, alan adının DNS'i aynı Cloudflare hesabında olmalı). Alan adı için `wrangler.toml`'daki `routes` satırını aç (dosyada açıklaması var).
 
 **c) Sunucuyu kur ve yayına al** (PowerShell, `server\leaderboard` klasöründe):
 ```powershell
 npm install
 npx wrangler login
-npx wrangler d1 create kabaca-leaderboard     # çıkan database_id'yi wrangler.toml'daki REPLACE_WITH_DATABASE_ID yerine yaz
+npx wrangler d1 create kabaca-leaderboard     # "config'e ekleyeyim mi?" sorusuna HAYIR de; çıkan database_id'yi wrangler.toml'daki REPLACE_WITH_DATABASE_ID yerine yaz
 npm run db:init
-npx wrangler secret put IP_SALT               # rastgele uzun bir metin gir, bir yere not etmen gerekmez
 npm run deploy
+npx wrangler secret put IP_SALT               # rastgele uzun bir metin gir, bir yere not etmen gerekmez
 ```
-Kontrol: tarayıcıda `https://kabaca-leaderboard.<alt-alan>.workers.dev/v1` adresi `{"ok":true}` göstermeli.
+Kontrol: tarayıcıda `<adres>/v1` adresi `{"ok":true}` göstermeli.
 (İstersen bu adımı Claude'a da yaptırabilirsin: `npx wrangler login` sonrası "deploy et" demen yeterli.)
 
 **d) Adresi uygulamalara duyur** (depo kökünde):
