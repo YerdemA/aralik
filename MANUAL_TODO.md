@@ -43,7 +43,11 @@ Yeni kolay sorular gerekiyor (SOURCES.md 3. adım ve sonrası), sonra `build_sch
 ## 7. Süre sınırı + Günün liderleri (1.0.2+3) — sırayla
 Kod, testler, sunucu ve paket hazır. Kalan her adım senin hesaplarınla ilgili. Ayrıntılı komutlar: `server/leaderboard/README.md`.
 
-**a) Kaydet.** Değişiklikler commit edilmedi (CLAUDE.md, SOURCES.md, `soru-adaylari/` gibi senin önceki değişikliklerin de duruyor). İstersen Claude'a "commit et" de.
+**a) Dalı main'e al.** Bütün iş `kapali-test-1.0.2` dalında commit edildi (CLAUDE.md'deki senin önceki düzenlemen de bu commit'te). Gözden geçirip birleştir:
+```powershell
+git checkout main; git merge kapali-test-1.0.2
+```
+Senin takip edilmeyen dosyalarına (kökteki `SOURCES.md`, `soru-adaylari/`, `.claude/`) dokunulmadı, commit'e girmediler.
 
 **b) Cloudflare hesabı aç** (ücretsiz, kart istemez): https://dash.cloudflare.com/sign-up
 Workers bölümüne ilk girişte bir `workers.dev` alt alan adı seçmen istenir (ör. `yerdema`). Sunucu adresi `https://kabaca-leaderboard.<alt-alan>.workers.dev` olur.
