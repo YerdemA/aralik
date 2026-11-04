@@ -1,5 +1,6 @@
 import 'dart:typed_data';
 
+import 'package:aralik/core/day_mood.dart';
 import 'package:aralik/core/strings.dart';
 import 'package:aralik/core/theme.dart';
 import 'package:aralik/features/result/share_card.dart';
@@ -47,6 +48,27 @@ void main() {
       ),
     );
     expect(pngSize(png!), (1080, 1920));
+  });
+
+  testWidgets('renders every mood', (tester) async {
+    const days = {
+      DayMood.legend: [100, 98, 95, 97, 93],
+      DayMood.great: [92, 85, 61, 88, 74],
+      DayMood.proud: [90, 75, 40, -20, 72],
+      DayMood.unsure: [60, -50, 35, 12, 48],
+      DayMood.down: [-50, 20, -50, -38, 10],
+    };
+    for (final MapEntry(key: mood, value: points) in days.entries) {
+      final card = ShareCardData(
+        dayIndex: 3,
+        results: [for (final p in points) (points: p, hit: p >= 40)],
+        hits: 40,
+        answered: 50,
+      );
+      expect(card.mood, mood);
+      final png = await tester.runAsync(() => renderShareCard(card));
+      expect(pngSize(png!), (1080, 1920), reason: '$mood');
+    }
   });
 
   testWidgets('the share sheet offers the image and the text', (tester) async {

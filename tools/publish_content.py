@@ -68,7 +68,15 @@ def main(argv: list[str]) -> int:
         action="store_true",
         help="yayındakinin devamı olma şartını atla (yalnızca ilk oyuncudan önce)",
     )
+    parser.add_argument(
+        "--leaderboard",
+        metavar="URL",
+        help="liderlik sunucusunun https adresi (manifest'e yazılır; '' kapatır)",
+    )
     args = parser.parse_args(argv)
+    if args.leaderboard and not args.leaderboard.startswith("https://"):
+        print("HATA: --leaderboard bir https adresi olmalı.")
+        return 1
 
     validate = subprocess.run(
         [
@@ -96,8 +104,27 @@ def main(argv: list[str]) -> int:
     else:
         check_append_only()
 
+    # The leaderboard address is read on every manifest check, so changing
+    # it needs no new content version.
+    leaderboard = (
+        manifest.get("leaderboard")
+        if args.leaderboard is None
+        else args.leaderboard or None
+    )
+
     hashes = {name: sha256(src) for name, src in FILES.items()}
     if hashes == manifest.get("hashes"):
+        if leaderboard != manifest.get("leaderboard"):
+            if leaderboard:
+                manifest["leaderboard"] = leaderboard
+            else:
+                manifest.pop("leaderboard", None)
+            manifest_path.write_text(
+                json.dumps(manifest, indent=1) + "\n", encoding="utf-8"
+            )
+            print(f"Liderlik adresi güncellendi: {leaderboard or 'kapalı'}")
+            print("Canlıya almak için docs/ klasörünü commit edip push edin.")
+            return 0
         print(f"Değişiklik yok, sürüm {manifest['version']} kaldı.")
         return 0
 
@@ -111,6 +138,8 @@ def main(argv: list[str]) -> int:
         "schedule": "schedule.json",
         "hashes": hashes,
     }
+    if leaderboard:
+        manifest["leaderboard"] = leaderboard
     manifest_path.write_text(json.dumps(manifest, indent=1) + "\n", encoding="utf-8")
     print(f"Yayına hazır: sürüm {manifest['version']} -> docs/content/")
     print("Canlıya almak için docs/ klasörünü commit edip push edin.")

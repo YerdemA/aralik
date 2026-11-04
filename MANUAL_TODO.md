@@ -31,6 +31,7 @@ Her şey `play-store/` klasöründe hazır (git'e girmez):
 Upload anahtarını (`aralik-upload.jks`) ve `android/key.properties` dosyasını yedeklemeyi unutma.
 
 ## 5b. Yeni sürümü yükle (1.0.1+2)
+**Henüz yüklemediysen bunu atla:** 1.0.2+3 (7. madde) bu sürümün her şeyini içerir. Mağaza girişi güncellemesi yine geçerli.
 Ana ekran ve renkler değişti, serbest modun adı "Bir tur at" oldu, yeni kategoriler geldi (Osmanlı, Mimari, Sanat). Sorular yayında; eski sürümde yeni kategoriler "Diğer" görünür.
 - Yükle: `play-store/release/kabaca-1.0.1+2.aab`, mapping ve symbols dosyaları; sürüm notu `play-store/listing/play-console-rehberi.md` içinde.
 - Mağaza girişini güncelle: `magaza-metinleri.md` uzun açıklaması, `play-store/graphics/`, `play-store/screenshots/play/`.
@@ -38,3 +39,52 @@ Ana ekran ve renkler değişti, serbest modun adı "Bir tur at" oldu, yeni kateg
 ## 6. Takvimi 15 Aralık 2026'dan önce uzat
 Takvim 45 gün (1 Kasım – 15 Aralık). Uzatılmazsa 16 Aralık'ta günlük sorular başa sarar.
 Yeni kolay sorular gerekiyor (SOURCES.md 3. adım ve sonrası), sonra `build_schedule.py` + `publish_content.py` + push. Uygulama güncellemesi gerekmez.
+
+## 7. Süre sınırı + Günün liderleri (1.0.2+3) — sırayla
+Kod, testler, sunucu ve paket hazır. Kalan her adım senin hesaplarınla ilgili. Ayrıntılı komutlar: `server/leaderboard/README.md`.
+
+**a) Kaydet.** Değişiklikler commit edilmedi (CLAUDE.md, SOURCES.md, `soru-adaylari/` gibi senin önceki değişikliklerin de duruyor). İstersen Claude'a "commit et" de.
+
+**b) Cloudflare hesabı aç** (ücretsiz, kart istemez): https://dash.cloudflare.com/sign-up
+Workers bölümüne ilk girişte bir `workers.dev` alt alan adı seçmen istenir (ör. `yerdema`). Sunucu adresi `https://kabaca-leaderboard.<alt-alan>.workers.dev` olur.
+
+**c) Sunucuyu kur ve yayına al** (PowerShell, `server\leaderboard` klasöründe):
+```powershell
+npm install
+npx wrangler login
+npx wrangler d1 create kabaca-leaderboard     # çıkan database_id'yi wrangler.toml'daki REPLACE_WITH_DATABASE_ID yerine yaz
+npm run db:init
+npx wrangler secret put IP_SALT               # rastgele uzun bir metin gir, bir yere not etmen gerekmez
+npm run deploy
+```
+Kontrol: tarayıcıda `https://kabaca-leaderboard.<alt-alan>.workers.dev/v1` adresi `{"ok":true}` göstermeli.
+(İstersen bu adımı Claude'a da yaptırabilirsin: `npx wrangler login` sonrası "deploy et" demen yeterli.)
+
+**d) Adresi uygulamalara duyur** (depo kökünde):
+```powershell
+python tools/publish_content.py --leaderboard https://kabaca-leaderboard.<alt-alan>.workers.dev/
+git add docs; git commit -m "Leaderboard URL, privacy policy"; git push
+```
+Bu push, güncellenen gizlilik politikasını da (`docs/privacy-policy.md`) yayınlar. **Paketi yüklemeden önce yap**, çünkü Play inceleme sırasında politikaya bakabilir.
+Uygulama, manifest'e en fazla 6 saatte bir baktığı için kupa simgesi ilk açılışta görünmeyebilir. Hemen denemek için: Ayarlar → Uygulamalar → Kabaca → Verileri temizle.
+
+**e) Play Console → Uygulama içeriği → Veri güvenliği formunu güncelle.** Artık "veri toplanıyor: Evet":
+- *Kişisel bilgiler → Kullanıcı kimlikleri* (takma ad + rastgele kimlik): toplanıyor, paylaşılmıyor, **isteğe bağlı**, amaç *Uygulama işlevselliği*.
+- *Uygulama etkinliği → Diğer kullanıcı işlemleri* (günlük cevaplar ve puan): toplanıyor, paylaşılmıyor, isteğe bağlı, amaç *Uygulama işlevselliği*.
+- Aktarım sırasında şifreleniyor: **Evet** (https). Kullanıcı silme isteğinde bulunabilir: **Evet** (uygulama içinde Ayarlar → Liderlik tablosu → Tablodan ayrıl).
+- Formda "hesap oluşturma" sorulursa **Evet (kullanıcı adıyla)** de. Hesap silme bağlantısı olarak gizlilik politikasının adresini ver: https://yerdema.github.io/aralik/privacy-policy.html (silme yolu "Günün liderleri" bölümünde yazıyor).
+
+**f) Yeni sürümü kapalı teste yükle:** `play-store/release/kabaca-1.0.2+3.aab`, mapping ve symbols dosyaları da aynı klasörde. Sürüm notu önerisi:
+```
+<tr-TR>
+• Günün setinde her soru için 15 saniye süre var.
+• Yeni: Günün liderleri! Bir takma adla katıl, günlük puanınla sıralamaya gir. Katılım isteğe bağlı, tablo her gün sıfırlanır.
+• Iskaların cezası yarıya indi: bir soruda en fazla −50.
+• Yenilenen paylaşım kartı: filozof skoruna göre seviniyor ya da üzülüyor.
+• Günler artık numarayla değil tarihle: "4 Kasım".
+</tr-TR>
+```
+
+**g) Telefonda dene:** Kupa simgesi → Tabloya katıl → takma ad seç → günün setini bitir. Puanın tabloda görünmeli. Sonra Ayarlar → Liderlik tablosu → Tablodan ayrıl ile verinin silindiğini kontrol et.
+
+Ayarlanabilir değerler: soru süresi `lib/core/question_timer.dart` (`dailyTimeLimit`, şu an 15 sn). Tablonun ilk 10'dan ilk 50'ye geçtiği katılımcı sayısı `server/leaderboard/wrangler.toml` (`FULL_BOARD_AT`, şu an 100; değiştirince `npm run deploy`).

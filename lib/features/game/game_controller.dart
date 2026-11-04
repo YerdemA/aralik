@@ -13,6 +13,10 @@ enum GamePhase {
 }
 
 /// A locked interval and its outcome.
+///
+/// When time ran out before a guess was typed there is no interval:
+/// [guess], [low] and [high] are null and the question scores
+/// [minPointsPerQuestion].
 @immutable
 class RoundAnswer {
   const RoundAnswer({
@@ -21,16 +25,28 @@ class RoundAnswer {
     required this.low,
     required this.high,
     required this.points,
-  });
+    this.timedOut = false,
+  }) : assert(
+         (guess == null) == (low == null) && (low == null) == (high == null),
+       );
 
   final Question question;
-  final int guess;
-  final int low;
-  final int high;
+  final int? guess;
+  final int? low;
+  final int? high;
   final int points;
 
-  bool get hit => isHit(low, high, question.answer);
-  Outcome get outcome => Outcome.of(low, high, question.answer);
+  /// Locked by the countdown, not by the player.
+  final bool timedOut;
+
+  /// Whether an interval was given (false only for an empty timeout).
+  bool get hasInterval => low != null;
+
+  bool get hit => hasInterval && isHit(low!, high!, question.answer);
+
+  /// Null without an interval: nothing to say where the answer fell.
+  Outcome? get outcome =>
+      hasInterval ? Outcome.of(low!, high!, question.answer) : null;
   ResultTier get tier => ResultTier.of(points: points, hit: hit);
 }
 
@@ -126,12 +142,38 @@ class GameController extends ChangeNotifier {
     );
   }
 
+  /// Whether the current question is locked (waiting for [next]).
+  bool get isLocked => _answers.length > _index;
+
   /// Locks the current interval and returns its outcome.
   RoundAnswer lock() {
     assert(_phase == GamePhase.width);
-    assert(_answers.length == _index, 'question already locked');
+    assert(!isLocked, 'question already locked');
+    return _add(_scored(timedOut: false));
+  }
+
+  /// Locks whatever is on screen when time runs out: the interval, or the
+  /// typed guess at the current width. With nothing typed the question
+  /// scores [minPointsPerQuestion], so letting time run out never beats
+  /// an answer.
+  RoundAnswer timeOut() {
+    assert(!isLocked, 'question already locked');
+    if (canConfirmGuess) return _add(_scored(timedOut: true));
+    return _add(
+      RoundAnswer(
+        question: question,
+        guess: null,
+        low: null,
+        high: null,
+        points: minPointsPerQuestion,
+        timedOut: true,
+      ),
+    );
+  }
+
+  RoundAnswer _scored({required bool timedOut}) {
     final b = interval;
-    final answer = RoundAnswer(
+    return RoundAnswer(
       question: question,
       guess: guess!,
       low: b.low,
@@ -142,7 +184,11 @@ class GameController extends ChangeNotifier {
         high: b.high,
         answer: question.answer,
       ),
+      timedOut: timedOut,
     );
+  }
+
+  RoundAnswer _add(RoundAnswer answer) {
     _answers.add(answer);
     notifyListeners();
     return answer;

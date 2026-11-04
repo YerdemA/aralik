@@ -38,7 +38,6 @@ void main() {
 
   testWidgets('fresh install offers today\'s set', (tester) async {
     await pumpHome(tester);
-    expect(find.text(AppStrings.previewEdition), findsNothing);
     expect(find.text(AppStrings.playToday), findsOneWidget);
     expect(find.text(AppStrings.freePlay), findsOneWidget);
     expect(find.text(AppStrings.streakDays(0)), findsOneWidget);
@@ -77,12 +76,9 @@ void main() {
     expect(find.text('287'), findsOneWidget); // last score
   });
 
-  testWidgets('the date and puzzle number are on today\'s card', (
-    tester,
-  ) async {
+  testWidgets('the date and weekday are on today\'s card', (tester) async {
     await pumpHome(tester);
-    final number = puzzleNumber(today);
-    expect(find.text(dayLabel(DateTime.now(), number)), findsOneWidget);
+    expect(find.text(dayLabelWithWeekday(dateOfDay(today))), findsOneWidget);
   });
 
   testWidgets('fits a small phone without overflowing', (tester) async {

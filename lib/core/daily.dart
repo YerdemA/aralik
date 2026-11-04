@@ -22,9 +22,9 @@ int dayIndexFor(DateTime now) {
   return today.difference(start).inDays;
 }
 
-/// Public puzzle number shown in the share text ("Kabaca #1" on day 0).
-/// Zero or negative before the epoch (closed test).
-int puzzleNumber(int dayIndex) => dayIndex + 1;
+/// Local calendar date of [dayIndex]; the inverse of [dayIndexFor].
+DateTime dateOfDay(int dayIndex) =>
+    DateTime(epoch.year, epoch.month, epoch.day + dayIndex);
 
 /// Consecutive completed days ending today, or ending yesterday while
 /// today's set is not done yet (the streak is still alive until midnight).

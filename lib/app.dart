@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import 'core/strings.dart';
 import 'core/theme.dart';
+import 'data/leaderboard.dart';
 import 'data/question_repository.dart';
 import 'data/settings_store.dart';
 import 'data/stats_store.dart';
@@ -15,11 +16,15 @@ class KabacaApp extends StatelessWidget {
     required this.repository,
     required this.stats,
     required this.settings,
+    this.leaderboard,
   });
 
   final QuestionRepository repository;
   final StatsStore stats;
   final SettingsStore settings;
+
+  /// Null hides the leaderboard (tests).
+  final LeaderboardStore? leaderboard;
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +49,7 @@ class KabacaApp extends StatelessWidget {
             repository: repository,
             stats: stats,
             settings: settings,
+            leaderboard: leaderboard,
           ),
         ),
       ),

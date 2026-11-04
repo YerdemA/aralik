@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
 
 import '../../core/strings.dart';
+import '../../data/leaderboard.dart';
 import '../../data/settings_store.dart';
 import '../../widgets/link_text.dart';
+import '../leaderboard/nickname_sheet.dart';
 import 'attributions_screen.dart';
 
 /// Settings: the theme, and "Hakkında" with data sources and licenses,
 /// open-source licenses and the privacy policy.
 class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({super.key, required this.settings});
+  const SettingsScreen({super.key, required this.settings, this.leaderboard});
 
   final SettingsStore settings;
+
+  /// Shows the leaderboard section while joined; null hides it.
+  final LeaderboardStore? leaderboard;
 
   @override
   Widget build(BuildContext context) {
@@ -60,6 +65,13 @@ class SettingsScreen extends StatelessWidget {
                 ),
               ),
             ),
+            if (leaderboard != null)
+              ListenableBuilder(
+                listenable: leaderboard!,
+                builder: (context, _) => leaderboard!.joined
+                    ? _LeaderboardSection(store: leaderboard!)
+                    : const SizedBox.shrink(),
+              ),
             const SizedBox(height: 24),
             const _SectionTitle(AppStrings.about),
             Card(
@@ -116,4 +128,75 @@ class _SectionTitle extends StatelessWidget {
     padding: const EdgeInsets.fromLTRB(4, 0, 4, 8),
     child: Text(text, style: Theme.of(context).textTheme.titleLarge),
   );
+}
+
+/// Nickname and leaving the leaderboard (deletes the data on the server).
+class _LeaderboardSection extends StatelessWidget {
+  const _LeaderboardSection({required this.store});
+
+  final LeaderboardStore store;
+
+  Future<void> _leave(BuildContext context) async {
+    final messenger = ScaffoldMessenger.of(context);
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text(AppStrings.leaveConfirmTitle),
+        content: const Text(AppStrings.leaveConfirmBody),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: const Text(AppStrings.cancel),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            child: const Text(AppStrings.leave),
+          ),
+        ],
+      ),
+    );
+    if (confirmed != true) return;
+    try {
+      await store.leave();
+      messenger.showSnackBar(
+        const SnackBar(content: Text(AppStrings.leftLeaderboard)),
+      );
+    } on LeaderboardException catch (e) {
+      messenger.showSnackBar(
+        SnackBar(content: Text(leaderboardFailureText(e.failure))),
+      );
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        const SizedBox(height: 24),
+        const _SectionTitle(AppStrings.leaderboardSection),
+        Card(
+          clipBehavior: Clip.antiAlias,
+          child: Column(
+            children: [
+              ListTile(
+                leading: const Icon(Icons.badge_rounded),
+                title: Text(store.account?.nickname ?? ''),
+                subtitle: const Text(AppStrings.nicknameSubtitle),
+                trailing: const Icon(Icons.edit_rounded),
+                onTap: () => showNicknameSheet(context, store),
+              ),
+              const Divider(height: 1),
+              ListTile(
+                leading: const Icon(Icons.logout_rounded),
+                title: const Text(AppStrings.leaveLeaderboard),
+                subtitle: const Text(AppStrings.leaveLeaderboardHint),
+                onTap: () => _leave(context),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
 }

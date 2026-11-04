@@ -16,7 +16,6 @@ abstract final class AppStrings {
       'Devam et ($done / $total)';
   static const todayDone = 'Bugünkü seti bitirdin';
   static const comeBackTomorrow = 'Yarın 5 yeni soru seni bekliyor.';
-  static const previewEdition = '(deneme)';
   static const todayTitle = 'Bugünün 5 sorusu';
   static const todayHint = 'Herkes bugün aynı soruları çözüyor.';
   static String scoreOutOf(int points, int max) => '$points / $max';
@@ -50,6 +49,8 @@ abstract final class AppStrings {
   static const finish = 'Bitir';
   static const delete = 'Sil';
   static const quit = 'Çık';
+  static String secondsLeft(int seconds) => '$seconds sn';
+  static String timeLimitHint(int seconds) => 'Soru başına $seconds saniye.';
 
   // Generated questions
   static String distanceQuestion(String from, String to) =>
@@ -62,6 +63,9 @@ abstract final class AppStrings {
   static const hit = 'İsabet!';
   static const miss = 'Iska';
   static const nearMiss = 'Kıl payı ıska';
+  static const timeUp = 'Süre doldu';
+  static const autoLocked = 'Süre dolunca aralığın kendiliğinden kilitlendi.';
+  static const noGuess = 'Tahmin yok';
   static const answer = 'Cevap';
   static const yourInterval = 'Aralığın';
   static const points = 'puan';
@@ -75,8 +79,65 @@ abstract final class AppStrings {
   static const shareImage = 'Görseli paylaş';
   static const shareTextOnly = 'Metni paylaş';
   static const shareCardScoreLabel = 'Bugünkü skorum';
-  static const shareCardPreview = 'Deneme';
   static const shareCardInvite = 'Sen de dene: Kabaca';
+  // Share card moods: the player speaks, since the card is theirs to share.
+  static const moodLegend = 'Efsane!';
+  static const moodLegendLine = 'Aralıklarım tam isabet, kaslarım yerinde.';
+  static const moodGreat = 'Harika!';
+  static const moodGreatLine = 'Bugün sayılar benden yanaydı.';
+  static const moodProud = 'Fena değil!';
+  static const moodProudLine = 'Bıyık altından gülmeye değer.';
+  static const moodUnsure = 'İdare eder.';
+  static const moodUnsureLine = 'Bazen tuttu, bazen tutmadı.';
+  static const moodDown = 'Bugün olmadı.';
+  static const moodDownLine = 'Yarın 5 yeni soruyla rövanş.';
+
+  // Leaderboard
+  static const leaderboard = 'Günün liderleri';
+  static String leaderboardPlayers(int n) => '$n oyuncu';
+  static const leaderboardResets = 'Tablo her gün yeni sorularla sıfırlanır.';
+  static const leaderboardEmpty = 'Henüz kimse yok. İlk sen ol!';
+  static const leaderboardJoin = 'Tabloya katıl';
+  static const leaderboardJoinTitle = 'Liderlere katıl';
+  static const leaderboardJoinBody =
+      'Bir takma ad seç. Tabloda yalnızca takma adın ve günlük puanın '
+      'görünür. Başka hiçbir bilgi gönderilmez.';
+  static const leaderboardFinishSet =
+      'Günün setini bitirince puanın buraya eklenir.';
+  static const leaderboardSendFailed = 'Puanın henüz gönderilemedi.';
+  static const leaderboardOffline =
+      'Bağlanılamadı. İnternetini kontrol edip tekrar dene.';
+  static const leaderboardError = 'Bir sorun oldu. Biraz sonra tekrar dene.';
+  static const leaderboardMissing =
+      'Hesabın sunucuda bulunamadı. Yeniden katılabilirsin.';
+  static String hitsOutOf(int hits, int total) => '$hits/$total isabet';
+  static const you = 'Sen';
+  static const retry = 'Tekrar dene';
+  static const nicknameLabel = 'Takma ad';
+  static const nicknameHint = '3–16 harf ya da rakam';
+  static const nicknameTooShort = 'En az 3 karakter olmalı.';
+  static const nicknameTooLong = 'En fazla 16 karakter olabilir.';
+  static const nicknameBadCharacters =
+      'Harf, rakam, boşluk ve . _ - kullanabilirsin. En az bir harf olmalı.';
+  static const nicknameTaken = 'Bu takma ad alınmış.';
+  static const nicknameBlocked = 'Bu takma ad kullanılamaz.';
+  static const rateLimited = 'Çok fazla deneme oldu. Biraz sonra tekrar dene.';
+  static const join = 'Katıl';
+  static const save = 'Kaydet';
+  static const cancel = 'Vazgeç';
+  static String joinedAs(String name) => 'Hoş geldin, $name!';
+  static const leaderboardSection = 'Liderlik tablosu';
+  static const nicknameSubtitle = 'Takma adın, değiştirmek için dokun';
+  static const changeNickname = 'Takma adı değiştir';
+  static const leaveLeaderboard = 'Tablodan ayrıl';
+  static const leaveLeaderboardHint =
+      'Takma adın ve puanların sunucudan silinir.';
+  static const leaveConfirmTitle = 'Tablodan ayrılsın mı?';
+  static const leaveConfirmBody =
+      'Takma adın ve gönderdiğin tüm puanlar sunucudan silinir. İstediğin '
+      'zaman yeniden katılabilirsin.';
+  static const leave = 'Ayrıl';
+  static const leftLeaderboard = 'Tablodan ayrıldın, verilerin silindi.';
 
   // Calibration feedback
   static const calibrationTooNarrow = 'Aralıkların fazla dar.';
@@ -169,11 +230,22 @@ const _months = [
   'Aralık',
 ];
 
-/// "1 Kasım · #42", or only the date without a puzzle number (closed test).
-String dayLabel(DateTime date, int number) {
-  final day = '${date.day} ${_months[date.month - 1]}';
-  return number > 0 ? '$day · #$number' : day;
-}
+const _weekdays = [
+  'Pazartesi',
+  'Salı',
+  'Çarşamba',
+  'Perşembe',
+  'Cuma',
+  'Cumartesi',
+  'Pazar',
+];
+
+/// "4 Kasım": names a daily set in the share text, card and leaderboard.
+String dayLabel(DateTime date) => '${date.day} ${_months[date.month - 1]}';
+
+/// "4 Kasım Çarşamba", on today's card.
+String dayLabelWithWeekday(DateTime date) =>
+    '${dayLabel(date)} ${_weekdays[date.weekday - 1]}';
 
 /// Display name of a question category.
 String categoryName(QuestionCategory c) => switch (c) {

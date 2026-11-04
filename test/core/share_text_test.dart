@@ -21,7 +21,7 @@ void main() {
           hits: 80,
           answered: 100,
         ),
-        'Kabaca #42 · 260/500\n🟩🟩🟨⬛🟩\nKalibrasyon %80',
+        'Kabaca · 12 Aralık · 260/500\n🟩🟩🟨⬛🟩\nKalibrasyon %80',
       );
     });
 
@@ -39,11 +39,11 @@ void main() {
           hits: 2,
           answered: 5,
         ),
-        'Kabaca #1 · 195/500\n🟩⬛⬛⬛🟨',
+        'Kabaca · 1 Kasım · 195/500\n🟩⬛⬛⬛🟨',
       );
     });
 
-    test('says "deneme" before the epoch', () {
+    test('dates the closed-test days before the epoch too', () {
       expect(
         dailyShareText(
           dayIndex: -3,
@@ -51,7 +51,7 @@ void main() {
           hits: 0,
           answered: 5,
         ),
-        startsWith('Kabaca (deneme) · 0/500'),
+        startsWith('Kabaca · 29 Ekim · 0/500'),
       );
     });
   });

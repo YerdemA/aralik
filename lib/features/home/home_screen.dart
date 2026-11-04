@@ -3,11 +3,13 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 
 import '../../core/daily.dart';
+import '../../core/question_timer.dart';
 import '../../core/free_play.dart';
 import '../../core/number_format.dart';
 import '../../core/scoring.dart';
 import '../../core/strings.dart';
 import '../../core/theme.dart';
+import '../../data/leaderboard.dart';
 import '../../data/question_repository.dart';
 import '../../data/settings_store.dart';
 import '../../data/stats_store.dart';
@@ -16,6 +18,7 @@ import '../../widgets/mascot.dart';
 import '../../widgets/stat_tile.dart';
 import '../game/game_controller.dart';
 import '../game/game_screen.dart';
+import '../leaderboard/leaderboard_screen.dart';
 import '../result/summary_screen.dart';
 import '../settings/settings_screen.dart';
 import '../stats/stats_screen.dart';
@@ -29,11 +32,15 @@ class HomeScreen extends StatefulWidget {
     required this.repository,
     required this.stats,
     required this.settings,
+    this.leaderboard,
   });
 
   final QuestionRepository repository;
   final StatsStore stats;
   final SettingsStore settings;
+
+  /// Null hides the leaderboard.
+  final LeaderboardStore? leaderboard;
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -45,6 +52,14 @@ class _HomeScreenState extends State<HomeScreen> {
 
   QuestionRepository get _repository => widget.repository;
   StatsStore get _stats => widget.stats;
+  LeaderboardStore? get _leaderboard => widget.leaderboard;
+
+  @override
+  void initState() {
+    super.initState();
+    // A finished set that could not be sent earlier (offline) goes now.
+    _leaderboard?.submitPending(_today);
+  }
 
   // Read on every build, so the screen rolls over at midnight on resume.
   int get _today => dayIndexFor(DateTime.now());
@@ -74,17 +89,28 @@ class _HomeScreenState extends State<HomeScreen> {
         builder: (_) => GameScreen(
           questions: remaining,
           alreadyAnswered: done,
-          onLocked: (a) => _stats.recordAnswer(
-            questionId: a.question.id,
-            category: a.question.category,
-            outcome: a.outcome,
-            dailyDay: day,
-            points: a.points,
-          ),
+          startQuestion: (position) =>
+              _stats.startDailyQuestion(day, position, DateTime.now()),
+          onLocked: (a) {
+            _stats.recordAnswer(
+              questionId: a.question.id,
+              category: a.question.category,
+              outcome: a.outcome,
+              dailyDay: day,
+              points: a.points,
+            );
+            // Kept on the device; sent only after joining the leaderboard.
+            _leaderboard?.recordDailyInterval(day, (
+              questionId: a.question.id,
+              low: a.low,
+              high: a.high,
+            ));
+          },
         ),
       ),
     );
     if (!mounted || answers == null || !_stats.isDayComplete(day)) return;
+    _leaderboard?.submit(day).ignore();
     await _showDaySummary(day);
   });
 
@@ -95,6 +121,19 @@ class _HomeScreenState extends State<HomeScreen> {
         hits: _stats.hits,
         answered: _stats.answered,
         dayIndex: day,
+        onLeaderboard: _leaderboard?.isAvailable == true
+            ? () => _openLeaderboard(day)
+            : null,
+      ),
+    ),
+  );
+
+  void _openLeaderboard(int day) => Navigator.of(context).push(
+    MaterialPageRoute<void>(
+      builder: (_) => LeaderboardScreen(
+        store: _leaderboard!,
+        day: day,
+        dayDone: _stats.isDayComplete(day),
       ),
     ),
   );
@@ -147,7 +186,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void _openSettings() => Navigator.of(context).push(
     MaterialPageRoute<void>(
-      builder: (_) => SettingsScreen(settings: widget.settings),
+      builder: (_) =>
+          SettingsScreen(settings: widget.settings, leaderboard: _leaderboard),
     ),
   );
 
@@ -220,6 +260,16 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                   ),
                                 ),
+                                if (_leaderboard?.isAvailable == true) ...[
+                                  IconButton.filledTonal(
+                                    onPressed: () => _openLeaderboard(today),
+                                    tooltip: AppStrings.leaderboard,
+                                    icon: const Icon(
+                                      Icons.emoji_events_rounded,
+                                    ),
+                                  ),
+                                  const SizedBox(width: 4),
+                                ],
                                 IconButton.filledTonal(
                                   onPressed: _openStats,
                                   tooltip: AppStrings.stats,
@@ -406,7 +456,7 @@ class _TodayCard extends StatelessWidget {
             : AppStrings.continueToday(done, questionsPerDay),
       ),
       children: [
-        _DayPill(label: dayLabel(DateTime.now(), puzzleNumber(today))),
+        _DayPill(label: dayLabelWithWeekday(dateOfDay(today))),
         const SizedBox(height: 12),
         Text(
           AppStrings.todayTitle,
@@ -417,7 +467,8 @@ class _TodayCard extends StatelessWidget {
         ),
         const SizedBox(height: 4),
         Text(
-          AppStrings.todayHint,
+          '${AppStrings.todayHint} '
+          '${AppStrings.timeLimitHint(dailyTimeLimit.inSeconds)}',
           style: textTheme.bodyMedium?.copyWith(
             color: Colors.white.withValues(alpha: .85),
           ),

@@ -1,3 +1,4 @@
+import 'package:aralik/core/question_timer.dart';
 import 'package:aralik/core/strings.dart';
 import 'package:aralik/core/theme.dart';
 import 'package:aralik/data/question.dart';
@@ -75,5 +76,100 @@ void main() {
     await tester.pumpAndSettle();
     expect(popped, hasLength(1));
     expect(popped!.single.hit, isTrue);
+  });
+
+  group('daily countdown', () {
+    late DateTime clock;
+    late List<RoundAnswer> locked;
+    final start = DateTime(2026, 11, 4, 9);
+
+    Future<void> open(WidgetTester tester, {DateTime? startedAt}) async {
+      tester.view.physicalSize = const Size(1080, 2340);
+      tester.view.devicePixelRatio = 3;
+      addTearDown(tester.view.reset);
+      clock = start;
+      locked = [];
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: AppTheme.light,
+          home: GameScreen(
+            questions: const [_question],
+            onLocked: locked.add,
+            startQuestion: (_) => startedAt ?? start,
+            now: () => clock,
+          ),
+        ),
+      );
+      await tester.pump(); // post-frame start of the clock
+    }
+
+    testWidgets('shows the seconds left', (tester) async {
+      await open(tester);
+      expect(
+        find.text(AppStrings.secondsLeft(dailyTimeLimit.inSeconds)),
+        findsOneWidget,
+      );
+      clock = start.add(const Duration(seconds: 6));
+      await tester.pump(const Duration(milliseconds: 250));
+      expect(
+        find.text(AppStrings.secondsLeft(dailyTimeLimit.inSeconds - 6)),
+        findsOneWidget,
+      );
+    });
+
+    testWidgets('time up without a guess shows "Süre doldu"', (tester) async {
+      await open(tester);
+      clock = start.add(dailyTimeLimit);
+      await tester.pump(const Duration(milliseconds: 250));
+      await tester.pumpAndSettle();
+      expect(locked, hasLength(1));
+      expect(locked.single.timedOut, isTrue);
+      expect(locked.single.hasInterval, isFalse);
+      expect(find.text(AppStrings.timeUp), findsOneWidget);
+      expect(find.text(AppStrings.noGuess), findsOneWidget);
+    });
+
+    testWidgets('time up locks the interval being set', (tester) async {
+      await open(tester);
+      await tester.tap(find.text('5'));
+      await tester.tap(find.text('000'));
+      await tester.tap(find.text(AppStrings.next));
+      await tester.pumpAndSettle(const Duration(milliseconds: 50));
+      clock = start.add(dailyTimeLimit);
+      await tester.pump(const Duration(milliseconds: 250));
+      await tester.pumpAndSettle();
+      expect(locked.single.hit, isTrue);
+      expect(find.text(AppStrings.hit), findsOneWidget);
+      expect(find.text(AppStrings.autoLocked), findsOneWidget);
+    });
+
+    testWidgets('a resumed question that ran out times out at once', (
+      tester,
+    ) async {
+      await open(
+        tester,
+        startedAt: start.subtract(const Duration(minutes: 10)),
+      );
+      await tester.pumpAndSettle();
+      expect(locked.single.timedOut, isTrue);
+      expect(find.text(AppStrings.timeUp), findsOneWidget);
+    });
+  });
+
+  testWidgets('free play has no countdown', (tester) async {
+    tester.view.physicalSize = const Size(1080, 2340);
+    tester.view.devicePixelRatio = 3;
+    addTearDown(tester.view.reset);
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: AppTheme.light,
+        home: const GameScreen(questions: [_question]),
+      ),
+    );
+    await tester.pump();
+    expect(
+      find.text(AppStrings.secondsLeft(dailyTimeLimit.inSeconds)),
+      findsNothing,
+    );
   });
 }

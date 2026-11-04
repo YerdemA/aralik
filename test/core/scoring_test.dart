@@ -89,7 +89,7 @@ void main() {
       expect(magnitude(5200, 6000, 5137), 94); // 1,2% too high
     });
 
-    test('a far miss costs points, floored at −100', () {
+    test('a far miss costs points, floored at −50', () {
       expect(magnitude(100, 200, 5137), minPointsPerQuestion);
     });
 

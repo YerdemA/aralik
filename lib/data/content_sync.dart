@@ -53,6 +53,7 @@ class ContentSync implements RemoteContent {
   static const _questionsKey = 'content_questions';
   static const _placesKey = 'content_places';
   static const _scheduleKey = 'content_schedule';
+  static const _leaderboardKey = 'leaderboard_url';
 
   final SharedPreferences _prefs;
   final HttpGet _get;
@@ -69,6 +70,14 @@ class ContentSync implements RemoteContent {
   String? get scheduleJson => _prefs.getString(_scheduleKey);
 
   int get version => _prefs.getInt(_versionKey) ?? 0;
+
+  /// The leaderboard server named by the manifest (`"leaderboard"`), or
+  /// null while there is none. Kept separate from the content version, so
+  /// the server can move without republishing the questions.
+  Uri? get leaderboardUri {
+    final url = _prefs.getString(_leaderboardKey);
+    return url == null ? null : Uri.tryParse(url);
+  }
 
   /// Checks for new content. [accept] decides whether the downloaded files
   /// may replace the current ones; they are stored all together or not at
@@ -89,6 +98,7 @@ class ContentSync implements RemoteContent {
       final manifest = jsonDecode(await _get(_base.resolve('manifest.json')));
       final remoteVersion = manifest['version'] as int;
       await _prefs.setInt(_checkedKey, now.millisecondsSinceEpoch);
+      await _storeLeaderboard(manifest['leaderboard']);
       if (remoteVersion <= version) return SyncResult.upToDate;
 
       final questions = await _get(
@@ -107,6 +117,16 @@ class ContentSync implements RemoteContent {
       return SyncResult.updated;
     } catch (_) {
       return SyncResult.failed; // offline, timeout, bad JSON: try later
+    }
+  }
+
+  /// Stores an https leaderboard URL; anything else turns it off.
+  Future<void> _storeLeaderboard(Object? url) async {
+    final uri = url is String ? Uri.tryParse(url) : null;
+    if (uri != null && uri.isScheme('https') && uri.host.isNotEmpty) {
+      await _prefs.setString(_leaderboardKey, uri.toString());
+    } else {
+      await _prefs.remove(_leaderboardKey);
     }
   }
 }

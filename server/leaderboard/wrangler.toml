@@ -1,0 +1,21 @@
+name = "kabaca-leaderboard"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+workers_dev = true
+
+# Daily clean-up of the hashed IPs used by the registration limit.
+[triggers]
+crons = ["0 0 * * *"]
+
+[vars]
+CONTENT_BASE = "https://yerdema.github.io/aralik/content/"
+FULL_BOARD_AT = "100"
+SMALL_BOARD = "10"
+FULL_BOARD = "50"
+REGISTER_LIMIT = "5"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "kabaca-leaderboard"
+# Filled in after `npx wrangler d1 create kabaca-leaderboard` (see README.md).
+database_id = "REPLACE_WITH_DATABASE_ID"

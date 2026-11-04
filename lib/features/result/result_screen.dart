@@ -56,7 +56,9 @@ class ResultScreen extends StatelessWidget {
                             const SizedBox(height: 8),
                             _Badge(
                               color: color,
-                              icon: answer.hit
+                              icon: !answer.hasInterval
+                                  ? Icons.timer_off_rounded
+                                  : answer.hit
                                   ? Icons.check_rounded
                                   : nearMiss
                                   ? Icons.gps_not_fixed_rounded
@@ -65,7 +67,9 @@ class ResultScreen extends StatelessWidget {
                             ),
                             const SizedBox(height: 12),
                             Text(
-                              answer.hit
+                              !answer.hasInterval
+                                  ? AppStrings.timeUp
+                                  : answer.hit
                                   ? AppStrings.hit
                                   : nearMiss
                                   ? AppStrings.nearMiss
@@ -81,6 +85,16 @@ class ResultScreen extends StatelessWidget {
                                   '${v > 0 ? '+' : ''}$v ${AppStrings.points}',
                               style: theme.textTheme.titleLarge,
                             ),
+                            if (answer.timedOut && answer.hasInterval) ...[
+                              const SizedBox(height: 8),
+                              Text(
+                                AppStrings.autoLocked,
+                                style: theme.textTheme.bodyMedium?.copyWith(
+                                  color: theme.colorScheme.onSurfaceVariant,
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
                             const SizedBox(height: 24),
                             Card(
                               child: Padding(
@@ -93,14 +107,16 @@ class ResultScreen extends StatelessWidget {
                                       q.text,
                                       style: theme.textTheme.titleMedium,
                                     ),
-                                    const SizedBox(height: 16),
-                                    IntervalBar(
-                                      isYear: isYear,
-                                      low: answer.low,
-                                      high: answer.high,
-                                      answer: q.answer,
-                                      bandColor: color,
-                                    ),
+                                    if (answer.hasInterval) ...[
+                                      const SizedBox(height: 16),
+                                      IntervalBar(
+                                        isYear: isYear,
+                                        low: answer.low!,
+                                        high: answer.high!,
+                                        answer: q.answer,
+                                        bandColor: color,
+                                      ),
+                                    ],
                                     const SizedBox(height: 12),
                                     _Row(
                                       label: AppStrings.answer,
@@ -109,12 +125,14 @@ class ResultScreen extends StatelessWidget {
                                     ),
                                     _Row(
                                       label: AppStrings.yourInterval,
-                                      value: formatRange(
-                                        answer.low,
-                                        answer.high,
-                                        unit: q.unit,
-                                        isYear: isYear,
-                                      ),
+                                      value: answer.hasInterval
+                                          ? formatRange(
+                                              answer.low!,
+                                              answer.high!,
+                                              unit: q.unit,
+                                              isYear: isYear,
+                                            )
+                                          : AppStrings.noGuess,
                                     ),
                                   ],
                                 ),

@@ -7,10 +7,13 @@ import '../data/question.dart';
 const int maxPointsPerQuestion = 100;
 const int maxDailyPoints = 500;
 
-/// A far miss costs points. The floor is low on purpose: a floor at 0
-/// would make far misses free and reward deliberately narrow intervals
-/// again (at ×2 uncertainty the best play would cover only ~74%).
-const int minPointsPerQuestion = -100;
+/// A far miss costs points, at most 50. The floor must stay below 0: a
+/// floor at 0 would make far misses free and reward deliberately narrow
+/// intervals again (at ×2 uncertainty the best play would cover only
+/// ~74%). −50 was chosen over −100 so that rounds end negative less
+/// often; it keeps the best play at ~87% cover for ×2 uncertainty and
+/// ~82% for ×2,8 (−100: 89% and 86%).
+const int minPointsPerQuestion = -50;
 
 /// Target hit rate for a "%90 sure" interval.
 const double calibrationTarget = 0.9;
@@ -24,8 +27,9 @@ const double intervalAlpha = 1 - calibrationTarget;
 const double missPenalty = 2 / intervalAlpha; // 20
 
 /// Points lost per unit of S: per doubling (log2) for magnitudes, per year
-/// for years. With the −100 floor this keeps an honest 90% interval the
-/// best strategy up to ~×2,8 (magnitude) or ~±25 years of uncertainty.
+/// for years. With the −50 floor this keeps an honest 90% interval the
+/// best strategy up to ~×2 (magnitude) or ~±15 years of uncertainty, and
+/// close to it up to ~×2,8 or ~±25 years.
 const double magnitudePointsPerLog2 = 10;
 const double yearPointsPerYear = 1;
 
@@ -74,7 +78,7 @@ double intervalScore({
   return (h - l) + missPenalty * outside;
 }
 
-/// Points for one locked interval: `100 − k·S`, clamped to −100…100, with
+/// Points for one locked interval: `100 − k·S`, clamped to −50…100, with
 /// k = 10 per log2 (magnitude) or 1 per year (year).
 ///
 /// A hit scores by width alone (4.500 – 5.500 m → 97). A near miss still

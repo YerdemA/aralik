@@ -6,24 +6,20 @@ import 'strings.dart';
 /// Wordle-style share card:
 ///
 /// ```
-/// Kabaca #42 · 380/500
+/// Kabaca · 4 Kasım · 380/500
 /// 🟩🟩🟨⬛🟩
 /// Kalibrasyon %80
 /// ```
 ///
 /// The calibration line appears only once there are enough answers for it
-/// to mean something. Before the epoch the title says "deneme" instead of a
-/// number.
+/// to mean something.
 String dailyShareText({
   required int dayIndex,
   required List<QuestionResult> results,
   required int hits,
   required int answered,
 }) {
-  final number = puzzleNumber(dayIndex);
-  final title = number > 0
-      ? '${AppStrings.appName} #$number'
-      : '${AppStrings.appName} ${AppStrings.previewEdition}';
+  final title = '${AppStrings.appName} · ${dayLabel(dateOfDay(dayIndex))}';
   final total = totalPoints(results);
   final squares = results.map((r) => r.tier.emoji).join();
   final rate = answered >= minAnswersForCalibration

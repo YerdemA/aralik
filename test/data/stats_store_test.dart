@@ -144,4 +144,39 @@ void main() {
       (category: QuestionCategory.geography, points: 85, outcome: Outcome.hit),
     ]);
   });
+
+  test(
+    'a timeout without a guess counts for the day, not calibration',
+    () async {
+      final stats = await StatsStore.open();
+      await stats.recordAnswer(
+        questionId: 'q1',
+        category: _geo,
+        outcome: null,
+        dailyDay: 3,
+        points: minPointsPerQuestion,
+      );
+      expect(stats.seenIds, {'q1'});
+      expect(stats.answered, 0);
+      expect(stats.hits, 0);
+      expect(stats.answerLog, isEmpty);
+      expect(stats.dailyResults(3), [
+        (points: minPointsPerQuestion, hit: false),
+      ]);
+      expect((await StatsStore.open()).answered, 0);
+    },
+  );
+
+  test('a daily question keeps its first start time', () async {
+    final stats = await StatsStore.open();
+    final first = DateTime(2026, 11, 4, 9);
+    final later = first.add(const Duration(minutes: 2));
+    expect(stats.startDailyQuestion(3, 0, first), first);
+    expect(stats.startDailyQuestion(3, 0, later), first);
+    expect((await StatsStore.open()).startDailyQuestion(3, 0, later), first);
+    // The next question starts its own clock.
+    expect(stats.startDailyQuestion(3, 1, later), later);
+    // Other days are independent.
+    expect(stats.startDailyQuestion(4, 0, later), later);
+  });
 }

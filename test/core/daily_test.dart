@@ -36,9 +36,14 @@ void main() {
     });
   });
 
-  test('puzzleNumber starts at 1', () {
-    expect(puzzleNumber(0), 1);
-    expect(puzzleNumber(41), 42);
+  test('dateOfDay is the inverse of dayIndexFor', () {
+    expect(dateOfDay(0), DateTime(2026, 11, 1));
+    expect(dateOfDay(3), DateTime(2026, 11, 4));
+    expect(dateOfDay(61), DateTime(2027, 1, 1));
+    expect(dateOfDay(-2), DateTime(2026, 10, 30));
+    for (final d in [-40, -1, 0, 1, 150, 400]) {
+      expect(dayIndexFor(dateOfDay(d).add(const Duration(hours: 13))), d);
+    }
   });
 
   group('Schedule', () {

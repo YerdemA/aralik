@@ -49,7 +49,7 @@ Geliştiricinin emülatörde oynadıktan sonra aldığı notlar.
 3. **Aralık vererek puan almak kolay görünüyor (emin değil).** *Durum: açık.*
    - Rakamlar: kaydırıcının varsayılan konumu (0,3) tahminin ÷2 … ×2 aralığını verir (log2 genişlik 2). İsabette bu 80 puan ve 🟩 eder. En geniş aralık (÷10 … ×10) bile isabette 34 puan alır. Ekran görüntüsünde 240 – 1.000 km (4 kat geniş) aralık 79 puan aldı.
    - Puanlama kuralı dürüst %90 aralığını ödüllendirecek şekilde kurulu (`test/core/scoring_test.dart`). Bu yüzden "kolay" hissi büyük olasılıkla kuraldan değil, ölçekten geliyor: k = 10 ve 🟩 eşiği ≥70.
-   - Değiştirilebilecekler: k'yı büyütmek (aynı genişlik daha az puan), 🟩 eşiğini yükseltmek, varsayılan kaydırıcı konumunu daraltmak. k ile −100 tabanı birlikte ayarlanmalı, yoksa dürüst aralığın en iyi strateji olma özelliği bozulur. Değişiklikten sonra test yeniden doğrulanmalı.
+   - Değiştirilebilecekler: k'yı büyütmek (aynı genişlik daha az puan), 🟩 eşiğini yükseltmek, varsayılan kaydırıcı konumunu daraltmak. k ile taban birlikte ayarlanmalı, yoksa dürüst aralığın en iyi strateji olma özelliği bozulur. (2026-11-04: turların çoğu eksiyle bittiği için taban −100'den −50'ye çekildi. Ek seçenek olarak k = 5 değerlendirildi: hem eksi turları azaltır hem dürüst aralığı daha iyi korur, ama isabet puanlarını şişirir.) Değişiklikten sonra test yeniden doğrulanmalı.
    - Karar vermeden önce birkaç gün gerçek oyun verisine (istatistik ekranı) bakmak faydalı olur.
 
 ## Takvim uyarısı (2026-10-26)

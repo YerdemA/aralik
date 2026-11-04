@@ -99,4 +99,52 @@ void main() {
     game.type('0');
     expect(game.guess, 420);
   });
+
+  group('timeOut', () {
+    test('locks the interval on screen', () {
+      game.type('5000');
+      game.confirmGuess();
+      game.setWidth(0.3);
+      final expected = game.interval;
+      final a = game.timeOut();
+      expect(a.timedOut, isTrue);
+      expect(a.hasInterval, isTrue);
+      expect((a.low, a.high), (expected.low, expected.high));
+      expect(a.hit, isTrue);
+      expect(a.outcome, Outcome.hit);
+      expect(game.isLocked, isTrue);
+    });
+
+    test('locks a typed guess at the default width', () {
+      game.type('5000');
+      final a = game.timeOut();
+      expect(a.guess, 5000);
+      expect(a.hasInterval, isTrue);
+      expect(a.points, greaterThan(0));
+    });
+
+    test('without a guess scores the floor and has no outcome', () {
+      final a = game.timeOut();
+      expect(a.timedOut, isTrue);
+      expect(a.hasInterval, isFalse);
+      expect(a.guess, isNull);
+      expect(a.hit, isFalse);
+      expect(a.outcome, isNull);
+      expect(a.points, minPointsPerQuestion);
+      expect(a.tier, ResultTier.miss);
+      game.next();
+      expect(game.index, 1);
+      expect(game.isLocked, isFalse);
+    });
+
+    test('an empty timeout never beats a far miss', () {
+      game.type('1');
+      game.confirmGuess();
+      game.setWidth(0);
+      final farMiss = game.lock();
+      game.next();
+      final empty = game.timeOut();
+      expect(empty.points, lessThanOrEqualTo(farMiss.points));
+    });
+  });
 }

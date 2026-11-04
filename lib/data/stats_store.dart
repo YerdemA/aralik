@@ -32,6 +32,7 @@ class StatsStore extends ChangeNotifier {
   static const _completedKey = 'completed_days';
   static const _logKey = 'answer_log';
   static String _dailyKey(int day) => 'daily_results_$day';
+  static String _startedKey(int day) => 'daily_started_$day';
 
   final SharedPreferences _prefs;
   final Set<String> _seenIds;
@@ -74,26 +75,51 @@ class StatsStore extends ChangeNotifier {
     return past.isEmpty ? null : past.reduce((a, b) => a > b ? a : b);
   }
 
+  /// When the daily question at [position] (0-based) of [day] was first
+  /// shown. The first call stores [now]; later calls return that moment,
+  /// so leaving and coming back does not restart the countdown.
+  DateTime startDailyQuestion(int day, int position, DateTime now) {
+    final stored = _prefs.getString(_startedKey(day))?.split(':');
+    if (stored != null && stored.length == 2 && stored[0] == '$position') {
+      final millis = int.tryParse(stored[1]);
+      if (millis != null) return DateTime.fromMillisecondsSinceEpoch(millis);
+    }
+    // One entry per day is enough: only the current question can be open.
+    _prefs.setString(
+      _startedKey(day),
+      '$position:${now.millisecondsSinceEpoch}',
+    );
+    return now;
+  }
+
   /// Records a locked interval. Pass [dailyDay] for daily-set questions so
   /// the set can be resumed and the streak counted.
+  ///
+  /// A null [outcome] is a daily question whose time ran out before a guess
+  /// was typed: it counts in the daily score, but not in calibration (there
+  /// was no interval to be calibrated).
   Future<void> recordAnswer({
     required String questionId,
     required QuestionCategory category,
-    required Outcome outcome,
+    required Outcome? outcome,
     int? dailyDay,
     int points = 0,
   }) async {
     final hit = outcome == Outcome.hit;
     _seenIds.add(questionId);
-    _answered++;
-    if (hit) _hits++;
-    _log.add((category: category, points: points, outcome: outcome));
     final writes = <Future<bool>>[
       _prefs.setStringList(_seenKey, _seenIds.toList()),
-      _prefs.setInt(_answeredKey, _answered),
-      _prefs.setInt(_hitsKey, _hits),
-      _prefs.setStringList(_logKey, [for (final r in _log) _encodeRecord(r)]),
     ];
+    if (outcome != null) {
+      _answered++;
+      if (hit) _hits++;
+      _log.add((category: category, points: points, outcome: outcome));
+      writes.addAll([
+        _prefs.setInt(_answeredKey, _answered),
+        _prefs.setInt(_hitsKey, _hits),
+        _prefs.setStringList(_logKey, [for (final r in _log) _encodeRecord(r)]),
+      ]);
+    }
     if (dailyDay != null) {
       final daily = [...dailyResults(dailyDay), (points: points, hit: hit)];
       writes.add(

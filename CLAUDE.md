@@ -13,8 +13,9 @@ dediğinde gerçekten %90 isabet edip etmediğini ölçer.
 - Ayrıntılı yol haritası: `docs/PLAN.md`
 
 ## Temel ilkeler (her kararda bunlara uy)
-1. **Sıfır bütçe, sıfır backend.** Sunucu, Firebase, reklam SDK'sı, analytics yok. Uygulama internetsiz de eksiksiz çalışır.
-   Yeni sorular, uygulama güncellemesi gerekmeden GitHub Pages'teki statik dosyalardan indirilir (`data/content_sync.dart`). Hiçbir kişisel veri gönderilmez.
+1. **Sıfır bütçe, neredeyse sıfır backend.** Firebase, reklam SDK'sı, analytics yok. Uygulama internetsiz de eksiksiz çalışır.
+   Yeni sorular, uygulama güncellemesi gerekmeden GitHub Pages'teki statik dosyalardan indirilir (`data/content_sync.dart`).
+   Tek sunucu, **isteğe bağlı** günün liderleri tablosudur (`server/leaderboard/`, Cloudflare Workers + D1 ücretsiz katman). Katılmayan oyuncudan hiçbir veri gönderilmez. Katılandan yalnızca takma ad, rastgele kimlik ve günlük setin aralıkları gider. Başka bir sunucu ya da veri toplama eklenmez.
 2. **Küçük boyut.** Hedef: Play indirme boyutu < 8 MB. Yeni bir paket eklemeden önce gerekçesini yaz ve bana sor.
 3. **Net arayüz.** Her ekranda tek bir ana eylem olur. Büyük dokunma alanları kullan. Metin kısa olsun. Animasyonlar hafif tutulur (implicit animations).
 4. **Hız.** Soğuk açılış < 1 sn hissi. Soru bankası lazy değil ama tek seferde parse edilir ve cache'lenir.
@@ -31,40 +32,6 @@ dediğinde gerçekten %90 isabet edip etmediğini ölçer.
 - Kullanılmayacaklar: `google_fonts` (çalışma anında indirir), `intl` (sayı biçimlendirme için kendi yardımcımız var), görsel/Lottie asset'leri, ikon paketleri (Material Icons yeterli).
 - Font: sistem fontu (Roboto). Gerekirse tek bir font, Latin+Türkçe subset olarak eklenir.
 - Veri üretimi: `tools/` altında Python 3 scriptleri (uygulamaya dahil edilmez).
-
-## Klasör yapısı
-```
-lib/
-  main.dart
-  app.dart                  # MaterialApp, tema, route'lar
-  core/
-    theme.dart              # renkler, tipografi (açık/koyu tema)
-    strings.dart            # TÜM Türkçe arayüz metinleri burada
-    number_format.dart      # Türkçe sayı biçimi: 1.234.567 / 3,5
-    scoring.dart            # puanlama formülleri (saf fonksiyonlar)
-    daily.dart              # günün indeksi ve günlük set seçimi
-  data/
-    question.dart           # model + fromJson
-    question_repository.dart
-    stats_store.dart        # shared_preferences sarmalayıcısı
-    settings_store.dart     # ayarlar (tema)
-  features/
-    intro/                  # soğuk açılışta kısa giriş animasyonu (atlanabilir)
-    home/                   # ana ekran: günün seti, seri, kalibrasyon
-    game/                   # soru ekranı + tahmin/aralık girişi
-    result/                 # soru sonucu + gün özeti + paylaş
-    stats/                  # istatistikler, kalibrasyon grafiği
-    settings/               # ayarlar → hakkında: veri kaynakları, lisanslar, gizlilik
-  widgets/                  # ortak küçük widget'lar
-assets/questions/questions.json
-assets/questions/schedule.json  # günlük takvim: gün → 5 soru id'si (yalnızca sona eklenir)
-assets/data/places.json     # il merkezi + başkent koordinatları (mesafe soruları)
-assets/data/attributions.json   # atıf listesi (tools/sources.json'dan üretilir)
-tools/                      # Python veri hattı; ham dökümler tools/raw/<kaynak>/ (+ _meta.json)
-tools/sources.json          # tüm veri kaynakları: lisans, atıf, durum, veri setleri
-docs/                       # PLAN.md, SOURCES.md, privacy-policy.md, attributions.md (GitHub Pages)
-test/
-```
 
 ## Soru veri formatı
 ```json
@@ -101,18 +68,27 @@ test/
   İndirilen banka ve takvim, uygulamadakilerin birebir devamı olmak zorundadır (aynı id'ler ve günler, aynı sıra), takvimdeki her id bankada bulunmalıdır. Değilse üçü birden reddedilir.
 - **Veri kaynakları ve atıf:** Her kaynak `tools/sources.json` içinde lisansı ve atıf satırıyla durur (ayrıntı: `docs/SOURCES.md`). `python tools/build_attributions.py` kullanımdaki kaynakları `assets/data/attributions.json` ve `docs/attributions.md` olarak yazar. Uygulamada Ayarlar → Veri kaynakları ve lisanslar ekranında gösterilir.
 - **Giriş akışı:** (1) Kullanıcı en iyi tahminini kendi sayı klavyemizle girer. (2) Bir kaydırıcıyla aralığın genişliğini ayarlar. `magnitude` için kaydırıcı logaritmiktir, `year` için ±yıl olarak çalışır. Ekranda canlı olarak "4.500 – 5.500 m" gösterilir. (3) "Kilitle" butonu.
+- **Süre sınırı (yalnızca günlük set):** Soru başına 15 sn (`core/question_timer.dart`, `dailyTimeLimit`), soru ilk göründüğü andan başlar. Başlangıç anı kaydedilir (`StatsStore.startDailyQuestion`), çıkıp geri gelmek süreyi sıfırlamaz.
+  Süre dolunca ekrandaki aralık (ya da yazılı tahmin varsayılan genişlikle) kendiliğinden kilitlenir. Hiç tahmin yoksa soru taban puanı (−50) alır ve ⬛ olur, kalibrasyona sayılmaz. Taban puan, süreyi bilerek doldurmanın hiçbir cevaptan kârlı olmamasını sağlar. Serbest modda süre yoktur.
 - **Puan (`scoring.dart`), interval score (α = 0,1):**
   - Ceza `S = genişlik + 20 × (cevabın aralık dışında kalan mesafesi)`. `magnitude` için log2 ekseninde, `year` için yıl cinsinden.
-  - Puan `round(100 − k·S)`, −100…100 arasında kırpılır. `magnitude` için k = 10, `year` için k = 1.
-  - Bu kural matematiksel olarak dürüst %90 aralığı ödüllendirir. Bilerek dar aralık vermek kazandırmaz. Taban bu yüzden 0 değil, −100'dür: 0 tabanı uzak ıskaları bedava yapar ve dar aralığı yeniden kârlı kılar. Bu özellik `test/core/scoring_test.dart` içinde test edilir.
+  - Puan `round(100 − k·S)`, −50…100 arasında kırpılır. `magnitude` için k = 10, `year` için k = 1.
+  - Bu kural matematiksel olarak dürüst %90 aralığı ödüllendirir. Bilerek dar aralık vermek kazandırmaz. Taban bu yüzden 0 değil, −50'dir: 0 tabanı uzak ıskaları bedava yapar ve dar aralığı yeniden kârlı kılar. (Taban 2026-11-04'te, turlar çok sık eksiyle bittiği için −100'den −50'ye çekildi. Bedeli: ×2,8 belirsizlikte en kârlı aralık %86 yerine ~%82'yi kapsar.) Bu özellik `test/core/scoring_test.dart` içinde test edilir. Taban değişirse `server/leaderboard/src/scoring.js` de değişir.
   - Kıl payı ıska da puan alabilir. Uzak ıska eksi puandır.
   - Günlük maksimum 500.
 - **Kalibrasyon:** Tüm zamanlarda isabet eden aralıkların oranı. Hedef ~%90. Ekranda "%62, aralıkların fazla dar" ya da "%100, daha cesur ol" gibi geri bildirim gösterilir.
 - **Seri:** Günlük set tamamlanan ardışık günler.
+- **Günün liderleri (isteğe bağlı):** Giriş yok. Oyuncu bir takma adla katılır (3–16 karakter, benzersiz, sunucuda kelime filtresi; kural `core/nickname.dart` ve `server/leaderboard/src/nickname.js`). Uygulama rastgele kimlik ve gizli anahtarı saklar (`data/leaderboard.dart`).
+  Günlük setin 5 aralığı (katılmadan da) cihazda tutulur. Set bitince ve oyuncu katılmışsa gönderilir. Puanı sunucu, yayınlanmış banka ve takvimden **kendisi hesaplar** (`src/scoring.js`, `scoring.dart` ile aynı: `server/leaderboard/test/scoring_vectors.json` iki tarafta da test edilir; formül değişirse ikisi birlikte değişir).
+  Her günün ayrı tablosu vardır, yeni sorularla tablo sıfırlanır. Gönderim yalnızca dün, bugün ve yarın için kabul edilir (Türkiye saati). Eşitlikte önce gönderen öndedir. Toplam oyuncu `FULL_BOARD_AT` (100) olana kadar ilk 10, sonra ilk 50 gösterilir (`wrangler.toml`).
+  Sunucu adresi uygulamaya gömülü değildir: manifest'teki `leaderboard` alanından okunur (`python tools/publish_content.py --leaderboard URL`). Adres yoksa liderlik arayüzü görünmez.
 - **Paylaşım:** Gün özetindeki "Paylaş" bir önizleme açar. İki seçenek var: görsel kart (`features/result/share_card.dart`, 1080 × 1920, hikâye/durum için; metin açıklama olarak eklenir) ya da yalnızca metin. Görsel `share_plus` ile bellekten paylaşılır, ek paket yok.
+  Kart ana ekranın temasındadır (indigo, güneş sarısı, krem panel). Filozof günün toplamına göre 5 ruh hâlinden birindedir (`core/day_mood.dart`, çizim `widgets/philosopher.dart`): ≥450 efsane (kahkaha, kaslar), ≥350 harika (zafer yumruğu), ≥200 fena değil (göğüs kabarık, bıyık altından gülüş), ≥0 idare eder (kafa kaşıma, ter), <0 olmadı (yağmur bulutu). Ruh hâli olmadan çizilen düşünen filozof uygulama ikonudur, değişmez.
+  Kartları gözle kontrol etmek için: `flutter test tools/share/render_share_cards_test.dart` (çıktı `build/share_cards/`).
+- **Gün adı:** Günler numarayla değil tarihle anılır: paylaşımda ve tabloda "4 Kasım", ana ekranda "4 Kasım Çarşamba" (`dayLabel`, `dateOfDay`).
 - **Paylaşım metni (Wordle tarzı):**
   ```
-  Kabaca #42 · 380/500
+  Kabaca · 4 Kasım · 380/500
   🟩🟩🟨⬛🟩
   Kalibrasyon %80
   ```
@@ -126,17 +102,7 @@ test/
 - Bir görev bitince kısa özet ver ve bir sonraki adımı öner. Büyük mimari değişiklik öncesi onay iste.
 - Ortam: Windows 11, PowerShell. Komutları buna göre yaz.
 
-## Release yapılandırması
-- `android/app/build.gradle.kts` (Kotlin DSL): `isMinifyEnabled = true`, `isShrinkResources = true`.
-- INTERNET izni ana manifest'tedir. Yalnızca içerik güncellemesi için kullanılır.
-- Build: `flutter build appbundle --release --obfuscate --split-debug-info=build/symbols`
-- Uygulama ikonu: `tools/icon/render_icon_test.dart` Flutter'ın kendi çizim motoruyla üretir (paket yok). Uyarlanabilir, yuvarlak ve tek renkli (Android 13) sürümleri vardır. Play ikonu `docs/store/icon-512.png`.
-- Gizlilik politikası: `docs/privacy-policy.md`, GitHub Pages ile yayınlanır. Özü: kişisel veri toplanmaz, oyun verileri cihazda kalır, yalnızca soru güncellemeleri GitHub Pages'ten indirilir.
-
 ## Komutlar
-- Çalıştır: `flutter run`
-- Test: `flutter test`
-- Analiz: `flutter analyze`
 - Wikidata ham verisini çek: `python tools/fetch_wikidata.py [veri_seti ...]`
 - Soru bankası üret: `python tools/build_questions.py [--fresh] [--dry-run] [--report]`
 - Elle seçilmiş soruları Vikipedi'den doğrulayıp ekle: `python tools/import_curated.py [--dry-run] [--report DOSYA]` (liste: `tools/curated/selection.txt`; `build_questions.py --fresh` bu soruları siler)
@@ -144,6 +110,7 @@ test/
 - Atıf listesini üret: `python tools/build_attributions.py`
 - Yer verisini üret: `python tools/build_places.py`
 - Bankayı ve takvimi doğrula: `python tools/validate_questions.py`
-- İçeriği yayına hazırla: `python tools/publish_content.py [--reset]` (sonra `docs/` commit + push; `--reset` yalnızca ilk oyuncudan önce)
+- Liderlik sunucusu testleri: `cd server/leaderboard; npm test` (Node 22.5+). Yayın: `npm run deploy` (ayrıntı: `server/leaderboard/README.md`)
+- İçeriği yayına hazırla: `python tools/publish_content.py [--reset] [--leaderboard URL]` (sonra `docs/` commit + push; `--reset` yalnızca ilk oyuncudan önce)
 - Uygulama ikonunu üret: `flutter test tools/icon/render_icon_test.dart`
 - Mağaza görsellerini üret: `flutter test tools/store/render_store_test.dart` (`play-store/screenshots/` içindeki ham ekran görüntülerinden)

@@ -23,7 +23,11 @@ class SummaryScreen extends StatelessWidget {
     required this.hits,
     required this.answered,
     this.dayIndex,
+    this.onLeaderboard,
   });
+
+  /// Opens today's leaderboard; null hides the button.
+  final VoidCallback? onLeaderboard;
 
   /// Outcome per question, in order.
   final List<QuestionResult> results;
@@ -145,6 +149,14 @@ class SummaryScreen extends StatelessWidget {
                   icon: const Icon(Icons.refresh_rounded),
                   label: const Text(AppStrings.newRound),
                 ),
+              if (_isDaily && onLeaderboard != null) ...[
+                const SizedBox(height: 8),
+                OutlinedButton.icon(
+                  onPressed: onLeaderboard,
+                  icon: const Icon(Icons.emoji_events_rounded),
+                  label: const Text(AppStrings.leaderboard),
+                ),
+              ],
               const SizedBox(height: 8),
               TextButton.icon(
                 icon: const Icon(Icons.home_rounded),
@@ -242,8 +254,9 @@ class _ShareSheetState extends State<ShareSheet> {
   );
 
   String get _fileName {
-    final number = puzzleNumber(widget.card.dayIndex);
-    return number > 0 ? 'kabaca-$number.png' : 'kabaca.png';
+    final d = dateOfDay(widget.card.dayIndex);
+    String two(int n) => n.toString().padLeft(2, '0');
+    return 'kabaca-${d.year}-${two(d.month)}-${two(d.day)}.png';
   }
 
   Future<void> _share(Uint8List? png) async {

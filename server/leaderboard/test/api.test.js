@@ -1,0 +1,323 @@
+import { beforeEach, test } from 'node:test';
+import assert from 'node:assert/strict';
+import { cleanUp, handle } from '../src/index.js';
+import { resetContentCache, isDailySet } from '../src/content.js';
+import { turkeyDayIndex } from '../src/days.js';
+import { createD1 } from './d1.js';
+
+// Day 3 = 2026-11-04, noon in Turkey.
+const NOW = Date.UTC(2026, 10, 4, 9);
+const DAY = 3;
+
+const BANK = [
+  { id: 'a', answer: 5137, kind: 'magnitude' },
+  { id: 'b', answer: 1923, kind: 'year' },
+  { id: 'c', answer: 85000000, kind: 'magnitude' },
+  { id: 'd', answer: 1453, kind: 'year' },
+  { id: 'e', answer: 42, kind: 'magnitude' },
+  { id: 'f', answer: 10, kind: 'magnitude' },
+];
+const ALL_DAYS = [
+  ['a', 'b', 'c', 'd', 'e'],
+  ['f', 'e', 'd', 'c', 'b'],
+  ['b', 'c', 'd', 'e', 'f'],
+  ['a', 'b', 'c', 'd', 'e'],
+];
+const EXACT = { a: 5137, b: 1923, c: 85000000, d: 1453, e: 42, f: 10 };
+
+let env;
+let content;
+
+function fakeFetch(url) {
+  const name = new URL(url).pathname.split('/').pop();
+  const body = {
+    'manifest.json': {
+      version: content.version,
+      questions: 'questions.json',
+      schedule: 'schedule.json',
+    },
+    'questions.json': BANK,
+    'schedule.json': { days: content.days },
+  }[name];
+  return Promise.resolve(
+    body ? Response.json(body) : new Response('nope', { status: 404 }),
+  );
+}
+
+async function call(method, path, body, { now = NOW, ip = '1.2.3.4' } = {}) {
+  const request = new Request(`https://lb.example${path}`, {
+    method,
+    headers: { 'cf-connecting-ip': ip },
+    body: body === undefined ? undefined : JSON.stringify(body),
+  });
+  const response = await handle(request, env, now, fakeFetch);
+  return { status: response.status, body: await response.json() };
+}
+
+async function join(nickname, ip) {
+  const r = await call('POST', '/v1/register', { nickname }, { ip });
+  assert.equal(r.status, 201, JSON.stringify(r.body));
+  return r.body;
+}
+
+/** The first [exactCount] answers are exact, the rest timed out empty. */
+function answers(exactCount = 5, day = DAY) {
+  return content.days[day % content.days.length].map((q, i) =>
+    i < exactCount
+      ? { q, low: EXACT[q], high: EXACT[q] }
+      : { q, low: null, high: null },
+  );
+}
+
+beforeEach(() => {
+  env = {
+    DB: createD1(),
+    FULL_BOARD_AT: '5',
+    SMALL_BOARD: '2',
+    FULL_BOARD: '3',
+  };
+  content = { version: 1, days: ALL_DAYS };
+  resetContentCache();
+});
+
+test('day index counts in Turkey time', () => {
+  assert.equal(turkeyDayIndex(NOW), DAY);
+  assert.equal(turkeyDayIndex(Date.UTC(2026, 10, 1, 21)), 1); // 00:00 TR
+  assert.equal(turkeyDayIndex(Date.UTC(2026, 10, 1, 20, 59)), 0);
+});
+
+test('register gives an id and token; nicknames are unique', async () => {
+  const p = await join('Kaplan');
+  assert.match(p.id, /^[0-9a-f-]{36}$/);
+  assert.ok(p.token.length >= 40);
+  assert.equal(p.nickname, 'Kaplan');
+  const again = await call('POST', '/v1/register', { nickname: 'KAPLAN' });
+  assert.deepEqual(again, { status: 409, body: { error: 'nickname_taken' } });
+  const stored = env.DB.raw.prepare('SELECT token_hash FROM players').get();
+  assert.notEqual(stored.token_hash, p.token); // only the hash is kept
+});
+
+test('register rejects bad and blocked nicknames', async () => {
+  const short = await call('POST', '/v1/register', { nickname: 'x' });
+  assert.equal(short.body.error, 'invalid_nickname');
+  const rude = await call('POST', '/v1/register', { nickname: 'Siktir' });
+  assert.equal(rude.body.error, 'blocked_nickname');
+  assert.equal((await call('POST', '/v1/register', {})).status, 400);
+});
+
+test('register is rate limited per IP', async () => {
+  for (const n of ['oyuncua', 'oyuncub', 'oyuncuc', 'oyuncud', 'oyuncue']) {
+    await join(n, '9.9.9.9');
+  }
+  const r = await call(
+    'POST',
+    '/v1/register',
+    { nickname: 'oyuncuf' },
+    { ip: '9.9.9.9' },
+  );
+  assert.deepEqual(r, { status: 429, body: { error: 'rate_limited' } });
+  await join('oyuncuf', '8.8.8.8');
+  // An hour later the IP may register again.
+  const later = await call(
+    'POST',
+    '/v1/register',
+    { nickname: 'oyuncug' },
+    { ip: '9.9.9.9', now: NOW + 3600001 },
+  );
+  assert.equal(later.status, 201);
+});
+
+test('submit computes the score on the server', async () => {
+  const p = await join('Kaplan');
+  const r = await call('POST', '/v1/submit', {
+    id: p.id,
+    token: p.token,
+    day: DAY,
+    answers: answers(4),
+  });
+  assert.equal(r.status, 200, JSON.stringify(r.body));
+  assert.deepEqual(r.body, {
+    day: DAY,
+    points: 4 * 100 - 50,
+    hits: 4,
+    rank: 1,
+    players: 1,
+  });
+});
+
+test('a second submission keeps the first score', async () => {
+  const p = await join('Kaplan');
+  const base = { id: p.id, token: p.token, day: DAY };
+  await call('POST', '/v1/submit', { ...base, answers: answers(1) });
+  const r = await call('POST', '/v1/submit', { ...base, answers: answers(5) });
+  assert.equal(r.body.points, 100 - 4 * 50);
+});
+
+test('submit checks the token, day, questions and bounds', async () => {
+  const p = await join('Kaplan');
+  const ok = { id: p.id, token: p.token, day: DAY, answers: answers() };
+  const send = async (patch) =>
+    (await call('POST', '/v1/submit', { ...ok, ...patch })).body.error;
+  const withFirst = (first) =>
+    ok.answers.map((a, i) => (i === 0 ? { q: a.q, ...first } : a));
+
+  assert.equal(await send({ token: 'nope' }), 'unauthorized');
+  assert.equal(await send({ day: DAY - 2 }), 'day_closed');
+  assert.equal(await send({ day: DAY + 2 }), 'day_closed');
+  assert.equal(
+    await send({ answers: [...ok.answers].reverse() }),
+    'wrong_questions',
+  );
+  assert.equal(await send({ answers: ok.answers.slice(1) }), 'bad_answers');
+  assert.equal(
+    await send({ answers: withFirst({ low: 6000, high: 5000 }) }),
+    'bad_answers',
+  );
+  assert.equal(
+    await send({ answers: withFirst({ low: 0, high: 5000 }) }),
+    'bad_answers',
+  );
+  assert.equal(
+    await send({ answers: withFirst({ low: 1, high: null }) }),
+    'bad_answers',
+  );
+  assert.equal(
+    await send({ answers: withFirst({ low: 1.5, high: 2 }) }),
+    'bad_answers',
+  );
+  // Yesterday is still open (time zones, a retry after midnight).
+  const yesterday = await call('POST', '/v1/submit', {
+    ...ok,
+    day: DAY - 1,
+    answers: answers(5, DAY - 1),
+  });
+  assert.equal(yesterday.status, 200);
+});
+
+test('an app with an older, shorter schedule still matches', () => {
+  // Day 5 on a 4-day schedule is days[1]; on a 3-day one, days[2].
+  assert.ok(isDailySet(ALL_DAYS, 5, ALL_DAYS[1]));
+  assert.ok(isDailySet(ALL_DAYS, 5, ALL_DAYS[2]));
+  assert.ok(!isDailySet(ALL_DAYS, 5, ['a', 'a', 'a', 'a', 'a']));
+  assert.ok(isDailySet(ALL_DAYS, -1, ALL_DAYS[3])); // closed test: from the end
+});
+
+test('board ranks by points, then by who sent first', async () => {
+  const players = [];
+  for (const [i, name] of ['Bir', 'İki', 'Üçüncü'].entries()) {
+    players.push(await join(name, `10.0.0.${i}`));
+  }
+  const send = (p, exact, now) =>
+    call(
+      'POST',
+      '/v1/submit',
+      { id: p.id, token: p.token, day: DAY, answers: answers(exact) },
+      { now },
+    );
+  await send(players[0], 3, NOW);
+  await send(players[1], 5, NOW + 1);
+  await send(players[2], 3, NOW - 1); // same as Bir, but earlier
+
+  const r = await call('GET', `/v1/day/${DAY}?player=${players[0].id}`);
+  assert.equal(r.status, 200);
+  assert.equal(r.body.players, 3);
+  assert.equal(r.body.limit, 2); // fewer than FULL_BOARD_AT players joined
+  assert.deepEqual(
+    r.body.top.map((e) => [e.rank, e.nickname, e.points, e.me]),
+    [
+      [1, 'İki', 500, false],
+      [2, 'Üçüncü', 200, false],
+    ],
+  );
+  assert.deepEqual(r.body.me, { rank: 3, points: 200, hits: 3 });
+
+  const own = await call('GET', `/v1/day/${DAY}?player=${players[1].id}`);
+  assert.equal(own.body.top[0].me, true);
+});
+
+test('the board grows once enough players have joined', async () => {
+  for (const n of ['aaa', 'bbb', 'ccc', 'ddd', 'eee']) await join(n, n);
+  const r = await call('GET', `/v1/day/${DAY}`);
+  assert.equal(r.body.limit, 3);
+  assert.equal(r.body.me, null);
+});
+
+test('each day has its own board', async () => {
+  const p = await join('Kaplan');
+  await call('POST', '/v1/submit', {
+    id: p.id,
+    token: p.token,
+    day: DAY,
+    answers: answers(),
+  });
+  const tomorrow = await call(
+    'GET',
+    `/v1/day/${DAY + 1}?player=${p.id}`,
+    undefined,
+    { now: NOW + 86400000 },
+  );
+  assert.deepEqual(
+    [tomorrow.body.players, tomorrow.body.top, tomorrow.body.me],
+    [0, [], null],
+  );
+  assert.equal((await call('GET', `/v1/day/${DAY + 5}`)).status, 404);
+});
+
+test('rename keeps scores; delete removes everything', async () => {
+  const p = await join('Kaplan');
+  const auth = { id: p.id, token: p.token };
+  await join('Aslan', 'x');
+  await call('POST', '/v1/submit', { ...auth, day: DAY, answers: answers() });
+  const taken = await call('POST', '/v1/rename', { ...auth, nickname: 'Aslan' });
+  assert.equal(taken.status, 409);
+  // Its own name in another case is fine.
+  const own = await call('POST', '/v1/rename', { ...auth, nickname: 'kaplan' });
+  assert.equal(own.status, 200);
+  const renamed = await call('POST', '/v1/rename', { ...auth, nickname: 'Pars' });
+  assert.deepEqual(renamed.body, { nickname: 'Pars' });
+  assert.equal((await call('GET', `/v1/day/${DAY}`)).body.top[0].nickname, 'Pars');
+
+  const wrong = await call('POST', '/v1/delete', { id: p.id, token: 'x' });
+  assert.equal(wrong.status, 401);
+  const deleted = await call('POST', '/v1/delete', auth);
+  assert.deepEqual(deleted.body, { deleted: true });
+  assert.equal((await call('GET', `/v1/day/${DAY}`)).body.players, 0);
+  const left = env.DB.raw
+    .prepare('SELECT COUNT(*) AS n FROM players WHERE id = ?')
+    .get(p.id);
+  assert.equal(left.n, 0);
+  await join('Pars', 'y'); // the nickname is free again
+});
+
+test('new content is picked up when the manifest version moves', async () => {
+  const p = await join('Kaplan');
+  await call('GET', '/v1/day/3');
+  content = { version: 2, days: [...ALL_DAYS, ['f', 'a', 'b', 'c', 'd']] };
+  const day4 = { id: p.id, token: p.token, day: 4, answers: answers(5, 4) };
+  const later = NOW + 6 * 60 * 1000; // past the manifest cache
+  const r = await call('POST', '/v1/submit', day4, { now: later });
+  assert.equal(r.status, 200, JSON.stringify(r.body));
+});
+
+test('unknown routes and bad JSON', async () => {
+  assert.equal((await call('GET', '/v1/nope')).status, 404);
+  assert.equal((await call('PUT', '/v1/register', {})).status, 405);
+  const bad = await handle(
+    new Request('https://lb.example/v1/register', { method: 'POST', body: '{' }),
+    env,
+    NOW,
+    fakeFetch,
+  );
+  assert.equal(bad.status, 400);
+});
+
+test('the daily clean-up drops IP hashes older than a day', async () => {
+  await join('Kaplan', '1.1.1.1');
+  await join('Aslan', '2.2.2.2');
+  const count = () =>
+    env.DB.raw.prepare('SELECT COUNT(*) AS n FROM register_log').get().n;
+  await cleanUp(env, NOW + 1000);
+  assert.equal(count(), 2);
+  await cleanUp(env, NOW + 24 * 3600 * 1000 + 1);
+  assert.equal(count(), 0);
+});

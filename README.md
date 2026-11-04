@@ -18,20 +18,22 @@ Aralık cevabı içeriyorsa puan alırsın. Aralık ne kadar darsa puan o kadar 
 - Bilgi yarışmaları "doğru / yanlış" mantığıyla çalışır. Kabaca ise **ne kadar emin olduğunu** ölçer. Bu ölçüm, bildiğin şeyden çok kendini ne kadar iyi tanıdığını gösterir.
 - İçerik Türkçe ve yereldir: Türkiye coğrafyası, tarihi, sporu.
 - Wordle gibi herkes aynı gün aynı soruları çözer. Skorunu emoji kartıyla paylaşabilirsin.
-- **Sıfır bütçe, sıfır backend.** Sunucu, hesap, reklam ve analytics yok. Oyun internetsiz de eksiksiz çalışır ve hiçbir kişisel veri cihazdan çıkmaz.
+- **Sıfır bütçe, neredeyse sıfır backend.** Hesap, reklam ve analytics yok. Oyun internetsiz de eksiksiz çalışır. Tek sunucu, isteğe bağlı **günün liderleri** tablosudur: katılmayan oyuncunun hiçbir verisi cihazdan çıkmaz.
 
 ## Nasıl oynanır?
+Günün setinde her soru için **15 saniye** var. Süre dolunca ekrandaki aralık kendiliğinden kilitlenir.
+
 1. **Tahmin:** En iyi tahminini uygulamanın kendi sayı klavyesiyle yaz.
 2. **Aralık:** Bir kaydırıcıyla aralığın genişliğini ayarla. Ekranda canlı olarak "4.500 – 5.500 m" görünür, isabet edersen kaç puan alacağın da yazar.
 3. **Kilitle:** Cevap, aralığın üstünde bir işaretle gösterilir. Yanında puanın, kaynak linki ve ilginç bir bilgi yer alır.
 
-**Puan:** İsabette en fazla 100 puan alırsın, dar aralık daha çok puan getirir. Kıl payı ıska yine puan alabilir, uzak ıska eksi puandır (en düşük −100). Kural bilerek dar aralık vermeyi kârsız kılar. En iyi strateji gerçekten %90 emin olduğun aralığı vermektir.
+**Puan:** İsabette en fazla 100 puan alırsın, dar aralık daha çok puan getirir. Kıl payı ıska yine puan alabilir, uzak ıska eksi puandır (en düşük −50). Süre dolduğunda hiç tahmin yazılmamışsa da −50 alınır. Kural bilerek dar aralık vermeyi kârsız kılar. En iyi strateji gerçekten %90 emin olduğun aralığı vermektir.
 
 **Paylaşım:** Gün bitince sonuç iki şekilde paylaşılabilir:
-- **Görsel:** Instagram hikâyesi ve WhatsApp durumu için 1080 × 1920'lik bir kart. Kartta filozof maskotu, günün skoru, renkli kareler ve kalibrasyon var. Metin de açıklama olarak eklenir.
+- **Görsel:** Instagram hikâyesi ve WhatsApp durumu için 1080 × 1920'lik bir kart. Kartta günün tarihi, skoru, renkli kareler ve kalibrasyon var. Filozof maskotu skora göre beş hâlden birine bürünür: kahkahayla kas gösteren "Efsane!"den yağmur bulutu altındaki "Bugün olmadı."ya kadar. Metin de açıklama olarak eklenir.
 - **Metin (Wordle tarzı):**
 ```
-Kabaca #42 · 380/500
+Kabaca · 4 Kasım · 380/500
 🟩🟩🟨⬛🟩
 Kalibrasyon %80
 ```
@@ -40,8 +42,9 @@ Kalibrasyon %80
 ## Modlar
 | Mod | Açıklama |
 |---|---|
-| **Günün seti** | Her gün 5 soru. Herkes aynı gün aynı soruları görür. Yarıda bırakılırsa kaldığı yerden devam eder. Tamamlanan ardışık günler **seriyi** oluşturur. |
-| **Bir tur at** (serbest mod) | Sınırsız, 5'erli turlar. Daha önce cevapladığın hiçbir soru tekrar gelmez. Sorular geçmiş günlerin bankasından ve cihazda üretilen kuş uçuşu mesafe sorularından gelir. |
+| **Günün seti** | Her gün 5 soru, soru başına 15 saniye. Herkes aynı gün aynı soruları görür. Yarıda bırakılırsa kaldığı yerden devam eder, ama başlamış bir sorunun süresi işlemeye devam eder. Tamamlanan ardışık günler **seriyi** oluşturur. |
+| **Günün liderleri** | İsteğe bağlı. Giriş yok, bir takma adla katılırsın. Puanı sunucu hesaplar. Her günün tablosu ayrıdır ve yeni sorularla sıfırlanır. Oyuncu sayısı 100'e ulaşana kadar ilk 10, sonra ilk 50 gösterilir. Ayarlar'dan ayrılınca verin silinir. |
+| **Bir tur at** (serbest mod) | Sınırsız, 5'erli turlar, süre sınırı yok. Daha önce cevapladığın hiçbir soru tekrar gelmez. Sorular geçmiş günlerin bankasından ve cihazda üretilen kuş uçuşu mesafe sorularından gelir. |
 | **İstatistikler** | Oynanan gün, seri, en uzun seri, ortalama ve en iyi gün. Ayrıca zaman içindeki kalibrasyon grafiği, ıskaların yönü (tahminin fazla mı yüksek, fazla mı düşük) ve kategori bazında isabet. |
 
 ## Veri doğruluğu
@@ -53,43 +56,46 @@ Her sorunun cevabı kaynaklıdır ve sayılar asla elle yazılmaz. Kaynaklar ve 
 
 Yeni sorular uygulama güncellemesi gerekmeden GitHub Pages'ten indirilir. Gizlilik politikası: [docs/privacy-policy.md](docs/privacy-policy.md).
 
-## Gelinen nokta (2026-10-26)
+## Gelinen nokta (2026-11-04)
+Uygulama Google Play'de **kapalı testte**. Test sürerken geliştirme devam ediyor.
+
 **Tamamlananlar**
 - Proje iskeleti, Türkçe sayı biçimi, tema (açık/koyu, sisteme göre)
 - Wikidata veri hattı ve 1001 soruluk banka: coğrafya, tarih, Osmanlı, mimari, sanat, spor, Türkiye, gündelik, bilim (elementler, Nobel), şirketler, hayvanlar
 - Zorluk tahmini (kolay/orta/zor) ve dengeli günlük takvim: her gün 2 kolay + 2 orta + 1 zor, en az 3 kategori (45 gün)
 - Atıf altyapısı: tek kaynak listesi (`tools/sources.json`), Ayarlar → Veri kaynakları ve lisanslar ekranı, `docs/attributions.md`
-- Soru ekranı: kendi sayı klavyesi, logaritmik/yıl kaydırıcısı, kilitleme
-- Puanlama: interval score, birim testleriyle doğrulanmış
+- Soru ekranı: kendi sayı klavyesi, logaritmik/yıl kaydırıcısı, kilitleme, günün setinde 15 saniyelik geri sayım
+- Puanlama: interval score, −50 tabanı, birim testleriyle doğrulanmış
 - Sonuç ekranı, gün/tur özeti, yarıda kalan seti sürdürme
-- Paylaşım: hikâye/durum için görsel kart (önizlemeli) ya da Wordle tarzı metin
+- Paylaşım: skora göre beş farklı maskotlu görsel kart (önizlemeli) ya da Wordle tarzı metin; günler tarihle anılır ("4 Kasım")
 - Serbest mod: takvimin önümüzdeki 60 gününde olmayan banka soruları ve turda en fazla 1 mesafe sorusu (79 Türkiye şehri, 40 başkent)
 - İnternetten içerik güncelleme (GitHub Pages, 6 saatte bir kontrol)
+- Günün liderleri: isteğe bağlı takma adla katılım, Cloudflare Workers + D1 sunucusu (`server/leaderboard/`), puanı sunucu hesaplar
 - İstatistik ekranı: kalibrasyon grafiği, ıska yönü, kategori bazında isabet
 - Görsel kimlik: uygulama ikonundan türetilen renkler, kategori renkleri ve hafif animasyonlar
-- Ayarlar: tema seçimi (sistem, açık, koyu), veri kaynakları ve lisanslar, gizlilik politikası
+- Ayarlar: tema seçimi, liderlik tablosu (takma ad, ayrılma), veri kaynakları ve lisanslar, gizlilik politikası
 - Uygulama ikonu (uyarlanabilir, yuvarlak, Android 13 tek renkli), gizlilik politikası
-- İmzalı release paketi (AAB)
-- 139 birim ve widget testi, `flutter analyze` sıfır uyarı
+- İmzalı release paketi (AAB), kapalı test yayını
+- 197 uygulama testi (birim ve widget) ve 22 sunucu testi, `flutter analyze` sıfır uyarı
 
 **Sıradakiler**
-- Google Play kapalı teste yükleme (14 gün, en az 12 test kullanıcısı)
-- Açık geri bildirim: puanlama kolay görünüyor. Ayrıntılar [docs/PLAN.md](docs/PLAN.md) içinde.
-- Yeni veri kaynakları ([docs/SOURCES.md](docs/SOURCES.md), 3. adım ve sonrası): AnAge, USDA FoodData, NASA, OurAirports, openfootball, Dünya Bankası, FAOSTAT, İBB, TÜİK. Takvimi uzatmak için en çok kolay sorulara ihtiyaç var.
-- "Nasıl oynanır" ekranı ve ilk açılış tanıtımı
-- Boyut ölçümü (hedef: indirme boyutu < 8 MB) ve mağaza sayfası
+- Liderlik sunucusunu Cloudflare'de yayına almak ve 1.0.2 sürümünü kapalı teste yüklemek
+- Takvimi 15 Aralık 2026'dan önce uzatmak: yeni kolay sorular gerekiyor ([docs/SOURCES.md](docs/SOURCES.md), 3. adım ve sonrası)
+- "Nasıl oynanır" ekranı
+- Boyut ölçümü (hedef: indirme boyutu < 8 MB)
 - Faz 2: günlük hatırlatma bildirimi, kategori seçimli pratik, rozetler
 
 ## Proje yapısı
 ```
 lib/
   main.dart, app.dart     # giriş noktası, MaterialApp
-  core/                   # saf iş mantığı: puan, aralık, günlük seçim, sayı biçimi, istatistik, tema, metinler
-  data/                   # soru modeli, soru deposu, içerik senkronu, istatistik deposu, mesafe üreticisi
-  features/               # ekranlar: home, game, result, stats
+  core/                   # saf iş mantığı: puan, aralık, süre, günlük seçim, ruh hâli, takma ad, sayı biçimi, istatistik, tema, metinler
+  data/                   # soru modeli ve deposu, içerik senkronu, istatistik deposu, liderlik istemcisi, mesafe üreticisi
+  features/               # ekranlar: intro, home, game, result, leaderboard, stats, settings
   widgets/                # ortak parçalar: sayı klavyesi, aralık çubuğu, filozof maskotu, kutucuklar
-assets/                   # soru bankası ve yer verisi (JSON)
-tools/                    # Python veri hattı ve ikon üretici (uygulamaya dahil değil)
+assets/                   # soru bankası, takvim ve yer verisi (JSON)
+server/leaderboard/       # günün liderleri sunucusu: Cloudflare Worker + D1 (uygulamaya dahil değil)
+tools/                    # Python veri hattı, ikon ve paylaşım kartı çizicileri (uygulamaya dahil değil)
 docs/                     # plan, gizlilik politikası, mağaza ikonu, yayınlanan içerik (GitHub Pages)
 test/                     # birim ve widget testleri
 ```
@@ -102,4 +108,5 @@ flutter run            # bağlı cihaz veya emülatörde çalıştırır
 flutter test           # tüm testler
 flutter analyze        # statik analiz, sıfır uyarı beklenir
 ```
-Veri hattı, release build ve diğer komutlar için [TECHNICAL.md](TECHNICAL.md) belgesine bak.
+Veri hattı, release build ve diğer komutlar için [TECHNICAL.md](TECHNICAL.md), liderlik sunucusu için
+[server/leaderboard/README.md](server/leaderboard/README.md) belgesine bak.

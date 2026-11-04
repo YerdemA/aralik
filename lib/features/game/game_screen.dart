@@ -1,7 +1,10 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../core/number_format.dart';
+import '../../core/question_timer.dart';
 import '../../core/scoring.dart';
 import '../../core/strings.dart';
 import '../../core/theme.dart';
@@ -19,6 +22,9 @@ class GameScreen extends StatefulWidget {
     required this.questions,
     this.onLocked,
     this.alreadyAnswered = 0,
+    this.startQuestion,
+    this.timeLimit = dailyTimeLimit,
+    this.now = DateTime.now,
   });
 
   final List<Question> questions;
@@ -30,6 +36,18 @@ class GameScreen extends StatefulWidget {
   /// Called right after each lock, e.g. to persist stats.
   final ValueChanged<RoundAnswer>? onLocked;
 
+  /// Turns the countdown on (daily set). Called when the question at
+  /// `position` (counting [alreadyAnswered]) appears; returns when it was
+  /// first shown, so a resumed question keeps its earlier start. Null
+  /// means no time limit (free play).
+  final DateTime Function(int position)? startQuestion;
+
+  /// Time per question when [startQuestion] is set.
+  final Duration timeLimit;
+
+  /// Clock, replaceable in tests.
+  final DateTime Function() now;
+
   @override
   State<GameScreen> createState() => _GameScreenState();
 }
@@ -37,15 +55,57 @@ class GameScreen extends StatefulWidget {
 class _GameScreenState extends State<GameScreen> {
   late final GameController _game = GameController(widget.questions);
 
+  /// Time left on the current question; null without a time limit.
+  final _left = ValueNotifier<Duration?>(null);
+  Timer? _ticker;
+  DateTime? _startedAt;
+
+  static const _tickEvery = Duration(milliseconds: 200);
+
+  @override
+  void initState() {
+    super.initState();
+    // After the first frame: a resumed question may already be out of time,
+    // and timing out opens the result screen.
+    WidgetsBinding.instance.addPostFrameCallback((_) => _startClock());
+  }
+
   @override
   void dispose() {
+    _ticker?.cancel();
+    _left.dispose();
     _game.dispose();
     super.dispose();
   }
 
-  Future<void> _lock() async {
+  void _startClock() {
+    final start = widget.startQuestion;
+    if (!mounted || start == null) return;
+    _startedAt = start(widget.alreadyAnswered + _game.index);
+    _ticker = Timer.periodic(_tickEvery, (_) => _tick());
+    _tick();
+  }
+
+  void _tick() {
+    final left = timeLeft(
+      startedAt: _startedAt!,
+      now: widget.now(),
+      limit: widget.timeLimit,
+    );
+    final before = _left.value;
+    _left.value = left;
+    if (before != null && before > timeWarning && left <= timeWarning) {
+      HapticFeedback.lightImpact();
+    }
+    if (left == Duration.zero) _finish(timedOut: true);
+  }
+
+  Future<void> _finish({required bool timedOut}) async {
+    if (_game.isLocked) return;
+    _ticker?.cancel();
+    _ticker = null;
     HapticFeedback.mediumImpact();
-    final answer = _game.lock();
+    final answer = timedOut ? _game.timeOut() : _game.lock();
     widget.onLocked?.call(answer);
     await Navigator.of(context).push(
       MaterialPageRoute<void>(
@@ -57,8 +117,11 @@ class _GameScreenState extends State<GameScreen> {
       Navigator.of(context).pop(_game.answers);
     } else {
       _game.next();
+      _startClock();
     }
   }
+
+  Future<void> _lock() => _finish(timedOut: false);
 
   @override
   Widget build(BuildContext context) {
@@ -77,6 +140,15 @@ class _GameScreenState extends State<GameScreen> {
             tooltip: AppStrings.quit,
             onPressed: () => Navigator.of(context).pop(),
           ),
+          actions: [
+            ValueListenableBuilder(
+              valueListenable: _left,
+              builder: (context, left, _) => left == null
+                  ? const SizedBox.shrink()
+                  : _Countdown(left: left, limit: widget.timeLimit),
+            ),
+            const SizedBox(width: 12),
+          ],
           bottom: PreferredSize(
             preferredSize: const Size.fromHeight(12),
             child: _Progress(
@@ -144,6 +216,61 @@ class _Progress extends StatelessWidget {
               ),
             ),
         ],
+      ),
+    );
+  }
+}
+
+/// "12 sn" with a ring that empties; turns to the error colour near the end.
+class _Countdown extends StatelessWidget {
+  const _Countdown({required this.left, required this.limit});
+
+  final Duration left;
+  final Duration limit;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+    final urgent = left <= timeWarning;
+    final color = urgent ? scheme.error : scheme.primary;
+    final seconds = secondsShown(left);
+    return Semantics(
+      label: AppStrings.secondsLeft(seconds),
+      excludeSemantics: true,
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 200),
+        padding: const EdgeInsets.fromLTRB(8, 6, 12, 6),
+        decoration: BoxDecoration(
+          color: color.withValues(alpha: .14),
+          borderRadius: BorderRadius.circular(99),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            SizedBox.square(
+              dimension: 18,
+              child: TweenAnimationBuilder<double>(
+                tween: Tween(end: left.inMilliseconds / limit.inMilliseconds),
+                duration: const Duration(milliseconds: 200),
+                builder: (context, value, _) => CircularProgressIndicator(
+                  value: value,
+                  strokeWidth: 3,
+                  color: color,
+                  backgroundColor: color.withValues(alpha: .2),
+                ),
+              ),
+            ),
+            const SizedBox(width: 8),
+            Text(
+              AppStrings.secondsLeft(seconds),
+              style: theme.textTheme.titleMedium?.copyWith(
+                color: urgent ? scheme.error : scheme.onSurface,
+                fontFeatures: const [FontFeature.tabularFigures()],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

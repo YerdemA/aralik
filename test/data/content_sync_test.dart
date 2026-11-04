@@ -105,6 +105,32 @@ void main() {
     expect(requests.map((u) => u.pathSegments.last), ['manifest.json']);
   });
 
+  test(
+    'stores the leaderboard URL from the manifest, even unchanged',
+    () async {
+      ContentSync content() =>
+          ContentSync(prefs, httpGet: fakeGet, clock: () => now);
+      expect(content().leaderboardUri, isNull);
+      final manifest = jsonDecode(server['manifest.json']!) as Map;
+      server['manifest.json'] = jsonEncode({
+        ...manifest,
+        'leaderboard': 'https://lb.example.workers.dev/',
+      });
+      await sync();
+      expect(
+        content().leaderboardUri,
+        Uri.parse('https://lb.example.workers.dev/'),
+      );
+      // Same content version: the URL is still read and can be removed.
+      server['manifest.json'] = jsonEncode({
+        ...manifest,
+        'leaderboard': 'http://insecure.example/',
+      });
+      expect(await sync(force: true), SyncResult.upToDate);
+      expect(content().leaderboardUri, isNull);
+    },
+  );
+
   test('rejects a bank that reorders or drops bundled questions', () async {
     server['questions.json'] = bank(['q2', 'q1', ...ids(3, 10)]);
     expect(await sync(), SyncResult.rejected);
