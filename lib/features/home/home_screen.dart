@@ -271,13 +271,20 @@ class _HomeScreenState extends State<HomeScreen> {
             final today = _today;
             final results = _stats.dailyResults(today);
             final finished = _stats.isDayComplete(today);
+            // Between today's set and free play, when there is a server.
+            final duelCard = [
+              if (_leaderboard?.isAvailable == true) ...[
+                const SizedBox(height: 12),
+                _DuelCard(onTap: _loading ? null : _openDuel),
+              ],
+            ];
             // Scrolls only when the screen is too short for everything;
             // otherwise the main card takes up the spare height.
             return LayoutBuilder(
               builder: (context, constraints) {
-                final mascotSize = (constraints.maxHeight * 0.26).clamp(
-                  110.0,
-                  200.0,
+                final mascotSize = (constraints.maxHeight * 0.2).clamp(
+                  96.0,
+                  150.0,
                 );
                 return SingleChildScrollView(
                   child: ConstrainedBox(
@@ -324,12 +331,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                                 if (_leaderboard?.isAvailable == true) ...[
                                   IconButton.filledTonal(
-                                    onPressed: _loading ? null : _openDuel,
-                                    tooltip: AppStrings.duel,
-                                    icon: const Icon(Icons.bolt_rounded),
-                                  ),
-                                  const SizedBox(width: 4),
-                                  IconButton.filledTonal(
                                     onPressed: () => _openLeaderboard(today),
                                     tooltip: AppStrings.leaderboard,
                                     icon: const Icon(
@@ -359,6 +360,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ? null
                                     : () => _showDaySummary(today),
                               ),
+                              ...duelCard,
                               const SizedBox(height: 12),
                               Expanded(
                                 child: _FreePlayHero(
@@ -375,6 +377,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   onPlay: _loading ? null : _playDaily,
                                 ),
                               ),
+                              ...duelCard,
                               const SizedBox(height: 12),
                               _FreePlayCard(onTap: _loading ? null : _playFree),
                             ],
@@ -715,6 +718,48 @@ class _FreePlayCard extends StatelessWidget {
   final VoidCallback? onTap;
 
   @override
+  Widget build(BuildContext context) => _RowCard(
+    colors: const [Palette.roundStart, Palette.roundEnd],
+    icon: Icons.all_inclusive_rounded,
+    title: AppStrings.freePlay,
+    hint: AppStrings.freePlayHint,
+    onTap: onTap,
+  );
+}
+
+/// The duel, in its players' colours: blue against red.
+class _DuelCard extends StatelessWidget {
+  const _DuelCard({required this.onTap});
+
+  final VoidCallback? onTap;
+
+  @override
+  Widget build(BuildContext context) => _RowCard(
+    colors: const [Palette.duelMe, Palette.duelOpponent],
+    icon: Icons.bolt_rounded,
+    title: AppStrings.duel,
+    hint: AppStrings.duelHomeHint,
+    onTap: onTap,
+  );
+}
+
+/// A gradient card whose whole surface is one button.
+class _RowCard extends StatelessWidget {
+  const _RowCard({
+    required this.colors,
+    required this.icon,
+    required this.title,
+    required this.hint,
+    required this.onTap,
+  });
+
+  final List<Color> colors;
+  final IconData icon;
+  final String title;
+  final String hint;
+  final VoidCallback? onTap;
+
+  @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     final radius = BorderRadius.circular(24);
@@ -727,9 +772,7 @@ class _FreePlayCard extends StatelessWidget {
         child: Ink(
           decoration: BoxDecoration(
             borderRadius: radius,
-            gradient: const LinearGradient(
-              colors: [Palette.roundStart, Palette.roundEnd],
-            ),
+            gradient: LinearGradient(colors: colors),
           ),
           child: InkWell(
             borderRadius: radius,
@@ -742,7 +785,7 @@ class _FreePlayCard extends StatelessWidget {
                     radius: 24,
                     backgroundColor: circle,
                     foregroundColor: Colors.white,
-                    child: const Icon(Icons.all_inclusive_rounded, size: 26),
+                    child: Icon(icon, size: 26),
                   ),
                   const SizedBox(width: 14),
                   Expanded(
@@ -750,14 +793,14 @@ class _FreePlayCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          AppStrings.freePlay,
+                          title,
                           style: textTheme.titleLarge?.copyWith(
                             color: Colors.white,
                             fontWeight: FontWeight.w800,
                           ),
                         ),
                         Text(
-                          AppStrings.freePlayHint,
+                          hint,
                           style: textTheme.bodyMedium?.copyWith(
                             color: Colors.white,
                           ),

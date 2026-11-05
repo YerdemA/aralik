@@ -2,6 +2,7 @@ import 'package:aralik/core/app_update.dart';
 import 'package:aralik/core/daily.dart';
 import 'package:aralik/core/strings.dart';
 import 'package:aralik/core/theme.dart';
+import 'package:aralik/data/leaderboard.dart';
 import 'package:aralik/data/question_repository.dart';
 import 'package:aralik/data/settings_store.dart';
 import 'package:aralik/data/stats_store.dart';
@@ -17,6 +18,7 @@ Future<StatsStore> pumpHome(
   Map<String, Object> prefs = const {},
   int? latestAppBuild,
   Future<bool> Function()? openStore,
+  bool withServer = false,
 }) async {
   HomeScreen.updateOffered = false;
   tester.view.physicalSize = const Size(1080, 2340);
@@ -33,6 +35,12 @@ Future<StatsStore> pumpHome(
         settings: await SettingsStore.open(),
         latestAppBuild: () => latestAppBuild,
         openStore: openStore ?? () async => true,
+        leaderboard: withServer
+            ? LeaderboardStore(
+                await SharedPreferences.getInstance(),
+                serviceUri: () => Uri.parse('https://lb.example/'),
+              )
+            : null,
       ),
     ),
   );
@@ -61,6 +69,24 @@ void main() {
     expect(opened, 1);
     expect(find.text(AppStrings.updateTitle), findsNothing);
     expect(HomeScreen.updateOffered, isTrue);
+  });
+
+  testWidgets('the duel sits between the daily set and free play', (
+    tester,
+  ) async {
+    await pumpHome(tester, withServer: true);
+    await tester.pumpAndSettle();
+    final today = tester.getCenter(find.text(AppStrings.playToday)).dy;
+    final duel = tester.getCenter(find.text(AppStrings.duel)).dy;
+    final free = tester.getCenter(find.text(AppStrings.freePlay)).dy;
+    expect(today, lessThan(duel));
+    expect(duel, lessThan(free));
+  });
+
+  testWidgets('no duel without a server', (tester) async {
+    await pumpHome(tester);
+    await tester.pumpAndSettle();
+    expect(find.text(AppStrings.duel), findsNothing);
   });
 
   testWidgets('says nothing when this build is the newest', (tester) async {

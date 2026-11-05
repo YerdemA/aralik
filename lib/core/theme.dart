@@ -21,6 +21,10 @@ abstract final class Palette {
   static const roundStart = Color(0xFFCF3F1A);
   static const roundEnd = Color(0xFFC22F66);
 
+  /// Duel: this player in blue, the opponent in red.
+  static const duelMe = Color(0xFF2F6FED);
+  static const duelOpponent = Color(0xFFE5484D);
+
   static const sky = Color(0xFF8EC5FF);
   static const terracotta = Color(0xFFD9825B);
   static const green = Color(0xFF8BCB72);

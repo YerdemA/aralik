@@ -7,14 +7,15 @@ import 'package:share_plus/share_plus.dart';
 import '../../core/duel.dart';
 import '../../core/number_format.dart';
 import '../../core/question_timer.dart';
-import '../../core/scoring.dart';
 import '../../core/strings.dart';
 import '../../core/theme.dart';
 import '../../data/duel_client.dart';
 import '../../data/question.dart';
 import '../../data/question_repository.dart';
 import '../../data/stats_store.dart';
+import '../../widgets/duelist.dart';
 import '../../widgets/interval_bar.dart';
+import '../../widgets/philosopher.dart';
 import '../game/answer_input.dart';
 import '../game/game_controller.dart';
 
@@ -140,6 +141,14 @@ class _DuelScreenState extends State<DuelScreen> {
       _session = session;
     } on DuelRefused catch (e) {
       if (mounted) _match.handle(DuelError(e.code));
+    } on DuelException catch (e) {
+      if (mounted) {
+        _match.handle(
+          DuelError(
+            e.failure == DuelFailure.server ? 'unavailable' : 'offline',
+          ),
+        );
+      }
     } on Object {
       if (mounted) _match.handle(const DuelError('offline'));
     }
@@ -366,7 +375,7 @@ class _DuelScreenState extends State<DuelScreen> {
   }
 }
 
-/// "Sen 120 · 85 Bora" in the app bar.
+/// "Sen 120 · 85 Bora" in the app bar, each side in its player's colour.
 class _ScoreLine extends StatelessWidget {
   const _ScoreLine({required this.match});
 
@@ -374,12 +383,26 @@ class _ScoreLine extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const bold = TextStyle(
+      fontWeight: FontWeight.w800,
+      fontFeatures: [FontFeature.tabularFigures()],
+    );
     return FittedBox(
       fit: BoxFit.scaleDown,
-      child: Text(
-        '${AppStrings.duelYou} ${match.myTotal}  ·  '
-        '${match.opponentTotal} ${match.opponentName}',
-        style: const TextStyle(fontFeatures: [FontFeature.tabularFigures()]),
+      child: Text.rich(
+        TextSpan(
+          children: [
+            TextSpan(
+              text: '${AppStrings.duelYou} ${match.myTotal}',
+              style: bold.copyWith(color: Palette.duelMe),
+            ),
+            const TextSpan(text: '  ·  '),
+            TextSpan(
+              text: '${match.opponentTotal} ${match.opponentName}',
+              style: bold.copyWith(color: Palette.duelOpponent),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -612,19 +635,30 @@ class _RevealView extends StatelessWidget {
           fit: BoxFit.scaleDown,
           child: Text(answer, style: theme.textTheme.displayMedium),
         ),
-        const SizedBox(height: 16),
-        _PlayerResult(
-          name: AppStrings.duelYou,
-          result: last.me,
-          question: question,
+        const SizedBox(height: 12),
+        Expanded(
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                _PlayerResult(
+                  name: AppStrings.duelYou,
+                  colour: Palette.duelMe,
+                  result: last.me,
+                  question: question,
+                ),
+                const SizedBox(height: 10),
+                _PlayerResult(
+                  name: match.opponentName,
+                  colour: Palette.duelOpponent,
+                  result: last.opponent,
+                  question: question,
+                ),
+              ],
+            ),
+          ),
         ),
         const SizedBox(height: 12),
-        _PlayerResult(
-          name: match.opponentName,
-          result: last.opponent,
-          question: question,
-        ),
-        const Spacer(),
         FilledButton.icon(
           onPressed: onNext,
           icon: onNext == null
@@ -640,75 +674,146 @@ class _RevealView extends StatelessWidget {
   }
 }
 
+/// One player's interval on a revealed question: framed in the player's
+/// colour, filled green for a hit or grey for a miss, deeper the more the
+/// points say (see [duelTintStrength]).
 class _PlayerResult extends StatelessWidget {
   const _PlayerResult({
     required this.name,
+    required this.colour,
     required this.result,
     required this.question,
   });
 
   final String name;
+  final Color colour;
   final DuelResult result;
   final Question question;
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final color = theme.extension<GameColors>()!.forTier(
-      ResultTier.of(points: result.points, hit: result.hit),
-    );
+    final scheme = theme.colorScheme;
     final isYear = question.kind == QuestionKind.year;
     final low = result.low;
     final high = result.high;
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Row(
-              children: [
-                Expanded(
-                  child: Text(
-                    name,
-                    style: theme.textTheme.titleMedium,
-                    overflow: TextOverflow.ellipsis,
-                  ),
+    final fill = duelResultFill(
+      scheme.surface,
+      hit: result.hit,
+      points: result.points,
+    );
+    final onFill = scheme.onSurface;
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 300),
+      padding: const EdgeInsets.fromLTRB(14, 10, 14, 12),
+      decoration: BoxDecoration(
+        color: fill,
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: colour, width: 3),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Row(
+            children: [
+              Container(
+                width: 12,
+                height: 12,
+                decoration: BoxDecoration(
+                  color: colour,
+                  shape: BoxShape.circle,
                 ),
-                Text(
-                  '${result.points > 0 ? '+' : ''}${result.points}',
-                  style: theme.textTheme.titleLarge?.copyWith(
-                    color: color,
-                    fontWeight: FontWeight.w800,
+              ),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Text(
+                  name,
+                  style: theme.textTheme.titleMedium?.copyWith(
+                    color: onFill,
+                    fontWeight: FontWeight.w700,
                   ),
+                  overflow: TextOverflow.ellipsis,
                 ),
-              ],
-            ),
-            const SizedBox(height: 4),
-            Text(
-              low == null || high == null
-                  ? AppStrings.duelNoInterval
-                  : formatRange(low, high, unit: question.unit, isYear: isYear),
-              style: theme.textTheme.bodyMedium,
-            ),
-            if (low != null && high != null) ...[
-              const SizedBox(height: 6),
-              IntervalBar(
-                isYear: isYear,
-                low: low,
-                high: high,
-                answer: question.answer,
-                bandColor: color,
+              ),
+              _HitChip(hit: result.hit),
+              const SizedBox(width: 10),
+              Text(
+                '${result.points > 0 ? '+' : ''}${result.points}',
+                style: theme.textTheme.headlineSmall?.copyWith(
+                  color: onFill,
+                  fontWeight: FontWeight.w800,
+                  fontFeatures: const [FontFeature.tabularFigures()],
+                ),
               ),
             ],
+          ),
+          const SizedBox(height: 4),
+          Text(
+            low == null || high == null
+                ? AppStrings.duelNoInterval
+                : formatRange(low, high, unit: question.unit, isYear: isYear),
+            style: theme.textTheme.bodyMedium?.copyWith(color: onFill),
+          ),
+          if (low != null && high != null) ...[
+            const SizedBox(height: 6),
+            IntervalBar(
+              isYear: isYear,
+              low: low,
+              high: high,
+              answer: question.answer,
+              bandColor: colour,
+            ),
           ],
+        ],
+      ),
+    );
+  }
+}
+
+/// "İsabet" or "Iska".
+class _HitChip extends StatelessWidget {
+  const _HitChip({required this.hit});
+
+  final bool hit;
+
+  @override
+  Widget build(BuildContext context) {
+    final colour = hit ? duelHitGreen : duelMissGrey;
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+      decoration: BoxDecoration(
+        color: colour,
+        borderRadius: BorderRadius.circular(99),
+      ),
+      child: Text(
+        hit ? AppStrings.duelHit : AppStrings.duelMiss,
+        style: const TextStyle(
+          color: Colors.white,
+          fontWeight: FontWeight.w700,
+          fontSize: 12,
         ),
       ),
     );
   }
 }
 
-/// Win, loss or draw, with both totals.
+/// Green of a hit and grey of a miss in the reveal.
+const duelHitGreen = Color(0xFF2E9E4F);
+const duelMissGrey = Color(0xFF7C8095);
+
+/// The fill of a revealed interval's card on [surface]. A dark surface
+/// gets stronger tints, so hits and misses stay apart.
+Color duelResultFill(Color surface, {required bool hit, required int points}) {
+  final strength = duelTintStrength(points: points, hit: hit);
+  final dark = surface.computeLuminance() < 0.2;
+  final amount = hit
+      ? (dark ? 0.16 : 0.10) + (dark ? 0.42 : 0.32) * strength
+      : (dark ? 0.10 : 0.06) + (dark ? 0.22 : 0.26) * strength;
+  return Color.lerp(surface, hit ? duelHitGreen : duelMissGrey, amount)!;
+}
+
+/// The end: both philosophers, the winner on the higher step, the totals
+/// and every question's points side by side.
 class _ResultView extends StatelessWidget {
   const _ResultView({required this.match});
 
@@ -717,96 +822,225 @@ class _ResultView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final outcome = match.outcome;
-    final title = switch (outcome) {
-      DuelOutcome.win => AppStrings.duelWin,
-      DuelOutcome.loss => AppStrings.duelLoss,
-      _ => AppStrings.duelDraw,
+    final outcome = match.outcome ?? DuelOutcome.draw;
+    final (title, mePose, opponentPose) = switch (outcome) {
+      DuelOutcome.win => (
+        AppStrings.duelWin,
+        DuelPose.champion,
+        DuelPose.defeated,
+      ),
+      DuelOutcome.loss => (
+        AppStrings.duelLoss,
+        DuelPose.defeated,
+        DuelPose.champion,
+      ),
+      DuelOutcome.draw => (AppStrings.duelDraw, DuelPose.even, DuelPose.even),
     };
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        const Spacer(),
-        Icon(
-          outcome == DuelOutcome.win
-              ? Icons.emoji_events_rounded
-              : Icons.sports_score_rounded,
-          size: 72,
-          color: outcome == DuelOutcome.win
-              ? Palette.sun
-              : theme.colorScheme.primary,
-        ),
-        const SizedBox(height: 12),
-        Text(
-          title,
-          style: theme.textTheme.headlineLarge?.copyWith(
-            fontWeight: FontWeight.w800,
-          ),
-          textAlign: TextAlign.center,
-        ),
-        if (match.opponentLeft) ...[
-          const SizedBox(height: 6),
-          Text(
-            AppStrings.duelOpponentLeft,
-            style: theme.textTheme.bodyLarge,
-            textAlign: TextAlign.center,
-          ),
-        ],
-        const SizedBox(height: 24),
-        Row(
+    return LayoutBuilder(
+      builder: (context, box) {
+        // As wide as half the screen, but leave room for the rest.
+        final figure = [
+          box.maxWidth / 2 - 8,
+          190.0,
+          box.maxHeight - 400,
+        ].reduce((a, b) => a < b ? a : b).clamp(80.0, 190.0);
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Expanded(
-              child: _Total(name: AppStrings.duelYou, points: match.myTotal),
-            ),
-            const SizedBox(width: 12),
-            Expanded(
-              child: _Total(
-                name: match.opponentName,
-                points: match.opponentTotal,
+            const SizedBox(height: 4),
+            TweenAnimationBuilder<double>(
+              tween: Tween(begin: 0.6, end: 1),
+              duration: const Duration(milliseconds: 500),
+              curve: Curves.elasticOut,
+              builder: (context, scale, child) =>
+                  Transform.scale(scale: scale, child: child),
+              child: Text(
+                title,
+                style: theme.textTheme.displaySmall?.copyWith(
+                  fontWeight: FontWeight.w900,
+                  color: switch (outcome) {
+                    DuelOutcome.win => Palette.duelMe,
+                    DuelOutcome.loss => Palette.duelOpponent,
+                    DuelOutcome.draw => theme.colorScheme.primary,
+                  },
+                ),
+                textAlign: TextAlign.center,
               ),
             ),
+            Text(
+              match.opponentLeft
+                  ? AppStrings.duelOpponentLeft
+                  : AppStrings.duelMargin(
+                      (match.myTotal - match.opponentTotal).abs(),
+                    ),
+              style: theme.textTheme.titleMedium?.copyWith(
+                color: theme.colorScheme.onSurfaceVariant,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const Spacer(),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Expanded(
+                  child: _Podium(
+                    name: AppStrings.duelYou,
+                    total: match.myTotal,
+                    colour: Palette.duelMe,
+                    pose: mePose,
+                    figure: figure,
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: _Podium(
+                    name: match.opponentName,
+                    total: match.opponentTotal,
+                    colour: Palette.duelOpponent,
+                    pose: opponentPose,
+                    figure: figure,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 14),
+            _QuestionStrip(match: match),
+            const Spacer(),
+            FilledButton.icon(
+              onPressed: () => Navigator.of(context).pop(true),
+              icon: const Icon(Icons.replay_rounded),
+              label: const Text(AppStrings.duelPlayAgain),
+            ),
+            const SizedBox(height: 4),
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text(AppStrings.duelHome),
+            ),
           ],
+        );
+      },
+    );
+  }
+}
+
+/// A philosopher on a step: higher and with a trophy for the winner.
+class _Podium extends StatelessWidget {
+  const _Podium({
+    required this.name,
+    required this.total,
+    required this.colour,
+    required this.pose,
+    required this.figure,
+  });
+
+  final String name;
+  final int total;
+  final Color colour;
+  final DuelPose pose;
+  final double figure;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final step = switch (pose) {
+      DuelPose.champion => 86.0,
+      DuelPose.even => 66.0,
+      DuelPose.defeated => 50.0,
+    };
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        TweenAnimationBuilder<double>(
+          tween: Tween(begin: 0, end: 1),
+          duration: const Duration(milliseconds: 600),
+          curve: Curves.easeOutBack,
+          builder: (context, t, child) => Transform.translate(
+            offset: Offset(0, (1 - t) * 40),
+            child: Opacity(opacity: t.clamp(0.0, 1.0), child: child),
+          ),
+          child: Duelist(pose: pose, sash: colour, size: figure),
         ),
-        const Spacer(),
-        FilledButton.icon(
-          onPressed: () => Navigator.of(context).pop(true),
-          icon: const Icon(Icons.replay_rounded),
-          label: const Text(AppStrings.duelPlayAgain),
-        ),
-        const SizedBox(height: 8),
-        TextButton(
-          onPressed: () => Navigator.of(context).pop(),
-          child: const Text(AppStrings.duelHome),
+        AnimatedContainer(
+          duration: const Duration(milliseconds: 400),
+          height: step,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: colour,
+            borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
+          ),
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  '$total',
+                  style: theme.textTheme.headlineMedium?.copyWith(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w900,
+                    height: 1.1,
+                  ),
+                ),
+                ConstrainedBox(
+                  constraints: BoxConstraints(maxWidth: figure),
+                  child: Text(
+                    name,
+                    style: theme.textTheme.labelLarge?.copyWith(
+                      color: Colors.white,
+                    ),
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
       ],
     );
   }
 }
 
-class _Total extends StatelessWidget {
-  const _Total({required this.name, required this.points});
+/// Every question's points, the player's above the opponent's, each
+/// tinted like its card in the reveal.
+class _QuestionStrip extends StatelessWidget {
+  const _QuestionStrip({required this.match});
 
-  final String name;
-  final int points;
+  final DuelMatch match;
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
-        child: Column(
-          children: [
-            Text(
-              name,
-              style: theme.textTheme.titleSmall,
-              overflow: TextOverflow.ellipsis,
-            ),
-            const SizedBox(height: 4),
-            Text('$points', style: theme.textTheme.displaySmall),
-          ],
+    final surface = theme.colorScheme.surface;
+    Widget cell(DuelResult r, Color colour) => Container(
+      height: 30,
+      margin: const EdgeInsets.symmetric(horizontal: 3, vertical: 2),
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: duelResultFill(surface, hit: r.hit, points: r.points),
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: colour, width: 2),
+      ),
+      child: Text(
+        '${r.points}',
+        style: theme.textTheme.labelLarge?.copyWith(
+          fontWeight: FontWeight.w700,
+          fontFeatures: const [FontFeature.tabularFigures()],
         ),
       ),
+    );
+    return Row(
+      children: [
+        for (final r in match.results)
+          Expanded(
+            child: Column(
+              children: [
+                cell(r.me, Palette.duelMe),
+                cell(r.opponent, Palette.duelOpponent),
+              ],
+            ),
+          ),
+      ],
     );
   }
 }

@@ -91,6 +91,10 @@ class DuelService {
     );
     try {
       return await _connect(uri);
+    } on WebSocketException {
+      // The server answered but refused the upgrade (e.g. an older server
+      // without this route): not the player's connection.
+      throw const DuelException(DuelFailure.server);
     } on Object {
       throw const DuelException(DuelFailure.offline);
     }

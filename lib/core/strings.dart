@@ -215,6 +215,7 @@ abstract final class AppStrings {
 
   // Duel
   static const duel = 'Düello';
+  static const duelHomeHint = 'Canlı rakibe karşı 5 soru';
   static const duelTitle = 'Düello';
   static const duelIntro =
       'Aynı 5 soru, aynı anda. Soru başına 15 saniye. '
@@ -246,10 +247,16 @@ abstract final class AppStrings {
   static const duelAnswer = 'Cevap';
   static const duelYou = 'Sen';
   static const duelNoInterval = 'Aralık yok';
+  static const duelHit = 'İsabet';
+  static const duelMiss = 'Iska';
+  static const duelUnavailable =
+      'Düello şu an kullanılamıyor. Biraz sonra tekrar dene.';
   static const duelSeeResult = 'Sonucu gör';
   static const duelWin = 'Kazandın!';
   static const duelLoss = 'Kaybettin';
   static const duelDraw = 'Berabere';
+  static String duelMargin(int points) =>
+      points == 0 ? 'Puanlar eşit' : 'Fark: $points puan';
   static const duelOpponentLeft = 'Rakibin ayrıldı.';
   static const duelPlayAgain = 'Yeni düello';
   static const duelHome = 'Ana ekran';
@@ -269,6 +276,7 @@ abstract final class AppStrings {
     'connection_lost' => 'Bağlantı koptu.',
     'no_opponent' => 'Şu an rakip bulunamadı. Biraz sonra tekrar dene.',
     'offline' => duelOffline,
+    'unavailable' => duelUnavailable,
     _ => 'Bir sorun oldu. Biraz sonra tekrar dene.',
   };
 

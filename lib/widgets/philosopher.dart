@@ -3,6 +3,9 @@ import 'dart:ui';
 
 import '../core/day_mood.dart';
 
+/// How the philosopher ends a duel: won, lost or drew.
+enum DuelPose { champion, defeated, even }
+
 /// The Kabaca mascot: a thinking philosopher (bald, white beard, eyes
 /// closed, one brow raised) in a terracotta toga, with a thought bubble
 /// holding a question mark. Drawn with plain canvas calls so the app icon
@@ -13,7 +16,8 @@ import '../core/day_mood.dart';
 /// face survives as line art in Android 13 themed icons.
 ///
 /// With a [DayMood] he reacts to the day's score on the share card (face,
-/// arms and a prop); without one he is the thinking icon.
+/// arms and a prop); with a [DuelPose] he ends a duel; without either he is
+/// the thinking icon.
 class Philosopher {
   const Philosopher({this.monochrome = false});
 
@@ -32,6 +36,9 @@ class Philosopher {
   static const tongue = Color(0xFFF07C8A);
   static const drop = Color(0xFF8EC5FF);
   static const cloud = Color(0xFFB8BED6);
+  static const laurel = Color(0xFF6DB356);
+  static const laurelShade = Color(0xFF4E8F3B);
+  static const flagPole = Color(0xFFB07A4F);
 
   /// Outline half-width.
   static const double outline = 0.016;
@@ -118,28 +125,33 @@ class Philosopher {
   }
 
   /// Bald head centred at [h], white beard and a toga reaching down to
-  /// [bottom]; [k] scales. Without a [mood]: closed thinking eyes.
+  /// [bottom]; [k] scales. Without a [mood] or a [pose]: closed thinking
+  /// eyes. [sash] draws a band across the toga in a player's colour.
   void paintPhilosopher(
     Canvas c,
     Offset h,
     double k, {
     double bottom = 1.3,
     DayMood? mood,
+    DuelPose? pose,
+    Color? sash,
   }) {
+    assert(mood == null || pose == null, 'a mood or a pose, not both');
     double s(double v) => v * k;
     final hx = h.dx;
 
     // Toga and shoulders, with a drape line. Proud puffs the chest out;
     // down slumps the shoulders and drops the head.
-    final (shoulder, waist, top) = switch (mood) {
-      DayMood.proud => (0.30, 0.44, 0.25),
-      DayMood.down => (0.18, 0.31, 0.31),
+    final (shoulder, waist, top) = switch ((mood, pose)) {
+      (DayMood.proud, _) || (_, DuelPose.champion) => (0.30, 0.44, 0.25),
+      (DayMood.down, _) || (_, DuelPose.defeated) => (0.18, 0.31, 0.31),
       _ => (0.2, 0.36, 0.27),
     };
     final bodyY = h.dy;
     // Arms come out from behind the toga (the head-scratching hand is drawn
     // again over the head below).
     if (mood != null) _arms(c, h, k, mood);
+    if (pose != null) _duelArms(c, h, k, pose);
     final togaPath = Path()
       ..moveTo(hx - s(waist), bottom)
       ..cubicTo(
@@ -174,8 +186,22 @@ class Philosopher {
           ),
         _line(togaShade, s(0.022)),
       );
+      if (sash != null) {
+        // A band from the left shoulder to the right hip.
+        final band = Path()
+          ..moveTo(hx - s(shoulder * 0.8), bodyY + s(top + 0.02))
+          ..quadraticBezierTo(
+            hx + s(0.02),
+            bodyY + s(top + 0.2),
+            hx + s(waist),
+            bottom - s(0.08),
+          );
+        c.drawPath(band, _line(ink, s(0.085) + outline * 2));
+        c.drawPath(band, _line(sash, s(0.085)));
+        c.drawPath(band, _line(white.withValues(alpha: 0.35), s(0.012)));
+      }
       c.restore();
-      if (mood == DayMood.proud) {
+      if (mood == DayMood.proud || pose == DuelPose.champion) {
         // The puffed chest.
         for (final side in [-1.0, 1.0]) {
           c.drawPath(
@@ -193,7 +219,13 @@ class Philosopher {
       }
     }
 
-    final hy = h.dy + (mood == DayMood.down ? s(0.035) : 0);
+    final hy =
+        h.dy +
+        (mood == DayMood.down
+            ? s(0.035)
+            : pose == DuelPose.defeated
+            ? s(0.05)
+            : 0);
 
     // Ears and the white tufts above them.
     for (final side in [-1.0, 1.0]) {
@@ -234,6 +266,7 @@ class Philosopher {
       skin,
     );
     if (mood != null) _cheeks(c, hx, hy, k, mood);
+    if (pose == DuelPose.champion) _cheeks(c, hx, hy, k, DayMood.great);
     if (!monochrome) {
       c.drawPath(
         Path()..addArc(
@@ -287,6 +320,7 @@ class Philosopher {
     }
 
     if (mood != null) _mouth(c, hx, hy, k, mood);
+    if (pose != null) _duelMouth(c, hx, hy, k, pose);
 
     // Moustache, then the nose on top of it.
     _outlined(
@@ -359,6 +393,11 @@ class Philosopher {
         _sweat(c, Offset(hx - s(0.13), hy - s(0.1)), s(0.05));
       }
       if (mood == DayMood.down) _rainCloud(c, Offset(hx, hy - s(0.33)), k);
+      return;
+    }
+    if (pose != null) {
+      _duelEyes(c, hx, hy, k, pose);
+      if (pose == DuelPose.champion) _laurel(c, hx, hy, k);
       return;
     }
 
@@ -621,6 +660,252 @@ class Philosopher {
             eye,
           );
           brow(p(side * 0.098, -0.04), p(side * 0.035, -0.07));
+      }
+    }
+  }
+
+  /// Arms for the duel's end (new poses, not the share card's).
+  void _duelArms(Canvas c, Offset h, double k, DuelPose pose) {
+    double s(double v) => v * k;
+    Offset p(double x, double y) => h + Offset(s(x), s(y));
+    const arm = 0.075;
+    final strokes = <(List<Offset>, double)>[];
+    final blobs = <(Offset, double)>[];
+    switch (pose) {
+      case DuelPose.champion:
+        // Right arm: a flexed biceps. Left arm: up, "number one".
+        strokes.add(([p(0.24, 0.42), p(0.5, 0.38), p(0.48, 0.14)], arm));
+        blobs.add((p(0.39, 0.32), s(0.068)));
+        blobs.add((p(0.48, 0.11), s(0.056)));
+        strokes.add(([p(-0.24, 0.42), p(-0.4, 0.16), p(-0.43, -0.1)], arm));
+        strokes.add(([p(-0.43, -0.14), p(-0.43, -0.26)], 0.032));
+        blobs.add((p(-0.43, -0.12), s(0.05)));
+      case DuelPose.defeated:
+        // A white flag; its pole goes behind the hand that holds it.
+        c.drawLine(p(0.42, 0.68), p(0.47, 0.06), _line(ink, s(0.03)));
+        c.drawLine(p(0.42, 0.68), p(0.47, 0.06), _line(flagPole, s(0.016)));
+        Offset q(double x, double y) => p(x, y);
+        final cloth = Path()
+          ..moveTo(q(0.47, 0.07).dx, q(0.47, 0.07).dy)
+          ..quadraticBezierTo(
+            q(0.57, 0.03).dx,
+            q(0.57, 0.03).dy,
+            q(0.67, 0.12).dx,
+            q(0.67, 0.12).dy,
+          )
+          ..quadraticBezierTo(
+            q(0.67, 0.2).dx,
+            q(0.67, 0.2).dy,
+            q(0.63, 0.27).dx,
+            q(0.63, 0.27).dy,
+          )
+          ..quadraticBezierTo(
+            q(0.55, 0.19).dx,
+            q(0.55, 0.19).dy,
+            q(0.46, 0.24).dx,
+            q(0.46, 0.24).dy,
+          )
+          ..close();
+        _outlined(c, cloth, white);
+        strokes.add(([p(0.2, 0.45), p(0.35, 0.6), p(0.44, 0.5)], arm));
+        blobs.add((p(0.445, 0.48), s(0.048)));
+      case DuelPose.even:
+        // A shrug: both palms up.
+        for (final d in [-1.0, 1.0]) {
+          strokes.add((
+            [p(d * 0.24, 0.42), p(d * 0.42, 0.5), p(d * 0.56, 0.37)],
+            arm,
+          ));
+          blobs.add((p(d * 0.58, 0.34), s(0.052)));
+        }
+    }
+    for (final (pts, w) in strokes) {
+      c.drawPath(_polyline(pts), _line(ink, s(w) + outline * 2));
+    }
+    for (final (at, r) in blobs) {
+      c.drawCircle(at, r + outline, _fill(ink));
+    }
+    for (final (pts, w) in strokes) {
+      c.drawPath(
+        _polyline(pts),
+        _line(skin, s(w))..blendMode = BlendMode.srcOver,
+      );
+    }
+    for (final (at, r) in blobs) {
+      c.drawCircle(at, r, _fill(skin));
+    }
+    if (!monochrome && pose == DuelPose.champion) {
+      // The biceps' curve and the fist's knuckles.
+      c.drawArc(
+        Rect.fromCircle(center: p(0.39, 0.34), radius: s(0.04)),
+        3.6,
+        1.6,
+        false,
+        _line(skinShade, s(0.011)),
+      );
+      final fist = p(0.48, 0.11);
+      for (final dy in [-0.02, 0.0, 0.02]) {
+        c.drawLine(
+          fist + Offset(-s(0.028), s(dy)),
+          fist + Offset(s(0.012), s(dy)),
+          _line(skinShade, s(0.011)),
+        );
+      }
+    }
+  }
+
+  void _duelMouth(Canvas c, double hx, double hy, double k, DuelPose pose) {
+    double s(double v) => v * k;
+    Offset p(double x, double y) => Offset(hx + s(x), hy + s(y));
+    Path wave(List<(double, double)> pts) {
+      final path = Path()
+        ..moveTo(p(pts[0].$1, pts[0].$2).dx, p(pts[0].$1, pts[0].$2).dy);
+      for (var i = 1; i + 1 < pts.length; i += 2) {
+        final ctrl = p(pts[i].$1, pts[i].$2);
+        final end = p(pts[i + 1].$1, pts[i + 1].$2);
+        path.quadraticBezierTo(ctrl.dx, ctrl.dy, end.dx, end.dy);
+      }
+      return path;
+    }
+
+    switch (pose) {
+      case DuelPose.champion:
+        // A wide grin showing the top teeth.
+        final a = p(-0.08, 0.095), b = p(0.08, 0.095);
+        final open = Path()
+          ..moveTo(a.dx, a.dy)
+          ..cubicTo(a.dx, p(0, 0.2).dy, b.dx, p(0, 0.2).dy, b.dx, b.dy)
+          ..close();
+        _outlined(c, open, mouth);
+        if (!monochrome) {
+          c.save();
+          c.clipPath(open);
+          c.drawRect(
+            Rect.fromLTRB(a.dx, a.dy, b.dx, p(0, 0.128).dy),
+            Paint()..color = white,
+          );
+          c.restore();
+        }
+      case DuelPose.defeated:
+        // A trembling frown.
+        c.drawPath(
+          wave([
+            (-0.05, 0.155),
+            (-0.03, 0.118),
+            (-0.01, 0.13),
+            (0.01, 0.114),
+            (0.03, 0.126),
+            (0.05, 0.13),
+            (0.055, 0.155),
+          ]),
+          _line(ink, s(0.016)),
+        );
+      case DuelPose.even:
+        // Flat, a little crooked.
+        c.drawLine(p(-0.04, 0.138), p(0.045, 0.13), _line(ink, s(0.016)));
+    }
+  }
+
+  void _duelEyes(Canvas c, double hx, double hy, double k, DuelPose pose) {
+    double s(double v) => v * k;
+    Offset p(double x, double y) => Offset(hx + s(x), hy + s(y));
+    final eye = _line(ink, s(0.016));
+    void openEye(Offset at, double r) {
+      c.drawCircle(at, s(r), _fill(ink));
+      if (!monochrome) {
+        c.drawCircle(
+          at + Offset(-s(r * 0.3), -s(r * 0.35)),
+          s(r * 0.32),
+          _fill(white),
+        );
+      }
+    }
+
+    void brow(Offset a, Offset b, double lift) => c.drawPath(
+      Path()
+        ..moveTo(a.dx, a.dy)
+        ..quadraticBezierTo(
+          (a.dx + b.dx) / 2,
+          (a.dy + b.dy) / 2 - s(lift),
+          b.dx,
+          b.dy,
+        ),
+      eye,
+    );
+    switch (pose) {
+      case DuelPose.champion:
+        // A wink: left eye shut, right eye open and bright.
+        c.drawPath(
+          Path()..addArc(
+            Rect.fromCenter(
+              center: p(-0.062, 0.007),
+              width: s(0.06),
+              height: s(0.05),
+            ),
+            math.pi + 0.3,
+            math.pi - 0.6,
+          ),
+          eye,
+        );
+        openEye(p(0.062, -0.005), 0.022);
+        brow(p(-0.095, -0.07), p(-0.035, -0.075), 0.015);
+        brow(p(0.032, -0.085), p(0.098, -0.09), 0.03);
+      case DuelPose.defeated:
+        // Wet eyes, sad brows and tears running into the beard.
+        for (final side in [-1.0, 1.0]) {
+          openEye(p(side * 0.062, 0.0), 0.019);
+          brow(p(side * 0.1, -0.035), p(side * 0.035, -0.07), -0.005);
+          if (!monochrome) {
+            final tear = Path()
+              ..moveTo(p(side * 0.07, 0.025).dx, p(side * 0.07, 0.025).dy)
+              ..quadraticBezierTo(
+                p(side * 0.088, 0.06).dx,
+                p(side * 0.088, 0.06).dy,
+                p(side * 0.08, 0.1).dx,
+                p(side * 0.08, 0.1).dy,
+              );
+            c.drawPath(tear, _line(drop, s(0.02)));
+          }
+        }
+      case DuelPose.even:
+        for (final side in [-1.0, 1.0]) {
+          openEye(p(side * 0.062, -0.005), 0.02);
+          brow(p(side * 0.035, -0.08), p(side * 0.098, -0.075), 0.02);
+        }
+    }
+  }
+
+  /// A laurel wreath around the top of the head, open at the crown.
+  void _laurel(Canvas c, double hx, double hy, double k) {
+    double s(double v) => v * k;
+    final centre = Offset(hx, hy - s(0.02));
+    for (final side in [-1.0, 1.0]) {
+      for (var i = 0; i < 5; i++) {
+        // Angle from straight up, towards the temples.
+        final a = 0.25 + i * 0.3;
+        final at =
+            centre +
+            Offset(side * math.sin(a) * s(0.16), -math.cos(a) * s(0.178));
+        c.save();
+        c.translate(at.dx, at.dy);
+        c.rotate(side * (a + 0.9));
+        final leaf = Path()
+          ..addOval(
+            Rect.fromCenter(
+              center: Offset.zero,
+              width: s(0.042),
+              height: s(0.085),
+            ),
+          );
+        _outlined(c, leaf, laurel);
+        if (!monochrome) {
+          c.drawLine(
+            Offset(0, -s(0.03)),
+            Offset(0, s(0.03)),
+            _line(laurelShade, s(0.008)),
+          );
+        }
+        c.restore();
       }
     }
   }

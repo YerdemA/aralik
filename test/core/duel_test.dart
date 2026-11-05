@@ -153,4 +153,19 @@ void main() {
       expect(m.phase, DuelPhase.question);
     });
   });
+
+  test('cards get deeper with the points: greener hits, greyer misses', () {
+    expect(
+      duelTintStrength(points: 95, hit: true),
+      greaterThan(duelTintStrength(points: 20, hit: true)),
+    );
+    expect(
+      duelTintStrength(points: -50, hit: false),
+      greaterThan(duelTintStrength(points: 30, hit: false)),
+    );
+    for (final (points, hit) in [(-80, true), (100, true), (200, false)]) {
+      final t = duelTintStrength(points: points, hit: hit);
+      expect(t, inInclusiveRange(0, 1));
+    }
+  });
 }

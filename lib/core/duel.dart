@@ -181,6 +181,14 @@ enum DuelPhase {
 
 enum DuelOutcome { win, loss, draw }
 
+/// How deep a revealed interval's card is tinted, 0…1. Hits get greener
+/// with their points; misses get a deeper grey the further they missed
+/// (the fewer points).
+double duelTintStrength({required int points, required bool hit}) {
+  final p = points.clamp(-50, 100);
+  return hit ? (p + 50) / 150 : (100 - p) / 150;
+}
+
 /// The state of one duel as seen by this player, built from the room's
 /// events. Seats are turned around so "me" and "opponent" read naturally.
 class DuelMatch extends ChangeNotifier {
