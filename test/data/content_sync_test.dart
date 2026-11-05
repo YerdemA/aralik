@@ -144,6 +144,19 @@ void main() {
     expect(content().latestAppBuild, isNull);
   });
 
+  test('stores the scoring switch day from the manifest', () async {
+    ContentSync content() =>
+        ContentSync(prefs, httpGet: fakeGet, clock: () => now);
+    expect(content().scoringV2Day, isNull);
+    final manifest = jsonDecode(server['manifest.json']!) as Map;
+    server['manifest.json'] = jsonEncode({...manifest, 'scoring_v2_day': 0});
+    await sync();
+    expect(content().scoringV2Day, 0); // day 0 is a valid day
+    server['manifest.json'] = jsonEncode(manifest);
+    await sync(force: true);
+    expect(content().scoringV2Day, isNull);
+  });
+
   test('rejects a bank that reorders or drops bundled questions', () async {
     server['questions.json'] = bank(['q2', 'q1', ...ids(3, 10)]);
     expect(await sync(), SyncResult.rejected);

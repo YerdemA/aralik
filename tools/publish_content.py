@@ -14,6 +14,10 @@ ever append questions and days.
 --reset publishes even when the new content does not continue the published
 one. Use it only before the first player: installed apps would reject it.
 
+--scoring-v2-day N makes the daily sets and duels of day N on use the
+scaled scoring rule (lib/core/answer_scale.dart); app and leaderboard
+server both read it. -1 removes it.
+
 --app-build N announces that build N (pubspec's "+N") is on Google Play:
 apps with an older build offer the update. Set it only once the release is
 live on Play, or players are sent to a store page without the update.
@@ -83,6 +87,12 @@ def main(argv: list[str]) -> int:
         metavar="N",
         help="Play'de yayındaki en yeni build numarası (eskiler güncelleme önerir; 0 kapatır)",
     )
+    parser.add_argument(
+        "--scoring-v2-day",
+        type=int,
+        metavar="N",
+        help="günlük set ve düellolar bu gün indeksinden itibaren ölçekli puanla (-1 kaldırır)",
+    )
     args = parser.parse_args(argv)
     if args.app_build is not None and args.app_build < 0:
         print("HATA: --app-build 0 ya da pozitif olmalı.")
@@ -130,11 +140,16 @@ def main(argv: list[str]) -> int:
             if args.app_build is None
             else args.app_build or None
         ),
+        "scoring_v2_day": (
+            manifest.get("scoring_v2_day")
+            if args.scoring_v2_day is None
+            else (None if args.scoring_v2_day < 0 else args.scoring_v2_day)
+        ),
     }
 
     def with_extras(m: dict) -> dict:
         for key, value in extras.items():
-            if value:
+            if value is not None and value is not False:
                 m[key] = value
             else:
                 m.pop(key, None)
@@ -149,6 +164,7 @@ def main(argv: list[str]) -> int:
             )
             print(f"Liderlik adresi: {extras['leaderboard'] or 'kapalı'}")
             print(f"Güncelleme önerilen build: {extras['app_build'] or 'kapalı'}")
+            print(f"Ölçekli puan başlangıç günü: {extras['scoring_v2_day'] if extras['scoring_v2_day'] is not None else 'yok'}")
             print("Canlıya almak için docs/ klasörünü commit edip push edin.")
             return 0
         print(f"Değişiklik yok, sürüm {manifest['version']} kaldı.")

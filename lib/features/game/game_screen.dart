@@ -21,7 +21,11 @@ class GameScreen extends StatefulWidget {
     this.startQuestion,
     this.timeLimit = dailyTimeLimit,
     this.now = DateTime.now,
+    this.scaled = true,
   });
+
+  /// Intervals and points follow each question's scale (the current rule).
+  final bool scaled;
 
   final List<Question> questions;
 
@@ -49,7 +53,10 @@ class GameScreen extends StatefulWidget {
 }
 
 class _GameScreenState extends State<GameScreen> {
-  late final GameController _game = GameController(widget.questions);
+  late final GameController _game = GameController(
+    widget.questions,
+    scaled: widget.scaled,
+  );
 
   /// Time left on the current question; null without a time limit.
   final _left = ValueNotifier<Duration?>(null);

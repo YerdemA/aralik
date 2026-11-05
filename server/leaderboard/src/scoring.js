@@ -23,11 +23,57 @@ export function intervalScore(kind, low, high, answer) {
   return h - l + MISS_PENALTY * outside;
 }
 
-/** Points of one locked interval; null bounds mean time ran out empty. */
-export function scoreFor(kind, low, high, answer) {
+// The scaled rule (lib/core/answer_scale.dart): each question's widest
+// slider interval comes from its kind, category and answer, and a hit at
+// that width scores POINTS_AT_WIDEST everywhere.
+const POINTS_AT_WIDEST = 30;
+const SCALE_BASE_YEAR = 2026;
+const MAGNITUDE_FACTORS = {
+  coğrafya: 10,
+  şirketler: 10,
+  hayvanlar: 8,
+  bilim: 6,
+  mimari: 6,
+  türkiye: 6,
+  gündelik: 5,
+  spor: 4,
+};
+const DEFAULT_MAGNITUDE_FACTOR = 8;
+
+/** {maxFactor, maxYearHalf} of a question; see answer_scale.dart. */
+export function scaleOf(kind, category, answer) {
+  if (kind === 'magnitude') {
+    return {
+      maxFactor: MAGNITUDE_FACTORS[category] ?? DEFAULT_MAGNITUDE_FACTOR,
+      maxYearHalf: 0,
+    };
+  }
+  const age = Math.max(0, SCALE_BASE_YEAR - dartRound(answer));
+  const half = dartRound((20 + age / 4) / 10) * 10;
+  return { maxFactor: 0, maxYearHalf: Math.min(400, Math.max(30, half)) };
+}
+
+export function pointsPerUnit(kind, scale) {
+  const widest =
+    kind === 'magnitude'
+      ? (2 * Math.log(scale.maxFactor)) / Math.LN2
+      : 2 * scale.maxYearHalf;
+  return (MAX_POINTS - POINTS_AT_WIDEST) / widest;
+}
+
+/**
+ * Points of one locked interval; null bounds mean time ran out empty.
+ * With a [scale] the current rule, without one the first rule (days
+ * before the switch).
+ */
+export function scoreFor(kind, low, high, answer, scale = null) {
   if (low === null || high === null) return MIN_POINTS;
   const s = intervalScore(kind, low, high, answer);
-  const k = kind === 'magnitude' ? POINTS_PER_LOG2 : POINTS_PER_YEAR;
+  const k = scale
+    ? pointsPerUnit(kind, scale)
+    : kind === 'magnitude'
+      ? POINTS_PER_LOG2
+      : POINTS_PER_YEAR;
   const points = dartRound(MAX_POINTS - k * s);
   return Math.min(MAX_POINTS, Math.max(MIN_POINTS, points));
 }

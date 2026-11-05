@@ -18,7 +18,11 @@ class KabacaApp extends StatelessWidget {
     required this.settings,
     this.leaderboard,
     this.latestAppBuild,
+    this.scoringV2Day,
   });
+
+  /// First day of the scaled scoring rule (content manifest), or null.
+  final int? Function()? scoringV2Day;
 
   final QuestionRepository repository;
   final StatsStore stats;
@@ -55,6 +59,7 @@ class KabacaApp extends StatelessWidget {
             settings: settings,
             leaderboard: leaderboard,
             latestAppBuild: latestAppBuild,
+            scoringV2Day: scoringV2Day,
           ),
         ),
       ),

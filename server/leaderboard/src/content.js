@@ -2,6 +2,7 @@
 // Scores are computed from these, never taken from the app.
 
 import { QUESTIONS_PER_DAY } from './days.js';
+import { scaleOf } from './scoring.js';
 
 const MANIFEST_TTL_MS = 5 * 60 * 1000;
 
@@ -25,6 +26,7 @@ export async function loadContent(base, fetchFn, nowMs) {
   const manifest = await getJson(fetchFn, new URL('manifest.json', base));
   if (cache && cache.version === manifest.version) {
     cache.checkedAt = nowMs;
+    cache.scoringV2Day = scoringDay(manifest);
     return cache;
   }
   const [bank, schedule] = await Promise.all([
@@ -37,13 +39,37 @@ export async function loadContent(base, fetchFn, nowMs) {
     questions: new Map(
       bank.map((q) => [
         q.id,
-        { answer: q.answer, kind: q.kind, difficulty: q.difficulty ?? 2 },
+        {
+          answer: q.answer,
+          kind: q.kind,
+          category: q.category,
+          difficulty: q.difficulty ?? 2,
+        },
       ]),
     ),
     order: bank.map((q) => q.id),
+    scoringV2Day: scoringDay(manifest),
     days: schedule.days,
   };
   return cache;
+}
+
+/** First day of the scaled rule (`scoring_v2_day`), or null. */
+function scoringDay(manifest) {
+  return Number.isInteger(manifest.scoring_v2_day)
+    ? manifest.scoring_v2_day
+    : null;
+}
+
+/** Whether [day] uses the scaled rule (lib/core/answer_scale.dart). */
+export function scaledOn(content, day) {
+  return content.scoringV2Day !== null && content.scoringV2Day !== undefined
+    && day >= content.scoringV2Day;
+}
+
+/** The scale of [q] on [day], or null under the first rule. */
+export function scaleOn(content, q, day) {
+  return scaledOn(content, day) ? scaleOf(q.kind, q.category, q.answer) : null;
 }
 
 function mod(a, n) {

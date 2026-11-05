@@ -27,6 +27,7 @@ Günün setinde her soru için **15 saniye** var. Süre dolunca ekrandaki aralı
 3. **Kilitle:** Cevap, aralığın üstünde bir işaretle gösterilir. Yanında puanın, kaynak linki ve ilginç bir bilgi yer alır.
 
 **Puan:** İsabette en fazla 100 puan alırsın, dar aralık daha çok puan getirir. Kıl payı ıska yine puan alabilir, uzak ıska eksi puandır (en düşük −50). Süre dolduğunda hiç tahmin yazılmamışsa da −50 alınır. Kural bilerek dar aralık vermeyi kârsız kılar. En iyi strateji gerçekten %90 emin olduğun aralığı vermektir.
+Aralığın ne kadar genişleyebileceği soruya göre değişir: eski bir olayın yılı ya da nüfus gibi geniş bir büyüklük için kaydırıcı daha geniş açılır. Kaydırıcının en ucunda isabet her soruda aynı puanı getirir.
 
 **Paylaşım:** Gün bitince sonuç iki şekilde paylaşılabilir:
 - **Görsel:** Instagram hikâyesi ve WhatsApp durumu için 1080 × 1920'lik bir kart. Kartta günün tarihi, skoru, renkli kareler ve kalibrasyon var. Filozof maskotu skora göre beş hâlden birine bürünür: kahkahayla kas gösteren "Efsane!"den yağmur bulutu altındaki "Bugün olmadı."ya kadar. Metin de açıklama olarak eklenir.

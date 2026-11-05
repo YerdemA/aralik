@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 
 import '../data/question.dart';
+import 'answer_scale.dart';
 
 /// Scoring formulas (pure functions).
 
@@ -78,7 +79,11 @@ double intervalScore({
   return (h - l) + missPenalty * outside;
 }
 
-/// Points for one locked interval: `100 − k·S`, clamped to −50…100, with
+/// Points for one locked interval: `100 − k·S`, clamped to −50…100.
+///
+/// With a [scale] (the current rule), k comes from the question's scale
+/// ([pointsPerUnit]): the widest slider hit scores 30 on every question.
+/// Without one (the first rule, still used for days before the switch),
 /// k = 10 per log2 (magnitude) or 1 per year (year).
 ///
 /// A hit scores by width alone (4.500 – 5.500 m → 97). A near miss still
@@ -88,12 +93,15 @@ int scoreFor({
   required num low,
   required num high,
   required num answer,
+  AnswerScale? scale,
 }) {
   final s = intervalScore(kind: kind, low: low, high: high, answer: answer);
-  final k = switch (kind) {
-    QuestionKind.magnitude => magnitudePointsPerLog2,
-    QuestionKind.year => yearPointsPerYear,
-  };
+  final k = scale != null
+      ? pointsPerUnit(kind, scale)
+      : switch (kind) {
+          QuestionKind.magnitude => magnitudePointsPerLog2,
+          QuestionKind.year => yearPointsPerYear,
+        };
   return (maxPointsPerQuestion - k * s).round().clamp(
     minPointsPerQuestion,
     maxPointsPerQuestion,

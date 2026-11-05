@@ -55,6 +55,7 @@ class ContentSync implements RemoteContent {
   static const _scheduleKey = 'content_schedule';
   static const _leaderboardKey = 'leaderboard_url';
   static const _appBuildKey = 'latest_app_build';
+  static const _scoringDayKey = 'scoring_v2_day';
 
   final SharedPreferences _prefs;
   final HttpGet _get;
@@ -85,6 +86,11 @@ class ContentSync implements RemoteContent {
   /// leaderboard address.
   int? get latestAppBuild => _prefs.getInt(_appBuildKey);
 
+  /// The first day the daily sets and duels use the scaled rule
+  /// (`"scoring_v2_day"`, see answer_scale.dart), or null. The server reads
+  /// the same field, so the app's points match the leaderboard's.
+  int? get scoringV2Day => _prefs.getInt(_scoringDayKey);
+
   /// Checks for new content. [accept] decides whether the downloaded files
   /// may replace the current ones; they are stored all together or not at
   /// all.
@@ -105,6 +111,12 @@ class ContentSync implements RemoteContent {
       final remoteVersion = manifest['version'] as int;
       await _prefs.setInt(_checkedKey, now.millisecondsSinceEpoch);
       await _storeLeaderboard(manifest['leaderboard']);
+      final switchDay = manifest['scoring_v2_day'];
+      if (switchDay is int) {
+        await _prefs.setInt(_scoringDayKey, switchDay);
+      } else {
+        await _prefs.remove(_scoringDayKey);
+      }
       final build = manifest['app_build'];
       if (build is int && build > 0) {
         await _prefs.setInt(_appBuildKey, build);

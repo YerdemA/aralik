@@ -1,5 +1,6 @@
 import 'dart:math' as math;
 
+import 'package:aralik/core/answer_scale.dart';
 import 'package:aralik/core/scoring.dart';
 import 'package:aralik/data/question.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -180,6 +181,137 @@ void main() {
       expect(calibrationFeedback(95, 100), CalibrationFeedback.good);
       expect(calibrationFeedback(96, 100), CalibrationFeedback.tooWide);
       expect(calibrationFeedback(10, 10), CalibrationFeedback.tooWide);
+    });
+  });
+
+  group('scaled rule (answer_scale.dart)', () {
+    test('a hit at the widest slider scores 30 on every question', () {
+      for (final (kind, category, answer) in [
+        (QuestionKind.year, QuestionCategory.turkey, 1923),
+        (QuestionKind.year, QuestionCategory.ottoman, 1453),
+        (QuestionKind.year, QuestionCategory.history, 1100),
+        (QuestionKind.year, QuestionCategory.history, -3000),
+        (QuestionKind.magnitude, QuestionCategory.geography, 5137),
+        (QuestionKind.magnitude, QuestionCategory.sports, 40000),
+        (QuestionKind.magnitude, QuestionCategory.animals, 12),
+      ]) {
+        final scale = scaleFor(kind, category, answer);
+        final (low, high) = kind == QuestionKind.year
+            ? (answer - scale.maxYearHalf, answer + scale.maxYearHalf)
+            : (answer / scale.maxFactor, answer * scale.maxFactor);
+        expect(
+          scoreFor(
+            kind: kind,
+            low: low,
+            high: high,
+            answer: answer,
+            scale: scale,
+          ),
+          pointsAtWidest,
+          reason: '$category $answer',
+        );
+      }
+    });
+
+    test('older events get wider sliders', () {
+      int half(int year) => scaleFor(
+        QuestionKind.year,
+        QuestionCategory.history,
+        year,
+      ).maxYearHalf;
+      expect(half(2020), minYearHalfWidth);
+      expect(half(1923), 50);
+      expect(half(1453), 160);
+      expect(half(1100), 250);
+      expect(half(-3000), maxYearHalfWidthScaled);
+      expect(half(2100), minYearHalfWidth); // never below the minimum
+    });
+
+    test('an honest 90% interval stays the best play on every scale', () {
+      // The player's error is Normal(0, σ) in the question's axis units
+      // (years or log2); σ is a fifth of the widest half width.
+      double bestCoverage(
+        double unitsPerHalf,
+        num Function(double) at,
+        QuestionKind kind,
+        AnswerScale scale,
+        num answer,
+      ) {
+        final sigma = unitsPerHalf / 5;
+        double expected(double h) {
+          const n = 401;
+          final step = 16 * sigma / (n - 1);
+          var total = 0.0;
+          for (var i = 0; i < n; i++) {
+            final x = -8 * sigma + i * step;
+            final pdf =
+                math.exp(-x * x / (2 * sigma * sigma)) /
+                (sigma * math.sqrt(2 * math.pi));
+            total +=
+                scoreFor(
+                  kind: kind,
+                  low: at(-h),
+                  high: at(h),
+                  answer: at(x),
+                  scale: scale,
+                ) *
+                pdf *
+                step;
+          }
+          return total;
+        }
+
+        var bestH = 0.0;
+        var best = double.negativeInfinity;
+        for (var i = 1; i <= 200; i++) {
+          final h = unitsPerHalf * i / 200;
+          final e = expected(h);
+          if (e > best) {
+            best = e;
+            bestH = h;
+          }
+        }
+        return 2 * _normalCdf(bestH / sigma) - 1;
+      }
+
+      final ottoman = scaleFor(
+        QuestionKind.year,
+        QuestionCategory.ottoman,
+        1453,
+      );
+      expect(
+        bestCoverage(
+          ottoman.maxYearHalf.toDouble(),
+          (x) => 1453 + x,
+          QuestionKind.year,
+          ottoman,
+          1453,
+        ),
+        closeTo(0.89, 0.02),
+      );
+      final sports = scaleFor(
+        QuestionKind.magnitude,
+        QuestionCategory.sports,
+        40000,
+      );
+      final log2Factor = math.log(sports.maxFactor) / math.ln2;
+      expect(
+        bestCoverage(
+          log2Factor,
+          (x) => 40000 * math.pow(2, x),
+          QuestionKind.magnitude,
+          sports,
+          40000,
+        ),
+        closeTo(0.89, 0.02),
+      );
+    });
+
+    test('the switch day decides the rule of a day', () {
+      expect(scaledOn(10, null), isFalse);
+      expect(scaledOn(9, 10), isFalse);
+      expect(scaledOn(10, 10), isTrue);
+      expect(scaledOn(11, 10), isTrue);
     });
   });
 }

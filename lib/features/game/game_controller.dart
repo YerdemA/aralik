@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 
+import '../../core/answer_scale.dart';
 import '../../core/interval.dart';
 import '../../core/scoring.dart';
 import '../../data/question.dart';
@@ -52,7 +53,15 @@ class RoundAnswer {
 
 /// State of one round (a list of questions answered in order).
 class GameController extends ChangeNotifier {
-  GameController(this.questions) : assert(questions.isNotEmpty);
+  GameController(this.questions, {this.scaled = true})
+    : assert(questions.isNotEmpty);
+
+  /// Whether intervals and points follow each question's scale (the
+  /// current rule, answer_scale.dart). False for daily sets of days before
+  /// the leaderboard switched rules.
+  final bool scaled;
+
+  AnswerScale? get _scale => scaled ? scaleOf(question) : null;
 
   /// Longest guess the pad accepts (12 digits ≈ 1 trillion).
   static const maxMagnitudeDigits = 12;
@@ -128,7 +137,13 @@ class GameController extends ChangeNotifier {
   /// The interval as shown and scored. Only valid in the width phase.
   Bounds get interval {
     final g = guess!;
-    return isYear ? yearInterval(g, _width) : magnitudeInterval(g, _width);
+    final scale = _scale;
+    if (scale == null) {
+      return isYear ? yearInterval(g, _width) : magnitudeInterval(g, _width);
+    }
+    return isYear
+        ? yearInterval(g, _width, maxHalf: scale.maxYearHalf)
+        : magnitudeInterval(g, _width, maxFactor: scale.maxFactor);
   }
 
   /// Points if the current interval turns out to contain the answer.
@@ -139,6 +154,7 @@ class GameController extends ChangeNotifier {
       low: b.low,
       high: b.high,
       answer: b.low,
+      scale: _scale,
     );
   }
 
@@ -183,6 +199,7 @@ class GameController extends ChangeNotifier {
         low: b.low,
         high: b.high,
         answer: question.answer,
+        scale: _scale,
       ),
       timedOut: timedOut,
     );

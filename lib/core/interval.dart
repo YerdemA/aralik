@@ -5,10 +5,13 @@ import 'dart:math' as math;
 /// Pure functions. The returned bounds are exactly what the player sees and
 /// what is scored.
 
-/// At the slider's right end a magnitude interval is guess÷10 … guess×10.
+/// At the slider's right end a magnitude interval is guess÷10 … guess×10
+/// under the first rule; the current rule takes the factor from the
+/// question's scale (answer_scale.dart).
 const double maxMagnitudeFactor = 10;
 
-/// At the slider's right end a year interval is guess ± 50.
+/// At the slider's right end a year interval is guess ± 50 under the
+/// first rule; the current rule takes it from the question's scale.
 const int maxYearHalfWidth = 50;
 
 /// Initial slider position for a new question.
@@ -23,12 +26,16 @@ typedef Bounds = ({int low, int high});
 /// `5.000` at ×1,1 reads `4.500 – 5.500`, not `4.545 – 5.500`. Each bound's
 /// step is at most a tenth of the width and a tenth of the bound itself, so
 /// at full width `500 – 50.000` keeps its low end. The low bound is ≥ 1.
-Bounds magnitudeInterval(int guess, double t) {
+Bounds magnitudeInterval(
+  int guess,
+  double t, {
+  double maxFactor = maxMagnitudeFactor,
+}) {
   assert(guess > 0);
   final position = t.clamp(0.0, 1.0);
   if (position == 0) return (low: guess, high: guess);
 
-  final factor = math.pow(maxMagnitudeFactor, position).toDouble();
+  final factor = math.pow(maxFactor, position).toDouble();
   final rawLow = guess / factor;
   final rawHigh = guess * factor;
   final widthStep = _niceStep(rawHigh - rawLow);
@@ -40,10 +47,10 @@ Bounds magnitudeInterval(int guess, double t) {
 }
 
 /// Linear ±years interval with a quadratic slider, so small widths get
-/// fine control: half width `round(50·t²)`.
-Bounds yearInterval(int guess, double t) {
+/// fine control: half width `round(maxHalf·t²)`.
+Bounds yearInterval(int guess, double t, {int maxHalf = maxYearHalfWidth}) {
   final position = t.clamp(0.0, 1.0);
-  final half = (maxYearHalfWidth * position * position).round();
+  final half = (maxHalf * position * position).round();
   return (low: guess - half, high: guess + half);
 }
 

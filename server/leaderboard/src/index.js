@@ -35,7 +35,7 @@ import {
   turkeyDayIndex,
   QUESTIONS_PER_DAY,
 } from './days.js';
-import { isDailySet, loadContent } from './content.js';
+import { isDailySet, loadContent, scaleOn } from './content.js';
 import { cleanNickname, isBlocked, nicknameKey } from './nickname.js';
 import { isHit, scoreFor, validBound } from './scoring.js';
 import { normalizeRoomCode } from './duel.js';
@@ -270,7 +270,7 @@ async function submit(request, env, now, fetchFn) {
     }
     const low = empty ? null : a.low;
     const high = empty ? null : a.high;
-    points += scoreFor(q.kind, low, high, q.answer);
+    points += scoreFor(q.kind, low, high, q.answer, scaleOn(content, q, day));
     if (isHit(low, high, q.answer)) hits++;
   }
 

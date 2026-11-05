@@ -9,6 +9,7 @@ import '../../core/number_format.dart';
 import '../../core/scoring.dart';
 import '../../core/strings.dart';
 import '../../core/theme.dart';
+import '../../core/answer_scale.dart';
 import '../../core/app_update.dart';
 import '../../data/duel_client.dart';
 import '../../data/store_link.dart';
@@ -39,7 +40,11 @@ class HomeScreen extends StatefulWidget {
     this.leaderboard,
     this.latestAppBuild,
     this.openStore = openStorePage,
+    this.scoringV2Day,
   });
+
+  /// First day of the scaled scoring rule (content manifest), or null.
+  final int? Function()? scoringV2Day;
 
   final QuestionRepository repository;
   final StatsStore stats;
@@ -157,6 +162,7 @@ class _HomeScreenState extends State<HomeScreen> {
       MaterialPageRoute(
         builder: (_) => GameScreen(
           questions: remaining,
+          scaled: scaledOn(day, widget.scoringV2Day?.call()),
           alreadyAnswered: done,
           startQuestion: (position) =>
               _stats.startDailyQuestion(day, position, DateTime.now()),
@@ -263,6 +269,7 @@ class _HomeScreenState extends State<HomeScreen> {
         stats: _stats,
         settings: widget.settings,
         suggestedName: _leaderboard?.account?.nickname,
+        scaled: scaledOn(_today, widget.scoringV2Day?.call()),
       ),
     ),
   );

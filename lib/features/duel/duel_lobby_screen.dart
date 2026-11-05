@@ -19,7 +19,11 @@ class DuelLobbyScreen extends StatefulWidget {
     required this.stats,
     required this.settings,
     this.suggestedName,
+    this.scaled = true,
   });
+
+  /// Whether today's duels use the scaled rule (see answer_scale.dart).
+  final bool scaled;
 
   final DuelService service;
   final QuestionRepository repository;
@@ -107,6 +111,7 @@ class _DuelLobbyScreenState extends State<DuelLobbyScreen> {
           stats: widget.stats,
           code: code,
           name: name,
+          scaled: widget.scaled,
         ),
       ),
     );

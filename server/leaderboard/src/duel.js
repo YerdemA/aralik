@@ -31,8 +31,8 @@
 //   lobby → app  {t: 'searching'}
 //                {t: 'matched', code}      then connect to that room
 
-import { QUESTIONS_PER_DAY } from './days.js';
-import { upcomingIds } from './content.js';
+import { scaleOn, upcomingIds } from './content.js';
+import { QUESTIONS_PER_DAY, turkeyDayIndex } from './days.js';
 import { isHit, MIN_POINTS, scoreFor, validBound } from './scoring.js';
 import { cleanNickname, isBlocked, nicknameKey } from './nickname.js';
 
@@ -247,7 +247,16 @@ function reveal(state, now, content) {
     return {
       low,
       high,
-      points: low === null ? MIN_POINTS : scoreFor(q.kind, low, high, q.answer),
+      points:
+        low === null
+          ? MIN_POINTS
+          : scoreFor(
+              q.kind,
+              low,
+              high,
+              q.answer,
+              scaleOn(content, q, turkeyDayIndex(now)),
+            ),
       hit: isHit(low, high, q.answer),
     };
   });

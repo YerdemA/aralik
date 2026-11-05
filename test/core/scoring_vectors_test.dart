@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:aralik/core/answer_scale.dart';
 import 'package:aralik/core/scoring.dart';
 import 'package:aralik/data/question.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -15,14 +16,30 @@ void main() {
     ) as List;
     expect(vectors, isNotEmpty);
     for (final v in vectors.cast<Map<String, dynamic>>()) {
+      final kind = v['kind'] == 'year'
+          ? QuestionKind.year
+          : QuestionKind.magnitude;
+      AnswerScale? scale;
+      if (v['scaled'] == true) {
+        scale = scaleFor(
+          kind,
+          QuestionCategory.fromJson(v['category'] as String),
+          v['answer'] as num,
+        );
+        expect(
+          scale.maxFactor,
+          (v['maxFactor'] as num).toDouble(),
+          reason: '$v',
+        );
+        expect(scale.maxYearHalf, v['maxYearHalf'], reason: '$v');
+      }
       expect(
         scoreFor(
-          kind: v['kind'] == 'year'
-              ? QuestionKind.year
-              : QuestionKind.magnitude,
+          kind: kind,
           low: v['low'] as num,
           high: v['high'] as num,
           answer: v['answer'] as num,
+          scale: scale,
         ),
         v['points'],
         reason: '$v',

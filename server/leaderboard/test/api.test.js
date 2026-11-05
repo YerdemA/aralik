@@ -1,6 +1,7 @@
 import { beforeEach, test } from 'node:test';
 import assert from 'node:assert/strict';
 import { cleanUp, handle } from '../src/index.js';
+import { scaleOf, scoreFor } from '../src/scoring.js';
 import { resetContentCache, isDailySet } from '../src/content.js';
 import { turkeyDayIndex } from '../src/days.js';
 import { createD1 } from './d1.js';
@@ -33,6 +34,9 @@ function fakeFetch(url) {
   const body = {
     'manifest.json': {
       version: content.version,
+      ...(content.scoringV2Day === undefined
+        ? {}
+        : { scoring_v2_day: content.scoringV2Day }),
       questions: 'questions.json',
       schedule: 'schedule.json',
     },
@@ -457,4 +461,44 @@ test('a wiped app learns its account and the days its device sent', async () => 
   assert.deepEqual(left.body, { account: null, days: [DAY] });
   const bad = await call('POST', '/v1/device', { device: 'x' });
   assert.equal(bad.status, 400);
+});
+
+test('days from the switch day on are scored with the scale of each question', async () => {
+  // Wide but honest intervals: ±10% for magnitudes, ±40 years.
+  const wide = content.days[DAY % content.days.length].map((q) => {
+    const a = EXACT[q];
+    const year = BANK.find((b) => b.id === q).kind === 'year';
+    return year
+      ? { q, low: a - 40, high: a + 40 }
+      : { q, low: Math.floor(a * 0.9), high: Math.ceil(a * 1.1) };
+  });
+  const expected = (scaled) =>
+    wide.reduce((sum, a) => {
+      const b = BANK.find((x) => x.id === a.q);
+      const scale = scaled ? scaleOf(b.kind, b.category, b.answer) : null;
+      return sum + scoreFor(b.kind, a.low, a.high, b.answer, scale);
+    }, 0);
+
+  const before = await join('Kaplan');
+  content.scoringV2Day = DAY + 1; // tomorrow: today keeps the first rule
+  resetContentCache();
+  let r = await call('POST', '/v1/submit', {
+    id: before.id,
+    token: before.token,
+    day: DAY,
+    answers: wide,
+  });
+  assert.equal(r.body.points, expected(false));
+
+  const after = await join('Aslan');
+  content.scoringV2Day = DAY;
+  resetContentCache();
+  r = await call('POST', '/v1/submit', {
+    id: after.id,
+    token: after.token,
+    day: DAY,
+    answers: wide,
+  });
+  assert.equal(r.body.points, expected(true));
+  assert.ok(expected(true) > expected(false)); // ±40 years is fair now
 });

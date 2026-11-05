@@ -34,7 +34,11 @@ class DuelScreen extends StatefulWidget {
     required this.code,
     required this.name,
     this.now = DateTime.now,
+    this.scaled = true,
   });
+
+  /// Intervals follow each question's scale; matches the room's rule.
+  final bool scaled;
 
   /// Clock, replaceable in tests.
   final DateTime Function() now;
@@ -174,7 +178,7 @@ class _DuelScreenState extends State<DuelScreen> {
         _localError = AppStrings.duelMissingQuestions;
         _session?.close();
       } else {
-        _game = GameController(questions);
+        _game = GameController(questions, scaled: widget.scaled);
       }
     }
     final game = _game;
