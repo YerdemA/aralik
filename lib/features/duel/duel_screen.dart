@@ -33,7 +33,11 @@ class DuelScreen extends StatefulWidget {
     required this.stats,
     required this.code,
     required this.name,
+    this.now = DateTime.now,
   });
+
+  /// Clock, replaceable in tests.
+  final DateTime Function() now;
 
   final DuelService service;
   final QuestionRepository repository;
@@ -198,7 +202,7 @@ class _DuelScreenState extends State<DuelScreen> {
       game.next();
     }
     if (game.isLocked) return;
-    _deadline = DateTime.now().add(_match.timeLeft);
+    _deadline = widget.now().add(_match.timeLeft);
     _ticker?.cancel();
     _ticker = Timer.periodic(_tickEvery, (_) => _tick());
     _tick();
@@ -206,7 +210,8 @@ class _DuelScreenState extends State<DuelScreen> {
 
   /// Counts down to the next question while a question is revealed.
   void _countReveal() {
-    final total = _match.nextIn;
+    final total =
+        _match.nextIn ?? (_match.isLastQuestion ? null : duelRevealWait);
     if (_match.phase != DuelPhase.reveal || total == null) {
       _revealTicker?.cancel();
       _revealTicker = null;
@@ -215,9 +220,9 @@ class _DuelScreenState extends State<DuelScreen> {
     }
     if (_revealCounted == _match.index) return;
     _revealCounted = _match.index;
-    final until = DateTime.now().add(total);
+    final until = widget.now().add(total);
     void tick() {
-      final left = until.difference(DateTime.now());
+      final left = until.difference(widget.now());
       _nextIn.value = left.isNegative ? 0 : secondsShown(left);
     }
 
@@ -238,7 +243,7 @@ class _DuelScreenState extends State<DuelScreen> {
   void _tick() {
     final deadline = _deadline;
     if (deadline == null) return;
-    final left = deadline.difference(DateTime.now());
+    final left = deadline.difference(widget.now());
     final before = _left.value;
     _left.value = left.isNegative ? Duration.zero : left;
     if (before != null && before > timeWarning && left <= timeWarning) {
@@ -353,6 +358,8 @@ class _DuelScreenState extends State<DuelScreen> {
         match: _match,
         buttonLabel: over || _match.isLastQuestion
             ? AppStrings.duelSeeResult
+            : _readyFor == _match.index
+            ? AppStrings.duelWaitingOther
             : AppStrings.next,
         onNext: over
             ? () => setState(() => _resultShown = true)
@@ -679,26 +686,28 @@ class _RevealView extends StatelessWidget {
             if (question.unit.isNotEmpty) question.unit,
           ].join(' ');
     final last = match.results.last;
+    // Everything but the button scrolls, so a long question fits a small
+    // screen.
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        QuestionCard(question: question),
-        const SizedBox(height: 16),
-        Text(
-          AppStrings.duelAnswer,
-          style: theme.textTheme.labelLarge,
-          textAlign: TextAlign.center,
-        ),
-        FittedBox(
-          fit: BoxFit.scaleDown,
-          child: Text(answer, style: theme.textTheme.displayMedium),
-        ),
-        const SizedBox(height: 12),
         Expanded(
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                QuestionCard(question: question),
+                const SizedBox(height: 16),
+                Text(
+                  AppStrings.duelAnswer,
+                  style: theme.textTheme.labelLarge,
+                  textAlign: TextAlign.center,
+                ),
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(answer, style: theme.textTheme.displayMedium),
+                ),
+                const SizedBox(height: 12),
                 _PlayerResult(
                   name: AppStrings.duelYou,
                   colour: Palette.duelMe,

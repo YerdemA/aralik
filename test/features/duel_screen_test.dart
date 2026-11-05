@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:aralik/core/duel.dart';
 import 'package:aralik/core/strings.dart';
 import 'package:aralik/core/theme.dart';
 import 'package:aralik/data/duel_client.dart';
@@ -202,5 +203,93 @@ void main() {
     // The opponent never comes.
     await tester.pump(const Duration(seconds: 21));
     expect(find.text(AppStrings.duelNoShow), findsOneWidget);
+  });
+
+  testWidgets('a reveal counts down; going on waits for the other side', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(1080, 2340);
+    tester.view.devicePixelRatio = 3;
+    addTearDown(tester.view.reset);
+    SharedPreferences.setMockInitialValues({});
+    final stats = await StatsStore.open();
+    final repository = QuestionRepository();
+    final bank = (await tester.runAsync(repository.load))!;
+    final channel = FakeChannel();
+    var clock = DateTime(2026, 11, 5, 12);
+    Future<void> wait(Duration d) async {
+      clock = clock.add(d);
+      await tester.pump(d);
+    }
+
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: AppTheme.light,
+        home: DuelScreen(
+          service: DuelService(
+            serviceUri: () => Uri.parse('https://lb.example/'),
+            connect: (_) async => channel,
+          ),
+          repository: repository,
+          stats: stats,
+          code: 'K7M2P',
+          name: 'Ayşe',
+          now: () => clock,
+        ),
+      ),
+    );
+    await tester.runAsync(() => Future<void>.delayed(Duration.zero));
+    await tester.pump();
+    void say(Map<String, Object?> m) => channel.incoming.add(jsonEncode(m));
+    say({
+      't': 'start',
+      'you': 0,
+      'names': ['Ayşe', 'Bora'],
+      // Short ones: the test font is much wider than Roboto.
+      'questions': [
+        for (final q in [
+          ...bank,
+        ]..sort((a, b) => a.text.length.compareTo(b.text.length)))
+          q.id,
+      ].take(2).toList(),
+      'questionMs': 15000,
+    });
+    say({'t': 'question', 'i': 0, 'ms': 15000});
+    await tester.pump();
+    expect(find.text(AppStrings.questionProgress(1, 2)), findsOneWidget);
+    // A room that does not say how long it waits: the default is shown.
+    say({
+      't': 'reveal',
+      'i': 0,
+      'results': [
+        {'low': null, 'high': null, 'points': -50, 'hit': false},
+        {'low': null, 'high': null, 'points': -50, 'hit': false},
+      ],
+      'totals': [-50, -50],
+    });
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 300));
+    expect(
+      find.text(AppStrings.duelNextIn(duelRevealWait.inSeconds)),
+      findsOneWidget,
+    );
+    await wait(const Duration(seconds: 3));
+    expect(
+      find.text(AppStrings.duelNextIn(duelRevealWait.inSeconds - 3)),
+      findsOneWidget,
+    );
+
+    await tester.tap(find.text(AppStrings.next));
+    await tester.pump();
+    expect(find.text(AppStrings.duelWaitingOther), findsOneWidget);
+    expect(jsonDecode(channel.sent.last), {'t': 'next', 'i': 0});
+
+    // The next question: the button and the countdown are gone.
+    say({'t': 'question', 'i': 1, 'ms': 15000});
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 300));
+    expect(find.text(AppStrings.questionProgress(2, 2)), findsOneWidget);
+    expect(find.text(AppStrings.duelWaitingOther), findsNothing);
+    await tester.pumpWidget(const SizedBox());
   });
 }

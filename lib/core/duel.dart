@@ -14,6 +14,11 @@ import 'package:flutter/foundation.dart';
 /// Must match DUEL_VERSION in duel.js; the server refuses other versions.
 const int duelProtocolVersion = 1;
 
+/// How long the room waits on a revealed question before the next one
+/// (REVEAL_MS in duel.js). The room says so in each reveal; this is for a
+/// room that does not.
+const Duration duelRevealWait = Duration(seconds: 12);
+
 /// No I, L, O, 0 or 1: nothing to mix up when read aloud.
 const String roomCodeAlphabet = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
 const int roomCodeLength = 5;

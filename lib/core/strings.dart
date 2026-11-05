@@ -257,6 +257,7 @@ abstract final class AppStrings {
   static const duelUnavailable =
       'Düello şu an kullanılamıyor. Biraz sonra tekrar dene.';
   static const duelSeeResult = 'Sonucu gör';
+  static const duelWaitingOther = 'Karşı taraf bekleniyor…';
   static String duelNextIn(int seconds) => seconds <= 0
       ? 'Sonraki soru geliyor…'
       : 'Sonraki soru $seconds sn içinde';
