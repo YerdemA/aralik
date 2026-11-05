@@ -61,3 +61,15 @@ __pycache__/
 
 # Vikipedi doðrulama önbelleði (tools/import_curated.py)
 tools/raw/wikipedia/
+
+# Internal development notes: rules for the AI assistant, roadmap, technical
+# notes, manual to-do list, source research, question drafts. They stay on
+# the developer's machine and are not published.
+/CLAUDE.md
+/.claude/
+/MANUAL_TODO.md
+/TECHNICAL.md
+/SOURCES.md
+/docs/PLAN.md
+/docs/SOURCES.md
+/soru-adaylari/

@@ -1,5 +1,5 @@
 {
- "_comment": "Tek kaynak listesi. status: in_use (uygulamada atfı gösterilir), planned, reference_only (yalnızca elle doğrulama), do_not_use. Ayrıntı: docs/SOURCES.md. Değiştirince: python tools/build_attributions.py",
+ "_comment": "Tek kaynak listesi. status: in_use (uygulamada atfı gösterilir), planned, reference_only (yalnızca elle doğrulama), do_not_use. Değiştirince: python tools/build_attributions.py",
  "sources": [
   {
    "id": "wikidata",

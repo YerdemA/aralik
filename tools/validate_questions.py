@@ -4,7 +4,7 @@ Usage:  python tools/validate_questions.py [questions.json] [schedule.json]
 
 Also checks that every question's data set belongs to a source that is
 "in_use" in tools/sources.json (so its attribution is shown in the app), and
-warns when the bank strays from the target mix in docs/SOURCES.md (no
+warns when the bank strays from the target mix (no
 category above 25%, no data set above 10%).
 
 Exits with code 1 if any error is found. Warnings do not fail the run.

@@ -19,7 +19,7 @@ about what a Turkish player knows than sitelink counts.
 Each dataset is saved as tools/raw/wikidata/<name>.json with one row per
 value statement, so build_questions.py can resolve ambiguous values itself.
 tools/raw/<source>/_meta.json records where each dump came from, when, and
-under which license (docs/SOURCES.md, rule 2).
+under which license (see tools/sources.json).
 
 Property and class ids were checked on wikidata.org before use (2026-10-26):
 P2067 mass, P2048 height, P2250 life expectancy, P571 inception, P1128

@@ -6,7 +6,7 @@ plugins {
     id("dev.flutter.flutter-gradle-plugin")
 }
 
-// Upload key for Google Play, kept out of git (see MANUAL_TODO.md).
+// Upload key for Google Play, kept out of git (android/key.properties).
 // Without android/key.properties, release builds fall back to the debug key.
 val keyProperties = Properties().apply {
     val file = rootProject.file("key.properties")
