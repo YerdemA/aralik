@@ -58,6 +58,9 @@ EXCLUDED = {
     "Q125846": "Q1 adlı bina, adından anlaşılmıyor.",
     "Q1070800": "Ali Sami Yen Stadyumu yıkıldı; şimdiki zamanla sorulamaz.",
     "Q751820": "BJK İnönü Stadyumu yıkıldı; yerine Beşiktaş Stadyumu yapıldı.",
+    "Q1306": "Tennesin'in kaynama noktası ölçülmedi, tahmin.",
+    "Q1892": "Aynştaynyum'un kaynama noktası ölçülmedi, tahmin.",
+    "Q219060": "Filistin'in yüzölçümü kabul edilen sınıra göre değişir.",
     "Q4450209": "Taksim Stadı yıkıldı.",
     "Q229": "Kıbrıs nüfusu/yüzölçümü Türk kullanıcılar için tartışmalı.",
     "Q43502": "Dodo'nun nesli tükendi; 'kaç kilogram gelir?' diye sorulamaz.",
@@ -543,16 +546,16 @@ class Step:
 # - earthquakes_tr: every label contains the year ("1999 Gölcük depremi").
 PLAN: list[Step] = [
     Step("mountains_tr", magnitude("{label} kaç metre yüksekliktedir?", "m", "coğrafya", minimum=500), 19, 7500),
-    Step("mountains_world", magnitude("{label} kaç metre yüksekliktedir?", "m", "coğrafya", minimum=500), 22, 5000),
-    Step("rivers_tr", magnitude("{label} kaç kilometre uzunluğundadır?", "km", "coğrafya", scale=1 / 1000, minimum=50, fact=mouth), 16, 7500),
-    Step("rivers_world", magnitude("{label} kaç kilometre uzunluğundadır?", "km", "coğrafya", scale=1 / 1000, minimum=50, fact=mouth), 19, 5000),
-    Step("lakes_tr", magnitude("{label} kaç kilometrekaredir?", "km²", "coğrafya", scale=1 / 1e6, minimum=1), 13, 5000),
-    Step("countries_population", magnitude("{year} verilerine göre {label} nüfusu kaçtır?", "kişi", "coğrafya", latest_year=True, fact=capital, genitive_label=True), 40, 25000),
-    Step("countries_area", magnitude("{label} yüzölçümü kaç kilometrekaredir?", "km²", "coğrafya", scale=1 / 1e6, minimum=1, fact=capital, genitive_label=True), 32, 25000),
+    Step("mountains_world", magnitude("{label} kaç metre yüksekliktedir?", "m", "coğrafya", minimum=500), 26, 5000),
+    Step("rivers_tr", magnitude("{label} kaç kilometre uzunluğundadır?", "km", "coğrafya", scale=1 / 1000, minimum=50, fact=mouth), 22, 7500),
+    Step("rivers_world", magnitude("{label} kaç kilometre uzunluğundadır?", "km", "coğrafya", scale=1 / 1000, minimum=50, fact=mouth), 30, 5000),
+    Step("lakes_tr", magnitude("{label} kaç kilometrekaredir?", "km²", "coğrafya", scale=1 / 1e6, minimum=1), 15, 5000),
+    Step("countries_population", magnitude("{year} verilerine göre {label} nüfusu kaçtır?", "kişi", "coğrafya", latest_year=True, fact=capital, genitive_label=True), 80, 25000),
+    Step("countries_area", magnitude("{label} yüzölçümü kaç kilometrekaredir?", "km²", "coğrafya", scale=1 / 1e6, minimum=1, fact=capital, genitive_label=True), 90, 25000),
     Step("structures_tr", magnitude("{label} kaç metre yüksekliğindedir?", "m", "türkiye", minimum=30), 16, 7500),
     Step("structures_world", magnitude("{label} kaç metre yüksekliğindedir?", "m", "gündelik", minimum=30), 22, 5000),
     Step("bridges_tr", magnitude("{label} kaç metre uzunluğundadır?", "m", "türkiye", minimum=100), 16, 2500),
-    Step("stadiums_tr", magnitude("{label} kaç kişiliktir?", "kişi", "spor", minimum=1000), 19, 2500),
+    Step("stadiums_tr", magnitude("{label} kaç kişiliktir?", "kişi", "spor", minimum=1000), 35, 2500),
     Step("structures_tr", opened_year("tarih"), 6, 7500),
     Step("structures_world", opened_year("tarih"), 16, 5000),
     Step("bridges_tr", opened_year("türkiye"), 10, 2500),
@@ -562,13 +565,13 @@ PLAN: list[Step] = [
     Step("wars", year_of("{label} hangi yıl başlamıştır?", "tarih", fact=no_fact), 32, 15000),
     Step("skyscrapers_world", abroad(magnitude("{label} kaç metre yüksekliğindedir?", "m", "gündelik", minimum=100)), 12, 2000),
     Step("companies_founded", year_of("{label} hangi yıl kurulmuştur?", "şirketler"), 25, 5000),
-    Step("companies_employees", magnitude("{year} verilerine göre {label} kaç kişi çalıştırmaktadır?", "kişi", "şirketler", latest_year=True, minimum=100, genitive_label=False), 12, 5000),
-    Step("elements_melting", element_temperature("erir"), 10, 1000),
-    Step("elements_boiling", element_temperature("kaynar"), 8, 1000),
+    Step("companies_employees", magnitude("{year} verilerine göre {label} kaç kişi çalıştırmaktadır?", "kişi", "şirketler", latest_year=True, minimum=100, genitive_label=False), 30, 5000),
+    Step("elements_melting", element_temperature("erir"), 20, 1000),
+    Step("elements_boiling", element_temperature("kaynar"), 16, 1000),
     Step("elements_discovered", discovered_year(), 12, 1000),
     Step("nobel", nobel_year, 25, 5000),
-    Step("animals_mass", animal_mass, 15, 1000),
-    Step("animals_lifespan", animal_lifespan, 8, 1000),
+    Step("animals_mass", animal_mass, 35, 1000),
+    Step("animals_lifespan", animal_lifespan, 18, 1000),
 ]
 
 
@@ -593,8 +596,12 @@ def generate(report: bool = False) -> list[dict]:
             if q is None:
                 skipped += 1
                 continue
-            key = (entity.source, q["kind"])
-            if key in taken:  # e.g. a Turkish river also in the world list
+            # The same thing asked the same way twice, e.g. a Turkish river
+            # also in the world list, or an element's melting and boiling
+            # points. A country's population and its area are different
+            # questions.
+            key = (entity.source, q["kind"], q["unit"])
+            if key in taken:
                 continue
             taken.add(key)
             q["source"] = entity.source
@@ -644,12 +651,22 @@ def main(argv: list[str]) -> int:
     print("Sorular üretiliyor:")
     generated = generate(report=args.report)
 
-    known = {(q["source"], q["kind"]): q for q in existing}
+    # A question is the same one when it asks the same kind of thing about
+    # the same item of the same data set (a country is in both the
+    # population and the area set; a bridge has a length and a year).
+    known = {(q["source"], q.get("dataset"), q["kind"]): q for q in existing}
+    # An item already asked about with the same unit is not asked again
+    # from another data set (an element's boiling point is in the bank,
+    # its melting point would read as the same question).
+    asked = {(q["source"], q["kind"], q["unit"]) for q in existing}
     new = []
     for q in generated:
-        old = known.get((q["source"], q["kind"]))
+        old = known.get((q["source"], q["dataset"], q["kind"]))
         if old is None:
-            new.append(q)
+            key = (q["source"], q["kind"], q["unit"])
+            if key not in asked:
+                asked.add(key)
+                new.append(q)
             continue
         if old["answer"] != q["answer"]:
             print(f"  UYARI: {old['id']} cevabı değişmiş: {old['answer']} -> {q['answer']} (dokunulmadı)")

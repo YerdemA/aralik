@@ -3,7 +3,8 @@
 Usage:  python tools/build_schedule.py [--days N] [--fresh] [--dry-run] [--bank PATH]
 
 Every day has 2 easy + 2 medium + 1 hard question (the bank's "difficulty"),
-from at least 3 categories, never two from the same data set and never two
+from at least 3 categories and with at least 2 magnitude questions (days
+added from 2026-11-05 on), never two from the same data set and never two
 about the same item (e.g. a company's founding year and its employees).
 Within a day they are ordered easy → hard.
 
@@ -34,6 +35,9 @@ DEFAULT_DAYS = 45
 # How many questions of each difficulty a day takes, in play order.
 DAY_SHAPE = {1: 2, 2: 2, 3: 1}
 MIN_CATEGORIES_PER_DAY = 3
+# Most easy questions are years; without this most days would be all years.
+# Applies to new days only (2026-11-05 on); earlier days are kept.
+MIN_MAGNITUDES_PER_DAY = 2
 ATTEMPTS_PER_DAY = 200
 
 
@@ -53,6 +57,9 @@ def make_day(pool: dict[int, list[dict]], rng: random.Random) -> list[dict] | No
             ]
             rng.shuffle(candidates)
             candidates.sort(key=lambda q: -remaining[q["dataset"]] * rng.uniform(0.5, 1.0))
+            # Until the day has its magnitude questions, they go first.
+            if sum(q["kind"] == "magnitude" for q in day) < MIN_MAGNITUDES_PER_DAY:
+                candidates.sort(key=lambda q: q["kind"] != "magnitude")
             for q in candidates:
                 if len([d for d in day if d.get("difficulty") == difficulty]) == count:
                     break
@@ -62,7 +69,12 @@ def make_day(pool: dict[int, list[dict]], rng: random.Random) -> list[dict] | No
                 datasets.add(q["dataset"])
                 sources.add(q["source"])
         complete = len(day) == sum(DAY_SHAPE.values())
-        if complete and len({q["category"] for q in day}) >= MIN_CATEGORIES_PER_DAY:
+        magnitudes = sum(q["kind"] == "magnitude" for q in day)
+        if (
+            complete
+            and len({q["category"] for q in day}) >= MIN_CATEGORIES_PER_DAY
+            and magnitudes >= MIN_MAGNITUDES_PER_DAY
+        ):
             return day
     return None
 
