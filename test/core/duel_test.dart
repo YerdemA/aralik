@@ -168,4 +168,34 @@ void main() {
       expect(t, inInclusiveRange(0, 1));
     }
   });
+
+  test('a reveal says when the next question comes', () {
+    final r =
+        DuelEvent.parse(
+              jsonEncode({
+                't': 'reveal',
+                'i': 0,
+                'results': [
+                  {'low': 1, 'high': 9, 'points': 40, 'hit': true},
+                  {'low': 2, 'high': 3, 'points': 90, 'hit': true},
+                ],
+                'totals': [40, 90],
+                'ms': 12000,
+              }),
+            )!
+            as DuelReveal;
+    expect(r.nextIn, const Duration(seconds: 12));
+    final m = DuelMatch()
+      ..handle(
+        const DuelStart(
+          you: 0,
+          names: ['A', 'B'],
+          questionIds: ['q1', 'q2'],
+          questionTime: Duration(seconds: 15),
+        ),
+      )
+      ..handle(const DuelQuestion(0, Duration(seconds: 15)))
+      ..handle(r);
+    expect(m.nextIn, const Duration(seconds: 12));
+  });
 }

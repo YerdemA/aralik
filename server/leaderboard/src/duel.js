@@ -19,7 +19,9 @@
 //                {t: 'start', you, names, questions, questionMs}
 //                {t: 'question', i, ms}
 //                {t: 'locked', i, seat}      someone locked (no values)
-//                {t: 'reveal', i, results: [r0, r1], totals}
+//                {t: 'reveal', i, results: [r0, r1], totals, ms}
+//                    ms: the next question comes after this long at most
+//                    (absent after the last question)
 //                    r = {low, high, points, hit}
 //                {t: 'end', totals, winner, reason}
 //                    winner 0 | 1 | null (draw); reason 'done' | 'left'
@@ -257,10 +259,11 @@ function reveal(state, now, content) {
     results: [...state.results, results],
     totals,
   };
-  const out = [
-    { to: 'all', msg: { t: 'reveal', i: state.index, results, totals } },
-  ];
-  if (state.index === state.questions.length - 1) {
+  const last = state.index === state.questions.length - 1;
+  const msg = { t: 'reveal', i: state.index, results, totals };
+  if (!last) msg.ms = REVEAL_MS;
+  const out = [{ to: 'all', msg }];
+  if (last) {
     const over = finish(revealed, 'done', now);
     return step(over.state, [...out, ...over.out], over.alarm);
   }

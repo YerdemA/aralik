@@ -31,6 +31,8 @@ Katıldığında şunlar Cloudflare üzerinde çalışan sunucumuza gönderilir 
 - Bitirdiğin her günlük set için **5 cevabın (aralıkların)**, bunlardan hesaplanan **puanın ve isabet sayın**, ve gönderim zamanı.
 - **Cihazının tek yönlü özeti.** Android'in her uygulamaya ayrı verdiği cihaz kimliğinden telefonunda üretilen bir özet (hash). Kimliğin kendisi telefondan çıkmaz; sunucu bu özeti bir kez daha özetleyerek saklar. Amacı hileyi önlemek: her cihazda tek hesap olur ve aynı günün puanı ikinci kez gönderilemez. Uygulamayı silip yeniden kurduğunda ya da verilerini temizlediğinde hesabın bu sayede geri gelir.
 
+Bu yüzden uygulama, telefonunda tabloya katılmış bir hesap bulamadığında günde en fazla bir kez aynı özeti sunucuya sorar: "Bu cihazın hesabı var mı, bugünün setini gönderdi mi?" Cevaba göre hesabın geri gelir ve aynı günün seti yeniden oynanamaz. Tabloya hiç katılmamış bir cihaz için bu sorgudan sunucuda hiçbir şey saklanmaz.
+
 Takma adın ve günlük puanın, o günün tablosunda diğer oyunculara görünür. Cevapların (aralıkların) kimseye gösterilmez; yalnızca puanı hesaplamak için kullanılır.
 
 Aynı cihazdan çok sayıda hesap açılmasını önlemek için, katılma isteğinin geldiği IP adresinin tek yönlü özeti (hash) en fazla 24 saat saklanır. IP adresinin kendisi saklanmaz. Sunucuyu işleten Cloudflare, her internet isteğinde olduğu gibi bağlantı bilgilerini kendi teknik kayıtlarında tutabilir; ayrıntılar için [Cloudflare Gizlilik Politikası](https://www.cloudflare.com/privacypolicy/)'na bakabilirsin.

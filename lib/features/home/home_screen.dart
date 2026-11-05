@@ -77,7 +77,27 @@ class _HomeScreenState extends State<HomeScreen> {
     // A finished set that could not be sent earlier (offline) goes now.
     _leaderboard?.submitPending(_today);
     WidgetsBinding.instance.addPostFrameCallback((_) => _offerUpdate());
+    _checkDevice();
   }
+
+  /// A cleared app: the server may know this device's account and that
+  /// today's set was already played here.
+  Future<void> _checkDevice() async {
+    final restored = await _leaderboard?.checkDevice(_today) ?? false;
+    if (!restored || !mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          AppStrings.leaderboardRestored(_leaderboard!.account!.nickname),
+        ),
+      ),
+    );
+  }
+
+  /// Today's set was played on this device before its data was cleared.
+  bool _playedBefore(int day) =>
+      _stats.dailyResults(day).isEmpty &&
+      (_leaderboard?.playedOnDevice(day) ?? false);
 
   Future<void> _offerUpdate() async {
     if (HomeScreen.updateOffered || !mounted) return;
@@ -129,6 +149,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future<void> _playDaily() => _guarded(() async {
     final day = _today;
+    if (_playedBefore(day)) return;
     final done = _stats.dailyResults(day).length;
     final remaining = (await _repository.dailySet(day)).skip(done).toList();
     if (!mounted || remaining.isEmpty) return;
@@ -266,11 +287,12 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: SafeArea(
         child: ListenableBuilder(
-          listenable: _stats,
+          listenable: Listenable.merge([_stats, ?_leaderboard]),
           builder: (context, _) {
             final today = _today;
             final results = _stats.dailyResults(today);
             final finished = _stats.isDayComplete(today);
+            final playedBefore = _playedBefore(today);
             // Between today's set and free play, when there is a server.
             final duelCard = [
               if (_leaderboard?.isAvailable == true) ...[
@@ -360,21 +382,47 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ? null
                                     : () => _showDaySummary(today),
                               ),
-                              ...duelCard,
                               const SizedBox(height: 12),
-                              Expanded(
-                                child: _FreePlayHero(
-                                  mascotSize: mascotSize,
-                                  onPlay: _loading ? null : _playFree,
+                              // Duel and free play share the space equally.
+                              if (duelCard.isNotEmpty)
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.stretch,
+                                    children: [
+                                      Expanded(
+                                        child: _DuelCard(
+                                          tall: true,
+                                          onTap: _loading ? null : _openDuel,
+                                        ),
+                                      ),
+                                      const SizedBox(height: 12),
+                                      Expanded(
+                                        child: _FreePlayCard(
+                                          tall: true,
+                                          onTap: _loading ? null : _playFree,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              else
+                                Expanded(
+                                  child: _FreePlayHero(
+                                    mascotSize: mascotSize,
+                                    onPlay: _loading ? null : _playFree,
+                                  ),
                                 ),
-                              ),
                             ] else ...[
                               Expanded(
                                 child: _TodayCard(
                                   results: results,
                                   today: today,
                                   mascotSize: mascotSize,
-                                  onPlay: _loading ? null : _playDaily,
+                                  playedBefore: playedBefore,
+                                  onPlay: _loading || playedBefore
+                                      ? null
+                                      : _playDaily,
                                 ),
                               ),
                               ...duelCard,
@@ -504,12 +552,17 @@ class _TodayCard extends StatelessWidget {
     required this.today,
     required this.mascotSize,
     required this.onPlay,
+    this.playedBefore = false,
   });
 
   final List<QuestionResult> results;
   final int today;
   final double mascotSize;
   final VoidCallback? onPlay;
+
+  /// Played on this device before its data was cleared: locked till
+  /// tomorrow.
+  final bool playedBefore;
 
   @override
   Widget build(BuildContext context) {
@@ -521,8 +574,10 @@ class _TodayCard extends StatelessWidget {
       footer: _ProgressPips(results: results),
       button: _SunButton(
         onPressed: onPlay,
-        icon: Icons.play_arrow_rounded,
-        label: done == 0
+        icon: playedBefore ? Icons.lock_rounded : Icons.play_arrow_rounded,
+        label: playedBefore
+            ? AppStrings.todayPlayedBefore
+            : done == 0
             ? AppStrings.playToday
             : AppStrings.continueToday(done, questionsPerDay),
       ),
@@ -538,8 +593,10 @@ class _TodayCard extends StatelessWidget {
         ),
         const SizedBox(height: 4),
         Text(
-          '${AppStrings.todayHint} '
-          '${AppStrings.timeLimitHint(dailyTimeLimit.inSeconds)}',
+          playedBefore
+              ? AppStrings.todayPlayedBeforeHint
+              : '${AppStrings.todayHint} '
+                    '${AppStrings.timeLimitHint(dailyTimeLimit.inSeconds)}',
           style: textTheme.bodyMedium?.copyWith(
             color: Colors.white.withValues(alpha: .85),
           ),
@@ -713,12 +770,14 @@ class _FreePlayHero extends StatelessWidget {
 
 /// Free play: the whole card starts a round.
 class _FreePlayCard extends StatelessWidget {
-  const _FreePlayCard({required this.onTap});
+  const _FreePlayCard({required this.onTap, this.tall = false});
 
   final VoidCallback? onTap;
+  final bool tall;
 
   @override
   Widget build(BuildContext context) => _RowCard(
+    tall: tall,
     colors: const [Palette.roundStart, Palette.roundEnd],
     icon: Icons.all_inclusive_rounded,
     title: AppStrings.freePlay,
@@ -729,12 +788,14 @@ class _FreePlayCard extends StatelessWidget {
 
 /// The duel, in its players' colours: blue against red.
 class _DuelCard extends StatelessWidget {
-  const _DuelCard({required this.onTap});
+  const _DuelCard({required this.onTap, this.tall = false});
 
   final VoidCallback? onTap;
+  final bool tall;
 
   @override
   Widget build(BuildContext context) => _RowCard(
+    tall: tall,
     colors: const [Palette.duelMe, Palette.duelOpponent],
     icon: Icons.bolt_rounded,
     title: AppStrings.duel,
@@ -751,8 +812,11 @@ class _RowCard extends StatelessWidget {
     required this.title,
     required this.hint,
     required this.onTap,
+    this.tall = false,
   });
 
+  /// Fills the height it is given, with a bigger icon and title.
+  final bool tall;
   final List<Color> colors;
   final IconData icon;
   final String title;
@@ -782,22 +846,27 @@ class _RowCard extends StatelessWidget {
               child: Row(
                 children: [
                   CircleAvatar(
-                    radius: 24,
+                    radius: tall ? 34 : 24,
                     backgroundColor: circle,
                     foregroundColor: Colors.white,
-                    child: Icon(icon, size: 26),
+                    child: Icon(icon, size: tall ? 36 : 26),
                   ),
                   const SizedBox(width: 14),
                   Expanded(
                     child: Column(
+                      mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           title,
-                          style: textTheme.titleLarge?.copyWith(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w800,
-                          ),
+                          style:
+                              (tall
+                                      ? textTheme.headlineSmall
+                                      : textTheme.titleLarge)
+                                  ?.copyWith(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w800,
+                                  ),
                         ),
                         Text(
                           hint,

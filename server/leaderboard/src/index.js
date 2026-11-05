@@ -18,6 +18,11 @@
 //                                                    → {points, hits, rank, players}
 //   GET  /v1/day/{n}?player={id}                     → board of day n
 //   POST /v1/delete    {id, token}                   → {deleted: true}
+//   POST /v1/device    {device}                      → {account, days}
+//      Asked on launch by an app without an account (e.g. its data was
+//      cleared): this device's account (with a new token) or null, and the
+//      days it already sent, so the app does not offer them again. Nothing
+//      is stored for a device that never joined.
 //
 // Real-time duels (no account needed; see duel.js for the protocol):
 //   POST /v1/duel/rooms                              → {code}
@@ -414,6 +419,33 @@ function findOpponent(request, env) {
   return env.DUEL_LOBBY.get(env.DUEL_LOBBY.idFromName('lobby')).fetch(request);
 }
 
+async function deviceStatus(request, env, now) {
+  const body = await readBody(request);
+  const device = await deviceHash(env, body.device);
+  if (!device) throw new HttpError(400, 'bad_device');
+  const db = env.DB;
+  const owner = await db
+    .prepare('SELECT id, nickname FROM players WHERE device_hash = ?')
+    .bind(device)
+    .first();
+  let account = null;
+  if (owner) {
+    const token = randomToken();
+    await db
+      .prepare('UPDATE players SET token_hash = ? WHERE id = ?')
+      .bind(await sha256(token), owner.id)
+      .run();
+    account = { id: owner.id, token, nickname: owner.nickname };
+  }
+  const { results } = await db
+    .prepare(
+      'SELECT day FROM device_days WHERE device_hash = ? AND day >= ? ORDER BY day',
+    )
+    .bind(device, turkeyDayIndex(now) - 1)
+    .all();
+  return json(200, { account, days: results.map((r) => r.day) });
+}
+
 /** Routes one request. [now] and [fetchFn] are replaceable in tests. */
 export async function handle(request, env, now = Date.now(), fetchFn = fetch) {
   const url = new URL(request.url);
@@ -438,6 +470,8 @@ export async function handle(request, env, now = Date.now(), fetchFn = fetch) {
           return await submit(request, env, now, fetchFn);
         case '/v1/delete':
           return await remove(request, env);
+        case '/v1/device':
+          return await deviceStatus(request, env, now);
         case '/v1/duel/rooms':
           return await createRoom(env);
       }

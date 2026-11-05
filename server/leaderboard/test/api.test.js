@@ -428,3 +428,33 @@ test('the daily clean-up drops device days the server no longer accepts', async 
   await cleanUp(env, NOW + 3 * 24 * 3600 * 1000);
   assert.equal(count(), 0);
 });
+
+test('a wiped app learns its account and the days its device sent', async () => {
+  const unknown = await call('POST', '/v1/device', { device: OTHER_PHONE });
+  assert.deepEqual(unknown, { status: 200, body: { account: null, days: [] } });
+  const players = () =>
+    env.DB.raw.prepare('SELECT COUNT(*) AS n FROM players').get().n;
+  assert.equal(players(), 0); // a lookup stores nothing
+
+  const p = (await joinOn(PHONE, 'Kaplan')).body;
+  await send(p, { device: PHONE });
+  const status = await call('POST', '/v1/device', { device: PHONE });
+  assert.equal(status.status, 200);
+  assert.equal(status.body.account.id, p.id);
+  assert.equal(status.body.account.nickname, 'Kaplan');
+  assert.deepEqual(status.body.days, [DAY]);
+  // The new token works, the old one does not.
+  assert.equal((await send(p)).status, 401);
+  const again = await send(status.body.account, { device: PHONE });
+  assert.equal(again.status, 200);
+
+  // After leaving, the day is still known, the account is not.
+  await call('POST', '/v1/delete', {
+    id: p.id,
+    token: status.body.account.token,
+  });
+  const left = await call('POST', '/v1/device', { device: PHONE });
+  assert.deepEqual(left.body, { account: null, days: [DAY] });
+  const bad = await call('POST', '/v1/device', { device: 'x' });
+  assert.equal(bad.status, 400);
+});

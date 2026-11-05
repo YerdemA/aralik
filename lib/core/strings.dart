@@ -15,6 +15,9 @@ abstract final class AppStrings {
   static String continueToday(int done, int total) =>
       'Devam et ($done / $total)';
   static const todayDone = 'Bugünkü seti bitirdin';
+  static const todayPlayedBefore = 'Bugün oynandı';
+  static const todayPlayedBeforeHint =
+      'Bugünün setini bu cihazda zaten oynadın. Yarın 5 yeni soru var.';
   static const comeBackTomorrow = 'Yarın 5 yeni soru seni bekliyor.';
   static const todayTitle = 'Bugünün 5 sorusu';
   static const todayHint = 'Herkes bugün aynı soruları çözüyor.';
@@ -254,6 +257,9 @@ abstract final class AppStrings {
   static const duelUnavailable =
       'Düello şu an kullanılamıyor. Biraz sonra tekrar dene.';
   static const duelSeeResult = 'Sonucu gör';
+  static String duelNextIn(int seconds) => seconds <= 0
+      ? 'Sonraki soru geliyor…'
+      : 'Sonraki soru $seconds sn içinde';
   static const duelWin = 'Kazandın!';
   static const duelLoss = 'Kaybettin';
   static const duelDraw = 'Berabere';

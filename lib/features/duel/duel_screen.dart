@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart';
@@ -63,6 +64,11 @@ class _DuelScreenState extends State<DuelScreen> {
   /// Pressed "Devam" on the revealed question with this index.
   int _readyFor = -1;
 
+  /// Seconds until the room moves on from a revealed question by itself.
+  final _nextIn = ValueNotifier<int?>(null);
+  Timer? _revealTicker;
+  int _revealCounted = -1;
+
   /// Pressed "Sonucu gör" after the last reveal.
   bool _resultShown = false;
 
@@ -93,6 +99,8 @@ class _DuelScreenState extends State<DuelScreen> {
   void dispose() {
     _ticker?.cancel();
     _noShow?.cancel();
+    _revealTicker?.cancel();
+    _nextIn.dispose();
     _left.dispose();
     _match.removeListener(_onMatch);
     _search?.cancel();
@@ -170,6 +178,7 @@ class _DuelScreenState extends State<DuelScreen> {
       _openQuestion(game, _match.index);
     }
     if (_match.phase != DuelPhase.question) _stopClock();
+    _countReveal();
     if (_match.phase == DuelPhase.reveal || _match.phase == DuelPhase.over) {
       // Revealed before this phone locked (late or lost message): keep the
       // input in step without sending anything.
@@ -193,6 +202,30 @@ class _DuelScreenState extends State<DuelScreen> {
     _ticker?.cancel();
     _ticker = Timer.periodic(_tickEvery, (_) => _tick());
     _tick();
+  }
+
+  /// Counts down to the next question while a question is revealed.
+  void _countReveal() {
+    final total = _match.nextIn;
+    if (_match.phase != DuelPhase.reveal || total == null) {
+      _revealTicker?.cancel();
+      _revealTicker = null;
+      _nextIn.value = null;
+      return;
+    }
+    if (_revealCounted == _match.index) return;
+    _revealCounted = _match.index;
+    final until = DateTime.now().add(total);
+    void tick() {
+      final left = until.difference(DateTime.now());
+      _nextIn.value = left.isNegative ? 0 : secondsShown(left);
+    }
+
+    _revealTicker?.cancel();
+    _revealTicker = Timer.periodic(const Duration(milliseconds: 250), (_) {
+      tick();
+    });
+    tick();
   }
 
   void _stopClock() {
@@ -326,6 +359,7 @@ class _DuelScreenState extends State<DuelScreen> {
             : _readyFor == _match.index
             ? null
             : _next,
+        nextIn: over ? null : _nextIn,
       );
     } else {
       body = _ResultView(match: _match);
@@ -345,7 +379,27 @@ class _DuelScreenState extends State<DuelScreen> {
           ),
           title: _match.questionIds.isEmpty
               ? const Text(AppStrings.duel)
-              : _ScoreLine(match: _match),
+              : Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    _ScoreLine(match: _match),
+                    if (_match.index >= 0 &&
+                        _resultShown == false &&
+                        _match.phase != DuelPhase.over)
+                      Text(
+                        AppStrings.questionProgress(
+                          _match.index + 1,
+                          _match.questionIds.length,
+                        ),
+                        style: Theme.of(context).textTheme.labelMedium
+                            ?.copyWith(
+                              color: Theme.of(context)
+                                  .colorScheme
+                                  .onSurfaceVariant,
+                            ),
+                      ),
+                  ],
+                ),
           actions: [
             if (_match.phase == DuelPhase.question)
               _OpponentStatus(locked: _match.opponentLocked),
@@ -601,6 +655,7 @@ class _RevealView extends StatelessWidget {
     required this.match,
     required this.buttonLabel,
     required this.onNext,
+    this.nextIn,
   });
 
   final Question question;
@@ -609,6 +664,9 @@ class _RevealView extends StatelessWidget {
 
   /// Null while waiting for the opponent to go on.
   final VoidCallback? onNext;
+
+  /// Seconds until the next question comes by itself; null to show none.
+  final ValueListenable<int?>? nextIn;
 
   @override
   Widget build(BuildContext context) {
@@ -669,6 +727,20 @@ class _RevealView extends StatelessWidget {
               : const Icon(Icons.arrow_forward_rounded),
           label: Text(buttonLabel),
         ),
+        if (nextIn != null)
+          ValueListenableBuilder<int?>(
+            valueListenable: nextIn!,
+            builder: (context, seconds, _) => Padding(
+              padding: const EdgeInsets.only(top: 8),
+              child: Text(
+                seconds == null ? '' : AppStrings.duelNextIn(seconds),
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                  color: Theme.of(context).colorScheme.onSurfaceVariant,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ),
       ],
     );
   }

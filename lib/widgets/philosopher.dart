@@ -673,13 +673,14 @@ class Philosopher {
     final blobs = <(Offset, double)>[];
     switch (pose) {
       case DuelPose.champion:
-        // Right arm: a flexed biceps. Left arm: up, "number one".
+        // Right arm: a flexed biceps. Left arm: a trophy held up high; the
+        // hand grips its stem, so the cup is drawn first.
+        _trophy(c, p(-0.43, -0.07), k);
         strokes.add(([p(0.24, 0.42), p(0.5, 0.38), p(0.48, 0.14)], arm));
         blobs.add((p(0.39, 0.32), s(0.068)));
         blobs.add((p(0.48, 0.11), s(0.056)));
-        strokes.add(([p(-0.24, 0.42), p(-0.4, 0.16), p(-0.43, -0.1)], arm));
-        strokes.add(([p(-0.43, -0.14), p(-0.43, -0.26)], 0.032));
-        blobs.add((p(-0.43, -0.12), s(0.05)));
+        strokes.add(([p(-0.24, 0.42), p(-0.4, 0.16), p(-0.43, -0.05)], arm));
+        blobs.add((p(-0.43, -0.07), s(0.05)));
       case DuelPose.defeated:
         // A white flag; its pole goes behind the hand that holds it.
         c.drawLine(p(0.42, 0.68), p(0.47, 0.06), _line(ink, s(0.03)));
@@ -751,6 +752,73 @@ class Philosopher {
           _line(skinShade, s(0.011)),
         );
       }
+    }
+  }
+
+  /// A gold cup whose stem is held at [grip].
+  void _trophy(Canvas c, Offset grip, double k) {
+    double s(double v) => v * k;
+    Offset q(double x, double y) => grip + Offset(s(x), s(y));
+    const gold = Color(0xFFFFC53D);
+    const goldShade = Color(0xFFE09A1A);
+    // The stem, held in the fist.
+    _outlined(
+      c,
+      Path()..addRect(
+        Rect.fromLTRB(
+          q(-0.022, 0).dx,
+          q(0, -0.12).dy,
+          q(0.022, 0).dx,
+          q(0, 0.05).dy,
+        ),
+      ),
+      gold,
+    );
+    // Handles on both sides of the cup.
+    for (final side in [-1.0, 1.0]) {
+      final handle = Path()
+        ..addArc(
+          Rect.fromCenter(
+            center: q(side * 0.085, -0.2),
+            width: s(0.08),
+            height: s(0.08),
+          ),
+          side < 0 ? math.pi * 0.5 : -math.pi * 0.5,
+          math.pi,
+        );
+      c.drawPath(handle, _line(ink, s(0.026) + outline * 2));
+      c.drawPath(handle, _line(gold, s(0.026)));
+    }
+    // The cup: wide rim, round bottom.
+    final cup = Path()
+      ..moveTo(q(-0.1, -0.27).dx, q(-0.1, -0.27).dy)
+      ..lineTo(q(0.1, -0.27).dx, q(0.1, -0.27).dy)
+      ..cubicTo(
+        q(0.1, -0.16).dx,
+        q(0.1, -0.16).dy,
+        q(0.05, -0.11).dx,
+        q(0.05, -0.11).dy,
+        q(0, -0.11).dx,
+        q(0, -0.11).dy,
+      )
+      ..cubicTo(
+        q(-0.05, -0.11).dx,
+        q(-0.05, -0.11).dy,
+        q(-0.1, -0.16).dx,
+        q(-0.1, -0.16).dy,
+        q(-0.1, -0.27).dx,
+        q(-0.1, -0.27).dy,
+      )
+      ..close();
+    _outlined(c, cup, gold);
+    if (!monochrome) {
+      c.drawLine(
+        q(-0.055, -0.245),
+        q(-0.045, -0.165),
+        _line(white.withValues(alpha: 0.7), s(0.016)),
+      );
+      // A star on the cup.
+      c.drawCircle(q(0.02, -0.2), s(0.018), _fill(goldShade));
     }
   }
 

@@ -153,6 +153,8 @@ class LeaderboardStore extends ChangeNotifier {
   static const _nicknameKey = 'lb_nickname';
   static const _daysKey = 'lb_days';
   static String _answersKey(int day) => 'lb_answers_$day';
+  static const _devicePlayedKey = 'lb_device_played';
+  static const _deviceCheckedKey = 'lb_device_checked';
   static String _sentKey(int day) => 'lb_sent_$day';
 
   /// Days whose intervals are kept, counting back from the newest.
@@ -223,6 +225,44 @@ class LeaderboardStore extends ChangeNotifier {
     } on Object {
       return const [];
     }
+  }
+
+  /// Whether this device sent [day]'s set to the server before, by the
+  /// server's word (see [checkDevice]): its data was cleared since, so the
+  /// set must not be played again.
+  bool playedOnDevice(int day) =>
+      (_prefs.getStringList(_devicePlayedKey) ?? const []).contains('$day');
+
+  /// After the app's data was cleared there is no account here, yet the
+  /// server may know this device. Asks it once a day while not joined:
+  /// gets the account back (returns true) and the days the device already
+  /// sent. The server stores nothing for a device that never joined.
+  /// Never throws; offline it tries again on the next launch.
+  Future<bool> checkDevice(int today) async {
+    if (joined || !isAvailable) return false;
+    if (_prefs.getInt(_deviceCheckedKey) == today) return false;
+    final key = await _deviceKey();
+    if (key == null) return false;
+    final Map<String, dynamic> body;
+    try {
+      body = await _call('POST', 'v1/device', {
+        'device': key,
+      }) as Map<String, dynamic>;
+    } on Object {
+      return false;
+    }
+    await _prefs.setInt(_deviceCheckedKey, today);
+    await _prefs.setStringList(_devicePlayedKey, [
+      for (final d in (body['days'] as List? ?? const [])) '$d',
+    ]);
+    final account = body['account'];
+    if (account is Map<String, dynamic>) {
+      await _prefs.setString(_idKey, account['id'] as String);
+      await _prefs.setString(_tokenKey, account['token'] as String);
+      await _prefs.setString(_nicknameKey, account['nickname'] as String);
+    }
+    notifyListeners();
+    return account is Map;
   }
 
   /// Whether [day]'s score reached the server (or was refused for good).

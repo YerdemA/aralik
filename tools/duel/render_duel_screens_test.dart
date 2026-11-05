@@ -176,6 +176,7 @@ void main() {
           'i': i,
           'results': [result(me[i]), result(them[i])],
           'totals': totals,
+          if (i < 4) 'ms': 12000,
         });
         await tester.pump();
         if (i == 0) await snap('$name-soru');

@@ -251,4 +251,36 @@ void main() {
     expect(await s.submit(3), isFalse);
     expect(s.isSent(3), isTrue);
   });
+
+  test('a cleared app gets its account and played days back', () async {
+    final s = store();
+    reply = (_) => (
+      status: 200,
+      body: {
+        'account': {'id': 'p7', 'token': 't7', 'nickname': 'Kaplan'},
+        'days': [3, 4],
+      },
+    );
+    expect(await s.checkDevice(4), isTrue);
+    expect(sent.single.uri.path, '/api/v1/device');
+    expect(sent.single.body, {'device': _device});
+    expect(s.account, (id: 'p7', token: 't7', nickname: 'Kaplan'));
+    expect(s.playedOnDevice(4), isTrue);
+    expect(s.playedOnDevice(5), isFalse);
+    // Joined now: no more questions to the server.
+    expect(await s.checkDevice(5), isFalse);
+    expect(sent, hasLength(1));
+  });
+
+  test('the device is asked about once a day, offline again later', () async {
+    final s = store();
+    reply = (_) => throw const SocketException('offline');
+    expect(await s.checkDevice(4), isFalse);
+    reply = (_) => (status: 200, body: {'account': null, 'days': <int>[]});
+    expect(await s.checkDevice(4), isFalse);
+    expect(await s.checkDevice(4), isFalse);
+    expect(sent, hasLength(2)); // the offline try, then one answer
+    expect(s.joined, isFalse);
+    expect(s.playedOnDevice(4), isFalse);
+  });
 }

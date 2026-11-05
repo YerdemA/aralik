@@ -68,6 +68,9 @@ sealed class DuelEvent {
               ),
           ],
           totals: (m['totals'] as List).cast<int>(),
+          nextIn: m['ms'] is int
+              ? Duration(milliseconds: m['ms'] as int)
+              : null,
         ),
         'end' => DuelEnd(
           totals: (m['totals'] as List).cast<int>(),
@@ -124,10 +127,15 @@ class DuelReveal extends DuelEvent {
     required this.index,
     required this.results,
     required this.totals,
+    this.nextIn,
   });
   final int index;
   final List<DuelResult> results;
   final List<int> totals;
+
+  /// The next question comes after this long at most, even when nobody
+  /// goes on; null after the last question (or from an older server).
+  final Duration? nextIn;
 }
 
 /// The duel is over. [winner] is a seat, or null for a draw.
@@ -221,6 +229,10 @@ class DuelMatch extends ChangeNotifier {
 
   /// Time left on question [index] when it was opened.
   Duration get timeLeft => _timeLeft;
+
+  /// After a reveal: how long until the next question comes by itself.
+  Duration? get nextIn => _nextIn;
+  Duration? _nextIn;
   bool get opponentLocked => _opponentLocked;
 
   /// Revealed questions so far, in order.
@@ -265,10 +277,16 @@ class DuelMatch extends ChangeNotifier {
         _phase = DuelPhase.question;
       case DuelLocked(:final index, :final seat):
         if (index == _index && seat != _you) _opponentLocked = true;
-      case DuelReveal(:final index, :final results, :final totals):
+      case DuelReveal(
+        :final index,
+        :final results,
+        :final totals,
+        :final nextIn,
+      ):
         if (index != _results.length || results.length != 2) return;
         _results.add((me: results[_you], opponent: results[1 - _you]));
         _totals = totals;
+        _nextIn = nextIn;
         _phase = DuelPhase.reveal;
       case DuelEnd(:final totals, :final winner, :final opponentLeft):
         _totals = totals;

@@ -129,6 +129,7 @@ test('both locks reveal at once, scored by the server', () => {
   assert.equal(reveal.results[1].hit, false);
   assert.deepEqual(reveal.totals, [reveal.results[0].points, reveal.results[1].points]);
   assert.equal(r.alarm, T0 + 2000 + duel.REVEAL_MS);
+  assert.equal(reveal.ms, duel.REVEAL_MS); // the app counts it down
 });
 
 test('bad bounds are refused, empty locks score the floor', () => {

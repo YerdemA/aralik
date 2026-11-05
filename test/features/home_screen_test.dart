@@ -84,6 +84,51 @@ void main() {
     expect(duel, lessThan(free));
   });
 
+  testWidgets('a set played here before the data was cleared is locked', (
+    tester,
+  ) async {
+    await pumpHome(
+      tester,
+      withServer: true,
+      prefs: {
+        'lb_device_played': ['$today'],
+        'lb_device_checked': today,
+      },
+    );
+    await tester.pumpAndSettle();
+    expect(find.text(AppStrings.todayPlayedBefore), findsOneWidget);
+    expect(find.text(AppStrings.playToday), findsNothing);
+    await tester.tap(find.text(AppStrings.todayPlayedBefore));
+    await tester.pumpAndSettle();
+    expect(find.text(AppStrings.todayPlayedBefore), findsOneWidget);
+  });
+
+  testWidgets('once today is done, duel and free play share the space', (
+    tester,
+  ) async {
+    await pumpHome(
+      tester,
+      withServer: true,
+      prefs: {
+        'daily_results_$today': ['90:1', '80:1', '70:1', '-50:0', '60:1'],
+        'completed_days': ['$today'],
+        'lb_device_checked': today,
+      },
+    );
+    await tester.pumpAndSettle();
+    double cardHeight(String title) => tester
+        .getSize(
+          find
+              .ancestor(of: find.text(title), matching: find.byType(InkWell))
+              .first,
+        )
+        .height;
+    final duel = cardHeight(AppStrings.duel);
+    final free = cardHeight(AppStrings.freePlay);
+    expect(duel, closeTo(free, 1));
+    expect(duel, greaterThan(100));
+  });
+
   testWidgets('no duel without a server', (tester) async {
     await pumpHome(tester);
     await tester.pumpAndSettle();
