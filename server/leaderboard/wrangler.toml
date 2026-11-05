@@ -1,5 +1,5 @@
 name = "kabaca-leaderboard"
-main = "src/index.js"
+main = "src/worker.js"
 compatibility_date = "2026-11-01"
 workers_dev = true
 # Optional: serve on your own domain too (its DNS must be on this Cloudflare
@@ -23,3 +23,22 @@ binding = "DB"
 database_name = "kabaca-leaderboard"
 # Filled in after `npx wrangler d1 create kabaca-leaderboard` (see README.md).
 database_id = "33c22d8e-4c17-4a60-8fc0-cee7208cf1bc"
+
+# Real-time duel rooms (src/duel_room.js). SQLite-backed, so they run on the
+# free plan.
+[[durable_objects.bindings]]
+name = "DUEL_ROOMS"
+class_name = "DuelRoom"
+
+# The lobby that pairs random opponents (src/duel_lobby.js).
+[[durable_objects.bindings]]
+name = "DUEL_LOBBY"
+class_name = "DuelLobby"
+
+[[migrations]]
+tag = "v1-duel"
+new_sqlite_classes = ["DuelRoom"]
+
+[[migrations]]
+tag = "v2-duel-lobby"
+new_sqlite_classes = ["DuelLobby"]

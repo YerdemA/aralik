@@ -6,7 +6,9 @@ import { QUESTIONS_PER_DAY } from './days.js';
 const MANIFEST_TTL_MS = 5 * 60 * 1000;
 
 /** Content loaded per isolate, refreshed when the manifest version moves. */
-let cache = null; // { version, checkedAt, questions: Map, days: string[][] }
+// { version, checkedAt, questions: Map id → {answer, kind, difficulty},
+//   order: string[] (bank order), days: string[][] }
+let cache = null;
 
 export function resetContentCache() {
   cache = null;
@@ -33,8 +35,12 @@ export async function loadContent(base, fetchFn, nowMs) {
     version: manifest.version,
     checkedAt: nowMs,
     questions: new Map(
-      bank.map((q) => [q.id, { answer: q.answer, kind: q.kind }]),
+      bank.map((q) => [
+        q.id,
+        { answer: q.answer, kind: q.kind, difficulty: q.difficulty ?? 2 },
+      ]),
     ),
+    order: bank.map((q) => q.id),
     days: schedule.days,
   };
   return cache;
@@ -59,4 +65,18 @@ export function isDailySet(days, day, ids) {
     }
   }
   return false;
+}
+
+/**
+ * Ids of the [horizon] days starting with [today], wrapping like the app's
+ * Schedule.upcomingIds: questions kept away from free play and duels so
+ * the next daily sets are not spoiled.
+ */
+export function upcomingIds(days, today, horizon = 60) {
+  const ids = new Set();
+  if (days.length === 0) return ids;
+  for (let d = today; d < today + horizon && d < today + days.length; d++) {
+    for (const id of days[mod(d, days.length)]) ids.add(id);
+  }
+  return ids;
 }

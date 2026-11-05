@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-/// User settings (shared_preferences). For now only the theme.
+/// User settings (shared_preferences): the theme and the duel name.
 class SettingsStore extends ChangeNotifier {
   SettingsStore(this._prefs)
     : _themeMode =
@@ -12,6 +12,7 @@ class SettingsStore extends ChangeNotifier {
       SettingsStore(await SharedPreferences.getInstance());
 
   static const _themeKey = 'theme_mode';
+  static const _duelNameKey = 'duel_name';
 
   final SharedPreferences _prefs;
   ThemeMode _themeMode;
@@ -24,5 +25,12 @@ class SettingsStore extends ChangeNotifier {
     _themeMode = mode;
     notifyListeners();
     await _prefs.setString(_themeKey, mode.name);
+  }
+
+  /// The name last used in a duel, or null.
+  String? get duelName => _prefs.getString(_duelNameKey);
+
+  Future<void> setDuelName(String name) async {
+    await _prefs.setString(_duelNameKey, name);
   }
 }

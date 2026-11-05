@@ -71,7 +71,12 @@ def main() -> int:
     APP_PATH.write_text(json.dumps(app, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
     lines = [
-        "# Kabaca: Veri kaynakları ve lisanslar",
+        "---",
+        "layout: page",
+        "title: Veri kaynakları ve lisanslar",
+        "lead: Kabaca'daki soruların cevapları bu açık kaynaklara dayanır.",
+        f"updated: {date.today().isoformat()}",
+        "---",
         "",
         "Kabaca'daki sorular ve cevapları aşağıdaki kaynaklara dayanır. Her soruda, cevabın",
         "görüldüğü sayfanın bağlantısı ayrıca gösterilir. Bu liste `tools/sources.json`",
@@ -87,7 +92,6 @@ def main() -> int:
             f"- Adres: {s['url']}",
             "",
         ]
-    lines += [f"*Son güncelleme: {date.today().isoformat()}*", ""]
     DOC_PATH.write_text("\n".join(lines), encoding="utf-8")
 
     print(f"{len(in_use)} kullanımdaki kaynak yazıldı:")

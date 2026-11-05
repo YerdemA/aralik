@@ -25,6 +25,7 @@ Future<void> main() async {
       stats: StatsStore(prefs),
       settings: SettingsStore(prefs),
       leaderboard: leaderboard,
+      latestAppBuild: () => content.latestAppBuild,
     ),
   );
 

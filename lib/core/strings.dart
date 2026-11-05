@@ -205,6 +205,73 @@ abstract final class AppStrings {
   static const privacyPolicyUrl =
       'https://yerdema.github.io/aralik/privacy-policy.html';
 
+  // Update notice
+  static const updateTitle = 'Yeni sürüm var';
+  static const updateBody =
+      "Kabaca'nın yeni sürümü Google Play'de. Şimdi güncellemek ister misin?";
+  static const updateNow = 'Güncelle';
+  static const updateLater = 'Sonra';
+  static const updateStoreMissing = "Google Play açılamadı.";
+
+  // Duel
+  static const duel = 'Düello';
+  static const duelTitle = 'Düello';
+  static const duelIntro =
+      'Aynı 5 soru, aynı anda. Soru başına 15 saniye. '
+      'Kim daha iyi aralık verirse kazanır.';
+  static const duelFindOpponent = 'Rakip bul';
+  static const duelWithFriend = 'Arkadaşınla oyna';
+  static const duelSearching = 'Rakip aranıyor…';
+  static const duelSearchingHint = 'Biri aradığı anda düello başlar.';
+  static const duelFound = 'Rakip bulundu, bağlanıyor…';
+  static const duelNoShow = 'Rakibin odaya gelmedi. Tekrar dene.';
+  static const duelNameLabel = 'Adın';
+  static const duelCreate = 'Oda kur';
+  static const duelOrJoin = 'Arkadaşın oda kurduysa koduyla katıl';
+  static const duelCodeLabel = 'Oda kodu';
+  static const duelJoin = 'Katıl';
+  static const duelBadCode = 'Kod 5 karakter olmalı.';
+  static const duelWaiting = 'Arkadaşın bekleniyor…';
+  static const duelWaitingHint =
+      'Kodu arkadaşına gönder. Katıldığı anda düello başlar.';
+  static const duelShareCode = 'Kodu paylaş';
+  static String duelInvite(String code) =>
+      "Kabaca'da düelloya var mısın? Uygulamada Düello'ya dokun, "
+      'oda kodu: $code';
+  static const duelConnecting = 'Bağlanıyor…';
+  static const duelOpponentLocked = 'Rakibin kilitledi';
+  static const duelOpponentThinking = 'Rakibin düşünüyor';
+  static const duelWaitingOpponent = 'Kilitledin. Rakibin bekleniyor…';
+  static const duelTimeUp = 'Süre doldu';
+  static const duelAnswer = 'Cevap';
+  static const duelYou = 'Sen';
+  static const duelNoInterval = 'Aralık yok';
+  static const duelSeeResult = 'Sonucu gör';
+  static const duelWin = 'Kazandın!';
+  static const duelLoss = 'Kaybettin';
+  static const duelDraw = 'Berabere';
+  static const duelOpponentLeft = 'Rakibin ayrıldı.';
+  static const duelPlayAgain = 'Yeni düello';
+  static const duelHome = 'Ana ekran';
+  static const duelQuitTitle = 'Düellodan çıkılsın mı?';
+  static const duelQuitBody = 'Çıkarsan rakibin kazanır.';
+  static const duelStay = 'Kal';
+  static const duelOffline = 'Bağlanılamadı. İnternetini kontrol et.';
+  static const duelServerError = 'Oda açılamadı. Biraz sonra tekrar dene.';
+  static const duelMissingQuestions =
+      'Bu düellonun soruları uygulamanda yok. Uygulamayı güncelle.';
+  static String duelErrorText(String code) => switch (code) {
+    'no_room' || 'expired' => 'Bu kodla açık bir oda yok.',
+    'room_full' || 'room_closed' => 'Bu odada düello başlamış.',
+    'invalid_name' => nicknameBadCharacters,
+    'blocked_name' => 'Bu ad kullanılamaz.',
+    'version' => 'Düello için uygulamayı güncelle.',
+    'connection_lost' => 'Bağlantı koptu.',
+    'no_opponent' => 'Şu an rakip bulunamadı. Biraz sonra tekrar dene.',
+    'offline' => duelOffline,
+    _ => 'Bir sorun oldu. Biraz sonra tekrar dene.',
+  };
+
   // Onboarding
   static const onboarding1 =
       'Her gün 5 sayısal soru. Tek bir sayı değil, bir aralık tahmin et.';

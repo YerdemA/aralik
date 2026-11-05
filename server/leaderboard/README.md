@@ -1,7 +1,7 @@
-# Kabaca – Günün liderleri sunucusu
+# Kabaca – Günün liderleri ve düello sunucusu
 
-Cloudflare Worker + D1 (SQLite). Ücretsiz katman yeterli (günde 100.000 istek, 5 GB veritabanı).
-Uygulamaya dahil değildir. Ayrıntılı kurallar CLAUDE.md "Günün liderleri" maddesinde.
+Cloudflare Worker + D1 (SQLite) + Durable Objects (düello odaları). Ücretsiz katman yeterli (günde 100.000 istek, 5 GB veritabanı).
+Uygulamaya dahil değildir.
 
 ## Uç noktalar
 | | | |
@@ -11,6 +11,9 @@ Uygulamaya dahil değildir. Ayrıntılı kurallar CLAUDE.md "Günün liderleri" 
 | `POST /v1/submit` | `{id, token, day, answers: [{q, low, high}] × 5}` | `{day, points, hits, rank, players}` |
 | `GET /v1/day/{n}?player={id}` | | `{day, players, limit, top: [...], me}` |
 | `POST /v1/delete` | `{id, token}` | `{deleted: true}` |
+| `POST /v1/duel/rooms` | | `{code}` (201) |
+| `GET /v1/duel/rooms/{code}?v=1&name=…&bank=N` | WebSocket | odanın mesajları |
+| `GET /v1/duel/random?v=1&name=…&bank=N` | WebSocket | `searching`, sonra `matched` (oda kodu) |
 
 Puanlar uygulamayla aynı formülle hesaplanır (taban −50). `test/scoring_vectors.json` iki tarafta da test edilir.
 Her günün tablosu ayrıdır (gün indeksi, 0 = 1 Kasım 2026, Türkiye saati), yeni sorularla sıfırlanır.
@@ -41,6 +44,14 @@ git add docs/content/manifest.json; git commit -m "Leaderboard URL"; git push
 
 Uygulamalar manifest'e en fazla 6 saatte bir baktığı için tablo, bir sonraki açılışlarda görünür.
 
+## Düello odaları
+Her oda kodundan türetilen bir Durable Object'tir (`src/duel_room.js`, SQLite tabanlı, ücretsiz katmanda çalışır).
+Rastgele rakip arayanlar önce tek bir lobiye bağlanır (`src/duel_lobby.js`): lobi bekleyen iki oyuncu için oda açar,
+ikisine de kodu gönderir; uygulamalar sonra odaya arkadaş gibi katılır. 2 dakikada rakip çıkmazsa arama `no_opponent` ile biter.
+Kurallar `src/duel.js` içinde saf fonksiyonlardır; protokol dosyanın başında yazar. Giriş noktası `src/worker.js`.
+`npm run deploy`, `wrangler.toml` içindeki göçlerle (`v1-duel`, `v2-duel-lobby`) sınıfları oluşturur. Ek kurulum gerekmez.
+Yerel deneme: `npm run dev`, sonra `ws://127.0.0.1:8787/v1/duel/rooms/KOD?v=1&name=Ayse&bank=1000`.
+
 ## Güncelleme
 `npm test`, sonra `npm run deploy`. Şema değişirse `schema.sql`'i güncelle ve `npm run db:init`.
 
@@ -58,7 +69,7 @@ npx wrangler d1 execute kabaca-leaderboard --remote --command "DELETE FROM score
 ```
 
 ## Testler
-`npm test`: Node'un yerleşik test aracı ve `node:sqlite` ile (Node 22.5+, ek paket yok), 22 test.
+`npm test`: Node'un yerleşik test aracı ve `node:sqlite` ile (Node 22.5+, ek paket yok), 35 test.
 Gerçek Workers ortamında yerel deneme: `npx wrangler d1 execute kabaca-leaderboard --local --file=schema.sql`, sonra `npm run dev`.
 `test/scoring_vectors.json`, uygulamanın `test/core/scoring_vectors_test.dart` testiyle ortaktır: puan formülü
 iki tarafta birlikte değişmelidir.

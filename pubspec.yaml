@@ -2,7 +2,7 @@ name: aralik
 description: "Kabaca: %90 emin olduğun aralığı tahmin et."
 publish_to: 'none'
 
-version: 1.0.2+3
+version: 1.0.3+4
 
 environment:
   sdk: ^3.13.5

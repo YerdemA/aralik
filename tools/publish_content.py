@@ -1,6 +1,6 @@
 """Publish the question bank, daily schedule and place data for over-the-air updates.
 
-Usage:  python tools/publish_content.py [--reset]
+Usage:  python tools/publish_content.py [--reset] [--leaderboard URL] [--app-build N]
 
 Copies the question bank, the daily schedule and the place data to
 docs/content/ (served by GitHub Pages) and bumps the version in
@@ -13,6 +13,10 @@ ever append questions and days.
 
 --reset publishes even when the new content does not continue the published
 one. Use it only before the first player: installed apps would reject it.
+
+--app-build N announces that build N (pubspec's "+N") is on Google Play:
+apps with an older build offer the update. Set it only once the release is
+live on Play, or players are sent to a store page without the update.
 """
 
 from __future__ import annotations
@@ -73,7 +77,16 @@ def main(argv: list[str]) -> int:
         metavar="URL",
         help="liderlik sunucusunun https adresi (manifest'e yazılır; '' kapatır)",
     )
+    parser.add_argument(
+        "--app-build",
+        type=int,
+        metavar="N",
+        help="Play'de yayındaki en yeni build numarası (eskiler güncelleme önerir; 0 kapatır)",
+    )
     args = parser.parse_args(argv)
+    if args.app_build is not None and args.app_build < 0:
+        print("HATA: --app-build 0 ya da pozitif olmalı.")
+        return 1
     if args.leaderboard and not args.leaderboard.startswith("https://"):
         print("HATA: --leaderboard bir https adresi olmalı.")
         return 1
@@ -104,25 +117,38 @@ def main(argv: list[str]) -> int:
     else:
         check_append_only()
 
-    # The leaderboard address is read on every manifest check, so changing
-    # it needs no new content version.
-    leaderboard = (
-        manifest.get("leaderboard")
-        if args.leaderboard is None
-        else args.leaderboard or None
-    )
+    # The leaderboard address and the latest app build are read on every
+    # manifest check, so changing them needs no new content version.
+    extras = {
+        "leaderboard": (
+            manifest.get("leaderboard")
+            if args.leaderboard is None
+            else args.leaderboard or None
+        ),
+        "app_build": (
+            manifest.get("app_build")
+            if args.app_build is None
+            else args.app_build or None
+        ),
+    }
+
+    def with_extras(m: dict) -> dict:
+        for key, value in extras.items():
+            if value:
+                m[key] = value
+            else:
+                m.pop(key, None)
+        return m
 
     hashes = {name: sha256(src) for name, src in FILES.items()}
     if hashes == manifest.get("hashes"):
-        if leaderboard != manifest.get("leaderboard"):
-            if leaderboard:
-                manifest["leaderboard"] = leaderboard
-            else:
-                manifest.pop("leaderboard", None)
+        if any(extras[k] != manifest.get(k) for k in extras):
             manifest_path.write_text(
-                json.dumps(manifest, indent=1) + "\n", encoding="utf-8"
+                json.dumps(with_extras(manifest), indent=1) + "\n",
+                encoding="utf-8",
             )
-            print(f"Liderlik adresi güncellendi: {leaderboard or 'kapalı'}")
+            print(f"Liderlik adresi: {extras['leaderboard'] or 'kapalı'}")
+            print(f"Güncelleme önerilen build: {extras['app_build'] or 'kapalı'}")
             print("Canlıya almak için docs/ klasörünü commit edip push edin.")
             return 0
         print(f"Değişiklik yok, sürüm {manifest['version']} kaldı.")
@@ -138,8 +164,7 @@ def main(argv: list[str]) -> int:
         "schedule": "schedule.json",
         "hashes": hashes,
     }
-    if leaderboard:
-        manifest["leaderboard"] = leaderboard
+    with_extras(manifest)
     manifest_path.write_text(json.dumps(manifest, indent=1) + "\n", encoding="utf-8")
     print(f"Yayına hazır: sürüm {manifest['version']} -> docs/content/")
     print("Canlıya almak için docs/ klasörünü commit edip push edin.")

@@ -54,6 +54,7 @@ class ContentSync implements RemoteContent {
   static const _placesKey = 'content_places';
   static const _scheduleKey = 'content_schedule';
   static const _leaderboardKey = 'leaderboard_url';
+  static const _appBuildKey = 'latest_app_build';
 
   final SharedPreferences _prefs;
   final HttpGet _get;
@@ -79,6 +80,11 @@ class ContentSync implements RemoteContent {
     return url == null ? null : Uri.tryParse(url);
   }
 
+  /// The newest app build on Google Play, as the manifest announces it
+  /// (`"app_build"`), or null. Read on every manifest check like the
+  /// leaderboard address.
+  int? get latestAppBuild => _prefs.getInt(_appBuildKey);
+
   /// Checks for new content. [accept] decides whether the downloaded files
   /// may replace the current ones; they are stored all together or not at
   /// all.
@@ -99,6 +105,12 @@ class ContentSync implements RemoteContent {
       final remoteVersion = manifest['version'] as int;
       await _prefs.setInt(_checkedKey, now.millisecondsSinceEpoch);
       await _storeLeaderboard(manifest['leaderboard']);
+      final build = manifest['app_build'];
+      if (build is int && build > 0) {
+        await _prefs.setInt(_appBuildKey, build);
+      } else {
+        await _prefs.remove(_appBuildKey);
+      }
       if (remoteVersion <= version) return SyncResult.upToDate;
 
       final questions = await _get(

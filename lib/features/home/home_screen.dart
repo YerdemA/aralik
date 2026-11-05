@@ -9,6 +9,9 @@ import '../../core/number_format.dart';
 import '../../core/scoring.dart';
 import '../../core/strings.dart';
 import '../../core/theme.dart';
+import '../../core/app_update.dart';
+import '../../data/duel_client.dart';
+import '../../data/store_link.dart';
 import '../../data/leaderboard.dart';
 import '../../data/question_repository.dart';
 import '../../data/settings_store.dart';
@@ -18,6 +21,7 @@ import '../../widgets/mascot.dart';
 import '../../widgets/stat_tile.dart';
 import '../game/game_controller.dart';
 import '../game/game_screen.dart';
+import '../duel/duel_lobby_screen.dart';
 import '../leaderboard/leaderboard_screen.dart';
 import '../result/summary_screen.dart';
 import '../settings/settings_screen.dart';
@@ -33,6 +37,8 @@ class HomeScreen extends StatefulWidget {
     required this.stats,
     required this.settings,
     this.leaderboard,
+    this.latestAppBuild,
+    this.openStore = openStorePage,
   });
 
   final QuestionRepository repository;
@@ -41,6 +47,17 @@ class HomeScreen extends StatefulWidget {
 
   /// Null hides the leaderboard.
   final LeaderboardStore? leaderboard;
+
+  /// The newest build on Google Play (from the content manifest), or null.
+  /// A newer one than this app's is offered once per launch.
+  final int? Function()? latestAppBuild;
+
+  /// Opens the Play Store page; replaceable in tests.
+  final Future<bool> Function() openStore;
+
+  /// The update notice is shown once per launch (tests reset it).
+  @visibleForTesting
+  static bool updateOffered = false;
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -59,6 +76,37 @@ class _HomeScreenState extends State<HomeScreen> {
     super.initState();
     // A finished set that could not be sent earlier (offline) goes now.
     _leaderboard?.submitPending(_today);
+    WidgetsBinding.instance.addPostFrameCallback((_) => _offerUpdate());
+  }
+
+  Future<void> _offerUpdate() async {
+    if (HomeScreen.updateOffered || !mounted) return;
+    if (!updateAvailable(widget.latestAppBuild?.call())) return;
+    HomeScreen.updateOffered = true;
+    final update = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        icon: const Icon(Icons.system_update_rounded),
+        title: const Text(AppStrings.updateTitle),
+        content: const Text(AppStrings.updateBody),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: const Text(AppStrings.updateLater),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            child: const Text(AppStrings.updateNow),
+          ),
+        ],
+      ),
+    );
+    if (update != true || !mounted) return;
+    if (!await widget.openStore() && mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text(AppStrings.updateStoreMissing)),
+      );
+    }
   }
 
   // Read on every build, so the screen rolls over at midnight on resume.
@@ -184,6 +232,20 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   });
 
+  late final _duels = DuelService(serviceUri: () => _leaderboard?.serviceUri);
+
+  void _openDuel() => Navigator.of(context).push(
+    MaterialPageRoute<void>(
+      builder: (_) => DuelLobbyScreen(
+        service: _duels,
+        repository: _repository,
+        stats: _stats,
+        settings: widget.settings,
+        suggestedName: _leaderboard?.account?.nickname,
+      ),
+    ),
+  );
+
   void _openSettings() => Navigator.of(context).push(
     MaterialPageRoute<void>(
       builder: (_) =>
@@ -261,6 +323,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ),
                                 if (_leaderboard?.isAvailable == true) ...[
+                                  IconButton.filledTonal(
+                                    onPressed: _loading ? null : _openDuel,
+                                    tooltip: AppStrings.duel,
+                                    icon: const Icon(Icons.bolt_rounded),
+                                  ),
+                                  const SizedBox(width: 4),
                                   IconButton.filledTonal(
                                     onPressed: () => _openLeaderboard(today),
                                     tooltip: AppStrings.leaderboard,

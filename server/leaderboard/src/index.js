@@ -11,11 +11,18 @@
 //   POST /v1/submit    {id, token, day, answers[5]}  → {points, hits, rank, players}
 //   GET  /v1/day/{n}?player={id}                     → board of day n
 //   POST /v1/delete    {id, token}                   → {deleted: true}
+//
+// Real-time duels (no account needed; see duel.js for the protocol):
+//   POST /v1/duel/rooms                              → {code}
+//   GET  /v1/duel/rooms/{code}?v=1&name=…&bank=N     WebSocket to the room
+//   GET  /v1/duel/random?v=1&name=…&bank=N           WebSocket to the lobby
 
 import { acceptsDay, readableDay, QUESTIONS_PER_DAY } from './days.js';
 import { isDailySet, loadContent } from './content.js';
 import { cleanNickname, isBlocked, nicknameKey } from './nickname.js';
-import { isHit, scoreFor } from './scoring.js';
+import { isHit, scoreFor, validBound } from './scoring.js';
+import { normalizeRoomCode } from './duel.js';
+import { openRoom, roomStub } from './rooms.js';
 
 const DEFAULTS = {
   CONTENT_BASE: 'https://yerdema.github.io/aralik/content/',
@@ -30,7 +37,6 @@ const DEFAULTS = {
 
 const HOUR_MS = 60 * 60 * 1000;
 const MAX_BODY_BYTES = 4096;
-const MAX_BOUND = 1e15;
 
 class HttpError extends Error {
   constructor(status, code) {
@@ -164,13 +170,6 @@ async function rename(request, env) {
     .bind(name, key, player.id)
     .run();
   return json(200, { nickname: name });
-}
-
-function validBound(kind, value) {
-  if (!Number.isSafeInteger(value) || Math.abs(value) > MAX_BOUND) {
-    return false;
-  }
-  return kind !== 'magnitude' || value >= 1;
 }
 
 async function submit(request, env, now, fetchFn) {
@@ -311,6 +310,33 @@ async function remove(request, env) {
   return json(200, { deleted: true });
 }
 
+async function createRoom(env) {
+  if (!env.DUEL_ROOMS) throw new HttpError(404, 'not_found');
+  const code = await openRoom(env);
+  if (!code) throw new HttpError(503, 'busy');
+  return json(201, { code });
+}
+
+function connectRoom(request, env, code) {
+  const room = normalizeRoomCode(code);
+  if (!room) throw new HttpError(404, 'no_room');
+  requireWebSocket(request, env);
+  return roomStub(env, room).fetch(request);
+}
+
+function requireWebSocket(request, env) {
+  if (!env.DUEL_ROOMS) throw new HttpError(404, 'not_found');
+  if (request.headers.get('upgrade') !== 'websocket') {
+    throw new HttpError(426, 'websocket_only');
+  }
+}
+
+/** Random opponent: one lobby pairs up whoever is waiting. */
+function findOpponent(request, env) {
+  requireWebSocket(request, env);
+  return env.DUEL_LOBBY.get(env.DUEL_LOBBY.idFromName('lobby')).fetch(request);
+}
+
 /** Routes one request. [now] and [fetchFn] are replaceable in tests. */
 export async function handle(request, env, now = Date.now(), fetchFn = fetch) {
   const url = new URL(request.url);
@@ -319,6 +345,9 @@ export async function handle(request, env, now = Date.now(), fetchFn = fetch) {
     if (request.method === 'GET') {
       const match = /^\/v1\/day\/(-?\d+)$/.exec(path);
       if (match) return await board(Number(match[1]), url, env, now);
+      const room = /^\/v1\/duel\/rooms\/([^/]+)$/.exec(path);
+      if (room) return await connectRoom(request, env, room[1]);
+      if (path === '/v1/duel/random') return await findOpponent(request, env);
       if (path === '' || path === '/v1') return json(200, { ok: true });
       throw new HttpError(404, 'not_found');
     }
@@ -332,6 +361,8 @@ export async function handle(request, env, now = Date.now(), fetchFn = fetch) {
           return await submit(request, env, now, fetchFn);
         case '/v1/delete':
           return await remove(request, env);
+        case '/v1/duel/rooms':
+          return await createRoom(env);
       }
       throw new HttpError(404, 'not_found');
     }

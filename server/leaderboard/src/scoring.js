@@ -35,3 +35,13 @@ export function scoreFor(kind, low, high, answer) {
 export function isHit(low, high, answer) {
   return low !== null && high !== null && low <= answer && answer <= high;
 }
+
+const MAX_BOUND = 1e15;
+
+/** Whether [value] can be a bound of an interval for a [kind] question. */
+export function validBound(kind, value) {
+  if (!Number.isSafeInteger(value) || Math.abs(value) > MAX_BOUND) {
+    return false;
+  }
+  return kind !== 'magnitude' || value >= 1;
+}

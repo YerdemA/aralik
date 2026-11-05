@@ -131,6 +131,19 @@ void main() {
     },
   );
 
+  test('stores the newest app build from the manifest', () async {
+    ContentSync content() =>
+        ContentSync(prefs, httpGet: fakeGet, clock: () => now);
+    expect(content().latestAppBuild, isNull);
+    final manifest = jsonDecode(server['manifest.json']!) as Map;
+    server['manifest.json'] = jsonEncode({...manifest, 'app_build': 7});
+    await sync();
+    expect(content().latestAppBuild, 7);
+    server['manifest.json'] = jsonEncode(manifest);
+    expect(await sync(force: true), SyncResult.upToDate);
+    expect(content().latestAppBuild, isNull);
+  });
+
   test('rejects a bank that reorders or drops bundled questions', () async {
     server['questions.json'] = bank(['q2', 'q1', ...ids(3, 10)]);
     expect(await sync(), SyncResult.rejected);

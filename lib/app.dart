@@ -17,6 +17,7 @@ class KabacaApp extends StatelessWidget {
     required this.stats,
     required this.settings,
     this.leaderboard,
+    this.latestAppBuild,
   });
 
   final QuestionRepository repository;
@@ -25,6 +26,9 @@ class KabacaApp extends StatelessWidget {
 
   /// Null hides the leaderboard (tests).
   final LeaderboardStore? leaderboard;
+
+  /// The newest build on Google Play (content manifest), or null.
+  final int? Function()? latestAppBuild;
 
   @override
   Widget build(BuildContext context) {
@@ -50,6 +54,7 @@ class KabacaApp extends StatelessWidget {
             stats: stats,
             settings: settings,
             leaderboard: leaderboard,
+            latestAppBuild: latestAppBuild,
           ),
         ),
       ),

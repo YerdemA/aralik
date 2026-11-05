@@ -1,4 +1,9 @@
-# Kabaca: Veri kaynakları ve lisanslar
+---
+layout: page
+title: Veri kaynakları ve lisanslar
+lead: Kabaca'daki soruların cevapları bu açık kaynaklara dayanır.
+updated: 2026-11-05
+---
 
 Kabaca'daki sorular ve cevapları aşağıdaki kaynaklara dayanır. Her soruda, cevabın
 görüldüğü sayfanın bağlantısı ayrıca gösterilir. Bu liste `tools/sources.json`
@@ -19,5 +24,3 @@ aynı liste yer alır.
 - Vikipedi gönüllüleri (tarih, mimari, sanat ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0
 - Lisans: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 - Adres: https://tr.wikipedia.org/
-
-*Son güncelleme: 2026-11-02*

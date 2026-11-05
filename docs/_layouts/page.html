@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} · Kabaca</title>
+  {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+  <meta name="theme-color" content="#2C209E">
+  <link rel="icon" type="image/png" href="{{ '/store/icon-512.png' | relative_url }}">
+  <style>
+    /* Colours from lib/core/theme.dart (Palette): indigo hero, sun yellow, cream panel. */
+    :root {
+      --hero-top: #5140E6;
+      --hero-bottom: #2C209E;
+      --sun: #FFC53D;
+      --on-sun: #2B2100;
+      --terracotta: #D9825B;
+      --bg: #FFF9F1;
+      --panel: #FFFFFF;
+      --text: #1D1B2E;
+      --muted: #5F5C73;
+      --line: #ECE4D6;
+      --link: #4338CA;
+      --code-bg: #F4EEE3;
+      --shadow: 0 1px 2px rgba(44, 32, 158, .06), 0 8px 24px rgba(44, 32, 158, .07);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14152B;
+        --panel: #1F2140;
+        --text: #ECEAF7;
+        --muted: #A9A6C4;
+        --line: #2E3157;
+        --link: #B7B0FF;
+        --code-bg: #2A2C52;
+        --shadow: none;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    a { color: var(--link); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    a:hover { text-decoration-thickness: 2px; }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(160deg, var(--hero-top), var(--hero-bottom));
+      color: #fff;
+      padding: 40px 20px 88px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      /* The sun behind the philosopher. */
+      content: "";
+      position: absolute;
+      width: 320px; height: 320px;
+      right: -90px; top: -120px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 197, 61, .35), rgba(255, 197, 61, 0) 70%);
+    }
+    .hero-inner { max-width: 760px; margin: 0 auto; position: relative; z-index: 1; }
+    .brand {
+      display: inline-flex; align-items: center; gap: 12px;
+      color: #fff; text-decoration: none; font-weight: 800; font-size: 20px; letter-spacing: -.3px;
+    }
+    .brand img { width: 44px; height: 44px; border-radius: 12px; box-shadow: 0 4px 14px rgba(0, 0, 0, .25); }
+    .hero h1 {
+      margin: 28px 0 10px;
+      font-size: clamp(30px, 6vw, 44px);
+      line-height: 1.15;
+      letter-spacing: -1px;
+      font-weight: 800;
+    }
+    .hero p.lead { margin: 0; max-width: 560px; color: rgba(255, 255, 255, .85); font-size: 18px; }
+    .badge {
+      display: inline-block; margin-top: 18px;
+      background: var(--sun); color: var(--on-sun);
+      font-size: 14px; font-weight: 700;
+      padding: 5px 12px; border-radius: 999px;
+    }
+
+    /* Content panel, pulled up over the hero. */
+    main {
+      max-width: 760px;
+      margin: -56px auto 0;
+      padding: 8px 36px 32px;
+      background: var(--panel);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      position: relative;
+      z-index: 2;
+    }
+    @media (max-width: 800px) {
+      main { margin: -56px 12px 0; padding: 4px 20px 24px; }
+    }
+    main h2 {
+      font-size: 22px; line-height: 1.3; letter-spacing: -.3px;
+      margin: 36px 0 12px; padding-left: 14px;
+      border-left: 5px solid var(--sun);
+    }
+    main h3 { font-size: 18px; margin: 24px 0 8px; }
+    main ul { padding-left: 22px; }
+    main li { margin: 6px 0; }
+    main li::marker { color: var(--terracotta); }
+    main code {
+      background: var(--code-bg); border-radius: 6px;
+      padding: 1px 6px; font-size: .9em;
+    }
+    main em { color: var(--muted); }
+    main hr { border: 0; border-top: 1px solid var(--line); margin: 32px 0; }
+
+    /* "Kısaca": the list after it becomes a grid of cards. */
+    ul.summary {
+      list-style: none; padding: 0; margin: 16px 0 8px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px;
+    }
+    ul.summary li {
+      margin: 0; padding: 16px 18px;
+      background: var(--bg); border: 1px solid var(--line); border-radius: 16px;
+      font-size: 16px; line-height: 1.5;
+    }
+    ul.summary li strong { display: block; font-size: 17px; margin-bottom: 4px; }
+
+    /* Highlighted paragraph (data deletion). */
+    p.callout {
+      background: rgba(255, 197, 61, .16);
+      border: 1px solid rgba(255, 197, 61, .55);
+      border-radius: 16px;
+      padding: 14px 18px;
+    }
+
+    footer {
+      max-width: 760px; margin: 0 auto; padding: 28px 20px 48px;
+      color: var(--muted); font-size: 14px; text-align: center;
+    }
+    footer a { color: inherit; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <a class="brand" href="{{ '/privacy-policy.html' | relative_url }}">
+        <img src="{{ '/store/icon-512.png' | relative_url }}" alt="" width="44" height="44">
+        Kabaca
+      </a>
+      <h1>{{ page.title }}</h1>
+      {% if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
+      {% if page.updated %}<span class="badge">Son güncelleme: {{ page.updated }}</span>{% endif %}
+    </div>
+  </header>
+  <main>
+{{ content }}
+  </main>
+  <footer>
+    Kabaca · Yusuf Erdem Aykaç ·
+    <a href="{{ '/privacy-policy.html' | relative_url }}">Gizlilik</a> ·
+    <a href="{{ '/attributions.html' | relative_url }}">Veri kaynakları</a> ·
+    <a href="https://github.com/YerdemA/aralik/issues">İletişim</a>
+  </footer>
+</body>
+</html>

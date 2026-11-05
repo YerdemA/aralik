@@ -1,18 +1,19 @@
 ---
-title: Kabaca – Gizlilik Politikası
+layout: page
+title: Gizlilik Politikası
+lead: Kabaca hangi verileri nasıl kullanır? Kısa cevap, neredeyse hiçbirini.
+description: Kabaca kişisel veri toplamaz. Oyun verileri cihazda kalır; tek istisna isteğe bağlı liderlik tablosudur.
+updated: 5 Kasım 2026
 ---
-
-# Kabaca – Gizlilik Politikası
-
-Son güncelleme: 4 Kasım 2026
 
 Kabaca, Yusuf Erdem Aykaç tarafından geliştirilen bir tahmin oyunudur. Bu politika uygulamanın hangi verileri nasıl kullandığını açıklar.
 
 ## Kısaca
 - **Kişisel veri toplamayız.** Hesap, giriş, reklam, analiz ya da takip aracı yoktur.
 - **Oyun verilerin cihazında kalır.** Skorların, serin, kalibrasyonun ve cevapladığın soruların listesi yalnızca telefonunda saklanır.
-- **Tek istisna, isteğe bağlı liderlik tablosu.** Yalnızca sen katılırsan, seçtiğin takma ad ve günlük setteki cevapların gönderilir. Katılmazsan hiçbir şey gönderilmez.
-- **Uygulama internete yeni soruları indirmek ve (katıldıysan) liderlik tablosu için bağlanır.**
+- **İstisnalar isteğe bağlı: liderlik tablosu ve düello.** Yalnızca sen katılırsan, seçtiğin ad ve cevapların gönderilir. Katılmazsan hiçbir şey gönderilmez.
+- **İnternet yalnızca gerektiğinde.** Uygulama yeni soruları indirmek ve (katıldıysan) liderlik tablosu ya da düello için bağlanır.
+{: .summary}
 
 ## İnternet bağlantısı
 Uygulama yeni soru ve veri dosyalarını en fazla 6 saatte bir `yerdema.github.io` adresinden indirir. Bu, GitHub Pages üzerinde duran herkese açık, statik bir dosyadır. Bu istekte senin hakkında hiçbir bilgi göndermeyiz.
@@ -36,6 +37,12 @@ Aynı cihazdan çok sayıda hesap açılmasını önlemek için, katılma isteğ
 Bu veriler yalnızca liderlik tablosu için kullanılır; satılmaz, reklam ya da analiz için kullanılmaz, başka kimseyle paylaşılmaz.
 
 **Tablodan ayrılmak ve verilerini silmek için:** Ayarlar → Liderlik tablosu → Tablodan ayrıl. Takma adın ve gönderdiğin tüm puanlar sunucudan hemen silinir. Uygulamayı kaldırırsan anahtar da silinir; bu durumda sunucudaki verinin silinmesini aşağıdaki iletişim adresinden isteyebilirsin.
+{: .callout}
+
+## Düello
+Düello oynadığında (arkadaşınla ya da rastgele bir rakiple), aynı sunucudaki düello odasına seçtiğin **görünen ad**, uygulamadaki soru sayısı ve kilitlediğin **aralıklar** gönderilir. Hesap ya da kimlik gerekmez.
+
+Rakip ararken de yalnızca görünen adın ve soru sayısı gider. Görünen adın ve aralıkların yalnızca o düellodaki rakibine gösterilir. Oda bittikten en geç birkaç dakika sonra sunucudan tamamen silinir; hiçbir düello verisi saklanmaz. Düello oynamazsan hiçbir şey gönderilmez.
 
 ## Paylaşım
 "Paylaş" düğmesine bastığında skor kartın, senin seçtiğin uygulamaya (örneğin bir mesajlaşma uygulamasına) Android'in paylaşım penceresi üzerinden gönderilir. Bu yalnızca sen istediğinde olur ve içerik yalnızca skorundur.

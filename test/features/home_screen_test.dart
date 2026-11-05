@@ -1,3 +1,4 @@
+import 'package:aralik/core/app_update.dart';
 import 'package:aralik/core/daily.dart';
 import 'package:aralik/core/strings.dart';
 import 'package:aralik/core/theme.dart';
@@ -14,7 +15,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 Future<StatsStore> pumpHome(
   WidgetTester tester, {
   Map<String, Object> prefs = const {},
+  int? latestAppBuild,
+  Future<bool> Function()? openStore,
 }) async {
+  HomeScreen.updateOffered = false;
   tester.view.physicalSize = const Size(1080, 2340);
   tester.view.devicePixelRatio = 3;
   addTearDown(tester.view.reset);
@@ -27,6 +31,8 @@ Future<StatsStore> pumpHome(
         repository: QuestionRepository(),
         stats: stats,
         settings: await SettingsStore.open(),
+        latestAppBuild: () => latestAppBuild,
+        openStore: openStore ?? () async => true,
       ),
     ),
   );
@@ -35,6 +41,33 @@ Future<StatsStore> pumpHome(
 
 void main() {
   final today = dayIndexFor(DateTime.now());
+
+  testWidgets('offers a newer build on Google Play once per launch', (
+    tester,
+  ) async {
+    var opened = 0;
+    await pumpHome(
+      tester,
+      latestAppBuild: appBuild + 1,
+      openStore: () async {
+        opened++;
+        return true;
+      },
+    );
+    await tester.pumpAndSettle();
+    expect(find.text(AppStrings.updateTitle), findsOneWidget);
+    await tester.tap(find.text(AppStrings.updateNow));
+    await tester.pumpAndSettle();
+    expect(opened, 1);
+    expect(find.text(AppStrings.updateTitle), findsNothing);
+    expect(HomeScreen.updateOffered, isTrue);
+  });
+
+  testWidgets('says nothing when this build is the newest', (tester) async {
+    await pumpHome(tester, latestAppBuild: appBuild);
+    await tester.pumpAndSettle();
+    expect(find.text(AppStrings.updateTitle), findsNothing);
+  });
 
   testWidgets('fresh install offers today\'s set', (tester) async {
     await pumpHome(tester);
