@@ -30,6 +30,7 @@ void main() {
     store = LeaderboardStore(
       prefs,
       serviceUri: () => Uri.parse('https://lb.example/'),
+      deviceKey: () async => null,
       request: (method, uri, [body]) async {
         paths.add(uri.path);
         return switch (uri.path) {
@@ -101,6 +102,7 @@ void main() {
     store = LeaderboardStore(
       await SharedPreferences.getInstance(),
       serviceUri: () => Uri.parse('https://lb.example/'),
+      deviceKey: () async => null,
       request: (method, uri, [body]) async => throw Exception('offline'),
     );
     await open(tester);

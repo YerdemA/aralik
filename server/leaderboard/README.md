@@ -6,9 +6,9 @@ Uygulamaya dahil değildir.
 ## Uç noktalar
 | | | |
 |---|---|---|
-| `POST /v1/register` | `{nickname}` | `{id, token, nickname}` (201) |
+| `POST /v1/register` | `{nickname, device}` | `{id, token, nickname, restored}` (201; aynı cihazın hesabı geri gelirse 200) |
 | `POST /v1/rename` | `{id, token, nickname}` | `{nickname}` |
-| `POST /v1/submit` | `{id, token, day, answers: [{q, low, high}] × 5}` | `{day, points, hits, rank, players}` |
+| `POST /v1/submit` | `{id, token, day, answers: [{q, low, high}] × 5, device}` | `{day, points, hits, rank, players}` |
 | `GET /v1/day/{n}?player={id}` | | `{day, players, limit, top: [...], me}` |
 | `POST /v1/delete` | `{id, token}` | `{deleted: true}` |
 | `POST /v1/duel/rooms` | | `{code}` (201) |
@@ -19,7 +19,8 @@ Puanlar uygulamayla aynı formülle hesaplanır (taban −50). `test/scoring_vec
 Her günün tablosu ayrıdır (gün indeksi, 0 = 1 Kasım 2026, Türkiye saati), yeni sorularla sıfırlanır.
 
 Hatalar `{error: "..."}`: `invalid_nickname`, `blocked_nickname`, `nickname_taken` (409),
-`rate_limited` (429), `unauthorized` (401), `day_closed` / `wrong_questions` (422), `bad_answers` (400).
+`rate_limited` (429), `unauthorized` (401), `day_closed` / `wrong_questions` / `already_played` (422), `bad_answers` / `bad_device` (400),
+`update_required` (426).
 
 ## İlk kurulum (bir kez)
 PowerShell, bu klasörde (`server\leaderboard`):
@@ -53,12 +54,25 @@ Kurallar `src/duel.js` içinde saf fonksiyonlardır; protokol dosyanın başınd
 Yerel deneme: `npm run dev`, sonra `ws://127.0.0.1:8787/v1/duel/rooms/KOD?v=1&name=Ayse&bank=1000`.
 
 ## Güncelleme
-`npm test`, sonra `npm run deploy`. Şema değişirse `schema.sql`'i güncelle ve `npm run db:init`.
+`npm test`, sonra `npm run deploy`. Şema değişirse `schema.sql`'i güncelle (yeni veritabanı için) ve var olan veritabanına
+`migrations/` altındaki dosyayı bir kez uygula, **kodu yayınlamadan önce**:
+```powershell
+npx wrangler d1 execute kabaca-leaderboard --remote --file=migrations/0002_device.sql
+```
+
+## Cihaz başına tek hesap
+Uygulama (1.0.3+) kayıtta ve gönderimde `device` alanında Android cihaz kimliğinin SHA-256 özetini yollar; sunucu bunu
+tuzlayıp bir kez daha özetler (`players.device_hash`). Aynı cihazdan kayıt eski hesabı yeni anahtarla geri verir
+(`200`, `restored: true`). `device_days` tablosu bir cihazın hangi günleri gönderdiğini adla bağsız tutar (cron 3 günden
+eskisini siler); başka hesapla aynı gün `422 already_played` döner. Anahtar göndermeyen eski uygulamalar
+`REQUIRE_DEVICE = "1"` yapılana kadar kabul edilir (sonra `426 update_required`). İsteğe bağlı gizli tuz:
+`npx wrangler secret put DEVICE_SALT` (yoksa `IP_SALT` kullanılır; sonradan değiştirilirse cihazlar tanınmaz).
 
 ## Ayarlar (`wrangler.toml` → `[vars]`)
 - `FULL_BOARD_AT`: toplam katılımcı bu sayıya ulaşana kadar ilk `SMALL_BOARD` (10), sonra ilk `FULL_BOARD` (50) gösterilir.
 - `REGISTER_LIMIT`: bir IP adresinden saatte en fazla kaç yeni takma ad.
 - `CONTENT_BASE`: puanlamada kullanılan yayınlanmış banka ve takvim.
+- `REQUIRE_DEVICE`: `"1"` cihaz anahtarı göndermeyen (1.0.3'ten eski) uygulamaların kaydını ve gönderimini reddeder.
 
 ## Elle müdahale
 ```powershell
@@ -69,7 +83,7 @@ npx wrangler d1 execute kabaca-leaderboard --remote --command "DELETE FROM score
 ```
 
 ## Testler
-`npm test`: Node'un yerleşik test aracı ve `node:sqlite` ile (Node 22.5+, ek paket yok), 35 test.
+`npm test`: Node'un yerleşik test aracı ve `node:sqlite` ile (Node 22.5+, ek paket yok), 40 test.
 Gerçek Workers ortamında yerel deneme: `npx wrangler d1 execute kabaca-leaderboard --local --file=schema.sql`, sonra `npm run dev`.
 `test/scoring_vectors.json`, uygulamanın `test/core/scoring_vectors_test.dart` testiyle ortaktır: puan formülü
 iki tarafta birlikte değişmelidir.

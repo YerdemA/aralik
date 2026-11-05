@@ -98,6 +98,8 @@ abstract final class AppStrings {
   static const leaderboardResets = 'Tablo her gün yeni sorularla sıfırlanır.';
   static const leaderboardEmpty = 'Henüz kimse yok. İlk sen ol!';
   static const leaderboardJoin = 'Tabloya katıl';
+  static String leaderboardRestored(String nickname) =>
+      'Bu cihazdaki hesabın geri geldi: $nickname';
   static const leaderboardJoinTitle = 'Liderlere katıl';
   static const leaderboardJoinBody =
       'Bir takma ad seç. Tabloda yalnızca takma adın ve günlük puanın '

@@ -39,6 +39,7 @@ Future<StatsStore> pumpHome(
             ? LeaderboardStore(
                 await SharedPreferences.getInstance(),
                 serviceUri: () => Uri.parse('https://lb.example/'),
+                deviceKey: () async => null,
               )
             : null,
       ),

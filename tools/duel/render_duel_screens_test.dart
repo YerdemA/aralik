@@ -230,6 +230,7 @@ void main() {
               leaderboard: LeaderboardStore(
                 prefs,
                 serviceUri: () => Uri.parse('https://lb.example/'),
+                deviceKey: () async => null,
               ),
             ),
           ),

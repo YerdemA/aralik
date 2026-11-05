@@ -6,6 +6,7 @@ import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../core/daily.dart';
+import 'device_key.dart' as device;
 
 /// Optional daily leaderboard (server/leaderboard, a Cloudflare Worker).
 ///
@@ -13,6 +14,10 @@ import '../core/daily.dart';
 /// five locked intervals of each finished daily set are sent; the server
 /// computes the score itself. Each day has its own board, so it starts
 /// empty when the day's questions change.
+///
+/// Joining and sending also carry the device key (data/device_key.dart):
+/// the server keeps one account per device, so reinstalling the app gives
+/// the same account back and a day cannot be sent twice.
 
 /// Reply of one JSON request: HTTP status and decoded body.
 typedef JsonReply = ({int status, Object? body});
@@ -135,7 +140,9 @@ class LeaderboardStore extends ChangeNotifier {
     this._prefs, {
     required this._serviceUri,
     JsonRequest? request,
-  }) : _request = request ?? defaultJsonRequest;
+    Future<String?> Function()? deviceKey,
+  }) : _request = request ?? defaultJsonRequest,
+       _deviceKey = deviceKey ?? device.deviceKey;
 
   /// For development: `--dart-define=LEADERBOARD_URL=https://…/` when the
   /// manifest does not name a server yet.
@@ -154,6 +161,7 @@ class LeaderboardStore extends ChangeNotifier {
   final SharedPreferences _prefs;
   final Uri? Function() _serviceUri;
   final JsonRequest _request;
+  final Future<String?> Function() _deviceKey;
   final Set<int> _sending = {};
 
   /// The server, or null while the leaderboard is not available.
@@ -220,14 +228,20 @@ class LeaderboardStore extends ChangeNotifier {
   /// Whether [day]'s score reached the server (or was refused for good).
   bool isSent(int day) => _prefs.getBool(_sentKey(day)) ?? false;
 
-  /// Joins with [nickname]. Throws [LeaderboardException].
-  Future<void> join(String nickname) async {
-    final reply = await _call('POST', 'v1/register', {'nickname': nickname});
+  /// Joins with [nickname]. Returns true when the server gave back this
+  /// device's earlier account (with its own nickname) instead of making a
+  /// new one. Throws [LeaderboardException].
+  Future<bool> join(String nickname) async {
+    final reply = await _call('POST', 'v1/register', {
+      'nickname': nickname,
+      'device': await _deviceKey(),
+    });
     final body = reply as Map<String, dynamic>;
     await _prefs.setString(_idKey, body['id'] as String);
     await _prefs.setString(_tokenKey, body['token'] as String);
     await _prefs.setString(_nicknameKey, body['nickname'] as String);
     notifyListeners();
+    return body['restored'] == true;
   }
 
   /// Changes the nickname. Throws [LeaderboardException].
@@ -265,6 +279,7 @@ class LeaderboardStore extends ChangeNotifier {
     }
     try {
       await _authed('v1/submit', {
+        'device': await _deviceKey(),
         'day': day,
         'answers': [
           for (final i in intervals)

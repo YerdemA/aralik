@@ -5,8 +5,11 @@ CREATE TABLE IF NOT EXISTS players (
   token_hash TEXT NOT NULL,      -- SHA-256 of the app's secret token
   nickname TEXT NOT NULL,
   nickname_key TEXT NOT NULL UNIQUE,
-  created_at INTEGER NOT NULL    -- ms since epoch
+  created_at INTEGER NOT NULL,   -- ms since epoch
+  device_hash TEXT               -- SHA-256 of the app's device key; null for old apps
 );
+CREATE UNIQUE INDEX IF NOT EXISTS players_device
+  ON players (device_hash) WHERE device_hash IS NOT NULL;
 
 -- One row per player and day: each day is its own board.
 CREATE TABLE IF NOT EXISTS scores (
@@ -27,3 +30,12 @@ CREATE TABLE IF NOT EXISTS register_log (
   at INTEGER NOT NULL
 );
 CREATE INDEX IF NOT EXISTS register_log_ip ON register_log (ip_hash, at);
+
+-- Days a device sent a score for, under any account: a reinstalled app
+-- cannot send the same day again. Not linked to a nickname; kept 3 days
+-- (scores are accepted for yesterday, today and tomorrow only).
+CREATE TABLE IF NOT EXISTS device_days (
+  device_hash TEXT NOT NULL,
+  day INTEGER NOT NULL,
+  PRIMARY KEY (device_hash, day)
+);

@@ -29,6 +29,7 @@ Katıldığında şunlar Cloudflare üzerinde çalışan sunucumuza gönderilir 
 - Seçtiğin **takma ad**,
 - Uygulamanın ürettiği **rastgele bir kimlik** ve gizli bir anahtar (anahtarın yalnızca özeti saklanır), hesabın senin olduğunu kanıtlamak için,
 - Bitirdiğin her günlük set için **5 cevabın (aralıkların)**, bunlardan hesaplanan **puanın ve isabet sayın**, ve gönderim zamanı.
+- **Cihazının tek yönlü özeti.** Android'in her uygulamaya ayrı verdiği cihaz kimliğinden telefonunda üretilen bir özet (hash). Kimliğin kendisi telefondan çıkmaz; sunucu bu özeti bir kez daha özetleyerek saklar. Amacı hileyi önlemek: her cihazda tek hesap olur ve aynı günün puanı ikinci kez gönderilemez. Uygulamayı silip yeniden kurduğunda ya da verilerini temizlediğinde hesabın bu sayede geri gelir.
 
 Takma adın ve günlük puanın, o günün tablosunda diğer oyunculara görünür. Cevapların (aralıkların) kimseye gösterilmez; yalnızca puanı hesaplamak için kullanılır.
 
@@ -36,7 +37,7 @@ Aynı cihazdan çok sayıda hesap açılmasını önlemek için, katılma isteğ
 
 Bu veriler yalnızca liderlik tablosu için kullanılır; satılmaz, reklam ya da analiz için kullanılmaz, başka kimseyle paylaşılmaz.
 
-**Tablodan ayrılmak ve verilerini silmek için:** Ayarlar → Liderlik tablosu → Tablodan ayrıl. Takma adın ve gönderdiğin tüm puanlar sunucudan hemen silinir. Uygulamayı kaldırırsan anahtar da silinir; bu durumda sunucudaki verinin silinmesini aşağıdaki iletişim adresinden isteyebilirsin.
+**Tablodan ayrılmak ve verilerini silmek için:** Ayarlar → Liderlik tablosu → Tablodan ayrıl. Takma adın, cihaz özetinle bağın ve gönderdiğin tüm puanlar sunucudan hemen silinir. Yalnızca cihaz özetinin hangi günler için puan gönderdiği bilgisi, adınla bağlantısız olarak en fazla 3 gün kalır; böylece aynı gün yeniden katılıp puan gönderilemez. Uygulamayı kaldırmışsan yeniden kurup tabloya katıldığında hesabın geri gelir, oradan ayrılabilirsin; istersen silinmesini aşağıdaki iletişim adresinden de isteyebilirsin.
 {: .callout}
 
 ## Düello

@@ -321,3 +321,110 @@ test('the daily clean-up drops IP hashes older than a day', async () => {
   await cleanUp(env, NOW + 24 * 3600 * 1000 + 1);
   assert.equal(count(), 0);
 });
+
+const PHONE = 'a'.repeat(64);
+const OTHER_PHONE = 'b'.repeat(64);
+
+async function joinOn(device, nickname, ip = '1.2.3.4') {
+  return call('POST', '/v1/register', { nickname, device }, { ip });
+}
+
+async function send(p, extra = {}) {
+  return call('POST', '/v1/submit', {
+    id: p.id,
+    token: p.token,
+    day: DAY,
+    answers: answers(5),
+    ...extra,
+  });
+}
+
+test('a reinstalled app gets its account back, not a new one', async () => {
+  const first = await joinOn(PHONE, 'Kaplan');
+  assert.equal(first.status, 201);
+  assert.equal(first.body.restored, false);
+  assert.equal((await send(first.body, { device: PHONE })).status, 200);
+
+  // Same phone, app data wiped: a new nickname is asked for, the old
+  // account comes back with a fresh token.
+  const again = await joinOn(PHONE, 'BaskaBiri');
+  assert.equal(again.status, 200);
+  assert.equal(again.body.restored, true);
+  assert.equal(again.body.id, first.body.id);
+  assert.equal(again.body.nickname, 'Kaplan');
+  assert.equal((await send(first.body)).status, 401); // old token is gone
+
+  // Replaying the day keeps the first score.
+  const replay = await call('POST', '/v1/submit', {
+    id: again.body.id,
+    token: again.body.token,
+    day: DAY,
+    answers: answers(0),
+    device: PHONE,
+  });
+  assert.equal(replay.status, 200);
+  assert.equal(replay.body.points, 500);
+  assert.equal(replay.body.players, 1);
+  const players = env.DB.raw.prepare('SELECT COUNT(*) AS n FROM players').get();
+  assert.equal(players.n, 1);
+});
+
+test('leaving and joining again does not send the same day twice', async () => {
+  const first = (await joinOn(PHONE, 'Kaplan')).body;
+  await send(first, { device: PHONE });
+  await call('POST', '/v1/delete', { id: first.id, token: first.token });
+  // The account and its scores are gone, the device may join again...
+  const second = await joinOn(PHONE, 'Aslan');
+  assert.equal(second.status, 201);
+  // ...but not send today's set a second time.
+  const r = await send(second.body, { device: PHONE });
+  assert.deepEqual(r, { status: 422, body: { error: 'already_played' } });
+  // Another day is fine.
+  const tomorrow = await call('POST', '/v1/submit', {
+    id: second.body.id,
+    token: second.body.token,
+    day: DAY + 1,
+    answers: answers(5, DAY + 1),
+    device: PHONE,
+  });
+  assert.equal(tomorrow.status, 200);
+});
+
+test('an account from an older app is tied to its device on submit', async () => {
+  const old = await join('Kaplan'); // no device key
+  assert.equal((await send(old, { device: PHONE })).status, 200);
+  const restored = await joinOn(PHONE, 'Yeni');
+  assert.equal(restored.body.restored, true);
+  assert.equal(restored.body.id, old.id);
+  // A second old account on the same phone cannot send the same day.
+  const other = await join('Aslan');
+  const r = await send(other, { device: PHONE });
+  assert.equal(r.body.error, 'already_played');
+  // Different phones do not affect each other.
+  const elsewhere = await joinOn(OTHER_PHONE, 'Kartal');
+  assert.equal((await send(elsewhere.body, { device: OTHER_PHONE })).status, 200);
+});
+
+test('device keys are checked; old apps can be turned away', async () => {
+  const bad = await joinOn('nope', 'Kaplan');
+  assert.deepEqual(bad, { status: 400, body: { error: 'bad_device' } });
+  const stored = (await joinOn(PHONE, 'Kaplan')).body;
+  const row = env.DB.raw.prepare('SELECT device_hash FROM players').get();
+  assert.notEqual(row.device_hash, PHONE); // only a salted hash is kept
+  assert.equal(row.device_hash.length, 64);
+  assert.ok(stored.token);
+  env.REQUIRE_DEVICE = '1';
+  const legacy = await call('POST', '/v1/register', { nickname: 'Aslan' });
+  assert.deepEqual(legacy, { status: 426, body: { error: 'update_required' } });
+});
+
+test('the daily clean-up drops device days the server no longer accepts', async () => {
+  const p = (await joinOn(PHONE, 'Kaplan')).body;
+  await send(p, { device: PHONE });
+  const count = () =>
+    env.DB.raw.prepare('SELECT COUNT(*) AS n FROM device_days').get().n;
+  await cleanUp(env, NOW + 24 * 3600 * 1000); // tomorrow: still needed
+  assert.equal(count(), 1);
+  await cleanUp(env, NOW + 3 * 24 * 3600 * 1000);
+  assert.equal(count(), 0);
+});

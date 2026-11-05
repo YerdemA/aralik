@@ -3,12 +3,19 @@
 // Joining is optional and needs only a nickname. The app keeps a random
 // id and a secret token; the server stores the token's SHA-256 only.
 // Scores are computed here from the published questions, never taken from
-// the app. Each day has its own board, so it starts empty when the
+// the app.
+//
+// One account per device: the app sends a device key (a hash of Android's
+// per-app device id, which survives reinstalling and clearing the app's
+// data). The server keeps only its salted hash. Registering again from the
+// same device restores that account, and a device can send each day once,
+// whatever account it uses. Each day has its own board, so it starts empty when the
 // day's questions change.
 //
-//   POST /v1/register  {nickname}                    → {id, token, nickname}
+//   POST /v1/register  {nickname, device}            → {id, token, nickname, restored}
 //   POST /v1/rename    {id, token, nickname}         → {nickname}
-//   POST /v1/submit    {id, token, day, answers[5]}  → {points, hits, rank, players}
+//   POST /v1/submit    {id, token, day, answers[5], device}
+//                                                    → {points, hits, rank, players}
 //   GET  /v1/day/{n}?player={id}                     → board of day n
 //   POST /v1/delete    {id, token}                   → {deleted: true}
 //
@@ -17,7 +24,12 @@
 //   GET  /v1/duel/rooms/{code}?v=1&name=…&bank=N     WebSocket to the room
 //   GET  /v1/duel/random?v=1&name=…&bank=N           WebSocket to the lobby
 
-import { acceptsDay, readableDay, QUESTIONS_PER_DAY } from './days.js';
+import {
+  acceptsDay,
+  readableDay,
+  turkeyDayIndex,
+  QUESTIONS_PER_DAY,
+} from './days.js';
 import { isDailySet, loadContent } from './content.js';
 import { cleanNickname, isBlocked, nicknameKey } from './nickname.js';
 import { isHit, scoreFor, validBound } from './scoring.js';
@@ -33,6 +45,8 @@ const DEFAULTS = {
   FULL_BOARD: '50',
   // New nicknames per IP address per hour.
   REGISTER_LIMIT: '5',
+  // '1' refuses apps that send no device key (older than 1.0.3).
+  REQUIRE_DEVICE: '0',
 };
 
 const HOUR_MS = 60 * 60 * 1000;
@@ -94,13 +108,32 @@ async function authenticate(db, body) {
     throw new HttpError(401, 'unauthorized');
   }
   const player = await db
-    .prepare('SELECT id, nickname, token_hash FROM players WHERE id = ?')
+    .prepare(
+      'SELECT id, nickname, token_hash, device_hash FROM players WHERE id = ?',
+    )
     .bind(body.id)
     .first();
   if (!player || player.token_hash !== (await sha256(body.token))) {
     throw new HttpError(401, 'unauthorized');
   }
   return player;
+}
+
+/**
+ * The stored hash of the app's device key, null when the app sent none
+ * (apps older than 1.0.3). Throws on a malformed key.
+ */
+async function deviceHash(env, raw) {
+  if (raw === undefined || raw === null) {
+    if (setting(env, 'REQUIRE_DEVICE') === 1) {
+      throw new HttpError(426, 'update_required');
+    }
+    return null;
+  }
+  if (typeof raw !== 'string' || !/^[0-9a-f]{64}$/.test(raw)) {
+    throw new HttpError(400, 'bad_device');
+  }
+  return sha256(`${env.DEVICE_SALT ?? env.IP_SALT ?? 'kabaca'}:device:${raw}`);
 }
 
 /** A valid, free nickname as {name, key}; throws otherwise. */
@@ -122,6 +155,29 @@ async function checkNickname(db, raw, exceptId = null) {
 async function register(request, env, now) {
   const body = await readBody(request);
   const db = env.DB;
+  const device = await deviceHash(env, body.device);
+
+  // This device already has an account (the app was reinstalled or its
+  // data cleared): hand it back with a new token instead of a new one.
+  if (device) {
+    const owner = await db
+      .prepare('SELECT id, nickname FROM players WHERE device_hash = ?')
+      .bind(device)
+      .first();
+    if (owner) {
+      const token = randomToken();
+      await db
+        .prepare('UPDATE players SET token_hash = ? WHERE id = ?')
+        .bind(await sha256(token), owner.id)
+        .run();
+      return json(200, {
+        id: owner.id,
+        token,
+        nickname: owner.nickname,
+        restored: true,
+      });
+    }
+  }
 
   const ip = request.headers.get('cf-connecting-ip') ?? 'unknown';
   const ipHash = await sha256(`${env.IP_SALT ?? 'kabaca'}:${ip}`);
@@ -146,9 +202,9 @@ async function register(request, env, now) {
     await db.batch([
       db
         .prepare(
-          'INSERT INTO players (id, token_hash, nickname, nickname_key, created_at) VALUES (?, ?, ?, ?, ?)',
+          'INSERT INTO players (id, token_hash, nickname, nickname_key, created_at, device_hash) VALUES (?, ?, ?, ?, ?, ?)',
         )
-        .bind(id, await sha256(token), name, key, now),
+        .bind(id, await sha256(token), name, key, now, device),
       db
         .prepare('INSERT INTO register_log (ip_hash, at) VALUES (?, ?)')
         .bind(ipHash, now),
@@ -157,7 +213,7 @@ async function register(request, env, now) {
     if (String(e).includes('UNIQUE')) throw new HttpError(409, 'nickname_taken');
     throw e;
   }
-  return json(201, { id, token, nickname: name });
+  return json(201, { id, token, nickname: name, restored: false });
 }
 
 async function rename(request, env) {
@@ -179,6 +235,7 @@ async function submit(request, env, now, fetchFn) {
 
   const day = body.day;
   if (!acceptsDay(day, now)) throw new HttpError(422, 'day_closed');
+  const device = player.device_hash ?? (await deviceHash(env, body.device));
 
   const answers = body.answers;
   if (!Array.isArray(answers) || answers.length !== QUESTIONS_PER_DAY) {
@@ -213,12 +270,32 @@ async function submit(request, env, now, fetchFn) {
   }
 
   // The first submission of a day counts; a retry gets the same answer.
-  await db
-    .prepare(
-      'INSERT OR IGNORE INTO scores (day, player_id, points, hits, submitted_at) VALUES (?, ?, ?, ?, ?)',
-    )
-    .bind(day, player.id, points, hits, now)
-    .run();
+  const sent = await myScore(db, day, player.id);
+  if (!sent && device) {
+    // Another account on this device already sent this day.
+    const played = await db
+      .prepare('SELECT 1 AS x FROM device_days WHERE device_hash = ? AND day = ?')
+      .bind(device, day)
+      .first();
+    if (played) throw new HttpError(422, 'already_played');
+    if (!player.device_hash) await claimDevice(db, player.id, device);
+  }
+  await db.batch([
+    db
+      .prepare(
+        'INSERT OR IGNORE INTO scores (day, player_id, points, hits, submitted_at) VALUES (?, ?, ?, ?, ?)',
+      )
+      .bind(day, player.id, points, hits, now),
+    ...(device
+      ? [
+          db
+            .prepare(
+              'INSERT OR IGNORE INTO device_days (device_hash, day) VALUES (?, ?)',
+            )
+            .bind(device, day),
+        ]
+      : []),
+  ]);
   const mine = await myScore(db, day, player.id);
   return json(200, {
     day,
@@ -378,6 +455,24 @@ export async function handle(request, env, now = Date.now(), fetchFn = fetch) {
 export async function cleanUp(env, now = Date.now()) {
   await env.DB.prepare('DELETE FROM register_log WHERE at < ?')
     .bind(now - 24 * HOUR_MS)
+    .run();
+  // Scores are accepted up to yesterday: older device days are not needed.
+  await env.DB.prepare('DELETE FROM device_days WHERE day < ?')
+    .bind(turkeyDayIndex(now) - 2)
+    .run();
+}
+
+/**
+ * Ties an account from an app older than 1.0.3 to its device, unless the
+ * device already belongs to another account.
+ */
+async function claimDevice(db, playerId, device) {
+  await db
+    .prepare(
+      `UPDATE players SET device_hash = ?1 WHERE id = ?2 AND device_hash IS NULL
+         AND NOT EXISTS (SELECT 1 FROM players WHERE device_hash = ?1)`,
+    )
+    .bind(device, playerId)
     .run();
 }
 

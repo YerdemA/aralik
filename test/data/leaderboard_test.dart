@@ -6,6 +6,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 typedef Sent = ({String method, Uri uri, Map<String, Object?>? body});
 
+final _device = 'd' * 64;
+
 void main() {
   late SharedPreferences prefs;
   late List<Sent> sent;
@@ -20,6 +22,7 @@ void main() {
       sent.add(request);
       return reply(request);
     },
+    deviceKey: () async => _device,
   );
 
   const registered = (
@@ -77,7 +80,7 @@ void main() {
     s.addListener(() => notified++);
     reply = (_) => registered;
     await s.join('Kaplan');
-    expect(sent.single.body, {'nickname': 'Kaplan'});
+    expect(sent.single.body, {'nickname': 'Kaplan', 'device': _device});
     expect(s.account, (id: 'p1', token: 'secret', nickname: 'Kaplan'));
     expect(store().joined, isTrue); // persisted
     expect(notified, 1);
@@ -115,6 +118,7 @@ void main() {
     expect(await s.submit(3), isTrue);
     expect(sent.single.uri.path, '/api/v1/submit');
     expect(sent.single.body, {
+      'device': _device,
       'day': 3,
       'answers': [
         {'q': 'q0', 'low': 1, 'high': 5},
@@ -226,5 +230,25 @@ void main() {
     expect(board.me?.rank, 7);
     expect(board.me?.isMe, isTrue);
     expect(board.meInTop, isFalse);
+  });
+
+  test('joining from a device that had an account gets it back', () async {
+    final s = store();
+    reply = (_) => (
+      status: 200,
+      body: {'id': 'p9', 'token': 'new', 'nickname': 'Eski', 'restored': true},
+    );
+    expect(await s.join('Yeni'), isTrue);
+    expect(s.account, (id: 'p9', token: 'new', nickname: 'Eski'));
+    reply = (_) => registered;
+    expect(await store().join('Kaplan'), isFalse);
+  });
+
+  test('a day this device already sent is not tried again', () async {
+    final s = await joinedStore();
+    await finishDay(s, 3);
+    reply = (_) => (status: 422, body: {'error': 'already_played'});
+    expect(await s.submit(3), isFalse);
+    expect(s.isSent(3), isTrue);
   });
 }

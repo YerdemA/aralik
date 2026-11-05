@@ -72,12 +72,24 @@ class _NicknameSheetState extends State<_NicknameSheet> {
       _error = null;
     });
     try {
+      var restored = false;
       if (_renaming) {
         await widget.store.rename(name);
       } else {
-        await widget.store.join(name);
+        restored = await widget.store.join(name);
       }
-      if (mounted) Navigator.of(context).pop(true);
+      if (!mounted) return;
+      if (restored) {
+        // A reinstalled app: this device's earlier account is back.
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              AppStrings.leaderboardRestored(widget.store.account!.nickname),
+            ),
+          ),
+        );
+      }
+      Navigator.of(context).pop(true);
     } on LeaderboardException catch (e) {
       if (mounted) {
         setState(() {
