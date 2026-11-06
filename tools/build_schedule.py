@@ -6,7 +6,8 @@ Every day has 2 easy + 2 medium + 1 hard question (the bank's "difficulty"),
 from at least 3 categories and with at least 2 magnitude questions (days
 added from 2026-11-05 on), never two from the same data set and never two
 about the same item (e.g. a company's founding year and its employees).
-Within a day they are ordered easy → hard.
+Easy magnitude questions are scarce: new days get them evenly spread, at
+most one a day (2026-11-06). Within a day they are ordered easy → hard.
 
 The schedule is append-only: existing days are kept and new days are added
 until the schedule has N days (default 45). --fresh rebuilds it from
@@ -41,8 +42,11 @@ MIN_MAGNITUDES_PER_DAY = 2
 ATTEMPTS_PER_DAY = 200
 
 
-def make_day(pool: dict[int, list[dict]], rng: random.Random) -> list[dict] | None:
+def make_day(pool: dict[int, list[dict]], rng: random.Random, easy_magnitude: bool) -> list[dict] | None:
     """One day from [pool] (by difficulty), or None if the rules can't be met.
+
+    easy_magnitude: whether an easy magnitude question should come first among
+    the easy ones (True) or last (False); main() spreads the scarce ones evenly.
 
     Prefers data sets with many questions left, so small ones are not used
     up early and later days keep their variety."""
@@ -57,14 +61,23 @@ def make_day(pool: dict[int, list[dict]], rng: random.Random) -> list[dict] | No
             ]
             rng.shuffle(candidates)
             candidates.sort(key=lambda q: -remaining[q["dataset"]] * rng.uniform(0.5, 1.0))
-            # Until the day has its magnitude questions, they go first.
-            if sum(q["kind"] == "magnitude" for q in day) < MIN_MAGNITUDES_PER_DAY:
+            # Until the day has its magnitude questions, they go first. Not
+            # among the easy ones: easy magnitudes are scarce, and putting
+            # them first used them all up in the first days (2026-11-06);
+            # medium and hard magnitudes meet the rule.
+            if difficulty != 1 and sum(q["kind"] == "magnitude" for q in day) < MIN_MAGNITUDES_PER_DAY:
                 candidates.sort(key=lambda q: q["kind"] != "magnitude")
+            if difficulty == 1:
+                candidates.sort(key=lambda q: (q["kind"] == "magnitude") != easy_magnitude)
             for q in candidates:
                 if len([d for d in day if d.get("difficulty") == difficulty]) == count:
                     break
                 if q["dataset"] in datasets or q["source"] in sources:
                     continue
+                if difficulty == 1 and q["kind"] == "magnitude" and any(
+                    d["difficulty"] == 1 and d["kind"] == "magnitude" for d in day
+                ):
+                    continue  # at most one easy magnitude a day
                 day.append(q)
                 datasets.add(q["dataset"])
                 sources.add(q["source"])
@@ -110,12 +123,19 @@ def main(argv: list[str]) -> int:
 
     rng = random.Random(f"{SEED}:{len(days)}")
     added = 0
+    # Easy magnitude questions are scarce: spread them evenly over the new
+    # days, at most one a day.
+    easy_magnitudes = sum(q["kind"] == "magnitude" for q in pool[1])
+    to_add = max(1, args.days - len(days))
+    used_easy_magnitudes = 0
     while len(days) < args.days:
-        day = make_day(pool, rng)
+        due = (added + 1) * easy_magnitudes / to_add > used_easy_magnitudes
+        day = make_day(pool, rng, due)
         if day is None:
             break
         for q in day:
             pool[q["difficulty"]].remove(q)
+        used_easy_magnitudes += sum(q["difficulty"] == 1 and q["kind"] == "magnitude" for q in day)
         day.sort(key=lambda q: q["difficulty"])  # easy → hard
         days.append([q["id"] for q in day])
         added += 1
