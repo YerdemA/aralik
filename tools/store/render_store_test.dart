@@ -1,6 +1,6 @@
 // Renders the Play Store images into play-store/ (not in git): the feature
-// graphic and the framed screenshots, from the raw emulator shots in
-// play-store/screenshots/.
+// graphic and the framed screenshots, from the raw shots in
+// play-store/screenshots/ (capture_screens_test.dart draws them).
 //
 //   flutter test tools/store/render_store_test.dart
 import 'dart:io';
@@ -20,10 +20,10 @@ const _shots = [
   ('02-tahmin', 'Önce en iyi tahminini yaz'),
   ('03-aralik', '%90 emin olduğun\naralığı seç'),
   ('04-sonuc', 'Aralık ne kadar darsa\no kadar çok puan'),
-  ('05-gun-ozeti', 'Gününü özetle,\nserini sürdür'),
-  ('06-paylasim-karti', 'Skorunu hikâyende paylaş'),
+  ('05-duello', 'Canlı düello:\naynı soru, iki aralık'),
+  ('06-duello-sonuc', 'Kim daha iyi tahmin ediyor?'),
+  ('07-paylasim-karti', 'Skorunu hikâyende paylaş'),
   ('08-istatistikler', 'Gerçekten %90 emin misin?\nKalibrasyonunu gör'),
-  ('09-koyu-tema', 'Koyu tema da var'),
 ];
 
 const _sun = Palette.sun;
