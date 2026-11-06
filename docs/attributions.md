@@ -65,6 +65,11 @@ aynı liste yer alır.
 - Lisans: [İBB Açık Veri Lisansı 1.0](https://data.ibb.gov.tr/license)
 - Adres: https://data.ibb.gov.tr/
 
+## Eurostat
+- Kaynak: Eurostat (demo_nind, demo_find, demo_pjanind, road_eqs_carhab, env_wasmun, yth_demo_030, ilc_lvph01, ilc_lvho02), erişim 2026-11-06
+- Lisans: [Kaynak gösterilerek yeniden kullanım (yalnızca AB, EFTA ve aday ülke satırları)](https://ec.europa.eu/eurostat/help/copyright-notice)
+- Adres: https://ec.europa.eu/eurostat/
+
 ## Vikipedi
 - Vikipedi gönüllüleri (tarih, mimari, sanat ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0
 - Lisans: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)

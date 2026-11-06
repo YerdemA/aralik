@@ -157,9 +157,10 @@
    "license": "Kaynak gösterilerek yeniden kullanım (yalnızca AB, EFTA ve aday ülke satırları)",
    "license_url": "https://ec.europa.eu/eurostat/help/copyright-notice",
    "url": "https://ec.europa.eu/eurostat/",
-   "attribution": "Kaynak: Eurostat",
-   "status": "planned",
-   "datasets": []
+   "attribution": "Kaynak: Eurostat (demo_nind, demo_find, demo_pjanind, road_eqs_carhab, env_wasmun, yth_demo_030, ilc_lvph01, ilc_lvho02), erişim 2026-11-06",
+   "status": "in_use",
+   "raw_dir": "eurostat",
+   "datasets": ["es_first_marriage", "es_first_child", "es_births_outside_marriage", "es_median_age", "es_cars", "es_municipal_waste", "es_leaving_home", "es_household_size", "es_home_owners"]
   },
   {
    "id": "tuik",
