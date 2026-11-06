@@ -35,6 +35,11 @@ aynı liste yer alır.
 - Lisans: [Kamu malı](https://ourairports.com/data/)
 - Adres: https://ourairports.com/
 
+## openfootball
+- openfootball (football.json, worldcup.json, euro.json). Veri kamu malına bırakılmıştır.
+- Lisans: [Kamu malı](https://github.com/openfootball/football.json)
+- Adres: https://github.com/openfootball
+
 ## Vikipedi
 - Vikipedi gönüllüleri (tarih, mimari, sanat ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0
 - Lisans: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)

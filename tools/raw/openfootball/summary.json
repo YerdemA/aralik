@@ -1,0 +1,3139 @@
+{
+ "fetched": "2026-11-06",
+ "tournaments": {
+  "wc1930": {
+   "repo": "worldcup.json",
+   "path": "1930/worldcup.json",
+   "matches": 18,
+   "goals": 70,
+   "unscored": 0
+  },
+  "wc1934": {
+   "repo": "worldcup.json",
+   "path": "1934/worldcup.json",
+   "matches": 17,
+   "goals": 70,
+   "unscored": 0
+  },
+  "wc1938": {
+   "repo": "worldcup.json",
+   "path": "1938/worldcup.json",
+   "matches": 18,
+   "goals": 84,
+   "unscored": 1
+  },
+  "wc1950": {
+   "repo": "worldcup.json",
+   "path": "1950/worldcup.json",
+   "matches": 22,
+   "goals": 88,
+   "unscored": 0
+  },
+  "wc1954": {
+   "repo": "worldcup.json",
+   "path": "1954/worldcup.json",
+   "matches": 26,
+   "goals": 140,
+   "unscored": 0
+  },
+  "wc1958": {
+   "repo": "worldcup.json",
+   "path": "1958/worldcup.json",
+   "matches": 35,
+   "goals": 126,
+   "unscored": 0
+  },
+  "wc1962": {
+   "repo": "worldcup.json",
+   "path": "1962/worldcup.json",
+   "matches": 32,
+   "goals": 89,
+   "unscored": 0
+  },
+  "wc1966": {
+   "repo": "worldcup.json",
+   "path": "1966/worldcup.json",
+   "matches": 32,
+   "goals": 89,
+   "unscored": 0
+  },
+  "wc1970": {
+   "repo": "worldcup.json",
+   "path": "1970/worldcup.json",
+   "matches": 32,
+   "goals": 95,
+   "unscored": 0
+  },
+  "wc1974": {
+   "repo": "worldcup.json",
+   "path": "1974/worldcup.json",
+   "matches": 38,
+   "goals": 97,
+   "unscored": 0
+  },
+  "wc1978": {
+   "repo": "worldcup.json",
+   "path": "1978/worldcup.json",
+   "matches": 38,
+   "goals": 102,
+   "unscored": 0
+  },
+  "wc1982": {
+   "repo": "worldcup.json",
+   "path": "1982/worldcup.json",
+   "matches": 52,
+   "goals": 146,
+   "unscored": 0
+  },
+  "wc1986": {
+   "repo": "worldcup.json",
+   "path": "1986/worldcup.json",
+   "matches": 52,
+   "goals": 132,
+   "unscored": 0
+  },
+  "wc1990": {
+   "repo": "worldcup.json",
+   "path": "1990/worldcup.json",
+   "matches": 52,
+   "goals": 115,
+   "unscored": 0
+  },
+  "wc1994": {
+   "repo": "worldcup.json",
+   "path": "1994/worldcup.json",
+   "matches": 52,
+   "goals": 141,
+   "unscored": 0
+  },
+  "wc1998": {
+   "repo": "worldcup.json",
+   "path": "1998/worldcup.json",
+   "matches": 64,
+   "goals": 171,
+   "unscored": 0
+  },
+  "wc2002": {
+   "repo": "worldcup.json",
+   "path": "2002/worldcup.json",
+   "matches": 64,
+   "goals": 161,
+   "unscored": 0
+  },
+  "wc2006": {
+   "repo": "worldcup.json",
+   "path": "2006/worldcup.json",
+   "matches": 64,
+   "goals": 147,
+   "unscored": 0
+  },
+  "wc2010": {
+   "repo": "worldcup.json",
+   "path": "2010/worldcup.json",
+   "matches": 64,
+   "goals": 145,
+   "unscored": 0
+  },
+  "wc2014": {
+   "repo": "worldcup.json",
+   "path": "2014/worldcup.json",
+   "matches": 64,
+   "goals": 171,
+   "unscored": 0
+  },
+  "wc2018": {
+   "repo": "worldcup.json",
+   "path": "2018/worldcup.json",
+   "matches": 64,
+   "goals": 169,
+   "unscored": 0
+  },
+  "wc2022": {
+   "repo": "worldcup.json",
+   "path": "2022/worldcup.json",
+   "matches": 64,
+   "goals": 172,
+   "unscored": 0
+  },
+  "euro2020": {
+   "repo": "euro.json",
+   "path": "2020/euro.json",
+   "matches": 51,
+   "goals": 142,
+   "unscored": 0
+  },
+  "euro2024": {
+   "repo": "euro.json",
+   "path": "2024/euro.json",
+   "matches": 51,
+   "goals": 117,
+   "unscored": 0
+  }
+ },
+ "leagues": {
+  "2015-16/en.1": {
+   "repo": "football.json",
+   "path": "2015-16/en.1.json",
+   "matches": 380,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "Leicester City",
+     "points": 81,
+     "goals": 68
+    },
+    {
+     "team": "Arsenal FC",
+     "points": 71,
+     "goals": 65
+    },
+    {
+     "team": "Tottenham Hotspur",
+     "points": 70,
+     "goals": 69
+    },
+    {
+     "team": "Manchester United",
+     "points": 66,
+     "goals": 49
+    },
+    {
+     "team": "Manchester City",
+     "points": 66,
+     "goals": 71
+    },
+    {
+     "team": "Southampton FC",
+     "points": 63,
+     "goals": 59
+    },
+    {
+     "team": "West Ham United",
+     "points": 62,
+     "goals": 65
+    },
+    {
+     "team": "Liverpool FC",
+     "points": 60,
+     "goals": 63
+    },
+    {
+     "team": "Stoke City",
+     "points": 51,
+     "goals": 41
+    },
+    {
+     "team": "Chelsea FC",
+     "points": 50,
+     "goals": 59
+    },
+    {
+     "team": "Everton FC",
+     "points": 47,
+     "goals": 59
+    },
+    {
+     "team": "Swansea City",
+     "points": 47,
+     "goals": 42
+    },
+    {
+     "team": "Watford FC",
+     "points": 45,
+     "goals": 40
+    },
+    {
+     "team": "West Bromwich Albion",
+     "points": 43,
+     "goals": 34
+    },
+    {
+     "team": "Crystal Palace",
+     "points": 42,
+     "goals": 39
+    },
+    {
+     "team": "AFC Bournemouth",
+     "points": 42,
+     "goals": 45
+    },
+    {
+     "team": "Sunderland AFC",
+     "points": 39,
+     "goals": 48
+    },
+    {
+     "team": "Newcastle United",
+     "points": 37,
+     "goals": 44
+    },
+    {
+     "team": "Norwich City",
+     "points": 34,
+     "goals": 39
+    },
+    {
+     "team": "Aston Villa",
+     "points": 17,
+     "goals": 27
+    }
+   ]
+  },
+  "2016-17/en.1": {
+   "repo": "football.json",
+   "path": "2016-17/en.1.json",
+   "matches": 380,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "Chelsea FC",
+     "points": 93,
+     "goals": 85
+    },
+    {
+     "team": "Tottenham Hotspur",
+     "points": 86,
+     "goals": 86
+    },
+    {
+     "team": "Manchester City",
+     "points": 78,
+     "goals": 80
+    },
+    {
+     "team": "Liverpool FC",
+     "points": 76,
+     "goals": 78
+    },
+    {
+     "team": "Arsenal FC",
+     "points": 75,
+     "goals": 77
+    },
+    {
+     "team": "Manchester United",
+     "points": 69,
+     "goals": 54
+    },
+    {
+     "team": "Everton FC",
+     "points": 61,
+     "goals": 62
+    },
+    {
+     "team": "Southampton FC",
+     "points": 46,
+     "goals": 41
+    },
+    {
+     "team": "AFC Bournemouth",
+     "points": 46,
+     "goals": 55
+    },
+    {
+     "team": "West Bromwich Albion",
+     "points": 45,
+     "goals": 43
+    },
+    {
+     "team": "West Ham United",
+     "points": 45,
+     "goals": 47
+    },
+    {
+     "team": "Stoke City",
+     "points": 44,
+     "goals": 41
+    },
+    {
+     "team": "Leicester City",
+     "points": 44,
+     "goals": 48
+    },
+    {
+     "team": "Swansea City",
+     "points": 41,
+     "goals": 45
+    },
+    {
+     "team": "Crystal Palace",
+     "points": 41,
+     "goals": 50
+    },
+    {
+     "team": "Watford FC",
+     "points": 40,
+     "goals": 40
+    },
+    {
+     "team": "Burnley FC",
+     "points": 40,
+     "goals": 39
+    },
+    {
+     "team": "Hull City",
+     "points": 34,
+     "goals": 37
+    },
+    {
+     "team": "Middlesbrough FC",
+     "points": 28,
+     "goals": 27
+    },
+    {
+     "team": "Sunderland AFC",
+     "points": 24,
+     "goals": 29
+    }
+   ]
+  },
+  "2017-18/en.1": {
+   "repo": "football.json",
+   "path": "2017-18/en.1.json",
+   "matches": 380,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "Manchester City",
+     "points": 100,
+     "goals": 106
+    },
+    {
+     "team": "Manchester United",
+     "points": 81,
+     "goals": 68
+    },
+    {
+     "team": "Tottenham Hotspur",
+     "points": 77,
+     "goals": 74
+    },
+    {
+     "team": "Liverpool FC",
+     "points": 75,
+     "goals": 84
+    },
+    {
+     "team": "Chelsea FC",
+     "points": 70,
+     "goals": 62
+    },
+    {
+     "team": "Arsenal FC",
+     "points": 63,
+     "goals": 74
+    },
+    {
+     "team": "Burnley FC",
+     "points": 54,
+     "goals": 36
+    },
+    {
+     "team": "Everton FC",
+     "points": 49,
+     "goals": 44
+    },
+    {
+     "team": "Leicester City",
+     "points": 47,
+     "goals": 56
+    },
+    {
+     "team": "Newcastle United",
+     "points": 44,
+     "goals": 39
+    },
+    {
+     "team": "AFC Bournemouth",
+     "points": 44,
+     "goals": 45
+    },
+    {
+     "team": "Crystal Palace",
+     "points": 44,
+     "goals": 45
+    },
+    {
+     "team": "West Ham United",
+     "points": 42,
+     "goals": 48
+    },
+    {
+     "team": "Watford FC",
+     "points": 41,
+     "goals": 44
+    },
+    {
+     "team": "Brighton & Hove Albion",
+     "points": 40,
+     "goals": 34
+    },
+    {
+     "team": "Huddersfield Town",
+     "points": 37,
+     "goals": 28
+    },
+    {
+     "team": "Southampton FC",
+     "points": 36,
+     "goals": 37
+    },
+    {
+     "team": "Swansea City",
+     "points": 33,
+     "goals": 28
+    },
+    {
+     "team": "Stoke City",
+     "points": 33,
+     "goals": 35
+    },
+    {
+     "team": "West Bromwich Albion",
+     "points": 31,
+     "goals": 31
+    }
+   ]
+  },
+  "2018-19/en.1": {
+   "repo": "football.json",
+   "path": "2018-19/en.1.json",
+   "matches": 380,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "Manchester City",
+     "points": 98,
+     "goals": 95
+    },
+    {
+     "team": "Liverpool FC",
+     "points": 97,
+     "goals": 89
+    },
+    {
+     "team": "Chelsea FC",
+     "points": 72,
+     "goals": 63
+    },
+    {
+     "team": "Tottenham Hotspur",
+     "points": 71,
+     "goals": 67
+    },
+    {
+     "team": "Arsenal FC",
+     "points": 70,
+     "goals": 73
+    },
+    {
+     "team": "Manchester United",
+     "points": 66,
+     "goals": 65
+    },
+    {
+     "team": "Wolverhampton Wanderers",
+     "points": 57,
+     "goals": 47
+    },
+    {
+     "team": "Everton FC",
+     "points": 54,
+     "goals": 54
+    },
+    {
+     "team": "Leicester City",
+     "points": 52,
+     "goals": 51
+    },
+    {
+     "team": "West Ham United",
+     "points": 52,
+     "goals": 52
+    },
+    {
+     "team": "Watford FC",
+     "points": 50,
+     "goals": 52
+    },
+    {
+     "team": "Crystal Palace",
+     "points": 49,
+     "goals": 51
+    },
+    {
+     "team": "AFC Bournemouth",
+     "points": 45,
+     "goals": 56
+    },
+    {
+     "team": "Newcastle United",
+     "points": 45,
+     "goals": 42
+    },
+    {
+     "team": "Burnley FC",
+     "points": 40,
+     "goals": 45
+    },
+    {
+     "team": "Southampton FC",
+     "points": 39,
+     "goals": 45
+    },
+    {
+     "team": "Brighton & Hove Albion",
+     "points": 36,
+     "goals": 35
+    },
+    {
+     "team": "Cardiff City",
+     "points": 34,
+     "goals": 34
+    },
+    {
+     "team": "Fulham FC",
+     "points": 26,
+     "goals": 34
+    },
+    {
+     "team": "Huddersfield Town",
+     "points": 16,
+     "goals": 22
+    }
+   ]
+  },
+  "2019-20/en.1": {
+   "repo": "football.json",
+   "path": "2019-20/en.1.json",
+   "matches": 380,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "Liverpool FC",
+     "points": 99,
+     "goals": 85
+    },
+    {
+     "team": "Manchester City",
+     "points": 81,
+     "goals": 102
+    },
+    {
+     "team": "Manchester United",
+     "points": 66,
+     "goals": 66
+    },
+    {
+     "team": "Chelsea FC",
+     "points": 66,
+     "goals": 69
+    },
+    {
+     "team": "Leicester City",
+     "points": 62,
+     "goals": 67
+    },
+    {
+     "team": "Tottenham Hotspur",
+     "points": 59,
+     "goals": 61
+    },
+    {
+     "team": "Wolverhampton Wanderers",
+     "points": 59,
+     "goals": 51
+    },
+    {
+     "team": "Arsenal FC",
+     "points": 56,
+     "goals": 56
+    },
+    {
+     "team": "Sheffield United",
+     "points": 54,
+     "goals": 39
+    },
+    {
+     "team": "Burnley FC",
+     "points": 54,
+     "goals": 43
+    },
+    {
+     "team": "Southampton FC",
+     "points": 52,
+     "goals": 51
+    },
+    {
+     "team": "Everton FC",
+     "points": 49,
+     "goals": 44
+    },
+    {
+     "team": "Newcastle United",
+     "points": 44,
+     "goals": 38
+    },
+    {
+     "team": "Crystal Palace",
+     "points": 43,
+     "goals": 31
+    },
+    {
+     "team": "Brighton & Hove Albion",
+     "points": 41,
+     "goals": 39
+    },
+    {
+     "team": "West Ham United",
+     "points": 39,
+     "goals": 49
+    },
+    {
+     "team": "Aston Villa",
+     "points": 35,
+     "goals": 41
+    },
+    {
+     "team": "AFC Bournemouth",
+     "points": 34,
+     "goals": 40
+    },
+    {
+     "team": "Watford FC",
+     "points": 34,
+     "goals": 36
+    },
+    {
+     "team": "Norwich City",
+     "points": 21,
+     "goals": 26
+    }
+   ]
+  },
+  "2020-21/en.1": {
+   "repo": "football.json",
+   "path": "2020-21/en.1.json",
+   "matches": 380,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "Manchester City FC",
+     "points": 86,
+     "goals": 83
+    },
+    {
+     "team": "Manchester United FC",
+     "points": 74,
+     "goals": 73
+    },
+    {
+     "team": "Liverpool FC",
+     "points": 69,
+     "goals": 68
+    },
+    {
+     "team": "Chelsea FC",
+     "points": 67,
+     "goals": 58
+    },
+    {
+     "team": "Leicester City FC",
+     "points": 66,
+     "goals": 68
+    },
+    {
+     "team": "West Ham United FC",
+     "points": 65,
+     "goals": 62
+    },
+    {
+     "team": "Tottenham Hotspur FC",
+     "points": 62,
+     "goals": 68
+    },
+    {
+     "team": "Arsenal FC",
+     "points": 61,
+     "goals": 55
+    },
+    {
+     "team": "Everton FC",
+     "points": 59,
+     "goals": 47
+    },
+    {
+     "team": "Leeds United FC",
+     "points": 59,
+     "goals": 62
+    },
+    {
+     "team": "Aston Villa FC",
+     "points": 55,
+     "goals": 55
+    },
+    {
+     "team": "Newcastle United FC",
+     "points": 45,
+     "goals": 46
+    },
+    {
+     "team": "Wolverhampton Wanderers FC",
+     "points": 45,
+     "goals": 36
+    },
+    {
+     "team": "Crystal Palace FC",
+     "points": 44,
+     "goals": 41
+    },
+    {
+     "team": "Southampton FC",
+     "points": 43,
+     "goals": 47
+    },
+    {
+     "team": "Brighton & Hove Albion FC",
+     "points": 41,
+     "goals": 40
+    },
+    {
+     "team": "Burnley FC",
+     "points": 39,
+     "goals": 33
+    },
+    {
+     "team": "Fulham FC",
+     "points": 28,
+     "goals": 27
+    },
+    {
+     "team": "West Bromwich Albion FC",
+     "points": 26,
+     "goals": 35
+    },
+    {
+     "team": "Sheffield United FC",
+     "points": 23,
+     "goals": 20
+    }
+   ]
+  },
+  "2021-22/en.1": {
+   "repo": "football.json",
+   "path": "2021-22/en.1.json",
+   "matches": 380,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "Manchester City FC",
+     "points": 93,
+     "goals": 99
+    },
+    {
+     "team": "Liverpool FC",
+     "points": 92,
+     "goals": 94
+    },
+    {
+     "team": "Chelsea FC",
+     "points": 74,
+     "goals": 76
+    },
+    {
+     "team": "Tottenham Hotspur FC",
+     "points": 71,
+     "goals": 69
+    },
+    {
+     "team": "Arsenal FC",
+     "points": 69,
+     "goals": 61
+    },
+    {
+     "team": "Manchester United FC",
+     "points": 58,
+     "goals": 57
+    },
+    {
+     "team": "West Ham United FC",
+     "points": 56,
+     "goals": 60
+    },
+    {
+     "team": "Leicester City FC",
+     "points": 52,
+     "goals": 62
+    },
+    {
+     "team": "Brighton & Hove Albion FC",
+     "points": 51,
+     "goals": 42
+    },
+    {
+     "team": "Wolverhampton Wanderers FC",
+     "points": 51,
+     "goals": 38
+    },
+    {
+     "team": "Newcastle United FC",
+     "points": 49,
+     "goals": 44
+    },
+    {
+     "team": "Crystal Palace FC",
+     "points": 48,
+     "goals": 50
+    },
+    {
+     "team": "Brentford FC",
+     "points": 46,
+     "goals": 48
+    },
+    {
+     "team": "Aston Villa FC",
+     "points": 45,
+     "goals": 52
+    },
+    {
+     "team": "Southampton FC",
+     "points": 40,
+     "goals": 43
+    },
+    {
+     "team": "Everton FC",
+     "points": 39,
+     "goals": 43
+    },
+    {
+     "team": "Leeds United FC",
+     "points": 38,
+     "goals": 42
+    },
+    {
+     "team": "Burnley FC",
+     "points": 35,
+     "goals": 34
+    },
+    {
+     "team": "Watford FC",
+     "points": 23,
+     "goals": 34
+    },
+    {
+     "team": "Norwich City FC",
+     "points": 22,
+     "goals": 23
+    }
+   ]
+  },
+  "2022-23/en.1": {
+   "repo": "football.json",
+   "path": "2022-23/en.1.json",
+   "matches": 380,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "Manchester City FC",
+     "points": 89,
+     "goals": 94
+    },
+    {
+     "team": "Arsenal FC",
+     "points": 84,
+     "goals": 88
+    },
+    {
+     "team": "Manchester United FC",
+     "points": 75,
+     "goals": 58
+    },
+    {
+     "team": "Newcastle United FC",
+     "points": 71,
+     "goals": 68
+    },
+    {
+     "team": "Liverpool FC",
+     "points": 67,
+     "goals": 75
+    },
+    {
+     "team": "Brighton & Hove Albion FC",
+     "points": 62,
+     "goals": 72
+    },
+    {
+     "team": "Aston Villa FC",
+     "points": 61,
+     "goals": 51
+    },
+    {
+     "team": "Tottenham Hotspur FC",
+     "points": 60,
+     "goals": 70
+    },
+    {
+     "team": "Brentford FC",
+     "points": 59,
+     "goals": 58
+    },
+    {
+     "team": "Fulham FC",
+     "points": 52,
+     "goals": 55
+    },
+    {
+     "team": "Crystal Palace FC",
+     "points": 45,
+     "goals": 40
+    },
+    {
+     "team": "Chelsea FC",
+     "points": 44,
+     "goals": 38
+    },
+    {
+     "team": "Wolverhampton Wanderers FC",
+     "points": 41,
+     "goals": 31
+    },
+    {
+     "team": "West Ham United FC",
+     "points": 40,
+     "goals": 42
+    },
+    {
+     "team": "AFC Bournemouth",
+     "points": 39,
+     "goals": 37
+    },
+    {
+     "team": "Nottingham Forest FC",
+     "points": 38,
+     "goals": 38
+    },
+    {
+     "team": "Everton FC",
+     "points": 36,
+     "goals": 34
+    },
+    {
+     "team": "Leicester City FC",
+     "points": 34,
+     "goals": 51
+    },
+    {
+     "team": "Leeds United FC",
+     "points": 31,
+     "goals": 48
+    },
+    {
+     "team": "Southampton FC",
+     "points": 25,
+     "goals": 36
+    }
+   ]
+  },
+  "2023-24/en.1": {
+   "repo": "football.json",
+   "path": "2023-24/en.1.json",
+   "matches": 380,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "Manchester City FC",
+     "points": 91,
+     "goals": 96
+    },
+    {
+     "team": "Arsenal FC",
+     "points": 89,
+     "goals": 91
+    },
+    {
+     "team": "Liverpool FC",
+     "points": 82,
+     "goals": 86
+    },
+    {
+     "team": "Aston Villa FC",
+     "points": 68,
+     "goals": 76
+    },
+    {
+     "team": "Tottenham Hotspur FC",
+     "points": 66,
+     "goals": 74
+    },
+    {
+     "team": "Chelsea FC",
+     "points": 63,
+     "goals": 77
+    },
+    {
+     "team": "Newcastle United FC",
+     "points": 60,
+     "goals": 85
+    },
+    {
+     "team": "Manchester United FC",
+     "points": 60,
+     "goals": 57
+    },
+    {
+     "team": "West Ham United FC",
+     "points": 52,
+     "goals": 60
+    },
+    {
+     "team": "Crystal Palace FC",
+     "points": 49,
+     "goals": 57
+    },
+    {
+     "team": "AFC Bournemouth",
+     "points": 48,
+     "goals": 54
+    },
+    {
+     "team": "Brighton & Hove Albion FC",
+     "points": 48,
+     "goals": 55
+    },
+    {
+     "team": "Everton FC",
+     "points": 48,
+     "goals": 40
+    },
+    {
+     "team": "Fulham FC",
+     "points": 47,
+     "goals": 55
+    },
+    {
+     "team": "Wolverhampton Wanderers FC",
+     "points": 46,
+     "goals": 50
+    },
+    {
+     "team": "Brentford FC",
+     "points": 39,
+     "goals": 56
+    },
+    {
+     "team": "Nottingham Forest FC",
+     "points": 36,
+     "goals": 49
+    },
+    {
+     "team": "Luton Town FC",
+     "points": 26,
+     "goals": 52
+    },
+    {
+     "team": "Burnley FC",
+     "points": 24,
+     "goals": 41
+    },
+    {
+     "team": "Sheffield United FC",
+     "points": 16,
+     "goals": 35
+    }
+   ]
+  },
+  "2024-25/en.1": {
+   "repo": "football.json",
+   "path": "2024-25/en.1.json",
+   "matches": 380,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "Liverpool FC",
+     "points": 84,
+     "goals": 86
+    },
+    {
+     "team": "Arsenal FC",
+     "points": 74,
+     "goals": 69
+    },
+    {
+     "team": "Manchester City FC",
+     "points": 71,
+     "goals": 72
+    },
+    {
+     "team": "Chelsea FC",
+     "points": 69,
+     "goals": 64
+    },
+    {
+     "team": "Newcastle United FC",
+     "points": 66,
+     "goals": 68
+    },
+    {
+     "team": "Aston Villa FC",
+     "points": 66,
+     "goals": 58
+    },
+    {
+     "team": "Nottingham Forest FC",
+     "points": 65,
+     "goals": 58
+    },
+    {
+     "team": "Brighton & Hove Albion FC",
+     "points": 61,
+     "goals": 66
+    },
+    {
+     "team": "AFC Bournemouth",
+     "points": 56,
+     "goals": 58
+    },
+    {
+     "team": "Brentford FC",
+     "points": 56,
+     "goals": 66
+    },
+    {
+     "team": "Fulham FC",
+     "points": 54,
+     "goals": 54
+    },
+    {
+     "team": "Crystal Palace FC",
+     "points": 53,
+     "goals": 51
+    },
+    {
+     "team": "Everton FC",
+     "points": 48,
+     "goals": 42
+    },
+    {
+     "team": "West Ham United FC",
+     "points": 43,
+     "goals": 46
+    },
+    {
+     "team": "Manchester United FC",
+     "points": 42,
+     "goals": 44
+    },
+    {
+     "team": "Wolverhampton Wanderers FC",
+     "points": 42,
+     "goals": 54
+    },
+    {
+     "team": "Tottenham Hotspur FC",
+     "points": 38,
+     "goals": 64
+    },
+    {
+     "team": "Leicester City FC",
+     "points": 25,
+     "goals": 33
+    },
+    {
+     "team": "Ipswich Town FC",
+     "points": 22,
+     "goals": 36
+    },
+    {
+     "team": "Southampton FC",
+     "points": 12,
+     "goals": 26
+    }
+   ]
+  },
+  "2012-13/es.1": {
+   "repo": "football.json",
+   "path": "2012-13/es.1.json",
+   "matches": 380,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "FC Barcelona",
+     "points": 100,
+     "goals": 115
+    },
+    {
+     "team": "Real Madrid",
+     "points": 85,
+     "goals": 103
+    },
+    {
+     "team": "Atlético Madrid",
+     "points": 76,
+     "goals": 65
+    },
+    {
+     "team": "Real Sociedad",
+     "points": 66,
+     "goals": 70
+    },
+    {
+     "team": "Valencia CF",
+     "points": 65,
+     "goals": 67
+    },
+    {
+     "team": "Málaga CF",
+     "points": 57,
+     "goals": 53
+    },
+    {
+     "team": "Real Betis",
+     "points": 56,
+     "goals": 57
+    },
+    {
+     "team": "Rayo Vallecano",
+     "points": 53,
+     "goals": 50
+    },
+    {
+     "team": "Sevilla FC",
+     "points": 50,
+     "goals": 58
+    },
+    {
+     "team": "Getafe CF",
+     "points": 47,
+     "goals": 43
+    },
+    {
+     "team": "Levante UD",
+     "points": 46,
+     "goals": 40
+    },
+    {
+     "team": "Athletic Club",
+     "points": 45,
+     "goals": 44
+    },
+    {
+     "team": "Espanyol Barcelona",
+     "points": 44,
+     "goals": 43
+    },
+    {
+     "team": "Real Valladolid",
+     "points": 43,
+     "goals": 49
+    },
+    {
+     "team": "Granada CF",
+     "points": 42,
+     "goals": 37
+    },
+    {
+     "team": "CA Osasuna",
+     "points": 39,
+     "goals": 33
+    },
+    {
+     "team": "RC Celta",
+     "points": 37,
+     "goals": 37
+    },
+    {
+     "team": "RCD Mallorca",
+     "points": 36,
+     "goals": 43
+    },
+    {
+     "team": "Deportivo La Coruña",
+     "points": 35,
+     "goals": 47
+    },
+    {
+     "team": "Real Zaragoza",
+     "points": 34,
+     "goals": 37
+    }
+   ]
+  },
+  "2020-21/es.1": {
+   "repo": "football.json",
+   "path": "2020-21/es.1.json",
+   "matches": 380,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "Club Atlético de Madrid",
+     "points": 86,
+     "goals": 67
+    },
+    {
+     "team": "Real Madrid CF",
+     "points": 84,
+     "goals": 67
+    },
+    {
+     "team": "FC Barcelona",
+     "points": 79,
+     "goals": 85
+    },
+    {
+     "team": "Sevilla FC",
+     "points": 77,
+     "goals": 53
+    },
+    {
+     "team": "Real Sociedad de Fútbol",
+     "points": 62,
+     "goals": 59
+    },
+    {
+     "team": "Real Betis Balompié",
+     "points": 61,
+     "goals": 50
+    },
+    {
+     "team": "Villarreal CF",
+     "points": 58,
+     "goals": 60
+    },
+    {
+     "team": "RC Celta de Vigo",
+     "points": 53,
+     "goals": 55
+    },
+    {
+     "team": "Granada CF",
+     "points": 46,
+     "goals": 47
+    },
+    {
+     "team": "Athletic Club",
+     "points": 46,
+     "goals": 46
+    },
+    {
+     "team": "CA Osasuna",
+     "points": 44,
+     "goals": 37
+    },
+    {
+     "team": "Cádiz CF",
+     "points": 44,
+     "goals": 36
+    },
+    {
+     "team": "Valencia CF",
+     "points": 43,
+     "goals": 50
+    },
+    {
+     "team": "Levante UD",
+     "points": 41,
+     "goals": 46
+    },
+    {
+     "team": "Getafe CF",
+     "points": 38,
+     "goals": 28
+    },
+    {
+     "team": "Deportivo Alavés",
+     "points": 38,
+     "goals": 36
+    },
+    {
+     "team": "Elche CF",
+     "points": 36,
+     "goals": 34
+    },
+    {
+     "team": "SD Huesca",
+     "points": 34,
+     "goals": 34
+    },
+    {
+     "team": "Real Valladolid CF",
+     "points": 31,
+     "goals": 34
+    },
+    {
+     "team": "SD Eibar",
+     "points": 30,
+     "goals": 29
+    }
+   ]
+  },
+  "2021-22/es.1": {
+   "repo": "football.json",
+   "path": "2021-22/es.1.json",
+   "matches": 380,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "Real Madrid CF",
+     "points": 86,
+     "goals": 80
+    },
+    {
+     "team": "FC Barcelona",
+     "points": 73,
+     "goals": 68
+    },
+    {
+     "team": "Club Atlético de Madrid",
+     "points": 71,
+     "goals": 65
+    },
+    {
+     "team": "Sevilla FC",
+     "points": 70,
+     "goals": 53
+    },
+    {
+     "team": "Real Betis Balompié",
+     "points": 65,
+     "goals": 62
+    },
+    {
+     "team": "Real Sociedad de Fútbol",
+     "points": 62,
+     "goals": 40
+    },
+    {
+     "team": "Villarreal CF",
+     "points": 59,
+     "goals": 63
+    },
+    {
+     "team": "Athletic Club",
+     "points": 55,
+     "goals": 43
+    },
+    {
+     "team": "Valencia CF",
+     "points": 48,
+     "goals": 48
+    },
+    {
+     "team": "CA Osasuna",
+     "points": 47,
+     "goals": 37
+    },
+    {
+     "team": "RC Celta de Vigo",
+     "points": 46,
+     "goals": 43
+    },
+    {
+     "team": "RCD Espanyol de Barcelona",
+     "points": 42,
+     "goals": 40
+    },
+    {
+     "team": "Elche CF",
+     "points": 42,
+     "goals": 40
+    },
+    {
+     "team": "Rayo Vallecano de Madrid",
+     "points": 42,
+     "goals": 39
+    },
+    {
+     "team": "Cádiz CF",
+     "points": 39,
+     "goals": 35
+    },
+    {
+     "team": "RCD Mallorca",
+     "points": 39,
+     "goals": 36
+    },
+    {
+     "team": "Getafe CF",
+     "points": 39,
+     "goals": 33
+    },
+    {
+     "team": "Granada CF",
+     "points": 38,
+     "goals": 44
+    },
+    {
+     "team": "Levante UD",
+     "points": 35,
+     "goals": 51
+    },
+    {
+     "team": "Deportivo Alavés",
+     "points": 31,
+     "goals": 31
+    }
+   ]
+  },
+  "2022-23/es.1": {
+   "repo": "football.json",
+   "path": "2022-23/es.1.json",
+   "matches": 380,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "FC Barcelona",
+     "points": 88,
+     "goals": 70
+    },
+    {
+     "team": "Real Madrid CF",
+     "points": 78,
+     "goals": 75
+    },
+    {
+     "team": "Club Atlético de Madrid",
+     "points": 77,
+     "goals": 70
+    },
+    {
+     "team": "Real Sociedad de Fútbol",
+     "points": 71,
+     "goals": 51
+    },
+    {
+     "team": "Villarreal CF",
+     "points": 64,
+     "goals": 59
+    },
+    {
+     "team": "Real Betis Balompié",
+     "points": 60,
+     "goals": 46
+    },
+    {
+     "team": "CA Osasuna",
+     "points": 53,
+     "goals": 37
+    },
+    {
+     "team": "Athletic Club",
+     "points": 51,
+     "goals": 47
+    },
+    {
+     "team": "RCD Mallorca",
+     "points": 50,
+     "goals": 37
+    },
+    {
+     "team": "Rayo Vallecano de Madrid",
+     "points": 49,
+     "goals": 45
+    },
+    {
+     "team": "Sevilla FC",
+     "points": 49,
+     "goals": 47
+    },
+    {
+     "team": "Girona FC",
+     "points": 49,
+     "goals": 58
+    },
+    {
+     "team": "RC Celta de Vigo",
+     "points": 43,
+     "goals": 43
+    },
+    {
+     "team": "Valencia CF",
+     "points": 42,
+     "goals": 42
+    },
+    {
+     "team": "Getafe CF",
+     "points": 42,
+     "goals": 34
+    },
+    {
+     "team": "Cádiz CF",
+     "points": 42,
+     "goals": 30
+    },
+    {
+     "team": "UD Almería",
+     "points": 41,
+     "goals": 49
+    },
+    {
+     "team": "Real Valladolid CF",
+     "points": 40,
+     "goals": 33
+    },
+    {
+     "team": "RCD Espanyol de Barcelona",
+     "points": 37,
+     "goals": 52
+    },
+    {
+     "team": "Elche CF",
+     "points": 25,
+     "goals": 30
+    }
+   ]
+  },
+  "2023-24/es.1": {
+   "repo": "football.json",
+   "path": "2023-24/es.1.json",
+   "matches": 380,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "Real Madrid CF",
+     "points": 95,
+     "goals": 87
+    },
+    {
+     "team": "FC Barcelona",
+     "points": 85,
+     "goals": 79
+    },
+    {
+     "team": "Girona FC",
+     "points": 81,
+     "goals": 85
+    },
+    {
+     "team": "Club Atlético de Madrid",
+     "points": 76,
+     "goals": 70
+    },
+    {
+     "team": "Athletic Club",
+     "points": 68,
+     "goals": 61
+    },
+    {
+     "team": "Real Sociedad de Fútbol",
+     "points": 60,
+     "goals": 51
+    },
+    {
+     "team": "Real Betis Balompié",
+     "points": 57,
+     "goals": 48
+    },
+    {
+     "team": "Villarreal CF",
+     "points": 53,
+     "goals": 65
+    },
+    {
+     "team": "Valencia CF",
+     "points": 49,
+     "goals": 40
+    },
+    {
+     "team": "Deportivo Alavés",
+     "points": 46,
+     "goals": 36
+    },
+    {
+     "team": "CA Osasuna",
+     "points": 45,
+     "goals": 45
+    },
+    {
+     "team": "Getafe CF",
+     "points": 43,
+     "goals": 42
+    },
+    {
+     "team": "RC Celta de Vigo",
+     "points": 41,
+     "goals": 46
+    },
+    {
+     "team": "Sevilla FC",
+     "points": 41,
+     "goals": 48
+    },
+    {
+     "team": "UD Las Palmas",
+     "points": 40,
+     "goals": 33
+    },
+    {
+     "team": "RCD Mallorca",
+     "points": 40,
+     "goals": 33
+    },
+    {
+     "team": "Rayo Vallecano de Madrid",
+     "points": 38,
+     "goals": 29
+    },
+    {
+     "team": "Cádiz CF",
+     "points": 33,
+     "goals": 26
+    },
+    {
+     "team": "UD Almería",
+     "points": 21,
+     "goals": 43
+    },
+    {
+     "team": "Granada CF",
+     "points": 21,
+     "goals": 38
+    }
+   ]
+  },
+  "2024-25/es.1": {
+   "repo": "football.json",
+   "path": "2024-25/es.1.json",
+   "matches": 380,
+   "unscored": 10,
+   "table": [
+    {
+     "team": "FC Barcelona",
+     "points": 85,
+     "goals": 99
+    },
+    {
+     "team": "Real Madrid CF",
+     "points": 81,
+     "goals": 76
+    },
+    {
+     "team": "Club Atlético de Madrid",
+     "points": 73,
+     "goals": 64
+    },
+    {
+     "team": "Athletic Club",
+     "points": 70,
+     "goals": 54
+    },
+    {
+     "team": "Villarreal CF",
+     "points": 67,
+     "goals": 67
+    },
+    {
+     "team": "Real Betis Balompié",
+     "points": 59,
+     "goals": 56
+    },
+    {
+     "team": "RC Celta de Vigo",
+     "points": 52,
+     "goals": 57
+    },
+    {
+     "team": "CA Osasuna",
+     "points": 51,
+     "goals": 47
+    },
+    {
+     "team": "Rayo Vallecano de Madrid",
+     "points": 51,
+     "goals": 41
+    },
+    {
+     "team": "RCD Mallorca",
+     "points": 47,
+     "goals": 35
+    },
+    {
+     "team": "Real Sociedad de Fútbol",
+     "points": 46,
+     "goals": 35
+    },
+    {
+     "team": "Valencia CF",
+     "points": 45,
+     "goals": 43
+    },
+    {
+     "team": "Getafe CF",
+     "points": 42,
+     "goals": 33
+    },
+    {
+     "team": "Girona FC",
+     "points": 41,
+     "goals": 44
+    },
+    {
+     "team": "Sevilla FC",
+     "points": 41,
+     "goals": 40
+    },
+    {
+     "team": "Deportivo Alavés",
+     "points": 41,
+     "goals": 37
+    },
+    {
+     "team": "RCD Espanyol de Barcelona",
+     "points": 39,
+     "goals": 38
+    },
+    {
+     "team": "CD Leganés",
+     "points": 37,
+     "goals": 36
+    },
+    {
+     "team": "UD Las Palmas",
+     "points": 32,
+     "goals": 40
+    },
+    {
+     "team": "Real Valladolid CF",
+     "points": 16,
+     "goals": 26
+    }
+   ]
+  },
+  "2012-13/de.1": {
+   "repo": "football.json",
+   "path": "2012-13/de.1.json",
+   "matches": 306,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "Bayern München",
+     "points": 91,
+     "goals": 98
+    },
+    {
+     "team": "Borussia Dortmund",
+     "points": 66,
+     "goals": 81
+    },
+    {
+     "team": "Bayer Leverkusen",
+     "points": 65,
+     "goals": 65
+    },
+    {
+     "team": "FC Schalke 04",
+     "points": 55,
+     "goals": 58
+    },
+    {
+     "team": "SC Freiburg",
+     "points": 51,
+     "goals": 45
+    },
+    {
+     "team": "Eintracht Frankfurt",
+     "points": 51,
+     "goals": 49
+    },
+    {
+     "team": "Hamburger SV",
+     "points": 48,
+     "goals": 42
+    },
+    {
+     "team": "Bor. Mönchengladbach",
+     "points": 47,
+     "goals": 45
+    },
+    {
+     "team": "Hannover 96",
+     "points": 45,
+     "goals": 60
+    },
+    {
+     "team": "1. FC Nürnberg",
+     "points": 44,
+     "goals": 39
+    },
+    {
+     "team": "VfL Wolfsburg",
+     "points": 43,
+     "goals": 47
+    },
+    {
+     "team": "VfB Stuttgart",
+     "points": 43,
+     "goals": 37
+    },
+    {
+     "team": "1. FSV Mainz 05",
+     "points": 42,
+     "goals": 42
+    },
+    {
+     "team": "Werder Bremen",
+     "points": 34,
+     "goals": 50
+    },
+    {
+     "team": "FC Augsburg",
+     "points": 33,
+     "goals": 33
+    },
+    {
+     "team": "1899 Hoffenheim",
+     "points": 31,
+     "goals": 42
+    },
+    {
+     "team": "Fortuna Düsseldorf",
+     "points": 30,
+     "goals": 39
+    },
+    {
+     "team": "SpVgg Greuther Fürth",
+     "points": 21,
+     "goals": 26
+    }
+   ]
+  },
+  "2020-21/de.1": {
+   "repo": "football.json",
+   "path": "2020-21/de.1.json",
+   "matches": 306,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "FC Bayern München",
+     "points": 78,
+     "goals": 99
+    },
+    {
+     "team": "RB Leipzig",
+     "points": 65,
+     "goals": 60
+    },
+    {
+     "team": "Borussia Dortmund",
+     "points": 64,
+     "goals": 75
+    },
+    {
+     "team": "VfL Wolfsburg",
+     "points": 61,
+     "goals": 61
+    },
+    {
+     "team": "Eintracht Frankfurt",
+     "points": 60,
+     "goals": 69
+    },
+    {
+     "team": "Bayer 04 Leverkusen",
+     "points": 52,
+     "goals": 53
+    },
+    {
+     "team": "1. FC Union Berlin",
+     "points": 50,
+     "goals": 50
+    },
+    {
+     "team": "Borussia Mönchengladbach",
+     "points": 49,
+     "goals": 64
+    },
+    {
+     "team": "SC Freiburg",
+     "points": 45,
+     "goals": 52
+    },
+    {
+     "team": "VfB Stuttgart",
+     "points": 45,
+     "goals": 56
+    },
+    {
+     "team": "TSG 1899 Hoffenheim",
+     "points": 43,
+     "goals": 52
+    },
+    {
+     "team": "1. FSV Mainz 05",
+     "points": 39,
+     "goals": 39
+    },
+    {
+     "team": "FC Augsburg",
+     "points": 36,
+     "goals": 36
+    },
+    {
+     "team": "Arminia Bielefeld",
+     "points": 35,
+     "goals": 26
+    },
+    {
+     "team": "Hertha BSC",
+     "points": 35,
+     "goals": 41
+    },
+    {
+     "team": "1. FC Köln",
+     "points": 33,
+     "goals": 34
+    },
+    {
+     "team": "SV Werder Bremen",
+     "points": 31,
+     "goals": 36
+    },
+    {
+     "team": "FC Schalke 04",
+     "points": 16,
+     "goals": 25
+    }
+   ]
+  },
+  "2021-22/de.1": {
+   "repo": "football.json",
+   "path": "2021-22/de.1.json",
+   "matches": 306,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "FC Bayern München",
+     "points": 77,
+     "goals": 97
+    },
+    {
+     "team": "Borussia Dortmund",
+     "points": 69,
+     "goals": 85
+    },
+    {
+     "team": "Bayer 04 Leverkusen",
+     "points": 64,
+     "goals": 80
+    },
+    {
+     "team": "RB Leipzig",
+     "points": 58,
+     "goals": 72
+    },
+    {
+     "team": "1. FC Union Berlin",
+     "points": 57,
+     "goals": 50
+    },
+    {
+     "team": "SC Freiburg",
+     "points": 55,
+     "goals": 58
+    },
+    {
+     "team": "1. FC Köln",
+     "points": 52,
+     "goals": 52
+    },
+    {
+     "team": "TSG 1899 Hoffenheim",
+     "points": 46,
+     "goals": 58
+    },
+    {
+     "team": "1. FSV Mainz 05",
+     "points": 46,
+     "goals": 50
+    },
+    {
+     "team": "Borussia Mönchengladbach",
+     "points": 45,
+     "goals": 54
+    },
+    {
+     "team": "VfL Wolfsburg",
+     "points": 42,
+     "goals": 43
+    },
+    {
+     "team": "Eintracht Frankfurt",
+     "points": 42,
+     "goals": 45
+    },
+    {
+     "team": "VfL Bochum 1848",
+     "points": 42,
+     "goals": 38
+    },
+    {
+     "team": "FC Augsburg",
+     "points": 38,
+     "goals": 39
+    },
+    {
+     "team": "VfB Stuttgart",
+     "points": 33,
+     "goals": 41
+    },
+    {
+     "team": "Hertha BSC",
+     "points": 33,
+     "goals": 37
+    },
+    {
+     "team": "Arminia Bielefeld",
+     "points": 28,
+     "goals": 27
+    },
+    {
+     "team": "SpVgg Greuther Fürth 1903",
+     "points": 18,
+     "goals": 28
+    }
+   ]
+  },
+  "2022-23/de.1": {
+   "repo": "football.json",
+   "path": "2022-23/de.1.json",
+   "matches": 306,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "FC Bayern München",
+     "points": 71,
+     "goals": 92
+    },
+    {
+     "team": "Borussia Dortmund",
+     "points": 71,
+     "goals": 83
+    },
+    {
+     "team": "RB Leipzig",
+     "points": 66,
+     "goals": 64
+    },
+    {
+     "team": "1. FC Union Berlin",
+     "points": 62,
+     "goals": 51
+    },
+    {
+     "team": "SC Freiburg",
+     "points": 59,
+     "goals": 51
+    },
+    {
+     "team": "Eintracht Frankfurt",
+     "points": 50,
+     "goals": 58
+    },
+    {
+     "team": "Bayer 04 Leverkusen",
+     "points": 50,
+     "goals": 57
+    },
+    {
+     "team": "VfL Wolfsburg",
+     "points": 49,
+     "goals": 57
+    },
+    {
+     "team": "1. FSV Mainz 05",
+     "points": 46,
+     "goals": 54
+    },
+    {
+     "team": "Borussia Mönchengladbach",
+     "points": 43,
+     "goals": 52
+    },
+    {
+     "team": "1. FC Köln",
+     "points": 42,
+     "goals": 49
+    },
+    {
+     "team": "SV Werder Bremen",
+     "points": 36,
+     "goals": 51
+    },
+    {
+     "team": "TSG 1899 Hoffenheim",
+     "points": 36,
+     "goals": 48
+    },
+    {
+     "team": "VfL Bochum 1848",
+     "points": 35,
+     "goals": 40
+    },
+    {
+     "team": "FC Augsburg",
+     "points": 34,
+     "goals": 42
+    },
+    {
+     "team": "VfB Stuttgart",
+     "points": 33,
+     "goals": 45
+    },
+    {
+     "team": "FC Schalke 04",
+     "points": 31,
+     "goals": 35
+    },
+    {
+     "team": "Hertha BSC",
+     "points": 29,
+     "goals": 42
+    }
+   ]
+  },
+  "2023-24/de.1": {
+   "repo": "football.json",
+   "path": "2023-24/de.1.json",
+   "matches": 306,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "Bayer 04 Leverkusen",
+     "points": 90,
+     "goals": 89
+    },
+    {
+     "team": "VfB Stuttgart",
+     "points": 73,
+     "goals": 78
+    },
+    {
+     "team": "FC Bayern München",
+     "points": 72,
+     "goals": 94
+    },
+    {
+     "team": "RB Leipzig",
+     "points": 65,
+     "goals": 77
+    },
+    {
+     "team": "Borussia Dortmund",
+     "points": 63,
+     "goals": 68
+    },
+    {
+     "team": "Eintracht Frankfurt",
+     "points": 47,
+     "goals": 51
+    },
+    {
+     "team": "TSG 1899 Hoffenheim",
+     "points": 46,
+     "goals": 66
+    },
+    {
+     "team": "SC Freiburg",
+     "points": 42,
+     "goals": 45
+    },
+    {
+     "team": "1. FC Heidenheim 1846",
+     "points": 42,
+     "goals": 50
+    },
+    {
+     "team": "SV Werder Bremen",
+     "points": 42,
+     "goals": 48
+    },
+    {
+     "team": "FC Augsburg",
+     "points": 39,
+     "goals": 50
+    },
+    {
+     "team": "VfL Wolfsburg",
+     "points": 37,
+     "goals": 41
+    },
+    {
+     "team": "1. FSV Mainz 05",
+     "points": 35,
+     "goals": 39
+    },
+    {
+     "team": "Borussia Mönchengladbach",
+     "points": 34,
+     "goals": 56
+    },
+    {
+     "team": "1. FC Union Berlin",
+     "points": 33,
+     "goals": 33
+    },
+    {
+     "team": "VfL Bochum 1848",
+     "points": 33,
+     "goals": 42
+    },
+    {
+     "team": "1. FC Köln",
+     "points": 27,
+     "goals": 28
+    },
+    {
+     "team": "SV Darmstadt 98",
+     "points": 17,
+     "goals": 30
+    }
+   ]
+  },
+  "2024-25/de.1": {
+   "repo": "football.json",
+   "path": "2024-25/de.1.json",
+   "matches": 306,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "FC Bayern München",
+     "points": 82,
+     "goals": 99
+    },
+    {
+     "team": "Bayer 04 Leverkusen",
+     "points": 69,
+     "goals": 72
+    },
+    {
+     "team": "Eintracht Frankfurt",
+     "points": 60,
+     "goals": 68
+    },
+    {
+     "team": "Borussia Dortmund",
+     "points": 57,
+     "goals": 71
+    },
+    {
+     "team": "SC Freiburg",
+     "points": 55,
+     "goals": 49
+    },
+    {
+     "team": "1. FSV Mainz 05",
+     "points": 52,
+     "goals": 55
+    },
+    {
+     "team": "RB Leipzig",
+     "points": 51,
+     "goals": 53
+    },
+    {
+     "team": "SV Werder Bremen",
+     "points": 51,
+     "goals": 54
+    },
+    {
+     "team": "VfB Stuttgart",
+     "points": 50,
+     "goals": 64
+    },
+    {
+     "team": "Borussia Mönchengladbach",
+     "points": 45,
+     "goals": 55
+    },
+    {
+     "team": "FC Augsburg",
+     "points": 43,
+     "goals": 35
+    },
+    {
+     "team": "VfL Wolfsburg",
+     "points": 43,
+     "goals": 56
+    },
+    {
+     "team": "1. FC Union Berlin",
+     "points": 40,
+     "goals": 35
+    },
+    {
+     "team": "TSG 1899 Hoffenheim",
+     "points": 32,
+     "goals": 46
+    },
+    {
+     "team": "FC St. Pauli 1910",
+     "points": 32,
+     "goals": 28
+    },
+    {
+     "team": "1. FC Heidenheim 1846",
+     "points": 29,
+     "goals": 37
+    },
+    {
+     "team": "VfL Bochum 1848",
+     "points": 25,
+     "goals": 33
+    },
+    {
+     "team": "Holstein Kiel",
+     "points": 25,
+     "goals": 49
+    }
+   ]
+  },
+  "2013-14/it.1": {
+   "repo": "football.json",
+   "path": "2013-14/it.1.json",
+   "matches": 380,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "Juventus",
+     "points": 102,
+     "goals": 80
+    },
+    {
+     "team": "AS Roma",
+     "points": 85,
+     "goals": 72
+    },
+    {
+     "team": "SSC Napoli",
+     "points": 78,
+     "goals": 77
+    },
+    {
+     "team": "ACF Fiorentina",
+     "points": 65,
+     "goals": 65
+    },
+    {
+     "team": "Inter",
+     "points": 60,
+     "goals": 62
+    },
+    {
+     "team": "Parma FC",
+     "points": 58,
+     "goals": 58
+    },
+    {
+     "team": "Torino FC",
+     "points": 57,
+     "goals": 58
+    },
+    {
+     "team": "AC Milan",
+     "points": 57,
+     "goals": 57
+    },
+    {
+     "team": "Lazio Roma",
+     "points": 56,
+     "goals": 54
+    },
+    {
+     "team": "Hellas Verona",
+     "points": 54,
+     "goals": 62
+    },
+    {
+     "team": "Atalanta",
+     "points": 50,
+     "goals": 43
+    },
+    {
+     "team": "Sampdoria",
+     "points": 45,
+     "goals": 48
+    },
+    {
+     "team": "Udinese Calcio",
+     "points": 44,
+     "goals": 46
+    },
+    {
+     "team": "Genoa CFC",
+     "points": 44,
+     "goals": 41
+    },
+    {
+     "team": "Cagliari Calcio",
+     "points": 39,
+     "goals": 34
+    },
+    {
+     "team": "Chievo Verona",
+     "points": 36,
+     "goals": 34
+    },
+    {
+     "team": "Sassuolo Calcio",
+     "points": 34,
+     "goals": 43
+    },
+    {
+     "team": "Calcio Catania",
+     "points": 32,
+     "goals": 34
+    },
+    {
+     "team": "Bologna FC",
+     "points": 29,
+     "goals": 28
+    },
+    {
+     "team": "AS Livorno",
+     "points": 25,
+     "goals": 39
+    }
+   ]
+  },
+  "2020-21/it.1": {
+   "repo": "football.json",
+   "path": "2020-21/it.1.json",
+   "matches": 380,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "FC Internazionale Milano",
+     "points": 91,
+     "goals": 89
+    },
+    {
+     "team": "AC Milan",
+     "points": 79,
+     "goals": 74
+    },
+    {
+     "team": "Juventus FC",
+     "points": 78,
+     "goals": 77
+    },
+    {
+     "team": "Atalanta BC",
+     "points": 78,
+     "goals": 90
+    },
+    {
+     "team": "SSC Napoli",
+     "points": 77,
+     "goals": 86
+    },
+    {
+     "team": "SS Lazio",
+     "points": 68,
+     "goals": 61
+    },
+    {
+     "team": "US Sassuolo Calcio",
+     "points": 62,
+     "goals": 64
+    },
+    {
+     "team": "AS Roma",
+     "points": 62,
+     "goals": 68
+    },
+    {
+     "team": "UC Sampdoria",
+     "points": 52,
+     "goals": 52
+    },
+    {
+     "team": "Hellas Verona FC",
+     "points": 45,
+     "goals": 46
+    },
+    {
+     "team": "Genoa CFC",
+     "points": 42,
+     "goals": 47
+    },
+    {
+     "team": "Bologna FC 1909",
+     "points": 41,
+     "goals": 51
+    },
+    {
+     "team": "ACF Fiorentina",
+     "points": 40,
+     "goals": 47
+    },
+    {
+     "team": "Udinese Calcio",
+     "points": 40,
+     "goals": 42
+    },
+    {
+     "team": "Spezia Calcio",
+     "points": 39,
+     "goals": 52
+    },
+    {
+     "team": "Cagliari Calcio",
+     "points": 37,
+     "goals": 43
+    },
+    {
+     "team": "Torino FC",
+     "points": 37,
+     "goals": 50
+    },
+    {
+     "team": "Benevento Calcio",
+     "points": 33,
+     "goals": 40
+    },
+    {
+     "team": "FC Crotone",
+     "points": 23,
+     "goals": 45
+    },
+    {
+     "team": "Parma Calcio 1913",
+     "points": 20,
+     "goals": 39
+    }
+   ]
+  },
+  "2021-22/it.1": {
+   "repo": "football.json",
+   "path": "2021-22/it.1.json",
+   "matches": 380,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "AC Milan",
+     "points": 86,
+     "goals": 69
+    },
+    {
+     "team": "FC Internazionale Milano",
+     "points": 84,
+     "goals": 84
+    },
+    {
+     "team": "SSC Napoli",
+     "points": 79,
+     "goals": 74
+    },
+    {
+     "team": "Juventus FC",
+     "points": 70,
+     "goals": 57
+    },
+    {
+     "team": "SS Lazio",
+     "points": 64,
+     "goals": 77
+    },
+    {
+     "team": "AS Roma",
+     "points": 63,
+     "goals": 59
+    },
+    {
+     "team": "ACF Fiorentina",
+     "points": 62,
+     "goals": 59
+    },
+    {
+     "team": "Atalanta BC",
+     "points": 59,
+     "goals": 65
+    },
+    {
+     "team": "Hellas Verona FC",
+     "points": 53,
+     "goals": 65
+    },
+    {
+     "team": "US Sassuolo Calcio",
+     "points": 50,
+     "goals": 64
+    },
+    {
+     "team": "Torino FC",
+     "points": 50,
+     "goals": 46
+    },
+    {
+     "team": "Udinese Calcio",
+     "points": 47,
+     "goals": 61
+    },
+    {
+     "team": "Bologna FC 1909",
+     "points": 46,
+     "goals": 44
+    },
+    {
+     "team": "Empoli FC",
+     "points": 41,
+     "goals": 50
+    },
+    {
+     "team": "Spezia Calcio",
+     "points": 36,
+     "goals": 41
+    },
+    {
+     "team": "UC Sampdoria",
+     "points": 36,
+     "goals": 46
+    },
+    {
+     "team": "US Salernitana 1919",
+     "points": 31,
+     "goals": 33
+    },
+    {
+     "team": "Cagliari Calcio",
+     "points": 30,
+     "goals": 34
+    },
+    {
+     "team": "Genoa CFC",
+     "points": 28,
+     "goals": 27
+    },
+    {
+     "team": "Venezia FC",
+     "points": 27,
+     "goals": 34
+    }
+   ]
+  },
+  "2022-23/it.1": {
+   "repo": "football.json",
+   "path": "2022-23/it.1.json",
+   "matches": 380,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "SSC Napoli",
+     "points": 90,
+     "goals": 77
+    },
+    {
+     "team": "SS Lazio",
+     "points": 74,
+     "goals": 60
+    },
+    {
+     "team": "FC Internazionale Milano",
+     "points": 72,
+     "goals": 71
+    },
+    {
+     "team": "Juventus FC",
+     "points": 72,
+     "goals": 56
+    },
+    {
+     "team": "AC Milan",
+     "points": 70,
+     "goals": 64
+    },
+    {
+     "team": "Atalanta BC",
+     "points": 64,
+     "goals": 66
+    },
+    {
+     "team": "AS Roma",
+     "points": 63,
+     "goals": 50
+    },
+    {
+     "team": "ACF Fiorentina",
+     "points": 56,
+     "goals": 53
+    },
+    {
+     "team": "Bologna FC 1909",
+     "points": 54,
+     "goals": 53
+    },
+    {
+     "team": "Torino FC",
+     "points": 53,
+     "goals": 42
+    },
+    {
+     "team": "AC Monza",
+     "points": 52,
+     "goals": 48
+    },
+    {
+     "team": "Udinese Calcio",
+     "points": 46,
+     "goals": 47
+    },
+    {
+     "team": "US Sassuolo Calcio",
+     "points": 45,
+     "goals": 47
+    },
+    {
+     "team": "Empoli FC",
+     "points": 43,
+     "goals": 37
+    },
+    {
+     "team": "US Salernitana 1919",
+     "points": 42,
+     "goals": 48
+    },
+    {
+     "team": "US Lecce",
+     "points": 36,
+     "goals": 33
+    },
+    {
+     "team": "Spezia Calcio",
+     "points": 31,
+     "goals": 31
+    },
+    {
+     "team": "Hellas Verona FC",
+     "points": 31,
+     "goals": 31
+    },
+    {
+     "team": "US Cremonese",
+     "points": 27,
+     "goals": 36
+    },
+    {
+     "team": "UC Sampdoria",
+     "points": 19,
+     "goals": 24
+    }
+   ]
+  },
+  "2023-24/it.1": {
+   "repo": "football.json",
+   "path": "2023-24/it.1.json",
+   "matches": 380,
+   "unscored": 0,
+   "table": [
+    {
+     "team": "FC Internazionale Milano",
+     "points": 94,
+     "goals": 89
+    },
+    {
+     "team": "AC Milan",
+     "points": 75,
+     "goals": 76
+    },
+    {
+     "team": "Juventus FC",
+     "points": 71,
+     "goals": 54
+    },
+    {
+     "team": "Atalanta BC",
+     "points": 69,
+     "goals": 72
+    },
+    {
+     "team": "Bologna FC 1909",
+     "points": 68,
+     "goals": 54
+    },
+    {
+     "team": "AS Roma",
+     "points": 63,
+     "goals": 65
+    },
+    {
+     "team": "SS Lazio",
+     "points": 61,
+     "goals": 49
+    },
+    {
+     "team": "ACF Fiorentina",
+     "points": 60,
+     "goals": 61
+    },
+    {
+     "team": "SSC Napoli",
+     "points": 53,
+     "goals": 55
+    },
+    {
+     "team": "Torino FC",
+     "points": 53,
+     "goals": 36
+    },
+    {
+     "team": "Genoa CFC",
+     "points": 49,
+     "goals": 45
+    },
+    {
+     "team": "AC Monza",
+     "points": 45,
+     "goals": 39
+    },
+    {
+     "team": "Hellas Verona FC",
+     "points": 38,
+     "goals": 38
+    },
+    {
+     "team": "US Lecce",
+     "points": 38,
+     "goals": 32
+    },
+    {
+     "team": "Udinese Calcio",
+     "points": 37,
+     "goals": 37
+    },
+    {
+     "team": "Cagliari Calcio",
+     "points": 36,
+     "goals": 42
+    },
+    {
+     "team": "Empoli FC",
+     "points": 36,
+     "goals": 29
+    },
+    {
+     "team": "Frosinone Calcio",
+     "points": 35,
+     "goals": 44
+    },
+    {
+     "team": "US Sassuolo Calcio",
+     "points": 30,
+     "goals": 43
+    },
+    {
+     "team": "US Salernitana 1919",
+     "points": 17,
+     "goals": 32
+    }
+   ]
+  },
+  "2024-25/it.1": {
+   "repo": "football.json",
+   "path": "2024-25/it.1.json",
+   "matches": 380,
+   "unscored": 10,
+   "table": [
+    {
+     "team": "SSC Napoli",
+     "points": 79,
+     "goals": 57
+    },
+    {
+     "team": "FC Internazionale Milano",
+     "points": 78,
+     "goals": 77
+    },
+    {
+     "team": "Atalanta BC",
+     "points": 74,
+     "goals": 76
+    },
+    {
+     "team": "Juventus FC",
+     "points": 67,
+     "goals": 55
+    },
+    {
+     "team": "AS Roma",
+     "points": 66,
+     "goals": 54
+    },
+    {
+     "team": "SS Lazio",
+     "points": 65,
+     "goals": 61
+    },
+    {
+     "team": "ACF Fiorentina",
+     "points": 62,
+     "goals": 57
+    },
+    {
+     "team": "Bologna FC 1909",
+     "points": 62,
+     "goals": 56
+    },
+    {
+     "team": "AC Milan",
+     "points": 60,
+     "goals": 59
+    },
+    {
+     "team": "Como 1907",
+     "points": 49,
+     "goals": 49
+    },
+    {
+     "team": "Torino FC",
+     "points": 44,
+     "goals": 39
+    },
+    {
+     "team": "Udinese Calcio",
+     "points": 44,
+     "goals": 39
+    },
+    {
+     "team": "Genoa CFC",
+     "points": 40,
+     "goals": 34
+    },
+    {
+     "team": "Cagliari Calcio",
+     "points": 36,
+     "goals": 40
+    },
+    {
+     "team": "Hellas Verona FC",
+     "points": 34,
+     "goals": 32
+    },
+    {
+     "team": "Parma Calcio 1913",
+     "points": 33,
+     "goals": 41
+    },
+    {
+     "team": "Empoli FC",
+     "points": 31,
+     "goals": 32
+    },
+    {
+     "team": "US Lecce",
+     "points": 31,
+     "goals": 26
+    },
+    {
+     "team": "Venezia FC",
+     "points": 29,
+     "goals": 30
+    },
+    {
+     "team": "AC Monza",
+     "points": 18,
+     "goals": 28
+    }
+   ]
+  }
+ }
+}

@@ -101,9 +101,10 @@
    "license": "Kamu malı",
    "license_url": "https://github.com/openfootball/football.json",
    "url": "https://github.com/openfootball",
-   "attribution": "openfootball (kamu malı)",
-   "status": "planned",
-   "datasets": []
+   "attribution": "openfootball (football.json, worldcup.json, euro.json). Veri kamu malına bırakılmıştır.",
+   "status": "in_use",
+   "raw_dir": "openfootball",
+   "datasets": ["football_tournaments", "football_league_points"]
   },
   {
    "id": "world_bank",

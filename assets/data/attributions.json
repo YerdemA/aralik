@@ -35,6 +35,13 @@
   "url": "https://ourairports.com/"
  },
  {
+  "name": "openfootball",
+  "attribution": "openfootball (football.json, worldcup.json, euro.json). Veri kamu malına bırakılmıştır.",
+  "license": "Kamu malı",
+  "license_url": "https://github.com/openfootball/football.json",
+  "url": "https://github.com/openfootball"
+ },
+ {
   "name": "Vikipedi",
   "attribution": "Vikipedi gönüllüleri (tarih, mimari, sanat ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0",
   "license": "CC BY-SA 4.0",

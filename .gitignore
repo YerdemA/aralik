@@ -78,3 +78,5 @@ tools/raw/wikipedia/
 tools/raw/usda/sr_legacy.zip
 # OurAirports ham dosyaları (tools/import_airports.py --fetch); yalnızca çıkarılan değerler commit'lenir
 tools/raw/ourairports/*.csv
+# openfootball maç dosyaları (tools/import_football.py --fetch); yalnızca summary.json commit'lenir
+tools/raw/openfootball/cache/
