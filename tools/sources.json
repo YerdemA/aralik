@@ -112,9 +112,10 @@
    "license": "CC BY 4.0",
    "license_url": "https://datacatalog.worldbank.org/",
    "url": "https://data.worldbank.org/",
-   "attribution": "The World Bank, World Development Indicators, CC BY 4.0",
-   "status": "planned",
-   "datasets": []
+   "attribution": "The World Bank, World Development Indicators, CC BY 4.0. Göstergelerin kaynakları: BM Nüfus Bölümü (World Population Prospects), FAO, ulusal hesaplar.",
+   "status": "in_use",
+   "raw_dir": "worldbank",
+   "datasets": ["wdi_gdp_per_capita", "wdi_life_expectancy", "wdi_fertility", "wdi_forest", "wdi_age_65"]
   },
   {
    "id": "faostat",

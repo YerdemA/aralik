@@ -42,6 +42,13 @@
   "url": "https://github.com/openfootball"
  },
  {
+  "name": "Dünya Bankası Açık Veri",
+  "attribution": "The World Bank, World Development Indicators, CC BY 4.0. Göstergelerin kaynakları: BM Nüfus Bölümü (World Population Prospects), FAO, ulusal hesaplar.",
+  "license": "CC BY 4.0",
+  "license_url": "https://datacatalog.worldbank.org/",
+  "url": "https://data.worldbank.org/"
+ },
+ {
   "name": "Vikipedi",
   "attribution": "Vikipedi gönüllüleri (tarih, mimari, sanat ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0",
   "license": "CC BY-SA 4.0",

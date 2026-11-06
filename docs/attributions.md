@@ -40,6 +40,11 @@ aynı liste yer alır.
 - Lisans: [Kamu malı](https://github.com/openfootball/football.json)
 - Adres: https://github.com/openfootball
 
+## Dünya Bankası Açık Veri
+- The World Bank, World Development Indicators, CC BY 4.0. Göstergelerin kaynakları: BM Nüfus Bölümü (World Population Prospects), FAO, ulusal hesaplar.
+- Lisans: [CC BY 4.0](https://datacatalog.worldbank.org/)
+- Adres: https://data.worldbank.org/
+
 ## Vikipedi
 - Vikipedi gönüllüleri (tarih, mimari, sanat ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0
 - Lisans: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
