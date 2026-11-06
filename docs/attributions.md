@@ -41,7 +41,7 @@ aynı liste yer alır.
 - Adres: https://github.com/openfootball
 
 ## Dünya Bankası Açık Veri
-- The World Bank, World Development Indicators, CC BY 4.0. Göstergelerin kaynakları: BM Nüfus Bölümü (World Population Prospects), FAO, ulusal hesaplar.
+- The World Bank, World Development Indicators, CC BY 4.0. Göstergelerin kaynakları: BM Nüfus Bölümü (World Population Prospects), FAO, ITU, BM Dünya Turizm Örgütü, ulusal hesaplar.
 - Lisans: [CC BY 4.0](https://datacatalog.worldbank.org/)
 - Adres: https://data.worldbank.org/
 

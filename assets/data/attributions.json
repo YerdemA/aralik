@@ -43,7 +43,7 @@
  },
  {
   "name": "Dünya Bankası Açık Veri",
-  "attribution": "The World Bank, World Development Indicators, CC BY 4.0. Göstergelerin kaynakları: BM Nüfus Bölümü (World Population Prospects), FAO, ulusal hesaplar.",
+  "attribution": "The World Bank, World Development Indicators, CC BY 4.0. Göstergelerin kaynakları: BM Nüfus Bölümü (World Population Prospects), FAO, ITU, BM Dünya Turizm Örgütü, ulusal hesaplar.",
   "license": "CC BY 4.0",
   "license_url": "https://datacatalog.worldbank.org/",
   "url": "https://data.worldbank.org/"
