@@ -16,7 +16,9 @@
     "skyscrapers_world", "bridges_tr", "stadiums_tr", "clubs_tr", "universities_tr",
     "battles", "wars", "companies_founded", "companies_employees",
     "elements_melting", "elements_boiling", "elements_discovered", "nobel",
-    "animals_mass", "animals_lifespan", "places_tr", "places_world"
+    "animals_mass", "animals_lifespan", "provinces_area", "islands_world",
+    "lakes_world", "bridges_world", "solar_radius", "planets_orbit",
+    "places_tr", "places_world"
    ]
   },
   {

@@ -64,6 +64,12 @@ EXCLUDED = {
     "Q4450209": "Taksim Stadı yıkıldı.",
     "Q229": "Kıbrıs nüfusu/yüzölçümü Türk kullanıcılar için tartışmalı.",
     "Q43502": "Dodo'nun nesli tükendi; 'kaç kilogram gelir?' diye sorulamaz.",
+    "Q23666": "Büyük Britanya: tercih edilen değer (228.938 km²) adanın kendisi değil; ada 209.331 km².",
+    "Q319412": "Lop Nur büyük ölçüde kurudu; yüzölçümü eski hâli.",
+    "Q125309": "Çad Gölü'nün yüzölçümü mevsime ve yıla göre on kat değişir.",
+    "Q1780883": "Üsküp'teki Taşköprü, Adana'daki Taşköprü ile karışır.",
+    "Q2458142": "Şeytan Köprüsü adlı birçok köprü var.",
+    "Q5484": "Hazar Denizi'nin yüzölçümü su seviyesine göre değişir; kaynaklar 371.000-386.400 km² arası.",
 }
 
 # (item, data set) pairs whose question was rewritten by hand in the bank
@@ -236,8 +242,15 @@ def magnitude(
     latest_year: bool = False,
     fact: Callable[[Entity], str | None] = location,
     genitive_label: bool = False,
+    min_data_year: int = MIN_DATA_YEAR,
+    suffix: tuple[str, tuple[str, ...]] | None = None,
 ) -> Template:
-    """A quantity question. `text` uses {label} and optionally {year}."""
+    """A quantity question. `text` uses {label} and optionally {year}.
+
+    latest_year keeps the newest dated statements; their year must be at
+    least min_data_year. suffix = (word, endings) appends the word to labels
+    that end in none of the endings: ("Adası", ("Ada", "Adası")) turns
+    "Rodos" into "Rodos Adası"."""
 
     def build(e: Entity, fetched_year: int) -> dict | None:
         resolved = resolve_value(e, latest_year=latest_year)
@@ -248,8 +261,10 @@ def magnitude(
         value *= scale
         if value < minimum:
             return None
-        if latest_year and (value_year is None or value_year < MIN_DATA_YEAR):
+        if latest_year and (value_year is None or value_year < min_data_year):
             return None
+        if suffix and not label.endswith(suffix[1]):
+            label = f"{label} {suffix[0]}"
         return {
             "text": text.format(label=genitive(label) if genitive_label else label, year=value_year),
             "answer": round_answer(value),
@@ -317,6 +332,11 @@ def mouth(e: Entity) -> str | None:
 def capital(e: Entity) -> str | None:
     c = e.extra("capital")
     return f"Başkenti: {c[0]}." if len(c) == 1 else None
+
+
+def province_capital(e: Entity) -> str | None:
+    c = e.extra("capital")
+    return f"İl merkezi: {c[0]}." if len(c) == 1 else None
 
 
 def no_fact(_: Entity) -> None:
@@ -517,6 +537,69 @@ def animal_lifespan(e: Entity, fetched_year: int) -> dict | None:
 animal_lifespan.__qualname__ = "animal_lifespan"
 
 
+# Turkish Wikidata labels that are not what a player calls the body.
+SOLAR_LABELS = {"Q313": "Venüs"}
+SECONDS_PER_DAY = 24 * 3600
+
+
+def solar_label(e: Entity) -> str | None:
+    return SOLAR_LABELS.get(e.qid) or e.question_label()
+
+
+def solar_radius(e: Entity, fetched_year: int) -> dict | None:
+    """Mean radius (P2120). Planets list the polar, mean and equatorial
+    radius side by side without saying which is which; the middle one of
+    three is the mean (Earth: 6357, 6371, 6378 km). Other spreads must agree
+    within the usual tolerance."""
+    label = solar_label(e)
+    preferred = [r for r in e.rows if r["rank"] == "preferred"]
+    values = sorted({r["value"] for r in preferred or e.rows})
+    if not label or not values or values[0] <= 0:
+        return None
+    if len(values) == 3:
+        value = values[1]
+    elif values[-1] / values[0] - 1 <= AMBIGUITY_TOLERANCE:
+        value = values[0]
+    else:
+        return None
+    return {
+        "text": f"{genitive(label)} ortalama yarıçapı kaç kilometredir?",
+        "answer": round_answer(value / 1000),
+        "unit": "km",
+        "kind": "magnitude",
+        "category": "bilim",
+        "data_year": fetched_year,
+        "fun_fact": None,
+    }
+
+
+solar_radius.__qualname__ = "solar_radius"
+
+
+def planet_orbit(e: Entity, fetched_year: int) -> dict | None:
+    """Orbital period (P2146): days for the inner planets, years beyond.
+    Earth's year is no question."""
+    label = solar_label(e)
+    resolved = resolve_value(e)
+    if not label or not resolved or e.qid == "Q2":
+        return None
+    days = resolved[0] / SECONDS_PER_DAY
+    in_years = days > 1000
+    unit, locative = ("yıl", "yılda") if in_years else ("gün", "günde")
+    return {
+        "text": f"{label} Güneş'in çevresinde bir turunu kaç {locative} tamamlar?",
+        "answer": round_answer(days / 365.25 if in_years else days),
+        "unit": unit,
+        "kind": "magnitude",
+        "category": "bilim",
+        "data_year": fetched_year,
+        "fun_fact": None,
+    }
+
+
+planet_orbit.__qualname__ = "planet_orbit"
+
+
 def ease(q: dict, views: int) -> float:
     return (
         math.log10(max(views, 1))
@@ -589,6 +672,13 @@ PLAN: list[Step] = [
     Step("nobel", nobel_year, 25, 5000),
     Step("animals_mass", animal_mass, 35, 1000),
     Step("animals_lifespan", animal_lifespan, 18, 1000),
+    # Second batch (2026-11-06).
+    Step("provinces_area", magnitude("{label} ilinin yüzölçümü kaç kilometrekaredir?", "km²", "türkiye", scale=1 / 1e6, minimum=100, latest_year=True, min_data_year=2014, fact=province_capital), 30, 15000),
+    Step("islands_world", magnitude("{label} kaç kilometrekaredir?", "km²", "coğrafya", scale=1 / 1e6, minimum=1, suffix=("Adası", ("Ada", "Adası", "ada"))), 25, 3000),
+    Step("lakes_world", magnitude("{label} kaç kilometrekaredir?", "km²", "coğrafya", scale=1 / 1e6, minimum=1, suffix=("Gölü", ("Göl", "Gölü", "Denizi"))), 20, 900),
+    Step("bridges_world", abroad(magnitude("{label} kaç metre uzunluğundadır?", "m", "mimari", minimum=20)), 12, 1000),
+    Step("solar_radius", solar_radius, 16, 2000),
+    Step("planets_orbit", planet_orbit, 8, 5000),
 ]
 
 

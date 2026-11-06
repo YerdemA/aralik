@@ -1,0 +1,438 @@
+{
+ "dataset": "solar_radius",
+ "description": "Güneş, gezegenler, cüce gezegenler ve büyük uydular, ortalama yarıçap (P2120)",
+ "property": "P2120",
+ "fetched_at": "2026-11-06T11:23:22+00:00",
+ "rows": [
+  {
+   "qid": "Q2",
+   "label": "Dünya",
+   "links": 370,
+   "value": 6339900.0,
+   "rank": "normal",
+   "value_year": 1000,
+   "tr_title": "Dünya",
+   "tr_views": 100806
+  },
+  {
+   "qid": "Q2",
+   "label": "Dünya",
+   "links": 370,
+   "value": 6356800.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Dünya",
+   "tr_views": 100806
+  },
+  {
+   "qid": "Q2",
+   "label": "Dünya",
+   "links": 370,
+   "value": 6371000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Dünya",
+   "tr_views": 100806
+  },
+  {
+   "qid": "Q2",
+   "label": "Dünya",
+   "links": 370,
+   "value": 6378137.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Dünya",
+   "tr_views": 100806
+  },
+  {
+   "qid": "Q525",
+   "label": "Güneş",
+   "links": 362,
+   "value": 695700000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Güneş",
+   "tr_views": 71073
+  },
+  {
+   "qid": "Q525",
+   "label": "Güneş",
+   "links": 362,
+   "value": 695700000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Güneş",
+   "tr_views": 71073
+  },
+  {
+   "qid": "Q405",
+   "label": "Ay",
+   "links": 360,
+   "value": 1735970.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ay",
+   "tr_views": 84626
+  },
+  {
+   "qid": "Q405",
+   "label": "Ay",
+   "links": 360,
+   "value": 1737100.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ay",
+   "tr_views": 84626
+  },
+  {
+   "qid": "Q405",
+   "label": "Ay",
+   "links": 360,
+   "value": 1738140.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ay",
+   "tr_views": 84626
+  },
+  {
+   "qid": "Q111",
+   "label": "Mars",
+   "links": 291,
+   "value": 3379200.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mars",
+   "tr_views": 40613
+  },
+  {
+   "qid": "Q111",
+   "label": "Mars",
+   "links": 291,
+   "value": 3389500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mars",
+   "tr_views": 40613
+  },
+  {
+   "qid": "Q111",
+   "label": "Mars",
+   "links": 291,
+   "value": 3396200.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mars",
+   "tr_views": 40613
+  },
+  {
+   "qid": "Q313",
+   "label": "Çoban Yıldızı",
+   "links": 280,
+   "value": 6052000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Venüs",
+   "tr_views": 49920
+  },
+  {
+   "qid": "Q313",
+   "label": "Çoban Yıldızı",
+   "links": 280,
+   "value": 6052000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Venüs",
+   "tr_views": 49920
+  },
+  {
+   "qid": "Q313",
+   "label": "Çoban Yıldızı",
+   "links": 280,
+   "value": 6052000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Venüs",
+   "tr_views": 49920
+  },
+  {
+   "qid": "Q308",
+   "label": "Merkür",
+   "links": 274,
+   "value": 2440000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Merkür",
+   "tr_views": 29619
+  },
+  {
+   "qid": "Q308",
+   "label": "Merkür",
+   "links": 274,
+   "value": 2440000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Merkür",
+   "tr_views": 29619
+  },
+  {
+   "qid": "Q308",
+   "label": "Merkür",
+   "links": 274,
+   "value": 2440000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Merkür",
+   "tr_views": 29619
+  },
+  {
+   "qid": "Q319",
+   "label": "Jüpiter",
+   "links": 271,
+   "value": 66850000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Jüpiter",
+   "tr_views": 40163
+  },
+  {
+   "qid": "Q319",
+   "label": "Jüpiter",
+   "links": 271,
+   "value": 69911000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Jüpiter",
+   "tr_views": 40163
+  },
+  {
+   "qid": "Q319",
+   "label": "Jüpiter",
+   "links": 271,
+   "value": 71492000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Jüpiter",
+   "tr_views": 40163
+  },
+  {
+   "qid": "Q193",
+   "label": "Satürn",
+   "links": 263,
+   "value": 54360000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Satürn",
+   "tr_views": 35539
+  },
+  {
+   "qid": "Q193",
+   "label": "Satürn",
+   "links": 263,
+   "value": 58232000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Satürn",
+   "tr_views": 35539
+  },
+  {
+   "qid": "Q193",
+   "label": "Satürn",
+   "links": 263,
+   "value": 60268000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Satürn",
+   "tr_views": 35539
+  },
+  {
+   "qid": "Q324",
+   "label": "Uranüs",
+   "links": 263,
+   "value": 24970000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uranüs",
+   "tr_views": 20835
+  },
+  {
+   "qid": "Q324",
+   "label": "Uranüs",
+   "links": 263,
+   "value": 25362000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uranüs",
+   "tr_views": 20835
+  },
+  {
+   "qid": "Q324",
+   "label": "Uranüs",
+   "links": 263,
+   "value": 25559000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uranüs",
+   "tr_views": 20835
+  },
+  {
+   "qid": "Q332",
+   "label": "Neptün",
+   "links": 253,
+   "value": 24340000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Neptün",
+   "tr_views": 28579
+  },
+  {
+   "qid": "Q332",
+   "label": "Neptün",
+   "links": 253,
+   "value": 24620000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Neptün",
+   "tr_views": 28579
+  },
+  {
+   "qid": "Q332",
+   "label": "Neptün",
+   "links": 253,
+   "value": 24760000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Neptün",
+   "tr_views": 28579
+  },
+  {
+   "qid": "Q339",
+   "label": "Plüton",
+   "links": 223,
+   "value": 1185000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Plüton",
+   "tr_views": 30939
+  },
+  {
+   "qid": "Q339",
+   "label": "Plüton",
+   "links": 223,
+   "value": 1185000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Plüton",
+   "tr_views": 30939
+  },
+  {
+   "qid": "Q339",
+   "label": "Plüton",
+   "links": 223,
+   "value": 1185000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Plüton",
+   "tr_views": 30939
+  },
+  {
+   "qid": "Q2565",
+   "label": "Titan",
+   "links": 121,
+   "value": 2574000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Titan (uydu)",
+   "tr_views": 13988
+  },
+  {
+   "qid": "Q7547",
+   "label": "Phobos",
+   "links": 116,
+   "value": 11080.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Phobos (uydu)",
+   "tr_views": 4311
+  },
+  {
+   "qid": "Q3143",
+   "label": "Europa",
+   "links": 115,
+   "value": 1560800.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Europa (uydu)",
+   "tr_views": 7993
+  },
+  {
+   "qid": "Q3123",
+   "label": "İo",
+   "links": 114,
+   "value": 1821600.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İo (uydu)",
+   "tr_views": 6926
+  },
+  {
+   "qid": "Q3169",
+   "label": "Ganymede",
+   "links": 113,
+   "value": 2631000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Ganymede (uydu)",
+   "tr_views": 7248
+  },
+  {
+   "qid": "Q3169",
+   "label": "Ganymede",
+   "links": 113,
+   "value": 2634100.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ganymede (uydu)",
+   "tr_views": 7248
+  },
+  {
+   "qid": "Q7548",
+   "label": "Deimos",
+   "links": 111,
+   "value": 6270.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Deimos (uydu)",
+   "tr_views": 2276
+  },
+  {
+   "qid": "Q3134",
+   "label": "Callisto",
+   "links": 103,
+   "value": 2410000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Callisto (uydu)",
+   "tr_views": 2762
+  },
+  {
+   "qid": "Q3359",
+   "label": "Triton",
+   "links": 100,
+   "value": 1353400.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Triton (uydu)",
+   "tr_views": 2694
+  },
+  {
+   "qid": "Q3303",
+   "label": "Enceladus",
+   "links": 93,
+   "value": 252100.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Enceladus",
+   "tr_views": 3721
+  }
+ ]
+}

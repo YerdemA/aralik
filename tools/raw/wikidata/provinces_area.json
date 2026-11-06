@@ -1,0 +1,2006 @@
+{
+ "dataset": "provinces_area",
+ "description": "Türkiye illeri, yüzölçümü (P2046)",
+ "property": "P2046",
+ "fetched_at": "2026-11-06T11:15:45+00:00",
+ "rows": [
+  {
+   "qid": "Q40249",
+   "label": "Antalya",
+   "links": 98,
+   "value": 20177000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Antalya (il)",
+   "capital": [
+    "Antalya"
+   ],
+   "tr_views": 34009
+  },
+  {
+   "qid": "Q40249",
+   "label": "Antalya",
+   "links": 98,
+   "value": 20723000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Antalya (il)",
+   "capital": [
+    "Antalya"
+   ],
+   "tr_views": 34009
+  },
+  {
+   "qid": "Q40549",
+   "label": "Adana",
+   "links": 95,
+   "value": 13844000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Adana (il)",
+   "capital": [
+    "Adana"
+   ],
+   "tr_views": 27096
+  },
+  {
+   "qid": "Q40549",
+   "label": "Adana",
+   "links": 95,
+   "value": 14030000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Adana (il)",
+   "capital": [
+    "Adana"
+   ],
+   "tr_views": 27096
+  },
+  {
+   "qid": "Q43690",
+   "label": "Bursa",
+   "links": 95,
+   "value": 10813000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Bursa (il)",
+   "capital": [
+    "Bursa"
+   ],
+   "tr_views": 30054
+  },
+  {
+   "qid": "Q43690",
+   "label": "Bursa",
+   "links": 95,
+   "value": 11087000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bursa (il)",
+   "capital": [
+    "Bursa"
+   ],
+   "tr_views": 30054
+  },
+  {
+   "qid": "Q43745",
+   "label": "Artvin",
+   "links": 94,
+   "value": 7393000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Artvin (il)",
+   "capital": [
+    "Artvin"
+   ],
+   "tr_views": 21375
+  },
+  {
+   "qid": "Q47117",
+   "label": "Balıkesir",
+   "links": 92,
+   "value": 14442000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Balıkesir (il)",
+   "capital": [
+    "Balıkesir"
+   ],
+   "tr_views": 32097
+  },
+  {
+   "qid": "Q47117",
+   "label": "Balıkesir",
+   "links": 92,
+   "value": 14583000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Balıkesir (il)",
+   "capital": [
+    "Balıkesir"
+   ],
+   "tr_views": 32097
+  },
+  {
+   "qid": "Q79846",
+   "label": "Aydın",
+   "links": 92,
+   "value": 8007000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aydın (il)",
+   "capital": [
+    "Aydın"
+   ],
+   "tr_views": 22988
+  },
+  {
+   "qid": "Q79846",
+   "label": "Aydın",
+   "links": 92,
+   "value": 8116000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Aydın (il)",
+   "capital": [
+    "Aydın"
+   ],
+   "tr_views": 22988
+  },
+  {
+   "qid": "Q83274",
+   "label": "Hatay",
+   "links": 92,
+   "value": 5403000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hatay",
+   "capital": [
+    "Antakya"
+   ],
+   "tr_views": 73945
+  },
+  {
+   "qid": "Q83274",
+   "label": "Hatay",
+   "links": 92,
+   "value": 5524000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Hatay",
+   "capital": [
+    "Antakya"
+   ],
+   "tr_views": 73945
+  },
+  {
+   "qid": "Q43924",
+   "label": "Adıyaman",
+   "links": 91,
+   "value": 7332000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Adıyaman (il)",
+   "capital": [
+    "Adıyaman"
+   ],
+   "tr_views": 19362
+  },
+  {
+   "qid": "Q43924",
+   "label": "Adıyaman",
+   "links": 91,
+   "value": 7337000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Adıyaman (il)",
+   "capital": [
+    "Adıyaman"
+   ],
+   "tr_views": 19362
+  },
+  {
+   "qid": "Q43924",
+   "label": "Adıyaman",
+   "links": 91,
+   "value": 7614000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Adıyaman (il)",
+   "capital": [
+    "Adıyaman"
+   ],
+   "tr_views": 19362
+  },
+  {
+   "qid": "Q45220",
+   "label": "Afyonkarahisar",
+   "links": 90,
+   "value": 14016000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Afyonkarahisar (il)",
+   "capital": [
+    "Afyonkarahisar"
+   ],
+   "tr_views": 29017
+  },
+  {
+   "qid": "Q45220",
+   "label": "Afyonkarahisar",
+   "links": 90,
+   "value": 14230000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Afyonkarahisar (il)",
+   "capital": [
+    "Afyonkarahisar"
+   ],
+   "tr_views": 29017
+  },
+  {
+   "qid": "Q80036",
+   "label": "Amasya",
+   "links": 90,
+   "value": 5520000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Amasya (il)",
+   "capital": [
+    "Amasya"
+   ],
+   "tr_views": 16013
+  },
+  {
+   "qid": "Q80036",
+   "label": "Amasya",
+   "links": 90,
+   "value": 5628000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Amasya (il)",
+   "capital": [
+    "Amasya"
+   ],
+   "tr_views": 16013
+  },
+  {
+   "qid": "Q80051",
+   "label": "Ağrı",
+   "links": 89,
+   "value": 11099000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Ağrı (il)",
+   "capital": [
+    "Ağrı"
+   ],
+   "tr_views": 18723
+  },
+  {
+   "qid": "Q80051",
+   "label": "Ağrı",
+   "links": 89,
+   "value": 11376000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ağrı (il)",
+   "capital": [
+    "Ağrı"
+   ],
+   "tr_views": 18723
+  },
+  {
+   "qid": "Q82089",
+   "label": "Bolu",
+   "links": 89,
+   "value": 7410000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bolu (il)",
+   "capital": [
+    "Bolu"
+   ],
+   "tr_views": 17418
+  },
+  {
+   "qid": "Q82089",
+   "label": "Bolu",
+   "links": 89,
+   "value": 8313000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Bolu (il)",
+   "capital": [
+    "Bolu"
+   ],
+   "tr_views": 17418
+  },
+  {
+   "qid": "Q2297724",
+   "label": "Ankara",
+   "links": 88,
+   "value": 25615000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ankara (il)",
+   "capital": [
+    "Ankara"
+   ],
+   "tr_views": 42259
+  },
+  {
+   "qid": "Q2297724",
+   "label": "Ankara",
+   "links": 88,
+   "value": 25632000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Ankara (il)",
+   "capital": [
+    "Ankara"
+   ],
+   "tr_views": 42259
+  },
+  {
+   "qid": "Q47813",
+   "label": "Çanakkale",
+   "links": 88,
+   "value": 9737000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çanakkale (il)",
+   "capital": [
+    "Çanakkale"
+   ],
+   "tr_views": 24892
+  },
+  {
+   "qid": "Q47813",
+   "label": "Çanakkale",
+   "links": 88,
+   "value": 9817000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Çanakkale (il)",
+   "capital": [
+    "Çanakkale"
+   ],
+   "tr_views": 24892
+  },
+  {
+   "qid": "Q344490",
+   "label": "İzmir",
+   "links": 87,
+   "value": 11891000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "İzmir (il)",
+   "capital": [
+    "İzmir"
+   ],
+   "tr_views": 28023
+  },
+  {
+   "qid": "Q46763",
+   "label": "Bilecik",
+   "links": 87,
+   "value": 4179000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Bilecik (il)",
+   "capital": [
+    "Bilecik"
+   ],
+   "tr_views": 15073
+  },
+  {
+   "qid": "Q46763",
+   "label": "Bilecik",
+   "links": 87,
+   "value": 4307000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bilecik (il)",
+   "capital": [
+    "Bilecik"
+   ],
+   "tr_views": 15073
+  },
+  {
+   "qid": "Q534799",
+   "label": "İstanbul",
+   "links": 87,
+   "value": 5343020000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İstanbul (il)",
+   "capital": [
+    "İstanbul"
+   ],
+   "tr_views": 67788
+  },
+  {
+   "qid": "Q534799",
+   "label": "İstanbul",
+   "links": 87,
+   "value": 5461000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "İstanbul (il)",
+   "capital": [
+    "İstanbul"
+   ],
+   "tr_views": 67788
+  },
+  {
+   "qid": "Q79760",
+   "label": "Bingöl",
+   "links": 87,
+   "value": 8003000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Bingöl (il)",
+   "capital": [],
+   "tr_views": 14807
+  },
+  {
+   "qid": "Q79760",
+   "label": "Bingöl",
+   "links": 87,
+   "value": 8253000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bingöl (il)",
+   "capital": [],
+   "tr_views": 14807
+  },
+  {
+   "qid": "Q79840",
+   "label": "Ardahan",
+   "links": 87,
+   "value": 4934000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Ardahan (il)",
+   "capital": [
+    "Ardahan"
+   ],
+   "tr_views": 21119
+  },
+  {
+   "qid": "Q79840",
+   "label": "Ardahan",
+   "links": 87,
+   "value": 5576000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ardahan (il)",
+   "capital": [
+    "Ardahan"
+   ],
+   "tr_views": 21119
+  },
+  {
+   "qid": "Q123934",
+   "label": "Muğla",
+   "links": 86,
+   "value": 12654000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Muğla (il)",
+   "capital": [
+    "Muğla"
+   ],
+   "tr_views": 26218
+  },
+  {
+   "qid": "Q123934",
+   "label": "Muğla",
+   "links": 86,
+   "value": 13338000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Muğla (il)",
+   "capital": [
+    "Muğla"
+   ],
+   "tr_views": 26218
+  },
+  {
+   "qid": "Q130553",
+   "label": "Manisa",
+   "links": 86,
+   "value": 13339000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Manisa (il)",
+   "capital": [
+    "Manisa"
+   ],
+   "tr_views": 15759
+  },
+  {
+   "qid": "Q80550",
+   "label": "Van",
+   "links": 86,
+   "value": 20921000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Van (il)",
+   "capital": [
+    "Van"
+   ],
+   "tr_views": 20216
+  },
+  {
+   "qid": "Q80550",
+   "label": "Van",
+   "links": 86,
+   "value": 21334000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Van (il)",
+   "capital": [
+    "Van"
+   ],
+   "tr_views": 20216
+  },
+  {
+   "qid": "Q83965",
+   "label": "Kocaeli",
+   "links": 86,
+   "value": 3397000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Kocaeli",
+   "capital": [
+    "İzmit"
+   ],
+   "tr_views": 66397
+  },
+  {
+   "qid": "Q376797",
+   "label": "Erzurum",
+   "links": 85,
+   "value": 25006000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Erzurum (il)",
+   "capital": [
+    "Erzurum"
+   ],
+   "tr_views": 26162
+  },
+  {
+   "qid": "Q376797",
+   "label": "Erzurum",
+   "links": 85,
+   "value": 25355000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Erzurum (il)",
+   "capital": [
+    "Erzurum"
+   ],
+   "tr_views": 26162
+  },
+  {
+   "qid": "Q80370",
+   "label": "Batman",
+   "links": 85,
+   "value": 4477000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Batman (il)",
+   "capital": [
+    "Batman"
+   ],
+   "tr_views": 26397
+  },
+  {
+   "qid": "Q80370",
+   "label": "Batman",
+   "links": 85,
+   "value": 4694000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Batman (il)",
+   "capital": [
+    "Batman"
+   ],
+   "tr_views": 26397
+  },
+  {
+   "qid": "Q83069",
+   "label": "Sakarya",
+   "links": 85,
+   "value": 4824000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Sakarya",
+   "capital": [
+    "Adapazarı"
+   ],
+   "tr_views": 74914
+  },
+  {
+   "qid": "Q83069",
+   "label": "Sakarya",
+   "links": 85,
+   "value": 4878000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sakarya",
+   "capital": [
+    "Adapazarı"
+   ],
+   "tr_views": 74914
+  },
+  {
+   "qid": "Q83102",
+   "label": "Edirne",
+   "links": 85,
+   "value": 6145000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Edirne (il)",
+   "capital": [
+    "Edirne"
+   ],
+   "tr_views": 15931
+  },
+  {
+   "qid": "Q83102",
+   "label": "Edirne",
+   "links": 85,
+   "value": 6279000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Edirne (il)",
+   "capital": [
+    "Edirne"
+   ],
+   "tr_views": 15931
+  },
+  {
+   "qid": "Q129387",
+   "label": "Tekirdağ",
+   "links": 84,
+   "value": 6190000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Tekirdağ (il)",
+   "capital": [
+    "Tekirdağ"
+   ],
+   "tr_views": 16793
+  },
+  {
+   "qid": "Q83239",
+   "label": "Bitlis",
+   "links": 84,
+   "value": 8294000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Bitlis (il)",
+   "capital": [
+    "Bitlis"
+   ],
+   "tr_views": 14943
+  },
+  {
+   "qid": "Q83239",
+   "label": "Bitlis",
+   "links": 84,
+   "value": 10582000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bitlis (il)",
+   "capital": [
+    "Bitlis"
+   ],
+   "tr_views": 14943
+  },
+  {
+   "qid": "Q388995",
+   "label": "Trabzon",
+   "links": 83,
+   "value": 4495000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Trabzon (il)",
+   "capital": [
+    "Trabzon"
+   ],
+   "tr_views": 22661
+  },
+  {
+   "qid": "Q388995",
+   "label": "Trabzon",
+   "links": 83,
+   "value": 4628000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Trabzon (il)",
+   "capital": [
+    "Trabzon"
+   ],
+   "tr_views": 22661
+  },
+  {
+   "qid": "Q483063",
+   "label": "Bayburt",
+   "links": 83,
+   "value": 3652000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayburt (il)",
+   "capital": [
+    "Bayburt"
+   ],
+   "tr_views": 19022
+  },
+  {
+   "qid": "Q483063",
+   "label": "Bayburt",
+   "links": 83,
+   "value": 3746000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Bayburt (il)",
+   "capital": [
+    "Bayburt"
+   ],
+   "tr_views": 19022
+  },
+  {
+   "qid": "Q80088",
+   "label": "Burdur",
+   "links": 83,
+   "value": 6887000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Burdur (il)",
+   "capital": [
+    "Burdur"
+   ],
+   "tr_views": 16737
+  },
+  {
+   "qid": "Q80088",
+   "label": "Burdur",
+   "links": 83,
+   "value": 7175000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Burdur (il)",
+   "capital": [
+    "Burdur"
+   ],
+   "tr_views": 16737
+  },
+  {
+   "qid": "Q82096",
+   "label": "Denizli",
+   "links": 83,
+   "value": 11868000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Denizli (il)",
+   "capital": [
+    "Denizli"
+   ],
+   "tr_views": 19238
+  },
+  {
+   "qid": "Q82096",
+   "label": "Denizli",
+   "links": 83,
+   "value": 12134000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Denizli (il)",
+   "capital": [
+    "Denizli"
+   ],
+   "tr_views": 19238
+  },
+  {
+   "qid": "Q83073",
+   "label": "Aksaray",
+   "links": 83,
+   "value": 7626000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aksaray (il)",
+   "capital": [
+    "Aksaray"
+   ],
+   "tr_views": 43809
+  },
+  {
+   "qid": "Q83073",
+   "label": "Aksaray",
+   "links": 83,
+   "value": 7659000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Aksaray (il)",
+   "capital": [
+    "Aksaray"
+   ],
+   "tr_views": 43809
+  },
+  {
+   "qid": "Q126874",
+   "label": "Kütahya",
+   "links": 82,
+   "value": 11634000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Kütahya (il)",
+   "capital": [
+    "Kütahya"
+   ],
+   "tr_views": 15717
+  },
+  {
+   "qid": "Q126874",
+   "label": "Kütahya",
+   "links": 82,
+   "value": 11977000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kütahya (il)",
+   "capital": [
+    "Kütahya"
+   ],
+   "tr_views": 15717
+  },
+  {
+   "qid": "Q482779",
+   "label": "Giresun",
+   "links": 82,
+   "value": 6934000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Giresun (il)",
+   "capital": [
+    "Giresun"
+   ],
+   "tr_views": 21481
+  },
+  {
+   "qid": "Q482779",
+   "label": "Giresun",
+   "links": 82,
+   "value": 6972000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Giresun (il)",
+   "capital": [
+    "Giresun"
+   ],
+   "tr_views": 21481
+  },
+  {
+   "qid": "Q483040",
+   "label": "Samsun",
+   "links": 82,
+   "value": 9579000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Samsun (il)",
+   "capital": [
+    "Samsun"
+   ],
+   "tr_views": 20389
+  },
+  {
+   "qid": "Q483040",
+   "label": "Samsun",
+   "links": 82,
+   "value": 9725000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Samsun (il)",
+   "capital": [
+    "Samsun"
+   ],
+   "tr_views": 20389
+  },
+  {
+   "qid": "Q81551",
+   "label": "Konya",
+   "links": 82,
+   "value": 40838000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Konya (il)",
+   "capital": [
+    "Konya"
+   ],
+   "tr_views": 26415
+  },
+  {
+   "qid": "Q83081",
+   "label": "Diyarbakır",
+   "links": 82,
+   "value": 15101000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Diyarbakır (il)",
+   "capital": [
+    "Diyarbakır"
+   ],
+   "tr_views": 24118
+  },
+  {
+   "qid": "Q83081",
+   "label": "Diyarbakır",
+   "links": 82,
+   "value": 15355000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Diyarbakır (il)",
+   "capital": [
+    "Diyarbakır"
+   ],
+   "tr_views": 24118
+  },
+  {
+   "qid": "Q83342",
+   "label": "Bartın",
+   "links": 82,
+   "value": 2120000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bartın (il)",
+   "capital": [
+    "Bartın"
+   ],
+   "tr_views": 19726
+  },
+  {
+   "qid": "Q83342",
+   "label": "Bartın",
+   "links": 82,
+   "value": 2330000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Bartın (il)",
+   "capital": [
+    "Bartın"
+   ],
+   "tr_views": 19726
+  },
+  {
+   "qid": "Q272947",
+   "label": "Çorum",
+   "links": 81,
+   "value": 12428000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Çorum (il)",
+   "capital": [
+    "Çorum"
+   ],
+   "tr_views": 24568
+  },
+  {
+   "qid": "Q272947",
+   "label": "Çorum",
+   "links": 81,
+   "value": 12820000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çorum (il)",
+   "capital": [
+    "Çorum"
+   ],
+   "tr_views": 24568
+  },
+  {
+   "qid": "Q483083",
+   "label": "Yalova",
+   "links": 81,
+   "value": 798000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Yalova (il)",
+   "capital": [
+    "Yalova"
+   ],
+   "tr_views": 21983
+  },
+  {
+   "qid": "Q483083",
+   "label": "Yalova",
+   "links": 81,
+   "value": 847000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yalova (il)",
+   "capital": [
+    "Yalova"
+   ],
+   "tr_views": 21983
+  },
+  {
+   "qid": "Q83077",
+   "label": "Kars",
+   "links": 81,
+   "value": 9442000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kars (il)",
+   "capital": [
+    "Kars"
+   ],
+   "tr_views": 25859
+  },
+  {
+   "qid": "Q83077",
+   "label": "Kars",
+   "links": 81,
+   "value": 10193000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Kars (il)",
+   "capital": [
+    "Kars"
+   ],
+   "tr_views": 25859
+  },
+  {
+   "qid": "Q93209",
+   "label": "Hakkari",
+   "links": 81,
+   "value": 7095000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Hakkâri (il)",
+   "capital": [
+    "Hakkâri"
+   ],
+   "tr_views": 18386
+  },
+  {
+   "qid": "Q93209",
+   "label": "Hakkari",
+   "links": 81,
+   "value": 9521000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hakkâri (il)",
+   "capital": [
+    "Hakkâri"
+   ],
+   "tr_views": 18386
+  },
+  {
+   "qid": "Q131384",
+   "label": "Malatya",
+   "links": 80,
+   "value": 12146000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Malatya (il)",
+   "capital": [
+    "Malatya"
+   ],
+   "tr_views": 18318
+  },
+  {
+   "qid": "Q131384",
+   "label": "Malatya",
+   "links": 80,
+   "value": 12259000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Malatya (il)",
+   "capital": [
+    "Malatya"
+   ],
+   "tr_views": 18318
+  },
+  {
+   "qid": "Q131387",
+   "label": "Muş",
+   "links": 80,
+   "value": 8196000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Muş (il)",
+   "capital": [
+    "Muş"
+   ],
+   "tr_views": 13003
+  },
+  {
+   "qid": "Q131387",
+   "label": "Muş",
+   "links": 80,
+   "value": 8718000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Muş (il)",
+   "capital": [
+    "Muş"
+   ],
+   "tr_views": 13003
+  },
+  {
+   "qid": "Q131597",
+   "label": "Kırklareli",
+   "links": 80,
+   "value": 6459000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Kırklareli (il)",
+   "capital": [
+    "Kırklareli"
+   ],
+   "tr_views": 15414
+  },
+  {
+   "qid": "Q131597",
+   "label": "Kırklareli",
+   "links": 80,
+   "value": 6550000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kırklareli (il)",
+   "capital": [
+    "Kırklareli"
+   ],
+   "tr_views": 15414
+  },
+  {
+   "qid": "Q132637",
+   "label": "Mersin",
+   "links": 80,
+   "value": 15737000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mersin (il)",
+   "capital": [
+    "Mersin"
+   ],
+   "tr_views": 20626
+  },
+  {
+   "qid": "Q132637",
+   "label": "Mersin",
+   "links": 80,
+   "value": 16010000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Mersin (il)",
+   "capital": [
+    "Mersin"
+   ],
+   "tr_views": 20626
+  },
+  {
+   "qid": "Q432391",
+   "label": "Düzce",
+   "links": 80,
+   "value": 2492000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Düzce (il)",
+   "capital": [
+    "Düzce"
+   ],
+   "tr_views": 16299
+  },
+  {
+   "qid": "Q432391",
+   "label": "Düzce",
+   "links": 80,
+   "value": 3641000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Düzce (il)",
+   "capital": [
+    "Düzce"
+   ],
+   "tr_views": 16299
+  },
+  {
+   "qid": "Q482834",
+   "label": "Kahramanmaraş",
+   "links": 80,
+   "value": 14327000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kahramanmaraş (il)",
+   "capital": [
+    "Kahramanmaraş"
+   ],
+   "tr_views": 22747
+  },
+  {
+   "qid": "Q482834",
+   "label": "Kahramanmaraş",
+   "links": 80,
+   "value": 14520000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Kahramanmaraş (il)",
+   "capital": [
+    "Kahramanmaraş"
+   ],
+   "tr_views": 22747
+  },
+  {
+   "qid": "Q483154",
+   "label": "Gaziantep",
+   "links": 80,
+   "value": 6000000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gaziantep (il)",
+   "capital": [
+    "Gaziantep"
+   ],
+   "tr_views": 18824
+  },
+  {
+   "qid": "Q483154",
+   "label": "Gaziantep",
+   "links": 80,
+   "value": 6803000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Gaziantep (il)",
+   "capital": [
+    "Gaziantep"
+   ],
+   "tr_views": 18824
+  },
+  {
+   "qid": "Q483173",
+   "label": "Erzincan",
+   "links": 80,
+   "value": 11815000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Erzincan (il)",
+   "capital": [
+    "Erzincan"
+   ],
+   "tr_views": 17071
+  },
+  {
+   "qid": "Q483173",
+   "label": "Erzincan",
+   "links": 80,
+   "value": 11974000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Erzincan (il)",
+   "capital": [
+    "Erzincan"
+   ],
+   "tr_views": 17071
+  },
+  {
+   "qid": "Q483180",
+   "label": "Ordu",
+   "links": 80,
+   "value": 5914000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Ordu (il)",
+   "capital": [
+    "Ordu"
+   ],
+   "tr_views": 53104
+  },
+  {
+   "qid": "Q483180",
+   "label": "Ordu",
+   "links": 80,
+   "value": 5952000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ordu (il)",
+   "capital": [
+    "Ordu"
+   ],
+   "tr_views": 53104
+  },
+  {
+   "qid": "Q483195",
+   "label": "Tokat",
+   "links": 80,
+   "value": 9998000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tokat (il)",
+   "capital": [
+    "Tokat"
+   ],
+   "tr_views": 31368
+  },
+  {
+   "qid": "Q483195",
+   "label": "Tokat",
+   "links": 80,
+   "value": 10042000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Tokat (il)",
+   "capital": [
+    "Tokat"
+   ],
+   "tr_views": 31368
+  },
+  {
+   "qid": "Q75445",
+   "label": "Yozgat",
+   "links": 80,
+   "value": 13690000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Yozgat (il)",
+   "capital": [
+    "Yozgat"
+   ],
+   "tr_views": 23437
+  },
+  {
+   "qid": "Q75445",
+   "label": "Yozgat",
+   "links": 80,
+   "value": 14123000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yozgat (il)",
+   "capital": [
+    "Yozgat"
+   ],
+   "tr_views": 23437
+  },
+  {
+   "qid": "Q131293",
+   "label": "Mardin",
+   "links": 79,
+   "value": 8780000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Mardin (il)",
+   "capital": [
+    "Mardin"
+   ],
+   "tr_views": 22451
+  },
+  {
+   "qid": "Q131293",
+   "label": "Mardin",
+   "links": 79,
+   "value": 9097000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mardin (il)",
+   "capital": [
+    "Mardin"
+   ],
+   "tr_views": 22451
+  },
+  {
+   "qid": "Q268043",
+   "label": "Isparta",
+   "links": 79,
+   "value": 8946000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Isparta (il)",
+   "capital": [
+    "Isparta"
+   ],
+   "tr_views": 18085
+  },
+  {
+   "qid": "Q268043",
+   "label": "Isparta",
+   "links": 79,
+   "value": 8993000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Isparta (il)",
+   "capital": [
+    "Isparta"
+   ],
+   "tr_views": 18085
+  },
+  {
+   "qid": "Q388469",
+   "label": "Şanlıurfa",
+   "links": 79,
+   "value": 19091000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şanlıurfa (il)",
+   "capital": [
+    "Şanlıurfa"
+   ],
+   "tr_views": 21808
+  },
+  {
+   "qid": "Q388469",
+   "label": "Şanlıurfa",
+   "links": 79,
+   "value": 19242000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Şanlıurfa (il)",
+   "capital": [
+    "Şanlıurfa"
+   ],
+   "tr_views": 21808
+  },
+  {
+   "qid": "Q482788",
+   "label": "Gümüşhane",
+   "links": 79,
+   "value": 6575000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gümüşhane (il)",
+   "capital": [
+    "Gümüşhane"
+   ],
+   "tr_views": 19414
+  },
+  {
+   "qid": "Q482788",
+   "label": "Gümüşhane",
+   "links": 79,
+   "value": 6668000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Gümüşhane (il)",
+   "capital": [
+    "Gümüşhane"
+   ],
+   "tr_views": 19414
+  },
+  {
+   "qid": "Q483091",
+   "label": "Elazığ",
+   "links": 79,
+   "value": 9383000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Elazığ (il)",
+   "capital": [
+    "Elazığ"
+   ],
+   "tr_views": 25172
+  },
+  {
+   "qid": "Q483091",
+   "label": "Elazığ",
+   "links": 79,
+   "value": 9881000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Elazığ (il)",
+   "capital": [
+    "Elazığ"
+   ],
+   "tr_views": 25172
+  },
+  {
+   "qid": "Q483100",
+   "label": "Sivas",
+   "links": 79,
+   "value": 28164000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Sivas (il)",
+   "capital": [
+    "Sivas"
+   ],
+   "tr_views": 31255
+  },
+  {
+   "qid": "Q483100",
+   "label": "Sivas",
+   "links": 79,
+   "value": 28488000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sivas (il)",
+   "capital": [
+    "Sivas"
+   ],
+   "tr_views": 31255
+  },
+  {
+   "qid": "Q125506",
+   "label": "Iğdır",
+   "links": 78,
+   "value": 3588000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Iğdır (il)",
+   "capital": [
+    "Iğdır"
+   ],
+   "tr_views": 17150
+  },
+  {
+   "qid": "Q125506",
+   "label": "Iğdır",
+   "links": 78,
+   "value": 3664000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Iğdır (il)",
+   "capital": [
+    "Iğdır"
+   ],
+   "tr_views": 17150
+  },
+  {
+   "qid": "Q219956",
+   "label": "Zonguldak",
+   "links": 78,
+   "value": 3342000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Zonguldak (il)",
+   "capital": [
+    "Zonguldak"
+   ],
+   "tr_views": 16438
+  },
+  {
+   "qid": "Q219956",
+   "label": "Zonguldak",
+   "links": 78,
+   "value": 3481000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zonguldak (il)",
+   "capital": [
+    "Zonguldak"
+   ],
+   "tr_views": 16438
+  },
+  {
+   "qid": "Q272662",
+   "label": "Çankırı",
+   "links": 78,
+   "value": 7388000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çankırı (il)",
+   "capital": [
+    "Çankırı"
+   ],
+   "tr_views": 14413
+  },
+  {
+   "qid": "Q272662",
+   "label": "Çankırı",
+   "links": 78,
+   "value": 7542000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Çankırı (il)",
+   "capital": [
+    "Çankırı"
+   ],
+   "tr_views": 14413
+  },
+  {
+   "qid": "Q281206",
+   "label": "Osmaniye",
+   "links": 78,
+   "value": 3320000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Osmaniye (il)",
+   "capital": [
+    "Osmaniye"
+   ],
+   "tr_views": 36438
+  },
+  {
+   "qid": "Q281206",
+   "label": "Osmaniye",
+   "links": 78,
+   "value": 3767000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Osmaniye (il)",
+   "capital": [
+    "Osmaniye"
+   ],
+   "tr_views": 36438
+  },
+  {
+   "qid": "Q483191",
+   "label": "Kastamonu",
+   "links": 78,
+   "value": 13064000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Kastamonu (il)",
+   "capital": [
+    "Kastamonu"
+   ],
+   "tr_views": 20897
+  },
+  {
+   "qid": "Q483191",
+   "label": "Kastamonu",
+   "links": 78,
+   "value": 13108000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kastamonu (il)",
+   "capital": [
+    "Kastamonu"
+   ],
+   "tr_views": 20897
+  },
+  {
+   "qid": "Q483481",
+   "label": "Rize",
+   "links": 78,
+   "value": 3835000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Rize (il)",
+   "capital": [
+    "Rize"
+   ],
+   "tr_views": 25436
+  },
+  {
+   "qid": "Q483481",
+   "label": "Rize",
+   "links": 78,
+   "value": 3920000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rize (il)",
+   "capital": [
+    "Rize"
+   ],
+   "tr_views": 25436
+  },
+  {
+   "qid": "Q620742",
+   "label": "Tunceli",
+   "links": 78,
+   "value": 7582000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Tunceli (il)",
+   "capital": [
+    "Tunceli"
+   ],
+   "tr_views": 27394
+  },
+  {
+   "qid": "Q620742",
+   "label": "Tunceli",
+   "links": 78,
+   "value": 7774000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tunceli (il)",
+   "capital": [
+    "Tunceli"
+   ],
+   "tr_views": 27394
+  },
+  {
+   "qid": "Q647378",
+   "label": "Şırnak",
+   "links": 78,
+   "value": 7078000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Şırnak (il)",
+   "capital": [
+    "Şırnak"
+   ],
+   "tr_views": 20032
+  },
+  {
+   "qid": "Q647378",
+   "label": "Şırnak",
+   "links": 78,
+   "value": 7172000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şırnak (il)",
+   "capital": [
+    "Şırnak"
+   ],
+   "tr_views": 20032
+  },
+  {
+   "qid": "Q430693",
+   "label": "Nevşehir",
+   "links": 77,
+   "value": 5485000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Nevşehir (il)",
+   "capital": [
+    "Nevşehir"
+   ],
+   "tr_views": 28094
+  },
+  {
+   "qid": "Q482825",
+   "label": "Siirt",
+   "links": 77,
+   "value": 5717000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Siirt (il)",
+   "capital": [
+    "Siirt"
+   ],
+   "tr_views": 23282
+  },
+  {
+   "qid": "Q482825",
+   "label": "Siirt",
+   "links": 77,
+   "value": 6182000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Siirt (il)",
+   "capital": [
+    "Siirt"
+   ],
+   "tr_views": 23282
+  },
+  {
+   "qid": "Q482975",
+   "label": "Karaman",
+   "links": 77,
+   "value": 8678000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Karaman (il)",
+   "capital": [
+    "Karaman"
+   ],
+   "tr_views": 14705
+  },
+  {
+   "qid": "Q482975",
+   "label": "Karaman",
+   "links": 77,
+   "value": 9163000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karaman (il)",
+   "capital": [
+    "Karaman"
+   ],
+   "tr_views": 14705
+  },
+  {
+   "qid": "Q483053",
+   "label": "Eskişehir",
+   "links": 77,
+   "value": 13652000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eskişehir (il)",
+   "capital": [
+    "Eskişehir"
+   ],
+   "tr_views": 18651
+  },
+  {
+   "qid": "Q483053",
+   "label": "Eskişehir",
+   "links": 77,
+   "value": 13960000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Eskişehir (il)",
+   "capital": [
+    "Eskişehir"
+   ],
+   "tr_views": 18651
+  },
+  {
+   "qid": "Q483078",
+   "label": "Uşak",
+   "links": 77,
+   "value": 5341000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uşak (il)",
+   "capital": [
+    "Uşak"
+   ],
+   "tr_views": 17646
+  },
+  {
+   "qid": "Q483078",
+   "label": "Uşak",
+   "links": 77,
+   "value": 5555000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Uşak (il)",
+   "capital": [
+    "Uşak"
+   ],
+   "tr_views": 17646
+  },
+  {
+   "qid": "Q483472",
+   "label": "Kayseri",
+   "links": 77,
+   "value": 16917000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kayseri (il)",
+   "capital": [
+    "Kayseri"
+   ],
+   "tr_views": 17425
+  },
+  {
+   "qid": "Q483472",
+   "label": "Kayseri",
+   "links": 77,
+   "value": 16970000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Kayseri (il)",
+   "capital": [
+    "Kayseri"
+   ],
+   "tr_views": 17425
+  },
+  {
+   "qid": "Q483168",
+   "label": "Karabük",
+   "links": 76,
+   "value": 2420000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karabük (il)",
+   "capital": [
+    "Karabük"
+   ],
+   "tr_views": 17894
+  },
+  {
+   "qid": "Q483168",
+   "label": "Karabük",
+   "links": 76,
+   "value": 4142000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Karabük (il)",
+   "capital": [
+    "Karabük"
+   ],
+   "tr_views": 17894
+  },
+  {
+   "qid": "Q484392",
+   "label": "Kırıkkale",
+   "links": 76,
+   "value": 4365000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kırıkkale (il)",
+   "capital": [
+    "Kırıkkale"
+   ],
+   "tr_views": 14065
+  },
+  {
+   "qid": "Q484392",
+   "label": "Kırıkkale",
+   "links": 76,
+   "value": 4791000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Kırıkkale (il)",
+   "capital": [
+    "Kırıkkale"
+   ],
+   "tr_views": 14065
+  },
+  {
+   "qid": "Q128978",
+   "label": "Kilis",
+   "links": 75,
+   "value": 1412000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Kilis (il)",
+   "capital": [
+    "Kilis Merkez"
+   ],
+   "tr_views": 9599
+  },
+  {
+   "qid": "Q155219",
+   "label": "Niğde",
+   "links": 75,
+   "value": 7234000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Niğde (il)",
+   "capital": [
+    "Niğde"
+   ],
+   "tr_views": 21255
+  },
+  {
+   "qid": "Q155219",
+   "label": "Niğde",
+   "links": 75,
+   "value": 7312000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Niğde (il)",
+   "capital": [
+    "Niğde"
+   ],
+   "tr_views": 21255
+  },
+  {
+   "qid": "Q134187",
+   "label": "Kırşehir",
+   "links": 74,
+   "value": 6584000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Kırşehir (il)",
+   "capital": [
+    "Kırşehir"
+   ],
+   "tr_views": 15321
+  },
+  {
+   "qid": "Q134413",
+   "label": "Sinop",
+   "links": 74,
+   "value": 5717000000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Sinop (il)",
+   "capital": [
+    "Sinop"
+   ],
+   "tr_views": 18898
+  },
+  {
+   "qid": "Q134413",
+   "label": "Sinop",
+   "links": 74,
+   "value": 5862000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sinop (il)",
+   "capital": [
+    "Sinop"
+   ],
+   "tr_views": 18898
+  }
+ ]
+}

@@ -1,0 +1,1508 @@
+{
+ "dataset": "bridges_world",
+ "description": "Dünyadaki köprüler, uzunluk (P2043)",
+ "property": "P2043",
+ "fetched_at": "2026-11-06T11:24:08+00:00",
+ "rows": [
+  {
+   "qid": "Q44440",
+   "label": "Golden Gate Köprüsü",
+   "links": 111,
+   "value": 2737.4141886,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Golden Gate Köprüsü",
+   "place": [
+    "Marin ilçesi",
+    "San Francisco"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 15403
+  },
+  {
+   "qid": "Q83125",
+   "label": "Tower Köprüsü",
+   "links": 86,
+   "value": 244.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tower Bridge",
+   "place": [
+    "Southwark Londra",
+    "Tower Hamlets"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 4518
+  },
+  {
+   "qid": "Q125006",
+   "label": "Brooklyn Köprüsü",
+   "links": 84,
+   "value": 1825.4507934,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Brooklyn Köprüsü",
+   "place": [
+    "Brooklyn",
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 4747
+  },
+  {
+   "qid": "Q99236",
+   "label": "Millau Viyadüğü",
+   "links": 74,
+   "value": 2460.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Millau Viyadüğü",
+   "place": [
+    "Creissels",
+    "Millau"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 1980
+  },
+  {
+   "qid": "Q297871",
+   "label": "Öresund Köprüsü",
+   "links": 72,
+   "value": 7845.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Öresund Köprüsü",
+   "place": [
+    "Malmö Belediyesi",
+    "Tårnby"
+   ],
+   "country": [
+    "Danimarka",
+    "İsveç"
+   ],
+   "tr_views": 9346
+  },
+  {
+   "qid": "Q184213",
+   "label": "Akashi Kaikyō Köprüsü",
+   "links": 71,
+   "value": 3911.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Akashi Kaikyō Köprüsü",
+   "place": [
+    "Awaji",
+    "Tarumi"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 3436
+  },
+  {
+   "qid": "Q188528",
+   "label": "Mostar Köprüsü",
+   "links": 61,
+   "value": 29.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mostar Köprüsü",
+   "place": [
+    "Hersek-Neretva Kantonu",
+    "Mostar"
+   ],
+   "country": [
+    "Bosna Hersek"
+   ],
+   "tr_views": 42407
+  },
+  {
+   "qid": "Q4484",
+   "label": "15 Temmuz Şehitler Köprüsü",
+   "links": 58,
+   "value": 1559.9694708,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "15 Temmuz Şehitler Köprüsü",
+   "place": [
+    "İstanbul"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 90360
+  },
+  {
+   "qid": "Q4484",
+   "label": "15 Temmuz Şehitler Köprüsü",
+   "links": 58,
+   "value": 1560.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "15 Temmuz Şehitler Köprüsü",
+   "place": [
+    "İstanbul"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 90360
+  },
+  {
+   "qid": "Q125673",
+   "label": "Verrazano-Narrows Köprüsü",
+   "links": 54,
+   "value": 4176.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Verrazano-Narrows Köprüsü",
+   "place": [
+    "Brooklyn",
+    "Staten Island"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 753
+  },
+  {
+   "qid": "Q233737",
+   "label": "Vasco da Gama Köprüsü",
+   "links": 52,
+   "value": 12345.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vasco da Gama Köprüsü",
+   "place": [
+    "Alcochete",
+    "Parque das Nações",
+    "Sacavém e Prior Velho",
+    "Samouco"
+   ],
+   "country": [
+    "Portekiz"
+   ],
+   "tr_views": 1867
+  },
+  {
+   "qid": "Q125821",
+   "label": "George Washington Köprüsü",
+   "links": 50,
+   "value": 1450.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "George Washington Köprüsü",
+   "place": [
+    "Fort Lee",
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 1079
+  },
+  {
+   "qid": "Q44057",
+   "label": "Millennium Köprüsü",
+   "links": 48,
+   "value": 325.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Millennium Köprüsü",
+   "place": [
+    "Londra Şehri",
+    "Southwark Londra"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 526
+  },
+  {
+   "qid": "Q8077503",
+   "label": "1915 Çanakkale Köprüsü",
+   "links": 47,
+   "value": 4608.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1915 Çanakkale Köprüsü",
+   "place": [
+    "Gelibolu",
+    "Lapseki"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 55095
+  },
+  {
+   "qid": "Q125050",
+   "label": "Manhattan Köprüsü",
+   "links": 44,
+   "value": 2090.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Manhattan Köprüsü",
+   "place": [
+    "Brooklyn",
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 1363
+  },
+  {
+   "qid": "Q48353",
+   "label": "Rion-Antirion Köprüsü",
+   "links": 43,
+   "value": 2880.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rion-Antirion Köprüsü",
+   "place": [
+    "Batı Yunanistan"
+   ],
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 815
+  },
+  {
+   "qid": "Q369967",
+   "label": "Fatih Sultan Mehmet Köprüsü",
+   "links": 42,
+   "value": 1510.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fatih Sultan Mehmet Köprüsü",
+   "place": [
+    "İstanbul"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 52077
+  },
+  {
+   "qid": "Q209710",
+   "label": "Russki Köprüsü",
+   "links": 41,
+   "value": 3100.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Russki Köprüsü",
+   "place": [
+    "Vladivostok"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 226
+  },
+  {
+   "qid": "Q216061",
+   "label": "Amerika Köprüsü",
+   "links": 36,
+   "value": 1654.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Amerika Köprüsü",
+   "place": [
+    "Balboa"
+   ],
+   "country": [
+    "Panama"
+   ],
+   "tr_views": 449
+  },
+  {
+   "qid": "Q504710",
+   "label": "Normandiya Köprüsü",
+   "links": 36,
+   "value": 2141.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Normandiya Köprüsü",
+   "place": [
+    "Honfleur",
+    "Le Havre"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 303
+  },
+  {
+   "qid": "Q837291",
+   "label": "SNP Köprüsü",
+   "links": 36,
+   "value": 431.8,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "SNP Köprüsü",
+   "place": [
+    "Bratislava"
+   ],
+   "country": [
+    "Slovakya"
+   ],
+   "tr_views": 200
+  },
+  {
+   "qid": "Q326249",
+   "label": "Hangzhou Körfezi Köprüsü",
+   "links": 35,
+   "value": 35673.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hangzhou Körfezi Köprüsü",
+   "place": [
+    "Zhejiang"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 185
+  },
+  {
+   "qid": "Q1141014",
+   "label": "Humber Köprüsü",
+   "links": 34,
+   "value": 2220.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Humber Köprüsü",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 623
+  },
+  {
+   "qid": "Q1077240",
+   "label": "Yeni Avrupa Köpru",
+   "links": 33,
+   "value": 1391.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeni Avrupa Köprüsü",
+   "place": [
+    "Kalafat",
+    "Vidin"
+   ],
+   "country": [
+    "Bulgaristan",
+    "Romanya"
+   ],
+   "tr_views": 421
+  },
+  {
+   "qid": "Q1077240",
+   "label": "Yeni Avrupa Köpru",
+   "links": 33,
+   "value": 1971.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeni Avrupa Köprüsü",
+   "place": [
+    "Kalafat",
+    "Vidin"
+   ],
+   "country": [
+    "Bulgaristan",
+    "Romanya"
+   ],
+   "tr_views": 421
+  },
+  {
+   "qid": "Q721152",
+   "label": "25 Nisan Köprüsü",
+   "links": 33,
+   "value": 2277.64,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "25 Nisan Köprüsü",
+   "place": [
+    "Alcântara",
+    "Almada, Cova da Piedade, Pragal e Cacilhas"
+   ],
+   "country": [
+    "Portekiz"
+   ],
+   "tr_views": 2003
+  },
+  {
+   "qid": "Q16396",
+   "label": "Tsing Ma Köprüsü",
+   "links": 32,
+   "value": 2160.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tsing Ma Köprüsü",
+   "place": [
+    "Hong Kong"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 125
+  },
+  {
+   "qid": "Q338136",
+   "label": "Donghai Köprüsü",
+   "links": 31,
+   "value": 32500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Donghai Köprüsü",
+   "place": [
+    "Şanghay"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 129
+  },
+  {
+   "qid": "Q1972207",
+   "label": "Albert Köprüsü (Londra)",
+   "links": 30,
+   "value": 217.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Albert Köprüsü (Londra)",
+   "place": [
+    "Kensington ve Chelsea",
+    "Wandsworth"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 100
+  },
+  {
+   "qid": "Q3603782",
+   "label": "Gamla Köprüsü",
+   "links": 30,
+   "value": 301.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gamla Köprüsü",
+   "place": [],
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 50
+  },
+  {
+   "qid": "Q1046736",
+   "label": "Rainbow Köprüsü",
+   "links": 29,
+   "value": 798.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rainbow Köprüsü",
+   "place": [
+    "Minato-ku"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 252
+  },
+  {
+   "qid": "Q117857889",
+   "label": "Huajiang Kanyon Köprüsü",
+   "links": 29,
+   "value": 2890.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Huajiang Kanyonu Köprüsü",
+   "place": [],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q699098",
+   "label": "Erzsébet Köprüsü",
+   "links": 29,
+   "value": 378.6,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Erzsébet Köprüsü",
+   "place": [
+    "Budapeşte"
+   ],
+   "country": [
+    "Macaristan"
+   ],
+   "tr_views": 510
+  },
+  {
+   "qid": "Q1780883",
+   "label": "Taşköprü",
+   "links": 28,
+   "value": 213.85,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Taşköprü (Üsküp)",
+   "place": [
+    "Centar"
+   ],
+   "country": [
+    "Kuzey Makedonya"
+   ],
+   "tr_views": 4644
+  },
+  {
+   "qid": "Q1850537",
+   "label": "Severn Köprüsü",
+   "links": 27,
+   "value": 1600.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Severn Köprüsü",
+   "place": [
+    "Dean Ormanı"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 622
+  },
+  {
+   "qid": "Q1424674",
+   "label": "Yeni Küçük Kemer Köprüsü",
+   "links": 26,
+   "value": 1700.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeni Küçük Kemer Köprüsü",
+   "place": [
+    "Middelfart"
+   ],
+   "country": [
+    "Danimarka"
+   ],
+   "tr_views": 50
+  },
+  {
+   "qid": "Q162170",
+   "label": "Clifton Asma Köprüsü",
+   "links": 26,
+   "value": 412.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Clifton Asma Köprüsü",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 110
+  },
+  {
+   "qid": "Q1573860",
+   "label": "Hammersmith Köprüsü",
+   "links": 25,
+   "value": 210.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hammersmith Köprüsü",
+   "place": [
+    "Hammersmith ve Fulham",
+    "Richmond upon Thames"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 109
+  },
+  {
+   "qid": "Q25338950",
+   "label": "Osmangazi Köprüsü",
+   "links": 25,
+   "value": 2682.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Osmangazi Köprüsü",
+   "place": [
+    "Dilovası"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 53474
+  },
+  {
+   "qid": "Q2681107",
+   "label": "Heliks Köprü",
+   "links": 25,
+   "value": 280.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Heliks Köprüsü",
+   "place": [],
+   "country": [
+    "Singapur"
+   ],
+   "tr_views": 88
+  },
+  {
+   "qid": "Q1272855",
+   "label": "Ada Köprüsü",
+   "links": 24,
+   "value": 996.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ada Köprüsü",
+   "place": [
+    "Belgrad"
+   ],
+   "country": [
+    "Sırbistan"
+   ],
+   "tr_views": 166
+  },
+  {
+   "qid": "Q1110979",
+   "label": "Sidu Nehri Köprüsü",
+   "links": 23,
+   "value": 1222.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sidu Nehri Köprüsü",
+   "place": [],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 173
+  },
+  {
+   "qid": "Q1539750",
+   "label": "Tatara Köprüsü",
+   "links": 23,
+   "value": 1480.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tatara Köprüsü",
+   "place": [
+    "Imabari",
+    "Onomichi"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 199
+  },
+  {
+   "qid": "Q856285",
+   "label": "Mes Köprüsü",
+   "links": 23,
+   "value": 108.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mes Köprüsü",
+   "place": [],
+   "country": [
+    "Arnavutluk"
+   ],
+   "tr_views": 409
+  },
+  {
+   "qid": "Q2361244",
+   "label": "Kırım Köprüsü (Moskova)",
+   "links": 22,
+   "value": 668.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kırım Köprüsü (Moskova)",
+   "place": [],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 86
+  },
+  {
+   "qid": "Q254087",
+   "label": "Arkadiko Köprüsü",
+   "links": 22,
+   "value": 22.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arkadiko Köprüsü",
+   "place": [],
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 448
+  },
+  {
+   "qid": "Q1151193",
+   "label": "Cần Thơ Köprüsü",
+   "links": 21,
+   "value": 2650.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cần Thơ Köprüsü",
+   "place": [
+    "Cần Thơ"
+   ],
+   "country": [
+    "Vietnam"
+   ],
+   "tr_views": 46
+  },
+  {
+   "qid": "Q1494544",
+   "label": "Büyük Obuhovo Köprüsü",
+   "links": 21,
+   "value": 2824.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük Obuhovo Köprüsü",
+   "place": [],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 91
+  },
+  {
+   "qid": "Q2471370",
+   "label": "Zafer Köprüsü",
+   "links": 21,
+   "value": 200.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zafer Köprüsü",
+   "place": [
+    "Erivan",
+    "Kentron"
+   ],
+   "country": [
+    "Ermenistan"
+   ],
+   "tr_views": 119
+  },
+  {
+   "qid": "Q250115",
+   "label": "Monnow Köprüsü",
+   "links": 21,
+   "value": 34.8,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Monnow Köprüsü",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 31
+  },
+  {
+   "qid": "Q834287",
+   "label": "Pitoresk Köprüsü",
+   "links": 21,
+   "value": 1460.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pitoresk Köprüsü",
+   "place": [
+    "Moskova"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 93
+  },
+  {
+   "qid": "Q1196470",
+   "label": "Kanmon Köprüsü",
+   "links": 20,
+   "value": 1068.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kanmon Köprüsü",
+   "place": [
+    "Moji",
+    "Şimonoseki"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 47
+  },
+  {
+   "qid": "Q2302271",
+   "label": "Sunshine Skyway Köprüsü",
+   "links": 20,
+   "value": 6700.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sunshine Skyway Köprüsü",
+   "place": [
+    "Florida"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 118
+  },
+  {
+   "qid": "Q2458142",
+   "label": "Şeytan Köprüsü",
+   "links": 20,
+   "value": 56.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şeytan Köprüsü, Bulgaristan",
+   "place": [
+    "Kırcaali ili"
+   ],
+   "country": [
+    "Bulgaristan"
+   ],
+   "tr_views": 1746
+  },
+  {
+   "qid": "Q862032",
+   "label": "Üsküp Kemeri",
+   "links": 20,
+   "value": 385.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Üsküp Kemeri",
+   "place": [
+    "Butel",
+    "Karpoš"
+   ],
+   "country": [
+    "Kuzey Makedonya"
+   ],
+   "tr_views": 144
+  },
+  {
+   "qid": "Q3087620",
+   "label": "Sanjō Ōhashi Köprüsü",
+   "links": 19,
+   "value": 74.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sanjō Ōhashi Köprüsü",
+   "place": [
+    "Kyoto"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 55
+  },
+  {
+   "qid": "Q483949",
+   "label": "Incheon Köprüsü",
+   "links": 19,
+   "value": 12500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Incheon Köprüsü",
+   "place": [
+    "İncheon"
+   ],
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 292
+  },
+  {
+   "qid": "Q5305270",
+   "label": "Ejderha Köprüsü",
+   "links": 19,
+   "value": 666.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ejderha Köprüsü",
+   "place": [
+    "Đà Nẵng"
+   ],
+   "country": [
+    "Vietnam"
+   ],
+   "tr_views": 156
+  },
+  {
+   "qid": "Q1138655",
+   "label": "Yokohama Körfez Köprüsü",
+   "links": 18,
+   "value": 860.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yokohama Körfez Köprüsü",
+   "place": [
+    "Yokohama"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 85
+  },
+  {
+   "qid": "Q3114751",
+   "label": "Büyük Hrazdan Köprüsü",
+   "links": 18,
+   "value": 335.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük Hrazdan Köprüsü",
+   "place": [
+    "Arabkir",
+    "Erivan"
+   ],
+   "country": [
+    "Ermenistan"
+   ],
+   "tr_views": 63
+  },
+  {
+   "qid": "Q498235",
+   "label": "Yi Sun-sin Köprüsü",
+   "links": 18,
+   "value": 2260.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yi Sun-sin Köprüsü",
+   "place": [
+    "Gwangyang",
+    "Yeosu"
+   ],
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 67
+  },
+  {
+   "qid": "Q1287969",
+   "label": "Galler Prensi Köprüsü",
+   "links": 17,
+   "value": 5128.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Galler Prensi Köprüsü",
+   "place": [
+    "Monmouthshire"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 35
+  },
+  {
+   "qid": "Q253210",
+   "label": "Mısır Köprüsü",
+   "links": 17,
+   "value": 46.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mısır Köprüsü",
+   "place": [
+    "Admiralteyski (rayon)",
+    "Sankt-Peterburg"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 85
+  },
+  {
+   "qid": "Q2618925",
+   "label": "Mavi Köprü (Sankt-Peterburg)",
+   "links": 17,
+   "value": 29.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mavi Köprü (Sankt-Peterburg)",
+   "place": [
+    "Admiralteyski (rayon)",
+    "Sankt-Peterburg"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 46
+  },
+  {
+   "qid": "Q6076527",
+   "label": "Haliç Metro Köprüsü",
+   "links": 17,
+   "value": 919.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Haliç Metro Köprüsü",
+   "place": [
+    "İstanbul"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 5402
+  },
+  {
+   "qid": "Q1193149",
+   "label": "Banka Köprüsü",
+   "links": 16,
+   "value": 25.2,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Banka Köprüsü",
+   "place": [
+    "Sankt-Peterburg"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 46
+  },
+  {
+   "qid": "Q3396957",
+   "label": "Davtaşen Köprüsü",
+   "links": 15,
+   "value": 496.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Davtaşen Köprüsü",
+   "place": [
+    "Erivan"
+   ],
+   "country": [
+    "Ermenistan"
+   ],
+   "tr_views": 69
+  },
+  {
+   "qid": "Q12044655",
+   "label": "Arslanağa Köprüsü",
+   "links": 14,
+   "value": 80.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arslanağa Köprüsü",
+   "place": [
+    "Sırp Cumhuriyeti",
+    "Tirebin"
+   ],
+   "country": [
+    "Bosna Hersek"
+   ],
+   "tr_views": 836
+  },
+  {
+   "qid": "Q1846516",
+   "label": "Royal Gorge Bridge",
+   "links": 14,
+   "value": 365.8,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Royal Gorge Bridge",
+   "place": [
+    "Fremont ilçesi"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 86
+  },
+  {
+   "qid": "Q2571655",
+   "label": "Delal Köprüsü",
+   "links": 14,
+   "value": 114.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Delal Köprüsü",
+   "place": [
+    "Zaho"
+   ],
+   "country": [
+    "Irak"
+   ],
+   "tr_views": 969
+  },
+  {
+   "qid": "Q308447",
+   "label": "Abdun Köprüsü",
+   "links": 14,
+   "value": 417.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Abdun Köprüsü",
+   "place": [
+    "Amman"
+   ],
+   "country": [
+    "Ürdün"
+   ],
+   "tr_views": 67
+  },
+  {
+   "qid": "Q25040056",
+   "label": "Eğriboz Köprüsü",
+   "links": 13,
+   "value": 694.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eğriboz Köprüsü",
+   "place": [],
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 192
+  },
+  {
+   "qid": "Q5642498",
+   "label": "Haliç Köprüsü",
+   "links": 12,
+   "value": 995.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Haliç Köprüsü",
+   "place": [
+    "İstanbul"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 8956
+  },
+  {
+   "qid": "Q6053470",
+   "label": "Uzunköprü",
+   "links": 12,
+   "value": 1392.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uzun Köprü",
+   "place": [
+    "Edirne"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 5272
+  },
+  {
+   "qid": "Q3555796",
+   "label": "Mustafa Paşa Köprüsü",
+   "links": 11,
+   "value": 295.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mustafa Paşa Köprüsü",
+   "place": [
+    "Cisr-i Mustafapaşa"
+   ],
+   "country": [
+    "Bulgaristan"
+   ],
+   "tr_views": 2026
+  },
+  {
+   "qid": "Q3396793",
+   "label": "Taşlı Köprü",
+   "links": 10,
+   "value": 135.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Taşlı Köprü",
+   "place": [
+    "Vulçıtrın",
+    "Vulçıtrın belediyesi"
+   ],
+   "country": [
+    "Kosova"
+   ],
+   "tr_views": 185
+  },
+  {
+   "qid": "Q5252538",
+   "label": "Deyrizor Asma Köprüsü",
+   "links": 10,
+   "value": 460.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Deyrizor Asma Köprüsü",
+   "place": [],
+   "country": [
+    "Suriye"
+   ],
+   "tr_views": 316
+  },
+  {
+   "qid": "Q6015752",
+   "label": "Meriç Köprüsü",
+   "links": 9,
+   "value": 263.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Meriç Köprüsü",
+   "place": [
+    "Edirne"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 6644
+  },
+  {
+   "qid": "Q629828",
+   "label": "Puente de Occidente",
+   "links": 9,
+   "value": 291.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Puente de Occidente",
+   "place": [
+    "Olaya",
+    "Santa Fe de Antioquia"
+   ],
+   "country": [
+    "Kolombiya"
+   ],
+   "tr_views": 33
+  },
+  {
+   "qid": "Q16851611",
+   "label": "Kanuni Köprüsü",
+   "links": 8,
+   "value": 60.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kanuni Köprüsü",
+   "place": [
+    "Edirne"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 1098
+  },
+  {
+   "qid": "Q17017335",
+   "label": "Nissibi Köprüsü",
+   "links": 7,
+   "value": 610.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nissibi Köprüsü",
+   "place": [
+    "Gerger",
+    "Siverek"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 6533
+  },
+  {
+   "qid": "Q267104",
+   "label": "İshak Paşa Köprüsü",
+   "links": 7,
+   "value": 89.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İshak Paşa Köprüsü",
+   "place": [
+    "Gerdeli"
+   ],
+   "country": [
+    "Bulgaristan"
+   ],
+   "tr_views": 204
+  },
+  {
+   "qid": "Q48638",
+   "label": "Semey Köprüsü",
+   "links": 7,
+   "value": 1086.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Semey Köprüsü",
+   "place": [],
+   "country": [
+    "Kazakistan"
+   ],
+   "tr_views": 96
+  },
+  {
+   "qid": "Q200494",
+   "label": "Leverkusen Ren Köprüsü",
+   "links": 6,
+   "value": 1061.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Leverkusen Ren Köprüsü",
+   "place": [
+    "Leverkusen"
+   ],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 119
+  },
+  {
+   "qid": "Q24702610",
+   "label": "Hasan Bey Köprüsü",
+   "links": 6,
+   "value": 65.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Portaikos Köprüsü",
+   "place": [
+    "Pili belediyesi"
+   ],
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 106
+  },
+  {
+   "qid": "Q39058038",
+   "label": "Tunca Köprüsü",
+   "links": 4,
+   "value": 136.3,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tunca Köprüsü",
+   "place": [
+    "Edirne"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 1848
+  },
+  {
+   "qid": "Q6036371",
+   "label": "Clandras Köprüsü",
+   "links": 4,
+   "value": 24.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Clandras Köprüsü",
+   "place": [
+    "Karahallı",
+    "Uşak"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 8066
+  },
+  {
+   "qid": "Q104621750",
+   "label": "Yeni Kömürhan Köprüsü",
+   "links": 3,
+   "value": 660.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeni Kömürhan Köprüsü",
+   "place": [
+    "Elazığ",
+    "Malatya"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 979
+  },
+  {
+   "qid": "Q55613159",
+   "label": "Şehit Kerem Oğuz Erbay Üst Geçidi",
+   "links": 3,
+   "value": 125.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Göztepe Şehit Kerem Oğuz Erbay Üst Geçidi",
+   "place": [
+    "Konak"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 609
+  },
+  {
+   "qid": "Q6001702",
+   "label": "Altıgöz Köprüsü",
+   "links": 3,
+   "value": 44.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Altıgöz Köprüsü",
+   "place": [
+    "Afyonkarahisar"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 213
+  },
+  {
+   "qid": "Q20473361",
+   "label": "Haramidere Köprüsü",
+   "links": 2,
+   "value": 74.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Harâmidere Köprüsü",
+   "place": [
+    "Beylikdüzü"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 5445
+  },
+  {
+   "qid": "Q19613015",
+   "label": "Yahşihan Demir Köprü",
+   "links": 1,
+   "value": 98.75,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yahşihan Demir Köprü",
+   "place": [
+    "Kırıkkale",
+    "Yahşihan"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 423
+  },
+  {
+   "qid": "Q91773482",
+   "label": "Halilviran Köprüsü",
+   "links": 1,
+   "value": 101.2,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Halilviran Köprüsü",
+   "place": [
+    "Diyarbakır",
+    "Yenişehir"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 217
+  }
+ ]
+}

@@ -1,0 +1,138 @@
+{
+ "dataset": "planets_orbit",
+ "description": "Gezegenler ve cüce gezegenler, yörünge süresi (P2146)",
+ "property": "P2146",
+ "fetched_at": "2026-11-06T11:23:30+00:00",
+ "rows": [
+  {
+   "qid": "Q2",
+   "label": "Dünya",
+   "links": 370,
+   "value": 31558149.7635456,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dünya",
+   "tr_views": 100806
+  },
+  {
+   "qid": "Q111",
+   "label": "Mars",
+   "links": 291,
+   "value": 59355072.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mars",
+   "tr_views": 40613
+  },
+  {
+   "qid": "Q313",
+   "label": "Çoban Yıldızı",
+   "links": 280,
+   "value": 19414080.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Venüs",
+   "tr_views": 49920
+  },
+  {
+   "qid": "Q313",
+   "label": "Çoban Yıldızı",
+   "links": 280,
+   "value": 19414148.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Venüs",
+   "tr_views": 49920
+  },
+  {
+   "qid": "Q308",
+   "label": "Merkür",
+   "links": 274,
+   "value": 7600521.6,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Merkür",
+   "tr_views": 29619
+  },
+  {
+   "qid": "Q319",
+   "label": "Jüpiter",
+   "links": 271,
+   "value": 374335689.6,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Jüpiter",
+   "tr_views": 40163
+  },
+  {
+   "qid": "Q193",
+   "label": "Satürn",
+   "links": 263,
+   "value": 929468433.6,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Satürn",
+   "tr_views": 35539
+  },
+  {
+   "qid": "Q324",
+   "label": "Uranüs",
+   "links": 263,
+   "value": 2649670488.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uranüs",
+   "tr_views": 20835
+  },
+  {
+   "qid": "Q324",
+   "label": "Uranüs",
+   "links": 263,
+   "value": 2651486400.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uranüs",
+   "tr_views": 20835
+  },
+  {
+   "qid": "Q332",
+   "label": "Neptün",
+   "links": 253,
+   "value": 5197132800.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Neptün",
+   "tr_views": 28579
+  },
+  {
+   "qid": "Q332",
+   "label": "Neptün",
+   "links": 253,
+   "value": 5200692480.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Neptün",
+   "tr_views": 28579
+  },
+  {
+   "qid": "Q339",
+   "label": "Plüton",
+   "links": 223,
+   "value": 7823780928.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Plüton",
+   "tr_views": 30939
+  },
+  {
+   "qid": "Q596",
+   "label": "Ceres",
+   "links": 146,
+   "value": 145144273.4875,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ceres (cüce gezegen)",
+   "tr_views": 8313
+  }
+ ]
+}

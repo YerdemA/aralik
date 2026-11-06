@@ -25,7 +25,7 @@ Property and class ids were checked on wikidata.org before use (2026-10-26):
 P2067 mass, P2048 height, P2250 life expectancy, P571 inception, P1128
 employees, P166 award received, P585 point in time, P2101 melting point,
 P2102 boiling point, P575 time of discovery, P21 sex, P3831 object of
-statement has role; Q11303 skyscraper, Q11344 chemical element, Q7432
+statement has role, P2046 area, P2120 radius, P2146 orbital period; Q11303 skyscraper, Q11344 chemical element, Q7432
 species, Q4830453/Q891723/Q6881511/Q783794 business/public company/
 enterprise/company, Q38104 … Q47170 the six Nobel prizes.
 """
@@ -87,6 +87,13 @@ STADIUM_TYPES = ("Q483110", "Q1154710", "Q1049757")  # stadium, football, multi-
 COMPANY_TYPES = ("Q4830453", "Q891723", "Q6881511", "Q783794")
 NOBEL_PRIZES = ("Q38104", "Q44585", "Q80061", "Q37922", "Q35637", "Q47170")
 SPECIES = "?item wdt:P105 wd:Q7432 ."  # taxon rank: species
+# Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune; Pluto, Ceres.
+PLANETS = ("Q308", "Q313", "Q2", "Q111", "Q319", "Q193", "Q324", "Q332", "Q339", "Q596")
+# The Sun, the Moon and the large moons: Io, Europa, Ganymede, Callisto,
+# Titan, Triton, Phobos, Deimos, Enceladus.
+SOLAR_BODIES = PLANETS + (
+    "Q525", "Q405", "Q3123", "Q3143", "Q3169", "Q3134", "Q2565", "Q3359", "Q7547", "Q7548", "Q3303",
+)
 
 
 @dataclass(frozen=True)
@@ -407,6 +414,63 @@ DATASETS = [
         where=IN_TURKEY,
         per_type_scan=False,
         value_kind="year",
+    ),
+]
+
+
+# Second batch (2026-11-06): easier magnitude questions.
+DATASETS += [
+    Dataset(
+        name="provinces_area",
+        description="Türkiye illeri, yüzölçümü (P2046)",
+        types=("Q48336",),  # province of Turkey
+        prop="P2046",
+        limit=90,
+        per_type_scan=False,
+        extras={"capital": ("wdt:P36", "label")},
+    ),
+    Dataset(
+        name="islands_world",
+        description="Adalar, yüzölçümü (P2046)",
+        types=("Q23442",),  # island
+        prop="P2046",
+        limit=200,
+        extras={"country": ("wdt:P17", "label")},
+        per_type_scan=False,
+    ),
+    Dataset(
+        name="lakes_world",
+        description="Dünyadaki göller, yüzölçümü (P2046)",
+        types=("Q23397", "Q188025"),  # lake, salt lake
+        prop="P2046",
+        limit=200,
+        extras={"country": ("wdt:P17", "label")},
+        per_type_scan=False,
+    ),
+    Dataset(
+        name="bridges_world",
+        description="Dünyadaki köprüler, uzunluk (P2043)",
+        types=BRIDGE_TYPES,
+        prop="P2043",
+        limit=200,
+        extras={"place": ("wdt:P131", "label"), "country": ("wdt:P17", "label")},
+        per_type_scan=False,
+    ),
+    Dataset(
+        name="solar_radius",
+        description="Güneş, gezegenler, cüce gezegenler ve büyük uydular, ortalama yarıçap (P2120)",
+        types=(),
+        prop="P2120",
+        limit=40,
+        candidates="VALUES ?item { " + " ".join(f"wd:{q}" for q in SOLAR_BODIES) + " }",
+    ),
+    Dataset(
+        name="planets_orbit",
+        description="Gezegenler ve cüce gezegenler, yörünge süresi (P2146)",
+        types=(),
+        prop="P2146",
+        limit=20,
+        candidates="VALUES ?item { " + " ".join(f"wd:{q}" for q in PLANETS) + " }",
     ),
 ]
 

@@ -1,0 +1,3003 @@
+{
+ "dataset": "islands_world",
+ "description": "Adalar, yüzölçümü (P2046)",
+ "property": "P2046",
+ "fetched_at": "2026-11-06T11:18:41+00:00",
+ "rows": [
+  {
+   "qid": "Q16635",
+   "label": "Guam",
+   "links": 196,
+   "value": 544000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Guam",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 17290
+  },
+  {
+   "qid": "Q17070",
+   "label": "Réunion",
+   "links": 183,
+   "value": 2512000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Réunion",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 12864
+  },
+  {
+   "qid": "Q23666",
+   "label": "Büyük Britanya",
+   "links": 174,
+   "value": 209331000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük Britanya",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 27929
+  },
+  {
+   "qid": "Q23666",
+   "label": "Büyük Britanya",
+   "links": 174,
+   "value": 228938000000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Büyük Britanya",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 27929
+  },
+  {
+   "qid": "Q22890",
+   "label": "İrlanda",
+   "links": 170,
+   "value": 84421000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İrlanda (ada)",
+   "country": [
+    "Birleşik Krallık",
+    "İrlanda"
+   ],
+   "tr_views": 4657
+  },
+  {
+   "qid": "Q3757",
+   "label": "Cava",
+   "links": 170,
+   "value": 128297000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cava",
+   "country": [
+    "Endonezya"
+   ],
+   "tr_views": 8527
+  },
+  {
+   "qid": "Q14452",
+   "label": "Paskalya Adası",
+   "links": 164,
+   "value": 164000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Paskalya Adası",
+   "country": [
+    "Şili"
+   ],
+   "tr_views": 14606
+  },
+  {
+   "qid": "Q3492",
+   "label": "Sumatra",
+   "links": 159,
+   "value": 473481000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sumatra",
+   "country": [
+    "Endonezya"
+   ],
+   "tr_views": 11420
+  },
+  {
+   "qid": "Q13353",
+   "label": "Montserrat",
+   "links": 158,
+   "value": 102000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Montserrat",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 10495
+  },
+  {
+   "qid": "Q34374",
+   "label": "Girit",
+   "links": 158,
+   "value": 8335880000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Girit",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 48182
+  },
+  {
+   "qid": "Q31063",
+   "label": "Christmas Adası (I)",
+   "links": 153,
+   "value": 135000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Christmas Adası",
+   "country": [
+    "Avustralya"
+   ],
+   "tr_views": 4942
+  },
+  {
+   "qid": "Q34497",
+   "label": "Saint Helena",
+   "links": 150,
+   "value": 121000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saint Helena",
+   "country": [],
+   "tr_views": 21406
+  },
+  {
+   "qid": "Q36117",
+   "label": "Borneo",
+   "links": 147,
+   "value": 748168000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Borneo",
+   "country": [
+    "Brunei",
+    "Endonezya",
+    "Malezya"
+   ],
+   "tr_views": 11176
+  },
+  {
+   "qid": "Q40285",
+   "label": "Yeni Gine",
+   "links": 147,
+   "value": 785753000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeni Gine",
+   "country": [
+    "Endonezya",
+    "Papua Yeni Gine"
+   ],
+   "tr_views": 7397
+  },
+  {
+   "qid": "Q13987",
+   "label": "Kyūshū",
+   "links": 138,
+   "value": 36782110000.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "tr_title": "Kyūshū",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 2377
+  },
+  {
+   "qid": "Q13991",
+   "label": "Shikoku",
+   "links": 131,
+   "value": 18297320000.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "tr_title": "Shikoku",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 4500
+  },
+  {
+   "qid": "Q3812",
+   "label": "Sulawesi",
+   "links": 126,
+   "value": 174600000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sulawesi",
+   "country": [
+    "Endonezya"
+   ],
+   "tr_views": 2505
+  },
+  {
+   "qid": "Q25277",
+   "label": "Hispanyola",
+   "links": 124,
+   "value": 76420000000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Hispanyola",
+   "country": [
+    "Dominik Cumhuriyeti",
+    "Haiti"
+   ],
+   "tr_views": 6859
+  },
+  {
+   "qid": "Q25277",
+   "label": "Hispanyola",
+   "links": 124,
+   "value": 77900000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hispanyola",
+   "country": [
+    "Dominik Cumhuriyeti",
+    "Haiti"
+   ],
+   "tr_views": 6859
+  },
+  {
+   "qid": "Q8828",
+   "label": "Mallorca",
+   "links": 124,
+   "value": 3620000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mallorca",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 20055
+  },
+  {
+   "qid": "Q42000",
+   "label": "Tahiti",
+   "links": 123,
+   "value": 1042000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tahiti",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 10142
+  },
+  {
+   "qid": "Q125384",
+   "label": "Luzon",
+   "links": 120,
+   "value": 109965000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Luzon",
+   "country": [
+    "Filipinler"
+   ],
+   "tr_views": 4058
+  },
+  {
+   "qid": "Q7792",
+   "label": "Sahalin",
+   "links": 117,
+   "value": 72492000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sahalin",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 6699
+  },
+  {
+   "qid": "Q43048",
+   "label": "Rodos",
+   "links": 116,
+   "value": 1400459000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rodos",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 48737
+  },
+  {
+   "qid": "Q14056",
+   "label": "Jan Mayen",
+   "links": 114,
+   "value": 377000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Jan Mayen",
+   "country": [
+    "Norveç"
+   ],
+   "tr_views": 3767
+  },
+  {
+   "qid": "Q124873",
+   "label": "Mindanao",
+   "links": 113,
+   "value": 97530000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mindanao",
+   "country": [
+    "Filipinler"
+   ],
+   "tr_views": 4782
+  },
+  {
+   "qid": "Q1027830",
+   "label": "Gotland",
+   "links": 104,
+   "value": 2967770000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gotland",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 5757
+  },
+  {
+   "qid": "Q52631",
+   "label": "İbiza",
+   "links": 104,
+   "value": 577000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İbiza",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 10851
+  },
+  {
+   "qid": "Q25528",
+   "label": "Saba",
+   "links": 103,
+   "value": 13000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saba",
+   "country": [
+    "Hollanda"
+   ],
+   "tr_views": 1751
+  },
+  {
+   "qid": "Q26180",
+   "label": "Sint Eustatius",
+   "links": 103,
+   "value": 21000000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Sint Eustatius",
+   "country": [
+    "Hollanda"
+   ],
+   "tr_views": 3811
+  },
+  {
+   "qid": "Q83067",
+   "label": "Timor",
+   "links": 103,
+   "value": 30777000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Timor",
+   "country": [
+    "Doğu Timor",
+    "Endonezya"
+   ],
+   "tr_views": 4083
+  },
+  {
+   "qid": "Q23408",
+   "label": "Bouvet Adası",
+   "links": 102,
+   "value": 49000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bouvet Adası",
+   "country": [
+    "Norveç"
+   ],
+   "tr_views": 4228
+  },
+  {
+   "qid": "Q25359",
+   "label": "Navassa Adası",
+   "links": 102,
+   "value": 5200000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Navassa Adası",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2262
+  },
+  {
+   "qid": "Q4648",
+   "label": "Bali Adası",
+   "links": 102,
+   "value": 5632860000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bali (ada)",
+   "country": [
+    "Endonezya"
+   ],
+   "tr_views": 54
+  },
+  {
+   "qid": "Q48335",
+   "label": "Newfoundland",
+   "links": 102,
+   "value": 108860000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Newfoundland (ada)",
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 2729
+  },
+  {
+   "qid": "Q118863",
+   "label": "Kuzey Adası",
+   "links": 101,
+   "value": 113729000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kuzey Adası",
+   "country": [
+    "Yeni Zelanda"
+   ],
+   "tr_views": 801
+  },
+  {
+   "qid": "Q9679",
+   "label": "Wight Adası",
+   "links": 101,
+   "value": 380164400.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Wight Adası",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 3032
+  },
+  {
+   "qid": "Q121378",
+   "label": "Korfu",
+   "links": 100,
+   "value": 626000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Korfu",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 14931
+  },
+  {
+   "qid": "Q46197",
+   "label": "Ascension Adası",
+   "links": 100,
+   "value": 88000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ascension Adası",
+   "country": [],
+   "tr_views": 3359
+  },
+  {
+   "qid": "Q120755",
+   "label": "Güney Adası",
+   "links": 99,
+   "value": 150437000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Güney Adası",
+   "country": [
+    "Yeni Zelanda"
+   ],
+   "tr_views": 762
+  },
+  {
+   "qid": "Q45328",
+   "label": "Elba Adası",
+   "links": 99,
+   "value": 223000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Elba",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 8192
+  },
+  {
+   "qid": "Q22502",
+   "label": "Tayvan",
+   "links": 97,
+   "value": 35883000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tayvan (ada)",
+   "country": [
+    "Tayvan"
+   ],
+   "tr_views": 3053
+  },
+  {
+   "qid": "Q25596",
+   "label": "Saint Martin",
+   "links": 97,
+   "value": 87000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saint Martin",
+   "country": [
+    "Fransa",
+    "Sint Maarten"
+   ],
+   "tr_views": 8030
+  },
+  {
+   "qid": "Q25535",
+   "label": "Sjaelland",
+   "links": 96,
+   "value": 7031300000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sjælland",
+   "country": [
+    "Danimarka"
+   ],
+   "tr_views": 1286
+  },
+  {
+   "qid": "Q769680",
+   "label": "Bornholm",
+   "links": 96,
+   "value": 588150000.0,
+   "rank": "normal",
+   "value_year": 2008,
+   "tr_title": "Bornholm",
+   "country": [
+    "Danimarka"
+   ],
+   "tr_views": 1394
+  },
+  {
+   "qid": "Q769680",
+   "label": "Bornholm",
+   "links": 96,
+   "value": 588150000.0,
+   "rank": "normal",
+   "value_year": 2009,
+   "tr_title": "Bornholm",
+   "country": [
+    "Danimarka"
+   ],
+   "tr_views": 1394
+  },
+  {
+   "qid": "Q769680",
+   "label": "Bornholm",
+   "links": 96,
+   "value": 588150000.0,
+   "rank": "normal",
+   "value_year": 2010,
+   "tr_title": "Bornholm",
+   "country": [
+    "Danimarka"
+   ],
+   "tr_views": 1394
+  },
+  {
+   "qid": "Q769680",
+   "label": "Bornholm",
+   "links": 96,
+   "value": 588150000.0,
+   "rank": "normal",
+   "value_year": 2007,
+   "tr_title": "Bornholm",
+   "country": [
+    "Danimarka"
+   ],
+   "tr_views": 1394
+  },
+  {
+   "qid": "Q769680",
+   "label": "Bornholm",
+   "links": 96,
+   "value": 588300000.0,
+   "rank": "normal",
+   "value_year": 2013,
+   "tr_title": "Bornholm",
+   "country": [
+    "Danimarka"
+   ],
+   "tr_views": 1394
+  },
+  {
+   "qid": "Q769680",
+   "label": "Bornholm",
+   "links": 96,
+   "value": 588300000.0,
+   "rank": "normal",
+   "value_year": 2012,
+   "tr_title": "Bornholm",
+   "country": [
+    "Danimarka"
+   ],
+   "tr_views": 1394
+  },
+  {
+   "qid": "Q769680",
+   "label": "Bornholm",
+   "links": 96,
+   "value": 588300000.0,
+   "rank": "normal",
+   "value_year": 2011,
+   "tr_title": "Bornholm",
+   "country": [
+    "Danimarka"
+   ],
+   "tr_views": 1394
+  },
+  {
+   "qid": "Q769680",
+   "label": "Bornholm",
+   "links": 96,
+   "value": 588300000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Bornholm",
+   "country": [
+    "Danimarka"
+   ],
+   "tr_views": 1394
+  },
+  {
+   "qid": "Q769680",
+   "label": "Bornholm",
+   "links": 96,
+   "value": 588360000.0,
+   "rank": "normal",
+   "value_year": 2015,
+   "tr_title": "Bornholm",
+   "country": [
+    "Danimarka"
+   ],
+   "tr_views": 1394
+  },
+  {
+   "qid": "Q769680",
+   "label": "Bornholm",
+   "links": 96,
+   "value": 588360000.0,
+   "rank": "preferred",
+   "value_year": 2016,
+   "tr_title": "Bornholm",
+   "country": [
+    "Danimarka"
+   ],
+   "tr_views": 1394
+  },
+  {
+   "qid": "Q81178",
+   "label": "Baffin Adası",
+   "links": 96,
+   "value": 507451000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Baffin Adası",
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 1647
+  },
+  {
+   "qid": "Q128087",
+   "label": "Midilli",
+   "links": 94,
+   "value": 1641000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Midilli (ada)",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 40960
+  },
+  {
+   "qid": "Q82859",
+   "label": "Sokotra",
+   "links": 92,
+   "value": 3796000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sokotra",
+   "country": [
+    "Yemen"
+   ],
+   "tr_views": 6451
+  },
+  {
+   "qid": "Q173292",
+   "label": "Capri Adası",
+   "links": 91,
+   "value": 10400000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Capri",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 4439
+  },
+  {
+   "qid": "Q178925",
+   "label": "Gran Canaria",
+   "links": 91,
+   "value": 1560000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gran Canaria",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 2462
+  },
+  {
+   "qid": "Q52636",
+   "label": "Minorka",
+   "links": 90,
+   "value": 692000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Minorka",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 2067
+  },
+  {
+   "qid": "Q129296",
+   "label": "Santorini",
+   "links": 89,
+   "value": 79194000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Santorini",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 17619
+  },
+  {
+   "qid": "Q161258",
+   "label": "Clipperton Adası",
+   "links": 89,
+   "value": 8900000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Clipperton Adası",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 3136
+  },
+  {
+   "qid": "Q600614",
+   "label": "Okinawa Adası",
+   "links": 89,
+   "value": 1208480000.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "tr_title": "Okinawa Adası",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 2281
+  },
+  {
+   "qid": "Q18438",
+   "label": "Long Island",
+   "links": 88,
+   "value": 3566000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Long Island",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 4644
+  },
+  {
+   "qid": "Q3237",
+   "label": "Rügen",
+   "links": 87,
+   "value": 926000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rügen",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 1452
+  },
+  {
+   "qid": "Q146841",
+   "label": "Ellesmere Adası",
+   "links": 86,
+   "value": 196235000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ellesmere Adası",
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 1534
+  },
+  {
+   "qid": "Q131148",
+   "label": "Stromboli",
+   "links": 85,
+   "value": 12600000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Stromboli",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 1834
+  },
+  {
+   "qid": "Q170479",
+   "label": "Vancouver Adası",
+   "links": 85,
+   "value": 32134000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vancouver Adası",
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 1190
+  },
+  {
+   "qid": "Q51679",
+   "label": "Saipan",
+   "links": 84,
+   "value": 115383970.3154688,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saipan",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 1621
+  },
+  {
+   "qid": "Q62218",
+   "label": "Jarvis Adası",
+   "links": 84,
+   "value": 5700000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Jarvis Adası",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 817
+  },
+  {
+   "qid": "Q128323",
+   "label": "Trinidad",
+   "links": 83,
+   "value": 4768000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Trinidad",
+   "country": [
+    "Trinidad ve Tobago"
+   ],
+   "tr_views": 5153
+  },
+  {
+   "qid": "Q131305",
+   "label": "Howland Adası",
+   "links": 83,
+   "value": 2620000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Howland Adası",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 1524
+  },
+  {
+   "qid": "Q951302",
+   "label": "Saaremaa",
+   "links": 83,
+   "value": 2672000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saaremaa",
+   "country": [
+    "Estonya"
+   ],
+   "tr_views": 473
+  },
+  {
+   "qid": "Q131347",
+   "label": "Oahu",
+   "links": 82,
+   "value": 1545000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Oahu",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 5664
+  },
+  {
+   "qid": "Q156882",
+   "label": "Sisam",
+   "links": 82,
+   "value": 476000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sisam",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 31156
+  },
+  {
+   "qid": "Q168159",
+   "label": "Anglesey",
+   "links": 82,
+   "value": 749022700.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Anglesey",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 2911
+  },
+  {
+   "qid": "Q7564",
+   "label": "Lombok",
+   "links": 82,
+   "value": 4514110000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lombok",
+   "country": [
+    "Endonezya"
+   ],
+   "tr_views": 2341
+  },
+  {
+   "qid": "Q7564",
+   "label": "Lombok",
+   "links": 82,
+   "value": 5435000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lombok",
+   "country": [
+    "Endonezya"
+   ],
+   "tr_views": 2341
+  },
+  {
+   "qid": "Q160483",
+   "label": "Sakız",
+   "links": 81,
+   "value": 842500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sakız Adası",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 42417
+  },
+  {
+   "qid": "Q182432",
+   "label": "Lanzarote",
+   "links": 81,
+   "value": 791000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lanzarote",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 2834
+  },
+  {
+   "qid": "Q29151",
+   "label": "Jejudo",
+   "links": 81,
+   "value": 1848000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Jeju Adası",
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 5223
+  },
+  {
+   "qid": "Q59771",
+   "label": "Yeni Britanya",
+   "links": 81,
+   "value": 36520000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeni Britanya",
+   "country": [
+    "Papua Yeni Gine"
+   ],
+   "tr_views": 426
+  },
+  {
+   "qid": "Q148440",
+   "label": "Flores",
+   "links": 80,
+   "value": 13540000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Flores",
+   "country": [
+    "Endonezya"
+   ],
+   "tr_views": 4439
+  },
+  {
+   "qid": "Q173148",
+   "label": "Delos",
+   "links": 80,
+   "value": 3506400.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Delos",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 6092
+  },
+  {
+   "qid": "Q188527",
+   "label": "Nakşa",
+   "links": 80,
+   "value": 428000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nakşa",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 5741
+  },
+  {
+   "qid": "Q188527",
+   "label": "Nakşa",
+   "links": 80,
+   "value": 429785000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nakşa",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 5741
+  },
+  {
+   "qid": "Q192534",
+   "label": "Fuerteventura",
+   "links": 80,
+   "value": 1633000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fuerteventura",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 4436
+  },
+  {
+   "qid": "Q26503",
+   "label": "Fyn",
+   "links": 80,
+   "value": 2984560000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fyn Adası",
+   "country": [
+    "Danimarka"
+   ],
+   "tr_views": 136
+  },
+  {
+   "qid": "Q3405693",
+   "label": "Sark",
+   "links": 80,
+   "value": 5500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sark",
+   "country": [
+    "Guernsey Kraliyet Muhafızlığı"
+   ],
+   "tr_views": 4499
+  },
+  {
+   "qid": "Q158129",
+   "label": "Victoria Adası",
+   "links": 79,
+   "value": 217291000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Victoria Adası (Kanada)",
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 781
+  },
+  {
+   "qid": "Q170488",
+   "label": "Gozo",
+   "links": 79,
+   "value": 67000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gozo",
+   "country": [
+    "Malta"
+   ],
+   "tr_views": 2391
+  },
+  {
+   "qid": "Q173096",
+   "label": "Eğriboz",
+   "links": 78,
+   "value": 3670000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eğriboz",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 11825
+  },
+  {
+   "qid": "Q187027",
+   "label": "İstanköy",
+   "links": 78,
+   "value": 290300000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İstanköy",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 28012
+  },
+  {
+   "qid": "Q146530",
+   "label": "Hiiumaa",
+   "links": 77,
+   "value": 960328780.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hiiumaa",
+   "country": [
+    "Estonya"
+   ],
+   "tr_views": 191
+  },
+  {
+   "qid": "Q146530",
+   "label": "Hiiumaa",
+   "links": 77,
+   "value": 989000000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Hiiumaa",
+   "country": [
+    "Estonya"
+   ],
+   "tr_views": 191
+  },
+  {
+   "qid": "Q178488",
+   "label": "Kefalonia",
+   "links": 77,
+   "value": 734014000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kefalonya",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 5945
+  },
+  {
+   "qid": "Q238752",
+   "label": "Barbuda",
+   "links": 77,
+   "value": 160553362.95972863,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Barbuda",
+   "country": [
+    "Antigua ve Barbuda"
+   ],
+   "tr_views": 1050
+  },
+  {
+   "qid": "Q238752",
+   "label": "Barbuda",
+   "links": 77,
+   "value": 161000000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Barbuda",
+   "country": [
+    "Antigua ve Barbuda"
+   ],
+   "tr_views": 1050
+  },
+  {
+   "qid": "Q239276",
+   "label": "Öland",
+   "links": 77,
+   "value": 1347000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Öland",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 524
+  },
+  {
+   "qid": "Q107338",
+   "label": "Lampedusa Adası",
+   "links": 76,
+   "value": 20200000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lampedusa",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 2435
+  },
+  {
+   "qid": "Q187471",
+   "label": "İtakiya",
+   "links": 76,
+   "value": 116992000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fiaki",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 16543
+  },
+  {
+   "qid": "Q21162",
+   "label": "Spitsbergen",
+   "links": 75,
+   "value": 39044000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Spitsbergen",
+   "country": [
+    "Norveç"
+   ],
+   "tr_views": 3370
+  },
+  {
+   "qid": "Q104784",
+   "label": "Lord Howe Adası",
+   "links": 74,
+   "value": 14600000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lord Howe Adası",
+   "country": [
+    "Avustralya"
+   ],
+   "tr_views": 809
+  },
+  {
+   "qid": "Q106594",
+   "label": "Vrangel Adası",
+   "links": 74,
+   "value": 7600000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vrangel Adası",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 1612
+  },
+  {
+   "qid": "Q144880",
+   "label": "Zanta",
+   "links": 74,
+   "value": 405550000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zante",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 4598
+  },
+  {
+   "qid": "Q146695",
+   "label": "Phu Quoc",
+   "links": 74,
+   "value": 574000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Phú Quốc",
+   "country": [
+    "Vietnam"
+   ],
+   "tr_views": 1004
+  },
+  {
+   "qid": "Q146695",
+   "label": "Phu Quoc",
+   "links": 74,
+   "value": 589270000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Phú Quốc",
+   "country": [
+    "Vietnam"
+   ],
+   "tr_views": 1004
+  },
+  {
+   "qid": "Q107393",
+   "label": "Skye",
+   "links": 73,
+   "value": 1656000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Skye",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 1048
+  },
+  {
+   "qid": "Q188705",
+   "label": "Maui Adası",
+   "links": 72,
+   "value": 1883000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Maui",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 4109
+  },
+  {
+   "qid": "Q190053",
+   "label": "Batnaz",
+   "links": 72,
+   "value": 34140000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Batnaz",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 7368
+  },
+  {
+   "qid": "Q192493",
+   "label": "Robben Adası",
+   "links": 72,
+   "value": 4750000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Robben Adası",
+   "country": [
+    "Güney Afrika"
+   ],
+   "tr_views": 1316
+  },
+  {
+   "qid": "Q192493",
+   "label": "Robben Adası",
+   "links": 72,
+   "value": 5180000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Robben Adası",
+   "country": [
+    "Güney Afrika"
+   ],
+   "tr_views": 1316
+  },
+  {
+   "qid": "Q190210",
+   "label": "Mykonos",
+   "links": 71,
+   "value": 105793000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mikonos",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 6787
+  },
+  {
+   "qid": "Q200226",
+   "label": "Banks Adası",
+   "links": 71,
+   "value": 70028000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Banks Adası",
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 350
+  },
+  {
+   "qid": "Q201026",
+   "label": "Kauai",
+   "links": 71,
+   "value": 1435000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kauai",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 1535
+  },
+  {
+   "qid": "Q188938",
+   "label": "Cerbe",
+   "links": 70,
+   "value": 514000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cerbe",
+   "country": [
+    "Tunus"
+   ],
+   "tr_views": 3605
+  },
+  {
+   "qid": "Q193264",
+   "label": "Marajó",
+   "links": 70,
+   "value": 40100000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Marajó",
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 148
+  },
+  {
+   "qid": "Q205022",
+   "label": "Bioko",
+   "links": 70,
+   "value": 1935000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bioko",
+   "country": [
+    "Ekvator Ginesi"
+   ],
+   "tr_views": 35
+  },
+  {
+   "qid": "Q316390",
+   "label": "Antigua",
+   "links": 70,
+   "value": 281000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Antigua",
+   "country": [
+    "Antigua ve Barbuda"
+   ],
+   "tr_views": 947
+  },
+  {
+   "qid": "Q3255",
+   "label": "Usedom",
+   "links": 70,
+   "value": 445000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Usedom",
+   "country": [
+    "Almanya",
+    "Polonya"
+   ],
+   "tr_views": 665
+  },
+  {
+   "qid": "Q184851",
+   "label": "Diego Garcia",
+   "links": 69,
+   "value": 30000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Diego Garcia",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 22955
+  },
+  {
+   "qid": "Q185111",
+   "label": "Tobago",
+   "links": 69,
+   "value": 300000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tobago",
+   "country": [
+    "Trinidad ve Tobago"
+   ],
+   "tr_views": 2677
+  },
+  {
+   "qid": "Q186367",
+   "label": "Sumbawa",
+   "links": 69,
+   "value": 14386000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sumbawa",
+   "country": [
+    "Endonezya"
+   ],
+   "tr_views": 376
+  },
+  {
+   "qid": "Q186841",
+   "label": "Devon Adası",
+   "links": 69,
+   "value": 55247000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Devon Adası",
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 475
+  },
+  {
+   "qid": "Q191082",
+   "label": "Aegina Adası",
+   "links": 69,
+   "value": 87400000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Egine",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 2106
+  },
+  {
+   "qid": "Q193331",
+   "label": "Kiritimati",
+   "links": 69,
+   "value": 388390000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kiritimati",
+   "country": [
+    "Kiribati"
+   ],
+   "tr_views": 897
+  },
+  {
+   "qid": "Q202780",
+   "label": "I. Peter Adası",
+   "links": 69,
+   "value": 243000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "I. Peter Adası",
+   "country": [],
+   "tr_views": 722
+  },
+  {
+   "qid": "Q270375",
+   "label": "Ko Samui",
+   "links": 69,
+   "value": 228700000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ko Samui",
+   "country": [
+    "Tayland"
+   ],
+   "tr_views": 3034
+  },
+  {
+   "qid": "Q192483",
+   "label": "Limni",
+   "links": 68,
+   "value": 476000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Limni",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 18496
+  },
+  {
+   "qid": "Q201272",
+   "label": "Berre",
+   "links": 68,
+   "value": 194500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Berre",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 2723
+  },
+  {
+   "qid": "Q3107",
+   "label": "Sylt Adası",
+   "links": 68,
+   "value": 57320000.0,
+   "rank": "preferred",
+   "value_year": 2017,
+   "tr_title": "Sylt Adası",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 928
+  },
+  {
+   "qid": "Q3107",
+   "label": "Sylt Adası",
+   "links": 68,
+   "value": 99140000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sylt Adası",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 928
+  },
+  {
+   "qid": "Q1260331",
+   "label": "Kuzey Sentinel Adası",
+   "links": 67,
+   "value": 59670000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kuzey Sentinel Adası",
+   "country": [
+    "Hindistan"
+   ],
+   "tr_views": 35228
+  },
+  {
+   "qid": "Q191098",
+   "label": "Comino",
+   "links": 67,
+   "value": 3000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Comino",
+   "country": [
+    "Malta"
+   ],
+   "tr_views": 973
+  },
+  {
+   "qid": "Q191098",
+   "label": "Comino",
+   "links": 67,
+   "value": 3500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Comino",
+   "country": [
+    "Malta"
+   ],
+   "tr_views": 973
+  },
+  {
+   "qid": "Q200223",
+   "label": "Alexander Adası",
+   "links": 67,
+   "value": 49070000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Alexander Adası",
+   "country": [],
+   "tr_views": 159
+  },
+  {
+   "qid": "Q46650",
+   "label": "Macquarie Adası",
+   "links": 67,
+   "value": 128000000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Macquarie Adası",
+   "country": [
+    "Avustralya"
+   ],
+   "tr_views": 678
+  },
+  {
+   "qid": "Q46650",
+   "label": "Macquarie Adası",
+   "links": 67,
+   "value": 5400000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Macquarie Adası",
+   "country": [
+    "Avustralya"
+   ],
+   "tr_views": 678
+  },
+  {
+   "qid": "Q107640",
+   "label": "Komodo (ada)",
+   "links": 66,
+   "value": 319837900.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Komodo (ada)",
+   "country": [
+    "Endonezya"
+   ],
+   "tr_views": 1865
+  },
+  {
+   "qid": "Q107640",
+   "label": "Komodo (ada)",
+   "links": 66,
+   "value": 390000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Komodo (ada)",
+   "country": [
+    "Endonezya"
+   ],
+   "tr_views": 1865
+  },
+  {
+   "qid": "Q115027",
+   "label": "Isla de la Juventud",
+   "links": 66,
+   "value": 2419000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Isla de la Juventud",
+   "country": [
+    "Küba"
+   ],
+   "tr_views": 503
+  },
+  {
+   "qid": "Q155868",
+   "label": "Yılan Adası",
+   "links": 66,
+   "value": 170000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yılan Adası (Ukrayna)",
+   "country": [
+    "Ukrayna"
+   ],
+   "tr_views": 3452
+  },
+  {
+   "qid": "Q19483",
+   "label": "Hong Kong Adası",
+   "links": 66,
+   "value": 80400000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hong Kong Adası",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 649
+  },
+  {
+   "qid": "Q271287",
+   "label": "Kavaratti",
+   "links": 66,
+   "value": 4220000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kavaratti",
+   "country": [
+    "Hindistan"
+   ],
+   "tr_views": 195
+  },
+  {
+   "qid": "Q49149",
+   "label": "Nantucket Adası",
+   "links": 66,
+   "value": 123801431.6740608,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nantucket",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 1203
+  },
+  {
+   "qid": "Q6059",
+   "label": "Krk",
+   "links": 66,
+   "value": 405780000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Krk",
+   "country": [
+    "Hırvatistan"
+   ],
+   "tr_views": 506
+  },
+  {
+   "qid": "Q192767",
+   "label": "Guadalcanal",
+   "links": 65,
+   "value": 5302000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Guadalcanal",
+   "country": [
+    "Solomon Adaları"
+   ],
+   "tr_views": 961
+  },
+  {
+   "qid": "Q201398",
+   "label": "Halmahera",
+   "links": 65,
+   "value": 17780000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Halmahera",
+   "country": [
+    "Endonezya"
+   ],
+   "tr_views": 3074
+  },
+  {
+   "qid": "Q201766",
+   "label": "Bougainville",
+   "links": 65,
+   "value": 9318000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bougainville",
+   "country": [
+    "Papua Yeni Gine"
+   ],
+   "tr_views": 1635
+  },
+  {
+   "qid": "Q203979",
+   "label": "Değirmenlik",
+   "links": 65,
+   "value": 150600000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Değirmenlik, Yunanistan",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 2667
+  },
+  {
+   "qid": "Q211377",
+   "label": "Leyte",
+   "links": 65,
+   "value": 7368000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Leyte Adası",
+   "country": [
+    "Filipinler"
+   ],
+   "tr_views": 262
+  },
+  {
+   "qid": "Q211800",
+   "label": "Mindoro",
+   "links": 65,
+   "value": 10572000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mindoro",
+   "country": [
+    "Filipinler"
+   ],
+   "tr_views": 2904
+  },
+  {
+   "qid": "Q644636",
+   "label": "Kıbrıs",
+   "links": 65,
+   "value": 9234000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kıbrıs",
+   "country": [
+    "Birleşik Krallık",
+    "Kuzey Kıbrıs",
+    "Kıbrıs"
+   ],
+   "tr_views": 59646
+  },
+  {
+   "qid": "Q131354",
+   "label": "Alcatraz Adası",
+   "links": 64,
+   "value": 85000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Alcatraz Adası",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 14262
+  },
+  {
+   "qid": "Q194364",
+   "label": "Bear Adası",
+   "links": 64,
+   "value": 178000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ayı Adası",
+   "country": [
+    "Norveç"
+   ],
+   "tr_views": 772
+  },
+  {
+   "qid": "Q202422",
+   "label": "Salamis Adası",
+   "links": 64,
+   "value": 95000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Salamis Adası",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 1629
+  },
+  {
+   "qid": "Q175741",
+   "label": "Andros",
+   "links": 63,
+   "value": 381398000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Andire",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 1142
+  },
+  {
+   "qid": "Q178124",
+   "label": "Surtsey",
+   "links": 63,
+   "value": 1410000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Surtsey",
+   "country": [
+    "İzlanda"
+   ],
+   "tr_views": 2056
+  },
+  {
+   "qid": "Q185532",
+   "label": "Seram Adası",
+   "links": 63,
+   "value": 70369600000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Seram Adası",
+   "country": [
+    "Endonezya"
+   ],
+   "tr_views": 139
+  },
+  {
+   "qid": "Q194215",
+   "label": "İle Amsterdam",
+   "links": 63,
+   "value": 55000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Amsterdam Adası",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 681
+  },
+  {
+   "qid": "Q204757",
+   "label": "Kerpe Adası",
+   "links": 63,
+   "value": 324700000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kerpe Adası",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 5064
+  },
+  {
+   "qid": "Q206368",
+   "label": "Sumba",
+   "links": 63,
+   "value": 891932000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sumba",
+   "country": [
+    "Endonezya"
+   ],
+   "tr_views": 3019
+  },
+  {
+   "qid": "Q206368",
+   "label": "Sumba",
+   "links": 63,
+   "value": 10711000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sumba",
+   "country": [
+    "Endonezya"
+   ],
+   "tr_views": 3019
+  },
+  {
+   "qid": "Q208011",
+   "label": "Schiermonnikoog",
+   "links": 63,
+   "value": 191190000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Schiermonnikoog",
+   "country": [
+    "Hollanda"
+   ],
+   "tr_views": 2841
+  },
+  {
+   "qid": "Q208668",
+   "label": "Rodrigues",
+   "links": 63,
+   "value": 109000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rodrigues",
+   "country": [
+    "Mauritius"
+   ],
+   "tr_views": 1084
+  },
+  {
+   "qid": "Q209036",
+   "label": "São Miguel Adası",
+   "links": 63,
+   "value": 744550000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "São Miguel Adası",
+   "country": [
+    "Portekiz"
+   ],
+   "tr_views": 505
+  },
+  {
+   "qid": "Q274569",
+   "label": "Upolu Adası",
+   "links": 63,
+   "value": 1125000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Upolu Adası",
+   "country": [
+    "Samoa"
+   ],
+   "tr_views": 130
+  },
+  {
+   "qid": "Q5993",
+   "label": "Hvar",
+   "links": 63,
+   "value": 297370000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hvar",
+   "country": [
+    "Hırvatistan"
+   ],
+   "tr_views": 1086
+  },
+  {
+   "qid": "Q134905",
+   "label": "K'gari",
+   "links": 62,
+   "value": 1818383547.5682,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fraser Adası",
+   "country": [
+    "Avustralya"
+   ],
+   "tr_views": 222
+  },
+  {
+   "qid": "Q134905",
+   "label": "K'gari",
+   "links": 62,
+   "value": 1840000000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Fraser Adası",
+   "country": [
+    "Avustralya"
+   ],
+   "tr_views": 222
+  },
+  {
+   "qid": "Q134905",
+   "label": "K'gari",
+   "links": 62,
+   "value": 1840000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fraser Adası",
+   "country": [
+    "Avustralya"
+   ],
+   "tr_views": 222
+  },
+  {
+   "qid": "Q203175",
+   "label": "Semadirek",
+   "links": 62,
+   "value": 178000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Semadirek",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 15438
+  },
+  {
+   "qid": "Q208198",
+   "label": "Viti Levu",
+   "links": 62,
+   "value": 10531000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Viti Levu",
+   "country": [
+    "Fiji"
+   ],
+   "tr_views": 504
+  },
+  {
+   "qid": "Q219608",
+   "label": "Ambon Adası",
+   "links": 62,
+   "value": 769455900.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ambon Adası",
+   "country": [
+    "Endonezya"
+   ],
+   "tr_views": 244
+  },
+  {
+   "qid": "Q219608",
+   "label": "Ambon Adası",
+   "links": 62,
+   "value": 803900000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ambon Adası",
+   "country": [
+    "Endonezya"
+   ],
+   "tr_views": 244
+  },
+  {
+   "qid": "Q134116",
+   "label": "Melville Adası",
+   "links": 61,
+   "value": 42149000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Melville Adası (Kanada)",
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 199
+  },
+  {
+   "qid": "Q193896",
+   "label": "Malta",
+   "links": 61,
+   "value": 246000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Malta (ada)",
+   "country": [
+    "Malta"
+   ],
+   "tr_views": 5591
+  },
+  {
+   "qid": "Q207666",
+   "label": "Axel Heiberg Adası",
+   "links": 61,
+   "value": 43178000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Axel Heiberg Adası",
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 167
+  },
+  {
+   "qid": "Q207794",
+   "label": "Nevis",
+   "links": 61,
+   "value": 93000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nevis",
+   "country": [
+    "Saint Kitts ve Nevis"
+   ],
+   "tr_views": 1477
+  },
+  {
+   "qid": "Q207851",
+   "label": "Vlieland",
+   "links": 61,
+   "value": 36160000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vlieland",
+   "country": [
+    "Hollanda"
+   ],
+   "tr_views": 599
+  },
+  {
+   "qid": "Q207851",
+   "label": "Vlieland",
+   "links": 61,
+   "value": 320500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vlieland",
+   "country": [
+    "Hollanda"
+   ],
+   "tr_views": 599
+  },
+  {
+   "qid": "Q215081",
+   "label": "Cocos Adası",
+   "links": 61,
+   "value": 23520000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cocos Adası",
+   "country": [
+    "Kosta Rika"
+   ],
+   "tr_views": 442
+  },
+  {
+   "qid": "Q242176",
+   "label": "Yakuşima",
+   "links": 61,
+   "value": 12190000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yakuşima",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 419
+  },
+  {
+   "qid": "Q242176",
+   "label": "Yakuşima",
+   "links": 61,
+   "value": 107470000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yakuşima",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 419
+  },
+  {
+   "qid": "Q242176",
+   "label": "Yakuşima",
+   "links": 61,
+   "value": 504290000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yakuşima",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 419
+  },
+  {
+   "qid": "Q48675",
+   "label": "Batı Adası",
+   "links": 61,
+   "value": 6230000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Batı Adası (Cocos Adaları)",
+   "country": [
+    "Avustralya"
+   ],
+   "tr_views": 418
+  },
+  {
+   "qid": "Q922",
+   "label": "Brač",
+   "links": 61,
+   "value": 396000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Brač",
+   "country": [
+    "Hırvatistan"
+   ],
+   "tr_views": 405
+  },
+  {
+   "qid": "Q190138",
+   "label": "Lefkada",
+   "links": 60,
+   "value": 356000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lefkada",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 7165
+  },
+  {
+   "qid": "Q204412",
+   "label": "Terschelling",
+   "links": 60,
+   "value": 674000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Terschelling",
+   "country": [
+    "Hollanda"
+   ],
+   "tr_views": 87
+  },
+  {
+   "qid": "Q209576",
+   "label": "İkarya",
+   "links": 60,
+   "value": 255320000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İkarya",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 9738
+  },
+  {
+   "qid": "Q210371",
+   "label": "Kangaroo Adası (III)",
+   "links": 60,
+   "value": 4374000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kanguru Adası",
+   "country": [
+    "Avustralya"
+   ],
+   "tr_views": 311
+  },
+  {
+   "qid": "Q212777",
+   "label": "Negros",
+   "links": 60,
+   "value": 13075000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Negros",
+   "country": [
+    "Filipinler"
+   ],
+   "tr_views": 136
+  },
+  {
+   "qid": "Q215089",
+   "label": "Yeni İrlanda",
+   "links": 60,
+   "value": 7405000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeni İrlanda",
+   "country": [
+    "Papua Yeni Gine"
+   ],
+   "tr_views": 344
+  },
+  {
+   "qid": "Q605839",
+   "label": "Lolland Adası",
+   "links": 60,
+   "value": 1242860000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lolland Adası",
+   "country": [
+    "Danimarka"
+   ],
+   "tr_views": 119
+  },
+  {
+   "qid": "Q106357",
+   "label": "Utøya",
+   "links": 59,
+   "value": 106000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Utøya",
+   "country": [
+    "Norveç"
+   ],
+   "tr_views": 1240
+  },
+  {
+   "qid": "Q204387",
+   "label": "Kodiak Adası",
+   "links": 59,
+   "value": 9310000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kodiak Adası",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 682
+  },
+  {
+   "qid": "Q204387",
+   "label": "Kodiak Adası",
+   "links": 59,
+   "value": 9311240355.58785,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kodiak Adası",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 682
+  },
+  {
+   "qid": "Q204989",
+   "label": "Saint Kitts",
+   "links": 59,
+   "value": 168000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saint Kitts",
+   "country": [
+    "Saint Kitts ve Nevis"
+   ],
+   "tr_views": 2531
+  },
+  {
+   "qid": "Q207751",
+   "label": "Southampton Adası",
+   "links": 59,
+   "value": 41214000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Southampton Adası",
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 167
+  },
+  {
+   "qid": "Q208319",
+   "label": "İdra",
+   "links": 59,
+   "value": 49586000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suluca (ada)",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 1821
+  },
+  {
+   "qid": "Q240719",
+   "label": "Keşm Adası",
+   "links": 59,
+   "value": 1445000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Keşm Adası",
+   "country": [
+    "İran"
+   ],
+   "tr_views": 6856
+  },
+  {
+   "qid": "Q244347",
+   "label": "Gorée Adası",
+   "links": 59,
+   "value": 182000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gorée",
+   "country": [
+    "Senegal"
+   ],
+   "tr_views": 990
+  },
+  {
+   "qid": "Q331099",
+   "label": "Mozambik Adası",
+   "links": 59,
+   "value": 1500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mozambik Adası",
+   "country": [
+    "Mozambik"
+   ],
+   "tr_views": 560
+  },
+  {
+   "qid": "Q1240598",
+   "label": "Ruhnu",
+   "links": 58,
+   "value": 11900000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ruhnu Adası",
+   "country": [
+    "Estonya"
+   ],
+   "tr_views": 12
+  },
+  {
+   "qid": "Q193089",
+   "label": "Avrupa Adası",
+   "links": 58,
+   "value": 28000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avrupa Adası",
+   "country": [
+    "Fransa",
+    "Madagaskar"
+   ],
+   "tr_views": 225
+  },
+  {
+   "qid": "Q211873",
+   "label": "Arran Adası",
+   "links": 58,
+   "value": 432000000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Arran Adası",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 174
+  },
+  {
+   "qid": "Q211873",
+   "label": "Arran Adası",
+   "links": 58,
+   "value": 432010000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arran Adası",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 174
+  },
+  {
+   "qid": "Q332359",
+   "label": "Panay",
+   "links": 58,
+   "value": 12011000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Panay",
+   "country": [
+    "Filipinler"
+   ],
+   "tr_views": 107
+  },
+  {
+   "qid": "Q13288",
+   "label": "Korčula",
+   "links": 57,
+   "value": 279000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Korčula",
+   "country": [
+    "Hırvatistan"
+   ],
+   "tr_views": 527
+  },
+  {
+   "qid": "Q193253",
+   "label": "Molokai",
+   "links": 57,
+   "value": 673396908.68736,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Molokaʻi",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 38
+  },
+  {
+   "qid": "Q202175",
+   "label": "Ellis Adası",
+   "links": 57,
+   "value": 6070.2846336,
+   "rank": "normal",
+   "value_year": 1830,
+   "tr_title": "Ellis Adası",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2501
+  },
+  {
+   "qid": "Q202175",
+   "label": "Ellis Adası",
+   "links": 57,
+   "value": 111288.551616,
+   "rank": "normal",
+   "value_year": 1935,
+   "tr_title": "Ellis Adası",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2501
+  },
+  {
+   "qid": "Q204096",
+   "label": "Taşoz",
+   "links": 57,
+   "value": 379000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Taşoz",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 9300
+  },
+  {
+   "qid": "Q207925",
+   "label": "Prince of Wales Adası",
+   "links": 57,
+   "value": 33339000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Galler Prensi Adası (Kanada)",
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 98
+  },
+  {
+   "qid": "Q211230",
+   "label": "Sire",
+   "links": 57,
+   "value": 102365000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sire",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 3465
+  },
+  {
+   "qid": "Q319821",
+   "label": "Liberty Adası",
+   "links": 57,
+   "value": 59500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Liberty Adası",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 1179
+  },
+  {
+   "qid": "Q337519",
+   "label": "Savai'i Adası",
+   "links": 57,
+   "value": 1718000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Savai'i Adası",
+   "country": [
+    "Samoa"
+   ],
+   "tr_views": 116
+  },
+  {
+   "qid": "Q41684",
+   "label": "Stewart Adası",
+   "links": 57,
+   "value": 1746000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Stewart Adası",
+   "country": [
+    "Yeni Zelanda"
+   ],
+   "tr_views": 237
+  },
+  {
+   "qid": "Q13280",
+   "label": "Cres",
+   "links": 56,
+   "value": 405780000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cres",
+   "country": [
+    "Hırvatistan"
+   ],
+   "tr_views": 494
+  },
+  {
+   "qid": "Q1674067",
+   "label": "Büyük Tierra del Fuego Adası",
+   "links": 56,
+   "value": 47992000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ateş Toprakları Adası",
+   "country": [
+    "Arjantin",
+    "Şili"
+   ],
+   "tr_views": 408
+  },
+  {
+   "qid": "Q207239",
+   "label": "Çuha Adası",
+   "links": 56,
+   "value": 277746000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çuha Adası",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 2503
+  },
+  {
+   "qid": "Q208566",
+   "label": "İskiri",
+   "links": 56,
+   "value": 209000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İskiri",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 1908
+  },
+  {
+   "qid": "Q210811",
+   "label": "Pico Adası",
+   "links": 56,
+   "value": 447000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pico Adası",
+   "country": [
+    "Portekiz"
+   ],
+   "tr_views": 423
+  },
+  {
+   "qid": "Q211285",
+   "label": "İstendil",
+   "links": 56,
+   "value": 196984000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İstendil",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 1459
+  },
+  {
+   "qid": "Q221883",
+   "label": "Kiş Adası",
+   "links": 56,
+   "value": 91500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kiş (ada)",
+   "country": [
+    "İran"
+   ],
+   "tr_views": 4247
+  },
+  {
+   "qid": "Q334738",
+   "label": "Margarita Adası",
+   "links": 56,
+   "value": 1020000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Margarita Adası (Venezuela)",
+   "country": [
+    "Venezuela"
+   ],
+   "tr_views": 471
+  },
+  {
+   "qid": "Q13778",
+   "label": "Catanduanes",
+   "links": 55,
+   "value": 1492160000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Catanduanes",
+   "country": [
+    "Filipinler"
+   ],
+   "tr_views": 166
+  },
+  {
+   "qid": "Q204821",
+   "label": "Saint-Paul Adası",
+   "links": 55,
+   "value": 8400000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saint-Paul Adası",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 528
+  },
+  {
+   "qid": "Q210636",
+   "label": "Príncipe Adası",
+   "links": 55,
+   "value": 136000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Príncipe Adası",
+   "country": [
+    "São Tomé ve Príncipe"
+   ],
+   "tr_views": 494
+  },
+  {
+   "qid": "Q233124",
+   "label": "São Tomé Adası",
+   "links": 55,
+   "value": 855000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "São Tomé Adası",
+   "country": [
+    "São Tomé ve Príncipe"
+   ],
+   "tr_views": 404
+  }
+ ]
+}

@@ -1,0 +1,2888 @@
+{
+ "dataset": "lakes_world",
+ "description": "Dünyadaki göller, yüzölçümü (P2046)",
+ "property": "P2046",
+ "fetched_at": "2026-11-06T11:21:38+00:00",
+ "rows": [
+  {
+   "qid": "Q5484",
+   "label": "Hazar Denizi",
+   "links": 207,
+   "value": 386400000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hazar Denizi",
+   "country": [
+    "Azerbaycan",
+    "Kazakistan",
+    "Rusya",
+    "Türkmenistan",
+    "İran"
+   ],
+   "tr_views": 54140
+  },
+  {
+   "qid": "Q5513",
+   "label": "Baykal Gölü",
+   "links": 183,
+   "value": 31722000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Baykal Gölü",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 29623
+  },
+  {
+   "qid": "Q5505",
+   "label": "Victoria Gölü",
+   "links": 162,
+   "value": 68100000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Victoria Gölü",
+   "country": [
+    "Kenya",
+    "Tanzanya",
+    "Uganda"
+   ],
+   "tr_views": 6789
+  },
+  {
+   "qid": "Q5511",
+   "label": "Tanganika Gölü",
+   "links": 151,
+   "value": 32900000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tanganika Gölü",
+   "country": [
+    "Burundi",
+    "Kongo Demokratik Cumhuriyeti",
+    "Tanzanya",
+    "Zambiya"
+   ],
+   "tr_views": 3480
+  },
+  {
+   "qid": "Q35342",
+   "label": "Titikaka Gölü",
+   "links": 132,
+   "value": 8372000000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Titikaka Gölü",
+   "country": [
+    "Bolivya",
+    "Peru"
+   ],
+   "tr_views": 5427
+  },
+  {
+   "qid": "Q35342",
+   "label": "Titikaka Gölü",
+   "links": 132,
+   "value": 8562000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Titikaka Gölü",
+   "country": [
+    "Bolivya",
+    "Peru"
+   ],
+   "tr_views": 5427
+  },
+  {
+   "qid": "Q1066",
+   "label": "Superior Gölü",
+   "links": 112,
+   "value": 82350000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Superior Gölü",
+   "country": [
+    "Amerika Birleşik Devletleri",
+    "Kanada"
+   ],
+   "tr_views": 4974
+  },
+  {
+   "qid": "Q1062",
+   "label": "Ontario Gölü",
+   "links": 108,
+   "value": 18529000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ontario Gölü",
+   "country": [
+    "Amerika Birleşik Devletleri",
+    "Kanada"
+   ],
+   "tr_views": 2690
+  },
+  {
+   "qid": "Q1169",
+   "label": "Michigan Gölü",
+   "links": 107,
+   "value": 57750000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Michigan Gölü",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 3628
+  },
+  {
+   "qid": "Q5532",
+   "label": "Malavi Gölü",
+   "links": 107,
+   "value": 29600000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Malavi Gölü",
+   "country": [
+    "Malavi",
+    "Mozambik",
+    "Tanzanya"
+   ],
+   "tr_views": 2193
+  },
+  {
+   "qid": "Q125309",
+   "label": "Çad Gölü",
+   "links": 105,
+   "value": 1540000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çad Gölü",
+   "country": [
+    "Kamerun",
+    "Nijer",
+    "Nijerya",
+    "Çad"
+   ],
+   "tr_views": 2561
+  },
+  {
+   "qid": "Q5492",
+   "label": "Erie Gölü",
+   "links": 102,
+   "value": 25744000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Erie Gölü",
+   "country": [
+    "Amerika Birleşik Devletleri",
+    "Kanada"
+   ],
+   "tr_views": 1687
+  },
+  {
+   "qid": "Q1383",
+   "label": "Huron Gölü",
+   "links": 100,
+   "value": 59600000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Huron Gölü",
+   "country": [
+    "Amerika Birleşik Devletleri",
+    "Kanada"
+   ],
+   "tr_views": 1813
+  },
+  {
+   "qid": "Q15288",
+   "label": "Ladoga Gölü",
+   "links": 98,
+   "value": 17700000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ladoga Gölü",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 3014
+  },
+  {
+   "qid": "Q6383",
+   "label": "Balaton Gölü",
+   "links": 97,
+   "value": 592000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Balaton Gölü",
+   "country": [
+    "Macaristan"
+   ],
+   "tr_views": 2623
+  },
+  {
+   "qid": "Q126307",
+   "label": "Van Gölü",
+   "links": 90,
+   "value": 3755000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Van Gölü",
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 47199
+  },
+  {
+   "qid": "Q125888",
+   "label": "Albert Gölü",
+   "links": 89,
+   "value": 5270000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Albert Gölü (Afrika)",
+   "country": [
+    "Kongo Demokratik Cumhuriyeti",
+    "Uganda"
+   ],
+   "tr_views": 372
+  },
+  {
+   "qid": "Q134485",
+   "label": "Balkaş Gölü",
+   "links": 89,
+   "value": 18200000000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Balkaş Gölü",
+   "country": [
+    "Kazakistan"
+   ],
+   "tr_views": 3007
+  },
+  {
+   "qid": "Q134485",
+   "label": "Balkaş Gölü",
+   "links": 89,
+   "value": 18740000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Balkaş Gölü",
+   "country": [
+    "Kazakistan"
+   ],
+   "tr_views": 3007
+  },
+  {
+   "qid": "Q42191",
+   "label": "Issık Göl",
+   "links": 88,
+   "value": 6236000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Issık Göl",
+   "country": [
+    "Kırgızistan"
+   ],
+   "tr_views": 10119
+  },
+  {
+   "qid": "Q6414",
+   "label": "Garda Gölü",
+   "links": 88,
+   "value": 369980000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Garda Gölü",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 4554
+  },
+  {
+   "qid": "Q182719",
+   "label": "Turkana Gölü",
+   "links": 85,
+   "value": 6405000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Turkana Gölü",
+   "country": [
+    "Etiyopya",
+    "Kenya"
+   ],
+   "tr_views": 1277
+  },
+  {
+   "qid": "Q166162",
+   "label": "Onega Gölü",
+   "links": 84,
+   "value": 9700000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Onega Gölü",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 653
+  },
+  {
+   "qid": "Q166162",
+   "label": "Onega Gölü",
+   "links": 84,
+   "value": 9800000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Onega Gölü",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 653
+  },
+  {
+   "qid": "Q125912",
+   "label": "Kivu Gölü",
+   "links": 82,
+   "value": 2700000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kivu Gölü",
+   "country": [
+    "Kongo Demokratik Cumhuriyeti",
+    "Ruanda"
+   ],
+   "tr_views": 832
+  },
+  {
+   "qid": "Q14379",
+   "label": "Maggiore Gölü",
+   "links": 81,
+   "value": 212500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Maggiore Gölü",
+   "country": [
+    "İsviçre",
+    "İtalya"
+   ],
+   "tr_views": 1439
+  },
+  {
+   "qid": "Q49650",
+   "label": "Loch Ness",
+   "links": 80,
+   "value": 56400000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Loch Ness",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 1685
+  },
+  {
+   "qid": "Q173596",
+   "label": "Vänern Gölü",
+   "links": 79,
+   "value": 5650000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vänern Gölü",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 451
+  },
+  {
+   "qid": "Q173862",
+   "label": "Nikaragua Gölü",
+   "links": 78,
+   "value": 8264000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nikaragua Gölü",
+   "country": [
+    "Nikaragua"
+   ],
+   "tr_views": 430
+  },
+  {
+   "qid": "Q116685",
+   "label": "Tana Gölü",
+   "links": 77,
+   "value": 2156000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tana Gölü",
+   "country": [
+    "Etiyopya"
+   ],
+   "tr_views": 601
+  },
+  {
+   "qid": "Q116685",
+   "label": "Tana Gölü",
+   "links": 77,
+   "value": 3600000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tana Gölü",
+   "country": [
+    "Etiyopya"
+   ],
+   "tr_views": 601
+  },
+  {
+   "qid": "Q192770",
+   "label": "Saimaa Gölü",
+   "links": 77,
+   "value": 4400000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saimaa Gölü",
+   "country": [
+    "Finlandiya"
+   ],
+   "tr_views": 318
+  },
+  {
+   "qid": "Q181932",
+   "label": "Sevan Gölü",
+   "links": 76,
+   "value": 1270700000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sevan Gölü",
+   "country": [
+    "Ermenistan"
+   ],
+   "tr_views": 4005
+  },
+  {
+   "qid": "Q125211",
+   "label": "Edward Gölü",
+   "links": 75,
+   "value": 2150000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Edward Gölü",
+   "country": [
+    "Kongo Demokratik Cumhuriyeti",
+    "Uganda"
+   ],
+   "tr_views": 171
+  },
+  {
+   "qid": "Q3272",
+   "label": "Winnipeg Gölü",
+   "links": 75,
+   "value": 24400000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Winnipeg Gölü",
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 290
+  },
+  {
+   "qid": "Q5525",
+   "label": "Büyük Ayı Gölü",
+   "links": 74,
+   "value": 31153000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük Ayı Gölü",
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 628
+  },
+  {
+   "qid": "Q182137",
+   "label": "Maracaibo Gölü",
+   "links": 72,
+   "value": 13210000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Maracaibo Gölü",
+   "country": [
+    "Venezuela"
+   ],
+   "tr_views": 934
+  },
+  {
+   "qid": "Q201294",
+   "label": "Koko Nor",
+   "links": 72,
+   "value": 4400000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çinghay Gölü",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 313
+  },
+  {
+   "qid": "Q178741",
+   "label": "Büyük Tuz Gölü",
+   "links": 71,
+   "value": 4400000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük Tuz Gölü",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 1056
+  },
+  {
+   "qid": "Q179970",
+   "label": "Eyre Gölü",
+   "links": 71,
+   "value": 9300000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eyre Gölü",
+   "country": [
+    "Avustralya"
+   ],
+   "tr_views": 342
+  },
+  {
+   "qid": "Q504433",
+   "label": "Mweru Gölü",
+   "links": 68,
+   "value": 4650000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mweru Gölü",
+   "country": [
+    "Kongo Demokratik Cumhuriyeti",
+    "Zambiya"
+   ],
+   "tr_views": 107
+  },
+  {
+   "qid": "Q207690",
+   "label": "Poyang Gölü",
+   "links": 66,
+   "value": 5100000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Poyang Gölü",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 342
+  },
+  {
+   "qid": "Q188195",
+   "label": "Vättern Gölü",
+   "links": 65,
+   "value": 1893000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vättern Gölü",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 290
+  },
+  {
+   "qid": "Q14418",
+   "label": "Lugano Gölü",
+   "links": 64,
+   "value": 48700000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lugano Gölü",
+   "country": [
+    "İsviçre",
+    "İtalya"
+   ],
+   "tr_views": 1012
+  },
+  {
+   "qid": "Q184492",
+   "label": "Mälaren Gölü",
+   "links": 64,
+   "value": 1072000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mälaren Gölü",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 996
+  },
+  {
+   "qid": "Q14407",
+   "label": "Zürih Gölü",
+   "links": 63,
+   "value": 88660000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zürih Gölü",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 979
+  },
+  {
+   "qid": "Q156258",
+   "label": "Ohri Gölü",
+   "links": 63,
+   "value": 349000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ohri Gölü",
+   "country": [
+    "Arnavutluk",
+    "Kuzey Makedonya"
+   ],
+   "tr_views": 6914
+  },
+  {
+   "qid": "Q199938",
+   "label": "Tonlé Sap",
+   "links": 63,
+   "value": 2700000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tonlé Sap",
+   "country": [
+    "Kamboçya"
+   ],
+   "tr_views": 306
+  },
+  {
+   "qid": "Q233627",
+   "label": "Manasarovar Gölü",
+   "links": 62,
+   "value": 395000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Manasarovar Gölü",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 367
+  },
+  {
+   "qid": "Q203137",
+   "label": "İnari gölü",
+   "links": 61,
+   "value": 1081920000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Inari Gölü",
+   "country": [
+    "Finlandiya"
+   ],
+   "tr_views": 487
+  },
+  {
+   "qid": "Q14381",
+   "label": "Dört kanton Gölü",
+   "links": 60,
+   "value": 113600000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dört Kanton Gölü",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 771
+  },
+  {
+   "qid": "Q188487",
+   "label": "Trasimeno Gölü",
+   "links": 59,
+   "value": 128000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Trasimeno Gölü",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 254
+  },
+  {
+   "qid": "Q204392",
+   "label": "Prespa Gölü",
+   "links": 59,
+   "value": 273000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Prespa Gölü",
+   "country": [
+    "Arnavutluk",
+    "Kuzey Makedonya",
+    "Yunanistan"
+   ],
+   "tr_views": 1256
+  },
+  {
+   "qid": "Q502371",
+   "label": "Batı Gölü",
+   "links": 59,
+   "value": 6500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Batı Gölü",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 231
+  },
+  {
+   "qid": "Q201843",
+   "label": "Khanka Gölü",
+   "links": 58,
+   "value": 4190000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hanka Gölü",
+   "country": [
+    "Rusya",
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 180
+  },
+  {
+   "qid": "Q4138",
+   "label": "Chiemsee",
+   "links": 58,
+   "value": 79900000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Chiemsee",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 1
+  },
+  {
+   "qid": "Q272463",
+   "label": "Athabasca Gölü",
+   "links": 57,
+   "value": 7850000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Athabasca Gölü",
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 204
+  },
+  {
+   "qid": "Q14375",
+   "label": "Neuchâtel Gölü",
+   "links": 56,
+   "value": 217900000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Neuchâtel Gölü",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 445
+  },
+  {
+   "qid": "Q203811",
+   "label": "İşkodra Gölü",
+   "links": 55,
+   "value": 265350000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İşkodra Gölü",
+   "country": [
+    "Arnavutluk",
+    "Karadağ"
+   ],
+   "tr_views": 1994
+  },
+  {
+   "qid": "Q203811",
+   "label": "İşkodra Gölü",
+   "links": 55,
+   "value": 530000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İşkodra Gölü",
+   "country": [
+    "Arnavutluk",
+    "Karadağ"
+   ],
+   "tr_views": 1994
+  },
+  {
+   "qid": "Q648902",
+   "label": "Bled Gölü",
+   "links": 55,
+   "value": 1450000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bled Gölü",
+   "country": [
+    "Slovenya"
+   ],
+   "tr_views": 2542
+  },
+  {
+   "qid": "Q81150",
+   "label": "Ubsa Gölü",
+   "links": 55,
+   "value": 3350000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ubsa Gölü",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 411
+  },
+  {
+   "qid": "Q208926",
+   "label": "Lomond Gölü",
+   "links": 54,
+   "value": 71000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lomond Gölü",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 366
+  },
+  {
+   "qid": "Q216083",
+   "label": "Dongting Gölü",
+   "links": 53,
+   "value": 4350000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dongting Gölü",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q319412",
+   "label": "Lop Nur",
+   "links": 53,
+   "value": 2375000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lop Nur",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 3412
+  },
+  {
+   "qid": "Q464945",
+   "label": "Poopó Gölü",
+   "links": 53,
+   "value": 1340000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Poopó Gölü",
+   "country": [
+    "Bolivya"
+   ],
+   "tr_views": 241
+  },
+  {
+   "qid": "Q203462",
+   "label": "İlmen Gölü",
+   "links": 52,
+   "value": 982000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İlmen Gölü",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 175
+  },
+  {
+   "qid": "Q206942",
+   "label": "Lough Neagh",
+   "links": 52,
+   "value": 392000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lough Neagh",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 262
+  },
+  {
+   "qid": "Q329266",
+   "label": "Krater Gölü",
+   "links": 52,
+   "value": 53200000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Krater Gölü",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 699
+  },
+  {
+   "qid": "Q140712",
+   "label": "Tai Gölü",
+   "links": 51,
+   "value": 2250000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tai Gölü",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 162
+  },
+  {
+   "qid": "Q211516",
+   "label": "Võrtsjärv",
+   "links": 50,
+   "value": 269190000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Võrtsjärv",
+   "country": [
+    "Estonya"
+   ],
+   "tr_views": 54
+  },
+  {
+   "qid": "Q131615",
+   "label": "Starnberg Gölü",
+   "links": 49,
+   "value": 56360000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Starnberg Gölü",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 1
+  },
+  {
+   "qid": "Q651294",
+   "label": "Namtso",
+   "links": 49,
+   "value": 1920000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Namtso",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 369
+  },
+  {
+   "qid": "Q156715",
+   "label": "Königssee",
+   "links": 48,
+   "value": 5220000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Königssee",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 1209
+  },
+  {
+   "qid": "Q503301",
+   "label": "Salton Denizi",
+   "links": 48,
+   "value": 888000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Salton Denizi",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 927
+  },
+  {
+   "qid": "Q1032254",
+   "label": "Pangong Gölü",
+   "links": 47,
+   "value": 690000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pangong Gölü",
+   "country": [
+    "Hindistan",
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 265
+  },
+  {
+   "qid": "Q216621",
+   "label": "Zaysan Gölü",
+   "links": 47,
+   "value": 1860000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zaysan Gölü",
+   "country": [
+    "Kazakistan"
+   ],
+   "tr_views": 276
+  },
+  {
+   "qid": "Q334761",
+   "label": "Ülemiste Gölü",
+   "links": 47,
+   "value": 9444000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ülemiste Gölü",
+   "country": [
+    "Estonya"
+   ],
+   "tr_views": 81
+  },
+  {
+   "qid": "Q68467",
+   "label": "Champlain Gölü",
+   "links": 47,
+   "value": 1269000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Champlain Gölü",
+   "country": [
+    "Amerika Birleşik Devletleri",
+    "Kanada"
+   ],
+   "tr_views": 138
+  },
+  {
+   "qid": "Q845868",
+   "label": "Taymır Gölü",
+   "links": 47,
+   "value": 4560000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Taymır Gölü",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 105
+  },
+  {
+   "qid": "Q946194",
+   "label": "Ritsa Gölü",
+   "links": 47,
+   "value": 1500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ritsa Gölü",
+   "country": [
+    "Abhazya Cumhuriyeti",
+    "Gürcistan"
+   ],
+   "tr_views": 492
+  },
+  {
+   "qid": "Q212051",
+   "label": "Mývatn",
+   "links": 46,
+   "value": 37000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mývatn",
+   "country": [
+    "İzlanda"
+   ],
+   "tr_views": 72
+  },
+  {
+   "qid": "Q217109",
+   "label": "Altın Göl (Altay)",
+   "links": 46,
+   "value": 233000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Altın Göl (Altay)",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 271
+  },
+  {
+   "qid": "Q257416",
+   "label": "Sarıkamış Gölü",
+   "links": 46,
+   "value": 3955000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sarıkamış Gölü",
+   "country": [
+    "Türkmenistan",
+    "Özbekistan"
+   ],
+   "tr_views": 789
+  },
+  {
+   "qid": "Q673169",
+   "label": "Bangweulu Gölü",
+   "links": 46,
+   "value": 9840000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bangweulu Gölü",
+   "country": [
+    "Zambiya"
+   ],
+   "tr_views": 112
+  },
+  {
+   "qid": "Q14429",
+   "label": "Biel Gölü",
+   "links": 45,
+   "value": 39300000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Biel Gölü",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 130
+  },
+  {
+   "qid": "Q212209",
+   "label": "Mjøsa",
+   "links": 45,
+   "value": 360000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mjøsa",
+   "country": [
+    "Norveç"
+   ],
+   "tr_views": 191
+  },
+  {
+   "qid": "Q212209",
+   "label": "Mjøsa",
+   "links": 45,
+   "value": 369322128.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Mjøsa",
+   "country": [
+    "Norveç"
+   ],
+   "tr_views": 191
+  },
+  {
+   "qid": "Q212209",
+   "label": "Mjøsa",
+   "links": 45,
+   "value": 369453300.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mjøsa",
+   "country": [
+    "Norveç"
+   ],
+   "tr_views": 191
+  },
+  {
+   "qid": "Q337",
+   "label": "Chaubunagungamaug Gölü",
+   "links": 45,
+   "value": 5830000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Chaubunagungamaug Gölü",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 18843
+  },
+  {
+   "qid": "Q337",
+   "label": "Chaubunagungamaug Gölü",
+   "links": 45,
+   "value": 5835566.9611008,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Chaubunagungamaug Gölü",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 18843
+  },
+  {
+   "qid": "Q387256",
+   "label": "Śniardwy",
+   "links": 45,
+   "value": 113800000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Śniardwy Gölü",
+   "country": [
+    "Polonya"
+   ],
+   "tr_views": 45
+  },
+  {
+   "qid": "Q14426",
+   "label": "Thun Gölü",
+   "links": 44,
+   "value": 43800000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Thun Gölü",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 475
+  },
+  {
+   "qid": "Q158077",
+   "label": "Doyran Gölü",
+   "links": 44,
+   "value": 43100000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Doyran Gölü",
+   "country": [
+    "Kuzey Makedonya",
+    "Yunanistan"
+   ],
+   "tr_views": 975
+  },
+  {
+   "qid": "Q213769",
+   "label": "Päijänne Gölü",
+   "links": 44,
+   "value": 1082885100.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Päijänne Gölü",
+   "country": [
+    "Finlandiya"
+   ],
+   "tr_views": 83
+  },
+  {
+   "qid": "Q3369",
+   "label": "Müritz Gölü",
+   "links": 44,
+   "value": 112600000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Müritz Gölü",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q753898",
+   "label": "Argentino Gölü",
+   "links": 44,
+   "value": 1415000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Argentino Gölü",
+   "country": [
+    "Arjantin"
+   ],
+   "tr_views": 245
+  },
+  {
+   "qid": "Q14442",
+   "label": "Brienz Gölü",
+   "links": 43,
+   "value": 29800000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Brienz Gölü",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 733
+  },
+  {
+   "qid": "Q211425",
+   "label": "Hjälmaren Gölü",
+   "links": 43,
+   "value": 483000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hjälmaren Gölü",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 84
+  },
+  {
+   "qid": "Q714023",
+   "label": "Cennet Gölü",
+   "links": 43,
+   "value": 9820000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cennet Gölü",
+   "country": [
+    "Kuzey Kore",
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 292
+  },
+  {
+   "qid": "Q736707",
+   "label": "St. Clair Gölü",
+   "links": 43,
+   "value": 1114000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "St. Clair Gölü",
+   "country": [
+    "Amerika Birleşik Devletleri",
+    "Kanada"
+   ],
+   "tr_views": 190
+  },
+  {
+   "qid": "Q1522557",
+   "label": "Retba Gölü",
+   "links": 42,
+   "value": 3000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Retba Gölü",
+   "country": [
+    "Senegal"
+   ],
+   "tr_views": 615
+  },
+  {
+   "qid": "Q306194",
+   "label": "Abbe Gölü",
+   "links": 42,
+   "value": 320000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Abbe Gölü",
+   "country": [
+    "Cibuti",
+    "Etiyopya"
+   ],
+   "tr_views": 108
+  },
+  {
+   "qid": "Q537374",
+   "label": "Hulun Gölü",
+   "links": 42,
+   "value": 2399000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hulun Gölü",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 143
+  },
+  {
+   "qid": "Q1365115",
+   "label": "Naivasha Gölü",
+   "links": 41,
+   "value": 139000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Naivasha Gölü",
+   "country": [
+    "Kenya"
+   ],
+   "tr_views": 105
+  },
+  {
+   "qid": "Q13700",
+   "label": "Texcoco Gölü",
+   "links": 41,
+   "value": 2000000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Texcoco Gölü",
+   "country": [
+    "Meksika"
+   ],
+   "tr_views": 1584
+  },
+  {
+   "qid": "Q14448",
+   "label": "Murten Gölü",
+   "links": 41,
+   "value": 22800000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Murten Gölü",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 87
+  },
+  {
+   "qid": "Q265336",
+   "label": "Ammersee",
+   "links": 41,
+   "value": 46600000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ammersee",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q335432",
+   "label": "Þingvallavatn",
+   "links": 41,
+   "value": 83000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Þingvallavatn",
+   "country": [
+    "İzlanda"
+   ],
+   "tr_views": 36
+  },
+  {
+   "qid": "Q503842",
+   "label": "General Carrera Gölü",
+   "links": 41,
+   "value": 1850000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "General Carrera Gölü",
+   "country": [
+    "Arjantin",
+    "Şili"
+   ],
+   "tr_views": 180
+  },
+  {
+   "qid": "Q575679",
+   "label": "Alaotra Gölü",
+   "links": 41,
+   "value": 450000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Alaotra Gölü",
+   "country": [
+    "Madagaskar"
+   ],
+   "tr_views": 59
+  },
+  {
+   "qid": "Q611206",
+   "label": "Bosten Gölü",
+   "links": 41,
+   "value": 1010000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bosten Gölü",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 318
+  },
+  {
+   "qid": "Q790453",
+   "label": "Baringo Gölü",
+   "links": 41,
+   "value": 168000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Baringo Gölü",
+   "country": [
+    "Kenya"
+   ],
+   "tr_views": 70
+  },
+  {
+   "qid": "Q831903",
+   "label": "Bohinj Gölü",
+   "links": 41,
+   "value": 3180000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bohinj Gölü",
+   "country": [
+    "Slovenya"
+   ],
+   "tr_views": 209
+  },
+  {
+   "qid": "Q14436",
+   "label": "Zug Gölü",
+   "links": 40,
+   "value": 2440000.0,
+   "rank": "normal",
+   "value_year": 2007,
+   "tr_title": "Zug Gölü",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 169
+  },
+  {
+   "qid": "Q14436",
+   "label": "Zug Gölü",
+   "links": 40,
+   "value": 11710000.0,
+   "rank": "normal",
+   "value_year": 2007,
+   "tr_title": "Zug Gölü",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 169
+  },
+  {
+   "qid": "Q14436",
+   "label": "Zug Gölü",
+   "links": 40,
+   "value": 24290000.0,
+   "rank": "normal",
+   "value_year": 2007,
+   "tr_title": "Zug Gölü",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 169
+  },
+  {
+   "qid": "Q14436",
+   "label": "Zug Gölü",
+   "links": 40,
+   "value": 38300000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zug Gölü",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 169
+  },
+  {
+   "qid": "Q202905",
+   "label": "Okeechobee Gölü",
+   "links": 40,
+   "value": 1890000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Okeechobee Gölü",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 287
+  },
+  {
+   "qid": "Q498671",
+   "label": "Hillier Gölü",
+   "links": 40,
+   "value": 15000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hillier Gölü",
+   "country": [
+    "Avustralya"
+   ],
+   "tr_views": 730
+  },
+  {
+   "qid": "Q63141",
+   "label": "Orta Gölü",
+   "links": 40,
+   "value": 18200000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Orta Gölü",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 61
+  },
+  {
+   "qid": "Q1422965",
+   "label": "Trihonida Gölü",
+   "links": 39,
+   "value": 98600000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Trihonida Gölü",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 110
+  },
+  {
+   "qid": "Q200003",
+   "label": "Hornindalsvatnet",
+   "links": 39,
+   "value": 50755800.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hornindalsvatnet",
+   "country": [
+    "Norveç"
+   ],
+   "tr_views": 271
+  },
+  {
+   "qid": "Q546146",
+   "label": "Wörthersee",
+   "links": 39,
+   "value": 19390000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Wörthersee",
+   "country": [
+    "Avusturya"
+   ],
+   "tr_views": 215
+  },
+  {
+   "qid": "Q1072342",
+   "label": "Moraine Gölü",
+   "links": 38,
+   "value": 500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Moraine Gölü",
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 429
+  },
+  {
+   "qid": "Q1330952",
+   "label": "Karun Gölü",
+   "links": 38,
+   "value": 600000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karun Gölü",
+   "country": [
+    "Mısır"
+   ],
+   "tr_views": 181
+  },
+  {
+   "qid": "Q580019",
+   "label": "Oulujärvi",
+   "links": 38,
+   "value": 887093000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Oulujärvi",
+   "country": [
+    "Finlandiya"
+   ],
+   "tr_views": 36
+  },
+  {
+   "qid": "Q953140",
+   "label": "Beyaz Göl",
+   "links": 38,
+   "value": 1130000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Beyaz Göl (Vologda Oblastı)",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 116
+  },
+  {
+   "qid": "Q187763",
+   "label": "Zell Gölü",
+   "links": 37,
+   "value": 4550000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zell Gölü",
+   "country": [
+    "Avusturya"
+   ],
+   "tr_views": 102
+  },
+  {
+   "qid": "Q265997",
+   "label": "İmandra Gölü",
+   "links": 37,
+   "value": 876000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İmandra Gölü",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 72
+  },
+  {
+   "qid": "Q390370",
+   "label": "Windermere",
+   "links": 37,
+   "value": 14730000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Windermere",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 302
+  },
+  {
+   "qid": "Q526440",
+   "label": "Büyük Acı Göl",
+   "links": 37,
+   "value": 250000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük Acı Göl",
+   "country": [
+    "Mısır"
+   ],
+   "tr_views": 1610
+  },
+  {
+   "qid": "Q826464",
+   "label": "Llanquihue Gölü",
+   "links": 37,
+   "value": 860000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Llanquihue Gölü",
+   "country": [
+    "Şili"
+   ],
+   "tr_views": 58
+  },
+  {
+   "qid": "Q827202",
+   "label": "Karaçay Gölü",
+   "links": 37,
+   "value": 500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karaçay Gölü",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 2652
+  },
+  {
+   "qid": "Q848917",
+   "label": "Lough Corrib",
+   "links": 37,
+   "value": 176000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lough Corrib",
+   "country": [
+    "İrlanda"
+   ],
+   "tr_views": 46
+  },
+  {
+   "qid": "Q120352",
+   "label": "Paravani Gölü",
+   "links": 36,
+   "value": 37500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Paravani Gölü",
+   "country": [
+    "Gürcistan"
+   ],
+   "tr_views": 204
+  },
+  {
+   "qid": "Q310547",
+   "label": "Alagöl",
+   "links": 36,
+   "value": 2650000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Alagöl",
+   "country": [
+    "Kazakistan"
+   ],
+   "tr_views": 307
+  },
+  {
+   "qid": "Q628327",
+   "label": "Rakshastal Gölü",
+   "links": 36,
+   "value": 250000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rakshastal Gölü",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 175
+  },
+  {
+   "qid": "Q716206",
+   "label": "Güneş Ay Gölü",
+   "links": 36,
+   "value": 7930000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Güneş Ay Gölü",
+   "country": [
+    "Tayvan"
+   ],
+   "tr_views": 124
+  },
+  {
+   "qid": "Q747554",
+   "label": "Naraç Gölü",
+   "links": 36,
+   "value": 79200000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Naraç Gölü",
+   "country": [
+    "Belarus"
+   ],
+   "tr_views": 79
+  },
+  {
+   "qid": "Q1334148",
+   "label": "Eğirdir Gölü",
+   "links": 35,
+   "value": 482000000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Eğirdir Gölü",
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 14331
+  },
+  {
+   "qid": "Q1334148",
+   "label": "Eğirdir Gölü",
+   "links": 35,
+   "value": 517000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eğirdir Gölü",
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 14331
+  },
+  {
+   "qid": "Q14444",
+   "label": "Walen Gölü",
+   "links": 35,
+   "value": 24000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Walen Gölü",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 296
+  },
+  {
+   "qid": "Q369923",
+   "label": "Beyşehir Gölü",
+   "links": 35,
+   "value": 650000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Beyşehir Gölü",
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 22155
+  },
+  {
+   "qid": "Q629354",
+   "label": "Storsjön Gölü",
+   "links": 35,
+   "value": 456000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Storsjön Gölü",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 75
+  },
+  {
+   "qid": "Q629354",
+   "label": "Storsjön Gölü",
+   "links": 35,
+   "value": 456266577.314,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Storsjön Gölü",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 75
+  },
+  {
+   "qid": "Q746304",
+   "label": "Seliger Gölü",
+   "links": 35,
+   "value": 212000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Seliger Gölü",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 90
+  },
+  {
+   "qid": "Q931708",
+   "label": "Tengiz",
+   "links": 35,
+   "value": 1590000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tengiz",
+   "country": [
+    "Kazakistan"
+   ],
+   "tr_views": 539
+  },
+  {
+   "qid": "Q1315570",
+   "label": "Fagnano Gölü",
+   "links": 34,
+   "value": 590000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fagnano Gölü",
+   "country": [
+    "Arjantin",
+    "Şili"
+   ],
+   "tr_views": 55
+  },
+  {
+   "qid": "Q215818",
+   "label": "Torneträsk",
+   "links": 34,
+   "value": 329852029.806,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Torneträsk Gölü",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 120
+  },
+  {
+   "qid": "Q217430",
+   "label": "Siljan Gölü",
+   "links": 34,
+   "value": 292000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Siljan Gölü",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 61
+  },
+  {
+   "qid": "Q217430",
+   "label": "Siljan Gölü",
+   "links": 34,
+   "value": 292436877.401,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Siljan Gölü",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 61
+  },
+  {
+   "qid": "Q250907",
+   "label": "Traunsee",
+   "links": 34,
+   "value": 24350000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Traunsee",
+   "country": [
+    "Avusturya"
+   ],
+   "tr_views": 363
+  },
+  {
+   "qid": "Q597311",
+   "label": "Drukşiai Gölü",
+   "links": 34,
+   "value": 44790000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Drūkšiai Gölü",
+   "country": [
+    "Belarus",
+    "Litvanya"
+   ],
+   "tr_views": 32
+  },
+  {
+   "qid": "Q782399",
+   "label": "Mar Chiquita",
+   "links": 34,
+   "value": 5770000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mar Chiquita",
+   "country": [
+    "Arjantin"
+   ],
+   "tr_views": 87
+  },
+  {
+   "qid": "Q824371",
+   "label": "Näsijärvi Gölü",
+   "links": 34,
+   "value": 210644000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Näsijärvi Gölü",
+   "country": [
+    "Finlandiya"
+   ],
+   "tr_views": 57
+  },
+  {
+   "qid": "Q939604",
+   "label": "Yamdrok Gölü",
+   "links": 34,
+   "value": 640000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yamdrok Gölü",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 265
+  },
+  {
+   "qid": "Q1330800",
+   "label": "Mamry Gölü",
+   "links": 33,
+   "value": 104000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mamry Gölü",
+   "country": [
+    "Polonya"
+   ],
+   "tr_views": 55
+  },
+  {
+   "qid": "Q615711",
+   "label": "Achensee",
+   "links": 33,
+   "value": 6800000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Achensee",
+   "country": [
+    "Avusturya"
+   ],
+   "tr_views": 351
+  },
+  {
+   "qid": "Q845891",
+   "label": "Pielinen Gölü",
+   "links": 33,
+   "value": 894207030.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pielinen Gölü",
+   "country": [
+    "Finlandiya"
+   ],
+   "tr_views": 35
+  },
+  {
+   "qid": "Q1315765",
+   "label": "Vıgozero Gölü",
+   "links": 32,
+   "value": 1250000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vıgozero Gölü",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 63
+  },
+  {
+   "qid": "Q1331750",
+   "label": "Pontchartrain Gölü",
+   "links": 32,
+   "value": 1839000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pontchartrain Gölü",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 282
+  },
+  {
+   "qid": "Q1515717",
+   "label": "Pühajärv",
+   "links": 32,
+   "value": 2933000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pühajärv",
+   "country": [
+    "Estonya"
+   ],
+   "tr_views": 3
+  },
+  {
+   "qid": "Q2298945",
+   "label": "Son Göl",
+   "links": 32,
+   "value": 275000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Son Göl",
+   "country": [
+    "Kırgızistan"
+   ],
+   "tr_views": 709
+  },
+  {
+   "qid": "Q83628",
+   "label": "Erhai Gölü",
+   "links": 32,
+   "value": 252910000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Erhai Gölü",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 65
+  },
+  {
+   "qid": "Q845880",
+   "label": "Hornavan Gölü",
+   "links": 32,
+   "value": 262000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hornavan Gölü",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 77
+  },
+  {
+   "qid": "Q845880",
+   "label": "Hornavan Gölü",
+   "links": 32,
+   "value": 262392214.26900002,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hornavan Gölü",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 77
+  },
+  {
+   "qid": "Q932408",
+   "label": "Sørvágsvatn",
+   "links": 32,
+   "value": 3400000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sørvágsvatn",
+   "country": [
+    "Faroe Adaları"
+   ],
+   "tr_views": 349
+  },
+  {
+   "qid": "Q1077984",
+   "label": "Kasumigaura Gölü",
+   "links": 31,
+   "value": 168110000.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "tr_title": "Kasumigaura Gölü",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 77
+  },
+  {
+   "qid": "Q1154914",
+   "label": "Hongze Gölü",
+   "links": 31,
+   "value": 1960000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hongze Gölü",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 53
+  },
+  {
+   "qid": "Q1384940",
+   "label": "Lanao Gölü",
+   "links": 31,
+   "value": 354600000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lanao Gölü",
+   "country": [
+    "Filipinler"
+   ],
+   "tr_views": 33
+  },
+  {
+   "qid": "Q1471913",
+   "label": "Kurile Gölü",
+   "links": 31,
+   "value": 77000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kurile Gölü",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 217
+  },
+  {
+   "qid": "Q1922031",
+   "label": "Ebinur Gölü",
+   "links": 31,
+   "value": 500000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ebinur Gölü",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 126
+  },
+  {
+   "qid": "Q311217",
+   "label": "Schwerin Gölü",
+   "links": 31,
+   "value": 61540000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Schwerin Gölü",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q696445",
+   "label": "Tyrifjorden",
+   "links": 31,
+   "value": 138560000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tyrifjorden",
+   "country": [
+    "Norveç"
+   ],
+   "tr_views": 82
+  },
+  {
+   "qid": "Q709323",
+   "label": "Topozero Gölü",
+   "links": 31,
+   "value": 986000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Topozero Gölü",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 52
+  },
+  {
+   "qid": "Q941342",
+   "label": "Junin Gölü",
+   "links": 31,
+   "value": 260000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Junin Gölü",
+   "country": [
+    "Peru"
+   ],
+   "tr_views": 128
+  },
+  {
+   "qid": "Q1324180",
+   "label": "Lough Erne",
+   "links": 30,
+   "value": 105100000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lough Erne",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 76
+  },
+  {
+   "qid": "Q1324437",
+   "label": "Femund",
+   "links": 30,
+   "value": 203396400.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Femund",
+   "country": [
+    "Norveç"
+   ],
+   "tr_views": 35
+  },
+  {
+   "qid": "Q14459",
+   "label": "Sempach Gölü",
+   "links": 30,
+   "value": 14400000.0,
+   "rank": "normal",
+   "value_year": 2006,
+   "tr_title": "Sempach Gölü",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 82
+  },
+  {
+   "qid": "Q14459",
+   "label": "Sempach Gölü",
+   "links": 30,
+   "value": 14500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sempach Gölü",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 82
+  },
+  {
+   "qid": "Q14512",
+   "label": "Sils Gölü",
+   "links": 30,
+   "value": 4100000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sils Gölü",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 110
+  },
+  {
+   "qid": "Q1456246",
+   "label": "Saadjärv",
+   "links": 30,
+   "value": 7235000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saadjärv",
+   "country": [
+    "Estonya"
+   ],
+   "tr_views": 21
+  },
+  {
+   "qid": "Q1463552",
+   "label": "Kubena Gölü",
+   "links": 30,
+   "value": 407000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kubena Gölü",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 43
+  },
+  {
+   "qid": "Q1717706",
+   "label": "Veisjärv",
+   "links": 30,
+   "value": 4807000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Veisjärv",
+   "country": [
+    "Estonya"
+   ],
+   "tr_views": 4
+  },
+  {
+   "qid": "Q1723644",
+   "label": "Kanas Gölü",
+   "links": 30,
+   "value": 44780000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kanas Gölü",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 277
+  },
+  {
+   "qid": "Q3358037",
+   "label": "Kuzey Aral Gölü",
+   "links": 30,
+   "value": 2550000000.0,
+   "rank": "normal",
+   "value_year": 2003,
+   "tr_title": "Kuzey Aral Gölü",
+   "country": [
+    "Kazakistan"
+   ],
+   "tr_views": 255
+  },
+  {
+   "qid": "Q3358037",
+   "label": "Kuzey Aral Gölü",
+   "links": 30,
+   "value": 3105000000.0,
+   "rank": "normal",
+   "value_year": 2007,
+   "tr_title": "Kuzey Aral Gölü",
+   "country": [
+    "Kazakistan"
+   ],
+   "tr_views": 255
+  },
+  {
+   "qid": "Q3358037",
+   "label": "Kuzey Aral Gölü",
+   "links": 30,
+   "value": 3300000000.0,
+   "rank": "preferred",
+   "value_year": 2008,
+   "tr_title": "Kuzey Aral Gölü",
+   "country": [
+    "Kazakistan"
+   ],
+   "tr_views": 255
+  },
+  {
+   "qid": "Q792880",
+   "label": "Ayding Gölü",
+   "links": 30,
+   "value": 152000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ayding Gölü",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 267
+  },
+  {
+   "qid": "Q826447",
+   "label": "Bodom Gölü",
+   "links": 30,
+   "value": 4123100.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bodom Gölü",
+   "country": [
+    "Finlandiya"
+   ],
+   "tr_views": 678
+  },
+  {
+   "qid": "Q918349",
+   "label": "Lough Derg (Shannon)",
+   "links": 30,
+   "value": 118000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lough Derg (Shannon)",
+   "country": [
+    "İrlanda"
+   ],
+   "tr_views": 32
+  },
+  {
+   "qid": "Q1140471",
+   "label": "Te Anau Gölü",
+   "links": 29,
+   "value": 344000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Te Anau Gölü",
+   "country": [
+    "Yeni Zelanda"
+   ],
+   "tr_views": 92
+  },
+  {
+   "qid": "Q1282738",
+   "label": "Lubāns Gölü",
+   "links": 29,
+   "value": 80700000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lubāns Gölü",
+   "country": [
+    "Letonya"
+   ],
+   "tr_views": 38
+  },
+  {
+   "qid": "Q1291135",
+   "label": "Eyasi Gölü",
+   "links": 29,
+   "value": 1050000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eyasi Gölü",
+   "country": [
+    "Tanzanya"
+   ],
+   "tr_views": 204
+  },
+  {
+   "qid": "Q1351120",
+   "label": "Lugu Gölü",
+   "links": 29,
+   "value": 48500000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lugu Gölü",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 152
+  },
+  {
+   "qid": "Q14515",
+   "label": "Silvaplana Gölü",
+   "links": 29,
+   "value": 3100000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Silvaplana Gölü",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 108
+  },
+  {
+   "qid": "Q174645",
+   "label": "Walchensee",
+   "links": 29,
+   "value": 16.27,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Walchensee",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q1887719",
+   "label": "Malombe Gölü",
+   "links": 29,
+   "value": 390000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Malombe Gölü",
+   "country": [
+    "Malavi"
+   ],
+   "tr_views": 20
+  },
+  {
+   "qid": "Q192369",
+   "label": "İznik Gölü",
+   "links": 29,
+   "value": 290000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İznik Gölü",
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 16374
+  },
+  {
+   "qid": "Q2627792",
+   "label": "Peipus",
+   "links": 29,
+   "value": 2613000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Peipus Gölü",
+   "country": [
+    "Estonya",
+    "Rusya"
+   ],
+   "tr_views": 783
+  },
+  {
+   "qid": "Q295272",
+   "label": "Nemek Gölü",
+   "links": 29,
+   "value": 1000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nemek Gölü",
+   "country": [
+    "İran"
+   ],
+   "tr_views": 161
+  },
+  {
+   "qid": "Q295272",
+   "label": "Nemek Gölü",
+   "links": 29,
+   "value": 1800000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nemek Gölü",
+   "country": [
+    "İran"
+   ],
+   "tr_views": 161
+  },
+  {
+   "qid": "Q370992",
+   "label": "Küçük Prespa Gölü",
+   "links": 29,
+   "value": 46800000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Küçük Prespa Gölü",
+   "country": [
+    "Arnavutluk",
+    "Yunanistan"
+   ],
+   "tr_views": 157
+  },
+  {
+   "qid": "Q3736634",
+   "label": "Vagula Gölü",
+   "links": 29,
+   "value": 6033000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vagula Gölü",
+   "country": [
+    "Estonya"
+   ],
+   "tr_views": 6
+  },
+  {
+   "qid": "Q384811",
+   "label": "Don Juan Gölü",
+   "links": 29,
+   "value": 30000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Don Juan Gölü",
+   "country": [
+    "Yeni Zelanda"
+   ],
+   "tr_views": 815
+  },
+  {
+   "qid": "Q545033",
+   "label": "Randsfjorden",
+   "links": 29,
+   "value": 140686700.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Randsfjorden",
+   "country": [
+    "Norveç"
+   ],
+   "tr_views": 34
+  },
+  {
+   "qid": "Q5633",
+   "label": "Vištytis Gölü",
+   "links": 29,
+   "value": 17890000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vištytis Gölü",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 71
+  },
+  {
+   "qid": "Q576856",
+   "label": "Tunus Gölü",
+   "links": 29,
+   "value": 37000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tunus Gölü",
+   "country": [
+    "Tunus"
+   ],
+   "tr_views": 131
+  },
+  {
+   "qid": "Q658234",
+   "label": "Nero Gölü",
+   "links": 29,
+   "value": 54400000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nero Gölü",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 82
+  },
+  {
+   "qid": "Q847072",
+   "label": "Velence Gölü",
+   "links": 29,
+   "value": 24900000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Velence Gölü",
+   "country": [
+    "Macaristan"
+   ],
+   "tr_views": 82
+  },
+  {
+   "qid": "Q864853",
+   "label": "Çatır Gölü",
+   "links": 29,
+   "value": 181000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çatır Gölü",
+   "country": [
+    "Kırgızistan"
+   ],
+   "tr_views": 152
+  },
+  {
+   "qid": "Q923693",
+   "label": "Yellowstone Gölü",
+   "links": 29,
+   "value": 354000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yellowstone Gölü",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 450
+  },
+  {
+   "qid": "Q1071180",
+   "label": "Karakul Gölü",
+   "links": 28,
+   "value": 4800000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karakul Gölü",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 518
+  },
+  {
+   "qid": "Q1074063",
+   "label": "Mackay Gölü",
+   "links": 28,
+   "value": 4737000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mackay Gölü",
+   "country": [
+    "Avustralya"
+   ],
+   "tr_views": 70
+  },
+  {
+   "qid": "Q1305720",
+   "label": "Yojoa Gölü",
+   "links": 28,
+   "value": 90000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yojoa Gölü",
+   "country": [
+    "Honduras"
+   ],
+   "tr_views": 123
+  },
+  {
+   "qid": "Q1323267",
+   "label": "Khar-Us Gölü",
+   "links": 28,
+   "value": 1578000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Har-Us Gölü",
+   "country": [
+    "Moğolistan"
+   ],
+   "tr_views": 34
+  },
+  {
+   "qid": "Q1327873",
+   "label": "Laguna Colorada",
+   "links": 28,
+   "value": 60000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Laguna Colorada",
+   "country": [
+    "Bolivya"
+   ],
+   "tr_views": 166
+  }
+ ]
+}
