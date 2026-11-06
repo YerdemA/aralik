@@ -1,0 +1,693 @@
+{
+ "source": "https://davidmegginson.github.io/ourairports-data/",
+ "fetched": "2026-11-06",
+ "airports": {
+  "EGLL": {
+   "name": "London Heathrow Airport",
+   "municipality": "London",
+   "iso_country": "GB",
+   "type": "large_airport",
+   "elevation_ft": 83,
+   "runways": [
+    {
+     "ident": "09L/27R",
+     "length_ft": 12799,
+     "surface": "ASP",
+     "closed": false
+    },
+    {
+     "ident": "09R/27L",
+     "length_ft": 12001,
+     "surface": "ASP",
+     "closed": false
+    }
+   ]
+  },
+  "FAOR": {
+   "name": "O.R. Tambo International Airport",
+   "municipality": "Johannesburg",
+   "iso_country": "ZA",
+   "type": "large_airport",
+   "elevation_ft": 5558,
+   "runways": [
+    {
+     "ident": "03L/21R",
+     "length_ft": 14495,
+     "surface": "ASP",
+     "closed": false
+    },
+    {
+     "ident": "03R/21L",
+     "length_ft": 11155,
+     "surface": "ASP",
+     "closed": false
+    }
+   ]
+  },
+  "HAAB": {
+   "name": "Addis Ababa Bole International Airport",
+   "municipality": "Addis Ababa",
+   "iso_country": "ET",
+   "type": "large_airport",
+   "elevation_ft": 7630,
+   "runways": [
+    {
+     "ident": "07L/25R",
+     "length_ft": 12139,
+     "surface": "ASP",
+     "closed": false
+    },
+    {
+     "ident": "07R/25L",
+     "length_ft": 12467,
+     "surface": "ASP",
+     "closed": false
+    }
+   ]
+  },
+  "HKJK": {
+   "name": "Jomo Kenyatta International Airport",
+   "municipality": "Nairobi",
+   "iso_country": "KE",
+   "type": "large_airport",
+   "elevation_ft": 5330,
+   "runways": [
+    {
+     "ident": "06/24",
+     "length_ft": 13507,
+     "surface": "ASP",
+     "closed": false
+    }
+   ]
+  },
+  "KDEN": {
+   "name": "Denver International Airport",
+   "municipality": "Denver",
+   "iso_country": "US",
+   "type": "large_airport",
+   "elevation_ft": 5431,
+   "runways": [
+    {
+     "ident": "07/25",
+     "length_ft": 12000,
+     "surface": "CON",
+     "closed": false
+    },
+    {
+     "ident": "08/26",
+     "length_ft": 12000,
+     "surface": "CON",
+     "closed": false
+    },
+    {
+     "ident": "16L/34R",
+     "length_ft": 12000,
+     "surface": "CON",
+     "closed": false
+    },
+    {
+     "ident": "16R/34L",
+     "length_ft": 16000,
+     "surface": "CON",
+     "closed": false
+    },
+    {
+     "ident": "17L/35R",
+     "length_ft": 12000,
+     "surface": "CON",
+     "closed": false
+    },
+    {
+     "ident": "17R/35L",
+     "length_ft": 12000,
+     "surface": "CON",
+     "closed": false
+    }
+   ]
+  },
+  "LFPG": {
+   "name": "Charles de Gaulle International Airport",
+   "municipality": "Paris (Roissy-en-France, Val-d'Oise)",
+   "iso_country": "FR",
+   "type": "large_airport",
+   "elevation_ft": 392,
+   "runways": [
+    {
+     "ident": "08H/26H",
+     "length_ft": 1444,
+     "surface": "GRASS",
+     "closed": false
+    },
+    {
+     "ident": "08L/26R",
+     "length_ft": 13829,
+     "surface": "ASP",
+     "closed": false
+    },
+    {
+     "ident": "08R/26L",
+     "length_ft": 8858,
+     "surface": "CON",
+     "closed": false
+    },
+    {
+     "ident": "09L/27R",
+     "length_ft": 8858,
+     "surface": "ASP",
+     "closed": false
+    },
+    {
+     "ident": "09R/27L",
+     "length_ft": 13780,
+     "surface": "ASP",
+     "closed": false
+    }
+   ]
+  },
+  "LTAC": {
+   "name": "Esenboğa International Airport",
+   "municipality": "Ankara",
+   "iso_country": "TR",
+   "type": "large_airport",
+   "elevation_ft": 3125,
+   "runways": [
+    {
+     "ident": "03C/21C",
+     "length_ft": 12310,
+     "surface": "asphalt",
+     "closed": false
+    },
+    {
+     "ident": "03L/21R",
+     "length_ft": 11125,
+     "surface": "ASP",
+     "closed": false
+    },
+    {
+     "ident": "03R/21L",
+     "length_ft": 12303,
+     "surface": "ASP",
+     "closed": false
+    }
+   ]
+  },
+  "LTAJ": {
+   "name": "Gaziantep Oğuzeli International Airport",
+   "municipality": "Gaziantep",
+   "iso_country": "TR",
+   "type": "large_airport",
+   "elevation_ft": 2315,
+   "runways": [
+    {
+     "ident": "10L/28R",
+     "length_ft": 9842,
+     "surface": "PEM",
+     "closed": false
+    },
+    {
+     "ident": "10R/28L",
+     "length_ft": 9842,
+     "surface": "CON",
+     "closed": true
+    }
+   ]
+  },
+  "LTAN": {
+   "name": "Konya Airport",
+   "municipality": "Konya",
+   "iso_country": "TR",
+   "type": "large_airport",
+   "elevation_ft": 3392,
+   "runways": [
+    {
+     "ident": "01L/19R",
+     "length_ft": 10990,
+     "surface": "PEM",
+     "closed": false
+    },
+    {
+     "ident": "01R/19L",
+     "length_ft": 10990,
+     "surface": "PEM",
+     "closed": false
+    }
+   ]
+  },
+  "LTAR": {
+   "name": "Sivas Nuri Demirağ Airport",
+   "municipality": "Sivas",
+   "iso_country": "TR",
+   "type": "medium_airport",
+   "elevation_ft": 5239,
+   "runways": [
+    {
+     "ident": "01/19",
+     "length_ft": 12503,
+     "surface": "CON",
+     "closed": false
+    }
+   ]
+  },
+  "LTAU": {
+   "name": "Kayseri Erkilet International Airport",
+   "municipality": "Kayseri",
+   "iso_country": "TR",
+   "type": "large_airport",
+   "elevation_ft": 3463,
+   "runways": [
+    {
+     "ident": "07/25",
+     "length_ft": 9841,
+     "surface": "CON",
+     "closed": false
+    }
+   ]
+  },
+  "LTAZ": {
+   "name": "Nevşehir Kapadokya Airport",
+   "municipality": "Nevşehir",
+   "iso_country": "TR",
+   "type": "large_airport",
+   "elevation_ft": 3100,
+   "runways": [
+    {
+     "ident": "11/29",
+     "length_ft": 9842,
+     "surface": "CON",
+     "closed": false
+    }
+   ]
+  },
+  "LTBY": {
+   "name": "Hasan Polatkan Airport",
+   "municipality": "Eskişehir",
+   "iso_country": "TR",
+   "type": "large_airport",
+   "elevation_ft": 2588,
+   "runways": [
+    {
+     "ident": "09/27",
+     "length_ft": 8261,
+     "surface": "ASP",
+     "closed": false
+    }
+   ]
+  },
+  "LTCC": {
+   "name": "Diyarbakır Airport",
+   "municipality": "Diyarbakır",
+   "iso_country": "TR",
+   "type": "medium_airport",
+   "elevation_ft": 2251,
+   "runways": [
+    {
+     "ident": "16L/34R",
+     "length_ft": 11644,
+     "surface": "CON",
+     "closed": false
+    },
+    {
+     "ident": "16R/34L",
+     "length_ft": 11644,
+     "surface": "CONC",
+     "closed": false
+    }
+   ]
+  },
+  "LTCE": {
+   "name": "Erzurum International Airport",
+   "municipality": "Erzurum",
+   "iso_country": "TR",
+   "type": "medium_airport",
+   "elevation_ft": 5763,
+   "runways": [
+    {
+     "ident": "05/23",
+     "length_ft": 3051,
+     "surface": "ASP",
+     "closed": true
+    },
+    {
+     "ident": "08L/26R",
+     "length_ft": 12499,
+     "surface": "CON",
+     "closed": false
+    },
+    {
+     "ident": "08R/26L",
+     "length_ft": 12500,
+     "surface": "CON",
+     "closed": false
+    }
+   ]
+  },
+  "LTCF": {
+   "name": "Kars Airport",
+   "municipality": "Kars",
+   "iso_country": "TR",
+   "type": "medium_airport",
+   "elevation_ft": 5889,
+   "runways": [
+    {
+     "ident": "06/24",
+     "length_ft": 11483,
+     "surface": "CON",
+     "closed": false
+    }
+   ]
+  },
+  "LTCI": {
+   "name": "Van Ferit Melen Airport",
+   "municipality": "Van",
+   "iso_country": "TR",
+   "type": "medium_airport",
+   "elevation_ft": 5480,
+   "runways": [
+    {
+     "ident": "03/21",
+     "length_ft": 9022,
+     "surface": "ASP",
+     "closed": false
+    }
+   ]
+  },
+  "LTCK": {
+   "name": "Muş Airport",
+   "municipality": "Muş",
+   "iso_country": "TR",
+   "type": "medium_airport",
+   "elevation_ft": 4157,
+   "runways": [
+    {
+     "ident": "11/29",
+     "length_ft": 11649,
+     "surface": "ASP",
+     "closed": false
+    }
+   ]
+  },
+  "LTCO": {
+   "name": "Ağrı Airport",
+   "municipality": "Ağrı",
+   "iso_country": "TR",
+   "type": "medium_airport",
+   "elevation_ft": 5462,
+   "runways": [
+    {
+     "ident": "16/34",
+     "length_ft": 9843,
+     "surface": "ASP",
+     "closed": false
+    }
+   ]
+  },
+  "LTCS": {
+   "name": "Şanlıurfa GAP Airport",
+   "municipality": "Şanlıurfa",
+   "iso_country": "TR",
+   "type": "large_airport",
+   "elevation_ft": 2708,
+   "runways": [
+    {
+     "ident": "04/22",
+     "length_ft": 13123,
+     "surface": "Asphalt",
+     "closed": false
+    }
+   ]
+  },
+  "LTCW": {
+   "name": "Hakkari Yüksekova Airport",
+   "municipality": "Hakkari",
+   "iso_country": "TR",
+   "type": "medium_airport",
+   "elevation_ft": 6400,
+   "runways": [
+    {
+     "ident": "11/29",
+     "length_ft": 10499,
+     "surface": "CON",
+     "closed": false
+    }
+   ]
+  },
+  "LTFJ": {
+   "name": "Istanbul Sabiha Gökçen International Airport",
+   "municipality": "Pendik, Istanbul",
+   "iso_country": "TR",
+   "type": "large_airport",
+   "elevation_ft": 312,
+   "runways": [
+    {
+     "ident": "06L/24R",
+     "length_ft": 9843,
+     "surface": "CON",
+     "closed": false
+    },
+    {
+     "ident": "06R/24L",
+     "length_ft": 11614,
+     "surface": "CON",
+     "closed": false
+    }
+   ]
+  },
+  "LTFM": {
+   "name": "İstanbul Airport",
+   "municipality": "Istanbul",
+   "iso_country": "TR",
+   "type": "large_airport",
+   "elevation_ft": 325,
+   "runways": [
+    {
+     "ident": "09/27",
+     "length_ft": 9250,
+     "surface": "CONC",
+     "closed": false
+    },
+    {
+     "ident": "16L/34R",
+     "length_ft": 12303,
+     "surface": "ASP",
+     "closed": false
+    },
+    {
+     "ident": "16R/34L",
+     "length_ft": 12303,
+     "surface": "ASP",
+     "closed": false
+    },
+    {
+     "ident": "17L/35R",
+     "length_ft": 13451,
+     "surface": "ASP",
+     "closed": false
+    },
+    {
+     "ident": "17R/35L",
+     "length_ft": 13451,
+     "surface": "ASP",
+     "closed": false
+    },
+    {
+     "ident": "18/36",
+     "length_ft": 10039,
+     "surface": "CON",
+     "closed": false
+    }
+   ]
+  },
+  "MMMX": {
+   "name": "Mexico City Benito Juárez International Airport",
+   "municipality": "Mexico City",
+   "iso_country": "MX",
+   "type": "large_airport",
+   "elevation_ft": 7316,
+   "runways": [
+    {
+     "ident": "05L/23R",
+     "length_ft": 12966,
+     "surface": "ASP",
+     "closed": false
+    },
+    {
+     "ident": "05R/23L",
+     "length_ft": 12795,
+     "surface": "ASP",
+     "closed": false
+    }
+   ]
+  },
+  "OAKB": {
+   "name": "Kabul International Airport",
+   "municipality": "Kabul",
+   "iso_country": "AF",
+   "type": "large_airport",
+   "elevation_ft": 5877,
+   "runways": [
+    {
+     "ident": "11/29",
+     "length_ft": 11483,
+     "surface": "ASP",
+     "closed": false
+    }
+   ]
+  },
+  "OMDB": {
+   "name": "Dubai International Airport",
+   "municipality": "Dubai",
+   "iso_country": "AE",
+   "type": "large_airport",
+   "elevation_ft": 62,
+   "runways": [
+    {
+     "ident": "12L/30R",
+     "length_ft": 14275,
+     "surface": "ASP",
+     "closed": false
+    },
+    {
+     "ident": "12R/30L",
+     "length_ft": 14590,
+     "surface": "ASP",
+     "closed": false
+    }
+   ]
+  },
+  "OTHH": {
+   "name": "Hamad International Airport",
+   "municipality": "Doha",
+   "iso_country": "QA",
+   "type": "large_airport",
+   "elevation_ft": 13,
+   "runways": [
+    {
+     "ident": "16L/34R",
+     "length_ft": 15912,
+     "surface": "Asphalt",
+     "closed": false
+    },
+    {
+     "ident": "16R/34L",
+     "length_ft": 13944,
+     "surface": "Asphalt",
+     "closed": false
+    }
+   ]
+  },
+  "SEQM": {
+   "name": "Mariscal Sucre International Airport",
+   "municipality": "Quito",
+   "iso_country": "EC",
+   "type": "large_airport",
+   "elevation_ft": 7841,
+   "runways": [
+    {
+     "ident": "18/36",
+     "length_ft": 13445,
+     "surface": "CON",
+     "closed": false
+    }
+   ]
+  },
+  "SKBO": {
+   "name": "El Dorado International Airport",
+   "municipality": "Bogota",
+   "iso_country": "CO",
+   "type": "large_airport",
+   "elevation_ft": 8361,
+   "runways": [
+    {
+     "ident": "14L/32R",
+     "length_ft": 12467,
+     "surface": "ASP",
+     "closed": false
+    },
+    {
+     "ident": "14R/32L",
+     "length_ft": 12467,
+     "surface": "ASP",
+     "closed": false
+    }
+   ]
+  },
+  "SLLP": {
+   "name": "El Alto International Airport",
+   "municipality": "La Paz / El Alto",
+   "iso_country": "BO",
+   "type": "large_airport",
+   "elevation_ft": 13355,
+   "runways": [
+    {
+     "ident": "10/28",
+     "length_ft": 13123,
+     "surface": "CON",
+     "closed": false
+    },
+    {
+     "ident": "10L/28R",
+     "length_ft": 6725,
+     "surface": "GRE",
+     "closed": false
+    }
+   ]
+  },
+  "SPZO": {
+   "name": "Alejandro Velasco Astete International Airport",
+   "municipality": "Cusco",
+   "iso_country": "PE",
+   "type": "large_airport",
+   "elevation_ft": 10860,
+   "runways": [
+    {
+     "ident": "10/28",
+     "length_ft": 11146,
+     "surface": "ASP",
+     "closed": false
+    }
+   ]
+  },
+  "ZUDC": {
+   "name": "Daocheng Yading Airport",
+   "municipality": "Garzê (Daocheng)",
+   "iso_country": "CN",
+   "type": "medium_airport",
+   "elevation_ft": 14472,
+   "runways": [
+    {
+     "ident": "16/34",
+     "length_ft": 13780,
+     "surface": "CON",
+     "closed": false
+    }
+   ]
+  },
+  "ZULS": {
+   "name": "Lhasa Gonggar International Airport",
+   "municipality": "Shannan (Gonggar)",
+   "iso_country": "CN",
+   "type": "large_airport",
+   "elevation_ft": 11713,
+   "runways": [
+    {
+     "ident": "09/27",
+     "length_ft": 13123,
+     "surface": "Concrete",
+     "closed": false
+    },
+    {
+     "ident": "10L/28R",
+     "length_ft": 13123,
+     "surface": "CON",
+     "closed": false
+    },
+    {
+     "ident": "10R/28L",
+     "length_ft": 13123,
+     "surface": "ASPH",
+     "closed": false
+    }
+   ]
+  }
+ }
+}

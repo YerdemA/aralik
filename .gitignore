@@ -76,3 +76,5 @@ tools/raw/wikipedia/
 
 # USDA SR Legacy arşivi (tools/import_foods.py --fetch); yalnızca çıkarılan değerler commit'lenir
 tools/raw/usda/sr_legacy.zip
+# OurAirports ham dosyaları (tools/import_airports.py --fetch); yalnızca çıkarılan değerler commit'lenir
+tools/raw/ourairports/*.csv

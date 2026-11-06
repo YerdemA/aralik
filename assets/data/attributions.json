@@ -28,6 +28,13 @@
   "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
  },
  {
+  "name": "OurAirports",
+  "attribution": "OurAirports, David Megginson ve katkıda bulunanlar. Veri kamu malına bırakılmıştır.",
+  "license": "Kamu malı",
+  "license_url": "https://ourairports.com/data/",
+  "url": "https://ourairports.com/"
+ },
+ {
   "name": "Vikipedi",
   "attribution": "Vikipedi gönüllüleri (tarih, mimari, sanat ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0",
   "license": "CC BY-SA 4.0",

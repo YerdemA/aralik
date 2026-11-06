@@ -30,6 +30,11 @@ aynı liste yer alır.
 - Lisans: [ABD kamu eseri](https://www.nasa.gov/nasa-brand-center/images-and-media/)
 - Adres: https://nssdc.gsfc.nasa.gov/planetary/factsheet/
 
+## OurAirports
+- OurAirports, David Megginson ve katkıda bulunanlar. Veri kamu malına bırakılmıştır.
+- Lisans: [Kamu malı](https://ourairports.com/data/)
+- Adres: https://ourairports.com/
+
 ## Vikipedi
 - Vikipedi gönüllüleri (tarih, mimari, sanat ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0
 - Lisans: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)

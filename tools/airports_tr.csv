@@ -1,0 +1,46 @@
+# OurAirports havalimanları, Türkçe adlarıyla. Okuyan: tools/import_airports.py
+# Sütunlar: ICAO kodu;soru (elevation: rakım, runway: en uzun pist);zorluk;kategori;Türkçe ad ("... Havalimanı" ile biter);fun_fact için konum (boşsa yok)
+# Satır silinmez: bankadaki sorular sabittir. Yeni satır sona eklenir.
+
+# --- Türkiye, rakım ---
+LTCW;elevation;2;türkiye;Hakkari Yüksekova Havalimanı;
+LTCE;elevation;2;türkiye;Erzurum Havalimanı;
+LTCF;elevation;3;türkiye;Kars Havalimanı;
+LTCI;elevation;2;türkiye;Van Ferit Melen Havalimanı;
+LTCO;elevation;3;türkiye;Ağrı Havalimanı;
+LTAR;elevation;3;türkiye;Sivas Nuri Demirağ Havalimanı;
+LTCK;elevation;3;türkiye;Muş Havalimanı;
+LTAU;elevation;2;türkiye;Kayseri Erkilet Havalimanı;
+LTAN;elevation;2;türkiye;Konya Havalimanı;
+LTAC;elevation;2;türkiye;Ankara Esenboğa Havalimanı;
+LTAZ;elevation;3;türkiye;Nevşehir Kapadokya Havalimanı;
+LTBY;elevation;3;türkiye;Eskişehir Hasan Polatkan Havalimanı;
+LTAJ;elevation;3;türkiye;Gaziantep Havalimanı;
+LTCC;elevation;3;türkiye;Diyarbakır Havalimanı;
+LTCS;elevation;3;türkiye;Şanlıurfa GAP Havalimanı;
+LTFM;elevation;2;türkiye;İstanbul Havalimanı;
+
+# --- Dünya, rakım ---
+SLLP;elevation;2;coğrafya;El Alto Havalimanı;La Paz, Bolivya
+ZUDC;elevation;3;coğrafya;Daocheng Yading Havalimanı;Sichuan, Çin
+ZULS;elevation;3;coğrafya;Lhasa Gonggar Havalimanı;Tibet, Çin
+SPZO;elevation;3;coğrafya;Cusco Havalimanı;Peru
+SKBO;elevation;3;coğrafya;Bogota El Dorado Havalimanı;Kolombiya
+SEQM;elevation;3;coğrafya;Quito Mariscal Sucre Havalimanı;Ekvador
+MMMX;elevation;2;coğrafya;Mexico City Benito Juárez Havalimanı;Meksika
+HAAB;elevation;3;coğrafya;Addis Ababa Bole Havalimanı;Etiyopya
+OAKB;elevation;3;coğrafya;Kabil Havalimanı;Afganistan
+KDEN;elevation;2;coğrafya;Denver Havalimanı;Colorado, ABD
+FAOR;elevation;3;coğrafya;Johannesburg O. R. Tambo Havalimanı;Güney Afrika
+HKJK;elevation;3;coğrafya;Nairobi Jomo Kenyatta Havalimanı;Kenya
+
+# --- En uzun pist ---
+LTFM;runway;2;türkiye;İstanbul Havalimanı;
+LTAC;runway;3;türkiye;Ankara Esenboğa Havalimanı;
+LTFJ;runway;3;türkiye;İstanbul Sabiha Gökçen Havalimanı;
+LTCE;runway;3;türkiye;Erzurum Havalimanı;
+KDEN;runway;3;mimari;Denver Havalimanı;Colorado, ABD
+OTHH;runway;3;mimari;Doha Hamad Havalimanı;Katar
+EGLL;runway;2;mimari;Londra Heathrow Havalimanı;Birleşik Krallık
+LFPG;runway;3;mimari;Paris Charles de Gaulle Havalimanı;Fransa
+OMDB;runway;3;mimari;Dubai Havalimanı;Birleşik Arap Emirlikleri

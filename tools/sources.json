@@ -90,9 +90,10 @@
    "license": "Kamu malı",
    "license_url": "https://ourairports.com/data/",
    "url": "https://ourairports.com/",
-   "attribution": "OurAirports (kamu malı)",
-   "status": "planned",
-   "datasets": []
+   "attribution": "OurAirports, David Megginson ve katkıda bulunanlar. Veri kamu malına bırakılmıştır.",
+   "status": "in_use",
+   "raw_dir": "ourairports",
+   "datasets": ["airports_elevation", "airports_runway"]
   },
   {
    "id": "openfootball",
