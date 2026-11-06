@@ -310,7 +310,7 @@
 1|1926||tr:Türk Medeni Kanunu|Türk Medeni Kanunu ilk olarak hangi yıl kabul edilmiştir?
 2|1926||tr:Kabotaj Kanunu|Kabotaj Kanunu hangi yıl kabul edilmiştir?
 3|1926||tr:Alpullu Şeker Fabrikası|Alpullu Şeker Fabrikası hangi yıl üretime başlamıştır?
-1|1927||en:Nutuk|Atatürk Nutuk'u hangi yıl okumuştur?
+1|1927||en:Nutuk|Atatürk Nutuk'u hangi yıl yazmıştır?
 1|1928||en:Turkish alphabet|Yeni Türk alfabesi hangi yıl kabul edilmiştir?
 1|29|harf|tr:Türk alfabesi|Türk alfabesinde kaç harf vardır?
 2|1931||en:Central Bank of the Republic of Turkey|Merkez Bankası hangi yıl faaliyete geçmiştir?
@@ -332,7 +332,7 @@
 2|1944||en:Yapı Kredi|Yapı Kredi Bankası hangi yıl kurulmuştur?
 2|1959||en:London and Zürich Agreements|Zürih ve Londra Antlaşmaları hangi yıl imzalanmıştır?
 1|1960||en:1960 Turkish coup d'état|27 Mayıs Darbesi hangi yıl olmuştur?
-2|1968||en:Television in Turkey|Türkiye'de televizyon yayınları hangi yıl başlamıştır?
+2|1968||en:Television in Turkey|TRT'nin televizyon yayınları hangi yıl başlamıştır?
 3|1953||tr:Halıcı Kız|Türkiye'nin ilk renkli filmlerinden Halıcı Kız hangi yıl gösterime girmiştir?
 1|1961||en:Devrim (automobile)|İlk yerli otomobil Devrim hangi yıl üretilmiştir?
 2|1963||en:Bloody Christmas (1963)|Kıbrıs'taki Kanlı Noel olayları hangi yıl yaşanmıştır?

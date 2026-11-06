@@ -66,6 +66,23 @@ EXCLUDED = {
     "Q43502": "Dodo'nun nesli tükendi; 'kaç kilogram gelir?' diye sorulamaz.",
 }
 
+# (item, data set) pairs whose question was rewritten by hand in the bank
+# (2026-11-06): the Wikidata value was wrong or not what the question asked,
+# so the question now cites Wikipedia. Without this the item would come back
+# as a new question, because the bank matches questions by their source.
+FIXED_BY_HAND = {
+    ("Q47465940", "battles"): "q0071: harekât 2018'de; Wikidata 2019 diyor.",
+    ("Q618", "elements_discovered"): "q0402: bor 1808'de elde edildi; 1892 saflaştırma.",
+    ("Q2311", "companies_founded"): "q0105: Airbus 1970; Wikidata 1998 diyor.",
+    ("Q334800", "companies_founded"): "q0169: PepsiCo 1965; 1961 Frito-Lay birleşmesi.",
+    ("Q35886", "companies_founded"): "q0149: otomobil şirketi 1963; 1948 traktör şirketi.",
+    ("Q3295867", "companies_founded"): "q0352: şirket 1892; 1886 içeceğin icadı.",
+    ("Q623", "elements_discovered"): "q0066: karbon antik çağdan beri biliniyor.",
+    ("Q682", "elements_discovered"): "q0313: kükürt antik çağdan beri biliniyor.",
+    ("Q33609", "animals_lifespan"): "q0146: 50 yıl ortalama değil; en fazla ~30.",
+    ("Q129026", "animals_lifespan"): "q0210: 73 yıl ortalama değil, en yüksek tahmin.",
+}
+
 FIELD_ORDER = [
     "id", "text", "answer", "unit", "kind", "category", "source", "data_year",
     "fun_fact", "difficulty", "dataset",
@@ -590,7 +607,7 @@ def generate(report: bool = False) -> list[dict]:
             if made == step.quota or entity.views < step.min_views:
                 passed.append(entity)
                 continue
-            if entity.qid in EXCLUDED:
+            if entity.qid in EXCLUDED or (entity.qid, step.dataset) in FIXED_BY_HAND:
                 continue
             q = step.template(entity, year)
             if q is None:
