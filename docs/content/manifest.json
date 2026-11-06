@@ -1,12 +1,12 @@
 {
- "version": 3,
+ "version": 4,
  "questions": "questions.json",
  "places": "places.json",
  "schedule": "schedule.json",
  "hashes": {
-  "questions.json": "1819b13520d419227a103406fc1f19f3f244899623a3d0c241e6781a0481c58c",
+  "questions.json": "8f41310081158a40aab75b18ee33f46325c4c78056661a0e0df3ad94ae6b734f",
   "places.json": "9c6f6f8b3b361e167cca743f3bf668a008730d93335914d57bf1b283058c2617",
-  "schedule.json": "2a13814a66d03cd9b3303e64238df10058396b8298483f6fcdd25c6236db4b2e"
+  "schedule.json": "a3110425bd1b5eb42b12119d483cac1d2c1dff4601bf598ccfc35a636efba9b9"
  },
  "leaderboard": "https://kabaca-leaderboard.yusuferdemaykacc.workers.dev"
 }
