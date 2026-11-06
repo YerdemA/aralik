@@ -123,9 +123,10 @@
    "license": "CC BY 4.0",
    "license_url": "https://www.fao.org/contact-us/terms/db-terms-of-use",
    "url": "https://www.fao.org/faostat/",
-   "attribution": "FAO. FAOSTAT. Lisans: CC BY 4.0",
-   "status": "planned",
-   "datasets": []
+   "attribution": "FAO. FAOSTAT, Crops and livestock products (2025 sürümü). Lisans: CC BY 4.0",
+   "status": "in_use",
+   "raw_dir": "faostat",
+   "datasets": ["fao_turkiye_crops", "fao_turkiye_animals", "fao_world"]
   },
   {
    "id": "owid",

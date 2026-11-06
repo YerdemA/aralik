@@ -80,3 +80,5 @@ tools/raw/usda/sr_legacy.zip
 tools/raw/ourairports/*.csv
 # openfootball maç dosyaları (tools/import_football.py --fetch); yalnızca summary.json commit'lenir
 tools/raw/openfootball/cache/
+# FAOSTAT toplu dosyası (tools/import_faostat.py --fetch); yalnızca çıkarılan değerler commit'lenir
+tools/raw/faostat/*.zip

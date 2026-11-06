@@ -1,0 +1,559 @@
+{
+ "source": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+ "year": 2024,
+ "fetched": "2026-11-06",
+ "values": {
+  "223/1016/5111": {
+   "item": "Goats",
+   "value": 10822084.0,
+   "unit": "An",
+   "flag": "A"
+  },
+  "223/1058/5510": {
+   "item": "Meat of chickens, fresh or chilled",
+   "value": 2512130.86,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/1062/5513": {
+   "item": "Hen eggs in shell, fresh",
+   "value": 21155089.0,
+   "unit": "1000 No",
+   "flag": "A"
+  },
+  "223/1096/5111": {
+   "item": "Horses",
+   "value": 70360.0,
+   "unit": "An",
+   "flag": "A"
+  },
+  "223/1107/5111": {
+   "item": "Asses",
+   "value": 65003.0,
+   "unit": "An",
+   "flag": "A"
+  },
+  "223/1126/5111": {
+   "item": "Camels",
+   "value": 1137.0,
+   "unit": "An",
+   "flag": "A"
+  },
+  "223/116/5510": {
+   "item": "Potatoes",
+   "value": 6900000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/1181/5114": {
+   "item": "Bees",
+   "value": 8961975.0,
+   "unit": "No",
+   "flag": "A"
+  },
+  "223/1182/5510": {
+   "item": "Natural honey",
+   "value": 95492.31,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/15/5510": {
+   "item": "Wheat",
+   "value": 20800000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/157/5510": {
+   "item": "Sugar beet",
+   "value": 23000000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/191/5510": {
+   "item": "Chick peas, dry",
+   "value": 575000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/201/5510": {
+   "item": "Lentils, dry",
+   "value": 405000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/220/5510": {
+   "item": "Chestnuts, in shell",
+   "value": 74300.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/221/5510": {
+   "item": "Almonds, in shell",
+   "value": 200000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/222/5510": {
+   "item": "Walnuts, in shell",
+   "value": 426000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/223/5510": {
+   "item": "Pistachios, in shell",
+   "value": 383000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/225/5510": {
+   "item": "Hazelnuts, in shell",
+   "value": 717000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/260/5510": {
+   "item": "Olives",
+   "value": 3750000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/267/5510": {
+   "item": "Sunflower seed",
+   "value": 2195000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/27/5510": {
+   "item": "Rice",
+   "value": 1019000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/328/5510": {
+   "item": "Seed cotton, unginned",
+   "value": 2243000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/388/5510": {
+   "item": "Tomatoes",
+   "value": 14617000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/403/5510": {
+   "item": "Onions and shallots, dry (excluding dehydrated)",
+   "value": 2632000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/44/5510": {
+   "item": "Barley",
+   "value": 8100000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/486/5510": {
+   "item": "Bananas",
+   "value": 875000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/490/5510": {
+   "item": "Oranges",
+   "value": 1610000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/495/5510": {
+   "item": "Tangerines, mandarins, clementines",
+   "value": 1988000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/497/5510": {
+   "item": "Lemons and limes",
+   "value": 1730000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/515/5510": {
+   "item": "Apples",
+   "value": 4420185.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/523/5510": {
+   "item": "Quinces",
+   "value": 203186.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/526/5510": {
+   "item": "Apricots",
+   "value": 1269000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/530/5510": {
+   "item": "Sour cherries",
+   "value": 206700.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/531/5510": {
+   "item": "Cherries",
+   "value": 726500.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/544/5510": {
+   "item": "Strawberries",
+   "value": 606254.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/56/5510": {
+   "item": "Maize (corn)",
+   "value": 8100000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/560/5510": {
+   "item": "Grapes",
+   "value": 3468000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/567/5510": {
+   "item": "Watermelons",
+   "value": 3198000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/569/5510": {
+   "item": "Figs",
+   "value": 375000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/667/5510": {
+   "item": "Tea leaves",
+   "value": 1414000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/826/5510": {
+   "item": "Unmanufactured tobacco",
+   "value": 108000.0,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/866/5111": {
+   "item": "Cattle",
+   "value": 16824208.0,
+   "unit": "An",
+   "flag": "A"
+  },
+  "223/882/5510": {
+   "item": "Raw milk of cattle",
+   "value": 21040442.21,
+   "unit": "t",
+   "flag": "A"
+  },
+  "223/946/5111": {
+   "item": "Buffalo",
+   "value": 162051.0,
+   "unit": "An",
+   "flag": "A"
+  },
+  "223/976/5111": {
+   "item": "Sheep",
+   "value": 44080584.0,
+   "unit": "An",
+   "flag": "A"
+  },
+  "5000/1016/5111": {
+   "item": "Goats",
+   "value": 1187524236.0,
+   "unit": "An",
+   "flag": "E"
+  },
+  "5000/1058/5510": {
+   "item": "Meat of chickens, fresh or chilled",
+   "value": 128307229.46,
+   "unit": "t",
+   "flag": "A"
+  },
+  "5000/1062/5513": {
+   "item": "Hen eggs in shell, fresh",
+   "value": 1775346165.0,
+   "unit": "1000 No",
+   "flag": "E"
+  },
+  "5000/1096/5111": {
+   "item": "Horses",
+   "value": 56211907.0,
+   "unit": "An",
+   "flag": "E"
+  },
+  "5000/1107/5111": {
+   "item": "Asses",
+   "value": 53946949.0,
+   "unit": "An",
+   "flag": "E"
+  },
+  "5000/1126/5111": {
+   "item": "Camels",
+   "value": 44336084.0,
+   "unit": "An",
+   "flag": "E"
+  },
+  "5000/116/5510": {
+   "item": "Potatoes",
+   "value": 390428972.92,
+   "unit": "t",
+   "flag": "E"
+  },
+  "5000/1181/5114": {
+   "item": "Bees",
+   "value": 101713116.0,
+   "unit": "No",
+   "flag": "E"
+  },
+  "5000/1182/5510": {
+   "item": "Natural honey",
+   "value": 1987519.56,
+   "unit": "t",
+   "flag": "E"
+  },
+  "5000/15/5510": {
+   "item": "Wheat",
+   "value": 798481711.07,
+   "unit": "t",
+   "flag": "A"
+  },
+  "5000/157/5510": {
+   "item": "Sugar beet",
+   "value": 293624598.05,
+   "unit": "t",
+   "flag": "A"
+  },
+  "5000/191/5510": {
+   "item": "Chick peas, dry",
+   "value": 16880268.44,
+   "unit": "t",
+   "flag": "A"
+  },
+  "5000/201/5510": {
+   "item": "Lentils, dry",
+   "value": 7887380.07,
+   "unit": "t",
+   "flag": "A"
+  },
+  "5000/220/5510": {
+   "item": "Chestnuts, in shell",
+   "value": 2098054.98,
+   "unit": "t",
+   "flag": "E"
+  },
+  "5000/221/5510": {
+   "item": "Almonds, in shell",
+   "value": 3951576.08,
+   "unit": "t",
+   "flag": "A"
+  },
+  "5000/222/5510": {
+   "item": "Walnuts, in shell",
+   "value": 4349163.36,
+   "unit": "t",
+   "flag": "E"
+  },
+  "5000/223/5510": {
+   "item": "Pistachios, in shell",
+   "value": 1380320.8,
+   "unit": "t",
+   "flag": "A"
+  },
+  "5000/225/5510": {
+   "item": "Hazelnuts, in shell",
+   "value": 1212125.58,
+   "unit": "t",
+   "flag": "A"
+  },
+  "5000/260/5510": {
+   "item": "Olives",
+   "value": 25551898.88,
+   "unit": "t",
+   "flag": "A"
+  },
+  "5000/267/5510": {
+   "item": "Sunflower seed",
+   "value": 52216783.45,
+   "unit": "t",
+   "flag": "E"
+  },
+  "5000/27/5510": {
+   "item": "Rice",
+   "value": 820223277.89,
+   "unit": "t",
+   "flag": "A"
+  },
+  "5000/328/5510": {
+   "item": "Seed cotton, unginned",
+   "value": 72814037.94,
+   "unit": "t",
+   "flag": "E"
+  },
+  "5000/388/5510": {
+   "item": "Tomatoes",
+   "value": 188498383.94,
+   "unit": "t",
+   "flag": "E"
+  },
+  "5000/403/5510": {
+   "item": "Onions and shallots, dry (excluding dehydrated)",
+   "value": 108260011.29,
+   "unit": "t",
+   "flag": "E"
+  },
+  "5000/44/5510": {
+   "item": "Barley",
+   "value": 141996861.28,
+   "unit": "t",
+   "flag": "A"
+  },
+  "5000/486/5510": {
+   "item": "Bananas",
+   "value": 139413684.55,
+   "unit": "t",
+   "flag": "A"
+  },
+  "5000/490/5510": {
+   "item": "Oranges",
+   "value": 67244550.08,
+   "unit": "t",
+   "flag": "A"
+  },
+  "5000/495/5510": {
+   "item": "Tangerines, mandarins, clementines",
+   "value": 51917893.39,
+   "unit": "t",
+   "flag": "E"
+  },
+  "5000/497/5510": {
+   "item": "Lemons and limes",
+   "value": 23201004.91,
+   "unit": "t",
+   "flag": "A"
+  },
+  "5000/515/5510": {
+   "item": "Apples",
+   "value": 97880076.32,
+   "unit": "t",
+   "flag": "A"
+  },
+  "5000/523/5510": {
+   "item": "Quinces",
+   "value": 695474.15,
+   "unit": "t",
+   "flag": "E"
+  },
+  "5000/526/5510": {
+   "item": "Apricots",
+   "value": 4598078.78,
+   "unit": "t",
+   "flag": "A"
+  },
+  "5000/530/5510": {
+   "item": "Sour cherries",
+   "value": 1484452.81,
+   "unit": "t",
+   "flag": "E"
+  },
+  "5000/531/5510": {
+   "item": "Cherries",
+   "value": 3105401.25,
+   "unit": "t",
+   "flag": "A"
+  },
+  "5000/544/5510": {
+   "item": "Strawberries",
+   "value": 10728811.41,
+   "unit": "t",
+   "flag": "E"
+  },
+  "5000/56/5510": {
+   "item": "Maize (corn)",
+   "value": 1218205573.82,
+   "unit": "t",
+   "flag": "A"
+  },
+  "5000/560/5510": {
+   "item": "Grapes",
+   "value": 75904986.97,
+   "unit": "t",
+   "flag": "E"
+  },
+  "5000/567/5510": {
+   "item": "Watermelons",
+   "value": 104959426.09,
+   "unit": "t",
+   "flag": "E"
+  },
+  "5000/569/5510": {
+   "item": "Figs",
+   "value": 1336540.71,
+   "unit": "t",
+   "flag": "E"
+  },
+  "5000/656/5510": {
+   "item": "Coffee, green",
+   "value": 11284877.41,
+   "unit": "t",
+   "flag": "A"
+  },
+  "5000/661/5510": {
+   "item": "Cocoa beans",
+   "value": 5233245.33,
+   "unit": "t",
+   "flag": "A"
+  },
+  "5000/667/5510": {
+   "item": "Tea leaves",
+   "value": 32728930.55,
+   "unit": "t",
+   "flag": "E"
+  },
+  "5000/826/5510": {
+   "item": "Unmanufactured tobacco",
+   "value": 6048229.88,
+   "unit": "t",
+   "flag": "A"
+  },
+  "5000/866/5111": {
+   "item": "Cattle",
+   "value": 1578614149.0,
+   "unit": "An",
+   "flag": "E"
+  },
+  "5000/882/5510": {
+   "item": "Raw milk of cattle",
+   "value": 797287454.1,
+   "unit": "t",
+   "flag": "A"
+  },
+  "5000/946/5111": {
+   "item": "Buffalo",
+   "value": 212008800.0,
+   "unit": "An",
+   "flag": "E"
+  },
+  "5000/976/5111": {
+   "item": "Sheep",
+   "value": 1362590940.0,
+   "unit": "An",
+   "flag": "E"
+  }
+ }
+}

@@ -45,6 +45,11 @@ aynı liste yer alır.
 - Lisans: [CC BY 4.0](https://datacatalog.worldbank.org/)
 - Adres: https://data.worldbank.org/
 
+## FAOSTAT
+- FAO. FAOSTAT, Crops and livestock products (2025 sürümü). Lisans: CC BY 4.0
+- Lisans: [CC BY 4.0](https://www.fao.org/contact-us/terms/db-terms-of-use)
+- Adres: https://www.fao.org/faostat/
+
 ## Vikipedi
 - Vikipedi gönüllüleri (tarih, mimari, sanat ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0
 - Lisans: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
