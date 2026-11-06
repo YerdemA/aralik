@@ -86,3 +86,7 @@ tools/raw/faostat/*.zip
 tools/raw/anage/anage.zip
 # AnimalTraits gözlemleri (tools/import_animaltraits.py --fetch); yalnızca çıkarılan değerler commit'lenir
 tools/raw/animaltraits/observations.csv
+# İBB açık veri dosyaları (tools/import_ibb.py --fetch); yalnızca ibb.json commit'lenir
+tools/raw/ibb/*.xlsx
+tools/raw/ibb/*.xls
+tools/raw/ibb/*.csv

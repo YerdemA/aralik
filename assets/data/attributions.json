@@ -70,6 +70,13 @@
   "url": "https://www.fao.org/faostat/"
  },
  {
+  "name": "İBB Açık Veri Portalı",
+  "attribution": "İstanbul Büyükşehir Belediyesi Açık Veri Portalı, İBB Açık Veri Lisansı 1.0",
+  "license": "İBB Açık Veri Lisansı 1.0",
+  "license_url": "https://data.ibb.gov.tr/license",
+  "url": "https://data.ibb.gov.tr/"
+ },
+ {
   "name": "Vikipedi",
   "attribution": "Vikipedi gönüllüleri (tarih, mimari, sanat ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0",
   "license": "CC BY-SA 4.0",

@@ -1,0 +1,53 @@
+{
+ "fetched": "2026-11-06",
+ "values": {
+  "su2022": {
+   "value": 190.0,
+   "fact": "2001'de 223 litreydi."
+  },
+  "turist2023": {
+   "value": 17370030,
+   "fact": "En çok turist gönderen ülkeler sırasıyla Rusya, Almanya ve İran."
+  },
+  "turist2023-rusya": {
+   "value": 1990226,
+   "fact": null
+  },
+  "turist2023-almanya": {
+   "value": 1286504,
+   "fact": null
+  },
+  "turist2023-iran": {
+   "value": 1053638,
+   "fact": null
+  },
+  "vapur2024-yolcu": {
+   "value": 39870000.0,
+   "fact": "2013'te 53,6 milyon yolcu taşınmıştı."
+  },
+  "vapur2024-sefer": {
+   "value": 324000.0,
+   "fact": "2024'te Şehir Hatları filosunda 30 gemi vardı."
+  },
+  "istanbulkart2024": {
+   "value": 2574982824,
+   "fact": "Salgın yılı 2020'de 1,29 milyardı."
+  },
+  "atik2024": {
+   "value": 6585778.611,
+   "fact": "2004'te 3,2 milyon tondu."
+  },
+  "hayvan2024-kisir": {
+   "value": 45837.0,
+   "fact": null
+  },
+  "hayvan2024-tedavi": {
+   "value": 196855.0,
+   "fact": null
+  },
+  "tiyatro2024": {
+   "value": 2884995.0,
+   "fact": "2002'de 1,1 milyondu."
+  }
+ }
+}

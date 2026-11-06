@@ -146,9 +146,10 @@
    "license": "İBB Açık Veri Lisansı 1.0",
    "license_url": "https://data.ibb.gov.tr/license",
    "url": "https://data.ibb.gov.tr/",
-   "attribution": "İstanbul Büyükşehir Belediyesi Açık Veri Portalı, İBB Açık Veri Lisansı",
-   "status": "planned",
-   "datasets": []
+   "attribution": "İstanbul Büyükşehir Belediyesi Açık Veri Portalı, İBB Açık Veri Lisansı 1.0",
+   "status": "in_use",
+   "raw_dir": "ibb",
+   "datasets": ["ibb_istanbul"]
   },
   {
    "id": "eurostat",

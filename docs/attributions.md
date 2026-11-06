@@ -60,6 +60,11 @@ aynı liste yer alır.
 - Lisans: [CC BY 4.0](https://www.fao.org/contact-us/terms/db-terms-of-use)
 - Adres: https://www.fao.org/faostat/
 
+## İBB Açık Veri Portalı
+- İstanbul Büyükşehir Belediyesi Açık Veri Portalı, İBB Açık Veri Lisansı 1.0
+- Lisans: [İBB Açık Veri Lisansı 1.0](https://data.ibb.gov.tr/license)
+- Adres: https://data.ibb.gov.tr/
+
 ## Vikipedi
 - Vikipedi gönüllüleri (tarih, mimari, sanat ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0
 - Lisans: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
