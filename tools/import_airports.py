@@ -35,6 +35,8 @@ from collections import Counter
 from datetime import date
 from pathlib import Path
 
+from rounding import half_up
+
 ROOT = Path(__file__).resolve().parent.parent
 AIRPORTS = ROOT / "tools" / "airports_tr.csv"
 BANK = ROOT / "assets" / "questions" / "questions.json"
@@ -119,7 +121,7 @@ def fetch(idents: set[str]) -> dict:
 
 
 def metres(feet: int) -> int:
-    return int(round(feet * FEET))
+    return half_up(feet * FEET)
 
 
 def fun_fact(row: dict) -> str | None:

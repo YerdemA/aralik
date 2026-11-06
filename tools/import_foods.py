@@ -36,6 +36,8 @@ from collections import Counter
 from datetime import date
 from pathlib import Path
 
+from rounding import half_up, turkish_decimal
+
 ROOT = Path(__file__).resolve().parent.parent
 FOODS = ROOT / "tools" / "foods_tr.csv"
 BANK = ROOT / "assets" / "questions" / "questions.json"
@@ -114,14 +116,11 @@ def fetch(ids: set[str]) -> dict:
 
 
 def rounded(value: float, decimals_below: float) -> int | float:
-    if value < decimals_below:
-        return round(value, 1)
-    return int(round(value))
+    return half_up(value, 1) if value < decimals_below else half_up(value)
 
 
 def turkish_number(value: float) -> str:
-    text = f"{value:.1f}".rstrip("0").rstrip(".")
-    return text.replace(".", ",")
+    return turkish_decimal(value, 1, strip=True)
 
 
 def fun_fact(nutrient: str, values: dict) -> str | None:

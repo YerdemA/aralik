@@ -82,3 +82,5 @@ tools/raw/ourairports/*.csv
 tools/raw/openfootball/cache/
 # FAOSTAT toplu dosyası (tools/import_faostat.py --fetch); yalnızca çıkarılan değerler commit'lenir
 tools/raw/faostat/*.zip
+# AnAge arşivi (tools/import_anage.py --fetch); yalnızca çıkarılan değerler commit'lenir
+tools/raw/anage/anage.zip

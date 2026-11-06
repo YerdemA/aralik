@@ -14,6 +14,13 @@
   "url": "https://wikimedia.org/api/rest_v1/"
  },
  {
+  "name": "AnAge (HAGR)",
+  "attribution": "AnAge: The Animal Ageing and Longevity Database, HAGR (de Magalhães ve ark.), CC BY 3.0",
+  "license": "CC BY 3.0",
+  "license_url": "https://genomics.senescence.info/legal.html",
+  "url": "https://genomics.senescence.info/species/"
+ },
+ {
   "name": "USDA FoodData Central",
   "attribution": "U.S. Department of Agriculture, FoodData Central (SR Legacy, 2018). CC0 ile kamu malına bırakılmıştır.",
   "license": "CC0 1.0",

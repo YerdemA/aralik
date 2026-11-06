@@ -20,6 +20,11 @@ aynı liste yer alır.
 - Lisans: [CC0 1.0](https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews)
 - Adres: https://wikimedia.org/api/rest_v1/
 
+## AnAge (HAGR)
+- AnAge: The Animal Ageing and Longevity Database, HAGR (de Magalhães ve ark.), CC BY 3.0
+- Lisans: [CC BY 3.0](https://genomics.senescence.info/legal.html)
+- Adres: https://genomics.senescence.info/species/
+
 ## USDA FoodData Central
 - U.S. Department of Agriculture, FoodData Central (SR Legacy, 2018). CC0 ile kamu malına bırakılmıştır.
 - Lisans: [CC0 1.0](https://fdc.nal.usda.gov/)

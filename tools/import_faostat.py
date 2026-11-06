@@ -34,6 +34,8 @@ from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
 
+from rounding import half_up
+
 ROOT = Path(__file__).resolve().parent.parent
 BANK = ROOT / "assets" / "questions" / "questions.json"
 RAW = ROOT / "tools" / "raw" / "faostat"
@@ -170,7 +172,7 @@ def build(payload: dict, bank: list[dict]) -> tuple[list[dict], list[str]]:
         new.append(
             {
                 "text": text,
-                "answer": int(round(value)),
+                "answer": half_up(value),
                 "unit": unit,
                 "kind": "magnitude",
                 "category": "türkiye" if q.area == TURKIYE else "gündelik",

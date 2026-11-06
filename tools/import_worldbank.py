@@ -37,6 +37,8 @@ from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
 
+from rounding import half_up, turkish_decimal
+
 ROOT = Path(__file__).resolve().parent.parent
 BANK = ROOT / "assets" / "questions" / "questions.json"
 EXTRACT = ROOT / "tools" / "raw" / "worldbank" / "wdi.json"
@@ -206,13 +208,11 @@ def fetch() -> dict:
 
 
 def rounded(value: float, decimals: int) -> int | float:
-    return int(round(value)) if decimals == 0 else round(value, decimals)
+    return half_up(value, decimals)
 
 
 def turkish_number(value: float, decimals: int) -> str:
-    whole, _, fraction = f"{value:,.{decimals}f}".partition(".")
-    whole = whole.replace(",", ".")
-    return f"{whole},{fraction}" if fraction else whole
+    return turkish_decimal(value, decimals, grouping=True)
 
 
 def millions(value: float) -> str:

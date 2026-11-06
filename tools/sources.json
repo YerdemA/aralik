@@ -39,8 +39,9 @@
    "license_url": "https://genomics.senescence.info/legal.html",
    "url": "https://genomics.senescence.info/species/",
    "attribution": "AnAge: The Animal Ageing and Longevity Database, HAGR (de Magalhães ve ark.), CC BY 3.0",
-   "status": "planned",
-   "datasets": []
+   "status": "in_use",
+   "raw_dir": "anage",
+   "datasets": ["anage_gestation", "anage_longevity", "anage_birth_weight"]
   },
   {
    "id": "animaltraits",
