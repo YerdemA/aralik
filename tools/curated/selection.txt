@@ -656,3 +656,51 @@
 2|10935|m|en:Challenger Deep|Okyanusların en derin noktası Challenger Çukuru kaç metre derinliktedir?
 2|400|km|en:International Space Station|Uluslararası Uzay İstasyonu Dünya'dan yaklaşık kaç kilometre yükseklikte döner?
 2|2154|km/h|en:Concorde|Concorde yolcu uçağı saatte yaklaşık kaç kilometre hızla seyrederdi?
+
+# everyday_curated|gündelik
+1|11|m|en:Penalty kick (association football)|Futbolda penaltı noktası kale çizgisinden kaç metre uzaktadır?
+1|7.32|m|en:Association football pitch|Bir futbol kalesinin genişliği kaç metredir?
+2|6.75|m|en:Three-point field goal|FIBA kurallarına göre basketbolda üç sayı çizgisi potadan kaç metre uzaktadır?
+2|2.43|m|en:Volleyball|Erkekler voleybolunda file kaç metre yüksekliktedir?
+2|23.77|m|en:Tennis court|Bir tenis kortu kaç metre uzunluğundadır?
+1|50|m|en:Olympic-size swimming pool|Olimpik bir yüzme havuzu kaç metre uzunluğundadır?
+1|9.58|saniye|en:Usain Bolt|Usain Bolt'un 100 metre dünya rekoru kaç saniyedir?
+1|64|kare|en:Chessboard|Bir satranç tahtasında kaç kare vardır?
+1|106|taş|en:Okey|Bir okey takımında kaç taş vardır?
+1|40|hafta|en:Pregnancy|Bir insan gebeliği ortalama kaç hafta sürer?
+2|86|milyar nöron|en:Human brain|İnsan beyninde yaklaşık kaç milyar nöron vardır?
+1|8|bit|en:Byte|Bir bayt kaç bitten oluşur?
+1|21|milyon bitcoin|en:Bitcoin|En fazla kaç milyon bitcoin üretilebilir?
+2|3.5|inç|en:IPhone (1st generation)|İlk iPhone'un ekranı kaç inçti?
+2|29.9|m|en:Blue whale|Boyu doğrulanmış en büyük mavi balinalar yaklaşık kaç metre uzunluğundadır?
+2|39|oyun|en:William Shakespeare|Shakespeare'in yaklaşık kaç oyunu günümüze ulaşmıştır?
+
+# turkey_curated|türkiye
+1|90|kod|en:Telephone numbers in Turkey|Türkiye'nin uluslararası telefon kodu kaçtır?
+
+# science_curated|bilim
+1|193|ülke|en:Member states of the United Nations|Birleşmiş Milletler'in kaç üye ülkesi vardır?
+2|4.54|milyar yıl|en:Age of Earth|Dünya yaklaşık kaç milyar yaşındadır?
+2|13.8|milyar yıl|en:Age of the universe|Evren yaklaşık kaç milyar yaşındadır?
+2|23.4|°|en:Axial tilt|Dünya'nın dönme ekseni kaç derece eğiktir?
+1|118|element|en:Periodic table|Periyodik tabloda bugün kaç element vardır?
+2|273.15|°C|en:Absolute zero|Mutlak sıfır, 0 °C'nin kaç derece altındadır?
+2|56.7|°C|en:Highest temperature recorded on Earth|Dünya'da ölçülen en yüksek hava sıcaklığı kaç °C'dir?
+2|89.2|°C|en:Lowest temperature recorded on Earth|Dünya'da ölçülen en düşük hava sıcaklığı 0 °C'nin kaç derece altındadır?
+2|9.46|trilyon km|en:Light-year|Bir ışık yılı yaklaşık kaç trilyon kilometredir?
+
+# turkey_curated|türkiye
+1|7|bölge|tr:Türkiye'nin coğrafi bölgeleri|Türkiye kaç coğrafi bölgeye ayrılır?
+2|973|ilçe|tr:Türkiye'nin ilçeleri|Türkiye'de kaç ilçe vardır?
+2|10|kıta|tr:İstiklal Marşı|İstiklal Marşı kaç kıtadan oluşur?
+1|6|minare|tr:Sultanahmet Camii|Sultanahmet Camii'nin kaç minaresi vardır?
+2|8333|km|tr:Türkiye coğrafyası|Türkiye'nin kıyı şeridi kaç kilometre uzunluğundadır?
+2|623|yıl|tr:Osmanlı İmparatorluğu|Osmanlı Devleti yaklaşık kaç yıl ayakta kalmıştır?
+
+# everyday_curated|gündelik
+1|28|taş|en:Dominoes|Standart (düşeş) bir domino takımında kaç taş vardır?
+2|15|top|en:Snooker|Bilardonun snooker türünde masada kaç kırmızı top bulunur?
+1|48|takım|en:FIFA World Cup|2026'dan itibaren FIFA Dünya Kupası finallerine kaç takım katılır?
+1|366|gün|en:Leap year|Artık yıl kaç gündür?
+2|6.175|kg|en:FIFA World Cup Trophy|FIFA Dünya Kupası kupası kaç kilogramdır?
+2|853|yolcu|en:Airbus A380|Airbus A380 en fazla kaç yolcu taşıyabilir?
