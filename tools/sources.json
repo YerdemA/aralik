@@ -69,9 +69,10 @@
    "license": "ABD kamu eseri",
    "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
    "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
-   "attribution": "NASA Goddard Space Flight Center, NSSDC Planetary Fact Sheets",
-   "status": "planned",
-   "datasets": []
+   "attribution": "NASA Goddard Space Flight Center, NSSDC Planetary Fact Sheets (David R. Williams). NASA'nın onayı anlamına gelmez.",
+   "status": "in_use",
+   "raw_dir": "nasa",
+   "datasets": ["planets_day", "planets_distance", "planets_physics"]
   },
   {
    "id": "usgs_comcat",

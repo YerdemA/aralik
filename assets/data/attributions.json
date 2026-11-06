@@ -21,6 +21,13 @@
   "url": "https://fdc.nal.usda.gov/"
  },
  {
+  "name": "NASA NSSDC Planetary Fact Sheets",
+  "attribution": "NASA Goddard Space Flight Center, NSSDC Planetary Fact Sheets (David R. Williams). NASA'nın onayı anlamına gelmez.",
+  "license": "ABD kamu eseri",
+  "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
+ },
+ {
   "name": "Vikipedi",
   "attribution": "Vikipedi gönüllüleri (tarih, mimari, sanat ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0",
   "license": "CC BY-SA 4.0",
