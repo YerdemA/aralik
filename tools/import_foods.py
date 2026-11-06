@@ -133,7 +133,7 @@ def fun_fact(nutrient: str, values: dict) -> str | None:
             return f"Aynı 100 gramda {turkish_number(protein)} g protein var."
         return f"Aynı 100 gramda {turkish_number(protein)} g protein ve {turkish_number(sugars)} g şeker var."
     energy = values.get("energy")
-    return None if energy is None else f"Aynı 100 gram {turkish_number(energy)} kcal."
+    return None if energy is None else f"Aynı 100 gramda {turkish_number(energy)} kcal var."
 
 
 def build(rows: list[dict], foods: dict, bank: list[dict]) -> tuple[list[dict], list[str]]:

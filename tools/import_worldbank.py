@@ -10,7 +10,7 @@ world average of the same indicator and year (aggregate WLD).
 
 Tourist arrivals (ST.INT.ARVL) are no longer updated: the latest values are
 from 2020, the pandemic year, so the year is in the text ("2020 yılında
-Türkiye'ye kaç uluslararası turist geldi?") and the fun fact gives the 2019
+Türkiye'ye kaç uluslararası turist gelmiştir?") and the fun fact gives the 2019
 value of the same series. Some countries count same-day visitors too (France
 218 million in 2019, the USA 165 million); the series has no footnote to tell
 them apart, so only countries whose figure matches their overnight tourists
@@ -52,7 +52,7 @@ PANDEMIC_YEARS = (2020, 2021)
 
 @dataclass(frozen=True)
 class Indicator:
-    # {year}; {gen}, {loc}, {dat}: the country in genitive, locative, dative.
+    # {year}; {name}; {gen}, {loc}, {dat}: the country in genitive, locative, dative.
     text: str
     unit: str
     decimals: int
@@ -78,15 +78,15 @@ INDICATORS = {
         "%", 1, "wdi_forest",
     ),
     "SP.POP.65UP.TO.ZS": Indicator(
-        "{year} verilerine göre {gen} nüfusunun yüzde kaçı 65 yaş ve üzerindedir?",
+        "{year} verilerine göre {name} nüfusunun yüzde kaçı 65 yaş ve üzerindedir?",
         "%", 1, "wdi_age_65",
     ),
     "IT.NET.USER.ZS": Indicator(
-        "{year} verilerine göre {gen} nüfusunun yüzde kaçı internet kullanmaktadır?",
+        "{year} verilerine göre {name} nüfusunun yüzde kaçı internet kullanmaktadır?",
         "%", 1, "wdi_internet",
     ),
     TOURISM: Indicator(
-        "{year} yılında {dat} kaç uluslararası turist geldi?",
+        "{year} yılında {dat} kaç uluslararası turist gelmiştir?",
         "kişi", 0, "wdi_tourism", min_year=2019,
     ),
 }
@@ -257,7 +257,7 @@ def build(payload: dict, bank: list[dict]) -> tuple[list[dict], list[str]]:
             dropped.append(f"ESKİ VERİ ({found['year']}): {label}")
             continue
         gen, loc, dat = COUNTRIES[country]
-        text = ind.text.format(year=found["year"], gen=gen, loc=loc, dat=dat)
+        text = ind.text.format(year=found["year"], name=gen.split("'")[0], gen=gen, loc=loc, dat=dat)
         source = PAGE_URL.format(indicator=indicator, iso2=found["iso2"])
         key = (source, "magnitude", ind.unit)
         if key in asked or text.casefold() in texts:

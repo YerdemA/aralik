@@ -8,7 +8,7 @@ Two kinds of question, both computed from every match of the file:
                     Sum of the final scores (after extra time; shoot-outs
                     do not count). FIFA World Cups 1930-2022, Euro 2020, 2024.
   champion points   "Manchester City 2017-18 Premier Lig sezonunu kaç puanla
-                    şampiyon tamamladı?"  3 for a win, 1 for a draw.
+                    şampiyon olarak tamamlamıştır?"  3 for a win, 1 for a draw.
 
 A file is skipped when a match has no score (cancelled or unfinished
 seasons). A league season is skipped when the top two have the same points:
@@ -231,7 +231,7 @@ def build(payload: dict, bank: list[dict]) -> tuple[list[dict], list[str]]:
             sys.exit(f"HATA: TEAM_NAMES içinde yok: {first['team']} ({label})")
         add(
             {
-                "text": f"{team} {season} {league} sezonunu kaç puanla şampiyon tamamladı?",
+                "text": f"{team}, {season} {league} sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
                 "answer": first["points"],
                 "unit": "puan",
                 "kind": "magnitude",
