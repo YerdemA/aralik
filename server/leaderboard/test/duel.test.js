@@ -77,6 +77,13 @@ test('picks 2 easy, 2 medium, 1 hard outside the upcoming schedule', () => {
   assert.deepEqual(ids, ['e1', 'e2', 'm1', 'm2', 'h1']);
 });
 
+test('never picks a retired question', () => {
+  const withRetired = makeContent();
+  withRetired.questions.get('e1').retired = true;
+  const ids = duel.pickDuelQuestions(withRetired, 999, 0, first);
+  assert.deepEqual(ids, ['e2', 'e3', 'm1', 'm2', 'h1']);
+});
+
 test('uses only the first bankLimit questions (both apps hold them)', () => {
   // The first 15 ids: s1…s10, e1, e2, e3, m1, m2 – no hard question left.
   const ids = duel.pickDuelQuestions(content, 15, 0, first);

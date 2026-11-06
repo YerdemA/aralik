@@ -86,6 +86,7 @@ class Question {
     this.difficulty,
     this.anchor,
     this.dataset,
+    this.retired = false,
   });
 
   static const minDifficulty = 1;
@@ -114,6 +115,11 @@ class Question {
 
   /// Source data set (e.g. `battles`), used to vary the daily set.
   final String? dataset;
+
+  /// Withdrawn from play (wrong or unsourced answer). The bank is append-only,
+  /// so a bad question keeps its id and is only left out of free play and
+  /// duels; it is never in the daily schedule.
+  final bool retired;
 
   /// Throws [FormatException] on missing or mistyped fields.
   factory Question.fromJson(Map<String, dynamic> json) {
@@ -159,6 +165,7 @@ class Question {
       difficulty: difficulty,
       anchor: anchorJson == null ? null : Anchor.fromJson(anchorJson),
       dataset: field<String?>('dataset'),
+      retired: field<bool?>('retired') ?? false,
     );
   }
 }

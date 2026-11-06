@@ -32,6 +32,18 @@ void main() {
       expect(q.funFact, 'Konum: Ağrı.');
     });
 
+    test('reads retired, false when missing', () {
+      expect(Question.fromJson(sample()).retired, isFalse);
+      expect(
+        Question.fromJson(sample(override: {'retired': true})).retired,
+        isTrue,
+      );
+      expect(
+        () => Question.fromJson(sample(override: {'retired': 'yes'})),
+        throwsFormatException,
+      );
+    });
+
     test('accepts decimal answers and a missing fun fact', () {
       final json = sample(override: {'answer': 62.6})..remove('fun_fact');
       final q = Question.fromJson(json);
@@ -171,6 +183,17 @@ void main() {
         expect(pool.where(upcoming.contains), isEmpty, reason: '$today');
         expect(pool, isNotEmpty, reason: '$today');
       }
+    });
+
+    test('free play leaves retired questions out', () async {
+      final repository = QuestionRepository();
+      final retired = {
+        for (final q in await repository.load())
+          if (q.retired) q.id,
+      };
+      expect(retired, contains('q1818'));
+      final pool = (await repository.freePlayPool(0)).map((q) => q.id);
+      expect(pool.where(retired.contains), isEmpty);
     });
 
     test('can retry after a failed load', () async {

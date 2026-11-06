@@ -7,7 +7,7 @@ import { scaleOf } from './scoring.js';
 const MANIFEST_TTL_MS = 5 * 60 * 1000;
 
 /** Content loaded per isolate, refreshed when the manifest version moves. */
-// { version, checkedAt, questions: Map id → {answer, kind, difficulty},
+// { version, checkedAt, questions: Map id → {answer, kind, difficulty, retired},
 //   order: string[] (bank order), days: string[][] }
 let cache = null;
 
@@ -44,6 +44,7 @@ export async function loadContent(base, fetchFn, nowMs) {
           kind: q.kind,
           category: q.category,
           difficulty: q.difficulty ?? 2,
+          retired: q.retired === true,
         },
       ]),
     ),

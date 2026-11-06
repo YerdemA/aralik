@@ -6,7 +6,9 @@ QUESTIONS lists the species and the Turkish text. The answer is the median of
 all AnimalTraits observations of that species for the trait ("brain size" in
 grams, or "body mass" in milligrams for small animals), only rounded. When
 there is more than one observation the fun fact says how many; for a brain it
-also gives the median body mass of the same observations.
+also gives the median body mass of the same observations. A brain size from a
+single observation without body mass is not asked (cattle and wild boar had
+one 1908 measurement each).
 
 Most well-known large animals (elephant, horse, cat, dolphin) are not in
 AnimalTraits; QUESTIONS holds what is.
@@ -55,8 +57,9 @@ QUESTIONS = [
     ("Canis familiaris", "brain", "g", 3, "Bir köpeğin beyni kaç gram gelir?"),
     ("Panthera leo", "brain", "g", 3, "Bir aslanın beyni kaç gram gelir?"),
     ("Panthera tigris", "brain", "g", 3, "Bir kaplanın beyni kaç gram gelir?"),
-    ("Bos taurus", "brain", "g", 3, "Bir ineğin beyni kaç gram gelir?"),
-    ("Sus scrofa", "brain", "g", 3, "Bir yaban domuzunun beyni kaç gram gelir?"),
+    # Bos taurus (q1817) and Sus scrofa (q1818) were here: one 1908
+    # measurement each, no body mass. q1817 now cites Ballarin et al. 2016,
+    # q1818 is retired.
     ("Ursus arctos", "brain", "g", 3, "Bir boz ayının beyni kaç gram gelir?"),
     ("Ursus maritimus", "brain", "g", 3, "Bir kutup ayısının beyni kaç gram gelir?"),
     ("Rattus norvegicus", "brain", "g", 3, "Bir sıçanın beyni kaç gram gelir?"),
@@ -128,6 +131,9 @@ def build(payload: dict, bank: list[dict]) -> tuple[list[dict], list[str]]:
             continue
         if any(o[key_units] != "kg" for o in measured):
             dropped.append(f"BİRİM kg DEĞİL: {label}")
+            continue
+        if trait == "brain" and len(measured) == 1 and measured[0]["mass_kg"] is None:
+            dropped.append(f"TEK ÖLÇÜM, VÜCUT AĞIRLIĞI YOK: {label}")
             continue
         answer = rounded(statistics.median(o[key_kg] for o in measured) * TO_UNIT[unit])
         parts = []

@@ -99,13 +99,13 @@ export function normalizeRoomCode(raw) {
  * Only the first [bankLimit] questions of the bank are used. The bank is
  * append-only, so both apps hold these with the same ids (bankLimit is the
  * smaller of their bank sizes). Questions of the next days' daily sets are
- * kept out, as in free play.
+ * kept out, as in free play, and so are retired questions.
  */
 export function pickDuelQuestions(content, bankLimit, today, randomInt) {
   const upcoming = upcomingIds(content.days, today);
   const pool = content.order
     .slice(0, Math.max(0, bankLimit))
-    .filter((id) => !upcoming.has(id));
+    .filter((id) => !upcoming.has(id) && !content.questions.get(id).retired);
   const byLevel = { 1: [], 2: [], 3: [] };
   for (const id of pool) {
     const level = content.questions.get(id).difficulty;

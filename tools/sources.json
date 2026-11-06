@@ -49,7 +49,7 @@
    "license": "CC0 1.0",
    "license_url": "https://zenodo.org/records/6468938",
    "url": "https://animaltraits.org/",
-   "attribution": "AnimalTraits (Herberstein ve ark., 2022, Scientific Data). Veri CC0 ile kamu malına bırakılmıştır.",
+   "attribution": "AnimalTraits (Herberstein ve ark., 2022, Scientific Data). Veri CC0 ile kamu malına bırakılmıştır. İnek beyni: Ballarin C. ve ark. (2016), The Brain of the Domestic Bos taurus, PLoS ONE 11(4): e0154580, CC BY 4.0.",
    "status": "in_use",
    "raw_dir": "animaltraits",
    "datasets": ["animaltraits_brain", "animaltraits_mass"]

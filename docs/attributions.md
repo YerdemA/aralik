@@ -26,7 +26,7 @@ aynı liste yer alır.
 - Adres: https://genomics.senescence.info/species/
 
 ## AnimalTraits
-- AnimalTraits (Herberstein ve ark., 2022, Scientific Data). Veri CC0 ile kamu malına bırakılmıştır.
+- AnimalTraits (Herberstein ve ark., 2022, Scientific Data). Veri CC0 ile kamu malına bırakılmıştır. İnek beyni: Ballarin C. ve ark. (2016), The Brain of the Domestic Bos taurus, PLoS ONE 11(4): e0154580, CC BY 4.0.
 - Lisans: [CC0 1.0](https://zenodo.org/records/6468938)
 - Adres: https://animaltraits.org/
 

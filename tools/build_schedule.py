@@ -116,7 +116,7 @@ def main(argv: list[str]) -> int:
         print(f"UYARI: zorluğu ya da veri seti olmayan {len(unrated)} soru takvime alınmadı.")
     pool: dict[int, list[dict]] = {d: [] for d in DAY_SHAPE}
     for q in bank:
-        if q["id"] not in scheduled and q["id"] not in unrated:
+        if q["id"] not in scheduled and q["id"] not in unrated and not q.get("retired"):
             pool[q["difficulty"]].append(q)
     for qs in pool.values():
         qs.sort(key=lambda q: q["id"])  # independent of file order

@@ -45,6 +45,9 @@ OPTIONAL = {
     "difficulty": int,
     "dataset": str,
     "anchor": dict,
+    # Withdrawn from play (wrong or unsourced answer); never scheduled. The
+    # bank is append-only, so this is how a bad question leaves the pool.
+    "retired": bool,
 }
 ANCHOR_FIELDS = {"text": str, "value": (int, float), "unit": str, "source": str}
 ID_PATTERN = re.compile(r"^q(\d{4,})$")
@@ -198,6 +201,8 @@ def validate_schedule(schedule: object, questions: list) -> tuple[list[str], lis
             seen.add(qid)
             if qid not in by_id:
                 errors.append(f"{where}: {qid} bankada yok.")
+            elif by_id[qid].get("retired"):
+                errors.append(f"{where}: {qid} çıkarılmış (retired) bir soru.")
         qs = [by_id[x] for x in day if x in by_id]
         if len({q.get("category") for q in qs}) < 3:
             warnings.append(f"{where}: 3'ten az kategori.")

@@ -170,7 +170,7 @@ class QuestionRepository {
     final upcoming = (await schedule()).upcomingIds(todayIndex);
     return [
       for (final q in await load())
-        if (!upcoming.contains(q.id)) q,
+        if (!upcoming.contains(q.id) && !q.retired) q,
     ];
   }
 }
