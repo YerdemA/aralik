@@ -1,0 +1,147 @@
+{
+ "source": "https://earthquake.usgs.gov/fdsnws/event/1/",
+ "fetched": "2026-11-06",
+ "events": {
+  "official19600522191120_30": {
+   "time": -303281320000,
+   "mag": 9.5,
+   "depth": 25,
+   "title": "M 9.5 - 1960 Great Chilean Earthquake (Valdivia Earthquake)"
+  },
+  "official19640328033616_30": {
+   "time": -181859024000,
+   "mag": 9.2,
+   "depth": 25,
+   "title": "M 9.2 - The 1964 Prince William Sound, Alaska Earthquake"
+  },
+  "official20041226005853450_30": {
+   "time": 1104022733450,
+   "mag": 9.1,
+   "depth": 30,
+   "title": "M 9.1 - 2004 Sumatra - Andaman Islands Earthquake"
+  },
+  "official20110311054624120_30": {
+   "time": 1299822384120,
+   "mag": 9.1,
+   "depth": 29,
+   "title": "M 9.1 - 2011 Great Tohoku Earthquake, Japan"
+  },
+  "official19521104165830_30": {
+   "time": -541407690000,
+   "mag": 9,
+   "depth": 21.6,
+   "title": "M 9.0 - 89 km ESE of Petropavlovsk-Kamchatsky, Russia"
+  },
+  "official20100227063411530_30": {
+   "time": 1267252451530,
+   "mag": 8.8,
+   "depth": 22.9,
+   "title": "M 8.8 - 2010 Maule, Chile Earthquake"
+  },
+  "official19060131153610_30": {
+   "time": -2017038230000,
+   "mag": 8.8,
+   "depth": 20,
+   "title": "M 8.8 - 1906 Ecuador-Colombia Earthquake"
+  },
+  "official19500815140934_30": {
+   "time": -611574626000,
+   "mag": 8.6,
+   "depth": 15,
+   "title": "M 8.6 - 1950 Assam-Tibet Earthquake"
+  },
+  "iscgem902291": {
+   "time": -947203356180,
+   "mag": 7.8,
+   "depth": 20,
+   "title": "M 7.8 - 20 km NNE of Erzincan, Turkey"
+  },
+  "iscgem900102": {
+   "time": -823570751440,
+   "mag": 7.5,
+   "depth": 20,
+   "title": "M 7.5 - 6 km SSE of Ilgaz, Turkey"
+  },
+  "iscgem899277": {
+   "time": -817850239170,
+   "mag": 7.6,
+   "depth": 30,
+   "title": "M 7.6 - 10 km WNW of Orta, Turkey"
+  },
+  "iscgem844692": {
+   "time": -106313869060,
+   "mag": 6.8,
+   "depth": 15.1,
+   "title": "M 6.8 - 14 km NE of Varto, Turkey"
+  },
+  "iscgem798506": {
+   "time": 7506145520,
+   "mag": 7.23,
+   "depth": 22.2,
+   "title": "M 7.2 - 22 km NE of Gediz, Turkey"
+  },
+  "usp0000cqe": {
+   "time": 179227210900,
+   "mag": 6.7,
+   "depth": 26,
+   "title": "M 6.7 - 7 km ENE of Lice, Turkey"
+  },
+  "usp0000kf0": {
+   "time": 217686138800,
+   "mag": 7.3,
+   "depth": 36,
+   "title": "M 7.3 - 47 km S of Do?ubayaz?t, Turkey"
+  },
+  "usp000547c": {
+   "time": 700507119980,
+   "mag": 6.7,
+   "depth": 27.2,
+   "title": "M 6.7 - 8 km W of Cimin, Turkey"
+  },
+  "usp0009hev": {
+   "time": 942425839550,
+   "mag": 7.2,
+   "depth": 10,
+   "title": "M 7.2 - 8 km S of Düzce, Turkey"
+  },
+  "usp000j9rr": {
+   "time": 1319366483250,
+   "mag": 7.1,
+   "depth": 18,
+   "title": "M 7.1 - 27 km NNE of Van, Turkey"
+  },
+  "us60007ewc": {
+   "time": 1579888514147,
+   "mag": 6.7,
+   "depth": 10,
+   "title": "M 6.7 - 13 km N of Do?anyol, Turkey"
+  },
+  "us6000jllz": {
+   "time": 1675646254342,
+   "mag": 7.8,
+   "depth": 10,
+   "title": "M 7.8 - Pazarcik earthquake, Kahramanmaras earthquake sequence"
+  },
+  "usp0006dzc": {
+   "time": 771121996230,
+   "mag": 8.2,
+   "depth": 631.3,
+   "title": "M 8.2 - 55 km NNW of Reyes, Bolivia"
+  },
+  "usb000h4jh": {
+   "time": 1369374288980,
+   "mag": 8.3,
+   "depth": 598.1,
+   "title": "M 8.3 - 2013 Sea of Okhotsk Earthquake"
+  }
+ },
+ "counts": {
+  "m7_2024": 10,
+  "m7_2023": 19,
+  "m6_2024": 99,
+  "m5_2024": 1507,
+  "m8_2000": 28,
+  "m6_2023": 147,
+  "m9_1900": 5
+ }
+}

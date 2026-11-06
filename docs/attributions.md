@@ -40,6 +40,11 @@ aynı liste yer alır.
 - Lisans: [ABD kamu eseri](https://www.nasa.gov/nasa-brand-center/images-and-media/)
 - Adres: https://nssdc.gsfc.nasa.gov/planetary/factsheet/
 
+## USGS ANSS ComCat
+- U.S. Geological Survey, ANSS Comprehensive Earthquake Catalog (ComCat). Kamu malı.
+- Lisans: [Kamu malı](https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits)
+- Adres: https://earthquake.usgs.gov/fdsnws/event/1/
+
 ## OurAirports
 - OurAirports, David Megginson ve katkıda bulunanlar. Veri kamu malına bırakılmıştır.
 - Lisans: [Kamu malı](https://ourairports.com/data/)

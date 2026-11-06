@@ -42,6 +42,13 @@
   "url": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
  },
  {
+  "name": "USGS ANSS ComCat",
+  "attribution": "U.S. Geological Survey, ANSS Comprehensive Earthquake Catalog (ComCat). Kamu malı.",
+  "license": "Kamu malı",
+  "license_url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+  "url": "https://earthquake.usgs.gov/fdsnws/event/1/"
+ },
+ {
   "name": "OurAirports",
   "attribution": "OurAirports, David Megginson ve katkıda bulunanlar. Veri kamu malına bırakılmıştır.",
   "license": "Kamu malı",

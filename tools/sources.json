@@ -82,9 +82,10 @@
    "license": "Kamu malı",
    "license_url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
    "url": "https://earthquake.usgs.gov/fdsnws/event/1/",
-   "attribution": "U.S. Geological Survey, ANSS ComCat",
-   "status": "planned",
-   "datasets": []
+   "attribution": "U.S. Geological Survey, ANSS Comprehensive Earthquake Catalog (ComCat). Kamu malı.",
+   "status": "in_use",
+   "raw_dir": "usgs",
+   "datasets": ["usgs_quake_years_world", "usgs_quake_years_tr", "usgs_quake_depth", "usgs_quake_counts"]
   },
   {
    "id": "ourairports",
