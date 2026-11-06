@@ -59,6 +59,18 @@ void main() {
     expect(settings.themeMode, ThemeMode.system);
   });
 
+  testWidgets('sound effects are on by default and can be turned off', (
+    tester,
+  ) async {
+    final settings = await settingsStore();
+    expect(settings.soundOn, isTrue);
+    await tester.pumpWidget(app(SettingsScreen(settings: settings)));
+    await tester.tap(find.text(AppStrings.soundEffects));
+    await tester.pumpAndSettle();
+    expect(settings.soundOn, isFalse);
+    expect((await SettingsStore.open()).soundOn, isFalse);
+  });
+
   testWidgets('the app follows the chosen theme', (tester) async {
     final settings = await settingsStore({'theme_mode': 'dark'});
     await tester.pumpWidget(

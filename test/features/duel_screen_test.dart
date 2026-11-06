@@ -5,6 +5,7 @@ import 'package:aralik/core/strings.dart';
 import 'package:aralik/core/theme.dart';
 import 'package:aralik/data/duel_client.dart';
 import 'package:aralik/data/question_repository.dart';
+import 'package:aralik/data/sound.dart';
 import 'package:aralik/data/stats_store.dart';
 import 'package:aralik/features/duel/duel_screen.dart';
 import 'package:flutter/material.dart';
@@ -25,6 +26,8 @@ void main() {
     final repository = QuestionRepository();
     final bank = await tester.runAsync(repository.load);
     final question = bank!.first;
+    final played = Sounds.played = [];
+    addTearDown(() => Sounds.played = null);
 
     final channel = FakeChannel();
     final service = DuelService(
@@ -120,10 +123,14 @@ void main() {
     expect(find.text(AppStrings.duelAnswer), findsOneWidget);
     expect(find.text('+12'), findsOneWidget);
     expect(find.text(AppStrings.duelNoInterval), findsOneWidget);
+    expect(played, isNot(contains(Sfx.duelWin)));
 
     await tester.tap(find.text(AppStrings.duelSeeResult));
     await settle();
     expect(find.text(AppStrings.duelWin), findsOneWidget);
+    expect(played.first, Sfx.duelStart);
+    expect(played.where((s) => s == Sfx.duelWin), hasLength(1));
+    expect(played.last, Sfx.duelWin);
 
     await tester.tap(find.text(AppStrings.duelPlayAgain));
     await settle();

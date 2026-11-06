@@ -2,6 +2,7 @@ import 'package:aralik/core/question_timer.dart';
 import 'package:aralik/core/strings.dart';
 import 'package:aralik/core/theme.dart';
 import 'package:aralik/data/question.dart';
+import 'package:aralik/data/sound.dart';
 import 'package:aralik/features/game/game_controller.dart';
 import 'package:aralik/features/game/game_screen.dart';
 import 'package:flutter/material.dart';
@@ -25,6 +26,8 @@ void main() {
     addTearDown(tester.view.reset);
 
     final locked = <RoundAnswer>[];
+    final played = Sounds.played = [];
+    addTearDown(() => Sounds.played = null);
     List<RoundAnswer>? popped;
     await tester.pumpWidget(
       MaterialApp(
@@ -71,6 +74,7 @@ void main() {
     expect(locked, hasLength(1));
     expect(find.text(AppStrings.hit), findsOneWidget);
     expect(find.text('5.137 m'), findsOneWidget);
+    expect(played, [Sfx.lock, Sfx.of(locked.single.tier)]);
 
     await tester.tap(find.text(AppStrings.finish));
     await tester.pumpAndSettle();
@@ -115,6 +119,17 @@ void main() {
         find.text(AppStrings.secondsLeft(dailyTimeLimit.inSeconds - 6)),
         findsOneWidget,
       );
+    });
+
+    testWidgets('ticks each of the last five seconds', (tester) async {
+      final played = Sounds.played = [];
+      addTearDown(() => Sounds.played = null);
+      await open(tester);
+      for (var s = 9; s <= 14; s++) {
+        clock = start.add(Duration(seconds: s, milliseconds: 100));
+        await tester.pump(const Duration(milliseconds: 250));
+      }
+      expect(played, List.filled(5, Sfx.tick));
     });
 
     testWidgets('time up without a guess shows "Süre doldu"', (tester) async {

@@ -7,7 +7,7 @@ import '../../widgets/link_text.dart';
 import '../leaderboard/nickname_sheet.dart';
 import 'attributions_screen.dart';
 
-/// Settings: the theme, and "Hakkında" with data sources and licenses,
+/// Settings: the theme, sound effects, and "Hakkında" with data sources and licenses,
 /// open-source licenses and the privacy policy.
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key, required this.settings, this.leaderboard});
@@ -62,6 +62,24 @@ class SettingsScreen extends StatelessWidget {
                       ),
                     ),
                   ],
+                ),
+              ),
+            ),
+            const SizedBox(height: 8),
+            Card(
+              clipBehavior: Clip.antiAlias,
+              child: ListenableBuilder(
+                listenable: settings,
+                builder: (context, _) => SwitchListTile(
+                  secondary: Icon(
+                    settings.soundOn
+                        ? Icons.volume_up_rounded
+                        : Icons.volume_off_rounded,
+                  ),
+                  title: const Text(AppStrings.soundEffects),
+                  subtitle: const Text(AppStrings.soundEffectsHint),
+                  value: settings.soundOn,
+                  onChanged: settings.setSoundOn,
                 ),
               ),
             ),

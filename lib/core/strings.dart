@@ -194,6 +194,8 @@ abstract final class AppStrings {
   static const themeSystem = 'Sistem';
   static const themeLight = 'Açık';
   static const themeDark = 'Koyu';
+  static const soundEffects = 'Ses efektleri';
+  static const soundEffectsHint = 'Telefon sessizdeyken çalmaz.';
   static const howToPlay = 'Nasıl oynanır?';
   static const privacy = 'Gizlilik';
   static const about = 'Hakkında';

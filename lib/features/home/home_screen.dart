@@ -16,6 +16,7 @@ import '../../data/store_link.dart';
 import '../../data/leaderboard.dart';
 import '../../data/question_repository.dart';
 import '../../data/settings_store.dart';
+import '../../data/sound.dart';
 import '../../data/stats_store.dart';
 import '../../widgets/calibration_text.dart';
 import '../../widgets/mascot.dart';
@@ -186,6 +187,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
     if (!mounted || answers == null || !_stats.isDayComplete(day)) return;
     _leaderboard?.submit(day).ignore();
+    Sounds.play(Sfx.done);
     await _showDaySummary(day);
   });
 
@@ -246,6 +248,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       );
       if (!mounted || answers == null) return;
+      Sounds.play(Sfx.done);
       final action = await Navigator.of(context).push<SummaryAction>(
         MaterialPageRoute(
           builder: (_) => SummaryScreen(

@@ -6,6 +6,7 @@ import 'data/content_sync.dart';
 import 'data/leaderboard.dart';
 import 'data/question_repository.dart';
 import 'data/settings_store.dart';
+import 'data/sound.dart';
 import 'data/stats_store.dart';
 
 Future<void> main() async {
@@ -19,11 +20,15 @@ Future<void> main() async {
   );
   // Warm the bank cache. A failure is retried on play.
   repository.load().ignore();
+  final settings = SettingsStore(prefs);
+  Sounds.enabled = settings.soundOn;
+  settings.addListener(() => Sounds.enabled = settings.soundOn);
+  Sounds.preload().ignore();
   runApp(
     KabacaApp(
       repository: repository,
       stats: StatsStore(prefs),
-      settings: SettingsStore(prefs),
+      settings: settings,
       leaderboard: leaderboard,
       latestAppBuild: () => content.latestAppBuild,
       scoringV2Day: () => content.scoringV2Day,

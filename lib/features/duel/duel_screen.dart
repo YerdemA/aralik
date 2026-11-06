@@ -8,11 +8,13 @@ import 'package:share_plus/share_plus.dart';
 import '../../core/duel.dart';
 import '../../core/number_format.dart';
 import '../../core/question_timer.dart';
+import '../../core/scoring.dart';
 import '../../core/strings.dart';
 import '../../core/theme.dart';
 import '../../data/duel_client.dart';
 import '../../data/question.dart';
 import '../../data/question_repository.dart';
+import '../../data/sound.dart';
 import '../../data/stats_store.dart';
 import '../../widgets/duelist.dart';
 import '../../widgets/interval_bar.dart';
@@ -170,7 +172,44 @@ class _DuelScreenState extends State<DuelScreen> {
     }
   }
 
+  /// Sounds already played: the start, each reveal, the outcome.
+  bool _startHeard = false;
+  int _revealsHeard = 0;
+  bool _outcomeHeard = false;
+
+  /// The last reveal stays on screen after the room is over, until
+  /// "Sonucu gör".
+  bool get _showsLastReveal =>
+      _match.phase == DuelPhase.over &&
+      !_resultShown &&
+      _match.results.isNotEmpty &&
+      !_match.opponentLeft;
+
+  void _playSounds() {
+    final match = _match;
+    if (!_startHeard && match.phase == DuelPhase.question) {
+      _startHeard = true;
+      Sounds.play(Sfx.duelStart);
+    }
+    // One sound per revealed question, for this player's own result.
+    if (match.results.length > _revealsHeard &&
+        (match.phase == DuelPhase.reveal || _showsLastReveal)) {
+      _revealsHeard = match.results.length;
+      final me = match.results.last.me;
+      Sounds.play(Sfx.of(ResultTier.of(points: me.points, hit: me.hit)));
+    }
+    if (!_outcomeHeard && match.phase == DuelPhase.over && !_showsLastReveal) {
+      _outcomeHeard = true;
+      Sounds.play(switch (match.outcome ?? DuelOutcome.draw) {
+        DuelOutcome.win => Sfx.duelWin,
+        DuelOutcome.loss => Sfx.duelLoss,
+        DuelOutcome.draw => Sfx.duelDraw,
+      });
+    }
+  }
+
   void _onMatch() {
+    _playSounds();
     final ids = _match.questionIds;
     if (_game == null && ids.isNotEmpty) {
       final questions = [for (final id in ids) ?_bank[id]];
@@ -253,6 +292,7 @@ class _DuelScreenState extends State<DuelScreen> {
     if (before != null && before > timeWarning && left <= timeWarning) {
       HapticFeedback.lightImpact();
     }
+    if (clockTicks(before, left)) Sounds.play(Sfx.tick);
     if (left <= Duration.zero) _lock(timedOut: true);
   }
 
@@ -263,6 +303,7 @@ class _DuelScreenState extends State<DuelScreen> {
     _ticker = null;
     HapticFeedback.mediumImpact();
     final answer = timedOut ? game.timeOut() : game.lock();
+    if (!timedOut) Sounds.play(Sfx.lock);
     _session?.lock(_match.index, low: answer.low, high: answer.high);
     // Duel answers count like free play: calibration, and never again in
     // free play.
@@ -351,11 +392,7 @@ class _DuelScreenState extends State<DuelScreen> {
       );
     } else if (_match.phase == DuelPhase.question) {
       body = _QuestionView(game: game, onLock: () => _lock(timedOut: false));
-    } else if (_match.phase == DuelPhase.reveal ||
-        (_match.phase == DuelPhase.over &&
-            !_resultShown &&
-            _match.results.isNotEmpty &&
-            !_match.opponentLeft)) {
+    } else if (_match.phase == DuelPhase.reveal || _showsLastReveal) {
       final over = _match.phase == DuelPhase.over;
       body = _RevealView(
         question: game.question,
@@ -366,7 +403,10 @@ class _DuelScreenState extends State<DuelScreen> {
             ? AppStrings.duelWaitingOther
             : AppStrings.next,
         onNext: over
-            ? () => setState(() => _resultShown = true)
+            ? () {
+                setState(() => _resultShown = true);
+                _playSounds();
+              }
             : _readyFor == _match.index
             ? null
             : _next,

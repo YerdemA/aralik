@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import '../../core/question_timer.dart';
 import '../../core/strings.dart';
 import '../../data/question.dart';
+import '../../data/sound.dart';
 import '../result/result_screen.dart';
 import 'answer_input.dart';
 import 'game_controller.dart';
@@ -100,6 +101,7 @@ class _GameScreenState extends State<GameScreen> {
     if (before != null && before > timeWarning && left <= timeWarning) {
       HapticFeedback.lightImpact();
     }
+    if (clockTicks(before, left)) Sounds.play(Sfx.tick);
     if (left == Duration.zero) _finish(timedOut: true);
   }
 
@@ -109,6 +111,8 @@ class _GameScreenState extends State<GameScreen> {
     _ticker = null;
     HapticFeedback.mediumImpact();
     final answer = timedOut ? _game.timeOut() : _game.lock();
+    if (!timedOut) Sounds.play(Sfx.lock);
+    Sounds.play(Sfx.of(answer.tier));
     widget.onLocked?.call(answer);
     await Navigator.of(context).push(
       MaterialPageRoute<void>(

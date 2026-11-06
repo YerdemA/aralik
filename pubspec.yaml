@@ -25,3 +25,4 @@ flutter:
     - assets/questions/schedule.json
     - assets/data/places.json
     - assets/data/attributions.json
+    - assets/sounds/

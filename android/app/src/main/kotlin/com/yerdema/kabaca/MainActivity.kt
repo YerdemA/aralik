@@ -1,17 +1,39 @@
 package com.yerdema.kabaca
 
 import android.content.ActivityNotFoundException
+import android.content.Context
 import android.content.Intent
+import android.media.AudioAttributes
+import android.media.AudioManager
+import android.media.SoundPool
 import android.net.Uri
 import android.provider.Settings
+import java.io.File
 import java.security.MessageDigest
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
 
 class MainActivity : FlutterActivity() {
+    // Short sound effects (lib/data/sound.dart). Dart sends each WAV once;
+    // it is kept in the cache directory and loaded into a SoundPool.
+    private var soundPool: SoundPool? = null
+    private val soundIds = mutableMapOf<String, Int>()
+
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "com.yerdema.kabaca/sound")
+            .setMethodCallHandler { call, result ->
+                when (call.method) {
+                    "load" -> {
+                        val name = call.argument<String>("name")
+                        val bytes = call.argument<ByteArray>("bytes")
+                        result.success(name != null && bytes != null && loadSound(name, bytes))
+                    }
+                    "play" -> result.success(playSound(call.argument<String>("name") ?: ""))
+                    else -> result.notImplemented()
+                }
+            }
         // Opens the app's Play Store page for the update notice
         // (lib/data/store_link.dart).
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "com.yerdema.kabaca/store")
@@ -32,6 +54,44 @@ class MainActivity : FlutterActivity() {
                     result.notImplemented()
                 }
             }
+    }
+
+    override fun onDestroy() {
+        soundPool?.release()
+        soundPool = null
+        soundIds.clear()
+        super.onDestroy()
+    }
+
+    private fun pool(): SoundPool = soundPool ?: SoundPool.Builder()
+        .setMaxStreams(4)
+        .setAudioAttributes(
+            AudioAttributes.Builder()
+                .setUsage(AudioAttributes.USAGE_GAME)
+                .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                .build(),
+        )
+        .build()
+        .also { soundPool = it }
+
+    private fun loadSound(name: String, bytes: ByteArray): Boolean {
+        if (soundIds.containsKey(name)) return true
+        return try {
+            val file = File(File(cacheDir, "sounds").apply { mkdirs() }, "$name.wav")
+            file.writeBytes(bytes)
+            soundIds[name] = pool().load(file.path, 1)
+            true
+        } catch (_: Exception) {
+            false
+        }
+    }
+
+    /** Plays [name] unless the phone is on silent or vibrate. */
+    private fun playSound(name: String): Boolean {
+        val id = soundIds[name] ?: return false
+        val audio = getSystemService(Context.AUDIO_SERVICE) as AudioManager
+        if (audio.ringerMode != AudioManager.RINGER_MODE_NORMAL) return false
+        return pool().play(id, 0.7f, 0.7f, 1, 0, 1f) != 0
     }
 
     private fun deviceKey(): String? {
