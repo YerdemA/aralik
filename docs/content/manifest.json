@@ -1,10 +1,10 @@
 {
- "version": 18,
+ "version": 19,
  "questions": "questions.json",
  "places": "places.json",
  "schedule": "schedule.json",
  "hashes": {
-  "questions.json": "36e1a8f81c717125341abdcbdbcd4508a1d83eba3f1259827dd6e2011dd2db44",
+  "questions.json": "c78c27f8af2cd79480e50d74b6b5380fcdccc18ba1cc8244e70e6c6f97fa2148",
   "places.json": "9c6f6f8b3b361e167cca743f3bf668a008730d93335914d57bf1b283058c2617",
   "schedule.json": "07e26516a69a5e38e7d91b916e267fac5443cb9910d616a0415867e49a6f14e5"
  },
