@@ -18273,7 +18273,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/171891/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 9 kcal.",
+  "fun_fact": "Aynı 100 gramda 9 kcal var.",
   "difficulty": 2,
   "dataset": "foods_caffeine"
  },
@@ -18299,7 +18299,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/171890/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 1 kcal.",
+  "fun_fact": "Aynı 100 gramda 1 kcal var.",
   "difficulty": 2,
   "dataset": "foods_caffeine"
  },
@@ -18312,7 +18312,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/173227/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 1 kcal.",
+  "fun_fact": "Aynı 100 gramda 1 kcal var.",
   "difficulty": 2,
   "dataset": "foods_caffeine"
  },
@@ -18325,7 +18325,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/170848/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 392 kcal.",
+  "fun_fact": "Aynı 100 gramda 392 kcal var.",
   "difficulty": 3,
   "dataset": "foods_protein"
  },
@@ -18364,20 +18364,20 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/167746/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 29 kcal.",
+  "fun_fact": "Aynı 100 gramda 29 kcal var.",
   "difficulty": 2,
   "dataset": "foods_vitamin_c"
  },
  {
   "id": "q1414",
-  "text": "100 gram süzülmüş, suda ton balığı konservesinde kaç gram protein var?",
+  "text": "100 gram suyu süzülmüş ton balığı konservesinde kaç gram protein var?",
   "answer": 19,
   "unit": "g",
   "kind": "magnitude",
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/173709/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 86 kcal.",
+  "fun_fact": "Aynı 100 gramda 86 kcal var.",
   "difficulty": 2,
   "dataset": "foods_protein"
  },
@@ -18481,7 +18481,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/171477/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 165 kcal.",
+  "fun_fact": "Aynı 100 gramda 165 kcal var.",
   "difficulty": 1,
   "dataset": "foods_protein"
  },
@@ -18520,7 +18520,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/170845/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 299 kcal.",
+  "fun_fact": "Aynı 100 gramda 299 kcal var.",
   "difficulty": 2,
   "dataset": "foods_protein"
  },
@@ -18585,7 +18585,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/167587/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 535 kcal.",
+  "fun_fact": "Aynı 100 gramda 535 kcal var.",
   "difficulty": 3,
   "dataset": "foods_caffeine"
  },
@@ -18702,7 +18702,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/170108/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 26 kcal.",
+  "fun_fact": "Aynı 100 gramda 26 kcal var.",
   "difficulty": 3,
   "dataset": "foods_vitamin_c"
  },
@@ -18715,7 +18715,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/175139/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 208 kcal.",
+  "fun_fact": "Aynı 100 gramda 208 kcal var.",
   "difficulty": 3,
   "dataset": "foods_protein"
  },
@@ -18767,7 +18767,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/169593/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 228 kcal.",
+  "fun_fact": "Aynı 100 gramda 228 kcal var.",
   "difficulty": 3,
   "dataset": "foods_caffeine"
  },
@@ -18793,7 +18793,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/169097/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 47 kcal.",
+  "fun_fact": "Aynı 100 gramda 47 kcal var.",
   "difficulty": 2,
   "dataset": "foods_vitamin_c"
  },
@@ -18806,7 +18806,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/168163/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 57 kcal.",
+  "fun_fact": "Aynı 100 gramda 57 kcal var.",
   "difficulty": 3,
   "dataset": "foods_vitamin_c"
  },
@@ -18819,7 +18819,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/170379/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 34 kcal.",
+  "fun_fact": "Aynı 100 gramda 34 kcal var.",
   "difficulty": 3,
   "dataset": "foods_vitamin_c"
  },
@@ -18845,7 +18845,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/175168/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 206 kcal.",
+  "fun_fact": "Aynı 100 gramda 206 kcal var.",
   "difficulty": 2,
   "dataset": "foods_protein"
  },
@@ -18858,7 +18858,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/173806/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 587 kcal.",
+  "fun_fact": "Aynı 100 gramda 587 kcal var.",
   "difficulty": 2,
   "dataset": "foods_protein"
  },
@@ -18871,7 +18871,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/169251/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 22 kcal.",
+  "fun_fact": "Aynı 100 gramda 22 kcal var.",
   "difficulty": 3,
   "dataset": "foods_protein"
  },
@@ -18884,7 +18884,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/171917/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 1 kcal.",
+  "fun_fact": "Aynı 100 gramda 1 kcal var.",
   "difficulty": 3,
   "dataset": "foods_caffeine"
  },
@@ -18897,7 +18897,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/169975/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 25 kcal.",
+  "fun_fact": "Aynı 100 gramda 25 kcal var.",
   "difficulty": 3,
   "dataset": "foods_vitamin_c"
  },
@@ -18949,7 +18949,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/175193/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 333 kcal.",
+  "fun_fact": "Aynı 100 gramda 333 kcal var.",
   "difficulty": 2,
   "dataset": "foods_protein"
  },
@@ -18962,7 +18962,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/169913/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 43 kcal.",
+  "fun_fact": "Aynı 100 gramda 43 kcal var.",
   "difficulty": 3,
   "dataset": "foods_vitamin_c"
  },
@@ -19014,7 +19014,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/168153/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 61 kcal.",
+  "fun_fact": "Aynı 100 gramda 61 kcal var.",
   "difficulty": 2,
   "dataset": "foods_vitamin_c"
  },
@@ -19040,7 +19040,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/172420/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 352 kcal.",
+  "fun_fact": "Aynı 100 gramda 352 kcal var.",
   "difficulty": 2,
   "dataset": "foods_protein"
  },
@@ -19066,7 +19066,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/173756/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 378 kcal.",
+  "fun_fact": "Aynı 100 gramda 378 kcal var.",
   "difficulty": 2,
   "dataset": "foods_protein"
  },
@@ -19092,7 +19092,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/170556/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 559 kcal.",
+  "fun_fact": "Aynı 100 gramda 559 kcal var.",
   "difficulty": 3,
   "dataset": "foods_protein"
  },
@@ -19105,7 +19105,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/170273/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 598 kcal.",
+  "fun_fact": "Aynı 100 gramda 598 kcal var.",
   "difficulty": 3,
   "dataset": "foods_caffeine"
  },
@@ -19222,7 +19222,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/170567/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 579 kcal.",
+  "fun_fact": "Aynı 100 gramda 579 kcal var.",
   "difficulty": 2,
   "dataset": "foods_protein"
  },
@@ -19300,7 +19300,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/170427/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 20 kcal.",
+  "fun_fact": "Aynı 100 gramda 20 kcal var.",
   "difficulty": 3,
   "dataset": "foods_vitamin_c"
  },
@@ -19326,7 +19326,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/174852/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 42 kcal.",
+  "fun_fact": "Aynı 100 gramda 42 kcal var.",
   "difficulty": 2,
   "dataset": "foods_caffeine"
  },
@@ -19378,7 +19378,7 @@
   "category": "gündelik",
   "source": "https://fdc.nal.usda.gov/food-details/173424/nutrients",
   "data_year": 2018,
-  "fun_fact": "Aynı 100 gram 155 kcal.",
+  "fun_fact": "Aynı 100 gramda 155 kcal var.",
   "difficulty": 1,
   "dataset": "foods_protein"
  },
@@ -19956,7 +19956,7 @@
  },
  {
   "id": "q1536",
-  "text": "Mexico City Benito Juárez Havalimanı deniz seviyesinden kaç metre yüksekliktedir?",
+  "text": "Meksiko Benito Juárez Havalimanı deniz seviyesinden kaç metre yüksekliktedir?",
   "answer": 2230,
   "unit": "m",
   "kind": "magnitude",
@@ -20242,7 +20242,7 @@
  },
  {
   "id": "q1558",
-  "text": "Manchester City 2022-23 Premier Lig sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Manchester City, 2022-23 Premier Lig sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 89,
   "unit": "puan",
   "kind": "magnitude",
@@ -20255,7 +20255,7 @@
  },
  {
   "id": "q1559",
-  "text": "Bayern Münih 2024-25 Bundesliga sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Bayern Münih, 2024-25 Bundesliga sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 82,
   "unit": "puan",
   "kind": "magnitude",
@@ -20268,7 +20268,7 @@
  },
  {
   "id": "q1560",
-  "text": "Inter 2020-21 Serie A sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Inter, 2020-21 Serie A sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 91,
   "unit": "puan",
   "kind": "magnitude",
@@ -20307,7 +20307,7 @@
  },
  {
   "id": "q1563",
-  "text": "Atlético Madrid 2020-21 La Liga sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Atlético Madrid, 2020-21 La Liga sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 86,
   "unit": "puan",
   "kind": "magnitude",
@@ -20320,7 +20320,7 @@
  },
  {
   "id": "q1564",
-  "text": "Barcelona 2012-13 La Liga sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Barcelona, 2012-13 La Liga sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 100,
   "unit": "puan",
   "kind": "magnitude",
@@ -20333,7 +20333,7 @@
  },
  {
   "id": "q1565",
-  "text": "Milan 2021-22 Serie A sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Milan, 2021-22 Serie A sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 86,
   "unit": "puan",
   "kind": "magnitude",
@@ -20372,7 +20372,7 @@
  },
  {
   "id": "q1568",
-  "text": "Manchester City 2020-21 Premier Lig sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Manchester City, 2020-21 Premier Lig sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 86,
   "unit": "puan",
   "kind": "magnitude",
@@ -20385,7 +20385,7 @@
  },
  {
   "id": "q1569",
-  "text": "Manchester City 2021-22 Premier Lig sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Manchester City, 2021-22 Premier Lig sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 93,
   "unit": "puan",
   "kind": "magnitude",
@@ -20398,7 +20398,7 @@
  },
  {
   "id": "q1570",
-  "text": "Chelsea 2016-17 Premier Lig sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Chelsea, 2016-17 Premier Lig sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 93,
   "unit": "puan",
   "kind": "magnitude",
@@ -20411,7 +20411,7 @@
  },
  {
   "id": "q1571",
-  "text": "Real Madrid 2021-22 La Liga sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Real Madrid, 2021-22 La Liga sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 86,
   "unit": "puan",
   "kind": "magnitude",
@@ -20424,7 +20424,7 @@
  },
  {
   "id": "q1572",
-  "text": "Inter 2023-24 Serie A sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Inter, 2023-24 Serie A sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 94,
   "unit": "puan",
   "kind": "magnitude",
@@ -20450,7 +20450,7 @@
  },
  {
   "id": "q1574",
-  "text": "Napoli 2022-23 Serie A sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Napoli, 2022-23 Serie A sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 90,
   "unit": "puan",
   "kind": "magnitude",
@@ -20502,7 +20502,7 @@
  },
  {
   "id": "q1578",
-  "text": "Real Madrid 2023-24 La Liga sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Real Madrid, 2023-24 La Liga sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 95,
   "unit": "puan",
   "kind": "magnitude",
@@ -20554,7 +20554,7 @@
  },
  {
   "id": "q1582",
-  "text": "Manchester City 2023-24 Premier Lig sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Manchester City, 2023-24 Premier Lig sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 91,
   "unit": "puan",
   "kind": "magnitude",
@@ -20567,7 +20567,7 @@
  },
  {
   "id": "q1583",
-  "text": "Bayern Münih 2020-21 Bundesliga sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Bayern Münih, 2020-21 Bundesliga sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 78,
   "unit": "puan",
   "kind": "magnitude",
@@ -20580,7 +20580,7 @@
  },
  {
   "id": "q1584",
-  "text": "Bayer Leverkusen 2023-24 Bundesliga sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Bayer Leverkusen, 2023-24 Bundesliga sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 90,
   "unit": "puan",
   "kind": "magnitude",
@@ -20619,7 +20619,7 @@
  },
  {
   "id": "q1587",
-  "text": "Barcelona 2022-23 La Liga sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Barcelona, 2022-23 La Liga sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 88,
   "unit": "puan",
   "kind": "magnitude",
@@ -20645,7 +20645,7 @@
  },
  {
   "id": "q1589",
-  "text": "Liverpool 2019-20 Premier Lig sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Liverpool, 2019-20 Premier Lig sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 99,
   "unit": "puan",
   "kind": "magnitude",
@@ -20671,7 +20671,7 @@
  },
  {
   "id": "q1591",
-  "text": "Bayern Münih 2012-13 Bundesliga sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Bayern Münih, 2012-13 Bundesliga sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 91,
   "unit": "puan",
   "kind": "magnitude",
@@ -20710,7 +20710,7 @@
  },
  {
   "id": "q1594",
-  "text": "Leicester City 2015-16 Premier Lig sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Leicester City, 2015-16 Premier Lig sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 81,
   "unit": "puan",
   "kind": "magnitude",
@@ -20723,7 +20723,7 @@
  },
  {
   "id": "q1595",
-  "text": "Manchester City 2018-19 Premier Lig sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Manchester City, 2018-19 Premier Lig sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 98,
   "unit": "puan",
   "kind": "magnitude",
@@ -20736,7 +20736,7 @@
  },
  {
   "id": "q1596",
-  "text": "Liverpool 2024-25 Premier Lig sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Liverpool, 2024-25 Premier Lig sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 84,
   "unit": "puan",
   "kind": "magnitude",
@@ -20762,7 +20762,7 @@
  },
  {
   "id": "q1598",
-  "text": "Juventus 2013-14 Serie A sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Juventus, 2013-14 Serie A sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 102,
   "unit": "puan",
   "kind": "magnitude",
@@ -20827,7 +20827,7 @@
  },
  {
   "id": "q1603",
-  "text": "Manchester City 2017-18 Premier Lig sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Manchester City, 2017-18 Premier Lig sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 100,
   "unit": "puan",
   "kind": "magnitude",
@@ -20853,7 +20853,7 @@
  },
  {
   "id": "q1605",
-  "text": "Bayern Münih 2021-22 Bundesliga sezonunu kaç puanla şampiyon tamamladı?",
+  "text": "Bayern Münih, 2021-22 Bundesliga sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
   "answer": 77,
   "unit": "puan",
   "kind": "magnitude",
@@ -20892,7 +20892,7 @@
  },
  {
   "id": "q1608",
-  "text": "2025 verilerine göre Almanya'nın nüfusunun yüzde kaçı 65 yaş ve üzerindedir?",
+  "text": "2025 verilerine göre Almanya nüfusunun yüzde kaçı 65 yaş ve üzerindedir?",
   "answer": 23.7,
   "unit": "%",
   "kind": "magnitude",
@@ -20957,7 +20957,7 @@
  },
  {
   "id": "q1613",
-  "text": "2025 verilerine göre İtalya'nın nüfusunun yüzde kaçı 65 yaş ve üzerindedir?",
+  "text": "2025 verilerine göre İtalya nüfusunun yüzde kaçı 65 yaş ve üzerindedir?",
   "answer": 25.1,
   "unit": "%",
   "kind": "magnitude",
@@ -21048,7 +21048,7 @@
  },
  {
   "id": "q1620",
-  "text": "2025 verilerine göre Japonya'nın nüfusunun yüzde kaçı 65 yaş ve üzerindedir?",
+  "text": "2025 verilerine göre Japonya nüfusunun yüzde kaçı 65 yaş ve üzerindedir?",
   "answer": 30.0,
   "unit": "%",
   "kind": "magnitude",
@@ -21152,7 +21152,7 @@
  },
  {
   "id": "q1628",
-  "text": "2025 verilerine göre Türkiye'nin nüfusunun yüzde kaçı 65 yaş ve üzerindedir?",
+  "text": "2025 verilerine göre Türkiye nüfusunun yüzde kaçı 65 yaş ve üzerindedir?",
   "answer": 10.6,
   "unit": "%",
   "kind": "magnitude",
@@ -21165,7 +21165,7 @@
  },
  {
   "id": "q1629",
-  "text": "2025 verilerine göre Katar'ın nüfusunun yüzde kaçı 65 yaş ve üzerindedir?",
+  "text": "2025 verilerine göre Katar nüfusunun yüzde kaçı 65 yaş ve üzerindedir?",
   "answer": 1.7,
   "unit": "%",
   "kind": "magnitude",
@@ -21178,7 +21178,7 @@
  },
  {
   "id": "q1630",
-  "text": "2025 verilerine göre Güney Kore'nin nüfusunun yüzde kaçı 65 yaş ve üzerindedir?",
+  "text": "2025 verilerine göre Güney Kore nüfusunun yüzde kaçı 65 yaş ve üzerindedir?",
   "answer": 20.3,
   "unit": "%",
   "kind": "magnitude",
@@ -21256,7 +21256,7 @@
  },
  {
   "id": "q1636",
-  "text": "2025 verilerine göre Nijerya'nın nüfusunun yüzde kaçı 65 yaş ve üzerindedir?",
+  "text": "2025 verilerine göre Nijerya nüfusunun yüzde kaçı 65 yaş ve üzerindedir?",
   "answer": 3.1,
   "unit": "%",
   "kind": "magnitude",
@@ -21295,7 +21295,7 @@
  },
  {
   "id": "q1639",
-  "text": "2025 verilerine göre Hindistan'ın nüfusunun yüzde kaçı 65 yaş ve üzerindedir?",
+  "text": "2025 verilerine göre Hindistan nüfusunun yüzde kaçı 65 yaş ve üzerindedir?",
   "answer": 7.4,
   "unit": "%",
   "kind": "magnitude",
@@ -21555,7 +21555,7 @@
  },
  {
   "id": "q1659",
-  "text": "2025 verilerine göre Çin'in nüfusunun yüzde kaçı 65 yaş ve üzerindedir?",
+  "text": "2025 verilerine göre Çin nüfusunun yüzde kaçı 65 yaş ve üzerindedir?",
   "answer": 14.9,
   "unit": "%",
   "kind": "magnitude",
@@ -21633,7 +21633,7 @@
  },
  {
   "id": "q1665",
-  "text": "2024 verilerine göre Mısır'ın nüfusunun yüzde kaçı internet kullanmaktadır?",
+  "text": "2024 verilerine göre Mısır nüfusunun yüzde kaçı internet kullanmaktadır?",
   "answer": 74.6,
   "unit": "%",
   "kind": "magnitude",
@@ -21646,7 +21646,7 @@
  },
  {
   "id": "q1666",
-  "text": "2024 verilerine göre Nijer'in nüfusunun yüzde kaçı internet kullanmaktadır?",
+  "text": "2024 verilerine göre Nijer nüfusunun yüzde kaçı internet kullanmaktadır?",
   "answer": 15.6,
   "unit": "%",
   "kind": "magnitude",
@@ -21659,7 +21659,7 @@
  },
  {
   "id": "q1667",
-  "text": "2025 verilerine göre Türkiye'nin nüfusunun yüzde kaçı internet kullanmaktadır?",
+  "text": "2025 verilerine göre Türkiye nüfusunun yüzde kaçı internet kullanmaktadır?",
   "answer": 89.8,
   "unit": "%",
   "kind": "magnitude",
@@ -21672,7 +21672,7 @@
  },
  {
   "id": "q1668",
-  "text": "2019 yılında Mısır'a kaç uluslararası turist geldi?",
+  "text": "2019 yılında Mısır'a kaç uluslararası turist gelmiştir?",
   "answer": 13026000,
   "unit": "kişi",
   "kind": "magnitude",
@@ -21685,7 +21685,7 @@
  },
  {
   "id": "q1669",
-  "text": "2020 yılında Avusturya'ya kaç uluslararası turist geldi?",
+  "text": "2020 yılında Avusturya'ya kaç uluslararası turist gelmiştir?",
   "answer": 15091000,
   "unit": "kişi",
   "kind": "magnitude",
@@ -21698,7 +21698,7 @@
  },
  {
   "id": "q1670",
-  "text": "2024 verilerine göre Pakistan'ın nüfusunun yüzde kaçı internet kullanmaktadır?",
+  "text": "2024 verilerine göre Pakistan nüfusunun yüzde kaçı internet kullanmaktadır?",
   "answer": 57.3,
   "unit": "%",
   "kind": "magnitude",
@@ -21711,7 +21711,7 @@
  },
  {
   "id": "q1671",
-  "text": "2020 yılında Rusya'ya kaç uluslararası turist geldi?",
+  "text": "2020 yılında Rusya'ya kaç uluslararası turist gelmiştir?",
   "answer": 6359000,
   "unit": "kişi",
   "kind": "magnitude",
@@ -21724,7 +21724,7 @@
  },
  {
   "id": "q1672",
-  "text": "2020 yılında Birleşik Arap Emirlikleri'ne kaç uluslararası turist geldi?",
+  "text": "2020 yılında Birleşik Arap Emirlikleri'ne kaç uluslararası turist gelmiştir?",
   "answer": 8084000,
   "unit": "kişi",
   "kind": "magnitude",
@@ -21737,7 +21737,7 @@
  },
  {
   "id": "q1673",
-  "text": "2024 verilerine göre Etiyopya'nın nüfusunun yüzde kaçı internet kullanmaktadır?",
+  "text": "2024 verilerine göre Etiyopya nüfusunun yüzde kaçı internet kullanmaktadır?",
   "answer": 21.9,
   "unit": "%",
   "kind": "magnitude",
@@ -21750,7 +21750,7 @@
  },
  {
   "id": "q1674",
-  "text": "2020 yılında Türkiye'ye kaç uluslararası turist geldi?",
+  "text": "2020 yılında Türkiye'ye kaç uluslararası turist gelmiştir?",
   "answer": 15971000,
   "unit": "kişi",
   "kind": "magnitude",
@@ -21763,7 +21763,7 @@
  },
  {
   "id": "q1675",
-  "text": "2020 yılında Azerbaycan'a kaç uluslararası turist geldi?",
+  "text": "2020 yılında Azerbaycan'a kaç uluslararası turist gelmiştir?",
   "answer": 796000,
   "unit": "kişi",
   "kind": "magnitude",
@@ -21776,7 +21776,7 @@
  },
  {
   "id": "q1676",
-  "text": "2024 verilerine göre Endonezya'nın nüfusunun yüzde kaçı internet kullanmaktadır?",
+  "text": "2024 verilerine göre Endonezya nüfusunun yüzde kaçı internet kullanmaktadır?",
   "answer": 72.8,
   "unit": "%",
   "kind": "magnitude",
@@ -21789,7 +21789,7 @@
  },
  {
   "id": "q1677",
-  "text": "2020 yılında Yunanistan'a kaç uluslararası turist geldi?",
+  "text": "2020 yılında Yunanistan'a kaç uluslararası turist gelmiştir?",
   "answer": 7406000,
   "unit": "kişi",
   "kind": "magnitude",
@@ -21802,7 +21802,7 @@
  },
  {
   "id": "q1678",
-  "text": "2024 verilerine göre Brezilya'nın nüfusunun yüzde kaçı internet kullanmaktadır?",
+  "text": "2024 verilerine göre Brezilya nüfusunun yüzde kaçı internet kullanmaktadır?",
   "answer": 84.5,
   "unit": "%",
   "kind": "magnitude",
@@ -21815,7 +21815,7 @@
  },
  {
   "id": "q1679",
-  "text": "2020 yılında Birleşik Krallık'a kaç uluslararası turist geldi?",
+  "text": "2020 yılında Birleşik Krallık'a kaç uluslararası turist gelmiştir?",
   "answer": 11101000,
   "unit": "kişi",
   "kind": "magnitude",
@@ -21828,7 +21828,7 @@
  },
  {
   "id": "q1680",
-  "text": "2020 yılında Japonya'ya kaç uluslararası turist geldi?",
+  "text": "2020 yılında Japonya'ya kaç uluslararası turist gelmiştir?",
   "answer": 4115800,
   "unit": "kişi",
   "kind": "magnitude",
@@ -21841,7 +21841,7 @@
  },
  {
   "id": "q1681",
-  "text": "2025 verilerine göre Hindistan'ın nüfusunun yüzde kaçı internet kullanmaktadır?",
+  "text": "2025 verilerine göre Hindistan nüfusunun yüzde kaçı internet kullanmaktadır?",
   "answer": 70,
   "unit": "%",
   "kind": "magnitude",
@@ -21854,7 +21854,7 @@
  },
  {
   "id": "q1682",
-  "text": "2024 verilerine göre Japonya'nın nüfusunun yüzde kaçı internet kullanmaktadır?",
+  "text": "2024 verilerine göre Japonya nüfusunun yüzde kaçı internet kullanmaktadır?",
   "answer": 85.5,
   "unit": "%",
   "kind": "magnitude",
@@ -21867,7 +21867,7 @@
  },
  {
   "id": "q1683",
-  "text": "2019 yılında Tayland'a kaç uluslararası turist geldi?",
+  "text": "2019 yılında Tayland'a kaç uluslararası turist gelmiştir?",
   "answer": 39916000,
   "unit": "kişi",
   "kind": "magnitude",
@@ -21880,7 +21880,7 @@
  },
  {
   "id": "q1684",
-  "text": "2024 verilerine göre Nijerya'nın nüfusunun yüzde kaçı internet kullanmaktadır?",
+  "text": "2024 verilerine göre Nijerya nüfusunun yüzde kaçı internet kullanmaktadır?",
   "answer": 41.2,
   "unit": "%",
   "kind": "magnitude",
@@ -21893,7 +21893,7 @@
  },
  {
   "id": "q1685",
-  "text": "2020 yılında Almanya'ya kaç uluslararası turist geldi?",
+  "text": "2020 yılında Almanya'ya kaç uluslararası turist gelmiştir?",
   "answer": 12449000,
   "unit": "kişi",
   "kind": "magnitude",
