@@ -136,9 +136,10 @@
    "license": "CC BY 4.0 (yalnızca OWID'in kendi verisi)",
    "license_url": "https://ourworldindata.org/faqs",
    "url": "https://ourworldindata.org/",
-   "attribution": "Our World in Data, CC BY",
-   "status": "planned",
-   "datasets": []
+   "attribution": "Our World in Data, CC BY 4.0. Nüfus: HYDE (2023), Gapminder (2022), UN WPP (2024); yaşam süresi: Riley (2005), Zijdeman et al. (2015), HMD, UN WPP (2024); okuryazarlık: UNESCO (1957) ve diğer kaynaklar; uzaya fırlatılan nesneler: BM Uzay İşleri Ofisi (UNOOSA). Hepsi Our World in Data tarafından derlenip işlendi.",
+   "status": "in_use",
+   "raw_dir": "owid",
+   "datasets": ["owid_population_history", "owid_life_expectancy_history", "owid_literacy_history", "owid_space_objects"]
   },
   {
    "id": "ibb",

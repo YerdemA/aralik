@@ -70,6 +70,13 @@
   "url": "https://www.fao.org/faostat/"
  },
  {
+  "name": "Our World in Data",
+  "attribution": "Our World in Data, CC BY 4.0. Nüfus: HYDE (2023), Gapminder (2022), UN WPP (2024); yaşam süresi: Riley (2005), Zijdeman et al. (2015), HMD, UN WPP (2024); okuryazarlık: UNESCO (1957) ve diğer kaynaklar; uzaya fırlatılan nesneler: BM Uzay İşleri Ofisi (UNOOSA). Hepsi Our World in Data tarafından derlenip işlendi.",
+  "license": "CC BY 4.0 (yalnızca OWID'in kendi verisi)",
+  "license_url": "https://ourworldindata.org/faqs",
+  "url": "https://ourworldindata.org/"
+ },
+ {
   "name": "İBB Açık Veri Portalı",
   "attribution": "İstanbul Büyükşehir Belediyesi Açık Veri Portalı, İBB Açık Veri Lisansı 1.0",
   "license": "İBB Açık Veri Lisansı 1.0",

@@ -60,6 +60,11 @@ aynı liste yer alır.
 - Lisans: [CC BY 4.0](https://www.fao.org/contact-us/terms/db-terms-of-use)
 - Adres: https://www.fao.org/faostat/
 
+## Our World in Data
+- Our World in Data, CC BY 4.0. Nüfus: HYDE (2023), Gapminder (2022), UN WPP (2024); yaşam süresi: Riley (2005), Zijdeman et al. (2015), HMD, UN WPP (2024); okuryazarlık: UNESCO (1957) ve diğer kaynaklar; uzaya fırlatılan nesneler: BM Uzay İşleri Ofisi (UNOOSA). Hepsi Our World in Data tarafından derlenip işlendi.
+- Lisans: [CC BY 4.0 (yalnızca OWID'in kendi verisi)](https://ourworldindata.org/faqs)
+- Adres: https://ourworldindata.org/
+
 ## İBB Açık Veri Portalı
 - İstanbul Büyükşehir Belediyesi Açık Veri Portalı, İBB Açık Veri Lisansı 1.0
 - Lisans: [İBB Açık Veri Lisansı 1.0](https://data.ibb.gov.tr/license)

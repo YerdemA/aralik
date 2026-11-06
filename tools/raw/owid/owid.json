@@ -1,0 +1,60 @@
+{
+ "source": "https://ourworldindata.org/grapher/",
+ "fetched": "2026-11-06",
+ "citations": {
+  "population": "HYDE (2023); Gapminder (2022); UN WPP (2024) – with major processing by Our World in Data",
+  "life-expectancy": "Riley (2005); Zijdeman et al. (2015); HMD (2025); UN WPP (2024) – with major processing by Our World in Data",
+  "cross-country-literacy-rates": "UNESCO (1957) and other sources – with major processing by Our World in Data",
+  "yearly-number-of-objects-launched-into-outer-space": "United Nations Office for Outer Space Affairs (2026) – with major processing by Our World in Data"
+ },
+ "values": {
+  "population": {
+   "CHN:1800": 330000000.0,
+   "CHN:2023": 1422584930.0,
+   "IND:1900": 280714154.0,
+   "IND:2023": 1438069597.0,
+   "TUR:1900": 13972684.0,
+   "TUR:1950": 21021142.0,
+   "TUR:2023": 87270502.0,
+   "OWID_WRL:1000": 323462624.0,
+   "OWID_WRL:1500": 503051104.0,
+   "OWID_WRL:1800": 983104755.0,
+   "OWID_WRL:1900": 1627273655.0,
+   "OWID_WRL:1950": 2493092852.0,
+   "OWID_WRL:2000": 6171702992.0,
+   "OWID_WRL:2023": 8091734933.0
+  },
+  "life": {
+   "JPN:1900": 38.6,
+   "JPN:2023": 84.7123,
+   "SWE:1800": 32.19,
+   "SWE:1900": 52.23,
+   "TUR:1950": 47.2916,
+   "TUR:2023": 77.1557,
+   "GBR:1900": 45.62,
+   "GBR:1950": 68.631,
+   "OWID_WRL:1800": 28.5,
+   "OWID_WRL:1900": 32.0,
+   "OWID_WRL:1950": 46.3944,
+   "OWID_WRL:2023": 73.1694
+  },
+  "literacy": {
+   "OWID_WRL:1820": 12.046689,
+   "OWID_WRL:1900": 21.404259
+  },
+  "space": {
+   "CHN:2015": 38.0,
+   "CHN:2024": 266.0,
+   "RUS:2015": 27.0,
+   "RUS:2024": 97.0,
+   "TUR:2015": 1.0,
+   "TUR:2023": 9.0,
+   "USA:2015": 105.0,
+   "USA:2024": 2261.0,
+   "OWID_WRL:1965": 161.0,
+   "OWID_WRL:2000": 121.0,
+   "OWID_WRL:2015": 222.0,
+   "OWID_WRL:2024": 2849.0
+  }
+ }
+}
