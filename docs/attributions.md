@@ -20,6 +20,11 @@ aynı liste yer alır.
 - Lisans: [CC0 1.0](https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews)
 - Adres: https://wikimedia.org/api/rest_v1/
 
+## USDA FoodData Central
+- U.S. Department of Agriculture, FoodData Central (SR Legacy, 2018). CC0 ile kamu malına bırakılmıştır.
+- Lisans: [CC0 1.0](https://fdc.nal.usda.gov/)
+- Adres: https://fdc.nal.usda.gov/
+
 ## Vikipedi
 - Vikipedi gönüllüleri (tarih, mimari, sanat ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0
 - Lisans: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)

@@ -73,3 +73,6 @@ tools/raw/wikipedia/
 /docs/PLAN.md
 /docs/SOURCES.md
 /soru-adaylari/
+
+# USDA SR Legacy arşivi (tools/import_foods.py --fetch); yalnızca çıkarılan değerler commit'lenir
+tools/raw/usda/sr_legacy.zip

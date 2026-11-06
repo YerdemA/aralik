@@ -1,0 +1,881 @@
+{
+ "source": "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip",
+ "fetched": "2026-11-06",
+ "foods": {
+  "167575": {
+   "description": "Ice creams, vanilla",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 21.22,
+    "energy": 207.0,
+    "protein": 3.5,
+    "vitamin_c": 0.6
+   }
+  },
+  "167587": {
+   "description": "Candies, milk chocolate",
+   "per_100g": {
+    "caffeine": 20.0,
+    "protein": 7.65,
+    "vitamin_c": 0.0,
+    "sugars": 51.5,
+    "energy": 535.0
+   }
+  },
+  "167746": {
+   "description": "Lemons, raw, without peel",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 2.5,
+    "protein": 1.1,
+    "vitamin_c": 53.0,
+    "energy": 29.0
+   }
+  },
+  "167762": {
+   "description": "Strawberries, raw",
+   "per_100g": {
+    "caffeine": 0.0,
+    "protein": 0.67,
+    "vitamin_c": 58.8,
+    "sugars": 4.89,
+    "energy": 32.0
+   }
+  },
+  "167765": {
+   "description": "Watermelon, raw",
+   "per_100g": {
+    "protein": 0.61,
+    "vitamin_c": 8.1,
+    "sugars": 6.2,
+    "energy": 30.0,
+    "caffeine": 0.0
+   }
+  },
+  "167959": {
+   "description": "Snacks, popcorn, air-popped",
+   "per_100g": {
+    "caffeine": 0.0,
+    "energy": 387.0,
+    "vitamin_c": 0.0,
+    "sugars": 0.87,
+    "protein": 12.94
+   }
+  },
+  "167996": {
+   "description": "Candies, halavah, plain",
+   "per_100g": {
+    "vitamin_c": 0.1,
+    "protein": 12.49,
+    "energy": 469.0
+   }
+  },
+  "168153": {
+   "description": "Kiwifruit, green, raw",
+   "per_100g": {
+    "protein": 1.14,
+    "vitamin_c": 92.7,
+    "caffeine": 0.0,
+    "sugars": 8.99,
+    "energy": 61.0
+   }
+  },
+  "168163": {
+   "description": "Quinces, raw",
+   "per_100g": {
+    "protein": 0.4,
+    "vitamin_c": 15.0,
+    "energy": 57.0
+   }
+  },
+  "168165": {
+   "description": "Raisins, dark, seedless (Includes foods for USDA's Food Distribution Program)",
+   "per_100g": {
+    "protein": 3.3,
+    "sugars": 65.18,
+    "energy": 299.0,
+    "vitamin_c": 2.3,
+    "caffeine": 0.0
+   }
+  },
+  "168409": {
+   "description": "Cucumber, with peel, raw",
+   "per_100g": {
+    "energy": 15.0,
+    "sugars": 1.67,
+    "caffeine": 0.0,
+    "vitamin_c": 2.8,
+    "protein": 0.65
+   }
+  },
+  "168462": {
+   "description": "Spinach, raw",
+   "per_100g": {
+    "protein": 2.86,
+    "vitamin_c": 28.1,
+    "caffeine": 0.0,
+    "sugars": 0.42,
+    "energy": 23.0
+   }
+  },
+  "168894": {
+   "description": "Wheat flour, white, all-purpose, enriched, bleached",
+   "per_100g": {
+    "caffeine": 0.0,
+    "protein": 10.33,
+    "vitamin_c": 0.0,
+    "energy": 364.0,
+    "sugars": 0.27
+   }
+  },
+  "168935": {
+   "description": "Rice, white, long-grain, regular, cooked, unenriched, with salt",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 0.05,
+    "protein": 2.69,
+    "vitamin_c": 0.0,
+    "energy": 130.0
+   }
+  },
+  "169097": {
+   "description": "Oranges, raw, all commercial varieties",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 9.35,
+    "energy": 47.0,
+    "vitamin_c": 53.2,
+    "protein": 0.94
+   }
+  },
+  "169098": {
+   "description": "Orange juice, raw (Includes foods for USDA's Food Distribution Program)",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 8.4,
+    "vitamin_c": 50.0,
+    "protein": 0.7,
+    "energy": 45.0
+   }
+  },
+  "169134": {
+   "description": "Pomegranates, raw",
+   "per_100g": {
+    "caffeine": 0.0,
+    "protein": 1.67,
+    "vitamin_c": 10.2,
+    "sugars": 13.67,
+    "energy": 83.0
+   }
+  },
+  "169228": {
+   "description": "Eggplant, raw",
+   "per_100g": {
+    "vitamin_c": 2.2,
+    "sugars": 3.53,
+    "energy": 25.0,
+    "protein": 0.98,
+    "caffeine": 0.0
+   }
+  },
+  "169230": {
+   "description": "Garlic, raw",
+   "per_100g": {
+    "energy": 149.0,
+    "sugars": 1.0,
+    "vitamin_c": 31.2,
+    "protein": 6.36,
+    "caffeine": 0.0
+   }
+  },
+  "169251": {
+   "description": "Mushrooms, white, raw",
+   "per_100g": {
+    "sugars": 1.98,
+    "vitamin_c": 2.1,
+    "protein": 3.09,
+    "energy": 22.0,
+    "caffeine": 0.0
+   }
+  },
+  "169593": {
+   "description": "Cocoa, dry powder, unsweetened",
+   "per_100g": {
+    "sugars": 1.75,
+    "energy": 228.0,
+    "protein": 19.6,
+    "vitamin_c": 0.0,
+    "caffeine": 230.0
+   }
+  },
+  "169640": {
+   "description": "Honey",
+   "per_100g": {
+    "protein": 0.3,
+    "vitamin_c": 0.5,
+    "energy": 304.0,
+    "caffeine": 0.0,
+    "sugars": 82.12
+   }
+  },
+  "169655": {
+   "description": "Sugars, granulated",
+   "per_100g": {
+    "protein": 0.0,
+    "energy": 387.0,
+    "sugars": 99.8,
+    "vitamin_c": 0.0,
+    "caffeine": 0.0
+   }
+  },
+  "169677": {
+   "description": "Snacks, potato chips, plain, salted",
+   "per_100g": {
+    "sugars": 0.33,
+    "energy": 532.0,
+    "protein": 6.39,
+    "vitamin_c": 21.6,
+    "caffeine": 0.0
+   }
+  },
+  "169737": {
+   "description": "Pasta, cooked, enriched, without added salt",
+   "per_100g": {
+    "protein": 5.8,
+    "caffeine": 0.0,
+    "sugars": 0.56,
+    "energy": 158.0,
+    "vitamin_c": 0.0
+   }
+  },
+  "169913": {
+   "description": "Mulberries, raw",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 8.1,
+    "energy": 43.0,
+    "protein": 1.44,
+    "vitamin_c": 36.4
+   }
+  },
+  "169928": {
+   "description": "Peaches, yellow, raw",
+   "per_100g": {
+    "energy": 39.0,
+    "vitamin_c": 6.6,
+    "protein": 0.91,
+    "caffeine": 0.0,
+    "sugars": 8.39
+   }
+  },
+  "169975": {
+   "description": "Cabbage, raw",
+   "per_100g": {
+    "energy": 25.0,
+    "sugars": 3.2,
+    "vitamin_c": 36.6,
+    "protein": 1.28,
+    "caffeine": 0.0
+   }
+  },
+  "170000": {
+   "description": "Onions, raw",
+   "per_100g": {
+    "sugars": 4.24,
+    "energy": 40.0,
+    "vitamin_c": 7.4,
+    "protein": 1.1,
+    "caffeine": 0.0
+   }
+  },
+  "170108": {
+   "description": "Peppers, sweet, red, raw",
+   "per_100g": {
+    "energy": 26.0,
+    "vitamin_c": 127.7,
+    "sugars": 4.2,
+    "protein": 0.99,
+    "caffeine": 0.0
+   }
+  },
+  "170184": {
+   "description": "Nuts, pistachio nuts, raw",
+   "per_100g": {
+    "vitamin_c": 5.6,
+    "sugars": 7.66,
+    "energy": 560.0,
+    "protein": 20.16,
+    "caffeine": 0.0
+   }
+  },
+  "170187": {
+   "description": "Nuts, walnuts, english",
+   "per_100g": {
+    "energy": 654.0,
+    "sugars": 2.61,
+    "caffeine": 0.0,
+    "protein": 15.23,
+    "vitamin_c": 1.3
+   }
+  },
+  "170273": {
+   "description": "Chocolate, dark, 70-85% cacao solids",
+   "per_100g": {
+    "energy": 598.0,
+    "caffeine": 80.0,
+    "sugars": 23.99,
+    "protein": 7.79
+   }
+  },
+  "170287": {
+   "description": "Bulgur, cooked",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 0.1,
+    "vitamin_c": 0.0,
+    "protein": 3.08,
+    "energy": 83.0
+   }
+  },
+  "170379": {
+   "description": "Broccoli, raw",
+   "per_100g": {
+    "sugars": 1.7,
+    "energy": 34.0,
+    "protein": 2.82,
+    "vitamin_c": 89.2,
+    "caffeine": 0.0
+   }
+  },
+  "170393": {
+   "description": "Carrots, raw",
+   "per_100g": {
+    "vitamin_c": 5.9,
+    "protein": 0.93,
+    "caffeine": 0.0,
+    "sugars": 4.74,
+    "energy": 41.0
+   }
+  },
+  "170427": {
+   "description": "Peppers, sweet, green, raw",
+   "per_100g": {
+    "protein": 0.86,
+    "vitamin_c": 80.4,
+    "energy": 20.0,
+    "sugars": 2.4,
+    "caffeine": 0.0
+   }
+  },
+  "170438": {
+   "description": "Potatoes, boiled, cooked in skin, flesh, without salt",
+   "per_100g": {
+    "energy": 87.0,
+    "vitamin_c": 13.0,
+    "protein": 1.87,
+    "sugars": 0.91,
+    "caffeine": 0.0
+   }
+  },
+  "170457": {
+   "description": "Tomatoes, red, ripe, raw, year round average",
+   "per_100g": {
+    "vitamin_c": 13.7,
+    "sugars": 2.63,
+    "energy": 18.0,
+    "caffeine": 0.0,
+    "protein": 0.88
+   }
+  },
+  "170556": {
+   "description": "Seeds, pumpkin and squash seed kernels, dried",
+   "per_100g": {
+    "energy": 559.0,
+    "vitamin_c": 1.9,
+    "caffeine": 0.0,
+    "protein": 30.23,
+    "sugars": 1.4
+   }
+  },
+  "170562": {
+   "description": "Seeds, sunflower seed kernels, dried",
+   "per_100g": {
+    "caffeine": 0.0,
+    "protein": 20.78,
+    "sugars": 2.62,
+    "vitamin_c": 1.4,
+    "energy": 584.0
+   }
+  },
+  "170567": {
+   "description": "Nuts, almonds",
+   "per_100g": {
+    "protein": 21.15,
+    "energy": 579.0,
+    "vitamin_c": 0.0,
+    "sugars": 4.35,
+    "caffeine": 0.0
+   }
+  },
+  "170581": {
+   "description": "Nuts, hazelnuts or filberts",
+   "per_100g": {
+    "energy": 628.0,
+    "caffeine": 0.0,
+    "sugars": 4.34,
+    "vitamin_c": 6.3,
+    "protein": 14.95
+   }
+  },
+  "170698": {
+   "description": "Fast foods, potato, french fried in vegetable oil",
+   "per_100g": {
+    "vitamin_c": 4.7,
+    "protein": 3.43,
+    "energy": 312.0,
+    "caffeine": 0.0,
+    "sugars": 0.3
+   }
+  },
+  "170845": {
+   "description": "Cheese, mozzarella, whole milk",
+   "per_100g": {
+    "vitamin_c": 0.0,
+    "caffeine": 0.0,
+    "protein": 22.17,
+    "sugars": 0.0,
+    "energy": 299.0
+   }
+  },
+  "170848": {
+   "description": "Cheese, parmesan, hard",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 0.11,
+    "vitamin_c": 0.0,
+    "protein": 35.75,
+    "energy": 392.0
+   }
+  },
+  "171009": {
+   "description": "Salad dressing, mayonnaise, regular",
+   "per_100g": {
+    "caffeine": 0.0,
+    "vitamin_c": 0.0,
+    "protein": 0.96,
+    "energy": 680.0,
+    "sugars": 0.57
+   }
+  },
+  "171265": {
+   "description": "Milk, whole, 3.25% milkfat, with added vitamin D",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 5.05,
+    "energy": 61.0,
+    "protein": 3.15,
+    "vitamin_c": 0.0
+   }
+  },
+  "171284": {
+   "description": "Yogurt, plain, whole milk",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 4.66,
+    "energy": 61.0,
+    "protein": 3.47,
+    "vitamin_c": 0.5
+   }
+  },
+  "171413": {
+   "description": "Oil, olive, salad or cooking",
+   "per_100g": {
+    "energy": 884.0,
+    "protein": 0.0,
+    "vitamin_c": 0.0,
+    "caffeine": 0.0,
+    "sugars": 0.0
+   }
+  },
+  "171477": {
+   "description": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "per_100g": {
+    "energy": 165.0,
+    "protein": 31.02,
+    "vitamin_c": 0.0,
+    "caffeine": 0.0,
+    "sugars": 0.0
+   }
+  },
+  "171688": {
+   "description": "Apples, raw, with skin (Includes foods for USDA's Food Distribution Program)",
+   "per_100g": {
+    "caffeine": 0.0,
+    "energy": 52.0,
+    "sugars": 10.39,
+    "protein": 0.26,
+    "vitamin_c": 4.6
+   }
+  },
+  "171705": {
+   "description": "Avocados, raw, all commercial varieties",
+   "per_100g": {
+    "vitamin_c": 10.0,
+    "protein": 2.0,
+    "caffeine": 0.0,
+    "sugars": 0.66,
+    "energy": 160.0
+   }
+  },
+  "171719": {
+   "description": "Cherries, sweet, raw",
+   "per_100g": {
+    "energy": 63.0,
+    "sugars": 12.82,
+    "caffeine": 0.0,
+    "vitamin_c": 7.0,
+    "protein": 1.06
+   }
+  },
+  "171726": {
+   "description": "Dates, deglet noor",
+   "per_100g": {
+    "energy": 282.0,
+    "caffeine": 0.0,
+    "sugars": 63.35,
+    "protein": 2.45,
+    "vitamin_c": 0.4
+   }
+  },
+  "171890": {
+   "description": "Beverages, coffee, brewed, prepared with tap water",
+   "per_100g": {
+    "vitamin_c": 0.0,
+    "sugars": 0.0,
+    "energy": 1.0,
+    "protein": 0.12,
+    "caffeine": 40.0
+   }
+  },
+  "171891": {
+   "description": "Beverages, coffee, brewed, espresso, restaurant-prepared",
+   "per_100g": {
+    "vitamin_c": 0.2,
+    "caffeine": 212.0,
+    "protein": 0.12,
+    "sugars": 0.0,
+    "energy": 9.0
+   }
+  },
+  "171917": {
+   "description": "Beverages, tea, green, brewed, regular",
+   "per_100g": {
+    "energy": 1.0,
+    "caffeine": 12.0,
+    "sugars": 0.0,
+    "protein": 0.22,
+    "vitamin_c": 0.0
+   }
+  },
+  "172420": {
+   "description": "Lentils, raw",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 2.03,
+    "protein": 24.63,
+    "vitamin_c": 4.5,
+    "energy": 352.0
+   }
+  },
+  "172421": {
+   "description": "Lentils, mature seeds, cooked, boiled, without salt",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 1.8,
+    "energy": 116.0,
+    "protein": 9.02,
+    "vitamin_c": 1.5
+   }
+  },
+  "172430": {
+   "description": "Peanuts, all types, raw",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 4.72,
+    "vitamin_c": 0.0,
+    "protein": 25.8,
+    "energy": 567.0
+   }
+  },
+  "172470": {
+   "description": "Peanut butter, smooth style, without salt",
+   "per_100g": {
+    "caffeine": 0.0,
+    "vitamin_c": 0.0,
+    "protein": 22.21,
+    "sugars": 10.49,
+    "energy": 598.0
+   }
+  },
+  "172688": {
+   "description": "Bread, whole-wheat, commercially prepared",
+   "per_100g": {
+    "caffeine": 0.0,
+    "energy": 252.0,
+    "sugars": 4.34,
+    "protein": 12.45,
+    "vitamin_c": 0.0
+   }
+  },
+  "172716": {
+   "description": "Cookies, chocolate chip, commercially prepared, regular, higher fat, enriched",
+   "per_100g": {
+    "protein": 5.1,
+    "vitamin_c": 0.0,
+    "energy": 492.0,
+    "sugars": 32.9,
+    "caffeine": 11.0
+   }
+  },
+  "173021": {
+   "description": "Figs, raw",
+   "per_100g": {
+    "energy": 74.0,
+    "protein": 0.75,
+    "vitamin_c": 2.0,
+    "caffeine": 0.0,
+    "sugars": 16.26
+   }
+  },
+  "173227": {
+   "description": "Beverages, tea, black, brewed, prepared with tap water",
+   "per_100g": {
+    "sugars": 0.0,
+    "protein": 0.0,
+    "vitamin_c": 0.0,
+    "energy": 1.0,
+    "caffeine": 20.0
+   }
+  },
+  "173420": {
+   "description": "Cheese, feta",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 0.0,
+    "energy": 265.0,
+    "protein": 14.21,
+    "vitamin_c": 0.0
+   }
+  },
+  "173424": {
+   "description": "Egg, whole, cooked, hard-boiled",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 1.12,
+    "energy": 155.0,
+    "protein": 12.58,
+    "vitamin_c": 0.0
+   }
+  },
+  "173430": {
+   "description": "Butter, without salt",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 0.06,
+    "energy": 717.0,
+    "protein": 0.85,
+    "vitamin_c": 0.0
+   }
+  },
+  "173709": {
+   "description": "Fish, tuna, light, canned in water, drained solids (Includes foods for USDA's Food Distribution Program)",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 0.0,
+    "energy": 86.0,
+    "protein": 19.44,
+    "vitamin_c": 0.0
+   }
+  },
+  "173756": {
+   "description": "Chickpeas (garbanzo beans, bengal gram), mature seeds, raw",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 10.7,
+    "energy": 378.0,
+    "protein": 20.47,
+    "vitamin_c": 4.0
+   }
+  },
+  "173757": {
+   "description": "Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 4.8,
+    "energy": 164.0,
+    "protein": 8.86,
+    "vitamin_c": 1.3
+   }
+  },
+  "173806": {
+   "description": "Peanuts, all types, dry-roasted, without salt",
+   "per_100g": {
+    "caffeine": 0.0,
+    "protein": 24.35,
+    "energy": 587.0,
+    "sugars": 4.9,
+    "vitamin_c": 0.0
+   }
+  },
+  "173904": {
+   "description": "Cereals, oats, regular and quick, not fortified, dry",
+   "per_100g": {
+    "vitamin_c": 0.0,
+    "sugars": 0.99,
+    "energy": 379.0,
+    "protein": 13.15,
+    "caffeine": 0.0
+   }
+  },
+  "173941": {
+   "description": "Apricots, dried, sulfured, uncooked",
+   "per_100g": {
+    "energy": 241.0,
+    "sugars": 53.44,
+    "protein": 3.39,
+    "vitamin_c": 1.0,
+    "caffeine": 0.0
+   }
+  },
+  "173944": {
+   "description": "Bananas, raw",
+   "per_100g": {
+    "energy": 89.0,
+    "caffeine": 0.0,
+    "vitamin_c": 8.7,
+    "protein": 1.09,
+    "sugars": 12.23
+   }
+  },
+  "174036": {
+   "description": "Beef, ground, 80% lean meat / 20% fat, raw",
+   "per_100g": {
+    "vitamin_c": 0.0,
+    "protein": 17.17,
+    "caffeine": 0.0,
+    "sugars": 0.0,
+    "energy": 254.0
+   }
+  },
+  "174182": {
+   "description": "Fish, anchovy, european, raw",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 0.0,
+    "vitamin_c": 0.0,
+    "protein": 20.35,
+    "energy": 131.0
+   }
+  },
+  "174665": {
+   "description": "Figs, dried, uncooked",
+   "per_100g": {
+    "energy": 249.0,
+    "protein": 3.3,
+    "vitamin_c": 1.2,
+    "caffeine": 0.0,
+    "sugars": 47.92
+   }
+  },
+  "174683": {
+   "description": "Grapes, red or green (European type, such as Thompson seedless), raw",
+   "per_100g": {
+    "sugars": 15.48,
+    "protein": 0.72,
+    "energy": 69.0,
+    "vitamin_c": 3.2,
+    "caffeine": 0.0
+   }
+  },
+  "174852": {
+   "description": "Beverages, carbonated, cola, regular",
+   "per_100g": {
+    "vitamin_c": 0.0,
+    "caffeine": 9.0,
+    "energy": 42.0,
+    "sugars": 9.94,
+    "protein": 0.0
+   }
+  },
+  "174924": {
+   "description": "Bread, white, commercially prepared (includes soft bread crumbs)",
+   "per_100g": {
+    "energy": 266.0,
+    "sugars": 5.67,
+    "protein": 8.85,
+    "caffeine": 0.0,
+    "vitamin_c": 0.0
+   }
+  },
+  "175119": {
+   "description": "Fish, mackerel, Atlantic, raw",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 0.0,
+    "energy": 205.0,
+    "protein": 18.6,
+    "vitamin_c": 0.4
+   }
+  },
+  "175139": {
+   "description": "Fish, sardine, Atlantic, canned in oil, drained solids with bone",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 0.0,
+    "energy": 208.0,
+    "protein": 24.62,
+    "vitamin_c": 0.0
+   }
+  },
+  "175142": {
+   "description": "Fish, sea bass, mixed species, raw",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 0.0,
+    "vitamin_c": 0.0,
+    "protein": 18.43,
+    "energy": 97.0
+   }
+  },
+  "175167": {
+   "description": "Fish, salmon, Atlantic, farmed, raw",
+   "per_100g": {
+    "energy": 208.0,
+    "protein": 20.42,
+    "caffeine": 0.0,
+    "sugars": 0.0,
+    "vitamin_c": 3.9
+   }
+  },
+  "175168": {
+   "description": "Fish, salmon, Atlantic, farmed, cooked, dry heat",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 0.0,
+    "protein": 22.1,
+    "vitamin_c": 3.7,
+    "energy": 206.0
+   }
+  },
+  "175193": {
+   "description": "Beans, kidney, all types, mature seeds, raw",
+   "per_100g": {
+    "energy": 333.0,
+    "caffeine": 0.0,
+    "sugars": 2.23,
+    "protein": 23.58,
+    "vitamin_c": 4.5
+   }
+  }
+ }
+}

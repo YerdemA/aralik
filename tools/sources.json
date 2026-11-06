@@ -58,9 +58,10 @@
    "license": "CC0 1.0",
    "license_url": "https://fdc.nal.usda.gov/",
    "url": "https://fdc.nal.usda.gov/",
-   "attribution": "USDA FoodData Central, CC0",
-   "status": "planned",
-   "datasets": []
+   "attribution": "U.S. Department of Agriculture, FoodData Central (SR Legacy, 2018). CC0 ile kamu malına bırakılmıştır.",
+   "status": "in_use",
+   "raw_dir": "usda",
+   "datasets": ["foods_energy", "foods_protein", "foods_caffeine", "foods_vitamin_c"]
   },
   {
    "id": "nasa_nssdc",

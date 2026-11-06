@@ -14,6 +14,13 @@
   "url": "https://wikimedia.org/api/rest_v1/"
  },
  {
+  "name": "USDA FoodData Central",
+  "attribution": "U.S. Department of Agriculture, FoodData Central (SR Legacy, 2018). CC0 ile kamu malına bırakılmıştır.",
+  "license": "CC0 1.0",
+  "license_url": "https://fdc.nal.usda.gov/",
+  "url": "https://fdc.nal.usda.gov/"
+ },
+ {
   "name": "Vikipedi",
   "attribution": "Vikipedi gönüllüleri (tarih, mimari, sanat ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0",
   "license": "CC BY-SA 4.0",

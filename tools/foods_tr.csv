@@ -1,0 +1,102 @@
+# USDA FoodData Central (SR Legacy) yiyecekleri, Türkçe adlarıyla. Okuyan: tools/import_foods.py
+# Sütunlar: fdc_id;besin;zorluk;USDA açıklamasının başı (yanlış id'yi yakalar);"100 gram ..." ardından gelen yer adı (bulunma hâli)
+# besin: energy (kcal), protein (g), caffeine (mg), vitamin_c (mg). Aynı yiyecek aynı birimle iki kez sorulamaz.
+# Satır silinmez: bankadaki sorular sabittir. Yeni satır sona eklenir.
+
+# --- Enerji (kcal) ---
+173944;energy;1;Bananas, raw;muzda
+171688;energy;1;Apples, raw, with skin;kabuklu elmada
+167762;energy;1;Strawberries, raw;çilekte
+167765;energy;1;Watermelon, raw;karpuzda
+174683;energy;1;Grapes, red or green;üzümde
+171719;energy;1;Cherries, sweet, raw;kirazda
+169928;energy;1;Peaches, yellow, raw;şeftalide
+169134;energy;1;Pomegranates, raw;narda
+173021;energy;2;Figs, raw;taze incirde
+174665;energy;2;Figs, dried, uncooked;kuru incirde
+173941;energy;2;Apricots, dried, sulfured, uncooked;kuru kayısıda
+171726;energy;2;Dates, deglet noor;hurmada
+171705;energy;2;Avocados, raw, all commercial varieties;avokadoda
+168165;energy;2;Raisins, dark, seedless;kuru üzümde
+169098;energy;1;Orange juice, raw;taze sıkılmış portakal suyunda
+170581;energy;1;Nuts, hazelnuts or filberts;fındıkta
+170187;energy;1;Nuts, walnuts, english;cevizde
+170184;energy;2;Nuts, pistachio nuts, raw;çiğ Antep fıstığında
+170562;energy;2;Seeds, sunflower seed kernels, dried;iç ay çekirdeğinde
+172430;energy;2;Peanuts, all types, raw;çiğ yer fıstığında
+172421;energy;2;Lentils, mature seeds, cooked, boiled, without salt;haşlanmış mercimekte
+173757;energy;2;Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt;haşlanmış nohutta
+168935;energy;2;Rice, white, long-grain, regular, cooked;haşlanmış beyaz pirinçte
+170287;energy;2;Bulgur, cooked;pişmiş bulgurda
+169737;energy;2;Pasta, cooked, enriched, without added salt;haşlanmış makarnada
+174924;energy;1;Bread, white, commercially prepared (includes;beyaz ekmekte
+172688;energy;2;Bread, whole-wheat, commercially prepared;tam buğday ekmeğinde
+173904;energy;2;Cereals, oats, regular and quick, not fortified, dry;yulaf ezmesinde
+167959;energy;2;Snacks, popcorn, air-popped;yağsız patlamış mısırda
+168894;energy;2;Wheat flour, white, all-purpose;beyaz unda
+170457;energy;1;Tomatoes, red, ripe, raw;domateste
+168409;energy;1;Cucumber, with peel, raw;kabuklu salatalıkta
+170438;energy;1;Potatoes, boiled, cooked in skin, flesh, without salt;haşlanmış patateste
+170393;energy;1;Carrots, raw;havuçta
+168462;energy;2;Spinach, raw;çiğ ıspanakta
+170000;energy;2;Onions, raw;kuru soğanda
+169230;energy;2;Garlic, raw;sarımsakta
+169228;energy;2;Eggplant, raw;çiğ patlıcanda
+171265;energy;1;Milk, whole, 3.25% milkfat, with added vitamin D;tam yağlı sütte
+171284;energy;1;Yogurt, plain, whole milk;tam yağlı yoğurtta
+173420;energy;2;Cheese, feta;feta peynirinde
+173430;energy;1;Butter, without salt;tuzsuz tereyağında
+171413;energy;1;Oil, olive, salad or cooking;zeytinyağında
+169640;energy;1;Honey;balda
+169655;energy;1;Sugars, granulated;toz şekerde
+167587;energy;1;Candies, milk chocolate;sütlü çikolatada
+167575;energy;2;Ice creams, vanilla;vanilyalı dondurmada
+167996;energy;2;Candies, halavah, plain;sade tahin helvasında
+174036;energy;2;Beef, ground, 80% lean meat / 20% fat, raw;çiğ dana kıymada (%20 yağlı)
+175167;energy;2;Fish, salmon, Atlantic, farmed, raw;çiğ çiftlik somonunda
+174182;energy;2;Fish, anchovy, european, raw;çiğ hamside
+175142;energy;3;Fish, sea bass, mixed species, raw;çiğ levrekte
+175119;energy;3;Fish, mackerel, Atlantic, raw;çiğ uskumruda
+170698;energy;1;Fast foods, potato, french fried in vegetable oil;patates kızartmasında
+169677;energy;1;Snacks, potato chips, plain, salted;tuzlu patates cipsinde
+171009;energy;2;Salad dressing, mayonnaise, regular;mayonezde
+172470;energy;2;Peanut butter, smooth style, without salt;tuzsuz fıstık ezmesinde
+174852;energy;1;Beverages, carbonated, cola, regular;şekerli kolada
+172716;energy;2;Cookies, chocolate chip, commercially prepared, regular, higher fat, enriched;hazır çikolata parçalı kurabiyede
+
+# --- Protein (g) ---
+171477;protein;1;Chicken, broilers or fryers, breast, meat only, cooked, roasted;fırında pişmiş tavuk göğsünde
+173424;protein;1;Egg, whole, cooked, hard-boiled;haşlanmış yumurtada
+170567;protein;2;Nuts, almonds;bademde
+172420;protein;2;Lentils, raw;kuru mercimekte
+173756;protein;2;Chickpeas (garbanzo beans, bengal gram), mature seeds, raw;kuru nohutta
+175193;protein;2;Beans, kidney, all types, mature seeds, raw;kuru kırmızı fasulyede
+173806;protein;2;Peanuts, all types, dry-roasted, without salt;tuzsuz kavrulmuş yer fıstığında
+173709;protein;2;Fish, tuna, light, canned in water, drained solids;süzülmüş, suda ton balığı konservesinde
+175168;protein;2;Fish, salmon, Atlantic, farmed, cooked, dry heat;fırında pişmiş çiftlik somonunda
+170845;protein;2;Cheese, mozzarella, whole milk;mozzarella peynirinde
+170848;protein;3;Cheese, parmesan, hard;parmesan peynirinde
+175139;protein;3;Fish, sardine, Atlantic, canned in oil, drained solids with bone;yağı süzülmüş sardalya konservesinde
+170556;protein;3;Seeds, pumpkin and squash seed kernels, dried;iç kabak çekirdeğinde
+169251;protein;3;Mushrooms, white, raw;çiğ kültür mantarında
+
+# --- Kafein (mg) ---
+171890;caffeine;2;Beverages, coffee, brewed, prepared with tap water;demlenmiş filtre kahvede
+171891;caffeine;2;Beverages, coffee, brewed, espresso, restaurant-prepared;espressoda
+173227;caffeine;2;Beverages, tea, black, brewed, prepared with tap water;demlenmiş siyah çayda
+171917;caffeine;3;Beverages, tea, green, brewed, regular;demlenmiş yeşil çayda
+174852;caffeine;2;Beverages, carbonated, cola, regular;kolada
+170273;caffeine;3;Chocolate, dark, 70-85% cacao solids;bitter çikolatada (%70–85 kakao)
+167587;caffeine;3;Candies, milk chocolate;sütlü çikolatada
+169593;caffeine;3;Cocoa, dry powder, unsweetened;şekersiz kakao tozunda
+
+# --- C vitamini (mg) ---
+169097;vitamin_c;2;Oranges, raw, all commercial varieties;portakalda
+167746;vitamin_c;2;Lemons, raw, without peel;kabuksuz limonda
+168153;vitamin_c;2;Kiwifruit, green, raw;kivide
+170379;vitamin_c;3;Broccoli, raw;çiğ brokolide
+170108;vitamin_c;3;Peppers, sweet, red, raw;çiğ kırmızı dolmalık biberde
+170427;vitamin_c;3;Peppers, sweet, green, raw;çiğ yeşil dolmalık biberde
+169975;vitamin_c;3;Cabbage, raw;çiğ lahanada
+169913;vitamin_c;3;Mulberries, raw;dutta
+168163;vitamin_c;3;Quinces, raw;ayvada
