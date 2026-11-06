@@ -25,6 +25,11 @@ aynı liste yer alır.
 - Lisans: [CC BY 3.0](https://genomics.senescence.info/legal.html)
 - Adres: https://genomics.senescence.info/species/
 
+## AnimalTraits
+- AnimalTraits (Herberstein ve ark., 2022, Scientific Data). Veri CC0 ile kamu malına bırakılmıştır.
+- Lisans: [CC0 1.0](https://zenodo.org/records/6468938)
+- Adres: https://animaltraits.org/
+
 ## USDA FoodData Central
 - U.S. Department of Agriculture, FoodData Central (SR Legacy, 2018). CC0 ile kamu malına bırakılmıştır.
 - Lisans: [CC0 1.0](https://fdc.nal.usda.gov/)

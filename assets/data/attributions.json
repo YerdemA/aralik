@@ -21,6 +21,13 @@
   "url": "https://genomics.senescence.info/species/"
  },
  {
+  "name": "AnimalTraits",
+  "attribution": "AnimalTraits (Herberstein ve ark., 2022, Scientific Data). Veri CC0 ile kamu malına bırakılmıştır.",
+  "license": "CC0 1.0",
+  "license_url": "https://zenodo.org/records/6468938",
+  "url": "https://animaltraits.org/"
+ },
+ {
   "name": "USDA FoodData Central",
   "attribution": "U.S. Department of Agriculture, FoodData Central (SR Legacy, 2018). CC0 ile kamu malına bırakılmıştır.",
   "license": "CC0 1.0",

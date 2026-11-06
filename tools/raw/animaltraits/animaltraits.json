@@ -1,0 +1,1049 @@
+{
+ "source": "https://zenodo.org/records/6468938/files/observations.csv?download=1",
+ "fetched": "2026-11-06",
+ "species": {
+  "Acheta domesticus": [
+   {
+    "brain_kg": null,
+    "brain_units": "",
+    "mass_kg": 0.000369,
+    "mass_units": "kg",
+    "reference": "Hack, 1997"
+   }
+  ],
+  "Apis mellifera": [
+   {
+    "brain_kg": 4.32207406176e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 4.874953470548e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 5.117607287464e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 5.158205982944e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 5.24591021122e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 5.25396399752e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 5.281508803956e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 5.30698386162e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 5.760680252264e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 5.796350561064e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 6.448406956404e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 6.487067274128e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 6.636051591344e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 6.6993451266e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 6.885625122656e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 6.890639971824e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 7.176824180848e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 7.264557900936e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 7.309615134304e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 7.601873194804e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 8.25046034834e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 8.25703153058e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 9.056125821876e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 9.189865855968e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 9.279224273732e-07,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Muscedere, Gronenberg, Moreau, & Traniello, 2014"
+   },
+   {
+    "brain_kg": 6.6304e-07,
+    "brain_units": "kg",
+    "mass_kg": 8.4e-05,
+    "mass_units": "kg",
+    "reference": "Mares, Ash, & Gronenberg, 2005"
+   },
+   {
+    "brain_kg": null,
+    "brain_units": "",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Lighton & Lovegrove, 1990"
+   }
+  ],
+  "Bos taurus": [
+   {
+    "brain_kg": 0.307,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Warnke, 1908"
+   }
+  ],
+  "Canis familiaris": [
+   {
+    "brain_kg": 0.07999,
+    "brain_units": "kg",
+    "mass_kg": 14.56,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 0.08114,
+    "brain_units": "kg",
+    "mass_kg": 12.47,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 0.1059,
+    "brain_units": "kg",
+    "mass_kg": 24.49,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 0.1307,
+    "brain_units": "kg",
+    "mass_kg": 31.75,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 0.0793,
+    "brain_units": "kg",
+    "mass_kg": 26.94,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 0.06653,
+    "brain_units": "kg",
+    "mass_kg": 14.75,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 0.0876,
+    "brain_units": "kg",
+    "mass_kg": 11.26,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 0.08463,
+    "brain_units": "kg",
+    "mass_kg": 23.71,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 0.09,
+    "brain_units": "kg",
+    "mass_kg": 19.28,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 0.0952,
+    "brain_units": "kg",
+    "mass_kg": 38.42,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   }
+  ],
+  "Canis lupus": [
+   {
+    "brain_kg": 0.119,
+    "brain_units": "kg",
+    "mass_kg": 22.68,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   }
+  ],
+  "Columba livia": [
+   {
+    "brain_kg": 0.002285,
+    "brain_units": "kg",
+    "mass_kg": 0.247,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 0.002694,
+    "brain_units": "kg",
+    "mass_kg": 0.282,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   }
+  ],
+  "Drosophila melanogaster": [
+   {
+    "brain_kg": 4.33055252e-09,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Rein et al., 2002"
+   },
+   {
+    "brain_kg": null,
+    "brain_units": "",
+    "mass_kg": 9.5e-07,
+    "mass_units": "kg",
+    "reference": "Lehmann, Dickinson, & Staunton, 2000"
+   }
+  ],
+  "Erinaceus europaeus": [
+   {
+    "brain_kg": 0.00335,
+    "brain_units": "kg",
+    "mass_kg": 0.86,
+    "mass_units": "kg",
+    "reference": "Bauchot and Stephan, 1966"
+   },
+   {
+    "brain_kg": 0.0065,
+    "brain_units": "kg",
+    "mass_kg": 0.718,
+    "mass_units": "kg",
+    "reference": "Warnke, 1908"
+   },
+   {
+    "brain_kg": 0.0036,
+    "brain_units": "kg",
+    "mass_kg": 0.669,
+    "mass_units": "kg",
+    "reference": "Warnke, 1908"
+   },
+   {
+    "brain_kg": 0.0035,
+    "brain_units": "kg",
+    "mass_kg": 0.515,
+    "mass_units": "kg",
+    "reference": "Warnke, 1908"
+   },
+   {
+    "brain_kg": 0.003,
+    "brain_units": "kg",
+    "mass_kg": 0.497,
+    "mass_units": "kg",
+    "reference": "Warnke, 1908"
+   },
+   {
+    "brain_kg": 0.0033,
+    "brain_units": "kg",
+    "mass_kg": 0.925,
+    "mass_units": "kg",
+    "reference": "Warnke, 1908"
+   },
+   {
+    "brain_kg": 0.0035,
+    "brain_units": "kg",
+    "mass_kg": 0.92,
+    "mass_units": "kg",
+    "reference": "Warnke, 1908"
+   },
+   {
+    "brain_kg": 0.0033,
+    "brain_units": "kg",
+    "mass_kg": 0.985,
+    "mass_units": "kg",
+    "reference": "Warnke, 1908"
+   },
+   {
+    "brain_kg": 0.0035,
+    "brain_units": "kg",
+    "mass_kg": 0.448,
+    "mass_units": "kg",
+    "reference": "Warnke, 1908"
+   },
+   {
+    "brain_kg": 0.003,
+    "brain_units": "kg",
+    "mass_kg": 0.69,
+    "mass_units": "kg",
+    "reference": "Warnke, 1908"
+   }
+  ],
+  "Gorilla gorilla": [
+   {
+    "brain_kg": 0.45455,
+    "brain_units": "kg",
+    "mass_kg": 120.975,
+    "mass_units": "kg",
+    "reference": "Boddy et al., 2012"
+   },
+   {
+    "brain_kg": null,
+    "brain_units": "",
+    "mass_kg": 181.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   }
+  ],
+  "Homo sapiens": [
+   {
+    "brain_kg": 1.25043,
+    "brain_units": "kg",
+    "mass_kg": 65.14286,
+    "mass_units": "kg",
+    "reference": "Boddy et al., 2012"
+   },
+   {
+    "brain_kg": 1.248,
+    "brain_units": "kg",
+    "mass_kg": 57.2,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.297,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.268,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.235,
+    "brain_units": "kg",
+    "mass_kg": 95.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.27,
+    "brain_units": "kg",
+    "mass_kg": 42.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.375,
+    "brain_units": "kg",
+    "mass_kg": 43.4,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.4,
+    "brain_units": "kg",
+    "mass_kg": 49.9,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.28,
+    "brain_units": "kg",
+    "mass_kg": 36.3,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.19,
+    "brain_units": "kg",
+    "mass_kg": 45.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.1,
+    "brain_units": "kg",
+    "mass_kg": 37.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.0,
+    "brain_units": "kg",
+    "mass_kg": 45.8,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.109,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.513,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.348,
+    "brain_units": "kg",
+    "mass_kg": 76.2,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.265,
+    "brain_units": "kg",
+    "mass_kg": 86.2,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.28,
+    "brain_units": "kg",
+    "mass_kg": 71.2,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.365,
+    "brain_units": "kg",
+    "mass_kg": 73.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.54,
+    "brain_units": "kg",
+    "mass_kg": 78.5,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.327,
+    "brain_units": "kg",
+    "mass_kg": 36.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.2,
+    "brain_units": "kg",
+    "mass_kg": 61.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.16,
+    "brain_units": "kg",
+    "mass_kg": 46.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.24,
+    "brain_units": "kg",
+    "mass_kg": 43.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.18,
+    "brain_units": "kg",
+    "mass_kg": 63.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.35,
+    "brain_units": "kg",
+    "mass_kg": 43.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.3,
+    "brain_units": "kg",
+    "mass_kg": 44.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.14,
+    "brain_units": "kg",
+    "mass_kg": 45.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.5,
+    "brain_units": "kg",
+    "mass_kg": 51.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.42,
+    "brain_units": "kg",
+    "mass_kg": 83.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.57,
+    "brain_units": "kg",
+    "mass_kg": 56.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.49,
+    "brain_units": "kg",
+    "mass_kg": 61.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.31,
+    "brain_units": "kg",
+    "mass_kg": 51.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.35,
+    "brain_units": "kg",
+    "mass_kg": 81.6,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.45,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.274,
+    "brain_units": "kg",
+    "mass_kg": 79.4,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.13,
+    "brain_units": "kg",
+    "mass_kg": 81.6,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.377,
+    "brain_units": "kg",
+    "mass_kg": 74.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.48,
+    "brain_units": "kg",
+    "mass_kg": 50.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.31,
+    "brain_units": "kg",
+    "mass_kg": 65.8,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.41,
+    "brain_units": "kg",
+    "mass_kg": 74.8,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.36,
+    "brain_units": "kg",
+    "mass_kg": 74.3,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.3,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.351,
+    "brain_units": "kg",
+    "mass_kg": 57.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 1.411,
+    "brain_units": "kg",
+    "mass_kg": 68.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   }
+  ],
+  "Latrodectus mactans": [
+   {
+    "brain_kg": null,
+    "brain_units": "",
+    "mass_kg": 0.0003505,
+    "mass_units": "kg",
+    "reference": "Greenstone & Bennett, 1980"
+   },
+   {
+    "brain_kg": null,
+    "brain_units": "",
+    "mass_kg": 4.82e-05,
+    "mass_units": "kg",
+    "reference": "Greenstone & Bennett, 1980"
+   },
+   {
+    "brain_kg": null,
+    "brain_units": "",
+    "mass_kg": 0.000169,
+    "mass_units": "kg",
+    "reference": "Greenstone & Bennett, 1980"
+   }
+  ],
+  "Macaca mulatta": [
+   {
+    "brain_kg": 0.0852,
+    "brain_units": "kg",
+    "mass_kg": 4.88,
+    "mass_units": "kg",
+    "reference": "Bronson, 1981"
+   },
+   {
+    "brain_kg": 0.0907,
+    "brain_units": "kg",
+    "mass_kg": 5.21,
+    "mass_units": "kg",
+    "reference": "Bronson, 1981"
+   }
+  ],
+  "Macropus giganteus": [
+   {
+    "brain_kg": 0.0723128,
+    "brain_units": "kg",
+    "mass_kg": 38.977,
+    "mass_units": "kg",
+    "reference": "Ashwell, 2008"
+   }
+  ],
+  "Oryctolagus cuniculus": [
+   {
+    "brain_kg": 0.0137,
+    "brain_units": "kg",
+    "mass_kg": 2.844,
+    "mass_units": "kg",
+    "reference": "Warnke, 1908"
+   },
+   {
+    "brain_kg": 0.0106,
+    "brain_units": "kg",
+    "mass_kg": 2.217,
+    "mass_units": "kg",
+    "reference": "Warnke, 1908"
+   },
+   {
+    "brain_kg": 0.00905,
+    "brain_units": "kg",
+    "mass_kg": 0.622,
+    "mass_units": "kg",
+    "reference": "Warnke, 1908"
+   }
+  ],
+  "Pan troglodytes": [
+   {
+    "brain_kg": 0.35481,
+    "brain_units": "kg",
+    "mass_kg": 60.43316,
+    "mass_units": "kg",
+    "reference": "Boddy et al., 2012"
+   },
+   {
+    "brain_kg": 0.4305,
+    "brain_units": "kg",
+    "mass_kg": 25.85,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 0.44,
+    "brain_units": "kg",
+    "mass_kg": 56.69,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 0.325,
+    "brain_units": "kg",
+    "mass_kg": 43.99,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   }
+  ],
+  "Panthera leo": [
+   {
+    "brain_kg": 0.2595,
+    "brain_units": "kg",
+    "mass_kg": 84.0,
+    "mass_units": "kg",
+    "reference": "Warnke, 1908"
+   }
+  ],
+  "Panthera tigris": [
+   {
+    "brain_kg": 0.26973,
+    "brain_units": "kg",
+    "mass_kg": 195.0,
+    "mass_units": "kg",
+    "reference": "Boddy et al., 2012"
+   },
+   {
+    "brain_kg": 0.225,
+    "brain_units": "kg",
+    "mass_kg": 160.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 0.302,
+    "brain_units": "kg",
+    "mass_kg": 209.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   }
+  ],
+  "Passer domesticus": [
+   {
+    "brain_kg": 0.0010185,
+    "brain_units": "kg",
+    "mass_kg": 0.02326,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 0.0010278,
+    "brain_units": "kg",
+    "mass_kg": 0.02357,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": null,
+    "brain_units": "",
+    "mass_kg": 0.023,
+    "mass_units": "kg",
+    "reference": "Bech, Chappell, Astheimer, Londoño, & Buttemer, 2016"
+   }
+  ],
+  "Periplaneta americana": [
+   {
+    "brain_kg": 1.95e-07,
+    "brain_units": "kg",
+    "mass_kg": 9.2e-05,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": null,
+    "brain_units": "",
+    "mass_kg": 0.00073,
+    "mass_units": "kg",
+    "reference": "Herreid & Full, 1984"
+   },
+   {
+    "brain_kg": null,
+    "brain_units": "",
+    "mass_kg": 0.0009,
+    "mass_units": "kg",
+    "reference": "Full, Zuccarello, & Tullis, 1990"
+   }
+  ],
+  "Phascolarctos cinereus": [
+   {
+    "brain_kg": 0.0209272,
+    "brain_units": "kg",
+    "mass_kg": 5.888,
+    "mass_units": "kg",
+    "reference": "Ashwell, 2008"
+   }
+  ],
+  "Pongo pygmaeus": [
+   {
+    "brain_kg": 0.34199,
+    "brain_units": "kg",
+    "mass_kg": 54.22904,
+    "mass_units": "kg",
+    "reference": "Boddy et al., 2012"
+   }
+  ],
+  "Rattus norvegicus": [
+   {
+    "brain_kg": 0.00875,
+    "brain_units": "kg",
+    "mass_kg": 0.465,
+    "mass_units": "kg",
+    "reference": "Warnke, 1908"
+   },
+   {
+    "brain_kg": 0.0073,
+    "brain_units": "kg",
+    "mass_kg": 0.254,
+    "mass_units": "kg",
+    "reference": "Warnke, 1908"
+   },
+   {
+    "brain_kg": 0.00161,
+    "brain_units": "kg",
+    "mass_kg": 0.197,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 0.0023,
+    "brain_units": "kg",
+    "mass_kg": 0.278,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   }
+  ],
+  "Solenopsis invicta": [
+   {
+    "brain_kg": null,
+    "brain_units": "",
+    "mass_kg": 2.96e-06,
+    "mass_units": "kg",
+    "reference": "Vogt & Appel, 1999"
+   }
+  ],
+  "Struthio camelus": [
+   {
+    "brain_kg": 0.04211,
+    "brain_units": "kg",
+    "mass_kg": 123.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": null,
+    "brain_units": "",
+    "mass_kg": 95.4,
+    "mass_units": "kg",
+    "reference": "Withers, 1983"
+   }
+  ],
+  "Sus scrofa": [
+   {
+    "brain_kg": 0.1698,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Warnke, 1908"
+   }
+  ],
+  "Ursus arctos": [
+   {
+    "brain_kg": 0.33597,
+    "brain_units": "kg",
+    "mass_kg": 131.02267,
+    "mass_units": "kg",
+    "reference": "Boddy et al., 2012"
+   },
+   {
+    "brain_kg": 0.2339,
+    "brain_units": "kg",
+    "mass_kg": 142.88,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   }
+  ],
+  "Ursus maritimus": [
+   {
+    "brain_kg": 0.489,
+    "brain_units": "kg",
+    "mass_kg": 199.57,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   },
+   {
+    "brain_kg": 0.507,
+    "brain_units": "kg",
+    "mass_kg": 317.0,
+    "mass_units": "kg",
+    "reference": "Crile & Quiring, 1940"
+   }
+  ],
+  "Vulpes vulpes": [
+   {
+    "brain_kg": 0.0468,
+    "brain_units": "kg",
+    "mass_kg": 2.91,
+    "mass_units": "kg",
+    "reference": "Warnke, 1908"
+   },
+   {
+    "brain_kg": 0.0436,
+    "brain_units": "kg",
+    "mass_kg": 2.55,
+    "mass_units": "kg",
+    "reference": "Warnke, 1908"
+   },
+   {
+    "brain_kg": 0.0505,
+    "brain_units": "kg",
+    "mass_kg": 4.235,
+    "mass_units": "kg",
+    "reference": "Warnke, 1908"
+   },
+   {
+    "brain_kg": 0.054,
+    "brain_units": "kg",
+    "mass_kg": null,
+    "mass_units": "",
+    "reference": "Warnke, 1908"
+   }
+  ]
+ }
+}

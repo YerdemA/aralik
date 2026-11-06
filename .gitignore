@@ -84,3 +84,5 @@ tools/raw/openfootball/cache/
 tools/raw/faostat/*.zip
 # AnAge arşivi (tools/import_anage.py --fetch); yalnızca çıkarılan değerler commit'lenir
 tools/raw/anage/anage.zip
+# AnimalTraits gözlemleri (tools/import_animaltraits.py --fetch); yalnızca çıkarılan değerler commit'lenir
+tools/raw/animaltraits/observations.csv

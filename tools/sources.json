@@ -46,12 +46,13 @@
   {
    "id": "animaltraits",
    "name": "AnimalTraits",
-   "license": "CC BY 4.0",
-   "license_url": "https://www.nature.com/articles/s41597-022-01364-9",
+   "license": "CC0 1.0",
+   "license_url": "https://zenodo.org/records/6468938",
    "url": "https://animaltraits.org/",
-   "attribution": "AnimalTraits (Herberstein ve ark., 2022), CC BY 4.0",
-   "status": "planned",
-   "datasets": []
+   "attribution": "AnimalTraits (Herberstein ve ark., 2022, Scientific Data). Veri CC0 ile kamu malına bırakılmıştır.",
+   "status": "in_use",
+   "raw_dir": "animaltraits",
+   "datasets": ["animaltraits_brain", "animaltraits_mass"]
   },
   {
    "id": "usda_fdc",
