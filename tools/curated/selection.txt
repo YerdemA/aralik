@@ -704,3 +704,17 @@
 1|366|gün|en:Leap year|Artık yıl kaç gündür?
 2|6.175|kg|en:FIFA World Cup Trophy|FIFA Dünya Kupası kupası kaç kilogramdır?
 2|853|yolcu|en:Airbus A380|Airbus A380 en fazla kaç yolcu taşıyabilir?
+
+# animals_curated|hayvanlar
+1|20|saat|en:Lion|Bir aslan günde yaklaşık kaç saat hareketsiz dinlenir?
+2|15|yıl|en:Rock dove|Bir güvercin bakım altında kaç yıla kadar yaşayabilir?
+1|20|saat|en:Koala|Bir koala günde kaç saate kadar uyur?
+3|150000|kıl|en:Sea otter|Bir deniz samurunun derisinin bir santimetrekaresinde yaklaşık kaç kıl bulunur?
+2|40|yıl|en:Gorilla|Bir goril doğada kaç yıla kadar yaşayabilir?
+2|50|cm|en:Hippopotamus|Bir su aygırının köpek dişleri kaç santimetreye ulaşabilir?
+2|3.3|m|en:Andean condor|And kondorunun kanat açıklığı kaç metreye ulaşabilir?
+3|150000|kas demeti|en:Elephant trunk|Bir filin hortumunda kaç kas demeti bulunur?
+1|12.5|saat|en:Cat sleep|Bir kedi günde ortalama kaç saat uyur?
+2|65|gün|en:Cat reproduction|Bir kedinin gebelik süresi ortalama kaç gündür?
+2|80|diş|en:Crocodile|Bir timsahın ağzında yaklaşık kaç diş bulunur?
+1|8|göz|en:Tarantula|Bir tarantulanın kaç gözü vardır?
