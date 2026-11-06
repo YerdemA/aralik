@@ -1,15 +1,25 @@
 """Check tools/curated/selection.txt against Wikipedia and append it to the bank.
 
-Usage:  python tools/import_curated.py [--dry-run] [--report PATH]
+Usage:  python tools/import_curated.py [--reviewed] [--dry-run] [--report PATH]
 
-For each selected question the Wikipedia article is fetched and the answer
-must appear in its text. The check only proves the number is in the article,
-so --report writes the matching sentence of every question for a human read;
-questions whose answer turned out wrong are fixed or removed in selection.txt.
+Selection line: difficulty|answer|unit|lang:Article|keywords|question text.
+Keywords (comma-separated, case-insensitive, all required) say what the
+number is about: "hours,sleep" for "Bir koala günde kaç saat uyur?". The
+answer counts as found only in a sentence that also contains every keyword,
+so a "20" in a list of subspecies no longer passes for twenty hours of sleep
+(2026-11-06: 16 of 34 animal candidates matched like that). Older lines
+without keywords are only accepted if already in the bank.
 
-Dropped automatically: article not found, answer not in the article, the same
-Wikidata item already asked in the bank with that kind and unit, and repeats
-of an article + kind + unit (validate_questions.py forbids them).
+The tool does not decide alone. It prints the evidence sentence of every new
+question, flagged when the number is part of a range ("25–30 years"); a
+person reads them, fixes or removes wrong lines in
+selection.txt, and only then writes with --reviewed. Without --reviewed
+nothing is written. --report writes the evidence of every question.
+
+Dropped automatically: article not found, no keywords, answer not in a
+sentence with the keywords, the same Wikidata item already asked in the bank
+with that kind and unit, and repeats of an article + kind + unit
+(validate_questions.py forbids them).
 
 The bank stays append-only. Fetched articles are cached in tools/raw/wikipedia/
 (git-ignored); only the numbers are used, no text is copied.
@@ -38,10 +48,10 @@ LEAD_CHARS = 1500
 SEED = 20261102
 
 
-def parse_selection() -> list[dict]:
+def parse_selection(path: Path = SELECTION) -> list[dict]:
     rows: list[dict] = []
     dataset = category = None
-    for line in SELECTION.read_text(encoding="utf-8").splitlines():
+    for line in path.read_text(encoding="utf-8").splitlines():
         line = line.strip()
         if not line:
             continue
@@ -50,7 +60,14 @@ def parse_selection() -> list[dict]:
             if header:
                 dataset, category = header.groups()
             continue
-        difficulty, answer, unit, article, text = line.split("|", 4)
+        parts = line.split("|")
+        if len(parts) == 6:
+            difficulty, answer, unit, article, keywords, text = parts
+        elif len(parts) == 5:  # older lines, before keywords (2026-11-06)
+            difficulty, answer, unit, article, text = parts
+            keywords = ""
+        else:
+            sys.exit(f"HATA: satır biçimi bozuk: {line}")
         lang, title = article.split(":", 1)
         rows.append(
             {
@@ -63,6 +80,7 @@ def parse_selection() -> list[dict]:
                 "dataset": dataset,
                 "lang": lang,
                 "title": title,
+                "keywords": [k.strip().casefold() for k in keywords.split(",") if k.strip()],
             }
         )
     return rows
@@ -120,7 +138,7 @@ def number_pattern(answer: int | float) -> re.Pattern:
 
 
 def find_evidence(text: str, answer: int | float) -> tuple[str, str] | None:
-    """(where, sentence) of the first mention of the answer."""
+    """(where, sentence) of the first mention of the answer (older lines)."""
     match = number_pattern(answer).search(text)
     if not match:
         return None
@@ -128,6 +146,45 @@ def find_evidence(text: str, answer: int | float) -> tuple[str, str] | None:
     end = min(match.end() + 70, len(text))
     sentence = " ".join(text[start:end].split())
     return ("giriş" if match.start() < LEAD_CHARS else "gövde", sentence)
+
+
+# A sentence ends at . ! ? followed by space and a capital or digit, or at a
+# line break; "3.05 m" and "c. 26 mi" stay in one sentence.
+SENTENCE_END = re.compile(r"(?<=[.!?])\s+(?=[A-ZÇĞİÖŞÜ0-9\"“(])|\n+")
+# The number next to a dash or "to"/"ile": "25–30", "2 to 3", "35 ila 40".
+RANGE_AFTER = re.compile(r"^\s*(?:[–—-]|to\b|and\b|ila\b|ile\b)\s*[\d.,]+")
+RANGE_BEFORE = re.compile(r"[\d.,]+\s*(?:[–—-]|to|and|ila|ile)\s*$")
+
+
+def sentences(text: str) -> list[tuple[int, str]]:
+    """(start offset, sentence) pairs."""
+    out, start = [], 0
+    for m in SENTENCE_END.finditer(text):
+        out.append((start, text[start : m.start()]))
+        start = m.end()
+    out.append((start, text[start:]))
+    return out
+
+
+def find_keyed_evidence(
+    text: str, answer: int | float, keywords: list[str]
+) -> tuple[str, str, list[str]] | None:
+    """(where, sentence, flags) of the first sentence that has the answer and
+    every keyword. Flags: "ARALIK" when the number is one end of a range."""
+    pattern = number_pattern(answer)
+    for offset, sentence in sentences(text):
+        folded = sentence.casefold()
+        if not all(k in folded for k in keywords):
+            continue
+        match = pattern.search(sentence)
+        if not match:
+            continue
+        flags = []
+        if RANGE_AFTER.match(sentence[match.end() :]) or RANGE_BEFORE.search(sentence[: match.start()]):
+            flags.append("ARALIK")
+        where = "giriş" if offset + match.start() < LEAD_CHARS else "gövde"
+        return where, " ".join(sentence.split()), flags
+    return None
 
 
 def source_url(lang: str, title: str) -> str:
@@ -139,7 +196,13 @@ def main(argv: list[str]) -> int:
     sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--dry-run", action="store_true", help="bankaya yazma")
+    parser.add_argument(
+        "--reviewed",
+        action="store_true",
+        help="yeni soruların kanıt cümleleri bir insan tarafından okundu; bankaya yaz",
+    )
     parser.add_argument("--report", type=Path, help="kanıt cümlelerini bu dosyaya yaz")
+    parser.add_argument("--selection", type=Path, default=SELECTION, help="seçim dosyası (deneme için)")
     args = parser.parse_args(argv)
 
     bank = json.loads(BANK.read_text(encoding="utf-8"))
@@ -151,36 +214,50 @@ def main(argv: list[str]) -> int:
         if "wikidata.org" in q["source"]
     }
 
-    rows = parse_selection()
+    rows = parse_selection(args.selection)
     dropped: list[str] = []
     accepted: list[dict] = []
     seen: set[tuple[str, str, str]] = set()
     report: list[str] = []
+    to_read: list[str] = []
     for row in rows:
         page = fetch(row["lang"], row["title"])
         label = f"{row['text']} = {row['answer']} [{row['lang']}:{row['title']}]"
         if page is None:
             dropped.append(f"MADDE YOK: {label}")
             continue
-        evidence = find_evidence(page["text"], row["answer"])
+        source = source_url(row["lang"], page["title"])
+        key = (source, row["kind"], row["unit"])
+        if key in bank_keys and key not in seen:  # imported earlier
+            seen.add(key)
+            old = (
+                find_keyed_evidence(page["text"], row["answer"], row["keywords"])
+                if row["keywords"]
+                else find_evidence(page["text"], row["answer"])
+            )
+            if old:
+                report.append(f"{old[0]}|{row['answer']}|{row['text']}|{old[1]}")
+            continue
+        if key in seen:
+            dropped.append(f"AYNI MADDE: {label}")
+            continue
+        if not row["keywords"]:
+            dropped.append(f"ANAHTAR KELİME YOK: {label}")
+            continue
+        evidence = find_keyed_evidence(page["text"], row["answer"], row["keywords"])
         if evidence is None:
-            dropped.append(f"CEVAP YOK: {label}")
+            dropped.append(f"KANIT YOK ({', '.join(row['keywords'])}): {label}")
             continue
         if (page["qid"], row["kind"], row["unit"]) in wikidata_keys:
             dropped.append(f"BANKADA VAR ({page['qid']}): {label}")
             continue
-        source = source_url(row["lang"], page["title"])
-        key = (source, row["kind"], row["unit"])
-        if key in seen:
-            dropped.append(f"AYNI MADDE: {label}")
-            continue
         seen.add(key)
         report.append(f"{evidence[0]}|{row['answer']}|{row['text']}|{evidence[1]}")
-        if key in bank_keys:  # imported earlier
-            continue
         if " ".join(row["text"].casefold().split()) in bank_texts:
             dropped.append(f"AYNI METİN: {label}")
             continue
+        flags = evidence[2]
+        to_read.append(f"{label}{'  ⚠ ' + ', '.join(flags) if flags else ''}\n      {evidence[1]}")
         accepted.append(
             {
                 "text": row["text"],
@@ -203,8 +280,18 @@ def main(argv: list[str]) -> int:
     print("Yeni, zorluk:", dict(sorted(Counter(q["difficulty"] for q in accepted).items())))
     if args.report:
         args.report.write_text("\n".join(report) + "\n", encoding="utf-8")
+    if accepted:
+        print("\nYeni soruların kanıtları (sayı gerçekten sorulan şey mi? aralık mı?):")
+        for item in to_read:
+            print(f"  * {item}")
     if args.dry_run or not accepted:
         return 0
+    if not args.reviewed:
+        print(
+            "\nYazılmadı. Kanıt cümlelerini okuyun, yanlışları selection.txt içinde "
+            "düzeltin ya da silin, sonra --reviewed ile tekrar çalıştırın."
+        )
+        return 1
 
     # Like build_questions.py: the order is no ranking.
     random.Random(f"{SEED}:{len(bank)}").shuffle(accepted)

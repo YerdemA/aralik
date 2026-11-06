@@ -18198,5 +18198,18 @@
   "fun_fact": null,
   "difficulty": 2,
   "dataset": "animals_curated"
+ },
+ {
+  "id": "q1401",
+  "text": "Bir zürafanın kalbi yaklaşık kaç kilogramdır?",
+  "answer": 11,
+  "unit": "kg",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://en.wikipedia.org/wiki/Giraffe",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "animals_curated"
  }
 ]

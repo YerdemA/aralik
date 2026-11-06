@@ -1,6 +1,9 @@
 # Elle seçilmiş sorular (kaynak adayları: soru-adaylari/). tools/import_curated.py okur.
-# Bölüm: "# veri_seti|kategori". Satır: zorluk|cevap|birim|dil:Vikipedi maddesi|soru metni
-# Birim boşsa soru "year" türündedir. Cevap maddede geçmiyorsa soru bankaya girmez.
+# Bölüm: "# veri_seti|kategori". Satır: zorluk|cevap|birim|dil:Vikipedi maddesi|anahtar kelimeler|soru metni
+# Birim boşsa soru "year" türündedir. Anahtar kelimeler (virgülle, maddenin dilinde) sayının neyle ilgili
+# olduğunu söyler: cevap ancak hepsini içeren bir cümlede geçerse kanıt sayılır. Yeni satırlarda zorunlu;
+# eski (anahtar kelimesiz) satırlar yalnızca bankada zaten varsa kabul edilir.
+# Yazmadan önce kanıt cümleleri okunur: python tools/import_curated.py, sonra --reviewed.
 
 # history_to_1000|tarih
 2|395||en:Theodosius I|Roma İmparatorluğu Doğu ve Batı olarak hangi yıl kesin biçimde ikiye ayrılmıştır?
@@ -718,3 +721,4 @@
 2|65|gün|en:Cat reproduction|Bir kedinin gebelik süresi ortalama kaç gündür?
 2|80|diş|en:Crocodile|Bir timsahın ağzında yaklaşık kaç diş bulunur?
 1|8|göz|en:Tarantula|Bir tarantulanın kaç gözü vardır?
+2|11|kg|en:Giraffe|heart|Bir zürafanın kalbi yaklaşık kaç kilogramdır?
