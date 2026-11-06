@@ -30,7 +30,7 @@ class ResultScreen extends StatelessWidget {
     final answerText = isYear
         ? formatYear(q.answer.round())
         : [
-            formatNumber(q.answer, maxDecimals: 1),
+            formatNumber(q.answer, maxDecimals: 3),
             if (q.unit.isNotEmpty) q.unit,
           ].join(' ');
 

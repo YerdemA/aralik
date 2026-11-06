@@ -686,7 +686,7 @@ class _RevealView extends StatelessWidget {
     final answer = isYear
         ? formatYear(question.answer.round())
         : [
-            formatNumber(question.answer, maxDecimals: 1),
+            formatNumber(question.answer, maxDecimals: 3),
             if (question.unit.isNotEmpty) question.unit,
           ].join(' ');
     final last = match.results.last;

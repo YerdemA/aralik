@@ -614,3 +614,45 @@
 3|1500|g|en:Common ostrich|Bir deve kuşu yumurtası yaklaşık kaç gramdır?
 2|115|cm|en:Emperor penguin|Bir imparator pengueninin boyu yaklaşık kaç santimetredir?
 3|45|cm|en:Giraffe|Bir zürafanın dili yaklaşık kaç santimetredir?
+
+# everyday_curated|gündelik
+1|42.195|km|en:Marathon|Bir maraton koşusu kaç kilometredir?
+2|3.05|m|en:Basketball|Basketbol potasının çemberi yerden kaç metre yüksekliktedir?
+1|297|mm|en:Paper size|A4 kâğıdının uzun kenarı kaç milimetredir?
+2|85.6|mm|en:ISO/IEC 7810|Bir banka kartının uzun kenarı kaç milimetredir?
+1|52|kart|en:Standard 52-card deck|Jokersiz bir iskambil destesinde kaç kart vardır?
+1|88|tuş|en:Piano|Standart bir piyanoda kaç tuş vardır?
+1|15|pul|en:Backgammon|Tavlada her oyuncunun kaç pulu vardır?
+1|160|karakter|en:SMS|Tek bir SMS mesajı en fazla kaç karakter olabilir?
+1|280|karakter|en:Twitter|X'te (Twitter) bir gönderi en fazla kaç karakter olabilir?
+2|74|dakika|en:Compact disc|Standart bir müzik CD'si ilk tasarlandığında kaç dakikalık müzik alıyordu?
+2|269.06|m|en:Titanic|Titanic kaç metre uzunluğundaydı?
+2|3.97|°|en:Leaning Tower of Pisa|Pisa Kulesi bugün kaç derece eğiktir?
+1|37|°C|en:Human body temperature|Sağlıklı bir insanın normal vücut sıcaklığı yaklaşık kaç °C'dir?
+1|32|diş|en:Human tooth|Yetişkin bir insanın ağzında yirmi yaş dişleriyle birlikte kaç diş vardır?
+1|46|kromozom|en:Karyotype|İnsan hücresinde kaç kromozom bulunur?
+2|5|litre|en:Blood volume|Yetişkin bir insanın vücudunda yaklaşık kaç litre kan vardır?
+2|60|%|en:Body water|Yetişkin bir insanın vücudunun yaklaşık yüzde kaçı sudur?
+2|300|yumurta|en:Chicken|Yumurta tavuğu yılda yaklaşık kaç yumurta yumurtlayabilir?
+
+# turkey_curated|türkiye
+1|81|il|en:Provinces of Turkey|Türkiye'de kaç il vardır?
+1|600|milletvekili|en:Grand National Assembly of Turkey|TBMM'de kaç milletvekili bulunur?
+1|31|km|en:Bosporus|İstanbul Boğazı kaç kilometre uzunluğundadır?
+2|61|km|en:Dardanelles|Çanakkale Boğazı kaç kilometre uzunluğundadır?
+2|4000|dükkân|en:Grand Bazaar, Istanbul|Kapalıçarşı'da yaklaşık kaç dükkân vardır?
+2|5.4|km|en:Eurasia Tunnel|Avrasya Tüneli'nin deniz altındaki bölümü kaç kilometredir?
+2|13.6|km|en:Marmaray|Marmaray'ın Boğaz'ın altından geçen tünel bölümü kaç kilometredir?
+2|55.6|m|en:Hagia Sophia|Ayasofya'nın kubbesinin en yüksek noktası yerden kaç metredir?
+
+# science_curated|bilim
+1|343|m/s|en:Speed of sound|Ses havada saniyede kaç metre yol alır?
+2|299792|km/s|en:Speed of light|Işık saniyede kaç kilometre yol alır?
+2|384399|km|en:Lunar distance|Ay'ın Dünya'ya ortalama uzaklığı kaç kilometredir?
+1|40000|km|en:Earth's circumference|Dünya'nın çevresi yaklaşık kaç kilometredir?
+2|8.3|dakika|en:Sunlight|Güneş ışığı Dünya'ya kaç dakikada ulaşır?
+2|27.3|gün|en:Orbit of the Moon|Ay, Dünya'nın çevresindeki bir turunu kaç günde tamamlar?
+2|9200000|km²|en:Sahara|Sahra Çölü kaç kilometrekaredir?
+2|10935|m|en:Challenger Deep|Okyanusların en derin noktası Challenger Çukuru kaç metre derinliktedir?
+2|400|km|en:International Space Station|Uluslararası Uzay İstasyonu Dünya'dan yaklaşık kaç kilometre yükseklikte döner?
+2|2154|km/h|en:Concorde|Concorde yolcu uçağı saatte yaklaşık kaç kilometre hızla seyrederdi?
