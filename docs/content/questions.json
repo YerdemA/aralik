@@ -23610,13 +23610,13 @@
  {
   "id": "q1817",
   "text": "Bir ineğin beyni kaç gram gelir?",
-  "answer": 307,
+  "answer": 481,
   "unit": "g",
   "kind": "magnitude",
   "category": "hayvanlar",
-  "source": "https://zenodo.org/records/6468938#brain_size=Bos_taurus",
+  "source": "https://doi.org/10.1371/journal.pone.0154580",
   "data_year": 2026,
-  "fun_fact": null,
+  "fun_fact": "150 sığırın ortalaması (Ballarin ve ark., 2016). Ortalama vücut ağırlıkları: 597 kg.",
   "difficulty": 3,
   "dataset": "animaltraits_brain"
  },
@@ -23631,7 +23631,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animaltraits_brain"
+  "dataset": "animaltraits_brain",
+  "retired": true
  },
  {
   "id": "q1819",
