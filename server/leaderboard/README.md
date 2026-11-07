@@ -37,13 +37,14 @@ npm run db:init                                 # tabloları kur
 npm run deploy                                  # adresi yazar: https://kabaca-leaderboard.<hesap>.workers.dev
 npx wrangler secret put IP_SALT                 # rastgele uzun bir metin yapıştır (IP özetleri için)
 ```
-Kendi alan adını kullanmak için (alanın DNS'i aynı hesapta olmalı) `wrangler.toml`'daki `routes` satırını aç ve
-yeniden `npm run deploy` çalıştır. DNS kaydını ve sertifikayı Cloudflare kendisi kurar.
+**Kendi alan adı (zorunlu):** Türk operatörleri (Turkcell, Türk Telekom) `*.workers.dev` adreslerini keser. Yayındaki
+adres `https://api.kabaca.app` (`wrangler.toml` → `routes`, `custom_domain = true`; `kabaca.app` aynı Cloudflare
+hesabında). DNS kaydını ve sertifikayı Cloudflare kendisi kurar. `workers_dev = true` eski manifest'ler için açık kalır.
 
 Sonra adresi uygulamalara duyur (depo kökünde):
 
 ```powershell
-python tools/publish_content.py --leaderboard https://kabaca-leaderboard.<hesap>.workers.dev/
+python tools/publish_content.py --leaderboard https://api.kabaca.app/
 git add docs/content/manifest.json; git commit -m "Leaderboard URL"; git push
 ```
 
