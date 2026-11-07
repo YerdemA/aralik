@@ -114,6 +114,10 @@ enum LeaderboardFailure {
   nicknameTaken,
   rateLimited,
 
+  /// The nickname changed less than three days ago
+  /// ([LeaderboardException.retryAt] says when it can change again).
+  renameWait,
+
   /// The account no longer exists on the server.
   unauthorized,
 
@@ -125,9 +129,12 @@ enum LeaderboardFailure {
 }
 
 class LeaderboardException implements Exception {
-  const LeaderboardException(this.failure);
+  const LeaderboardException(this.failure, {this.retryAt});
 
   final LeaderboardFailure failure;
+
+  /// For [LeaderboardFailure.renameWait]: when the nickname may change.
+  final DateTime? retryAt;
 
   @override
   String toString() => 'LeaderboardException($failure)';
@@ -406,6 +413,13 @@ class LeaderboardStore extends ChangeNotifier {
     }
     if (reply.status >= 200 && reply.status < 300) return reply.body;
     final error = reply.body is Map ? (reply.body as Map)['error'] : null;
+    if (error == 'rename_wait') {
+      final at = (reply.body as Map)['retry_at'];
+      throw LeaderboardException(
+        LeaderboardFailure.renameWait,
+        retryAt: at is int ? DateTime.fromMillisecondsSinceEpoch(at) : null,
+      );
+    }
     throw LeaderboardException(switch ((reply.status, error)) {
       (_, 'invalid_nickname') => LeaderboardFailure.nicknameInvalid,
       (_, 'blocked_nickname') => LeaderboardFailure.nicknameBlocked,

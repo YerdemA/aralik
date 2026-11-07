@@ -6,7 +6,9 @@ CREATE TABLE IF NOT EXISTS players (
   nickname TEXT NOT NULL,
   nickname_key TEXT NOT NULL UNIQUE,
   created_at INTEGER NOT NULL,   -- ms since epoch
-  device_hash TEXT               -- SHA-256 of the app's device key; null for old apps
+  device_hash TEXT,              -- SHA-256 of the app's device key; null for old apps
+  renamed_at INTEGER,            -- last nickname change (ms); null = never
+  hidden INTEGER NOT NULL DEFAULT 0  -- 1: left off the board for everyone else
 );
 CREATE UNIQUE INDEX IF NOT EXISTS players_device
   ON players (device_hash) WHERE device_hash IS NOT NULL;
@@ -18,6 +20,7 @@ CREATE TABLE IF NOT EXISTS scores (
   points INTEGER NOT NULL,
   hits INTEGER NOT NULL,
   submitted_at INTEGER NOT NULL,
+  suspect INTEGER NOT NULL DEFAULT 0,  -- 1: points at or above SUSPECT_POINTS
   PRIMARY KEY (day, player_id)
 );
 CREATE INDEX IF NOT EXISTS scores_rank

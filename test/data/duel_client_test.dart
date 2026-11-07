@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:aralik/core/duel.dart';
 import 'package:aralik/data/duel_client.dart';
@@ -183,5 +184,118 @@ void main() {
       await channel.incoming.close();
       await expectLater(dropped.code, throwsA(isA<DuelException>()));
     });
+  });
+
+  test('a dropped connection comes back with the secret and resends', () async {
+    final first = FakeChannel();
+    final second = FakeChannel();
+    final opened = <Uri>[];
+    final service = DuelService(
+      serviceUri: () => base,
+      connect: (uri) async {
+        opened.add(uri);
+        return opened.length == 1 ? first : second;
+      },
+    );
+    final match = DuelMatch();
+    final session = await service.join(
+      code: 'K7M2P',
+      name: 'Ayşe',
+      bankSize: 99,
+      match: match,
+    );
+    Future<void> settle() => Future<void>.delayed(Duration.zero);
+    void say(FakeChannel c, Map<String, Object?> m) =>
+        c.incoming.add(jsonEncode(m));
+
+    say(first, {
+      't': 'start',
+      'you': 0,
+      'names': ['Ayşe', 'Bora'],
+      'questions': ['a', 'b'],
+      'questionMs': 15000,
+      'rejoin': 'secret-1',
+    });
+    say(first, {'t': 'question', 'i': 0, 'ms': 15000});
+    await settle();
+    expect(match.rejoin, 'secret-1');
+
+    // The network goes; the lock made meanwhile cannot be sent.
+    await first.incoming.close();
+    await settle();
+    session.lock(0, low: 10, high: 20);
+    await settle();
+    expect(opened, hasLength(2));
+    expect(opened.last.queryParameters['rejoin'], 'secret-1');
+    expect(match.reconnecting, isTrue);
+    expect(match.phase, DuelPhase.question);
+
+    // Back: the room has no lock from us yet, so it is sent again.
+    say(second, {
+      't': 'resume',
+      'you': 0,
+      'names': ['Ayşe', 'Bora'],
+      'questions': ['a', 'b'],
+      'questionMs': 15000,
+      'rejoin': 'secret-1',
+      'index': 0,
+      'phase': 'question',
+      'ms': 9000,
+      'results': <Object>[],
+      'totals': [0, 0],
+      'locked': [false, true],
+      'away': null,
+      'awayMs': null,
+    });
+    await settle();
+    expect(match.reconnecting, isFalse);
+    expect(match.timeLeft, const Duration(seconds: 9));
+    expect(match.opponentLocked, isTrue);
+    expect(second.sent, [DuelMessages.lock(0, low: 10, high: 20)]);
+    await session.close();
+  });
+
+  testWidgets('gives up once the window has passed', (tester) async {
+    var calls = 0;
+    final first = FakeChannel();
+    final service = DuelService(
+      serviceUri: () => base,
+      connect: (uri) async {
+        calls++;
+        if (calls == 1) return first;
+        throw const SocketException('no network');
+      },
+    );
+    final match = DuelMatch();
+    await service.join(code: 'K7M2P', name: 'Ayşe', bankSize: 99, match: match);
+    first.incoming
+      ..add(
+        jsonEncode({
+          't': 'start',
+          'you': 0,
+          'names': ['Ayşe', 'Bora'],
+          'questions': ['a'],
+          'questionMs': 15000,
+          'rejoin': 's',
+        }),
+      )
+      ..add(jsonEncode({'t': 'question', 'i': 0, 'ms': 15000}));
+    await tester.pump();
+    await first.incoming.close();
+    await tester.pump();
+    expect(match.reconnecting, isTrue);
+    await tester.pump(const Duration(seconds: 30));
+    expect(match.reconnecting, isTrue);
+    await tester.pump(duelReconnectWindow);
+    expect(match.phase, DuelPhase.failed);
+    expect(match.error, 'connection_lost');
+    expect(calls, greaterThan(5));
+  });
+
+  test('waits 1, 2, 4, then 5 seconds between attempts', () {
+    expect(
+      [for (var k = 0; k < 6; k++) reconnectDelay(k).inSeconds],
+      [1, 2, 4, 5, 5, 5],
+    );
   });
 }

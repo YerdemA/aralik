@@ -51,4 +51,18 @@ void main() {
       expect(yearInterval(1923, 1), (low: 1873, high: 1973));
     });
   });
+
+  group('percentInterval', () {
+    test('is the guess ± up to 20 points', () {
+      expect(percentInterval(50, 0, maxHalf: 20), (low: 50, high: 50));
+      expect(percentInterval(50, 0.5, maxHalf: 20), (low: 40, high: 60));
+      expect(percentInterval(50, 1, maxHalf: 20), (low: 30, high: 70));
+    });
+
+    test('never goes above 100 or below 1', () {
+      expect(percentInterval(90, 1, maxHalf: 20), (low: 70, high: 100));
+      expect(percentInterval(100, 1, maxHalf: 20), (low: 80, high: 100));
+      expect(percentInterval(5, 1, maxHalf: 20), (low: 1, high: 25));
+    });
+  });
 }

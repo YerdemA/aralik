@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../core/strings.dart';
+import '../../data/sound.dart';
 import '../../widgets/mascot.dart';
 
 /// A short intro on cold start that continues the Android launch screen
 /// in place (same navy, the mascot in a 192 dp circle at the centre, also
 /// as the window background, so there is no flash in between): the "?"
-/// bubble wobbles and the name appears below; then [next] fades in. About 0.9 s; a tap skips it.
+/// bubble wobbles and the name appears below to a short chime; then [next]
+/// fades in. About 0.9 s; a tap skips it.
 class IntroScreen extends StatefulWidget {
   const IntroScreen({super.key, required this.next});
 
@@ -30,6 +32,12 @@ class IntroScreen extends StatefulWidget {
 
 class _IntroScreenState extends State<IntroScreen> {
   bool _left = false;
+
+  @override
+  void initState() {
+    super.initState();
+    Sounds.playIntro();
+  }
 
   void _finish() {
     if (_left || !mounted) return;

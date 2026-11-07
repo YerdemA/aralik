@@ -6,6 +6,7 @@ import '../../data/settings_store.dart';
 import '../../widgets/link_text.dart';
 import '../leaderboard/nickname_sheet.dart';
 import 'attributions_screen.dart';
+import 'duel_name_sheet.dart';
 
 /// Settings: the theme, sound effects, and "Hakkında" with data sources and licenses,
 /// open-source licenses and the privacy policy.
@@ -81,6 +82,28 @@ class SettingsScreen extends StatelessWidget {
                   value: settings.soundOn,
                   onChanged: settings.setSoundOn,
                 ),
+              ),
+            ),
+            const SizedBox(height: 24),
+            const _SectionTitle(AppStrings.duelSection),
+            Card(
+              clipBehavior: Clip.antiAlias,
+              child: ListenableBuilder(
+                listenable: Listenable.merge([settings, ?leaderboard]),
+                builder: (context, _) {
+                  final name = duelNameOf(
+                    settings,
+                    leaderboard?.account?.nickname,
+                  );
+                  return ListTile(
+                    leading: const Icon(Icons.bolt_rounded),
+                    title: Text(name ?? AppStrings.duelNameUnset),
+                    subtitle: const Text(AppStrings.duelNameSubtitle),
+                    trailing: const Icon(Icons.edit_rounded),
+                    onTap: () =>
+                        showDuelNameSheet(context, settings, initial: name),
+                  );
+                },
               ),
             ),
             if (leaderboard != null)

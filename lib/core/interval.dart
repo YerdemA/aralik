@@ -54,6 +54,22 @@ Bounds yearInterval(int guess, double t, {int maxHalf = maxYearHalfWidth}) {
   return (low: guess - half, high: guess + half);
 }
 
+/// Linear ± interval for a percentage: half width `round(maxHalf·t)`,
+/// kept within [minPercentBound]…100.
+Bounds percentInterval(int guess, double t, {required int maxHalf}) {
+  final position = t.clamp(0.0, 1.0);
+  final half = (maxHalf * position).round();
+  return (
+    low: math.max(minPercentBound, math.min(guess, guess - half)),
+    high: math.min(maxPercent, math.max(guess, guess + half)),
+  );
+}
+
+/// Bounds of a percentage interval. The low end stays ≥ 1 like every
+/// magnitude bound (the leaderboard server rejects 0).
+const int minPercentBound = 1;
+const int maxPercent = 100;
+
 /// Positions (0…1) of the interval and the answer on the result bar.
 ///
 /// The axis covers both with some margin; magnitudes use a log axis so the

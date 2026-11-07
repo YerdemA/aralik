@@ -77,7 +77,12 @@ class DuelService {
     return DuelSearch._(channel);
   }
 
-  Future<DuelChannel> _open(String path, String name, int bankSize) async {
+  Future<DuelChannel> _open(
+    String path,
+    String name,
+    int bankSize, {
+    String? rejoin,
+  }) async {
     final base = serviceUri();
     if (base == null) throw const DuelException(DuelFailure.offline);
     final http = base.resolve(path);
@@ -87,6 +92,7 @@ class DuelService {
         'v': '$duelProtocolVersion',
         'name': name,
         'bank': '$bankSize',
+        'rejoin': ?rejoin,
       },
     );
     try {
@@ -111,8 +117,13 @@ class DuelService {
     required int bankSize,
     required DuelMatch match,
   }) async {
-    final channel = await _open('v1/duel/rooms/$code', name, bankSize);
-    return DuelSession._(channel, match);
+    final path = 'v1/duel/rooms/$code';
+    final channel = await _open(path, name, bankSize);
+    return DuelSession._(
+      channel,
+      match,
+      (token) => _open(path, name, bankSize, rejoin: token),
+    );
   }
 }
 
@@ -177,48 +188,119 @@ class DuelSearch {
   }
 }
 
+/// Waits between attempts to come back: 1, 2, 4, then every 5 seconds.
+Duration reconnectDelay(int attempt) =>
+    Duration(seconds: attempt >= 3 ? 5 : 1 << attempt);
+
 /// An open duel: forwards the room's events to [match] and sends this
-/// player's locks.
+/// player's locks. When the connection drops in play it comes back by
+/// itself within [duelReconnectWindow] (the room keeps the seat), and
+/// sends again a lock or "next" the room did not get.
 class DuelSession {
-  DuelSession._(this._channel, this.match) {
-    _subscription = _channel.messages.listen(
+  DuelSession._(this._channel, this.match, this._reopen) {
+    _listen(_channel);
+  }
+
+  DuelChannel _channel;
+  final DuelMatch match;
+  final Future<DuelChannel> Function(String rejoin) _reopen;
+  StreamSubscription<String>? _subscription;
+  bool _closed = false;
+  bool _reconnecting = false;
+
+  ({int index, int? low, int? high})? _lastLock;
+  int? _lastNext;
+
+  void _listen(DuelChannel channel) {
+    _subscription = channel.messages.listen(
       (text) {
         final event = DuelEvent.parse(text);
-        if (event != null) match.handle(event);
+        if (event == null) return;
+        match.handle(event);
+        if (event is DuelResume) _sendAgain();
       },
-      onDone: _lost,
-      onError: (_) => _lost(),
+      onDone: () => _lost(channel),
+      onError: (_) => _lost(channel),
       cancelOnError: true,
     );
   }
 
-  final DuelChannel _channel;
-  final DuelMatch match;
-  late final StreamSubscription<String> _subscription;
-  bool _closed = false;
-
-  void _lost() {
-    if (!_closed) match.connectionLost();
+  void _lost(DuelChannel channel) {
+    if (_closed || !identical(channel, _channel)) return;
+    match.connectionLost();
+    if (match.reconnecting) _reconnect();
   }
 
-  void lock(int index, {int? low, int? high}) =>
-      _send(DuelMessages.lock(index, low: low, high: high));
+  Future<void> _reconnect() async {
+    if (_reconnecting) return;
+    _reconnecting = true;
+    var waited = Duration.zero;
+    for (var attempt = 0; !_closed && match.reconnecting; attempt++) {
+      final token = match.rejoin;
+      if (token == null) break;
+      try {
+        final channel = await _reopen(token);
+        if (_closed) {
+          await channel.close();
+          return;
+        }
+        final old = _subscription;
+        _channel = channel;
+        _listen(channel);
+        unawaited(old?.cancel());
+        _reconnecting = false;
+        return;
+      } on Object {
+        // not yet: wait and try again
+      }
+      final wait = reconnectDelay(attempt);
+      waited += wait;
+      if (waited >= duelReconnectWindow) break;
+      await Future<void>.delayed(wait);
+    }
+    _reconnecting = false;
+    if (!_closed && match.reconnecting) match.reconnectFailed();
+  }
 
-  void next(int index) => _send(DuelMessages.next(index));
+  /// After coming back: what the room missed while the connection was gone.
+  void _sendAgain() {
+    final lock = _lastLock;
+    if (lock != null &&
+        match.phase == DuelPhase.question &&
+        match.index == lock.index &&
+        !match.myLocked) {
+      _send(DuelMessages.lock(lock.index, low: lock.low, high: lock.high));
+    }
+    if (_lastNext != null &&
+        match.phase == DuelPhase.reveal &&
+        match.index == _lastNext) {
+      _send(DuelMessages.next(_lastNext!));
+    }
+  }
+
+  void lock(int index, {int? low, int? high}) {
+    _lastLock = (index: index, low: low, high: high);
+    _send(DuelMessages.lock(index, low: low, high: high));
+  }
+
+  void next(int index) {
+    _lastNext = index;
+    _send(DuelMessages.next(index));
+  }
 
   void _send(String message) {
-    if (_closed) return;
+    if (_closed || match.reconnecting) return;
     try {
       _channel.send(message);
     } on Object {
-      _lost();
+      _lost(_channel);
     }
   }
 
   Future<void> close() async {
     if (_closed) return;
     _closed = true;
-    await Future.wait([_subscription.cancel(), _channel.close()]);
+    await Future.wait([?_subscription?.cancel(), _channel.close()]);
   }
 }
 

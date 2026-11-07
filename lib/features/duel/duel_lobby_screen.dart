@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 
 import '../../core/duel.dart';
-import '../../core/nickname.dart';
 import '../../core/strings.dart';
 import '../../data/duel_client.dart';
 import '../../data/question_repository.dart';
 import '../../data/settings_store.dart';
 import '../../data/stats_store.dart';
+import '../settings/duel_name_sheet.dart';
+import '../settings/settings_screen.dart';
 import 'duel_screen.dart';
 
-/// Start of a duel: pick a name, then find a random opponent (main action),
-/// or play a friend: open a room, or join theirs with its code.
+/// Start of a duel: find a random opponent (main action), or play a
+/// friend: open a room, or join theirs with its code. The name comes from
+/// Settings (it is only typed there); without one the lobby sends the
+/// player there first.
 class DuelLobbyScreen extends StatefulWidget {
   const DuelLobbyScreen({
     super.key,
@@ -30,7 +33,7 @@ class DuelLobbyScreen extends StatefulWidget {
   final StatsStore stats;
   final SettingsStore settings;
 
-  /// Prefills the name when none was used yet (the leaderboard nickname).
+  /// The name when none was chosen in Settings (the leaderboard nickname).
   final String? suggestedName;
 
   @override
@@ -38,43 +41,33 @@ class DuelLobbyScreen extends StatefulWidget {
 }
 
 class _DuelLobbyScreenState extends State<DuelLobbyScreen> {
-  late final _name = TextEditingController(
-    text: widget.settings.duelName ?? widget.suggestedName ?? '',
-  );
   final _code = TextEditingController();
-  String? _nameError;
   String? _codeError;
   bool _busy = false;
 
   @override
   void dispose() {
-    _name.dispose();
     _code.dispose();
     super.dispose();
   }
 
-  /// The tidy name, or null after showing what is wrong with it.
-  String? _checkedName() {
-    final problem = nicknameProblem(_name.text);
-    setState(
-      () => _nameError = switch (problem) {
-        null => null,
-        NicknameProblem.tooShort => AppStrings.nicknameTooShort,
-        NicknameProblem.tooLong => AppStrings.nicknameTooLong,
-        NicknameProblem.badCharacters => AppStrings.nicknameBadCharacters,
-      },
-    );
-    return problem == null ? tidyNickname(_name.text) : null;
-  }
+  /// The name from Settings, or null when none is chosen yet.
+  String? get _name => duelNameOf(widget.settings, widget.suggestedName);
+
+  void _openSettings() => Navigator.of(context).push(
+    MaterialPageRoute<void>(
+      builder: (_) => SettingsScreen(settings: widget.settings),
+    ),
+  );
 
   Future<void> _findOpponent() async {
-    final name = _checkedName();
+    final name = _name;
     if (name == null || _busy) return;
     await _play(code: null, name: name);
   }
 
   Future<void> _create() async {
-    final name = _checkedName();
+    final name = _name;
     if (name == null || _busy) return;
     setState(() => _busy = true);
     try {
@@ -92,7 +85,7 @@ class _DuelLobbyScreenState extends State<DuelLobbyScreen> {
   }
 
   Future<void> _join() async {
-    final name = _checkedName();
+    final name = _name;
     final code = normalizeRoomCode(_code.text);
     setState(() => _codeError = code == null ? AppStrings.duelBadCode : null);
     if (name == null || code == null || _busy) return;
@@ -101,8 +94,6 @@ class _DuelLobbyScreenState extends State<DuelLobbyScreen> {
 
   /// Plays in room [code], or against a random opponent when it is null.
   Future<void> _play({required String? code, required String name}) async {
-    await widget.settings.setDuelName(name);
-    if (!mounted) return;
     final again = await Navigator.of(context).push<bool>(
       MaterialPageRoute(
         builder: (_) => DuelScreen(
@@ -126,7 +117,12 @@ class _DuelLobbyScreenState extends State<DuelLobbyScreen> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) => ListenableBuilder(
+    listenable: widget.settings,
+    builder: (context, _) => _build(context, _name),
+  );
+
+  Widget _build(BuildContext context, String? name) {
     final theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(title: const Text(AppStrings.duelTitle)),
@@ -136,20 +132,15 @@ class _DuelLobbyScreenState extends State<DuelLobbyScreen> {
           children: [
             Text(AppStrings.duelIntro, style: theme.textTheme.bodyLarge),
             const SizedBox(height: 24),
-            TextField(
-              controller: _name,
-              maxLength: nicknameMaxLength,
-              textCapitalization: TextCapitalization.words,
-              decoration: InputDecoration(
-                labelText: AppStrings.duelNameLabel,
-                helperText: AppStrings.nicknameHint,
-                errorText: _nameError,
-                border: const OutlineInputBorder(),
-              ),
-            ),
-            const SizedBox(height: 16),
+            if (name == null) ...[
+              NameNeededCard(onPick: _openSettings),
+              const SizedBox(height: 16),
+            ] else ...[
+              PlayingAsCard(name: name, onChange: _openSettings),
+              const SizedBox(height: 16),
+            ],
             FilledButton.icon(
-              onPressed: _busy ? null : _findOpponent,
+              onPressed: _busy || name == null ? null : _findOpponent,
               icon: const Icon(Icons.person_search_rounded),
               label: const Text(AppStrings.duelFindOpponent),
             ),
@@ -157,7 +148,7 @@ class _DuelLobbyScreenState extends State<DuelLobbyScreen> {
             Text(AppStrings.duelWithFriend, style: theme.textTheme.titleMedium),
             const SizedBox(height: 12),
             OutlinedButton.icon(
-              onPressed: _busy ? null : _create,
+              onPressed: _busy || name == null ? null : _create,
               icon: _busy
                   ? const SizedBox.square(
                       dimension: 20,
@@ -196,7 +187,7 @@ class _DuelLobbyScreenState extends State<DuelLobbyScreen> {
                 SizedBox(
                   height: 64,
                   child: OutlinedButton(
-                    onPressed: _busy ? null : _join,
+                    onPressed: _busy || name == null ? null : _join,
                     child: const Text(AppStrings.duelJoin),
                   ),
                 ),

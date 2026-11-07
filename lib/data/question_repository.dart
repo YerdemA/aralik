@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:isolate';
 
 import 'package:flutter/services.dart';
 
@@ -21,6 +22,23 @@ List<Question> parseQuestions(String source) {
       else
         throw FormatException('Question must be an object: $item'),
   ]);
+}
+
+/// [parseQuestions] on a background isolate. The bank is ~700 KB of JSON
+/// and ~2000 objects: tens of milliseconds on a slow phone, which would
+/// stall the intro animation on the UI thread.
+Future<List<Question>> parseQuestionsInBackground(String source) =>
+    Isolate.run(() => parseQuestions(source), debugName: 'parse bank');
+
+/// [parseQuestionsInBackground], or null when [source] is missing or
+/// invalid (a corrupt download falls back to the bundled bank).
+Future<List<Question>?> tryParseQuestionsInBackground(String? source) async {
+  if (source == null) return null;
+  try {
+    return await parseQuestionsInBackground(source);
+  } catch (_) {
+    return null;
+  }
 }
 
 /// Whether [candidate] keeps every question of [base] in the same order and
@@ -61,7 +79,7 @@ class QuestionRepository {
   Future<List<Question>> bundledBank() {
     return _bundledCache ??= _bundle
         .loadString(questionsAssetPath)
-        .then(parseQuestions)
+        .then(parseQuestionsInBackground)
         .catchError((Object error, StackTrace stackTrace) {
           _bundledCache = null; // allow a retry
           Error.throwWithStackTrace(error, stackTrace);
@@ -70,14 +88,18 @@ class QuestionRepository {
 
   /// The bank in use, in file order. Parsed on first call, then cached.
   Future<List<Question>> load() {
-    return _cache ??= bundledBank()
-        .then((bundled) {
-          final downloaded = _tryParse(remote?.questionsJson, parseQuestions);
+    return _cache ??=
+        Future(() async {
+          // Both banks parse at the same time, each on its own isolate.
+          final downloadedFuture = tryParseQuestionsInBackground(
+            remote?.questionsJson,
+          );
+          final bundled = await bundledBank();
+          final downloaded = await downloadedFuture;
           return downloaded != null && extendsBank(bundled, downloaded)
               ? downloaded
               : bundled;
-        })
-        .catchError((Object error, StackTrace stackTrace) {
+        }).catchError((Object error, StackTrace stackTrace) {
           _cache = null; // allow a retry
           Error.throwWithStackTrace(error, stackTrace);
         });
@@ -133,7 +155,7 @@ class QuestionRepository {
   /// the schedule must extend the bundled ones, the schedule may only name
   /// questions of the new bank, and the places must be usable.
   Future<bool> acceptsContent(ContentFiles files) async {
-    final bank = _tryParse(files.questions, parseQuestions);
+    final bank = await tryParseQuestionsInBackground(files.questions);
     final schedule = _tryParse(files.schedule, Schedule.parse);
     final places = _tryParse(files.places, PlaceData.parse);
     return bank != null &&

@@ -23,6 +23,11 @@ abstract final class AppStrings {
   static const todayHint = 'Herkes bugün aynı soruları çözüyor.';
   static String scoreOutOf(int points, int max) => '$points / $max';
   static String streakDays(int days) => '$days gün';
+  static String streakPill(int days) => '$days gün seri';
+  static const modeStart = 'Başla';
+  static const modeMath = 'Matematik modu';
+  static const modeTournament = 'Turnuva modu';
+  static const comingSoon = '(Yakında gelecek)';
   static const noValue = '–';
   static const streak = 'Seri';
   static const lastScore = 'Son skor';
@@ -127,6 +132,9 @@ abstract final class AppStrings {
   static const nicknameTaken = 'Bu takma ad alınmış.';
   static const nicknameBlocked = 'Bu takma ad kullanılamaz.';
   static const rateLimited = 'Çok fazla deneme oldu. Biraz sonra tekrar dene.';
+  static const renameRule = 'Takma adını 3 günde bir değiştirebilirsin.';
+  static String renameWait(DateTime? at) =>
+      at == null ? renameRule : '$renameRule Bir sonraki: ${dayLabel(at)}.';
   static const join = 'Katıl';
   static const save = 'Kaydet';
   static const cancel = 'Vazgeç';
@@ -231,9 +239,51 @@ abstract final class AppStrings {
   static const duelWithFriend = 'Arkadaşınla oyna';
   static const duelSearching = 'Rakip aranıyor…';
   static const duelSearchingHint = 'Biri aradığı anda düello başlar.';
+  static String duelSearchElapsed(Duration d) =>
+      'Bekleme ${d.inMinutes}:${(d.inSeconds % 60).toString().padLeft(2, '0')}';
+  static const duelTipTitle = 'Beklerken';
+
+  /// Short notes shown while looking for an opponent, one every
+  /// [duelTipEvery] (core/duel.dart). Rules of the game and well-known
+  /// findings about estimating; no numbers that need a source.
+  static const duelTips = [
+    "%90 emin olduğun aralıklar, 10 sorudan 9'unda cevabı içermeli. "
+        'Kalibrasyonun bunu ölçer.',
+    'Aralığın darsa puanın yüksek olur. Ama ıskalarsan eksiye düşebilirsin.',
+    'Kıl payı ıskalar da puan alabilir. Uzak ıskalar eksi yazar.',
+    'Kaydırıcının en geniş ucunda isabet her soruda 30 puan getirir.',
+    'Puanlama dürüst %90 aralığını ödüllendirir. Bilerek dar aralık vermek '
+        'uzun vadede kazandırmaz.',
+    'İnsanlar "%90 eminim" dediği aralıklarda çoğu zaman çok daha az '
+        'isabet eder. Aşırı özgüven en yaygın tahmin hatasıdır.',
+    'Bilmediğin bir sayıyı bildiğin bir sayıyla karşılaştır. Yakın bir '
+        'çapa, tahmini kolaylaştırır.',
+    'Büyük bir sayıyı küçük parçalara böl, her parçayı ayrı tahmin et. '
+        'Buna Fermi tahmini denir.',
+    'Yıl sorularında aralık ± yıl olarak, büyüklüklerde kat olarak genişler.',
+    'Yüzde sorularında aralık, tahminin 20 puan altına ve üstüne kadar '
+        'açılabilir.',
+    'Düelloda soru başına 15 saniyen var. Süre dolarsa ekrandaki aralık '
+        'kendiliğinden kilitlenir.',
+    'Düelloda iki aralık yan yana açılır. Toplam puanı yüksek olan kazanır.',
+    'Önce en iyi tahminini yaz, sonra ne kadar emin olduğuna göre aralığı '
+        'genişlet.',
+    'Kalibrasyonunu İstatistikler sayfasında görebilirsin. Hedef %90 '
+        'civarı.',
+  ];
   static const duelFound = 'Rakip bulundu, bağlanıyor…';
   static const duelNoShow = 'Rakibin odaya gelmedi. Tekrar dene.';
   static const duelNameLabel = 'Adın';
+  static const duelSection = 'Düello';
+  static const duelNameTitle = 'Düello adın';
+  static const duelNameUnset = 'Henüz seçmedin';
+  static const duelNameSubtitle =
+      'Rakibin bu adı görür, değiştirmek için dokun';
+  static const duelNameNeeded =
+      'Düello için önce bir ad seç. Rakibin bu adı görür.';
+  static const duelPickName = "Ayarlar'da ad seç";
+  static const duelPlayingAs = 'Bu adla oynuyorsun';
+  static const duelNameInSettings = "Değiştirmek için Ayarlar'a git";
   static const duelCreate = 'Oda kur';
   static const duelOrJoin = 'Arkadaşın oda kurduysa koduyla katıl';
   static const duelCodeLabel = 'Oda kodu';
@@ -269,6 +319,14 @@ abstract final class AppStrings {
   static String duelMargin(int points) =>
       points == 0 ? 'Puanlar eşit' : 'Fark: $points puan';
   static const duelOpponentLeft = 'Rakibin ayrıldı.';
+  static const reconnecting = 'Bağlantın koptu. Yeniden bağlanılıyor…';
+  static const duelReconnectingHint =
+      'Süre durdu. Dönünce kaldığın yerden devam edersin.';
+  static String duelOpponentAway(String name) => '$name bağlantısını kaybetti.';
+  static String duelOpponentAwayHint(int seconds) =>
+      'Süre durdu. $seconds sn içinde dönmezse düelloyu sen kazanırsın.';
+  static const tournamentReconnectingHint =
+      'Oyun sürüyor. Dönünce kaldığı yerden katılırsın.';
   static const duelPlayAgain = 'Yeni düello';
   static const duelHome = 'Ana ekran';
   static const duelQuitTitle = 'Düellodan çıkılsın mı?';
@@ -289,6 +347,49 @@ abstract final class AppStrings {
     'offline' => duelOffline,
     'unavailable' => duelUnavailable,
     _ => 'Bir sorun oldu. Biraz sonra tekrar dene.',
+  };
+
+  // Tournament
+  static const tournament = 'Turnuva';
+  static const tournamentHomeHint = '3–8 kişi, aynı sorular';
+  static const tournamentIntro =
+      'Arkadaşlarınla aynı anda aynı soruları çöz. En az 3, en fazla 8 kişi.';
+  static const tournamentCreate = 'Turnuva kur';
+  static const tournamentJoinTitle = 'Kodla katıl';
+  static const tournamentRoomCode = 'Oda kodu';
+  static String tournamentPlayers(int n, int max) => 'Oyuncular $n / $max';
+  static const tournamentHost = 'Kurucu';
+  static const tournamentQuestions = 'Soru sayısı';
+  static String tournamentQuestionCount(int n) => '$n soru';
+  static const tournamentStart = 'Başlat';
+  static String tournamentNeedPlayers(int min) =>
+      'Başlatmak için en az $min oyuncu gerekli.';
+  static const tournamentWaitHost = 'Kurucunun başlatması bekleniyor…';
+  static const tournamentKick = 'Odadan çıkar';
+  static String tournamentKickTitle(String name) =>
+      '$name odadan çıkarılsın mı?';
+  static const tournamentKickBody = 'Bu odaya tekrar giremez.';
+  static const tournamentKicked = 'Kurucu seni odadan çıkardı.';
+  static String tournamentInvite(String code) =>
+      'Kabaca turnuvasına gel! Oda kodu: $code';
+  static const tournamentLocked = 'Kilitledin. Diğerleri bekleniyor…';
+  static String tournamentLockedCount(int n, int of) => '$n / $of kilitledi';
+  static const tournamentSeeStandings = 'Sonuçları gör';
+  static const tournamentStandings = 'Sonuçlar';
+  static String tournamentHits(int hits, int of) => '$hits / $of isabet';
+  static const tournamentLeft = 'ayrıldı';
+  static const tournamentBackToRoom = 'Odaya dön';
+  static const tournamentQuitTitle = 'Turnuvadan çıkılsın mı?';
+  static const tournamentQuitBody =
+      'Kalan sorulardan taban puan alırsın, listede kalırsın.';
+  static String tournamentErrorText(String code) => switch (code) {
+    'no_room' || 'expired' => 'Bu kodla açık bir oda yok.',
+    'in_progress' => 'Bu odada turnuva sürüyor. Bitince tekrar dene.',
+    'room_full' => 'Oda dolu.',
+    'name_taken' => "Odada bu adla biri var. Ayarlar'dan adını değiştir.",
+    'kicked' => 'Bu odaya giremezsin.',
+    'too_few' => tournamentNeedPlayers(3),
+    _ => duelErrorText(code),
   };
 
   // Onboarding

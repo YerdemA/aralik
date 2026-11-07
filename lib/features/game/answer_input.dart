@@ -171,7 +171,7 @@ class GuessStep extends StatelessWidget {
         ),
         const Spacer(),
         NumberPad(
-          showTripleZero: !game.isYear,
+          showTripleZero: !game.isYear && !game.isPercent,
           onDigits: game.type,
           onBackspace: game.backspace,
           onClear: game.clear,

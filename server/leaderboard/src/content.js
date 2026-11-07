@@ -7,7 +7,7 @@ import { scaleOf } from './scoring.js';
 const MANIFEST_TTL_MS = 5 * 60 * 1000;
 
 /** Content loaded per isolate, refreshed when the manifest version moves. */
-// { version, checkedAt, questions: Map id → {answer, kind, difficulty, retired},
+// { version, checkedAt, questions: Map id → {answer, kind, category, unit, difficulty, retired},
 //   order: string[] (bank order), days: string[][] }
 let cache = null;
 
@@ -43,6 +43,7 @@ export async function loadContent(base, fetchFn, nowMs) {
           answer: q.answer,
           kind: q.kind,
           category: q.category,
+          unit: q.unit ?? '',
           difficulty: q.difficulty ?? 2,
           retired: q.retired === true,
         },
@@ -70,7 +71,7 @@ export function scaledOn(content, day) {
 
 /** The scale of [q] on [day], or null under the first rule. */
 export function scaleOn(content, q, day) {
-  return scaledOn(content, day) ? scaleOf(q.kind, q.category, q.answer) : null;
+  return scaledOn(content, day) ? scaleOf(q.kind, q.category, q.answer, q.unit) : null;
 }
 
 function mod(a, n) {

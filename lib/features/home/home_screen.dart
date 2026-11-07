@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import '../../core/daily.dart';
 import '../../core/question_timer.dart';
 import '../../core/free_play.dart';
-import '../../core/number_format.dart';
 import '../../core/scoring.dart';
 import '../../core/strings.dart';
 import '../../core/theme.dart';
@@ -18,12 +17,12 @@ import '../../data/question_repository.dart';
 import '../../data/settings_store.dart';
 import '../../data/sound.dart';
 import '../../data/stats_store.dart';
-import '../../widgets/calibration_text.dart';
+import '../../data/tournament_client.dart';
 import '../../widgets/mascot.dart';
-import '../../widgets/stat_tile.dart';
 import '../game/game_controller.dart';
 import '../game/game_screen.dart';
 import '../duel/duel_lobby_screen.dart';
+import '../tournament/tournament_entry_screen.dart';
 import '../leaderboard/leaderboard_screen.dart';
 import '../result/summary_screen.dart';
 import '../settings/settings_screen.dart';
@@ -263,6 +262,22 @@ class _HomeScreenState extends State<HomeScreen> {
   });
 
   late final _duels = DuelService(serviceUri: () => _leaderboard?.serviceUri);
+  late final _tournaments = TournamentService(
+    serviceUri: () => _leaderboard?.serviceUri,
+  );
+
+  void _openTournament() => Navigator.of(context).push(
+    MaterialPageRoute<void>(
+      builder: (_) => TournamentEntryScreen(
+        service: _tournaments,
+        repository: _repository,
+        stats: _stats,
+        settings: widget.settings,
+        suggestedName: _leaderboard?.account?.nickname,
+        scaled: scaledOn(_today, widget.scoringV2Day?.call()),
+      ),
+    ),
+  );
 
   void _openDuel() => Navigator.of(context).push(
     MaterialPageRoute<void>(
@@ -303,13 +318,8 @@ class _HomeScreenState extends State<HomeScreen> {
             final results = _stats.dailyResults(today);
             final finished = _stats.isDayComplete(today);
             final playedBefore = _playedBefore(today);
-            // Between today's set and free play, when there is a server.
-            final duelCard = [
-              if (_leaderboard?.isAvailable == true) ...[
-                const SizedBox(height: 12),
-                _DuelCard(onTap: _loading ? null : _openDuel),
-              ],
-            ];
+            final hasDuel = _leaderboard?.isAvailable == true;
+            final streak = _stats.streak(today);
             // Scrolls only when the screen is too short for everything;
             // otherwise the main card takes up the spare height.
             return LayoutBuilder(
@@ -388,46 +398,35 @@ class _HomeScreenState extends State<HomeScreen> {
                             if (finished) ...[
                               _TodayDoneStrip(
                                 results: results,
+                                streak: streak,
                                 onShare: _loading
                                     ? null
                                     : () => _showDaySummary(today),
                               ),
                               const SizedBox(height: 12),
-                              // Duel and free play share the space equally.
-                              if (duelCard.isNotEmpty)
-                                Expanded(
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.stretch,
-                                    children: [
-                                      Expanded(
-                                        child: _DuelCard(
-                                          tall: true,
-                                          onTap: _loading ? null : _openDuel,
-                                        ),
-                                      ),
-                                      const SizedBox(height: 12),
-                                      Expanded(
-                                        child: _FreePlayCard(
-                                          tall: true,
-                                          onTap: _loading ? null : _playFree,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                )
-                              else
-                                Expanded(
-                                  child: _FreePlayHero(
-                                    mascotSize: mascotSize,
-                                    onPlay: _loading ? null : _playFree,
+                              // Free play is the main card now; the duel
+                              // sits below it.
+                              Expanded(
+                                child: _FreePlayHero(
+                                  mascotSize: mascotSize,
+                                  onPlay: _loading ? null : _playFree,
+                                ),
+                              ),
+                              if (hasDuel) ...[
+                                const SizedBox(height: 12),
+                                SizedBox(
+                                  height: _ModeTile.height,
+                                  child: _DuelTile(
+                                    onTap: _loading ? null : _openDuel,
                                   ),
                                 ),
+                              ],
                             ] else ...[
                               Expanded(
                                 child: _TodayCard(
                                   results: results,
                                   today: today,
+                                  streak: streak,
                                   mascotSize: mascotSize,
                                   playedBefore: playedBefore,
                                   onPlay: _loading || playedBefore
@@ -435,12 +434,59 @@ class _HomeScreenState extends State<HomeScreen> {
                                       : _playDaily,
                                 ),
                               ),
-                              ...duelCard,
                               const SizedBox(height: 12),
-                              _FreePlayCard(onTap: _loading ? null : _playFree),
+                              SizedBox(
+                                height: _ModeTile.height,
+                                child: Row(
+                                  crossAxisAlignment:
+                                      CrossAxisAlignment.stretch,
+                                  children: [
+                                    if (hasDuel) ...[
+                                      Expanded(
+                                        child: _DuelTile(
+                                          onTap: _loading ? null : _openDuel,
+                                        ),
+                                      ),
+                                      const SizedBox(width: 12),
+                                    ],
+                                    Expanded(
+                                      child: _FreePlayTile(
+                                        onTap: _loading ? null : _playFree,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ],
                             const SizedBox(height: 12),
-                            _StatsCard(stats: _stats, today: today),
+                            // Both tiles as tall as the taller one.
+                            IntrinsicHeight(
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.stretch,
+                                children: [
+                                  const Expanded(
+                                    child: _SoonTile(
+                                      icon: Icons.calculate_rounded,
+                                      title: AppStrings.modeMath,
+                                    ),
+                                  ),
+                                  const SizedBox(width: 12),
+                                  Expanded(
+                                    // Tournaments need the server, like duels.
+                                    child: hasDuel
+                                        ? _TournamentTile(
+                                            onTap: _loading
+                                                ? null
+                                                : _openTournament,
+                                          )
+                                        : const _SoonTile(
+                                            icon: Icons.military_tech_rounded,
+                                            title: AppStrings.modeTournament,
+                                          ),
+                                  ),
+                                ],
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -560,6 +606,7 @@ class _TodayCard extends StatelessWidget {
   const _TodayCard({
     required this.results,
     required this.today,
+    required this.streak,
     required this.mascotSize,
     required this.onPlay,
     this.playedBefore = false,
@@ -567,6 +614,7 @@ class _TodayCard extends StatelessWidget {
 
   final List<QuestionResult> results;
   final int today;
+  final int streak;
   final double mascotSize;
   final VoidCallback? onPlay;
 
@@ -592,7 +640,14 @@ class _TodayCard extends StatelessWidget {
             : AppStrings.continueToday(done, questionsPerDay),
       ),
       children: [
-        _DayPill(label: dayLabelWithWeekday(dateOfDay(today))),
+        Wrap(
+          spacing: 8,
+          runSpacing: 8,
+          children: [
+            _DayPill(label: dayLabelWithWeekday(dateOfDay(today))),
+            _StreakPill(days: streak),
+          ],
+        ),
         const SizedBox(height: 12),
         Text(
           AppStrings.todayTitle,
@@ -618,9 +673,14 @@ class _TodayCard extends StatelessWidget {
 
 /// Today's set once it is done: a slim strip with the score and share.
 class _TodayDoneStrip extends StatelessWidget {
-  const _TodayDoneStrip({required this.results, required this.onShare});
+  const _TodayDoneStrip({
+    required this.results,
+    required this.streak,
+    required this.onShare,
+  });
 
   final List<QuestionResult> results;
+  final int streak;
   final VoidCallback? onShare;
 
   @override
@@ -655,6 +715,8 @@ class _TodayDoneStrip extends StatelessWidget {
                 ),
                 const SizedBox(height: 6),
                 _ProgressPips(results: results),
+                const SizedBox(height: 10),
+                _StreakPill(days: streak),
               ],
             ),
           ),
@@ -697,6 +759,49 @@ class _DayPill extends StatelessWidget {
         label,
         style: Theme.of(context).textTheme.labelLarge
             ?.copyWith(color: Colors.white, fontWeight: FontWeight.w700),
+      ),
+    );
+  }
+}
+
+/// The streak on today's card: a flame and "3 gün seri".
+class _StreakPill extends StatelessWidget {
+  const _StreakPill({required this.days});
+
+  final int days;
+
+  @override
+  Widget build(BuildContext context) {
+    final on = days > 0;
+    return Container(
+      padding: const EdgeInsets.fromLTRB(8, 5, 12, 5),
+      decoration: BoxDecoration(
+        color: on
+            ? Palette.sun.withValues(alpha: .2)
+            : Colors.white.withValues(alpha: .12),
+        borderRadius: BorderRadius.circular(99),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(
+            Icons.local_fire_department_rounded,
+            size: 18,
+            color: on ? Palette.sun : Colors.white70,
+          ),
+          const SizedBox(width: 4),
+          Flexible(
+            child: Text(
+              AppStrings.streakPill(days),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                color: on ? Palette.sun : Colors.white,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -778,16 +883,14 @@ class _FreePlayHero extends StatelessWidget {
   }
 }
 
-/// Free play: the whole card starts a round.
-class _FreePlayCard extends StatelessWidget {
-  const _FreePlayCard({required this.onTap, this.tall = false});
+/// Free play: the whole tile starts a round.
+class _FreePlayTile extends StatelessWidget {
+  const _FreePlayTile({required this.onTap});
 
   final VoidCallback? onTap;
-  final bool tall;
 
   @override
-  Widget build(BuildContext context) => _RowCard(
-    tall: tall,
+  Widget build(BuildContext context) => _ModeTile(
     colors: const [Palette.roundStart, Palette.roundEnd],
     icon: Icons.all_inclusive_rounded,
     title: AppStrings.freePlay,
@@ -797,15 +900,13 @@ class _FreePlayCard extends StatelessWidget {
 }
 
 /// The duel, in its players' colours: blue against red.
-class _DuelCard extends StatelessWidget {
-  const _DuelCard({required this.onTap, this.tall = false});
+class _DuelTile extends StatelessWidget {
+  const _DuelTile({required this.onTap});
 
   final VoidCallback? onTap;
-  final bool tall;
 
   @override
-  Widget build(BuildContext context) => _RowCard(
-    tall: tall,
+  Widget build(BuildContext context) => _ModeTile(
     colors: const [Palette.duelMe, Palette.duelOpponent],
     icon: Icons.bolt_rounded,
     title: AppStrings.duel,
@@ -814,19 +915,21 @@ class _DuelCard extends StatelessWidget {
   );
 }
 
-/// A gradient card whose whole surface is one button.
-class _RowCard extends StatelessWidget {
-  const _RowCard({
+/// A gradient tile whose whole surface is one button: icon and arrow on
+/// top, title and hint below, the icon again large and faint in the
+/// corner.
+class _ModeTile extends StatelessWidget {
+  const _ModeTile({
     required this.colors,
     required this.icon,
     required this.title,
     required this.hint,
     required this.onTap,
-    this.tall = false,
   });
 
-  /// Fills the height it is given, with a bigger icon and title.
-  final bool tall;
+  /// Height of a row of tiles.
+  static const double height = 150;
+
   final List<Color> colors;
   final IconData icon;
   final String title;
@@ -837,7 +940,6 @@ class _RowCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     final radius = BorderRadius.circular(24);
-    final circle = Colors.white.withValues(alpha: .2);
     return AnimatedOpacity(
       opacity: onTap == null ? .6 : 1,
       duration: const Duration(milliseconds: 150),
@@ -846,52 +948,77 @@ class _RowCard extends StatelessWidget {
         child: Ink(
           decoration: BoxDecoration(
             borderRadius: radius,
-            gradient: LinearGradient(colors: colors),
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: colors,
+            ),
           ),
           child: InkWell(
             borderRadius: radius,
             onTap: onTap,
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(14, 14, 16, 14),
-              child: Row(
+            child: ClipRRect(
+              borderRadius: radius,
+              child: Stack(
                 children: [
-                  CircleAvatar(
-                    radius: tall ? 34 : 24,
-                    backgroundColor: circle,
-                    foregroundColor: Colors.white,
-                    child: Icon(icon, size: tall ? 36 : 26),
+                  Positioned(
+                    right: -18,
+                    bottom: -22,
+                    child: Icon(
+                      icon,
+                      size: 100,
+                      color: Colors.white.withValues(alpha: .13),
+                    ),
                   ),
-                  const SizedBox(width: 14),
-                  Expanded(
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 16, 14, 14),
                     child: Column(
-                      mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          title,
-                          style:
-                              (tall
-                                      ? textTheme.headlineSmall
-                                      : textTheme.titleLarge)
-                                  ?.copyWith(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w800,
-                                  ),
+                        Row(
+                          children: [
+                            CircleAvatar(
+                              radius: 20,
+                              backgroundColor: Colors.white.withValues(
+                                alpha: .22,
+                              ),
+                              foregroundColor: Colors.white,
+                              child: Icon(icon, size: 22),
+                            ),
+                            const Spacer(),
+                            const Icon(
+                              Icons.arrow_forward_rounded,
+                              color: Colors.white,
+                              size: 24,
+                            ),
+                          ],
                         ),
+                        const Spacer(),
+                        FittedBox(
+                          fit: BoxFit.scaleDown,
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            title,
+                            maxLines: 1,
+                            style: textTheme.titleLarge?.copyWith(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w800,
+                              height: 1.1,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 2),
                         Text(
                           hint,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
                           style: textTheme.bodyMedium?.copyWith(
-                            color: Colors.white,
+                            color: Colors.white.withValues(alpha: .92),
+                            height: 1.25,
                           ),
                         ),
                       ],
                     ),
-                  ),
-                  const SizedBox(width: 8),
-                  const Icon(
-                    Icons.arrow_forward_rounded,
-                    color: Colors.white,
-                    size: 28,
                   ),
                 ],
               ),
@@ -903,58 +1030,134 @@ class _RowCard extends StatelessWidget {
   }
 }
 
-/// Streak, last score and calibration, with the calibration hint below.
-class _StatsCard extends StatelessWidget {
-  const _StatsCard({required this.stats, required this.today});
+/// Tournaments: a small gradient tile the size of the [_SoonTile] beside it.
+class _TournamentTile extends StatelessWidget {
+  const _TournamentTile({required this.onTap});
 
-  final StatsStore stats;
-  final int today;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final colors = theme.extension<GameColors>()!;
-    final last = stats.lastCompletedDay(today);
-    final lastScore = last == null
-        ? AppStrings.noValue
-        : '${totalPoints(stats.dailyResults(last))}';
-    final calibration = stats.answered == 0
-        ? AppStrings.noValue
-        : formatPercent(stats.hits / stats.answered);
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(12, 14, 12, 12),
-        child: Column(
-          children: [
-            Row(
+    final radius = BorderRadius.circular(20);
+    return Material(
+      type: MaterialType.transparency,
+      child: Ink(
+        decoration: BoxDecoration(
+          borderRadius: radius,
+          gradient: const LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [Palette.cupStart, Palette.cupEnd],
+          ),
+        ),
+        child: InkWell(
+          borderRadius: radius,
+          onTap: onTap,
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(14, 12, 12, 12),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                StatTile(
-                  icon: Icons.local_fire_department_rounded,
-                  color: colors.streak,
-                  label: AppStrings.streak,
-                  value: AppStrings.streakDays(stats.streak(today)),
+                Row(
+                  children: [
+                    const Icon(
+                      Icons.military_tech_rounded,
+                      size: 22,
+                      color: Colors.white,
+                    ),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          AppStrings.tournament,
+                          maxLines: 1,
+                          style: theme.textTheme.titleSmall?.copyWith(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const Icon(
+                      Icons.arrow_forward_rounded,
+                      size: 20,
+                      color: Colors.white,
+                    ),
+                  ],
                 ),
-                StatTile(
-                  icon: Icons.emoji_events_rounded,
-                  color: colors.partial,
-                  label: AppStrings.lastScore,
-                  value: lastScore,
-                ),
-                StatTile(
-                  icon: Icons.track_changes_rounded,
-                  color: colors.good,
-                  label: AppStrings.calibration,
-                  value: calibration,
+                const SizedBox(height: 4),
+                Text(
+                  AppStrings.tournamentHomeHint,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: theme.textTheme.bodySmall?.copyWith(
+                    color: Colors.white.withValues(alpha: .92),
+                  ),
                 ),
               ],
             ),
-            const SizedBox(height: 12),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// A mode that is not here yet: muted, not tappable, "(Yakında gelecek)".
+class _SoonTile extends StatelessWidget {
+  const _SoonTile({required this.icon, required this.title});
+
+  final IconData icon;
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+    final muted = scheme.onSurfaceVariant.withValues(alpha: .8);
+    return Semantics(
+      enabled: false,
+      label: '$title ${AppStrings.comingSoon}',
+      excludeSemantics: true,
+      child: Container(
+        padding: const EdgeInsets.fromLTRB(14, 12, 12, 12),
+        decoration: BoxDecoration(
+          color: scheme.surfaceContainerHighest.withValues(alpha: .45),
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: scheme.outlineVariant),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Icon(icon, size: 22, color: muted),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      title,
+                      maxLines: 1,
+                      style: theme.textTheme.titleSmall?.copyWith(
+                        color: muted,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 4),
             Text(
-              calibrationSummary(stats.hits, stats.answered),
-              style: theme.textTheme.bodyMedium?.copyWith(
-                color: theme.colorScheme.onSurfaceVariant,
-              ),
-              textAlign: TextAlign.center,
+              AppStrings.comingSoon,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: theme.textTheme.bodySmall?.copyWith(color: muted),
             ),
           ],
         ),

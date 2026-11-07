@@ -7,11 +7,12 @@ Question q(
   String id,
   num answer, {
   QuestionKind kind = QuestionKind.magnitude,
+  String? unit,
 }) => Question(
   id: id,
   text: '$id?',
   answer: answer,
-  unit: kind == QuestionKind.year ? '' : 'm',
+  unit: unit ?? (kind == QuestionKind.year ? '' : 'm'),
   kind: kind,
   category: QuestionCategory.geography,
   source: 'https://example.org/$id',
@@ -146,5 +147,19 @@ void main() {
       final empty = game.timeOut();
       expect(empty.points, lessThanOrEqualTo(farMiss.points));
     });
+  });
+
+  test('a percentage guess stays ≤ 100 and its interval within 1…100', () {
+    final pct = GameController([q('p', 74.6, unit: '%')]);
+    expect(pct.isPercent, isTrue);
+    pct.type('9');
+    pct.type('0');
+    pct.type('0'); // 900 > 100: ignored
+    expect(pct.guess, 90);
+    pct.confirmGuess();
+    pct.setWidth(1);
+    expect(pct.interval, (low: 70, high: 100));
+    pct.setWidth(0.5);
+    expect(pct.interval, (low: 80, high: 100));
   });
 }

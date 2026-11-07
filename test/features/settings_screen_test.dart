@@ -122,4 +122,21 @@ void main() {
       throwsFormatException,
     );
   });
+
+  testWidgets('the duel name is chosen in settings', (tester) async {
+    final settings = await settingsStore();
+    await tester.pumpWidget(app(SettingsScreen(settings: settings)));
+    expect(find.text(AppStrings.duelNameUnset), findsOneWidget);
+    await tester.tap(find.text(AppStrings.duelNameUnset));
+    await tester.pumpAndSettle();
+    await tester.enterText(find.byType(TextField), 'x');
+    await tester.tap(find.text(AppStrings.save));
+    await tester.pumpAndSettle();
+    expect(find.text(AppStrings.nicknameTooShort), findsOneWidget);
+    await tester.enterText(find.byType(TextField), '  Ayşe ');
+    await tester.tap(find.text(AppStrings.save));
+    await tester.pumpAndSettle();
+    expect(settings.duelName, 'Ayşe');
+    expect(find.text('Ayşe'), findsOneWidget);
+  });
 }

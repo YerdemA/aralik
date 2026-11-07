@@ -313,5 +313,26 @@ void main() {
       expect(scaledOn(10, 10), isTrue);
       expect(scaledOn(11, 10), isTrue);
     });
+
+    test('percentages are scored linearly, widest hit 30', () {
+      final pct = scaleFor(
+        QuestionKind.magnitude,
+        QuestionCategory.geography,
+        42,
+        unit: '%',
+      );
+      expect(pct.maxPercentHalf, 20);
+      int score(int low, int high, num answer) => scoreFor(
+        kind: QuestionKind.magnitude,
+        low: low,
+        high: high,
+        answer: answer,
+        scale: pct,
+      );
+      expect(score(22, 62, 42), pointsAtWidest);
+      expect(score(42, 42, 42), 100);
+      // Same width scores the same at 5% and at 50%.
+      expect(score(1, 11, 6), score(45, 55, 50));
+    });
   });
 }

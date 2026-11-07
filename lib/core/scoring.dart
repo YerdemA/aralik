@@ -25,7 +25,10 @@ const double calibrationTarget = 0.9;
 /// the best strategy is an honest 90% interval — never a deliberately
 /// narrow one.
 const double intervalAlpha = 1 - calibrationTarget;
-const double missPenalty = 2 / intervalAlpha; // 20
+
+/// Written out: `2 / intervalAlpha` is 20.000000000000004 in floating point
+/// and would round some .5 scores differently from the server.
+const double missPenalty = 20; // 2 / α
 
 /// Points lost per unit of S: per doubling (log2) for magnitudes, per year
 /// for years. With the −50 floor this keeps an honest 90% interval the
@@ -58,18 +61,22 @@ enum Outcome {
 ///
 /// * magnitude: on a log2 axis, so ×2 too high costs as much as ÷2 too low
 /// * year: in years
+/// * [linear] (percentages under the scaled rule): in percentage points
 double intervalScore({
   required QuestionKind kind,
   required num low,
   required num high,
   required num answer,
+  bool linear = false,
 }) {
   assert(low <= high, 'low ($low) must not exceed high ($high)');
-  double Function(num) axis = switch (kind) {
-    // Magnitudes are positive; clamp so a 0 bound stays finite.
-    QuestionKind.magnitude => (v) => _log2(math.max(v, 1e-9)),
-    QuestionKind.year => (v) => v.toDouble(),
-  };
+  double Function(num) axis = linear
+      ? (v) => v.toDouble()
+      : switch (kind) {
+          // Magnitudes are positive; clamp so a 0 bound stays finite.
+          QuestionKind.magnitude => (v) => _log2(math.max(v, 1e-9)),
+          QuestionKind.year => (v) => v.toDouble(),
+        };
   final l = axis(low), h = axis(high), x = axis(answer);
   final outside = x < l
       ? l - x
@@ -95,7 +102,13 @@ int scoreFor({
   required num answer,
   AnswerScale? scale,
 }) {
-  final s = intervalScore(kind: kind, low: low, high: high, answer: answer);
+  final s = intervalScore(
+    kind: kind,
+    low: low,
+    high: high,
+    answer: answer,
+    linear: (scale?.maxPercentHalf ?? 0) > 0,
+  );
   final k = scale != null
       ? pointsPerUnit(kind, scale)
       : switch (kind) {

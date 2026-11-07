@@ -78,6 +78,8 @@ class GameController extends ChangeNotifier {
   int get index => _index;
   Question get question => questions[_index];
   bool get isYear => question.kind == QuestionKind.year;
+  bool get isPercent =>
+      question.kind == QuestionKind.magnitude && isPercentUnit(question.unit);
   bool get isLast => _index == questions.length - 1;
   GamePhase get phase => _phase;
   double get width => _width;
@@ -99,6 +101,7 @@ class GameController extends ChangeNotifier {
     var next = _digits + digits;
     next = next.replaceFirst(RegExp(r'^0+'), ''); // no leading zeros
     if (next.length > _maxDigits || next == _digits) return;
+    if (isPercent && next.isNotEmpty && int.parse(next) > maxPercent) return;
     _digits = next;
     notifyListeners();
   }
@@ -137,6 +140,9 @@ class GameController extends ChangeNotifier {
   /// The interval as shown and scored. Only valid in the width phase.
   Bounds get interval {
     final g = guess!;
+    if (isPercent) {
+      return percentInterval(g, _width, maxHalf: maxPercentHalfWidth);
+    }
     final scale = _scale;
     if (scale == null) {
       return isYear ? yearInterval(g, _width) : magnitudeInterval(g, _width);

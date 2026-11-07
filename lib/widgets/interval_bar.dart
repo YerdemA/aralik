@@ -14,6 +14,7 @@ class IntervalBar extends StatelessWidget {
     required this.bandColor,
   });
 
+  /// Linear axis (years and percentages) instead of a log axis.
   final bool isYear;
   final num low;
   final num high;

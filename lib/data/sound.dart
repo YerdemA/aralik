@@ -1,12 +1,24 @@
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import '../core/question_timer.dart';
 import '../core/scoring.dart';
 
-/// The app's sound effects (assets/sounds/, made by
+/// The app's sound effects (assets/sounds/, Ogg Vorbis made by
 /// tools/sounds/make_sounds.py).
 enum Sfx {
+  /// The app opens (the intro screen). Loaded first.
+  intro('intro'),
+
+  /// Any enabled button, card or key (widgets/tap_sounds.dart).
+  tap('tap'),
+
+  /// A page opens / closes (widgets/tap_sounds.dart).
+  page('page'),
+  back('back'),
+
   /// An interval locked.
   lock('lock'),
 
@@ -36,7 +48,7 @@ enum Sfx {
   /// File name without extension; also the name on the platform side.
   final String file;
 
-  String get asset => 'assets/sounds/$file.wav';
+  String get asset => 'assets/sounds/$file.ogg';
 
   /// The sound of a question's outcome.
   static Sfx of(ResultTier tier) => switch (tier) {
@@ -68,12 +80,34 @@ abstract final class Sounds {
   static List<Sfx>? played;
 
   static Future<void>? _loading;
+  static final _ready = Completer<void>();
+
+  /// How many effects were asked for so far (for [playTap]).
+  static int _plays = 0;
+  static DateTime _lastPlayed = DateTime.fromMillisecondsSinceEpoch(0);
 
   /// Hands every sound to the platform once; later calls reuse the first.
   static Future<void> preload({AssetBundle? bundle}) =>
       _loading ??= _load(bundle ?? rootBundle);
 
+  /// Plays [Sfx.intro] as soon as it is loaded (it is loaded first).
+  static void playIntro() {
+    if (_ready.isCompleted) {
+      play(Sfx.intro);
+    } else {
+      _ready.future.then((_) => play(Sfx.intro));
+    }
+  }
+
   static Future<void> _load(AssetBundle bundle) async {
+    try {
+      await _loadAll(bundle);
+    } finally {
+      if (!_ready.isCompleted) _ready.complete();
+    }
+  }
+
+  static Future<void> _loadAll(AssetBundle bundle) async {
     for (final sfx in Sfx.values) {
       try {
         final data = await bundle.load(sfx.asset);
@@ -89,15 +123,41 @@ abstract final class Sounds {
       } on Object catch (error) {
         debugPrint('Sound ${sfx.file} not loaded: $error');
       }
+      if (sfx == Sfx.intro && !_ready.isCompleted) _ready.complete();
     }
   }
 
   /// Fire and forget: a missing sound never disturbs the game.
   static void play(Sfx sfx) {
     if (!enabled) return;
+    _plays++;
+    _lastPlayed = DateTime.now();
     played?.add(sfx);
     _channel
         .invokeMethod<bool>('play', {'name': sfx.file})
         .then<void>((_) {}, onError: (Object _) {});
+  }
+
+  /// The tap sound, a moment later and only if the tap itself played
+  /// nothing (a lock, a page): one sound per touch.
+  static void playTap() {
+    if (!enabled) return;
+    final before = _plays;
+    Timer(tapDelay, () {
+      if (_plays == before) play(Sfx.tap);
+    });
+  }
+
+  @visibleForTesting
+  static const tapDelay = Duration(milliseconds: 40);
+
+  /// Plays [sfx] unless another effect started within [window] (a page
+  /// opened right after a result sound stays quiet).
+  static void playUnlessRecent(
+    Sfx sfx, {
+    Duration window = const Duration(milliseconds: 300),
+  }) {
+    if (DateTime.now().difference(_lastPlayed) < window) return;
+    play(sfx);
   }
 }

@@ -1,6 +1,10 @@
-"""Synthesizes the app's sound effects into assets/sounds/ (WAV, mono, 16 bit).
+"""Synthesizes the app's sound effects into assets/sounds/ (Ogg Vorbis, mono).
 
 Usage:  python tools/sounds/make_sounds.py
+
+Needs ffmpeg on PATH (winget install Gyan.FFmpeg): each sound is rendered
+to a 16-bit WAV in a temporary folder and encoded to Ogg Vorbis, about a
+sixth of the WAV's size; Android's SoundPool plays Ogg natively.
 
 No samples, no licences: every sound is a few sine partials with an envelope,
 so the files are small and reproducible. Each sound is short and soft; they
@@ -12,8 +16,11 @@ lib/data/sound.dart (enum Sfx) names the files; a test checks they exist.
 from __future__ import annotations
 
 import math
+import shutil
 import struct
+import subprocess
 import sys
+import tempfile
 import wave
 from pathlib import Path
 
@@ -73,12 +80,49 @@ def noise_tick(length: float) -> list[float]:
     )]
 
 
+def whoosh(length: float, *, start_hz: float, end_hz: float, seed: int) -> list[float]:
+    """Soft air: noise through a one-pole low-pass whose cutoff sweeps from
+    [start_hz] to [end_hz], with a rise-and-fall envelope."""
+    import random
+
+    rng = random.Random(seed)
+    n = int(RATE * length)
+    out = []
+    y = 0.0
+    for i in range(n):
+        p = i / n
+        cutoff = start_hz * (end_hz / start_hz) ** p
+        a = 1 - math.exp(-2 * math.pi * cutoff / RATE)
+        y += a * (rng.uniform(-1, 1) - y)
+        env = math.sin(math.pi * p) ** 1.5
+        out.append(env * y)
+    return out
+
+
 BELL = ((1, 1.0), (2, 0.35), (3, 0.12), (4.2, 0.05))
 SOFT = ((1, 1.0), (2, 0.15))
 
 
+# Loudness of each sound relative to the others (1 = PEAK). The sounds
+# that come with every tap or page stay well below the game's own.
+GAIN = {"tap": 0.35, "page": 0.4, "back": 0.35, "intro": 0.8}
+
+
 def sounds() -> dict[str, list[float]]:
     return {
+        # App opening: the name in three soft notes (ka-ba-ca), rising.
+        "intro": mix(
+            (0.00, tone(note("G5"), 0.30, decay=8, partials=BELL)),
+            (0.11, tone(note("C6"), 0.30, decay=8, partials=BELL)),
+            (0.22, tone(note("E6"), 0.70, decay=4.5, partials=BELL)),
+            (0.22, tone(note("C5"), 0.70, decay=4.5, partials=SOFT)),
+        ),
+        # Any button, card or key: a tiny, dry click.
+        "tap": tone(1400, 0.035, attack=0.001, decay=140, partials=((1, 1.0), (2.3, 0.3))),
+        # A page opens: air rising.
+        "page": whoosh(0.20, start_hz=500, end_hz=3500, seed=1),
+        # Back to the previous page: air falling.
+        "back": whoosh(0.18, start_hz=3000, end_hz=450, seed=2),
         # Locking an interval: a short, round pop.
         "lock": tone(note("A5"), 0.09, attack=0.002, decay=45, partials=SOFT, glide=-0.25),
         # A hit with ≥70 points: a quick rising arpeggio.
@@ -135,9 +179,9 @@ def sounds() -> dict[str, list[float]]:
     }
 
 
-def write(path: Path, samples: list[float]) -> None:
+def write(path: Path, samples: list[float], gain: float = 1.0) -> None:
     top = max(abs(v) for v in samples) or 1.0
-    frames = b"".join(struct.pack("<h", int(32767 * PEAK * v / top)) for v in samples)
+    frames = b"".join(struct.pack("<h", int(32767 * PEAK * gain * v / top)) for v in samples)
     with wave.open(str(path), "wb") as f:
         f.setnchannels(1)
         f.setsampwidth(2)
@@ -145,16 +189,37 @@ def write(path: Path, samples: list[float]) -> None:
         f.writeframes(frames)
 
 
+# Vorbis quality (-1…10); 4 is transparent for these short, soft tones.
+OGG_QUALITY = "4"
+
+
+def encode(wav: Path, ogg: Path, ffmpeg: str) -> None:
+    subprocess.run(
+        [ffmpeg, "-y", "-loglevel", "error", "-i", str(wav),
+         "-c:a", "libvorbis", "-q:a", OGG_QUALITY, "-map_metadata", "-1", str(ogg)],
+        check=True,
+    )
+
+
 def main() -> int:
     sys.stdout.reconfigure(encoding="utf-8")
+    ffmpeg = shutil.which("ffmpeg")
+    if not ffmpeg:
+        print("ffmpeg bulunamadı: winget install Gyan.FFmpeg")
+        return 1
     OUT.mkdir(parents=True, exist_ok=True)
+    for old in OUT.glob("*.wav"):
+        old.unlink()
     total = 0
-    for name, samples in sounds().items():
-        path = OUT / f"{name}.wav"
-        write(path, samples)
-        size = path.stat().st_size
-        total += size
-        print(f"  {path.relative_to(ROOT)}  {len(samples) / RATE:.2f} sn  {size // 1024} KB")
+    with tempfile.TemporaryDirectory() as tmp:
+        for name, samples in sounds().items():
+            wav = Path(tmp) / f"{name}.wav"
+            write(wav, samples, GAIN.get(name, 1.0))
+            path = OUT / f"{name}.ogg"
+            encode(wav, path, ffmpeg)
+            size = path.stat().st_size
+            total += size
+            print(f"  {path.relative_to(ROOT)}  {len(samples) / RATE:.2f} sn  {size / 1024:.1f} KB")
     print(f"Toplam {total // 1024} KB")
     return 0
 

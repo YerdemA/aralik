@@ -1,20 +1,25 @@
-// Opening duel rooms (Durable Objects named after their code). Shared by
-// the HTTP handler (friend rooms) and the lobby (random opponents).
+// Opening rooms (Durable Objects named after their code): duel rooms,
+// shared by the HTTP handler (friend rooms) and the lobby (random
+// opponents), and tournament rooms (env.TOURNAMENT_ROOMS).
 
 import { newRoomCode, randomInt } from './duel.js';
 
-export function roomStub(env, code) {
-  return env.DUEL_ROOMS.get(env.DUEL_ROOMS.idFromName(code));
+export function roomStub(env, code, rooms = env.DUEL_ROOMS) {
+  return rooms.get(rooms.idFromName(code));
 }
 
 /**
  * Opens a room under a free code and returns the code, or null when no
  * free code turned up (tries a few in the rare collision).
  */
-export async function openRoom(env, random = randomInt) {
+export async function openRoom(
+  env,
+  random = randomInt,
+  rooms = env.DUEL_ROOMS,
+) {
   for (let attempt = 0; attempt < 5; attempt++) {
     const code = newRoomCode(random);
-    const response = await roomStub(env, code).fetch(
+    const response = await roomStub(env, code, rooms).fetch(
       `https://room/create?code=${code}`,
       { method: 'POST' },
     );

@@ -109,4 +109,12 @@ void main() {
     expect(find.text(AppStrings.leaderboardOffline), findsOneWidget);
     expect(find.text(AppStrings.retry), findsOneWidget);
   });
+
+  test('the first three get gold, silver and bronze frames', () {
+    expect(Medal.ofRank(1), Medal.gold);
+    expect(Medal.ofRank(2), Medal.silver);
+    expect(Medal.ofRank(3), Medal.bronze);
+    expect(Medal.ofRank(4), isNull);
+    expect(Medal.ofRank(0), isNull);
+  });
 }

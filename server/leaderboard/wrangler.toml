@@ -17,6 +17,16 @@ FULL_BOARD_AT = "100"
 SMALL_BOARD = "10"
 FULL_BOARD = "50"
 REGISTER_LIMIT = "5"
+RENAME_DAYS = "3"
+SUSPECT_POINTS = "470"
+BOARD_CACHE_SECONDS = "30"
+
+# Per-IP limit on opening, joining and searching for duels (src/index.js,
+# limitDuel). namespace_id is any number unique to this account.
+[[ratelimits]]
+name = "DUEL_LIMITER"
+namespace_id = "1001"
+simple = { limit = 20, period = 60 }
 
 [[d1_databases]]
 binding = "DB"
@@ -35,6 +45,11 @@ class_name = "DuelRoom"
 name = "DUEL_LOBBY"
 class_name = "DuelLobby"
 
+# Tournament rooms, three to eight players (src/tournament_room.js).
+[[durable_objects.bindings]]
+name = "TOURNAMENT_ROOMS"
+class_name = "TournamentRoom"
+
 [[migrations]]
 tag = "v1-duel"
 new_sqlite_classes = ["DuelRoom"]
@@ -42,3 +57,7 @@ new_sqlite_classes = ["DuelRoom"]
 [[migrations]]
 tag = "v2-duel-lobby"
 new_sqlite_classes = ["DuelLobby"]
+
+[[migrations]]
+tag = "v3-tournament"
+new_sqlite_classes = ["TournamentRoom"]

@@ -38,10 +38,12 @@ class SettingsStore extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// The name last used in a duel, or null.
+  /// The name shown to duel opponents, or null until one is chosen
+  /// (Settings → Düello adın; the lobby has no name field).
   String? get duelName => _prefs.getString(_duelNameKey);
 
   Future<void> setDuelName(String name) async {
     await _prefs.setString(_duelNameKey, name);
+    notifyListeners();
   }
 }

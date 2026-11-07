@@ -2,6 +2,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
+import '../../core/answer_scale.dart';
 import '../../core/number_format.dart';
 import '../../core/scoring.dart';
 import '../../core/strings.dart';
@@ -110,7 +111,7 @@ class ResultScreen extends StatelessWidget {
                                     if (answer.hasInterval) ...[
                                       const SizedBox(height: 16),
                                       IntervalBar(
-                                        isYear: isYear,
+                                        isYear: isYear || isPercentUnit(q.unit),
                                         low: answer.low!,
                                         high: answer.high!,
                                         answer: q.answer,

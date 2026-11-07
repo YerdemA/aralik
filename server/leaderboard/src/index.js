@@ -28,6 +28,8 @@
 //   POST /v1/duel/rooms                              → {code}
 //   GET  /v1/duel/rooms/{code}?v=1&name=…&bank=N     WebSocket to the room
 //   GET  /v1/duel/random?v=1&name=…&bank=N           WebSocket to the lobby
+//   POST /v1/tournament/rooms                        → {code}  (tournament.js)
+//   GET  /v1/tournament/rooms/{code}?v=1&name=…&bank=N  WebSocket to the room
 
 import {
   acceptsDay,
@@ -52,17 +54,38 @@ const DEFAULTS = {
   REGISTER_LIMIT: '5',
   // '1' refuses apps that send no device key (older than 1.0.3).
   REQUIRE_DEVICE: '0',
+  // Days between two nickname changes.
+  RENAME_DAYS: '3',
+  // A day's score at or above this is marked suspect for a look
+  // (scripts/admin.mjs); honest play rarely gets there.
+  SUSPECT_POINTS: '470',
+  // Seconds a day's board may be served from the edge cache.
+  BOARD_CACHE_SECONDS: '30',
 };
 
 const HOUR_MS = 60 * 60 * 1000;
 const MAX_BODY_BYTES = 4096;
 
 class HttpError extends Error {
-  constructor(status, code) {
+  constructor(status, code, extra = {}) {
     super(code);
     this.status = status;
     this.code = code;
+    this.extra = extra;
   }
+}
+
+/**
+ * Per-IP limit for requests that cost the server without an account:
+ * opening duel rooms, joining them and the random lobby. Cloudflare's
+ * rate limiting binding (wrangler.toml, DUEL_LIMITER); without it (tests,
+ * local dev) nothing is limited.
+ */
+async function limitDuel(request, env) {
+  if (!env.DUEL_LIMITER) return;
+  const ip = request.headers.get('cf-connecting-ip') ?? 'unknown';
+  const { success } = await env.DUEL_LIMITER.limit({ key: `duel:${ip}` });
+  if (!success) throw new HttpError(429, 'rate_limited');
 }
 
 function json(status, body, cache = 'no-store') {
@@ -114,7 +137,7 @@ async function authenticate(db, body) {
   }
   const player = await db
     .prepare(
-      'SELECT id, nickname, token_hash, device_hash FROM players WHERE id = ?',
+      'SELECT id, nickname, token_hash, device_hash, renamed_at FROM players WHERE id = ?',
     )
     .bind(body.id)
     .first();
@@ -221,14 +244,23 @@ async function register(request, env, now) {
   return json(201, { id, token, nickname: name, restored: false });
 }
 
-async function rename(request, env) {
+async function rename(request, env, now) {
   const body = await readBody(request);
   const player = await authenticate(env.DB, body);
   const { name, key } = await checkNickname(env.DB, body.nickname, player.id);
+  if (name === player.nickname) return json(200, { nickname: name });
+  // One change per RENAME_DAYS: no cycling names past the filter, no
+  // grabbing other players' names.
+  const wait = setting(env, 'RENAME_DAYS') * 24 * HOUR_MS;
+  if (player.renamed_at !== null && now - player.renamed_at < wait) {
+    throw new HttpError(429, 'rename_wait', {
+      retry_at: player.renamed_at + wait,
+    });
+  }
   await env.DB.prepare(
-    'UPDATE players SET nickname = ?, nickname_key = ? WHERE id = ?',
+    'UPDATE players SET nickname = ?, nickname_key = ?, renamed_at = ? WHERE id = ?',
   )
-    .bind(name, key, player.id)
+    .bind(name, key, now, player.id)
     .run();
   return json(200, { nickname: name });
 }
@@ -288,9 +320,16 @@ async function submit(request, env, now, fetchFn) {
   await db.batch([
     db
       .prepare(
-        'INSERT OR IGNORE INTO scores (day, player_id, points, hits, submitted_at) VALUES (?, ?, ?, ?, ?)',
+        'INSERT OR IGNORE INTO scores (day, player_id, points, hits, submitted_at, suspect) VALUES (?, ?, ?, ?, ?, ?)',
       )
-      .bind(day, player.id, points, hits, now),
+      .bind(
+        day,
+        player.id,
+        points,
+        hits,
+        now,
+        points >= setting(env, 'SUSPECT_POINTS') ? 1 : 0,
+      ),
     ...(device
       ? [
           db
@@ -301,20 +340,25 @@ async function submit(request, env, now, fetchFn) {
         ]
       : []),
   ]);
+  if (!sent) await dropCachedBoard(day);
   const mine = await myScore(db, day, player.id);
   return json(200, {
     day,
     points: mine.points,
     hits: mine.hits,
     rank: mine.rank,
-    players: await dayPlayers(db, day),
+    players: await dayPlayers(db, day, player.id),
   });
 }
 
-async function dayPlayers(db, day) {
+/** Players on [day]'s board: hidden ones count only for themselves. */
+async function dayPlayers(db, day, viewerId = null) {
   const row = await db
-    .prepare('SELECT COUNT(*) AS n FROM scores WHERE day = ?')
-    .bind(day)
+    .prepare(
+      `SELECT COUNT(*) AS n FROM scores s JOIN players p ON p.id = s.player_id
+        WHERE s.day = ? AND (p.hidden = 0 OR p.id = ?)`,
+    )
+    .bind(day, viewerId)
     .first();
   return row.n;
 }
@@ -333,18 +377,37 @@ async function myScore(db, day, playerId) {
   if (!row) return null;
   const ahead = await db
     .prepare(
-      `SELECT COUNT(*) AS n FROM scores WHERE day = ?1 AND (
-         points > ?2
-         OR (points = ?2 AND submitted_at < ?3)
-         OR (points = ?2 AND submitted_at = ?3 AND player_id < ?4))`,
+      `SELECT COUNT(*) AS n FROM scores s JOIN players p ON p.id = s.player_id
+        WHERE s.day = ?1 AND p.hidden = 0 AND (
+         s.points > ?2
+         OR (s.points = ?2 AND s.submitted_at < ?3)
+         OR (s.points = ?2 AND s.submitted_at = ?3 AND s.player_id < ?4))`,
     )
     .bind(day, row.points, row.submitted_at, playerId)
     .first();
   return { rank: ahead.n + 1, points: row.points, hits: row.hits };
 }
 
-async function board(day, url, env, now) {
-  if (!readableDay(day, now)) throw new HttpError(404, 'not_found');
+/** The edge cache of the boards; absent outside Workers (tests). */
+function boardCache() {
+  return globalThis.caches?.default ?? null;
+}
+
+function boardCacheKey(day) {
+  return new Request(`https://board.cache/v1/day/${day}`);
+}
+
+/** A new score changes [day]'s board: the next read rebuilds it. */
+async function dropCachedBoard(day) {
+  await boardCache()?.delete(boardCacheKey(day));
+}
+
+/**
+ * The top of [day]'s board as everyone sees it, or as [viewerId] sees it
+ * when that player is hidden: a hidden player still finds themselves on
+ * it, nobody else does.
+ */
+async function topOfBoard(env, day, viewerId) {
   const db = env.DB;
   const total = await db.prepare('SELECT COUNT(*) AS n FROM players').first();
   const limit =
@@ -355,26 +418,63 @@ async function board(day, url, env, now) {
     .prepare(
       `SELECT s.player_id, p.nickname, s.points, s.hits
          FROM scores s JOIN players p ON p.id = s.player_id
-        WHERE s.day = ?
+        WHERE s.day = ? AND (p.hidden = 0 OR p.id = ?)
         ORDER BY s.points DESC, s.submitted_at ASC, s.player_id ASC
         LIMIT ?`,
     )
-    .bind(day, limit)
+    .bind(day, viewerId, limit)
     .all();
+  return {
+    players: await dayPlayers(db, day, viewerId),
+    limit,
+    top: results.map((r, i) => ({
+      rank: i + 1,
+      id: r.player_id,
+      nickname: r.nickname,
+      points: r.points,
+      hits: r.hits,
+    })),
+  };
+}
+
+/** The shared top, from the edge cache for up to BOARD_CACHE_SECONDS. */
+async function cachedTop(env, day) {
+  const cache = boardCache();
+  const key = boardCacheKey(day);
+  const hit = await cache?.match(key);
+  if (hit) return hit.json();
+  const top = await topOfBoard(env, day, null);
+  await cache?.put(
+    key,
+    json(200, top, `public, max-age=${setting(env, 'BOARD_CACHE_SECONDS')}`),
+  );
+  return top;
+}
+
+async function board(day, url, env, now) {
+  if (!readableDay(day, now)) throw new HttpError(404, 'not_found');
+  const db = env.DB;
   const playerId = url.searchParams.get('player');
+  const viewer = playerId
+    ? await db
+        .prepare('SELECT hidden FROM players WHERE id = ?')
+        .bind(playerId)
+        .first()
+    : null;
+  const shared = viewer?.hidden
+    ? await topOfBoard(env, day, playerId)
+    : await cachedTop(env, day);
+  // A hidden player is ranked among the visible ones, as if on the board.
   const me = playerId ? await myScore(db, day, playerId) : null;
   return json(
     200,
     {
       day,
-      players: await dayPlayers(db, day),
-      limit,
-      top: results.map((r, i) => ({
-        rank: i + 1,
-        nickname: r.nickname,
-        points: r.points,
-        hits: r.hits,
-        me: r.player_id === playerId,
+      players: shared.players,
+      limit: shared.limit,
+      top: shared.top.map(({ id, ...row }) => ({
+        ...row,
+        me: id === playerId,
       })),
       me,
     },
@@ -392,17 +492,39 @@ async function remove(request, env) {
   return json(200, { deleted: true });
 }
 
-async function createRoom(env) {
+/** Opens a tournament room for its host and returns the code. */
+async function createTournament(request, env) {
+  if (!env.TOURNAMENT_ROOMS) throw new HttpError(404, 'not_found');
+  await limitDuel(request, env);
+  const code = await openRoom(env, undefined, env.TOURNAMENT_ROOMS);
+  if (!code) throw new HttpError(503, 'busy');
+  return json(201, { code });
+}
+
+async function connectTournament(request, env, code) {
+  const room = normalizeRoomCode(code);
+  if (!room) throw new HttpError(404, 'no_room');
+  if (!env.TOURNAMENT_ROOMS) throw new HttpError(404, 'not_found');
+  if (request.headers.get('upgrade') !== 'websocket') {
+    throw new HttpError(426, 'websocket_only');
+  }
+  await limitDuel(request, env);
+  return roomStub(env, room, env.TOURNAMENT_ROOMS).fetch(request);
+}
+
+async function createRoom(request, env) {
   if (!env.DUEL_ROOMS) throw new HttpError(404, 'not_found');
+  await limitDuel(request, env);
   const code = await openRoom(env);
   if (!code) throw new HttpError(503, 'busy');
   return json(201, { code });
 }
 
-function connectRoom(request, env, code) {
+async function connectRoom(request, env, code) {
   const room = normalizeRoomCode(code);
   if (!room) throw new HttpError(404, 'no_room');
   requireWebSocket(request, env);
+  await limitDuel(request, env);
   return roomStub(env, room).fetch(request);
 }
 
@@ -414,8 +536,9 @@ function requireWebSocket(request, env) {
 }
 
 /** Random opponent: one lobby pairs up whoever is waiting. */
-function findOpponent(request, env) {
+async function findOpponent(request, env) {
   requireWebSocket(request, env);
+  await limitDuel(request, env);
   return env.DUEL_LOBBY.get(env.DUEL_LOBBY.idFromName('lobby')).fetch(request);
 }
 
@@ -457,6 +580,8 @@ export async function handle(request, env, now = Date.now(), fetchFn = fetch) {
       const room = /^\/v1\/duel\/rooms\/([^/]+)$/.exec(path);
       if (room) return await connectRoom(request, env, room[1]);
       if (path === '/v1/duel/random') return await findOpponent(request, env);
+      const cup = /^\/v1\/tournament\/rooms\/([^/]+)$/.exec(path);
+      if (cup) return await connectTournament(request, env, cup[1]);
       if (path === '' || path === '/v1') return json(200, { ok: true });
       throw new HttpError(404, 'not_found');
     }
@@ -465,7 +590,7 @@ export async function handle(request, env, now = Date.now(), fetchFn = fetch) {
         case '/v1/register':
           return await register(request, env, now);
         case '/v1/rename':
-          return await rename(request, env);
+          return await rename(request, env, now);
         case '/v1/submit':
           return await submit(request, env, now, fetchFn);
         case '/v1/delete':
@@ -473,13 +598,17 @@ export async function handle(request, env, now = Date.now(), fetchFn = fetch) {
         case '/v1/device':
           return await deviceStatus(request, env, now);
         case '/v1/duel/rooms':
-          return await createRoom(env);
+          return await createRoom(request, env);
+        case '/v1/tournament/rooms':
+          return await createTournament(request, env);
       }
       throw new HttpError(404, 'not_found');
     }
     throw new HttpError(405, 'method_not_allowed');
   } catch (e) {
-    if (e instanceof HttpError) return json(e.status, { error: e.code });
+    if (e instanceof HttpError) {
+      return json(e.status, { error: e.code, ...e.extra });
+    }
     console.error(e);
     return json(500, { error: 'server_error' });
   }

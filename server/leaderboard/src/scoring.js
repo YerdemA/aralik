@@ -13,9 +13,11 @@ function dartRound(x) {
   return Math.sign(x) * Math.round(Math.abs(x));
 }
 
-export function intervalScore(kind, low, high, answer) {
+export function intervalScore(kind, low, high, answer, linear = false) {
   const axis =
-    kind === 'magnitude' ? (v) => Math.log2(Math.max(v, 1e-9)) : (v) => v;
+    kind === 'magnitude' && !linear
+      ? (v) => Math.log2(Math.max(v, 1e-9))
+      : (v) => v;
   const l = axis(low);
   const h = axis(high);
   const x = axis(answer);
@@ -40,20 +42,36 @@ const MAGNITUDE_FACTORS = {
 };
 const DEFAULT_MAGNITUDE_FACTOR = 8;
 
-/** {maxFactor, maxYearHalf} of a question; see answer_scale.dart. */
-export function scaleOf(kind, category, answer) {
+// Percentages (unit '%') are scored linearly in points: the slider gives
+// guess ± up to 20, never above 100.
+const PERCENT_UNIT = '%';
+const MAX_PERCENT_HALF = 20;
+
+/** {maxFactor, maxYearHalf, maxPercentHalf} of a question; see answer_scale.dart. */
+export function scaleOf(kind, category, answer, unit = '') {
   if (kind === 'magnitude') {
+    if (unit === PERCENT_UNIT) {
+      return { maxFactor: 0, maxYearHalf: 0, maxPercentHalf: MAX_PERCENT_HALF };
+    }
     return {
       maxFactor: MAGNITUDE_FACTORS[category] ?? DEFAULT_MAGNITUDE_FACTOR,
       maxYearHalf: 0,
+      maxPercentHalf: 0,
     };
   }
   const age = Math.max(0, SCALE_BASE_YEAR - dartRound(answer));
   const half = dartRound((20 + age / 4) / 10) * 10;
-  return { maxFactor: 0, maxYearHalf: Math.min(400, Math.max(30, half)) };
+  return {
+    maxFactor: 0,
+    maxYearHalf: Math.min(400, Math.max(30, half)),
+    maxPercentHalf: 0,
+  };
 }
 
 export function pointsPerUnit(kind, scale) {
+  if (scale.maxPercentHalf > 0) {
+    return (MAX_POINTS - POINTS_AT_WIDEST) / (2 * scale.maxPercentHalf);
+  }
   const widest =
     kind === 'magnitude'
       ? (2 * Math.log(scale.maxFactor)) / Math.LN2
@@ -68,7 +86,13 @@ export function pointsPerUnit(kind, scale) {
  */
 export function scoreFor(kind, low, high, answer, scale = null) {
   if (low === null || high === null) return MIN_POINTS;
-  const s = intervalScore(kind, low, high, answer);
+  const s = intervalScore(
+    kind,
+    low,
+    high,
+    answer,
+    (scale?.maxPercentHalf ?? 0) > 0,
+  );
   const k = scale
     ? pointsPerUnit(kind, scale)
     : kind === 'magnitude'

@@ -25,6 +25,7 @@ void main() {
           kind,
           QuestionCategory.fromJson(v['category'] as String),
           v['answer'] as num,
+          unit: v['unit'] as String? ?? '',
         );
         expect(
           scale.maxFactor,
@@ -32,6 +33,7 @@ void main() {
           reason: '$v',
         );
         expect(scale.maxYearHalf, v['maxYearHalf'], reason: '$v');
+        expect(scale.maxPercentHalf, v['maxPercentHalf'] ?? 0, reason: '$v');
       }
       expect(
         scoreFor(

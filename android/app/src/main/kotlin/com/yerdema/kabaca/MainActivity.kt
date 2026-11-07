@@ -15,10 +15,15 @@ import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
 
 class MainActivity : FlutterActivity() {
-    // Short sound effects (lib/data/sound.dart). Dart sends each WAV once;
+    // Short sound effects (lib/data/sound.dart). Dart sends each Ogg once;
     // it is kept in the cache directory and loaded into a SoundPool.
     private var soundPool: SoundPool? = null
     private val soundIds = mutableMapOf<String, Int>()
+
+    // Samples the pool has finished decoding, and plays asked for before
+    // that (the intro sound is played right after it is sent).
+    private val readyIds = mutableSetOf<Int>()
+    private val pendingIds = mutableSetOf<Int>()
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
@@ -60,6 +65,8 @@ class MainActivity : FlutterActivity() {
         soundPool?.release()
         soundPool = null
         soundIds.clear()
+        readyIds.clear()
+        pendingIds.clear()
         super.onDestroy()
     }
 
@@ -72,12 +79,19 @@ class MainActivity : FlutterActivity() {
                 .build(),
         )
         .build()
-        .also { soundPool = it }
+        .also { pool ->
+            pool.setOnLoadCompleteListener { _, id, status ->
+                if (status != 0) return@setOnLoadCompleteListener
+                readyIds.add(id)
+                if (pendingIds.remove(id)) startSound(id)
+            }
+            soundPool = pool
+        }
 
     private fun loadSound(name: String, bytes: ByteArray): Boolean {
         if (soundIds.containsKey(name)) return true
         return try {
-            val file = File(File(cacheDir, "sounds").apply { mkdirs() }, "$name.wav")
+            val file = File(File(cacheDir, "sounds").apply { mkdirs() }, "$name.ogg")
             file.writeBytes(bytes)
             soundIds[name] = pool().load(file.path, 1)
             true
@@ -89,6 +103,14 @@ class MainActivity : FlutterActivity() {
     /** Plays [name] unless the phone is on silent or vibrate. */
     private fun playSound(name: String): Boolean {
         val id = soundIds[name] ?: return false
+        if (id !in readyIds) {
+            pendingIds.add(id)
+            return true
+        }
+        return startSound(id)
+    }
+
+    private fun startSound(id: Int): Boolean {
         val audio = getSystemService(Context.AUDIO_SERVICE) as AudioManager
         if (audio.ringerMode != AudioManager.RINGER_MODE_NORMAL) return false
         return pool().play(id, 0.7f, 0.7f, 1, 0, 1f) != 0

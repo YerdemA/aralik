@@ -72,16 +72,20 @@ void main() {
     expect(HomeScreen.updateOffered, isTrue);
   });
 
-  testWidgets('the duel sits between the daily set and free play', (
+  testWidgets('duel and free play sit side by side under the daily set', (
     tester,
   ) async {
     await pumpHome(tester, withServer: true);
     await tester.pumpAndSettle();
-    final today = tester.getCenter(find.text(AppStrings.playToday)).dy;
-    final duel = tester.getCenter(find.text(AppStrings.duel)).dy;
-    final free = tester.getCenter(find.text(AppStrings.freePlay)).dy;
-    expect(today, lessThan(duel));
-    expect(duel, lessThan(free));
+    final today = tester.getCenter(find.text(AppStrings.playToday));
+    Offset tile(String title) => tester.getCenter(
+      find.ancestor(of: find.text(title), matching: find.byType(InkWell)).first,
+    );
+    final duel = tile(AppStrings.duel);
+    final free = tile(AppStrings.freePlay);
+    expect(today.dy, lessThan(duel.dy));
+    expect(duel.dy, closeTo(free.dy, 1));
+    expect(duel.dx, lessThan(free.dx));
   });
 
   testWidgets('a set played here before the data was cleared is locked', (
@@ -103,7 +107,7 @@ void main() {
     expect(find.text(AppStrings.todayPlayedBefore), findsOneWidget);
   });
 
-  testWidgets('once today is done, duel and free play share the space', (
+  testWidgets('once today is done, free play leads and the duel sits below', (
     tester,
   ) async {
     await pumpHome(
@@ -116,17 +120,25 @@ void main() {
       },
     );
     await tester.pumpAndSettle();
-    double cardHeight(String title) => tester
-        .getSize(
-          find
-              .ancestor(of: find.text(title), matching: find.byType(InkWell))
-              .first,
-        )
-        .height;
-    final duel = cardHeight(AppStrings.duel);
-    final free = cardHeight(AppStrings.freePlay);
-    expect(duel, closeTo(free, 1));
-    expect(duel, greaterThan(100));
+    final newRound = tester.getCenter(find.text(AppStrings.newRound));
+    final duel = tester.getCenter(find.text(AppStrings.duel));
+    expect(newRound.dy, lessThan(duel.dy));
+    // Today's board is only in the header, not a second time down here.
+    expect(find.text(AppStrings.leaderboard), findsNothing);
+  });
+
+  testWidgets('modes still to come are shown but do nothing', (tester) async {
+    await pumpHome(tester);
+    expect(find.text(AppStrings.modeMath), findsOneWidget);
+    expect(find.text(AppStrings.modeTournament), findsOneWidget);
+    expect(find.text(AppStrings.comingSoon), findsNWidgets(2));
+    expect(
+      find.ancestor(
+        of: find.text(AppStrings.modeMath),
+        matching: find.byType(InkWell),
+      ),
+      findsNothing,
+    );
   });
 
   testWidgets('no duel without a server', (tester) async {
@@ -145,8 +157,9 @@ void main() {
     await pumpHome(tester);
     expect(find.text(AppStrings.playToday), findsOneWidget);
     expect(find.text(AppStrings.freePlay), findsOneWidget);
-    expect(find.text(AppStrings.streakDays(0)), findsOneWidget);
-    expect(find.text(AppStrings.calibrationNoData), findsOneWidget);
+    // Only the streak is left of the stats, on today's card.
+    expect(find.text(AppStrings.streakPill(0)), findsOneWidget);
+    expect(find.text(AppStrings.calibrationNoData), findsNothing);
   });
 
   testWidgets('a half-played day can be continued', (tester) async {
@@ -177,8 +190,7 @@ void main() {
     expect(find.text(AppStrings.freePlay), findsOneWidget);
     expect(find.text(AppStrings.newRound), findsOneWidget);
     expect(find.text(AppStrings.todayTitle), findsNothing);
-    expect(find.text(AppStrings.streakDays(1)), findsOneWidget);
-    expect(find.text('287'), findsOneWidget); // last score
+    expect(find.text(AppStrings.streakPill(1)), findsOneWidget);
   });
 
   testWidgets('the date and weekday are on today\'s card', (tester) async {

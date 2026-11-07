@@ -274,9 +274,6 @@ test('rename keeps scores; delete removes everything', async () => {
   await call('POST', '/v1/submit', { ...auth, day: DAY, answers: answers() });
   const taken = await call('POST', '/v1/rename', { ...auth, nickname: 'Aslan' });
   assert.equal(taken.status, 409);
-  // Its own name in another case is fine.
-  const own = await call('POST', '/v1/rename', { ...auth, nickname: 'kaplan' });
-  assert.equal(own.status, 200);
   const renamed = await call('POST', '/v1/rename', { ...auth, nickname: 'Pars' });
   assert.deepEqual(renamed.body, { nickname: 'Pars' });
   assert.equal((await call('GET', `/v1/day/${DAY}`)).body.top[0].nickname, 'Pars');
@@ -501,4 +498,108 @@ test('days from the switch day on are scored with the scale of each question', a
   });
   assert.equal(r.body.points, expected(true));
   assert.ok(expected(true) > expected(false)); // ±40 years is fair now
+});
+
+test('a nickname can change once every three days', async () => {
+  const p = await join('Kaplan');
+  const auth = { id: p.id, token: p.token };
+  const first = await call('POST', '/v1/rename', { ...auth, nickname: 'Pars' });
+  assert.equal(first.status, 200);
+  // The same name again is not a change.
+  const same = await call('POST', '/v1/rename', { ...auth, nickname: 'Pars' });
+  assert.equal(same.status, 200);
+  const soon = await call(
+    'POST',
+    '/v1/rename',
+    { ...auth, nickname: 'Vaşak' },
+    { now: NOW + 2 * 24 * 3600 * 1000 },
+  );
+  assert.equal(soon.status, 429);
+  assert.equal(soon.body.error, 'rename_wait');
+  assert.equal(soon.body.retry_at, NOW + 3 * 24 * 3600 * 1000);
+  // Even a different case of the same letters waits.
+  const cased = await call('POST', '/v1/rename', { ...auth, nickname: 'pars' });
+  assert.equal(cased.status, 429);
+  const later = await call(
+    'POST',
+    '/v1/rename',
+    { ...auth, nickname: 'Vaşak' },
+    { now: NOW + 3 * 24 * 3600 * 1000 },
+  );
+  assert.deepEqual(later.body, { nickname: 'Vaşak' });
+});
+
+test('very high scores are marked suspect', async () => {
+  const perfect = await join('Kaplan');
+  const honest = await join('Aslan', 'x');
+  await call('POST', '/v1/submit', {
+    id: perfect.id,
+    token: perfect.token,
+    day: DAY,
+    answers: answers(),
+  });
+  await call('POST', '/v1/submit', {
+    id: honest.id,
+    token: honest.token,
+    day: DAY,
+    answers: answers(2),
+  });
+  const rows = env.DB.raw
+    .prepare('SELECT player_id, suspect FROM scores ORDER BY points DESC')
+    .all();
+  assert.deepEqual(
+    rows.map((r) => [r.player_id, r.suspect]),
+    [
+      [perfect.id, 1],
+      [honest.id, 0],
+    ],
+  );
+});
+
+test('a hidden player sees themselves; nobody else does', async () => {
+  const cheat = await join('Kaplan');
+  const fair = await join('Aslan', 'x');
+  await call('POST', '/v1/submit', {
+    id: cheat.id,
+    token: cheat.token,
+    day: DAY,
+    answers: answers(),
+  });
+  await call('POST', '/v1/submit', {
+    id: fair.id,
+    token: fair.token,
+    day: DAY,
+    answers: answers(3),
+  });
+  env.DB.raw.prepare('UPDATE players SET hidden = 1 WHERE id = ?').run(cheat.id);
+
+  const everyone = (await call('GET', `/v1/day/${DAY}`)).body;
+  assert.deepEqual(everyone.top.map((r) => r.nickname), ['Aslan']);
+  assert.equal(everyone.players, 1);
+  const fairView = (await call('GET', `/v1/day/${DAY}?player=${fair.id}`)).body;
+  assert.equal(fairView.me.rank, 1);
+
+  const own = (await call('GET', `/v1/day/${DAY}?player=${cheat.id}`)).body;
+  assert.deepEqual(own.top.map((r) => r.nickname), ['Kaplan', 'Aslan']);
+  assert.equal(own.top[0].me, true);
+  assert.equal(own.me.rank, 1);
+  assert.equal(own.players, 2);
+});
+
+test('duel rooms and the lobby are limited per address', async () => {
+  const seen = [];
+  env.DUEL_ROOMS = {};
+  env.DUEL_LIMITER = {
+    limit: async ({ key }) => {
+      seen.push(key);
+      return { success: seen.length <= 1 };
+    },
+  };
+  const blocked = await call('POST', '/v1/duel/rooms', {});
+  // The first call passes the limiter (the fake room namespace then fails).
+  assert.notEqual(blocked.status, 429);
+  const second = await call('POST', '/v1/duel/rooms', {});
+  assert.equal(second.status, 429);
+  assert.equal(second.body.error, 'rate_limited');
+  assert.deepEqual(seen, ['duel:1.2.3.4', 'duel:1.2.3.4']);
 });

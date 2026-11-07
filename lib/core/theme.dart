@@ -21,6 +21,10 @@ abstract final class Palette {
   static const roundStart = Color(0xFFCF3F1A);
   static const roundEnd = Color(0xFFC22F66);
 
+  /// The tournament tile on the home screen; white text stays readable.
+  static const cupStart = Color(0xFF0E8A6A);
+  static const cupEnd = Color(0xFF0B5F7A);
+
   /// Duel: this player in blue, the opponent in red.
   static const duelMe = Color(0xFF2F6FED);
   static const duelOpponent = Color(0xFFE5484D);

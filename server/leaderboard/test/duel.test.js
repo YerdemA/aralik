@@ -194,15 +194,105 @@ test('the duel ends after the fifth reveal with a winner', () => {
   assert.equal(duel.alarm(r.state, r.alarm, content).wipe, true);
 });
 
-test('leaving mid-duel hands the win to the other player', () => {
-  const r = duel.leave(started().state, 1, T0 + 500);
-  assert.equal(r.state.phase, 'over');
-  assert.deepEqual(r.out[0].msg, {
+/** A started duel whose players carry rejoin secrets. */
+function startedWithTokens() {
+  let r = duel.createRoom('ABCDE', T0);
+  r = duel.join(r.state, { name: 'Ayşe', bank: 99, token: 'tA' }, T0, pick);
+  r = duel.join(r.state, { name: 'Bora', bank: 99, token: 'tB' }, T0 + 10, pick);
+  return r;
+}
+
+test('each player gets a secret to come back with', () => {
+  const r = startedWithTokens();
+  const starts = r.out.filter((o) => o.msg.t === 'start');
+  assert.deepEqual(
+    starts.map((o) => [o.to, o.msg.rejoin]),
+    [
+      [0, 'tA'],
+      [1, 'tB'],
+    ],
+  );
+});
+
+test('a dropped player stops the clock; not back in time, they lose', () => {
+  const r = duel.leave(startedWithTokens().state, 1, T0 + 5_010);
+  assert.equal(r.state.phase, 'question');
+  assert.equal(r.state.deadline, null);
+  assert.equal(r.state.paused.ms, duel.QUESTION_MS - 5_000);
+  assert.deepEqual(r.out, [
+    { to: 0, msg: { t: 'away', seat: 1, ms: duel.RECONNECT_MS } },
+  ]);
+  assert.equal(r.alarm, T0 + 5_010 + duel.RECONNECT_MS);
+  // The question does not time out while they are away.
+  const still = duel.alarm(r.state, T0 + 30_000, content);
+  assert.equal(still.state.phase, 'question');
+  const over = duel.alarm(r.state, r.alarm, content);
+  assert.equal(over.state.phase, 'over');
+  assert.deepEqual(over.out[0].msg, {
     t: 'end',
     totals: [0, 0],
     winner: 0,
     reason: 'left',
   });
+  // Coming back afterwards shows how it ended.
+  const late = duel.rejoin(over.state, 'tB', r.alarm + 5);
+  assert.equal(late.seat, 1);
+  assert.equal(late.out[0].msg.t, 'end');
+});
+
+test('back in time, the question goes on from where it stopped', () => {
+  let r = startedWithTokens();
+  r = duel.lock(r.state, 0, { i: 0, low: 90, high: 110 }, T0 + 2_000, content);
+  r = duel.leave(r.state, 1, T0 + 5_010);
+  const t1 = T0 + 40_000;
+  const back = duel.rejoin(r.state, 'tB', t1);
+  assert.equal(back.seat, 1);
+  assert.equal(back.state.paused, null);
+  assert.equal(back.state.deadline, t1 + duel.QUESTION_MS - 5_000);
+  assert.equal(back.alarm, back.state.deadline + duel.LOCK_GRACE_MS);
+  const resume = back.out.find((o) => o.to === 1).msg;
+  assert.equal(resume.t, 'resume');
+  assert.equal(resume.you, 1);
+  assert.equal(resume.rejoin, 'tB');
+  assert.equal(resume.phase, 'question');
+  assert.equal(resume.index, 0);
+  assert.equal(resume.ms, duel.QUESTION_MS - 5_000);
+  assert.deepEqual(resume.locked, [true, false]);
+  assert.equal(resume.away, null);
+  assert.deepEqual(back.out.find((o) => o.to === 0).msg, {
+    t: 'back',
+    seat: 1,
+    ms: duel.QUESTION_MS - 5_000,
+  });
+  // The duel then plays on as usual.
+  const done = duel.lock(back.state, 1, { i: 0, low: 1, high: 2 }, t1, content);
+  assert.equal(done.state.phase, 'reveal');
+});
+
+test('a wrong secret is refused; both gone for good wipes the room', () => {
+  const r = startedWithTokens();
+  assert.equal(duel.rejoin(r.state, 'nope', T0).error, 'no_room');
+  assert.equal(duel.rejoin(r.state, '', T0).error, 'no_room');
+  let gone = duel.leave(r.state, 0, T0 + 100);
+  gone = duel.leave(gone.state, 1, T0 + 200);
+  assert.equal(gone.alarm, T0 + 100 + duel.RECONNECT_MS);
+  const later = T0 + 200 + duel.RECONNECT_MS;
+  assert.equal(duel.alarm(gone.state, later, content).wipe, true);
+});
+
+test('a reveal during a pause stays paused until they are back', () => {
+  let r = startedWithTokens();
+  r = duel.lock(r.state, 1, { i: 0, low: 90, high: 110 }, T0 + 1_000, content);
+  r = duel.leave(r.state, 1, T0 + 2_000);
+  r = duel.lock(r.state, 0, { i: 0, low: 90, high: 110 }, T0 + 3_000, content);
+  assert.equal(r.state.phase, 'reveal');
+  assert.equal(r.state.paused.ms, duel.REVEAL_MS);
+  assert.equal(r.alarm, T0 + 2_000 + duel.RECONNECT_MS);
+  const back = duel.rejoin(r.state, 'tB', T0 + 10_000);
+  assert.equal(back.state.deadline, T0 + 10_000 + duel.REVEAL_MS);
+  const resume = back.out.find((o) => o.to === 1).msg;
+  assert.equal(resume.phase, 'reveal');
+  assert.equal(resume.results.length, 1);
 });
 
 test('the creator may drop out and come back while waiting', () => {

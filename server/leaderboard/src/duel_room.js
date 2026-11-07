@@ -60,6 +60,15 @@ export class DuelRoom extends DurableObject {
     const { name, bank } = player;
 
     const state = await this.ctx.storage.get('state');
+    const token = params.get('rejoin');
+    if (token) {
+      // Back after a dropped connection.
+      const back = duel.rejoin(state, token, now);
+      if (back.error) return refuse(back.error);
+      this.drop(back.seat);
+      socket.serializeAttachment({ seat: back.seat });
+      return this.apply(back);
+    }
     let content;
     try {
       content = await this.content(now);
@@ -67,7 +76,7 @@ export class DuelRoom extends DurableObject {
       return refuse('server_error');
     }
     const today = turkeyDayIndex(now);
-    const result = duel.join(state, { name, bank }, now, (limit) =>
+    const result = duel.join(state, { name, bank, token: duel.secret() }, now, (limit) =>
       duel.pickDuelQuestions(content, limit, today, duel.randomInt),
     );
     if (result.error) return refuse(result.error);
@@ -93,6 +102,20 @@ export class DuelRoom extends DurableObject {
       await this.apply(duel.lock(state, seat, msg, now, content));
     } else if (msg?.t === 'next') {
       await this.apply(duel.next(state, seat, msg, now));
+    }
+  }
+
+  /** Closes an older connection of [seat] that has not noticed it is dead. */
+  drop(seat) {
+    for (const s of this.ctx.getWebSockets()) {
+      if (s.deserializeAttachment()?.seat === seat) {
+        s.serializeAttachment({});
+        try {
+          s.close(4002, 'replaced');
+        } catch {
+          // already closed
+        }
+      }
     }
   }
 

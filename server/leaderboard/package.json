@@ -6,7 +6,8 @@
     "test": "node --test \"test/*.test.js\"",
     "dev": "wrangler dev",
     "db:init": "wrangler d1 execute kabaca-leaderboard --remote --file=schema.sql",
-    "deploy": "wrangler deploy"
+    "deploy": "wrangler deploy",
+    "admin": "node scripts/admin.mjs"
   },
   "devDependencies": {
     "wrangler": "^4.0.0"

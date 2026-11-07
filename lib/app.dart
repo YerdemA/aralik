@@ -9,6 +9,7 @@ import 'data/settings_store.dart';
 import 'data/stats_store.dart';
 import 'features/home/home_screen.dart';
 import 'features/intro/intro_screen.dart';
+import 'widgets/tap_sounds.dart';
 
 class KabacaApp extends StatelessWidget {
   const KabacaApp({
@@ -34,6 +35,8 @@ class KabacaApp extends StatelessWidget {
   /// The newest build on Google Play (content manifest), or null.
   final int? Function()? latestAppBuild;
 
+  static final _pageSounds = PageSounds();
+
   @override
   Widget build(BuildContext context) {
     return ListenableBuilder(
@@ -41,9 +44,15 @@ class KabacaApp extends StatelessWidget {
       builder: (context, _) => MaterialApp(
         title: AppStrings.appName,
         debugShowCheckedModeBanner: false,
-        theme: AppTheme.light,
-        darkTheme: AppTheme.dark,
+        // Every tap on an enabled button, card or key clicks softly.
+        theme: AppTheme.light.copyWith(
+          splashFactory: TapSoundSplash.splashFactory,
+        ),
+        darkTheme: AppTheme.dark.copyWith(
+          splashFactory: TapSoundSplash.splashFactory,
+        ),
         themeMode: settings.themeMode,
+        navigatorObservers: [_pageSounds],
         // Status bar icons follow the theme (dark icons on the light
         // theme); the intro sets its own light icons on navy.
         builder: (context, child) => AnnotatedRegion<SystemUiOverlayStyle>(

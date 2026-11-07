@@ -198,4 +198,91 @@ void main() {
       ..handle(r);
     expect(m.nextIn, const Duration(seconds: 12));
   });
+
+  test('the search notes change every 15 seconds and wrap around', () {
+    Duration s(int n) => Duration(seconds: n);
+    expect(duelTipAt(s(0), first: 3, count: 5), 3);
+    expect(duelTipAt(s(14), first: 3, count: 5), 3);
+    expect(duelTipAt(s(15), first: 3, count: 5), 4);
+    expect(duelTipAt(s(30), first: 3, count: 5), 0);
+  });
+
+  group('dropped connections', () {
+    DuelMatch playing() => DuelMatch()
+      ..handle(
+        const DuelStart(
+          you: 0,
+          names: ['Ayşe', 'Bora'],
+          questionIds: ['a', 'b'],
+          questionTime: Duration(seconds: 15),
+          rejoin: 's',
+        ),
+      )
+      ..handle(const DuelQuestion(0, Duration(seconds: 15)));
+
+    test('the opponent away stops the clock; back, it runs on', () {
+      final m = playing();
+      final clock = m.clock;
+      m.handle(const DuelAway(1, Duration(seconds: 60)));
+      expect(m.paused, isTrue);
+      expect(m.opponentAway, isTrue);
+      expect(m.awayLeft, const Duration(seconds: 60));
+      expect(m.clock, greaterThan(clock));
+      m.handle(const DuelBack(1, Duration(seconds: 7)));
+      expect(m.paused, isFalse);
+      expect(m.timeLeft, const Duration(seconds: 7));
+      // About this player: ignored (the room tells the other one).
+      m.handle(const DuelAway(0, Duration(seconds: 60)));
+      expect(m.paused, isFalse);
+    });
+
+    test('losing the connection in play means coming back, not failing', () {
+      final m = playing()..connectionLost();
+      expect(m.reconnecting, isTrue);
+      expect(m.phase, DuelPhase.question);
+      m.reconnectFailed();
+      expect(m.phase, DuelPhase.failed);
+      // Before the duel starts there is nothing to come back to.
+      final waiting = DuelMatch()
+        ..handle(const DuelWaiting('K7M2P'))
+        ..connectionLost();
+      expect(waiting.phase, DuelPhase.failed);
+    });
+
+    test('a resume rebuilds the duel as the room has it', () {
+      final m = playing()..connectionLost();
+      final event = DuelEvent.parse(
+        jsonEncode({
+          't': 'resume',
+          'you': 1,
+          'names': ['Bora', 'Ayşe'],
+          'questions': ['a', 'b'],
+          'questionMs': 15000,
+          'rejoin': 's',
+          'index': 0,
+          'phase': 'reveal',
+          'ms': 8000,
+          'results': [
+            [
+              {'low': 1, 'high': 2, 'points': 10, 'hit': false},
+              {'low': 3, 'high': 4, 'points': 90, 'hit': true},
+            ],
+          ],
+          'totals': [10, 90],
+          'locked': [true, true],
+          'away': 0,
+          'awayMs': 40000,
+        }),
+      )!;
+      m.handle(event);
+      expect(m.reconnecting, isFalse);
+      expect(m.phase, DuelPhase.reveal);
+      expect(m.myTotal, 90);
+      expect(m.opponentName, 'Bora');
+      expect(m.results.single.me.points, 90);
+      expect(m.nextIn, const Duration(seconds: 8));
+      expect(m.opponentAway, isTrue);
+      expect(m.awayLeft, const Duration(seconds: 40));
+    });
+  });
 }

@@ -40,18 +40,41 @@ const Map<QuestionCategory, double> magnitudeFactors = {
 };
 const double defaultMagnitudeFactor = 8;
 
+/// Unit of a percentage question. Such a magnitude is not stretched on a
+/// log axis: its interval is the guess ± up to [maxPercentHalfWidth]
+/// points, never above 100 (2026-11-07).
+const String percentUnit = '%';
+const int maxPercentHalfWidth = 20;
+
+bool isPercentUnit(String unit) => unit == percentUnit;
+
 /// A question's scale. For a magnitude only [maxFactor] matters, for a year
-/// only [maxYearHalf].
-typedef AnswerScale = ({double maxFactor, int maxYearHalf});
+/// only [maxYearHalf], for a percentage only [maxPercentHalf] (non-zero only
+/// for percentages, which are scored linearly in points).
+typedef AnswerScale = ({double maxFactor, int maxYearHalf, int maxPercentHalf});
 
-AnswerScale scaleOf(Question q) => scaleFor(q.kind, q.category, q.answer);
+AnswerScale scaleOf(Question q) =>
+    scaleFor(q.kind, q.category, q.answer, unit: q.unit);
 
-AnswerScale scaleFor(QuestionKind kind, QuestionCategory category, num answer) {
+AnswerScale scaleFor(
+  QuestionKind kind,
+  QuestionCategory category,
+  num answer, {
+  String unit = '',
+}) {
   switch (kind) {
     case QuestionKind.magnitude:
+      if (isPercentUnit(unit)) {
+        return (
+          maxFactor: 0,
+          maxYearHalf: 0,
+          maxPercentHalf: maxPercentHalfWidth,
+        );
+      }
       return (
         maxFactor: magnitudeFactors[category] ?? defaultMagnitudeFactor,
         maxYearHalf: 0,
+        maxPercentHalf: 0,
       );
     case QuestionKind.year:
       final age = math.max(0, scaleBaseYear - answer.round());
@@ -59,6 +82,7 @@ AnswerScale scaleFor(QuestionKind kind, QuestionCategory category, num answer) {
       return (
         maxFactor: 0,
         maxYearHalf: half.clamp(minYearHalfWidth, maxYearHalfWidthScaled),
+        maxPercentHalf: 0,
       );
   }
 }
@@ -70,9 +94,12 @@ AnswerScale scaleFor(QuestionKind kind, QuestionCategory category, num answer) {
 bool scaledOn(int day, int? switchDay) => switchDay != null && day >= switchDay;
 
 /// Points lost per unit of the interval score: per log2 for magnitudes,
-/// per year for years. Chosen so the widest hit scores [pointsAtWidest]:
-/// `(100 − 30) / widest width`.
+/// per year for years, per percentage point for percentages. Chosen so the
+/// widest hit scores [pointsAtWidest]: `(100 − 30) / widest width`.
 double pointsPerUnit(QuestionKind kind, AnswerScale scale) {
+  if (scale.maxPercentHalf > 0) {
+    return (100 - pointsAtWidest) / (2.0 * scale.maxPercentHalf);
+  }
   final widest = switch (kind) {
     QuestionKind.magnitude => 2 * math.log(scale.maxFactor) / math.ln2,
     QuestionKind.year => 2.0 * scale.maxYearHalf,

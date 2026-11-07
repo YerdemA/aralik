@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:aralik/core/strings.dart';
 import 'package:aralik/data/leaderboard.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -196,6 +197,29 @@ void main() {
     expect(sent.last.uri.path, '/api/v1/delete');
     expect(s.joined, isFalse);
     expect(s.isSent(3), isFalse); // a new account may send it again
+  });
+
+  test('a nickname changed too recently says when it can change', () async {
+    final s = await joinedStore();
+    final at = DateTime(2026, 11, 10, 12).millisecondsSinceEpoch;
+    reply = (_) =>
+        (status: 429, body: {'error': 'rename_wait', 'retry_at': at});
+    await expectLater(
+      s.rename('Pars'),
+      throwsA(
+        isA<LeaderboardException>()
+            .having((e) => e.failure, 'failure', LeaderboardFailure.renameWait)
+            .having(
+              (e) => e.retryAt,
+              'retryAt',
+              DateTime.fromMillisecondsSinceEpoch(at),
+            ),
+      ),
+    );
+    expect(
+      AppStrings.renameWait(DateTime.fromMillisecondsSinceEpoch(at)),
+      contains('10 Kasım'),
+    );
   });
 
   test('leaving offline keeps the account', () async {

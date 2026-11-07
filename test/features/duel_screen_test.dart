@@ -142,6 +142,10 @@ void main() {
   testWidgets('shows why a room cannot be joined', (tester) async {
     SharedPreferences.setMockInitialValues({});
     final stats = await StatsStore.open();
+    // The bank parses on a background isolate: load it before the clock
+    // stops being real.
+    final repository = QuestionRepository();
+    await tester.runAsync(repository.load);
     final channel = FakeChannel();
     await tester.pumpWidget(
       MaterialApp(
@@ -151,7 +155,7 @@ void main() {
             serviceUri: () => Uri.parse('https://lb.example/'),
             connect: (_) async => channel,
           ),
-          repository: QuestionRepository(),
+          repository: repository,
           stats: stats,
           code: 'K7M2P',
           name: 'Ayşe',
@@ -174,6 +178,8 @@ void main() {
     final lobby = FakeChannel();
     final room = FakeChannel();
     final opened = <Uri>[];
+    final repository = QuestionRepository();
+    await tester.runAsync(repository.load);
     await tester.pumpWidget(
       MaterialApp(
         theme: AppTheme.light,
@@ -185,7 +191,7 @@ void main() {
               return uri.path.endsWith('random') ? lobby : room;
             },
           ),
-          repository: QuestionRepository(),
+          repository: repository,
           stats: stats,
           code: null,
           name: 'Ayşe',
@@ -297,6 +303,104 @@ void main() {
     await tester.pump(const Duration(milliseconds: 300));
     expect(find.text(AppStrings.questionProgress(2, 2)), findsOneWidget);
     expect(find.text(AppStrings.duelWaitingOther), findsNothing);
+    await tester.pumpWidget(const SizedBox());
+  });
+
+  testWidgets('a dropped connection pauses the duel and comes back', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(1080, 2340);
+    tester.view.devicePixelRatio = 3;
+    addTearDown(tester.view.reset);
+    SharedPreferences.setMockInitialValues({});
+    final stats = await StatsStore.open();
+    final repository = QuestionRepository();
+    final bank = (await tester.runAsync(repository.load))!;
+    final question = bank.first;
+    final first = FakeChannel();
+    final second = FakeChannel();
+    final opened = <Uri>[];
+    var clock = DateTime(2026, 11, 7, 12);
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: AppTheme.light,
+        home: DuelScreen(
+          service: DuelService(
+            serviceUri: () => Uri.parse('https://lb.example/'),
+            connect: (uri) async {
+              opened.add(uri);
+              return opened.length == 1 ? first : second;
+            },
+          ),
+          repository: repository,
+          stats: stats,
+          code: 'K7M2P',
+          name: 'Ayşe',
+          now: () => clock,
+        ),
+      ),
+    );
+    await tester.runAsync(() => Future<void>.delayed(Duration.zero));
+    await tester.pump();
+    Future<void> settle() async {
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 300));
+    }
+
+    void say(FakeChannel c, Map<String, Object?> m) =>
+        c.incoming.add(jsonEncode(m));
+    say(first, {
+      't': 'start',
+      'you': 0,
+      'names': ['Ayşe', 'Bora'],
+      'questions': [question.id],
+      'questionMs': 15000,
+      'rejoin': 'sec',
+    });
+    say(first, {'t': 'question', 'i': 0, 'ms': 15000});
+    await settle();
+    expect(find.text(question.text), findsOneWidget);
+
+    // Bora drops: the clock stops for us too.
+    say(first, {'t': 'away', 'seat': 1, 'ms': 60000});
+    await settle();
+    expect(find.text(AppStrings.duelOpponentAway('Bora')), findsOneWidget);
+    clock = clock.add(const Duration(seconds: 20));
+    await tester.pump(const Duration(seconds: 20));
+    expect(first.sent, isEmpty); // no timeout lock while paused
+    say(first, {'t': 'back', 'seat': 1, 'ms': 12000});
+    await settle();
+    expect(find.text(AppStrings.duelOpponentAway('Bora')), findsNothing);
+
+    // Our connection drops: covered, and back with the secret.
+    await first.incoming.close();
+    await settle();
+    expect(find.text(AppStrings.reconnecting), findsOneWidget);
+    expect(opened.last.queryParameters['rejoin'], 'sec');
+    say(second, {
+      't': 'resume',
+      'you': 0,
+      'names': ['Ayşe', 'Bora'],
+      'questions': [question.id],
+      'questionMs': 15000,
+      'rejoin': 'sec',
+      'index': 0,
+      'phase': 'question',
+      'ms': 10000,
+      'results': <Object>[],
+      'totals': [0, 0],
+      'locked': [false, false],
+      'away': null,
+      'awayMs': null,
+    });
+    await settle();
+    expect(find.text(AppStrings.reconnecting), findsNothing);
+    expect(find.text(question.text), findsOneWidget);
+    // The clock runs on from the room's 10 s: it times out and locks.
+    clock = clock.add(const Duration(seconds: 11));
+    await tester.pump(const Duration(seconds: 1));
+    final lock = jsonDecode(second.sent.single) as Map<String, dynamic>;
+    expect(lock['t'], 'lock');
     await tester.pumpWidget(const SizedBox());
   });
 }

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart';
 
+import '../../core/answer_scale.dart';
 import '../../core/duel.dart';
 import '../../core/number_format.dart';
 import '../../core/question_timer.dart';
@@ -21,6 +22,7 @@ import '../../widgets/interval_bar.dart';
 import '../../widgets/philosopher.dart';
 import '../game/answer_input.dart';
 import '../game/game_controller.dart';
+import 'duel_search_view.dart';
 
 /// One live duel in room [code]: waiting for the friend, five questions
 /// against the clock, each revealed with both intervals, then the result.
@@ -81,6 +83,9 @@ class _DuelScreenState extends State<DuelScreen> {
 
   /// Pressed "Sonucu gör" after the last reveal.
   bool _resultShown = false;
+
+  /// While the opponent's connection is gone: when their time runs out.
+  DateTime? _awayUntil;
 
   /// Set when the room's questions are missing from this app's bank, or the
   /// search or the opponent did not work out.
@@ -221,10 +226,19 @@ class _DuelScreenState extends State<DuelScreen> {
       }
     }
     final game = _game;
-    if (game != null && _match.phase == DuelPhase.question) {
+    // Someone's connection dropped: the room stopped the clock, so does
+    // the app; it starts again with the time the room gives back.
+    if (_match.paused) {
+      _stopClock();
+    } else if (game != null && _match.phase == DuelPhase.question) {
       _openQuestion(game, _match.index);
     }
     if (_match.phase != DuelPhase.question) _stopClock();
+    if (_match.opponentAway) {
+      _awayUntil ??= widget.now().add(_match.awayLeft);
+    } else {
+      _awayUntil = null;
+    }
     _countReveal();
     if (_match.phase == DuelPhase.reveal || _match.phase == DuelPhase.over) {
       // Revealed before this phone locked (late or lost message): keep the
@@ -255,14 +269,16 @@ class _DuelScreenState extends State<DuelScreen> {
   void _countReveal() {
     final total =
         _match.nextIn ?? (_match.isLastQuestion ? null : duelRevealWait);
-    if (_match.phase != DuelPhase.reveal || total == null) {
+    if (_match.phase != DuelPhase.reveal || total == null || _match.paused) {
       _revealTicker?.cancel();
       _revealTicker = null;
       _nextIn.value = null;
+      _revealCounted = -1;
       return;
     }
-    if (_revealCounted == _match.index) return;
-    _revealCounted = _match.index;
+    // Counted again when the room sets the clock again (after a pause).
+    if (_revealCounted == _match.clock) return;
+    _revealCounted = _match.clock;
     final until = widget.now().add(total);
     void tick() {
       final left = until.difference(widget.now());
@@ -367,12 +383,7 @@ class _DuelScreenState extends State<DuelScreen> {
         ),
       );
     } else if (_searching) {
-      body = const _Message(
-        icon: Icons.person_search_rounded,
-        text: AppStrings.duelSearching,
-        busy: true,
-        hint: AppStrings.duelSearchingHint,
-      );
+      body = DuelSearchView(name: widget.name);
     } else if (_match.phase == DuelPhase.connecting ||
         (widget.isRandom && _match.phase == DuelPhase.waiting)) {
       body = _Message(
@@ -464,15 +475,28 @@ class _DuelScreenState extends State<DuelScreen> {
           ],
         ),
         body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(20, 8, 20, 16),
-            child: AnimatedSwitcher(
-              duration: const Duration(milliseconds: 200),
-              child: KeyedSubtree(
-                key: ValueKey((_match.phase, _match.index, _resultShown)),
-                child: body,
+          child: Stack(
+            children: [
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 8, 20, 16),
+                child: AnimatedSwitcher(
+                  duration: const Duration(milliseconds: 200),
+                  child: KeyedSubtree(
+                    key: ValueKey((_match.phase, _match.index, _resultShown)),
+                    child: body,
+                  ),
+                ),
               ),
-            ),
+              if (_match.paused && error == null)
+                Positioned.fill(
+                  child: _PausedCover(
+                    reconnecting: _match.reconnecting,
+                    opponent: _match.opponentName,
+                    awayUntil: _awayUntil,
+                    now: widget.now,
+                  ),
+                ),
+            ],
           ),
         ),
       ),
@@ -519,14 +543,12 @@ class _Message extends StatelessWidget {
     required this.text,
     this.button,
     this.busy = false,
-    this.hint,
   });
 
   final IconData icon;
   final String text;
   final Widget? button;
   final bool busy;
-  final String? hint;
 
   @override
   Widget build(BuildContext context) {
@@ -545,14 +567,6 @@ class _Message extends StatelessWidget {
           style: theme.textTheme.titleMedium,
           textAlign: TextAlign.center,
         ),
-        if (hint != null) ...[
-          const SizedBox(height: 6),
-          Text(
-            hint!,
-            style: theme.textTheme.bodyMedium,
-            textAlign: TextAlign.center,
-          ),
-        ],
         const Spacer(),
         ?button,
       ],
@@ -882,7 +896,7 @@ class _PlayerResult extends StatelessWidget {
           if (low != null && high != null) ...[
             const SizedBox(height: 6),
             IntervalBar(
-              isYear: isYear,
+              isYear: isYear || isPercentUnit(question.unit),
               low: low,
               high: high,
               answer: question.answer,
@@ -1166,6 +1180,96 @@ class _QuestionStrip extends StatelessWidget {
             ),
           ),
       ],
+    );
+  }
+}
+
+/// Covers the duel while the clock is stopped: this player's connection
+/// is coming back, or the opponent's is gone (with their time left).
+class _PausedCover extends StatefulWidget {
+  const _PausedCover({
+    required this.reconnecting,
+    required this.opponent,
+    required this.awayUntil,
+    required this.now,
+  });
+
+  final bool reconnecting;
+  final String opponent;
+  final DateTime? awayUntil;
+  final DateTime Function() now;
+
+  @override
+  State<_PausedCover> createState() => _PausedCoverState();
+}
+
+class _PausedCoverState extends State<_PausedCover> {
+  late final Timer _timer;
+
+  @override
+  void initState() {
+    super.initState();
+    _timer = Timer.periodic(
+      const Duration(milliseconds: 500),
+      (_) => setState(() {}),
+    );
+  }
+
+  @override
+  void dispose() {
+    _timer.cancel();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final until = widget.awayUntil;
+    final left = until == null
+        ? 0
+        : secondsShown(until.difference(widget.now()));
+    final title = widget.reconnecting
+        ? AppStrings.reconnecting
+        : AppStrings.duelOpponentAway(widget.opponent);
+    final hint = widget.reconnecting
+        ? AppStrings.duelReconnectingHint
+        : AppStrings.duelOpponentAwayHint(left < 0 ? 0 : left);
+    return ColoredBox(
+      color: theme.colorScheme.surface.withValues(alpha: .88),
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Card(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(24, 24, 24, 20),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  widget.reconnecting
+                      ? const CircularProgressIndicator()
+                      : Icon(
+                          Icons.wifi_off_rounded,
+                          size: 44,
+                          color: Palette.duelOpponent,
+                        ),
+                  const SizedBox(height: 16),
+                  Text(
+                    title,
+                    style: theme.textTheme.titleMedium,
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 6),
+                  Text(
+                    hint,
+                    style: theme.textTheme.bodyMedium,
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

@@ -11,6 +11,7 @@ String leaderboardFailureText(LeaderboardFailure failure) => switch (failure) {
   LeaderboardFailure.nicknameBlocked => AppStrings.nicknameBlocked,
   LeaderboardFailure.nicknameTaken => AppStrings.nicknameTaken,
   LeaderboardFailure.rateLimited => AppStrings.rateLimited,
+  LeaderboardFailure.renameWait => AppStrings.renameRule,
   LeaderboardFailure.unauthorized => AppStrings.leaderboardMissing,
   LeaderboardFailure.rejected ||
   LeaderboardFailure.server => AppStrings.leaderboardError,
@@ -94,7 +95,9 @@ class _NicknameSheetState extends State<_NicknameSheet> {
       if (mounted) {
         setState(() {
           _busy = false;
-          _error = leaderboardFailureText(e.failure);
+          _error = e.failure == LeaderboardFailure.renameWait
+              ? AppStrings.renameWait(e.retryAt)
+              : leaderboardFailureText(e.failure);
         });
       }
     }
@@ -120,13 +123,11 @@ class _NicknameSheetState extends State<_NicknameSheet> {
                 : AppStrings.leaderboardJoinTitle,
             style: theme.textTheme.titleLarge,
           ),
-          if (!_renaming) ...[
-            const SizedBox(height: 8),
-            Text(
-              AppStrings.leaderboardJoinBody,
-              style: theme.textTheme.bodyMedium,
-            ),
-          ],
+          const SizedBox(height: 8),
+          Text(
+            _renaming ? AppStrings.renameRule : AppStrings.leaderboardJoinBody,
+            style: theme.textTheme.bodyMedium,
+          ),
           const SizedBox(height: 16),
           TextField(
             controller: _controller,

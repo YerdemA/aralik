@@ -6,12 +6,12 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  test('every effect has a short WAV asset', () async {
+  test('every effect has a small Ogg asset', () async {
     for (final sfx in Sfx.values) {
       final data = await rootBundle.load(sfx.asset);
       final bytes = data.buffer.asUint8List(data.offsetInBytes, 4);
-      expect(String.fromCharCodes(bytes), 'RIFF', reason: sfx.asset);
-      expect(data.lengthInBytes, lessThan(64 * 1024), reason: sfx.asset);
+      expect(String.fromCharCodes(bytes), 'OggS', reason: sfx.asset);
+      expect(data.lengthInBytes, lessThan(24 * 1024), reason: sfx.asset);
     }
   });
 
