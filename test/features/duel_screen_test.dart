@@ -361,16 +361,23 @@ void main() {
     await settle();
     expect(find.text(question.text), findsOneWidget);
 
-    // Bora drops: the clock stops for us too.
-    say(first, {'t': 'away', 'seat': 1, 'ms': 60000});
+    // Bora drops mid-question: a note, and the question goes on for us.
+    say(first, {'t': 'away', 'seat': 1, 'ms': 45000});
     await settle();
-    expect(find.text(AppStrings.duelOpponentAway('Bora')), findsOneWidget);
-    clock = clock.add(const Duration(seconds: 20));
-    await tester.pump(const Duration(seconds: 20));
-    expect(first.sent, isEmpty); // no timeout lock while paused
-    say(first, {'t': 'back', 'seat': 1, 'ms': 12000});
-    await settle();
+    expect(
+      find.text(AppStrings.duelOpponentAwayQuestion('Bora')),
+      findsOneWidget,
+    );
     expect(find.text(AppStrings.duelOpponentAway('Bora')), findsNothing);
+    expect(find.text(question.text), findsOneWidget);
+    clock = clock.add(const Duration(seconds: 2));
+    await tester.pump(const Duration(seconds: 2));
+    say(first, {'t': 'back', 'seat': 1, 'ms': 10000});
+    await settle();
+    expect(
+      find.text(AppStrings.duelOpponentAwayQuestion('Bora')),
+      findsNothing,
+    );
 
     // Our connection drops: covered, and back with the secret.
     await first.incoming.close();

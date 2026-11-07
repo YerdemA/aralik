@@ -220,17 +220,31 @@ void main() {
       )
       ..handle(const DuelQuestion(0, Duration(seconds: 15)));
 
-    test('the opponent away stops the clock; back, it runs on', () {
+    test('the opponent away: an open question runs on, a reveal waits', () {
       final m = playing();
       final clock = m.clock;
-      m.handle(const DuelAway(1, Duration(seconds: 60)));
-      expect(m.paused, isTrue);
+      m.handle(const DuelAway(1, Duration(seconds: 45)));
+      // Nobody's question stops: no free time to look an answer up.
+      expect(m.paused, isFalse);
       expect(m.opponentAway, isTrue);
-      expect(m.awayLeft, const Duration(seconds: 60));
-      expect(m.clock, greaterThan(clock));
+      expect(m.awayLeft, const Duration(seconds: 45));
+      // The open question's clock is not touched.
+      expect(m.clock, clock);
+      m.handle(
+        const DuelReveal(
+          index: 0,
+          results: [
+            (low: 1, high: 2, points: 10, hit: true),
+            (low: null, high: null, points: -50, hit: false),
+          ],
+          totals: [10, -50],
+          nextIn: Duration(seconds: 12),
+        ),
+      );
+      expect(m.paused, isTrue);
       m.handle(const DuelBack(1, Duration(seconds: 7)));
       expect(m.paused, isFalse);
-      expect(m.timeLeft, const Duration(seconds: 7));
+      expect(m.nextIn, const Duration(seconds: 7));
       // About this player: ignored (the room tells the other one).
       m.handle(const DuelAway(0, Duration(seconds: 60)));
       expect(m.paused, isFalse);
@@ -272,6 +286,7 @@ void main() {
           'locked': [true, true],
           'away': 0,
           'awayMs': 40000,
+          'budget': 31000,
         }),
       )!;
       m.handle(event);
@@ -283,6 +298,9 @@ void main() {
       expect(m.nextIn, const Duration(seconds: 8));
       expect(m.opponentAway, isTrue);
       expect(m.awayLeft, const Duration(seconds: 40));
+      // This player's own time away left, for the home screen's card.
+      expect(m.awayBudget, const Duration(seconds: 31));
+      expect(DuelMatch().awayBudget, duelReconnectWindow);
     });
   });
 }

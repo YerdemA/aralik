@@ -3,8 +3,6 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../core/duel.dart';
-
 /// A duel or tournament this player is in the middle of: kept on the phone
 /// while it is played, so that after leaving it (the close button, the app
 /// closed or killed) the home screen offers to go back to it with the
@@ -28,9 +26,9 @@ class PendingMatch {
   /// The name it is played under (the room checks it on coming back).
   final String name;
 
-  /// Until when the room keeps the seat: for a duel the time to come back
-  /// ([duelReconnectWindow] after the app last heard from it), for a
-  /// tournament an estimate of when its match ends.
+  /// Until when the room keeps the seat: for a duel the player's time away
+  /// left (from when the app last heard from the room), for a tournament
+  /// an estimate of when its match ends.
   final DateTime until;
 
   bool isLive(DateTime now) => now.isBefore(until);
@@ -171,6 +169,3 @@ class PendingMatchKeeper {
     store?.clear(rejoin: secret).ignore();
   }
 }
-
-/// The window a duel's seat is kept after the app last heard from it.
-const Duration pendingDuelWindow = duelReconnectWindow;

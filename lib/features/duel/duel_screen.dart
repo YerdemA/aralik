@@ -150,7 +150,7 @@ class _DuelScreenState extends State<DuelScreen> {
         code: code,
         rejoin: rejoin,
         name: widget.name,
-        window: pendingDuelWindow,
+        window: _match.awayBudget,
         force: now,
       );
     } else if (_match.phase == DuelPhase.over ||
@@ -314,8 +314,19 @@ class _DuelScreenState extends State<DuelScreen> {
     setState(() {});
   }
 
+  /// The room's clock this screen last started from ([DuelMatch.clock]).
+  int _clockSeen = -1;
+
   void _openQuestion(GameController game, int index) {
-    if (_deadline != null && game.index == index && !game.isLocked) return;
+    // Same question, same clock: keep counting. A new clock (back after a
+    // drop) takes the time the room says is left.
+    if (_deadline != null &&
+        game.index == index &&
+        !game.isLocked &&
+        _clockSeen == _match.clock) {
+      return;
+    }
+    _clockSeen = _match.clock;
     while (game.index < index) {
       if (!game.isLocked) game.timeOut();
       game.next();
@@ -566,7 +577,20 @@ class _DuelScreenState extends State<DuelScreen> {
                   ),
                 ),
               ),
-              if (_match.paused && error == null)
+              // The opponent dropped during a question: it goes on; a note
+              // says so without covering it.
+              if (_match.opponentAway &&
+                  !_match.paused &&
+                  !_match.reconnecting &&
+                  _match.phase == DuelPhase.question &&
+                  error == null)
+                Positioned(
+                  left: 12,
+                  right: 12,
+                  bottom: 8,
+                  child: _AwayNote(name: _match.opponentName),
+                ),
+              if ((_match.paused || _match.reconnecting) && error == null)
                 Positioned.fill(
                   child: _PausedCover(
                     reconnecting: _match.reconnecting,
@@ -1269,6 +1293,43 @@ class _QuestionStrip extends StatelessWidget {
 
 /// Covers the duel while the clock is stopped: this player's connection
 /// is coming back, or the opponent's is gone (with their time left).
+/// The opponent's connection dropped mid-question: the question goes on.
+class _AwayNote extends StatelessWidget {
+  const _AwayNote({required this.name});
+
+  final String name;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return Material(
+      color: theme.colorScheme.inverseSurface,
+      borderRadius: BorderRadius.circular(14),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+        child: Row(
+          children: [
+            Icon(
+              Icons.wifi_off_rounded,
+              size: 20,
+              color: theme.colorScheme.onInverseSurface,
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Text(
+                AppStrings.duelOpponentAwayQuestion(name),
+                style: theme.textTheme.bodyMedium?.copyWith(
+                  color: theme.colorScheme.onInverseSurface,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 class _PausedCover extends StatefulWidget {
   const _PausedCover({
     required this.reconnecting,

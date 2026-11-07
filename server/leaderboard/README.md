@@ -51,9 +51,11 @@ git add docs/content/manifest.json; git commit -m "Leaderboard URL"; git push
 Uygulamalar manifest'e en fazla 6 saatte bir baktığı için tablo, bir sonraki açılışlarda görünür.
 
 ## Kopan bağlantı
-Düello: oyun sırasında bağlantı kopunca oda süreyi iki taraf için durdurur, rakibe `away` gönderir ve `RECONNECT_MS` (60 sn)
-bekler. Oyuncu aynı oda adresine `rejoin` anahtarıyla bağlanırsa `resume` ile oyunun tüm durumunu alır, rakibe `back` gider
-ve soru kaldığı saniyeden sürer. Dönmezse rakip kazanır; ikisi de dönmezse oda silinir. Aynı oyuncunun eski, ölü bağlantısı
+Düello: oyun sırasında bağlantı kopunca rakibe `away` gider. Her oyuncunun düello boyunca toplam `AWAY_BUDGET_MS` (45 sn)
+uzak kalma hakkı vardır, her kopmada kaldığı yerden azalır. Açık soru kimse için durmaz (kopan geç kalırsa −50; cevap
+aramak için bağlantıyı kesmek bir şey kazandırmaz), açılan soru ise kopan dönene kadar bekler. Oyuncu aynı oda adresine
+`rejoin` anahtarıyla bağlanırsa `resume` ile oyunun tüm durumunu ve kalan hakkını alır, rakibe `back` gider. Hakkı bitince
+rakip kazanır; ikisinin de biterse oda silinir. Sessiz bağlantılar `src/liveness.js` ile 10 sn'de fark edilir. Aynı oyuncunun eski, ölü bağlantısı
 yenisi gelince kapatılır. Turnuva: oyun durmaz; kopan oyuncu maç bitene kadar anahtarla döner (`resume`), dönmezse `left`.
 
 ## Düello odaları

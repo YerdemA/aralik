@@ -33,21 +33,28 @@
 //                    ('left': the loser gave up or did not come back)
 //                {t: 'error', code}
 //                {t: 'away', seat, ms}   the other player's connection
-//                    dropped: the clock stops, they have ms to come back
-//                {t: 'back', seat, ms}   they are back; the clock runs on
-//                    with ms left on the open question (or the reveal)
+//                    dropped; ms: what is left of their time away. An open
+//                    question runs on; a revealed one waits for them.
+//                {t: 'back', seat, ms}   they are back; ms left on the
+//                    open question (or the reveal, whose clock runs again)
 //                {t: 'resume', you, names, questions, questionMs, rejoin,
 //                    index, phase, ms, results, totals, locked, away}
 //                    to a player who came back: the whole duel so far.
 //                    phase 'question' | 'reveal', ms left on it, results
 //                    [[r0, r1], …] per revealed question, locked [bool,
 //                    bool] on the open one, away: the other seat if it is
-//                    gone too (with ms in awayMs), else null
+//                    gone too (with ms in awayMs), else null; budget: ms
+//                    of time away this player has left
 //
-// A dropped connection does not end the duel at once: the clock stops for
-// both and the player has RECONNECT_MS to come back with their rejoin
-// secret. Then the question goes on from the second it stopped; otherwise
-// the other player wins. A connection that goes silent (no network) is
+// A dropped connection does not end the duel at once: the player may come
+// back with their rejoin secret. Each player has AWAY_BUDGET_MS of time
+// away for the whole duel, counted down across every drop; when it runs out
+// the other player wins. An open question does not stop for anyone: the one
+// who dropped loses its seconds (time out: the floor) and the other answers
+// as usual, so dropping out to look an answer up gains nothing and waiting
+// gives nobody extra time. Only between questions does the duel wait: a
+// revealed question's clock stops and the next one does not open until
+// they are back. A connection that goes silent (no network) is
 // closed by the room after a few seconds and counts as dropped
 // (liveness.js). A player who left the app may also come back with only
 // their secret and give up from there (?rejoin=…&resign=1): the other
@@ -72,8 +79,8 @@ export const REVEAL_MS = 12_000;
 export const JOIN_TIMEOUT_MS = 10 * 60_000;
 /** A finished room is wiped after this. */
 export const CLEANUP_MS = 60_000;
-/** How long a player whose connection dropped may take to come back. */
-export const RECONNECT_MS = 60_000;
+/** A player's time away (dropped connections) for the whole duel. */
+export const AWAY_BUDGET_MS = 45_000;
 
 /** No I, L, O, 0 or 1: nothing to mix up when read aloud. */
 export const CODE_ALPHABET = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
@@ -197,9 +204,12 @@ export function createRoom(code, now) {
       totals: [0, 0],
       winner: null,
       reason: null,
-      // Per seat: when a dropped player's time to come back runs out.
+      // Per seat, while their connection is gone: {since, until}; until
+      // is when their time away runs out.
       away: [null, null],
-      // While someone is away: the time that was left on the phase.
+      // Per seat: time away left for the rest of the duel.
+      budget: [AWAY_BUDGET_MS, AWAY_BUDGET_MS],
+      // A revealed question while someone is away: {ms} left on it.
       paused: null,
     },
     [],
@@ -264,6 +274,8 @@ function askQuestion(state, index, now) {
 export function lock(state, seat, { i, low, high }, now, content) {
   if (state.phase !== 'question' || i !== state.index) return step(state);
   if (state.locks[seat]) return step(state);
+  // Too late: the question's time (and the network slack) is over.
+  if (now > state.deadline + LOCK_GRACE_MS) return step(state);
   const q = content.questions.get(state.questions[i]);
   const empty = low === null && high === null;
   if (
@@ -273,7 +285,7 @@ export function lock(state, seat, { i, low, high }, now, content) {
     return step(
       state,
       [{ to: seat, msg: { t: 'error', code: 'bad_lock' } }],
-      state.deadline + LOCK_GRACE_MS,
+      questionAlarm(state),
     );
   }
   const locks = [...state.locks];
@@ -283,7 +295,7 @@ export function lock(state, seat, { i, low, high }, now, content) {
   return step(
     locked,
     [{ to: 'all', msg: { t: 'locked', i, seat } }],
-    state.paused ? awayAlarm(state) : state.deadline + LOCK_GRACE_MS,
+    questionAlarm(locked),
   );
 }
 
@@ -324,7 +336,7 @@ function reveal(state, now, content) {
     const over = finish(revealed, 'done', now);
     return step(over.state, [...out, ...over.out], over.alarm);
   }
-  if (state.paused) {
+  if (anyAway(state)) {
     return step(
       { ...revealed, deadline: null, paused: { ms: REVEAL_MS } },
       out,
@@ -366,7 +378,9 @@ export function next(state, seat, { i }, now) {
   if (state.phase !== 'reveal' || i !== state.index) return step(state);
   const ready = [...state.ready];
   ready[seat] = true;
-  if (ready[0] && ready[1]) return askQuestion(state, state.index + 1, now);
+  if (ready[0] && ready[1] && !anyAway(state)) {
+    return askQuestion(state, state.index + 1, now);
+  }
   return step(
     { ...state, ready },
     [],
@@ -374,10 +388,41 @@ export function next(state, seat, { i }, now) {
   );
 }
 
+/** The seats' {since, until} while away (older rooms kept a number). */
+function awayOf(state) {
+  return (state.away ?? [null, null]).map((a) =>
+    typeof a === 'number' ? { since: a - AWAY_BUDGET_MS, until: a } : a,
+  );
+}
+
+function budgetOf(state) {
+  return state.budget ?? [AWAY_BUDGET_MS, AWAY_BUDGET_MS];
+}
+
+function anyAway(state) {
+  return awayOf(state).some((a) => a !== null);
+}
+
+/** The alarm while someone is away: the first time away to run out. */
+function awayAlarm(state) {
+  const times = awayOf(state)
+    .filter((a) => a !== null)
+    .map((a) => a.until);
+  return times.length === 0 ? null : Math.min(...times);
+}
+
+/** An open question's alarm: its deadline, or someone's time away
+ * running out first. */
+function questionAlarm(state) {
+  const end = state.deadline + LOCK_GRACE_MS;
+  const away = awayAlarm(state);
+  return away === null ? end : Math.min(end, away);
+}
+
 /**
  * A player's connection closed. [since]: when it really went (a silent
- * connection is noticed only seconds later); the clock stops from then, so
- * the time spent finding out is given back.
+ * connection is noticed only seconds later); their time away counts from
+ * then. An open question runs on for both; a revealed one waits.
  */
 export function leave(state, seat, now, since = now) {
   if (!state || state.phase === 'over') return step(state);
@@ -390,19 +435,164 @@ export function leave(state, seat, now, since = now) {
       state.createdAt + JOIN_TIMEOUT_MS,
     );
   }
-  // In play: stop the clock and wait for them to come back.
-  const away = [...(state.away ?? [null, null])];
+  const away = awayOf(state);
   if (away[seat] !== null) return step(state);
-  away[seat] = now + RECONNECT_MS;
+  const from = Math.min(since, now);
+  const until = from + budgetOf(state)[seat];
+  if (until <= now) return finish(state, 'left', now, 1 - seat);
+  away[seat] = { since: from, until };
+  const out = [{ to: 1 - seat, msg: { t: 'away', seat, ms: until - now } }];
+  if (state.phase === 'question') {
+    const gone = { ...state, away };
+    return step(gone, out, questionAlarm(gone));
+  }
+  // A revealed question: its clock stops until they are back.
   const paused = state.paused ?? {
-    ms: Math.max(0, state.deadline - Math.min(since, now)),
+    ms: Math.max(0, state.deadline - from),
   };
   const waiting = { ...state, away, paused, deadline: null };
-  return step(
-    waiting,
-    [{ to: 1 - seat, msg: { t: 'away', seat, ms: RECONNECT_MS } }],
-    awayAlarm(waiting),
-  );
+  return step(waiting, out, awayAlarm(waiting));
+}
+
+/** Everything a returning player needs to pick the duel up again. */
+function resumeMessage(state, seat, now) {
+  const other = 1 - seat;
+  const away = awayOf(state)[other];
+  return {
+    t: 'resume',
+    you: seat,
+    names: state.players.map((p) => p.name),
+    questions: state.questions,
+    questionMs: QUESTION_MS,
+    rejoin: state.players[seat].token,
+    index: state.index,
+    phase: state.phase,
+    ms: state.paused ? state.paused.ms : Math.max(0, state.deadline - now),
+    results: state.results,
+    totals: state.totals,
+    locked: state.locks.map((l) => l !== null),
+    away: away === null ? null : other,
+    awayMs: away === null ? null : Math.max(0, away.until - now),
+    budget: budgetOf(state)[seat],
+  };
+}
+
+/**
+ * A player comes back with their rejoin secret. Returns {seat, ...step}
+ * or {error}. Their time away is taken off what they have left; a revealed
+ * question's clock runs again once nobody is away.
+ */
+export function rejoin(state, token, now) {
+  if (!state || typeof token !== 'string' || token.length === 0) {
+    return error('no_room');
+  }
+  const seat = state.players.findIndex((p) => p.token === token);
+  if (seat < 0) return error('no_room');
+  if (state.phase === 'over') {
+    // It ended while they were away: tell them how.
+    return {
+      seat,
+      ...step(state, [
+        {
+          to: seat,
+          msg: {
+            t: 'end',
+            totals: state.totals,
+            winner: state.winner,
+            reason: state.reason,
+          },
+        },
+      ]),
+    };
+  }
+  if (state.phase !== 'question' && state.phase !== 'reveal') {
+    return error('room_closed');
+  }
+  const away = awayOf(state);
+  const gone = away[seat];
+  const budget = [...budgetOf(state)];
+  if (gone !== null) {
+    budget[seat] = Math.max(0, budget[seat] - (now - gone.since));
+  }
+  away[seat] = null;
+  const back = { ...state, away, budget };
+  const otherAway = away[1 - seat] !== null;
+  const tellOther = (ms) =>
+    gone === null || otherAway ? [] : [{ to: 1 - seat, msg: { t: 'back', seat, ms } }];
+
+  if (state.phase === 'question') {
+    // The question never stopped.
+    const ms = Math.max(0, back.deadline - now);
+    return {
+      seat,
+      ...step(
+        back,
+        [{ to: seat, msg: resumeMessage(back, seat, now) }, ...tellOther(ms)],
+        questionAlarm(back),
+      ),
+    };
+  }
+  if (otherAway) {
+    // The other one is gone too: the reveal stays stopped.
+    return {
+      seat,
+      ...step(
+        back,
+        [{ to: seat, msg: resumeMessage(back, seat, now) }],
+        awayAlarm(back),
+      ),
+    };
+  }
+  const ms = back.paused?.ms ?? Math.max(0, back.deadline - now);
+  const running = { ...back, paused: null, deadline: now + ms };
+  const out = [
+    { to: seat, msg: resumeMessage(running, seat, now) },
+    ...tellOther(ms),
+  ];
+  // Both said "devam" already: the next question now.
+  if (running.ready[0] && running.ready[1]) {
+    const ask = askQuestion(running, running.index + 1, now);
+    return { seat, ...step(ask.state, [...out, ...ask.out], ask.alarm) };
+  }
+  return { seat, ...step(running, out, running.deadline) };
+}
+
+/**
+ * The alarm went off. Returns {wipe: true} when the room's storage should
+ * be deleted.
+ */
+export function alarm(state, now, content) {
+  if (!state) return { wipe: true, ...step(state) };
+  if (state.phase === 'question' || state.phase === 'reveal') {
+    const away = awayOf(state);
+    const gone = [0, 1].filter(
+      (seat) => away[seat] !== null && now >= away[seat].until,
+    );
+    // Both out of time away: nobody to tell.
+    if (gone.length === 2) return { wipe: true, ...step(state) };
+    if (gone.length === 1) return finish(state, 'left', now, 1 - gone[0]);
+  }
+  switch (state.phase) {
+    case 'waiting':
+      if (now < state.createdAt + JOIN_TIMEOUT_MS) {
+        return step(state, [], state.createdAt + JOIN_TIMEOUT_MS);
+      }
+      return {
+        wipe: true,
+        ...step(state, [{ to: 'all', msg: { t: 'error', code: 'expired' } }]),
+      };
+    case 'question':
+      if (now < state.deadline + LOCK_GRACE_MS) {
+        return step(state, [], questionAlarm(state));
+      }
+      return reveal(state, now, content);
+    case 'reveal':
+      if (state.paused) return step(state, [], awayAlarm(state));
+      if (now < state.deadline) return step(state, [], state.deadline);
+      return askQuestion(state, state.index + 1, now);
+    default:
+      return { wipe: true, ...step(state) };
+  }
 }
 
 /** [seat] gives up: the other player wins at once. */
@@ -437,134 +627,6 @@ export function watchEvery(state, { play, idle }) {
   if (state.phase === 'question' || state.phase === 'reveal') return play;
   if (state.phase === 'waiting') return idle;
   return null;
-}
-
-/** The alarm while someone is away: the first time to come back to end. */
-function awayAlarm(state) {
-  const times = (state.away ?? []).filter((t) => t !== null);
-  return times.length === 0 ? null : Math.min(...times);
-}
-
-/** Everything a returning player needs to pick the duel up again. */
-function resumeMessage(state, seat, now) {
-  const other = 1 - seat;
-  const awayUntil = state.away[other];
-  return {
-    t: 'resume',
-    you: seat,
-    names: state.players.map((p) => p.name),
-    questions: state.questions,
-    questionMs: QUESTION_MS,
-    rejoin: state.players[seat].token,
-    index: state.index,
-    phase: state.phase,
-    ms: state.paused ? state.paused.ms : Math.max(0, state.deadline - now),
-    results: state.results,
-    totals: state.totals,
-    locked: state.locks.map((l) => l !== null),
-    away: awayUntil === null ? null : other,
-    awayMs: awayUntil === null ? null : Math.max(0, awayUntil - now),
-  };
-}
-
-/**
- * A player comes back with their rejoin secret. Returns {seat, ...step}
- * or {error}. The clock runs on once nobody is away any more.
- */
-export function rejoin(state, token, now) {
-  if (!state || typeof token !== 'string' || token.length === 0) {
-    return error('no_room');
-  }
-  const seat = state.players.findIndex((p) => p.token === token);
-  if (seat < 0) return error('no_room');
-  if (state.phase === 'over') {
-    // It ended while they were away: tell them how.
-    return {
-      seat,
-      ...step(state, [
-        {
-          to: seat,
-          msg: {
-            t: 'end',
-            totals: state.totals,
-            winner: state.winner,
-            reason: state.reason,
-          },
-        },
-      ]),
-    };
-  }
-  if (state.phase !== 'question' && state.phase !== 'reveal') {
-    return error('room_closed');
-  }
-  const away = [...(state.away ?? [null, null])];
-  away[seat] = null;
-  const back = { ...state, away };
-  if (away[1 - seat] !== null) {
-    // The other one is gone too: stay paused.
-    return {
-      seat,
-      ...step(
-        back,
-        [{ to: seat, msg: resumeMessage(back, seat, now) }],
-        awayAlarm(back),
-      ),
-    };
-  }
-  const ms = state.paused?.ms ?? Math.max(0, state.deadline - now);
-  const running = { ...back, paused: null, deadline: now + ms };
-  const alarm =
-    state.phase === 'question'
-      ? running.deadline + LOCK_GRACE_MS
-      : running.deadline;
-  return {
-    seat,
-    ...step(
-      running,
-      [
-        { to: seat, msg: resumeMessage(running, seat, now) },
-        { to: 1 - seat, msg: { t: 'back', seat, ms } },
-      ],
-      alarm,
-    ),
-  };
-}
-
-/**
- * The alarm went off. Returns {wipe: true} when the room's storage should
- * be deleted.
- */
-export function alarm(state, now, content) {
-  if (!state) return { wipe: true, ...step(state) };
-  if (state.paused && state.phase !== 'over') {
-    const gone = [0, 1].filter(
-      (seat) => state.away[seat] !== null && now >= state.away[seat],
-    );
-    if (gone.length === 0) return step(state, [], awayAlarm(state));
-    // Both gone for good: nobody to tell.
-    if (gone.length === 2) return { wipe: true, ...step(state) };
-    return finish(state, 'left', now, 1 - gone[0]);
-  }
-  switch (state.phase) {
-    case 'waiting':
-      if (now < state.createdAt + JOIN_TIMEOUT_MS) {
-        return step(state, [], state.createdAt + JOIN_TIMEOUT_MS);
-      }
-      return {
-        wipe: true,
-        ...step(state, [{ to: 'all', msg: { t: 'error', code: 'expired' } }]),
-      };
-    case 'question':
-      if (now < state.deadline + LOCK_GRACE_MS) {
-        return step(state, [], state.deadline + LOCK_GRACE_MS);
-      }
-      return reveal(state, now, content);
-    case 'reveal':
-      if (now < state.deadline) return step(state, [], state.deadline);
-      return askQuestion(state, state.index + 1, now);
-    default:
-      return { wipe: true, ...step(state) };
-  }
 }
 
 /** Whether a new room may take the place of [state] (code is free). */

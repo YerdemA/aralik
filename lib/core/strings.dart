@@ -336,19 +336,23 @@ abstract final class AppStrings {
   static const duelOpponentLeft = 'Rakibin ayrıldı.';
   static const reconnecting = 'Bağlantın koptu. Yeniden bağlanılıyor…';
   static const duelReconnectingHint =
-      'Süre durdu. Dönünce kaldığın yerden devam edersin.';
+      'Açık sorunun süresi işlemeye devam ediyor. Dönünce kaldığın yerden '
+      'sürer.';
   static String duelOpponentAway(String name) => '$name bağlantısını kaybetti.';
   static String duelOpponentAwayHint(int seconds) =>
-      'Süre durdu. $seconds sn içinde dönmezse düelloyu sen kazanırsın.';
+      'Sonraki soru onu bekliyor. $seconds sn içinde dönmezse düelloyu sen '
+      'kazanırsın.';
+  static String duelOpponentAwayQuestion(String name) =>
+      '$name bağlantısını kaybetti. Soru sürüyor, cevabını ver.';
   static const tournamentReconnectingHint =
       'Oyun sürüyor. Dönünce kaldığı yerden katılırsın.';
   static const duelPlayAgain = 'Yeni düello';
   static const duelHome = 'Ana ekran';
   static const duelQuitTitle = 'Düellodan çıkılsın mı?';
   static const duelQuitBody =
-      'Rakibin seni 60 saniye bekler; bu sürede ana ekrandan düelloya '
-      'dönebilirsin. Dönmezsen rakibin kazanır. Teslim olursan düello hemen '
-      'biter.';
+      'Düello boyunca toplam 45 saniye uzak kalabilirsin; bu sürede ana '
+      'ekrandan dönebilirsin. Açık sorunun süresi bu sırada işler. '
+      'Dönmezsen rakibin kazanır. Teslim olursan düello hemen biter.';
   static const duelStay = 'Kal';
   static const duelResign = 'Teslim ol';
 

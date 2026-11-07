@@ -6,10 +6,12 @@
 /// each. A question is revealed when both locked or its time ran out. The
 /// server scores every interval with the same formula as the app.
 ///
-/// A dropped connection does not end the duel: the room stops the clock
-/// for both and the app comes back with its rejoin secret within
-/// [duelReconnectWindow]; the room then sends the whole duel so far
-/// ([DuelResume]) and the question goes on from where it stopped.
+/// A dropped connection does not end the duel: the app comes back with its
+/// rejoin secret; the room then sends the whole duel so far ([DuelResume]).
+/// Each player has [duelReconnectWindow] of time away for the whole duel.
+/// An open question does not stop for anyone (the one away loses its
+/// seconds), only a revealed one waits for them: dropping out to look an
+/// answer up gains nothing.
 library;
 
 import 'dart:convert';
@@ -24,9 +26,9 @@ const int duelProtocolVersion = 1;
 /// room that does not.
 const Duration duelRevealWait = Duration(seconds: 12);
 
-/// How long a dropped player may take to come back (RECONNECT_MS in
-/// duel.js); the app keeps trying for this long.
-const Duration duelReconnectWindow = Duration(seconds: 60);
+/// A player's time away for the whole duel (AWAY_BUDGET_MS in duel.js);
+/// the app keeps trying to come back for at most this long.
+const Duration duelReconnectWindow = Duration(seconds: 45);
 
 /// No I, L, O, 0 or 1: nothing to mix up when read aloud.
 const String roomCodeAlphabet = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
@@ -92,6 +94,9 @@ sealed class DuelEvent {
           away: m['away'] as int?,
           awayLeft: m['awayMs'] is int
               ? Duration(milliseconds: m['awayMs'] as int)
+              : null,
+          budget: m['budget'] is int
+              ? Duration(milliseconds: m['budget'] as int)
               : null,
         ),
         'question' => DuelQuestion(
@@ -163,6 +168,7 @@ class DuelResume extends DuelEvent {
     required this.locked,
     required this.away,
     required this.awayLeft,
+    this.budget,
   });
   final int you;
   final List<String> names;
@@ -187,6 +193,9 @@ class DuelResume extends DuelEvent {
   /// The other seat when it is away too, with [awayLeft] to come back.
   final int? away;
   final Duration? awayLeft;
+
+  /// This player's time away left for the rest of the duel.
+  final Duration? budget;
 }
 
 /// The room is open; the friend joins with [code].
@@ -344,8 +353,15 @@ class DuelMatch extends ChangeNotifier {
   bool get opponentAway => _opponentAway;
   Duration get awayLeft => _awayLeft;
 
-  /// The clock is stopped: someone's connection dropped.
-  bool get paused => _reconnecting || _opponentAway;
+  /// The clock is stopped: a revealed question waits for someone whose
+  /// connection dropped. An open question never stops.
+  bool get paused =>
+      _phase == DuelPhase.reveal && (_reconnecting || _opponentAway);
+
+  /// This player's time away left for the rest of the duel (the room says
+  /// so on coming back).
+  Duration get awayBudget => _awayBudget;
+  Duration _awayBudget = duelReconnectWindow;
 
   /// Whether the room has this player's lock on the open question (known
   /// after a [DuelResume]; a lock sent while the connection was gone is
@@ -432,7 +448,8 @@ class DuelMatch extends ChangeNotifier {
         if (seat == _you) return;
         _opponentAway = true;
         _awayLeft = left;
-        _clock++;
+        // Only a revealed question stops; an open one runs on as it was.
+        if (_phase == DuelPhase.reveal) _clock++;
       case DuelBack(:final seat, :final left):
         if (seat == _you) return;
         _opponentAway = false;
@@ -497,6 +514,7 @@ class DuelMatch extends ChangeNotifier {
     _opponentLocked = r.locked.length == 2 && r.locked[1 - _you];
     _opponentAway = r.away != null;
     _awayLeft = r.awayLeft ?? Duration.zero;
+    _awayBudget = r.budget ?? _awayBudget;
     _reconnecting = false;
     _clock++;
   }
