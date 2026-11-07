@@ -4,18 +4,20 @@ import '../../core/strings.dart';
 import '../../data/leaderboard.dart';
 import '../../data/settings_store.dart';
 import '../../widgets/link_text.dart';
-import '../leaderboard/nickname_sheet.dart';
+import '../leaderboard/join_sheet.dart';
 import 'attributions_screen.dart';
-import 'duel_name_sheet.dart';
+import 'user_name_sheet.dart';
 
-/// Settings: the theme, sound effects, and "Hakkında" with data sources and licenses,
-/// open-source licenses and the privacy policy.
+/// Settings: the player's one name (the only place it is typed), the
+/// theme, sound effects, the leaderboard while joined, and "Hakkında" with
+/// data sources and licenses, open-source licenses and the privacy policy.
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key, required this.settings, this.leaderboard});
 
   final SettingsStore settings;
 
-  /// Shows the leaderboard section while joined; null hides it.
+  /// The leaderboard: a name change goes there too while joined, and its
+  /// section shows then. Null when there is no server.
   final LeaderboardStore? leaderboard;
 
   @override
@@ -27,6 +29,30 @@ class SettingsScreen extends StatelessWidget {
         child: ListView(
           padding: const EdgeInsets.fromLTRB(20, 8, 20, 24),
           children: [
+            const _SectionTitle(AppStrings.userNameSection),
+            Card(
+              clipBehavior: Clip.antiAlias,
+              child: ListenableBuilder(
+                listenable: settings,
+                builder: (context, _) {
+                  final name = settings.userName;
+                  final next = settings.nextNameChange();
+                  return ListTile(
+                    leading: const Icon(Icons.badge_rounded),
+                    title: Text(name ?? AppStrings.userNameUnset),
+                    subtitle: Text(
+                      next == null
+                          ? AppStrings.userNameSubtitle
+                          : AppStrings.userNameNextChange(next),
+                    ),
+                    trailing: const Icon(Icons.edit_rounded),
+                    onTap: () =>
+                        showUserNameSheet(context, settings, leaderboard),
+                  );
+                },
+              ),
+            ),
+            const SizedBox(height: 24),
             const _SectionTitle(AppStrings.appearance),
             Card(
               child: Padding(
@@ -82,28 +108,6 @@ class SettingsScreen extends StatelessWidget {
                   value: settings.soundOn,
                   onChanged: settings.setSoundOn,
                 ),
-              ),
-            ),
-            const SizedBox(height: 24),
-            const _SectionTitle(AppStrings.duelSection),
-            Card(
-              clipBehavior: Clip.antiAlias,
-              child: ListenableBuilder(
-                listenable: Listenable.merge([settings, ?leaderboard]),
-                builder: (context, _) {
-                  final name = duelNameOf(
-                    settings,
-                    leaderboard?.account?.nickname,
-                  );
-                  return ListTile(
-                    leading: const Icon(Icons.bolt_rounded),
-                    title: Text(name ?? AppStrings.duelNameUnset),
-                    subtitle: const Text(AppStrings.duelNameSubtitle),
-                    trailing: const Icon(Icons.edit_rounded),
-                    onTap: () =>
-                        showDuelNameSheet(context, settings, initial: name),
-                  );
-                },
               ),
             ),
             if (leaderboard != null)
@@ -171,7 +175,8 @@ class _SectionTitle extends StatelessWidget {
   );
 }
 
-/// Nickname and leaving the leaderboard (deletes the data on the server).
+/// Leaving the leaderboard: the scores on the server are deleted, the name
+/// stays in the app (duels and tournaments keep using it).
 class _LeaderboardSection extends StatelessWidget {
   const _LeaderboardSection({required this.store});
 
@@ -220,12 +225,10 @@ class _LeaderboardSection extends StatelessWidget {
           clipBehavior: Clip.antiAlias,
           child: Column(
             children: [
-              ListTile(
-                leading: const Icon(Icons.badge_rounded),
-                title: Text(store.account?.nickname ?? ''),
-                subtitle: const Text(AppStrings.nicknameSubtitle),
-                trailing: const Icon(Icons.edit_rounded),
-                onTap: () => showNicknameSheet(context, store),
+              const ListTile(
+                leading: Icon(Icons.emoji_events_rounded),
+                title: Text(AppStrings.leaderboardJoined),
+                subtitle: Text(AppStrings.leaderboardResets),
               ),
               const Divider(height: 1),
               ListTile(

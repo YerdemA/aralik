@@ -26,6 +26,7 @@ import '../tournament/tournament_entry_screen.dart';
 import '../leaderboard/leaderboard_screen.dart';
 import '../result/summary_screen.dart';
 import '../settings/settings_screen.dart';
+import '../settings/user_name_sheet.dart';
 import '../stats/stats_screen.dart';
 
 /// The main card with the mascot, then streak, last score and calibration.
@@ -82,6 +83,9 @@ class _HomeScreenState extends State<HomeScreen> {
     // A finished set that could not be sent earlier (offline) goes now.
     _leaderboard?.submitPending(_today);
     WidgetsBinding.instance.addPostFrameCallback((_) => _offerUpdate());
+    // One name everywhere: an older app kept the leaderboard nickname
+    // apart from the duel name; the account's wins.
+    syncUserName(widget.settings, _leaderboard);
     _checkDevice();
   }
 
@@ -89,7 +93,9 @@ class _HomeScreenState extends State<HomeScreen> {
   /// today's set was already played here.
   Future<void> _checkDevice() async {
     final restored = await _leaderboard?.checkDevice(_today) ?? false;
-    if (!restored || !mounted) return;
+    if (!restored) return;
+    await syncUserName(widget.settings, _leaderboard);
+    if (!mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(
@@ -208,6 +214,7 @@ class _HomeScreenState extends State<HomeScreen> {
     MaterialPageRoute<void>(
       builder: (_) => LeaderboardScreen(
         store: _leaderboard!,
+        settings: widget.settings,
         day: day,
         dayDone: _stats.isDayComplete(day),
       ),
@@ -273,7 +280,7 @@ class _HomeScreenState extends State<HomeScreen> {
         repository: _repository,
         stats: _stats,
         settings: widget.settings,
-        suggestedName: _leaderboard?.account?.nickname,
+        leaderboard: _leaderboard,
         scaled: scaledOn(_today, widget.scoringV2Day?.call()),
       ),
     ),
@@ -286,7 +293,7 @@ class _HomeScreenState extends State<HomeScreen> {
         repository: _repository,
         stats: _stats,
         settings: widget.settings,
-        suggestedName: _leaderboard?.account?.nickname,
+        leaderboard: _leaderboard,
         scaled: scaledOn(_today, widget.scoringV2Day?.call()),
       ),
     ),

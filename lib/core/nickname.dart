@@ -29,3 +29,15 @@ NicknameProblem? nicknameProblem(String raw) {
   }
   return null;
 }
+
+/// How often the player's one name may change: the same everywhere
+/// (leaderboard, duel, tournament) and the server's `RENAME_DAYS`.
+const nameChangeEvery = Duration(days: 3);
+
+/// When a name last changed at [changedAt] may change again, or null when
+/// it may change now. The first choice of a name is not a change.
+DateTime? nextNameChange(DateTime? changedAt, DateTime now) {
+  if (changedAt == null) return null;
+  final at = changedAt.add(nameChangeEvery);
+  return now.isBefore(at) ? at : null;
+}

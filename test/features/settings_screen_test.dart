@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:aralik/core/strings.dart';
 import 'package:aralik/core/theme.dart';
 import 'package:aralik/data/attributions.dart';
+import 'package:aralik/data/leaderboard.dart';
 import 'package:aralik/data/settings_store.dart';
 import 'package:aralik/features/settings/attributions_screen.dart';
 import 'package:aralik/features/settings/settings_screen.dart';
@@ -123,11 +124,11 @@ void main() {
     );
   });
 
-  testWidgets('the duel name is chosen in settings', (tester) async {
+  testWidgets('the one name is chosen in settings', (tester) async {
     final settings = await settingsStore();
     await tester.pumpWidget(app(SettingsScreen(settings: settings)));
-    expect(find.text(AppStrings.duelNameUnset), findsOneWidget);
-    await tester.tap(find.text(AppStrings.duelNameUnset));
+    expect(find.text(AppStrings.userNameUnset), findsOneWidget);
+    await tester.tap(find.text(AppStrings.userNameUnset));
     await tester.pumpAndSettle();
     await tester.enterText(find.byType(TextField), 'x');
     await tester.tap(find.text(AppStrings.save));
@@ -136,7 +137,117 @@ void main() {
     await tester.enterText(find.byType(TextField), '  Ayşe ');
     await tester.tap(find.text(AppStrings.save));
     await tester.pumpAndSettle();
-    expect(settings.duelName, 'Ayşe');
+    expect(settings.userName, 'Ayşe');
     expect(find.text('Ayşe'), findsOneWidget);
+    // The first choice is free; a change then waits three days.
+    expect(settings.nextNameChange(), isNull);
+
+    await tester.tap(find.text('Ayşe'));
+    await tester.pumpAndSettle();
+    await tester.enterText(find.byType(TextField), 'Bora');
+    await tester.tap(find.text(AppStrings.save));
+    await tester.pumpAndSettle();
+    expect(settings.userName, 'Bora');
+    final next = settings.nextNameChange();
+    expect(next, isNotNull);
+    expect(find.text(AppStrings.userNameNextChange(next!)), findsOneWidget);
+
+    await tester.tap(find.text('Bora'));
+    await tester.pumpAndSettle();
+    expect(find.text(AppStrings.renameWait(next)), findsOneWidget);
+    final field = tester.widget<TextField>(find.byType(TextField));
+    expect(field.enabled, isFalse);
+  });
+
+  testWidgets('while joined a change renames on the leaderboard too', (
+    tester,
+  ) async {
+    final settings = await settingsStore({'duel_name': 'Ayşe'});
+    final prefs = await SharedPreferences.getInstance();
+    final sent = <String, Object?>{};
+    var wait = false;
+    final store = LeaderboardStore(
+      prefs,
+      serviceUri: () => Uri.parse('https://lb.example/'),
+      deviceKey: () async => null,
+      request: (method, uri, [body]) async {
+        sent[uri.path] = body;
+        return switch (uri.path) {
+          '/v1/register' => (
+            status: 201,
+            body: {'id': 'p1', 'token': 't', 'nickname': body!['nickname']},
+          ),
+          '/v1/rename' when wait => (
+            status: 429,
+            body: {
+              'error': 'rename_wait',
+              'retry_at': DateTime(2026, 11, 20).millisecondsSinceEpoch,
+            },
+          ),
+          '/v1/rename' => (status: 200, body: {'nickname': body!['nickname']}),
+          _ => (status: 200, body: const <String, Object?>{}),
+        };
+      },
+    );
+    await store.join('Ayşe');
+    await tester.pumpWidget(
+      app(SettingsScreen(settings: settings, leaderboard: store)),
+    );
+    expect(find.text(AppStrings.leaveLeaderboardHint), findsOneWidget);
+
+    await tester.tap(find.text('Ayşe'));
+    await tester.pumpAndSettle();
+    await tester.enterText(find.byType(TextField), 'Bora');
+    await tester.tap(find.text(AppStrings.save));
+    await tester.pumpAndSettle();
+    expect((sent['/v1/rename']! as Map)['nickname'], 'Bora');
+    expect(store.account?.nickname, 'Bora');
+    expect(settings.userName, 'Bora');
+
+    // The server knows of a later change than the app: its date wins.
+    await settings.freeNameChange();
+    wait = true;
+    await tester.tap(find.text('Bora'));
+    await tester.pumpAndSettle();
+    await tester.enterText(find.byType(TextField), 'Cem');
+    await tester.tap(find.text(AppStrings.save));
+    await tester.pumpAndSettle();
+    expect(settings.userName, 'Bora');
+    expect(
+      settings.nextNameChange(DateTime(2026, 11, 19)),
+      DateTime(2026, 11, 20),
+    );
+    expect(
+      find.text(AppStrings.renameWait(DateTime(2026, 11, 20))),
+      findsOneWidget,
+    );
+  });
+
+  testWidgets('leaving the table keeps the name', (tester) async {
+    final settings = await settingsStore({'duel_name': 'Ayşe'});
+    final store = LeaderboardStore(
+      await SharedPreferences.getInstance(),
+      serviceUri: () => Uri.parse('https://lb.example/'),
+      deviceKey: () async => null,
+      request: (method, uri, [body]) async => switch (uri.path) {
+        '/v1/register' => (
+          status: 201,
+          body: {'id': 'p1', 'token': 't', 'nickname': 'Ayşe'},
+        ),
+        _ => (status: 200, body: const <String, Object?>{}),
+      },
+    );
+    await store.join('Ayşe');
+    await tester.pumpWidget(
+      app(SettingsScreen(settings: settings, leaderboard: store)),
+    );
+    await tester.tap(find.text(AppStrings.leaveLeaderboard));
+    await tester.pumpAndSettle();
+    expect(find.text(AppStrings.leaveConfirmBody), findsOneWidget);
+    await tester.tap(find.text(AppStrings.leave));
+    await tester.pumpAndSettle();
+    expect(store.joined, isFalse);
+    expect(settings.userName, 'Ayşe');
+    expect(find.text(AppStrings.leaveLeaderboard), findsNothing);
   });
 }

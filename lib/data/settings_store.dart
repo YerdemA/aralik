@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../core/nickname.dart' as nick;
+
 /// User settings (shared_preferences): the theme, sound effects and the
-/// duel name.
+/// player's one name.
 class SettingsStore extends ChangeNotifier {
   SettingsStore(this._prefs)
     : _themeMode =
@@ -13,7 +15,9 @@ class SettingsStore extends ChangeNotifier {
       SettingsStore(await SharedPreferences.getInstance());
 
   static const _themeKey = 'theme_mode';
-  static const _duelNameKey = 'duel_name';
+  // The one user name; the key is from when it was only the duel name.
+  static const _nameKey = 'duel_name';
+  static const _nameChangedKey = 'name_changed_at';
   static const _soundKey = 'sound_on';
 
   final SharedPreferences _prefs;
@@ -38,12 +42,50 @@ class SettingsStore extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// The name shown to duel opponents, or null until one is chosen
-  /// (Settings → Düello adın; the lobby has no name field).
-  String? get duelName => _prefs.getString(_duelNameKey);
+  /// The player's one name: on the leaderboard, in duels and tournaments.
+  /// Null until chosen. It is only typed in Settings
+  /// (features/settings/user_name_sheet.dart); while joined it is the
+  /// leaderboard nickname too.
+  String? get userName => _prefs.getString(_nameKey);
 
-  Future<void> setDuelName(String name) async {
-    await _prefs.setString(_duelNameKey, name);
+  /// When the name last changed (not set by the first choice).
+  DateTime? get nameChangedAt {
+    final ms = _prefs.getInt(_nameChangedKey);
+    return ms == null ? null : DateTime.fromMillisecondsSinceEpoch(ms);
+  }
+
+  /// When the name may change again, or null when it may change now.
+  DateTime? nextNameChange([DateTime? now]) =>
+      nick.nextNameChange(nameChangedAt, now ?? DateTime.now());
+
+  /// Chooses or changes the name. A change (not the first choice) starts
+  /// the wait of [nick.nameChangeEvery]; callers check [nextNameChange].
+  Future<void> setUserName(String name, {DateTime? now}) async {
+    final old = userName;
+    if (old == name) return;
+    await _prefs.setString(_nameKey, name);
+    if (old != null) await markNameChanged(now ?? DateTime.now());
+    notifyListeners();
+  }
+
+  /// Takes the name the leaderboard account has (a restored account, or
+  /// an older app's separate nickname). Not a change by the player.
+  Future<void> adoptUserName(String name) async {
+    if (userName == name) return;
+    await _prefs.setString(_nameKey, name);
+    notifyListeners();
+  }
+
+  /// Records a change at [at] (the server may know of a later one).
+  Future<void> markNameChanged(DateTime at) async {
+    await _prefs.setInt(_nameChangedKey, at.millisecondsSinceEpoch);
+    notifyListeners();
+  }
+
+  /// The leaderboard refused the name (taken or blocked): the player may
+  /// pick another one right away.
+  Future<void> freeNameChange() async {
+    await _prefs.remove(_nameChangedKey);
     notifyListeners();
   }
 }

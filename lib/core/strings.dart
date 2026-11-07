@@ -107,11 +107,20 @@ abstract final class AppStrings {
   static const leaderboardEmpty = 'Henüz kimse yok. İlk sen ol!';
   static const leaderboardJoin = 'Tabloya katıl';
   static String leaderboardRestored(String nickname) =>
-      'Bu cihazdaki hesabın geri geldi: $nickname';
+      'Bu cihazın tablodaki hesabı geri geldi. Kullanıcı adın: $nickname';
   static const leaderboardJoinTitle = 'Liderlere katıl';
-  static const leaderboardJoinBody =
-      'Bir takma ad seç. Tabloda yalnızca takma adın ve günlük puanın '
-      'görünür. Başka hiçbir bilgi gönderilmez.';
+  static String leaderboardJoinBody(String name) =>
+      'Tabloda kullanıcı adın ($name) ve günlük puanın görünür. Başka '
+      'hiçbir bilgi gönderilmez.';
+  static const leaderboardJoinNeedsName =
+      "Tabloya katılmak için önce Ayarlar'dan bir kullanıcı adı seç.";
+  static const leaderboardNameTaken =
+      "Bu ad tabloda başka bir oyuncuda. Ayarlar'dan yeni bir ad seçip "
+      'tekrar katıl; beklemeden değiştirebilirsin.';
+  static const leaderboardNameBlocked =
+      "Bu ad tabloda kullanılamaz. Ayarlar'dan yeni bir ad seçip tekrar "
+      'katıl; beklemeden değiştirebilirsin.';
+  static const openSettings = "Ayarlar'a git";
   static const leaderboardFinishSet =
       'Günün setini bitirince puanın buraya eklenir.';
   static const leaderboardSendFailed = 'Puanın henüz gönderilemedi.';
@@ -123,16 +132,16 @@ abstract final class AppStrings {
   static String hitsOutOf(int hits, int total) => '$hits/$total isabet';
   static const you = 'Sen';
   static const retry = 'Tekrar dene';
-  static const nicknameLabel = 'Takma ad';
+  static const userNameLabel = 'Kullanıcı adı';
   static const nicknameHint = '3–16 harf ya da rakam';
   static const nicknameTooShort = 'En az 3 karakter olmalı.';
   static const nicknameTooLong = 'En fazla 16 karakter olabilir.';
   static const nicknameBadCharacters =
       'Harf, rakam, boşluk ve . _ - kullanabilirsin. En az bir harf olmalı.';
-  static const nicknameTaken = 'Bu takma ad alınmış.';
-  static const nicknameBlocked = 'Bu takma ad kullanılamaz.';
+  static const nicknameTaken = 'Bu ad tabloda başka bir oyuncuda.';
+  static const nicknameBlocked = 'Bu ad kullanılamaz.';
   static const rateLimited = 'Çok fazla deneme oldu. Biraz sonra tekrar dene.';
-  static const renameRule = 'Takma adını 3 günde bir değiştirebilirsin.';
+  static const renameRule = 'Kullanıcı adını 3 günde bir değiştirebilirsin.';
   static String renameWait(DateTime? at) =>
       at == null ? renameRule : '$renameRule Bir sonraki: ${dayLabel(at)}.';
   static const join = 'Katıl';
@@ -140,17 +149,29 @@ abstract final class AppStrings {
   static const cancel = 'Vazgeç';
   static String joinedAs(String name) => 'Hoş geldin, $name!';
   static const leaderboardSection = 'Liderlik tablosu';
-  static const nicknameSubtitle = 'Takma adın, değiştirmek için dokun';
-  static const changeNickname = 'Takma adı değiştir';
   static const leaveLeaderboard = 'Tablodan ayrıl';
   static const leaveLeaderboardHint =
-      'Takma adın ve puanların sunucudan silinir.';
+      'Puanların tablodan silinir, yenileri gönderilmez.';
   static const leaveConfirmTitle = 'Tablodan ayrılsın mı?';
   static const leaveConfirmBody =
-      'Takma adın ve gönderdiğin tüm puanlar sunucudan silinir. İstediğin '
-      'zaman yeniden katılabilirsin.';
+      'Gönderdiğin puanlar sunucudan silinir ve yeni puan gönderilmez. '
+      'Kullanıcı adın uygulamada kalır, düello ve turnuvada kullanmaya devam '
+      'edersin. İstediğin zaman yeniden katılabilirsin; bu cihazdan '
+      'gönderilmiş bir günün seti yeniden gönderilemez.';
   static const leave = 'Ayrıl';
-  static const leftLeaderboard = 'Tablodan ayrıldın, verilerin silindi.';
+  static const leftLeaderboard = 'Tablodan ayrıldın, puanların silindi.';
+  static const leaderboardJoined = 'Tabloya katıldın';
+
+  // The player's one name (Settings)
+  static const userNameSection = 'Kullanıcı adın';
+  static const userNameUnset = 'Henüz seçmedin';
+  static const userNameSubtitle =
+      'Tabloda, düelloda ve turnuvada bu adla görünürsün';
+  static String userNameNextChange(DateTime at) =>
+      'Bir sonraki değişiklik: ${dayLabel(at)}';
+  static const userNameBody =
+      'Liderlik tablosunda, düelloda ve turnuvada bu adla görünürsün. '
+      'Adını 3 günde bir değiştirebilirsin.';
 
   // Calibration feedback
   static const calibrationTooNarrow = 'Aralıkların fazla dar.';
@@ -273,16 +294,10 @@ abstract final class AppStrings {
   ];
   static const duelFound = 'Rakip bulundu, bağlanıyor…';
   static const duelNoShow = 'Rakibin odaya gelmedi. Tekrar dene.';
-  static const duelNameLabel = 'Adın';
-  static const duelSection = 'Düello';
-  static const duelNameTitle = 'Düello adın';
-  static const duelNameUnset = 'Henüz seçmedin';
-  static const duelNameSubtitle =
-      'Rakibin bu adı görür, değiştirmek için dokun';
   static const duelNameNeeded =
-      'Düello için önce bir ad seç. Rakibin bu adı görür.';
+      "Oynamak için önce Ayarlar'dan bir kullanıcı adı seç. Rakiplerin bu "
+      'adı görür.';
   static const duelPickName = "Ayarlar'da ad seç";
-  static const duelPlayingAs = 'Bu adla oynuyorsun';
   static const duelNameInSettings = "Değiştirmek için Ayarlar'a git";
   static const duelCreate = 'Oda kur';
   static const duelOrJoin = 'Arkadaşın oda kurduysa koduyla katıl';

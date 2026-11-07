@@ -1,5 +1,5 @@
-// Renders the leaderboard (light and dark), the duel lobby, the duel
-// search and a tournament (room, reveal, standings) with the real Roboto font into
+// Renders the leaderboard (light and dark), settings (the one name),
+// the duel lobby, the duel search and a tournament (room, reveal, standings) with the real Roboto font into
 // build/screens/, to look at the design:
 //
 //   flutter test tools/screens/render_screens_test.dart
@@ -20,6 +20,7 @@ import 'package:aralik/features/duel/duel_search_view.dart';
 import 'package:aralik/data/tournament_client.dart';
 import 'package:aralik/features/tournament/tournament_screen.dart';
 import 'package:aralik/features/leaderboard/leaderboard_screen.dart';
+import 'package:aralik/features/settings/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
@@ -146,7 +147,12 @@ void main() {
             key: UniqueKey(),
             debugShowCheckedModeBanner: false,
             theme: _withRoboto(theme),
-            home: LeaderboardScreen(store: store, day: day, dayDone: true),
+            home: LeaderboardScreen(
+              store: store,
+              settings: SettingsStore(prefs),
+              day: day,
+              dayDone: true,
+            ),
           ),
         ),
       );
@@ -189,6 +195,43 @@ void main() {
       await snap(tester, name);
     }
     await tester.pumpWidget(const SizedBox());
+  });
+
+  testWidgets('render settings', (tester) async {
+    phone(tester);
+    await tester.runAsync(_loadRoboto);
+    // ignore: invalid_use_of_visible_for_testing_member
+    SharedPreferences.setMockInitialValues({
+      'duel_name': 'Ayşe',
+      'name_changed_at': DateTime.now().millisecondsSinceEpoch,
+      'lb_id': 'p1',
+      'lb_token': 't',
+      'lb_nickname': 'Ayşe',
+    });
+    final prefs = await SharedPreferences.getInstance();
+    final store = LeaderboardStore(
+      prefs,
+      serviceUri: () => Uri.parse('https://lb.example/'),
+      deviceKey: () async => null,
+    );
+    await tester.pumpWidget(
+      RepaintBoundary(
+        key: boundary,
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: _withRoboto(AppTheme.light),
+          home: SettingsScreen(
+            settings: SettingsStore(prefs),
+            leaderboard: store,
+          ),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+    await snap(tester, 'ayarlar');
+    await tester.tap(find.text('Ayşe'));
+    await tester.pumpAndSettle();
+    await snap(tester, 'ayarlar-ad');
   });
 
   testWidgets('render duel lobby', (tester) async {

@@ -1,7 +1,9 @@
 import 'package:aralik/core/strings.dart';
 import 'package:aralik/core/theme.dart';
 import 'package:aralik/data/leaderboard.dart';
+import 'package:aralik/data/settings_store.dart';
 import 'package:aralik/features/leaderboard/leaderboard_screen.dart';
+import 'package:aralik/features/settings/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -19,14 +21,18 @@ Map<String, Object?> _board({bool withMe = false}) => {
 
 void main() {
   late LeaderboardStore store;
+  late SettingsStore settings;
   late List<String> paths;
   late bool withMe;
+  late bool taken;
 
   setUp(() async {
     SharedPreferences.setMockInitialValues({});
     final prefs = await SharedPreferences.getInstance();
     paths = [];
     withMe = false;
+    taken = false;
+    settings = SettingsStore(prefs);
     store = LeaderboardStore(
       prefs,
       serviceUri: () => Uri.parse('https://lb.example/'),
@@ -34,6 +40,10 @@ void main() {
       request: (method, uri, [body]) async {
         paths.add(uri.path);
         return switch (uri.path) {
+          '/v1/register' when taken => (
+            status: 409,
+            body: {'error': 'nickname_taken'},
+          ),
           '/v1/register' => (
             status: 201,
             body: {'id': 'p1', 'token': 't', 'nickname': body!['nickname']},
@@ -52,7 +62,12 @@ void main() {
     await tester.pumpWidget(
       MaterialApp(
         theme: AppTheme.light,
-        home: LeaderboardScreen(store: store, day: 3, dayDone: dayDone),
+        home: LeaderboardScreen(
+          store: store,
+          settings: settings,
+          day: 3,
+          dayDone: dayDone,
+        ),
       ),
     );
     await tester.pumpAndSettle();
@@ -69,17 +84,45 @@ void main() {
     expect(find.text(AppStrings.leaderboardJoin), findsOneWidget);
   });
 
-  testWidgets('joining with a nickname', (tester) async {
+  testWidgets('without a name, joining sends the player to settings', (
+    tester,
+  ) async {
     await open(tester);
     await tester.tap(find.text(AppStrings.leaderboardJoin));
     await tester.pumpAndSettle();
-    await tester.enterText(find.byType(TextField), 'x');
+    // The name is never typed here.
+    expect(find.byType(TextField), findsNothing);
+    expect(find.text(AppStrings.leaderboardJoinNeedsName), findsOneWidget);
+    await tester.tap(find.text(AppStrings.openSettings));
+    await tester.pumpAndSettle();
+    expect(find.byType(SettingsScreen), findsOneWidget);
+    expect(paths, isNot(contains('/v1/register')));
+  });
+
+  testWidgets('a taken name can be changed in settings without waiting', (
+    tester,
+  ) async {
+    await settings.setUserName('Aslan');
+    await settings.setUserName('Kaplan'); // a change: the wait starts
+    expect(settings.nextNameChange(), isNotNull);
+    taken = true;
+    await open(tester);
+    await tester.tap(find.text(AppStrings.leaderboardJoin));
+    await tester.pumpAndSettle();
     await tester.tap(find.text(AppStrings.join));
     await tester.pumpAndSettle();
-    expect(find.text(AppStrings.nicknameTooShort), findsOneWidget);
-    expect(paths, isNot(contains('/v1/register')));
+    expect(find.text(AppStrings.leaderboardNameTaken), findsOneWidget);
+    expect(store.joined, isFalse);
+    expect(settings.nextNameChange(), isNull);
+  });
 
-    await tester.enterText(find.byType(TextField), '  Kaplan ');
+  testWidgets('joining with the name from settings', (tester) async {
+    await settings.setUserName('Kaplan');
+    await open(tester);
+    await tester.tap(find.text(AppStrings.leaderboardJoin));
+    await tester.pumpAndSettle();
+    expect(find.byType(TextField), findsNothing);
+    expect(find.text(AppStrings.leaderboardJoinBody('Kaplan')), findsOneWidget);
     await tester.tap(find.text(AppStrings.join));
     await tester.pumpAndSettle();
     expect(store.account?.nickname, 'Kaplan');

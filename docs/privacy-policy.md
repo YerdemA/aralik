@@ -23,13 +23,13 @@ Her internet isteğinde olduğu gibi, sunucuyu işleten GitHub bağlantı sıras
 İnternet yoksa uygulama, içindeki sorularla eksiksiz çalışmaya devam eder.
 
 ## Günün liderleri (isteğe bağlı)
-Günün liderleri tablosuna katılmak tamamen isteğe bağlıdır. Katılmak için yalnızca bir takma ad seçersin; e-posta, telefon numarası, isim ya da giriş istenmez.
+Günün liderleri tablosuna katılmak tamamen isteğe bağlıdır. Katılmak için yalnızca Ayarlar'da seçtiğin **kullanıcı adı** gerekir; e-posta, telefon numarası, gerçek isim ya da giriş istenmez. Uygulamada tek bir kullanıcı adın vardır: tabloda, düelloda ve turnuvada aynı ad görünür. Bu ad, sunucuya gönderilene kadar yalnızca telefonunda durur.
 
 Katıldığında şunlar Cloudflare üzerinde çalışan sunucumuza gönderilir ve saklanır:
-- Seçtiğin **takma ad**,
+- **Kullanıcı adın** (tablodaki takma adın),
 - Uygulamanın ürettiği **rastgele bir kimlik** ve gizli bir anahtar (anahtarın yalnızca özeti saklanır), hesabın senin olduğunu kanıtlamak için,
 - Bitirdiğin her günlük set için **5 cevabın (aralıkların)**, bunlardan hesaplanan **puanın ve isabet sayın**, ve gönderim zamanı.
-- Takma adını en son ne zaman değiştirdiğin. Takma ad 3 günde bir değiştirilebilir; bu, adların kötüye kullanılmasını önlemek içindir.
+- Kullanıcı adını en son ne zaman değiştirdiğin. Ad 3 günde bir değiştirilebilir; bu, adların kötüye kullanılmasını önlemek içindir.
 - **Cihazının tek yönlü özeti.** Android'in her uygulamaya ayrı verdiği cihaz kimliğinden telefonunda üretilen bir özet (hash). Kimliğin kendisi telefondan çıkmaz; sunucu bu özeti bir kez daha özetleyerek saklar. Amacı hileyi önlemek: her cihazda tek hesap olur ve aynı günün puanı ikinci kez gönderilemez. Uygulamayı silip yeniden kurduğunda ya da verilerini temizlediğinde hesabın bu sayede geri gelir.
 
 Bu yüzden uygulama, telefonunda tabloya katılmış bir hesap bulamadığında günde en fazla bir kez aynı özeti sunucuya sorar: "Bu cihazın hesabı var mı, bugünün setini gönderdi mi?" Cevaba göre hesabın geri gelir ve aynı günün seti yeniden oynanamaz. Tabloya hiç katılmamış bir cihaz için bu sorgudan sunucuda hiçbir şey saklanmaz.
@@ -42,13 +42,13 @@ Aynı cihazdan çok sayıda hesap açılmasını önlemek için, katılma isteğ
 
 Bu veriler yalnızca liderlik tablosu için kullanılır; satılmaz, reklam ya da analiz için kullanılmaz, başka kimseyle paylaşılmaz.
 
-**Tablodan ayrılmak ve verilerini silmek için:** Ayarlar → Liderlik tablosu → Tablodan ayrıl. Takma adın, cihaz özetinle bağın ve gönderdiğin tüm puanlar sunucudan hemen silinir. Yalnızca cihaz özetinin hangi günler için puan gönderdiği bilgisi, adınla bağlantısız olarak en fazla 3 gün kalır; böylece aynı gün yeniden katılıp puan gönderilemez. Uygulamayı kaldırmışsan yeniden kurup tabloya katıldığında hesabın geri gelir, oradan ayrılabilirsin; istersen silinmesini aşağıdaki iletişim adresinden de isteyebilirsin.
+**Tablodan ayrılmak ve verilerini silmek için:** Ayarlar → Liderlik tablosu → Tablodan ayrıl. Sunucudaki hesabın (takma adın ve cihaz özetinle bağı) ve gönderdiğin tüm puanlar hemen silinir. Kullanıcı adın telefonunda kalır; düello ve turnuvada kullanılmaya devam eder, yeniden katılırsan tabloya yine bu adla girersin (ad o arada başkası tarafından alınmadıysa). Yalnızca cihaz özetinin hangi günler için puan gönderdiği bilgisi, adınla bağlantısız olarak en fazla 3 gün kalır; böylece aynı gün yeniden katılıp puan gönderilemez. Uygulamayı kaldırmışsan yeniden kurup tabloya katıldığında hesabın geri gelir, oradan ayrılabilirsin; istersen silinmesini aşağıdaki iletişim adresinden de isteyebilirsin.
 {: .callout}
 
 ## Düello ve turnuva
-Düello (arkadaşınla ya da rastgele bir rakiple) ya da turnuva (3–8 kişilik oda) oynadığında, aynı sunucudaki odaya şunlar gönderilir: Ayarlar'da seçtiğin **görünen ad**, uygulamadaki soru sayısı ve kilitlediğin **aralıklar**. Hesap ya da kimlik gerekmez.
+Düello (arkadaşınla ya da rastgele bir rakiple) ya da turnuva (3–8 kişilik oda) oynadığında, aynı sunucudaki odaya şunlar gönderilir: Ayarlar'da seçtiğin **kullanıcı adın**, uygulamadaki soru sayısı ve kilitlediğin **aralıklar**. Hesap ya da kimlik gerekmez.
 
-Rakip ararken de yalnızca görünen adın ve soru sayısı gider. Görünen adın ve aralıkların yalnızca o odadaki oyunculara gösterilir: düelloda rakibine, turnuvada odadaki herkese.
+Rakip ararken de yalnızca kullanıcı adın ve soru sayısı gider. Adın ve aralıkların yalnızca o odadaki oyunculara gösterilir: düelloda rakibine, turnuvada odadaki herkese.
 
 Bağlantın koparsa kaldığın yerden devam edebilmen için oda sana rastgele, tek kullanımlık bir **geri dönüş anahtarı** verir; bu anahtar yalnızca o odada ve oyun sürerken işe yarar. Turnuvada kurucunun odadan çıkardığı oyuncunun adı, aynı odaya yeniden girmesin diye oda açık kaldıkça tutulur.
 
@@ -60,10 +60,10 @@ Odaların kötüye kullanılmasını (örneğin binlerce oda açılmasını) ön
 "Paylaş" düğmesine bastığında skor kartın, senin seçtiğin uygulamaya (örneğin bir mesajlaşma uygulamasına) Android'in paylaşım penceresi üzerinden gönderilir. Bu yalnızca sen istediğinde olur ve içerik yalnızca skorundur.
 
 ## Verilerin silinmesi
-Cihazındaki tüm oyun verilerini (seçtiğin düello adı dahil) silmek için uygulamayı kaldırman ya da Android ayarlarından uygulamanın verilerini temizlemen yeterlidir. Liderlik tablosuna katıldıysan, önce Ayarlar → Liderlik tablosu → Tablodan ayrıl ile sunucudaki verini sil.
+Cihazındaki tüm oyun verilerini (kullanıcı adın dahil) silmek için uygulamayı kaldırman ya da Android ayarlarından uygulamanın verilerini temizlemen yeterlidir. Liderlik tablosuna katıldıysan, önce Ayarlar → Liderlik tablosu → Tablodan ayrıl ile sunucudaki verini sil.
 
 ## Çocuklar
-Uygulama hiçbir yaş grubundan kişisel veri istemez. Takma ad seçerken gerçek adını kullanmamanı öneririz.
+Uygulama hiçbir yaş grubundan kişisel veri istemez. Kullanıcı adı seçerken gerçek adını kullanmamanı öneririz.
 
 ## Veri kaynakları
 Soruların cevapları açık lisanslı kaynaklardan gelir. Kaynakların ve lisanslarının listesi:

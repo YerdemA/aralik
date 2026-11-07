@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 import '../../core/duel.dart';
 import '../../core/strings.dart';
 import '../../data/duel_client.dart';
+import '../../data/leaderboard.dart';
 import '../../data/question_repository.dart';
 import '../../data/settings_store.dart';
 import '../../data/stats_store.dart';
-import '../settings/duel_name_sheet.dart';
+import '../settings/user_name_sheet.dart';
 import '../settings/settings_screen.dart';
 import 'duel_screen.dart';
 
@@ -21,7 +22,7 @@ class DuelLobbyScreen extends StatefulWidget {
     required this.repository,
     required this.stats,
     required this.settings,
-    this.suggestedName,
+    this.leaderboard,
     this.scaled = true,
   });
 
@@ -33,8 +34,8 @@ class DuelLobbyScreen extends StatefulWidget {
   final StatsStore stats;
   final SettingsStore settings;
 
-  /// The name when none was chosen in Settings (the leaderboard nickname).
-  final String? suggestedName;
+  /// Passed on to Settings, where the name is chosen or changed.
+  final LeaderboardStore? leaderboard;
 
   @override
   State<DuelLobbyScreen> createState() => _DuelLobbyScreenState();
@@ -52,11 +53,14 @@ class _DuelLobbyScreenState extends State<DuelLobbyScreen> {
   }
 
   /// The name from Settings, or null when none is chosen yet.
-  String? get _name => duelNameOf(widget.settings, widget.suggestedName);
+  String? get _name => widget.settings.userName;
 
   void _openSettings() => Navigator.of(context).push(
     MaterialPageRoute<void>(
-      builder: (_) => SettingsScreen(settings: widget.settings),
+      builder: (_) => SettingsScreen(
+        settings: widget.settings,
+        leaderboard: widget.leaderboard,
+      ),
     ),
   );
 

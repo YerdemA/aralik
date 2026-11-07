@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import '../../core/daily.dart';
 import '../../core/strings.dart';
 import '../../data/leaderboard.dart';
-import 'nickname_sheet.dart';
+import '../../data/settings_store.dart';
+import 'join_sheet.dart';
 
 /// Today's board: the best players, the player's own rank, and the one
 /// thing to do next (join, finish the set, or retry sending).
@@ -11,11 +12,15 @@ class LeaderboardScreen extends StatefulWidget {
   const LeaderboardScreen({
     super.key,
     required this.store,
+    required this.settings,
     required this.day,
     required this.dayDone,
   });
 
   final LeaderboardStore store;
+
+  /// Where the player's name comes from (it is chosen in Settings).
+  final SettingsStore settings;
   final int day;
 
   /// Whether the player finished [day]'s set.
@@ -53,7 +58,8 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
   }
 
   Future<void> _join() async {
-    if (!await showNicknameSheet(context, widget.store) || !mounted) return;
+    final joined = await showJoinSheet(context, widget.store, widget.settings);
+    if (!joined || !mounted) return;
     final name = widget.store.account?.nickname ?? '';
     ScaffoldMessenger.of(context)
         .showSnackBar(SnackBar(content: Text(AppStrings.joinedAs(name))));

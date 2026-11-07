@@ -14,7 +14,6 @@ void main() {
   Future<SettingsStore> open(
     WidgetTester tester, {
     Map<String, Object> prefs = const {},
-    String? suggested,
   }) async {
     SharedPreferences.setMockInitialValues(prefs);
     final settings = await SettingsStore.open();
@@ -29,7 +28,6 @@ void main() {
           repository: QuestionRepository(),
           stats: stats,
           settings: settings,
-          suggestedName: suggested,
         ),
       ),
     );
@@ -63,13 +61,11 @@ void main() {
     expect(findButton(tester).onPressed, isNotNull);
   });
 
-  testWidgets('the leaderboard nickname stands in until one is chosen', (
-    tester,
-  ) async {
-    final settings = await open(tester, suggested: 'Kaplan');
-    expect(find.text('Kaplan'), findsOneWidget);
-    await settings.setDuelName('Pars');
+  testWidgets('a name chosen later shows up at once', (tester) async {
+    final settings = await open(tester);
+    await settings.setUserName('Pars');
     await tester.pump();
     expect(find.text('Pars'), findsOneWidget);
+    expect(find.text(AppStrings.duelNameNeeded), findsNothing);
   });
 }
