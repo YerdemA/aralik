@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'app.dart';
 import 'data/content_sync.dart';
 import 'data/leaderboard.dart';
+import 'data/pending_match.dart';
 import 'data/question_repository.dart';
 import 'data/settings_store.dart';
 import 'data/sound.dart';
@@ -30,6 +31,7 @@ Future<void> main() async {
       stats: StatsStore(prefs),
       settings: settings,
       leaderboard: leaderboard,
+      pending: PendingMatchStore(prefs),
       latestAppBuild: () => content.latestAppBuild,
       scoringV2Day: () => content.scoringV2Day,
     ),

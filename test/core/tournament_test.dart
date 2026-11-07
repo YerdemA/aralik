@@ -181,4 +181,20 @@ void main() {
       ..connectionLost();
     expect(room.phase, TournamentPhase.failed);
   });
+
+  test('a refusal stays the reason when the connection then closes', () {
+    final room = TournamentRoom()
+      ..handle(ev({'t': 'error', 'code': 'kicked'}))
+      ..connectionLost();
+    expect(room.phase, TournamentPhase.failed);
+    expect(room.error, 'kicked');
+  });
+
+  test('going back with a secret tries again if dropped first', () {
+    final room = TournamentRoom()..expectRejoin('K7M2P', 's2');
+    expect(room.rejoin, 's2');
+    room.connectionLost();
+    expect(room.reconnecting, isTrue);
+    expect(room.phase, TournamentPhase.connecting);
+  });
 }

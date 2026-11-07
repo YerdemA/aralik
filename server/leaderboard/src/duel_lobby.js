@@ -6,9 +6,12 @@
 // then join the room like friends do. Nobody waiting: the newcomer gets
 // {t: 'searching'} and waits. Uses WebSocket Hibernation, so a quiet lobby
 // costs nothing; each socket remembers its player and when it came.
+// A searcher whose connection went silent (no network; liveness.js) is
+// passed over and closed instead of being matched with someone.
 
 import { DurableObject } from 'cloudflare:workers';
 import { playerFrom } from './duel.js';
+import { isStale, PING, PONG, pings } from './liveness.js';
 import { openRoom } from './rooms.js';
 
 /** Waiting longer than this closes the socket (the app may search again). */
@@ -18,6 +21,9 @@ export class DuelLobby extends DurableObject {
   constructor(ctx, env) {
     super(ctx, env);
     this.env = env;
+    this.ctx.setWebSocketAutoResponse(
+      new WebSocketRequestResponsePair(PING, PONG),
+    );
   }
 
   async fetch(request) {
@@ -29,13 +35,15 @@ export class DuelLobby extends DurableObject {
       socket.send(JSON.stringify({ t: 'error', code: player.error }));
       socket.close(4000, player.error);
     } else {
-      await this.ctx.blockConcurrencyWhile(() => this.arrive(socket));
+      await this.ctx.blockConcurrencyWhile(() =>
+        this.arrive(socket, pings(url.searchParams)),
+      );
     }
     return new Response(null, { status: 101, webSocket: client });
   }
 
   /** Pairs [socket] with the longest-waiting player, or lets it wait. */
-  async arrive(socket) {
+  async arrive(socket, hb) {
     const now = Date.now();
     const waiting = this.ctx
       .getWebSockets()
@@ -45,8 +53,14 @@ export class DuelLobby extends DurableObject {
           a.deserializeAttachment().since - b.deserializeAttachment().since,
       );
     for (const other of waiting) {
-      if (now - other.deserializeAttachment().since > SEARCH_TIMEOUT_MS) {
+      const { since, hb: pinging } = other.deserializeAttachment();
+      if (now - since > SEARCH_TIMEOUT_MS) {
         this.drop(other, 'timeout');
+        continue;
+      }
+      const pong = this.ctx.getWebSocketAutoResponseTimestamp(other);
+      if (pinging && isStale(since, pong?.getTime() ?? null, now)) {
+        this.drop(other, 'gone'); // no network any more: not a partner
         continue;
       }
       const code = await openRoom(this.env);
@@ -63,7 +77,7 @@ export class DuelLobby extends DurableObject {
       this.drop(socket, 'matched');
       return;
     }
-    socket.serializeAttachment({ since: now });
+    socket.serializeAttachment({ since: now, hb });
     socket.send(JSON.stringify({ t: 'searching' }));
     await this.ctx.storage.setAlarm(now + SEARCH_TIMEOUT_MS);
   }

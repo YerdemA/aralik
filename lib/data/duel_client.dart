@@ -82,6 +82,7 @@ class DuelService {
     String name,
     int bankSize, {
     String? rejoin,
+    bool resign = false,
   }) async {
     final base = serviceUri();
     if (base == null) throw const DuelException(DuelFailure.offline);
@@ -93,6 +94,10 @@ class DuelService {
         'name': name,
         'bank': '$bankSize',
         'rejoin': ?rejoin,
+        if (resign) 'resign': '1',
+        // This app pings (see webSocketChannel): the room may close the
+        // connection when the pings stop.
+        'hb': '1',
       },
     );
     try {
@@ -109,21 +114,54 @@ class DuelService {
   /// Joins room [code] as [name] and feeds its events into [match].
   ///
   /// [bankSize] is how many questions this app's bank holds; the room only
-  /// picks questions both players have. Returns the open [DuelSession], or
-  /// throws [DuelException] when the connection cannot be made.
+  /// picks questions both players have. With [rejoin] (this player's
+  /// secret, kept by [PendingMatchStore]) it goes back to a duel it left
+  /// instead. Returns the open [DuelSession], or throws [DuelException]
+  /// when the connection cannot be made.
   Future<DuelSession> join({
     required String code,
     required String name,
     required int bankSize,
     required DuelMatch match,
+    String? rejoin,
   }) async {
     final path = 'v1/duel/rooms/$code';
-    final channel = await _open(path, name, bankSize);
+    if (rejoin != null) match.expectRejoin(code, rejoin);
+    final channel = await _open(path, name, bankSize, rejoin: rejoin);
     return DuelSession._(
       channel,
       match,
       (token) => _open(path, name, bankSize, rejoin: token),
     );
+  }
+
+  /// Gives up a duel this player left (the app was closed, or they quit):
+  /// the opponent wins at once instead of waiting. Best effort: offline,
+  /// the room ends it by itself when the time to come back runs out.
+  Future<void> resign({
+    required String code,
+    required String rejoin,
+    required String name,
+  }) async {
+    final DuelChannel channel;
+    try {
+      channel = await _open(
+        'v1/duel/rooms/$code',
+        name,
+        1,
+        rejoin: rejoin,
+        resign: true,
+      );
+    } on Object {
+      return;
+    }
+    // The room answers with the end (or an error); then it is done.
+    try {
+      await channel.messages.first.timeout(const Duration(seconds: 5));
+    } on Object {
+      // nothing more to do
+    }
+    await channel.close();
   }
 }
 
@@ -218,6 +256,9 @@ class DuelSession {
         if (event == null) return;
         match.handle(event);
         if (event is DuelResume) _sendAgain();
+        // Refused or over: the room closes the connection anyway, but may
+        // take a while; nothing more will come.
+        if (event is DuelError) unawaited(close());
       },
       onDone: () => _lost(channel),
       onError: (_) => _lost(channel),
@@ -288,6 +329,9 @@ class DuelSession {
     _send(DuelMessages.next(index));
   }
 
+  /// Gives up: the opponent wins at once.
+  void resign() => _send(DuelMessages.resign());
+
   void _send(String message) {
     if (_closed || match.reconnecting) return;
     try {
@@ -304,25 +348,98 @@ class DuelSession {
   }
 }
 
-/// [DuelChannel] over dart:io's WebSocket. No package needed.
-Future<DuelChannel> webSocketChannel(Uri uri) async {
+/// How often the app pings the room, and how long without a word from it
+/// (a pong or anything else) means the connection is dead. A phone that
+/// loses its network does not close its socket, so silence is the only
+/// sign; the room watches for the pings the same way
+/// (server/leaderboard/src/liveness.js, PING_EVERY_MS and STALE_MS).
+const Duration duelPingEvery = Duration(seconds: 3);
+const Duration duelSilenceLimit = Duration(seconds: 9);
+const String _ping = '{"t":"ping"}';
+const String _pong = '{"t":"pong"}';
+
+/// [DuelChannel] over dart:io's WebSocket. No package needed. Pings every
+/// [duelPingEvery] and ends [messages] when the room has been silent for
+/// [duelSilenceLimit], so a lost network is noticed in seconds.
+Future<DuelChannel> webSocketChannel(
+  Uri uri, {
+  Duration pingEvery = duelPingEvery,
+  Duration silenceLimit = duelSilenceLimit,
+}) async {
   final socket = await WebSocket.connect(uri.toString())
       .timeout(const Duration(seconds: 10));
-  socket.pingInterval = const Duration(seconds: 20);
-  return _WebSocketChannel(socket);
+  return _WebSocketChannel(socket, silenceLimit)..start(pingEvery);
 }
 
 class _WebSocketChannel implements DuelChannel {
-  _WebSocketChannel(this._socket);
+  _WebSocketChannel(this._socket, this._silenceLimit) {
+    _subscription = _socket.listen(
+      (m) {
+        _heard = DateTime.now();
+        if (m is String && m != _pong) _messages.add(m);
+      },
+      onDone: _end,
+      onError: (Object e) {
+        if (!_messages.isClosed) _messages.addError(e);
+        _end();
+      },
+      cancelOnError: true,
+    );
+  }
+
+  void start(Duration pingEvery) {
+    _pinger = Timer.periodic(pingEvery, (_) => _beat());
+  }
 
   final WebSocket _socket;
+  final Duration _silenceLimit;
+  final _messages = StreamController<String>();
+  late final StreamSubscription<dynamic> _subscription;
+  Timer? _pinger;
+  DateTime _heard = DateTime.now();
+
+  void _beat() {
+    // Also catches up after the app was frozen in the background.
+    if (DateTime.now().difference(_heard) > _silenceLimit) {
+      _abandon();
+      return;
+    }
+    try {
+      _socket.add(_ping);
+    } on Object {
+      _abandon();
+    }
+  }
+
+  void _end() {
+    _pinger?.cancel();
+    if (!_messages.isClosed) _messages.close();
+  }
+
+  /// The connection is dead: let go of it without waiting for the network.
+  void _abandon() {
+    _end();
+    unawaited(_subscription.cancel());
+    unawaited(_closeSocket());
+  }
+
+  Future<void> _closeSocket() async {
+    try {
+      await _socket.close().timeout(const Duration(seconds: 2));
+    } on Object {
+      // dead anyway
+    }
+  }
 
   @override
-  Stream<String> get messages => _socket.where((m) => m is String).cast();
+  Stream<String> get messages => _messages.stream;
 
   @override
   void send(String message) => _socket.add(message);
 
   @override
-  Future<void> close() => _socket.close();
+  Future<void> close() async {
+    _end();
+    await _closeSocket();
+  }
 }

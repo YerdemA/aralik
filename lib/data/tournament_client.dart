@@ -41,12 +41,15 @@ class TournamentService {
     return code;
   }
 
-  /// Joins room [code] as [name] and feeds its events into [room].
+  /// Joins room [code] as [name] and feeds its events into [room]. With
+  /// [rejoin] (this player's secret, kept by [PendingMatchStore]) it goes
+  /// back to a match it left instead.
   Future<TournamentSession> join({
     required String code,
     required String name,
     required int bankSize,
     required TournamentRoom room,
+    String? rejoin,
   }) async {
     Future<DuelChannel> open({String? rejoin}) async {
       final base = serviceUri();
@@ -59,6 +62,8 @@ class TournamentService {
           'name': name,
           'bank': '$bankSize',
           'rejoin': ?rejoin,
+          // This app pings (see webSocketChannel).
+          'hb': '1',
         },
       );
       try {
@@ -70,7 +75,8 @@ class TournamentService {
       }
     }
 
-    final channel = await open();
+    if (rejoin != null) room.expectRejoin(code, rejoin);
+    final channel = await open(rejoin: rejoin);
     return TournamentSession._(channel, room, (token) => open(rejoin: token));
   }
 }
@@ -101,6 +107,11 @@ class TournamentSession {
         if (event == null) return;
         room.handle(event);
         if (event is TournamentResume) _sendAgain();
+        // Refused or removed: nothing more will come, and the room may take
+        // a while to close the connection.
+        if (event is TournamentError || event is TournamentKicked) {
+          unawaited(close());
+        }
       },
       onDone: () => _lost(channel),
       onError: (_) => _lost(channel),

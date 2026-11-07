@@ -295,6 +295,53 @@ test('a reveal during a pause stays paused until they are back', () => {
   assert.equal(resume.results.length, 1);
 });
 
+test('a silent connection noticed late gets the lost seconds back', () => {
+  const r = duel.leave(startedWithTokens().state, 1, T0 + 12_000, T0 + 2_010);
+  assert.equal(r.state.paused.ms, duel.QUESTION_MS - 2_000);
+  assert.equal(r.alarm, T0 + 12_000 + duel.RECONNECT_MS);
+});
+
+test('giving up ends the duel at once; the other one wins', () => {
+  let r = startedWithTokens();
+  r = duel.resign(r.state, 0, T0 + 3_000);
+  assert.equal(r.state.phase, 'over');
+  assert.deepEqual(r.out[0].msg, {
+    t: 'end',
+    totals: [0, 0],
+    winner: 1,
+    reason: 'left',
+  });
+  // Twice changes nothing.
+  assert.equal(duel.resign(r.state, 1, T0 + 4_000).out.length, 0);
+});
+
+test('a player who closed the app may give up with their secret', () => {
+  let r = startedWithTokens();
+  r = duel.leave(r.state, 1, T0 + 2_000);
+  const gone = duel.resignWith(r.state, 'tB', T0 + 20_000);
+  assert.equal(gone.seat, 1);
+  assert.equal(gone.state.phase, 'over');
+  assert.equal(gone.state.winner, 0);
+  assert.equal(gone.out[0].to, 'all');
+  assert.equal(duel.resignWith(r.state, 'nope', T0).error, 'no_room');
+  // Already over: only told how it ended.
+  const late = duel.resignWith(gone.state, 'tB', T0 + 21_000);
+  assert.equal(late.seat, 1);
+  assert.deepEqual(
+    late.out.map((o) => [o.to, o.msg.t]),
+    [[1, 'end']],
+  );
+});
+
+test('rooms are checked for dead connections while in play', () => {
+  const every = { play: 4, idle: 15 };
+  assert.equal(duel.watchEvery(null, every), null);
+  assert.equal(duel.watchEvery(duel.createRoom('ABCDE', T0).state, every), 15);
+  assert.equal(duel.watchEvery(startedWithTokens().state, every), 4);
+  const over = duel.resign(startedWithTokens().state, 0, T0);
+  assert.equal(duel.watchEvery(over.state, every), null);
+});
+
 test('the creator may drop out and come back while waiting', () => {
   let r = duel.createRoom('ABCDE', T0);
   r = duel.join(r.state, { name: 'Ayşe', bank: 99 }, T0, pick);

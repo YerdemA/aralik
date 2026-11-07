@@ -13,6 +13,7 @@ import '../../core/scoring.dart';
 import '../../core/strings.dart';
 import '../../core/theme.dart';
 import '../../data/duel_client.dart';
+import '../../data/pending_match.dart';
 import '../../data/question.dart';
 import '../../data/question_repository.dart';
 import '../../data/sound.dart';
@@ -26,7 +27,8 @@ import 'duel_search_view.dart';
 
 /// One live duel in room [code]: waiting for the friend, five questions
 /// against the clock, each revealed with both intervals, then the result.
-/// Without a [code] it first finds a random opponent in the lobby.
+/// Without a [code] it first finds a random opponent in the lobby. With
+/// [rejoin] it goes back to a duel the player left (see [PendingMatch]).
 ///
 /// Pops with true for "Yeni düello", otherwise with null.
 class DuelScreen extends StatefulWidget {
@@ -39,7 +41,16 @@ class DuelScreen extends StatefulWidget {
     required this.name,
     this.now = DateTime.now,
     this.scaled = true,
+    this.rejoin,
+    this.pending,
   });
+
+  /// This player's secret to go back to a duel in room [code] they left.
+  final String? rejoin;
+
+  /// Where the duel in progress is kept for going back to it after leaving
+  /// the app; null keeps nothing (tests).
+  final PendingMatchStore? pending;
 
   /// Intervals follow each question's scale; matches the room's rule.
   final bool scaled;
@@ -101,17 +112,59 @@ class _DuelScreenState extends State<DuelScreen> {
 
   static const _tickEvery = Duration(milliseconds: 200);
 
+  /// Keeps the duel in [DuelScreen.pending] while it runs.
+  late final _keeper = PendingMatchKeeper(
+    widget.pending,
+    kind: PendingKind.duel,
+    now: widget.now,
+  );
+  Timer? _keepTicker;
+
+  /// Gave up: nothing to go back to.
+  bool _gaveUp = false;
+
+  bool get _inPlay =>
+      _match.phase == DuelPhase.question || _match.phase == DuelPhase.reveal;
+
   @override
   void initState() {
     super.initState();
     final code = widget.code;
     if (code != null) _match.expectCode(code);
     _match.addListener(_onMatch);
+    _keepTicker = Timer.periodic(const Duration(seconds: 3), (_) => _keep());
     _connect();
+  }
+
+  /// Saves the duel in progress (to go back to it after leaving the app)
+  /// or forgets it once it is over.
+  void _keep({bool now = false}) {
+    if (_gaveUp) return;
+    final code = _match.code;
+    final rejoin = _match.rejoin;
+    if (_inPlay && code != null && rejoin != null) {
+      // While the connection is gone the room's minute is running: the
+      // saved deadline stays as it was.
+      if (_match.reconnecting) return;
+      _keeper.playing(
+        code: code,
+        rejoin: rejoin,
+        name: widget.name,
+        window: pendingDuelWindow,
+        force: now,
+      );
+    } else if (_match.phase == DuelPhase.over ||
+        (_match.phase == DuelPhase.failed && _match.error != 'offline')) {
+      _keeper.over(rejoin: rejoin ?? widget.rejoin);
+    }
   }
 
   @override
   void dispose() {
+    // Left mid-duel ("Çık"): the room keeps the seat for a minute; the home
+    // screen offers to go back.
+    _keep(now: true);
+    _keepTicker?.cancel();
     _ticker?.cancel();
     _noShow?.cancel();
     _revealTicker?.cancel();
@@ -143,6 +196,7 @@ class _DuelScreenState extends State<DuelScreen> {
         _search = search;
         code = await search.code;
         if (!mounted) return;
+        _match.expectCode(code);
         setState(() => _searching = false);
         _noShow = Timer(_noShowAfter, () {
           if (mounted && _match.phase == DuelPhase.waiting) {
@@ -156,6 +210,7 @@ class _DuelScreenState extends State<DuelScreen> {
         name: widget.name,
         bankSize: bank.length,
         match: _match,
+        rejoin: widget.rejoin,
       );
       if (!mounted) {
         await session.close();
@@ -214,6 +269,7 @@ class _DuelScreenState extends State<DuelScreen> {
   }
 
   void _onMatch() {
+    _keep();
     _playSounds();
     final ids = _match.questionIds;
     if (_game == null && ids.isNotEmpty) {
@@ -232,6 +288,12 @@ class _DuelScreenState extends State<DuelScreen> {
       _stopClock();
     } else if (game != null && _match.phase == DuelPhase.question) {
       _openQuestion(game, _match.index);
+      // Back after the app was closed, with this question already locked:
+      // the input shows it as done (the room has the answer).
+      if (_match.myLocked && !game.isLocked && game.index == _match.index) {
+        _stopClock();
+        game.timeOut();
+      }
     }
     if (_match.phase != DuelPhase.question) _stopClock();
     if (_match.opponentAway) {
@@ -337,31 +399,41 @@ class _DuelScreenState extends State<DuelScreen> {
     _session?.next(_match.index);
   }
 
-  Future<bool> _confirmQuit() async {
-    final phase = _match.phase;
-    if (phase != DuelPhase.question && phase != DuelPhase.reveal) return true;
-    final quit = await showDialog<bool>(
+  Future<_Quit> _confirmQuit() async {
+    if (!_inPlay) return _Quit.leave;
+    final quit = await showDialog<_Quit>(
       context: context,
       builder: (context) => AlertDialog(
         title: const Text(AppStrings.duelQuitTitle),
         content: const Text(AppStrings.duelQuitBody),
         actions: [
           TextButton(
-            onPressed: () => Navigator.of(context).pop(false),
+            onPressed: () => Navigator.of(context).pop(_Quit.stay),
             child: const Text(AppStrings.duelStay),
           ),
           TextButton(
-            onPressed: () => Navigator.of(context).pop(true),
+            onPressed: () => Navigator.of(context).pop(_Quit.resign),
+            child: const Text(AppStrings.duelResign),
+          ),
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(_Quit.leave),
             child: const Text(AppStrings.quit),
           ),
         ],
       ),
     );
-    return quit ?? false;
+    return quit ?? _Quit.stay;
   }
 
   Future<void> _quit() async {
-    if (await _confirmQuit() && mounted) Navigator.of(context).pop();
+    final choice = await _confirmQuit();
+    if (!mounted || choice == _Quit.stay) return;
+    if (choice == _Quit.resign && _inPlay) {
+      _gaveUp = true;
+      _keeper.over(rejoin: _match.rejoin);
+      _session?.resign();
+    }
+    Navigator.of(context).pop();
   }
 
   @override
@@ -371,7 +443,14 @@ class _DuelScreenState extends State<DuelScreen> {
     final error =
         _localError ??
         (_match.phase == DuelPhase.failed
-            ? AppStrings.duelErrorText(_match.error ?? '')
+            ? (widget.rejoin != null &&
+                      const {
+                        'no_room',
+                        'room_closed',
+                        'expired',
+                      }.contains(_match.error)
+                  ? AppStrings.duelEnded
+                  : AppStrings.duelErrorText(_match.error ?? ''))
             : null);
     if (error != null) {
       body = _Message(
@@ -503,6 +582,10 @@ class _DuelScreenState extends State<DuelScreen> {
     );
   }
 }
+
+/// The close button mid-duel: stay, give up (the opponent wins now), or
+/// leave (the room waits a minute; the home screen offers to go back).
+enum _Quit { stay, resign, leave }
 
 /// "Sen 120 · 85 Bora" in the app bar, each side in its player's colour.
 class _ScoreLine extends StatelessWidget {

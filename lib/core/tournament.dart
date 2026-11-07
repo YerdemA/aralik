@@ -296,6 +296,25 @@ class TournamentRoom extends ChangeNotifier {
   /// This player's secret to come back mid-match.
   String? get rejoin => _rejoin;
 
+  /// Going back to a match this player left, with their secret: if the
+  /// connection drops before the room answers, the app tries again.
+  void expectRejoin(String code, String rejoin) {
+    _code = code;
+    _rejoin = rejoin;
+    _comingBack = true;
+  }
+
+  bool _comingBack = false;
+
+  /// Questions of the current match not revealed yet (0 outside one).
+  int get questionsLeft {
+    if (_phase != TournamentPhase.question &&
+        _phase != TournamentPhase.reveal) {
+      return 0;
+    }
+    return _questionIds.length - _results.length;
+  }
+
   /// The connection dropped mid-match; the app is trying to come back.
   /// The others play on meanwhile.
   bool get reconnecting => _reconnecting;
@@ -384,7 +403,12 @@ class TournamentRoom extends ChangeNotifier {
       case TournamentKicked():
         _phase = TournamentPhase.kicked;
       case TournamentError(:final code):
-        if (_phase == TournamentPhase.kicked) return;
+        // The first reason stays: a refusal ('kicked', 'in_progress', …) is
+        // followed by the room closing the connection, which is no news.
+        if (_phase == TournamentPhase.kicked ||
+            _phase == TournamentPhase.failed) {
+          return;
+        }
         _error = code;
         _phase = TournamentPhase.failed;
         _reconnecting = false;
@@ -462,7 +486,9 @@ class TournamentRoom extends ChangeNotifier {
   /// come back ([reconnecting]); otherwise the room is lost.
   void connectionLost() {
     final inMatch =
-        _phase == TournamentPhase.question || _phase == TournamentPhase.reveal;
+        _phase == TournamentPhase.question ||
+        _phase == TournamentPhase.reveal ||
+        (_comingBack && _phase == TournamentPhase.connecting);
     if (inMatch && _rejoin != null) {
       if (_reconnecting) return;
       _reconnecting = true;

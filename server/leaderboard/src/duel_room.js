@@ -3,11 +3,24 @@
 // Uses the WebSocket Hibernation API, so an idle room (players thinking)
 // costs nothing: the state lives in storage, each socket remembers its seat,
 // and the alarm drives the clock. The rules are in duel.js.
+//
+// The alarm does two jobs: the rules' own times (stored as 'due') and, while
+// someone may be gone, a check for connections that went silent
+// (liveness.js); whichever comes first.
 
 import { DurableObject } from 'cloudflare:workers';
 import { loadContent } from './content.js';
 import { turkeyDayIndex } from './days.js';
 import * as duel from './duel.js';
+import {
+  CHECK_MS,
+  IDLE_CHECK_MS,
+  isStale,
+  nextAlarm,
+  PING,
+  PONG,
+  pings,
+} from './liveness.js';
 
 const DEFAULT_CONTENT_BASE = 'https://yerdema.github.io/aralik/content/';
 const MAX_MESSAGE_BYTES = 512;
@@ -16,6 +29,10 @@ export class DuelRoom extends DurableObject {
   constructor(ctx, env) {
     super(ctx, env);
     this.env = env;
+    // Answered by the runtime itself, without waking the room.
+    this.ctx.setWebSocketAutoResponse(
+      new WebSocketRequestResponsePair(PING, PONG),
+    );
   }
 
   content(now) {
@@ -58,15 +75,25 @@ export class DuelRoom extends DurableObject {
     const player = duel.playerFrom(params);
     if (player.error) return refuse(player.error);
     const { name, bank } = player;
+    const seat = (n) =>
+      socket.serializeAttachment({ seat: n, hb: pings(params), at: now });
 
     const state = await this.ctx.storage.get('state');
     const token = params.get('rejoin');
+    if (token && params.get('resign') === '1') {
+      // Left the app mid-duel and gave up from the home screen.
+      const gone = duel.resignWith(state, token, now);
+      if (gone.error) return refuse(gone.error);
+      this.drop(gone.seat);
+      seat(gone.seat);
+      return this.apply(gone);
+    }
     if (token) {
       // Back after a dropped connection.
       const back = duel.rejoin(state, token, now);
       if (back.error) return refuse(back.error);
       this.drop(back.seat);
-      socket.serializeAttachment({ seat: back.seat });
+      seat(back.seat);
       return this.apply(back);
     }
     let content;
@@ -80,7 +107,7 @@ export class DuelRoom extends DurableObject {
       duel.pickDuelQuestions(content, limit, today, duel.randomInt),
     );
     if (result.error) return refuse(result.error);
-    socket.serializeAttachment({ seat: result.seat });
+    seat(result.seat);
     await this.apply(result);
   }
 
@@ -102,6 +129,8 @@ export class DuelRoom extends DurableObject {
       await this.apply(duel.lock(state, seat, msg, now, content));
     } else if (msg?.t === 'next') {
       await this.apply(duel.next(state, seat, msg, now));
+    } else if (msg?.t === 'resign') {
+      await this.apply(duel.resign(state, seat, now));
     }
   }
 
@@ -135,9 +164,38 @@ export class DuelRoom extends DurableObject {
     await this.apply(duel.leave(state, seat, Date.now()));
   }
 
+  /**
+   * Closes the connections that went silent (no network) and treats them
+   * as dropped: the clock stops and the player may come back.
+   */
+  async checkLiveness(now) {
+    for (const s of this.ctx.getWebSockets()) {
+      const a = s.deserializeAttachment();
+      if (!a?.hb || (a.seat !== 0 && a.seat !== 1)) continue;
+      const pong = this.ctx.getWebSocketAutoResponseTimestamp(s);
+      const heard = Math.max(a.at ?? 0, pong?.getTime() ?? 0);
+      if (!isStale(a.at, pong?.getTime() ?? null, now)) continue;
+      s.serializeAttachment({});
+      try {
+        s.close(4003, 'timeout');
+      } catch {
+        // already closed
+      }
+      const state = await this.ctx.storage.get('state');
+      // Gone since it was last heard from: that time is given back.
+      await this.apply(duel.leave(state, a.seat, now, heard));
+    }
+  }
+
   async alarm() {
     const now = Date.now();
+    await this.checkLiveness(now);
     const state = await this.ctx.storage.get('state');
+    const due = await this.ctx.storage.get('due');
+    // undefined: a room from before 'due' was kept; its alarm was the rules'.
+    if (due !== undefined && (due === null || now < due)) {
+      return this.schedule(state, now);
+    }
     const content = state?.phase === 'question' ? await this.content(now) : null;
     const result = duel.alarm(state, now, content);
     if (result.wipe) {
@@ -153,8 +211,22 @@ export class DuelRoom extends DurableObject {
   async apply({ state, out, alarm }) {
     if (state) await this.ctx.storage.put('state', state);
     this.send(out);
-    if (alarm === null) await this.ctx.storage.deleteAlarm();
-    else if (alarm !== undefined) await this.ctx.storage.setAlarm(alarm);
+    if (alarm !== undefined) await this.ctx.storage.put('due', alarm);
+    await this.schedule(state ?? (await this.ctx.storage.get('state')));
+  }
+
+  /** The alarm: the rules' time, or sooner for a liveness check. */
+  async schedule(state, now = Date.now()) {
+    const due = (await this.ctx.storage.get('due')) ?? null;
+    const watched = this.ctx
+      .getWebSockets()
+      .some((s) => s.deserializeAttachment()?.hb);
+    const every = watched
+      ? duel.watchEvery(state, { play: CHECK_MS, idle: IDLE_CHECK_MS })
+      : null;
+    const at = nextAlarm(due, every, now);
+    if (at === null) await this.ctx.storage.deleteAlarm();
+    else await this.ctx.storage.setAlarm(at);
   }
 
   send(out) {

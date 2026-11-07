@@ -345,8 +345,26 @@ abstract final class AppStrings {
   static const duelPlayAgain = 'Yeni düello';
   static const duelHome = 'Ana ekran';
   static const duelQuitTitle = 'Düellodan çıkılsın mı?';
-  static const duelQuitBody = 'Çıkarsan rakibin kazanır.';
+  static const duelQuitBody =
+      'Rakibin seni 60 saniye bekler; bu sürede ana ekrandan düelloya '
+      'dönebilirsin. Dönmezsen rakibin kazanır. Teslim olursan düello hemen '
+      'biter.';
   static const duelStay = 'Kal';
+  static const duelResign = 'Teslim ol';
+
+  // Going back to a match left behind (home screen)
+  static const pendingDuelTitle = 'Devam eden bir düellon var';
+  static String pendingDuelBody(String code, int seconds) =>
+      'Oda $code · bağlanmak ister misin? $seconds sn içinde '
+      'dönmezsen rakibin kazanır.';
+  static const pendingTournamentTitle = 'Devam eden bir turnuvan var';
+  static String pendingTournamentBody(String code) =>
+      'Oda $code · oyun sürüyor, bağlanırsan kaldığı yerden katılırsın.';
+  static const pendingJoin = 'Bağlan';
+  static const pendingLeaveTournament = 'Bırak';
+  static const duelEnded = 'Bu düello sona erdi.';
+  static const tournamentEnded = 'Bu turnuva maçı sona erdi.';
+  static const pendingDuelExpired = 'Yarım kalan düellonun dönüş süresi doldu.';
   static const duelOffline = 'Bağlanılamadı. İnternetini kontrol et.';
   static const duelServerError = 'Oda açılamadı. Biraz sonra tekrar dene.';
   static const duelMissingQuestions =
@@ -358,6 +376,7 @@ abstract final class AppStrings {
     'blocked_name' => 'Bu ad kullanılamaz.',
     'version' => 'Düello için uygulamayı güncelle.',
     'connection_lost' => 'Bağlantı koptu.',
+    'rejoin_over' => 'Bu maç bitti.',
     'no_opponent' => 'Şu an rakip bulunamadı. Biraz sonra tekrar dene.',
     'offline' => duelOffline,
     'unavailable' => duelUnavailable,
@@ -396,13 +415,15 @@ abstract final class AppStrings {
   static const tournamentBackToRoom = 'Odaya dön';
   static const tournamentQuitTitle = 'Turnuvadan çıkılsın mı?';
   static const tournamentQuitBody =
-      'Kalan sorulardan taban puan alırsın, listede kalırsın.';
+      'Kaçırdığın sorulardan taban puan alırsın, listede kalırsın. Maç '
+      'bitene kadar ana ekrandan geri dönebilirsin.';
   static String tournamentErrorText(String code) => switch (code) {
     'no_room' || 'expired' => 'Bu kodla açık bir oda yok.',
     'in_progress' => 'Bu odada turnuva sürüyor. Bitince tekrar dene.',
     'room_full' => 'Oda dolu.',
     'name_taken' => "Odada bu adla biri var. Ayarlar'dan adını değiştir.",
-    'kicked' => 'Bu odaya giremezsin.',
+    'kicked' => 'Kurucu seni bu odadan çıkardığı için tekrar katılamazsın.',
+    'rejoin_over' => 'Turnuva bitti; sonuçlar odadakilerde.',
     'too_few' => tournamentNeedPlayers(3),
     _ => duelErrorText(code),
   };

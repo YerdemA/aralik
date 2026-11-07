@@ -28,6 +28,9 @@
 //                {t: 'start'}                  host, three or more players
 //                {t: 'lock', i, low, high}     low/high null: nothing typed
 //                {t: 'next', i}                ready for the next question
+//                {"t":"ping"}                  every few seconds with ?hb=1;
+//                    the runtime answers {"t":"pong"} (liveness.js). A
+//                    silent connection is closed and counts as dropped.
 //   room → app   {t: 'welcome', you, rejoin}   your player id and secret
 //                {t: 'room', code, host, count, players: [{id, name}], min, max}
 //                {t: 'start', questions, questionMs, players: [{id, name}]}
@@ -463,6 +466,15 @@ export function rejoin(state, token, now) {
       roomMessage(back),
     ]),
   };
+}
+
+/** Whether the room's connections are worth checking, and how often
+ * (liveness.js): often in a match, rarely in a lobby with players. */
+export function watchEvery(state, { play, idle }) {
+  if (!state) return null;
+  if (state.phase === 'question' || state.phase === 'reveal') return play;
+  if (state.phase === 'lobby' && state.players.length > 0) return idle;
+  return null;
 }
 
 /** The alarm went off. */

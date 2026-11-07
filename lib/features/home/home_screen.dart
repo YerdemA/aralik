@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
@@ -13,6 +14,7 @@ import '../../core/app_update.dart';
 import '../../data/duel_client.dart';
 import '../../data/store_link.dart';
 import '../../data/leaderboard.dart';
+import '../../data/pending_match.dart';
 import '../../data/question_repository.dart';
 import '../../data/settings_store.dart';
 import '../../data/sound.dart';
@@ -22,6 +24,8 @@ import '../../widgets/mascot.dart';
 import '../game/game_controller.dart';
 import '../game/game_screen.dart';
 import '../duel/duel_lobby_screen.dart';
+import '../duel/duel_screen.dart';
+import '../tournament/tournament_screen.dart';
 import '../tournament/tournament_entry_screen.dart';
 import '../leaderboard/leaderboard_screen.dart';
 import '../result/summary_screen.dart';
@@ -39,6 +43,7 @@ class HomeScreen extends StatefulWidget {
     required this.stats,
     required this.settings,
     this.leaderboard,
+    this.pending,
     this.latestAppBuild,
     this.openStore = openStorePage,
     this.scoringV2Day,
@@ -53,6 +58,10 @@ class HomeScreen extends StatefulWidget {
 
   /// Null hides the leaderboard.
   final LeaderboardStore? leaderboard;
+
+  /// A duel or tournament left mid-way (the app closed, or "Çık"): a card
+  /// offers to go back to it while the room keeps the seat.
+  final PendingMatchStore? pending;
 
   /// The newest build on Google Play (from the content manifest), or null.
   /// A newer one than this app's is offered once per launch.
@@ -87,6 +96,68 @@ class _HomeScreenState extends State<HomeScreen> {
     // apart from the duel name; the account's wins.
     syncUserName(widget.settings, _leaderboard);
     _checkDevice();
+    _checkPending();
+  }
+
+  /// A match left behind whose time to go back ran out while the app was
+  /// closed: forget it, and say so for a duel (the opponent won).
+  void _checkPending() {
+    final pending = widget.pending;
+    final match = pending?.current;
+    if (match == null || match.isLive(DateTime.now())) return;
+    pending!.clear();
+    if (match.kind != PendingKind.duel) return;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text(AppStrings.pendingDuelExpired)),
+      );
+    });
+  }
+
+  /// Back to the match left behind, with the player's secret.
+  Future<void> _rejoin(PendingMatch match) async {
+    final scaled = scaledOn(_today, widget.scoringV2Day?.call());
+    final again = await Navigator.of(context).push<bool>(
+      MaterialPageRoute(
+        builder: (_) => switch (match.kind) {
+          PendingKind.duel => DuelScreen(
+            service: _duels,
+            repository: _repository,
+            stats: _stats,
+            code: match.code,
+            name: match.name,
+            rejoin: match.rejoin,
+            pending: widget.pending,
+            scaled: scaled,
+          ),
+          PendingKind.tournament => TournamentScreen(
+            service: _tournaments,
+            repository: _repository,
+            stats: _stats,
+            code: match.code,
+            name: match.name,
+            rejoin: match.rejoin,
+            pending: widget.pending,
+            scaled: scaled,
+          ),
+        },
+      ),
+    );
+    if (again == true && mounted && match.kind == PendingKind.duel) {
+      _openDuel();
+    }
+  }
+
+  /// Gives the match up: a duel ends now with the opponent winning; a
+  /// tournament goes on without the player.
+  void _giveUp(PendingMatch match) {
+    widget.pending?.clear(rejoin: match.rejoin);
+    if (match.kind == PendingKind.duel) {
+      _duels
+          .resign(code: match.code, rejoin: match.rejoin, name: match.name)
+          .ignore();
+    }
   }
 
   /// A cleared app: the server may know this device's account and that
@@ -281,6 +352,7 @@ class _HomeScreenState extends State<HomeScreen> {
         stats: _stats,
         settings: widget.settings,
         leaderboard: _leaderboard,
+        pending: widget.pending,
         scaled: scaledOn(_today, widget.scoringV2Day?.call()),
       ),
     ),
@@ -294,6 +366,7 @@ class _HomeScreenState extends State<HomeScreen> {
         stats: _stats,
         settings: widget.settings,
         leaderboard: _leaderboard,
+        pending: widget.pending,
         scaled: scaledOn(_today, widget.scoringV2Day?.call()),
       ),
     ),
@@ -319,7 +392,11 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: SafeArea(
         child: ListenableBuilder(
-          listenable: Listenable.merge([_stats, ?_leaderboard]),
+          listenable: Listenable.merge([
+            _stats,
+            ?_leaderboard,
+            ?widget.pending,
+          ]),
           builder: (context, _) {
             final today = _today;
             final results = _stats.dailyResults(today);
@@ -327,6 +404,10 @@ class _HomeScreenState extends State<HomeScreen> {
             final playedBefore = _playedBefore(today);
             final hasDuel = _leaderboard?.isAvailable == true;
             final streak = _stats.streak(today);
+            final left = widget.pending?.current;
+            final pending = left != null && left.isLive(DateTime.now())
+                ? left
+                : null;
             // Scrolls only when the screen is too short for everything;
             // otherwise the main card takes up the spare height.
             return LayoutBuilder(
@@ -402,6 +483,17 @@ class _HomeScreenState extends State<HomeScreen> {
                               ],
                             ),
                             const SizedBox(height: 14),
+                            if (pending != null) ...[
+                              _PendingMatchCard(
+                                match: pending,
+                                onJoin: () => _rejoin(pending),
+                                onGiveUp: () => _giveUp(pending),
+                                onExpired: () => widget.pending?.clear(
+                                  rejoin: pending.rejoin,
+                                ),
+                              ),
+                              const SizedBox(height: 12),
+                            ],
                             if (finished) ...[
                               _TodayDoneStrip(
                                 results: results,
@@ -925,6 +1017,126 @@ class _DuelTile extends StatelessWidget {
 /// A gradient tile whose whole surface is one button: icon and arrow on
 /// top, title and hint below, the icon again large and faint in the
 /// corner.
+/// A duel or tournament left mid-way: go back to it, or give it up. A
+/// duel counts down the time the room keeps the seat.
+class _PendingMatchCard extends StatefulWidget {
+  const _PendingMatchCard({
+    required this.match,
+    required this.onJoin,
+    required this.onGiveUp,
+    required this.onExpired,
+  });
+
+  final PendingMatch match;
+  final VoidCallback onJoin;
+  final VoidCallback onGiveUp;
+  final VoidCallback onExpired;
+
+  @override
+  State<_PendingMatchCard> createState() => _PendingMatchCardState();
+}
+
+class _PendingMatchCardState extends State<_PendingMatchCard> {
+  Timer? _timer;
+
+  @override
+  void initState() {
+    super.initState();
+    _timer = Timer.periodic(const Duration(seconds: 1), (_) {
+      if (!widget.match.isLive(DateTime.now())) {
+        _timer?.cancel();
+        widget.onExpired();
+      } else {
+        setState(() {});
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final match = widget.match;
+    final duel = match.kind == PendingKind.duel;
+    final seconds = match.until
+        .difference(DateTime.now())
+        .inSeconds
+        .clamp(0, 999);
+    final color = duel ? Palette.duelOpponent : theme.colorScheme.tertiary;
+    return Card(
+      color: Color.alphaBlend(
+        color.withValues(alpha: 0.12),
+        theme.colorScheme.surface,
+      ),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20),
+        side: BorderSide(color: color, width: 2),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(16, 14, 16, 12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Row(
+              children: [
+                Icon(
+                  duel ? Icons.bolt_rounded : Icons.emoji_events_rounded,
+                  color: color,
+                ),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: Text(
+                    duel
+                        ? AppStrings.pendingDuelTitle
+                        : AppStrings.pendingTournamentTitle,
+                    style: theme.textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 4),
+            Text(
+              duel
+                  ? AppStrings.pendingDuelBody(match.code, seconds)
+                  : AppStrings.pendingTournamentBody(match.code),
+              style: theme.textTheme.bodyMedium,
+            ),
+            const SizedBox(height: 10),
+            Row(
+              children: [
+                Expanded(
+                  child: OutlinedButton(
+                    onPressed: widget.onGiveUp,
+                    child: Text(
+                      duel
+                          ? AppStrings.duelResign
+                          : AppStrings.pendingLeaveTournament,
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: FilledButton(
+                    onPressed: widget.onJoin,
+                    child: const Text(AppStrings.pendingJoin),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 class _ModeTile extends StatelessWidget {
   const _ModeTile({
     required this.colors,

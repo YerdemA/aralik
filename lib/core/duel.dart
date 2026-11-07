@@ -272,6 +272,9 @@ abstract final class DuelMessages {
 
   /// Ready for the question after [index].
   static String next(int index) => jsonEncode({'t': 'next', 'i': index});
+
+  /// Gives up: the opponent wins at once.
+  static String resign() => jsonEncode({'t': 'resign'});
 }
 
 enum DuelPhase {
@@ -395,6 +398,17 @@ class DuelMatch extends ChangeNotifier {
     notifyListeners();
   }
 
+  /// Going back to a duel this player left, with their secret: if the
+  /// connection drops before the room answers, the app tries again.
+  void expectRejoin(String code, String rejoin) {
+    _code = code;
+    _rejoin = rejoin;
+    _comingBack = true;
+    notifyListeners();
+  }
+
+  bool _comingBack = false;
+
   void handle(DuelEvent event) {
     if (_phase == DuelPhase.over || _phase == DuelPhase.failed) return;
     switch (event) {
@@ -490,7 +504,10 @@ class DuelMatch extends ChangeNotifier {
   /// The connection dropped. In play, with a secret to come back with, the
   /// app tries again ([reconnecting]); otherwise the duel has failed.
   void connectionLost() {
-    final inPlay = _phase == DuelPhase.question || _phase == DuelPhase.reveal;
+    final inPlay =
+        _phase == DuelPhase.question ||
+        _phase == DuelPhase.reveal ||
+        (_comingBack && _phase == DuelPhase.connecting);
     if (inPlay && _rejoin != null) {
       if (_reconnecting) return;
       _reconnecting = true;

@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'core/strings.dart';
 import 'core/theme.dart';
 import 'data/leaderboard.dart';
+import 'data/pending_match.dart';
 import 'data/question_repository.dart';
 import 'data/settings_store.dart';
 import 'data/stats_store.dart';
@@ -18,9 +19,13 @@ class KabacaApp extends StatelessWidget {
     required this.stats,
     required this.settings,
     this.leaderboard,
+    this.pending,
     this.latestAppBuild,
     this.scoringV2Day,
   });
+
+  /// A duel or tournament left mid-way, to go back to; null in tests.
+  final PendingMatchStore? pending;
 
   /// First day of the scaled scoring rule (content manifest), or null.
   final int? Function()? scoringV2Day;
@@ -67,6 +72,7 @@ class KabacaApp extends StatelessWidget {
             stats: stats,
             settings: settings,
             leaderboard: leaderboard,
+            pending: pending,
             latestAppBuild: latestAppBuild,
             scoringV2Day: scoringV2Day,
           ),

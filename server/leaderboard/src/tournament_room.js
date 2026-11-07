@@ -9,6 +9,15 @@ import { loadContent } from './content.js';
 import { turkeyDayIndex } from './days.js';
 import { pickDuelQuestions, randomInt, secret } from './duel.js';
 import * as tournament from './tournament.js';
+import {
+  CHECK_MS,
+  IDLE_CHECK_MS,
+  isStale,
+  nextAlarm,
+  PING,
+  PONG,
+  pings,
+} from './liveness.js';
 
 const DEFAULT_CONTENT_BASE = 'https://yerdema.github.io/aralik/content/';
 const MAX_MESSAGE_BYTES = 512;
@@ -17,6 +26,10 @@ export class TournamentRoom extends DurableObject {
   constructor(ctx, env) {
     super(ctx, env);
     this.env = env;
+    // Answered by the runtime itself, without waking the room.
+    this.ctx.setWebSocketAutoResponse(
+      new WebSocketRequestResponsePair(PING, PONG),
+    );
   }
 
   content(now) {
@@ -68,7 +81,7 @@ export class TournamentRoom extends DurableObject {
       const back = tournament.rejoin(state, token, now);
       if (back.error) return refuse(back.error);
       this.drop(back.id);
-      socket.serializeAttachment({ id: back.id });
+      socket.serializeAttachment({ id: back.id, hb: pings(params), at: now });
       return this.apply(back);
     }
     const result = tournament.join(
@@ -77,7 +90,7 @@ export class TournamentRoom extends DurableObject {
       now,
     );
     if (result.error) return refuse(result.error);
-    socket.serializeAttachment({ id: result.id });
+    socket.serializeAttachment({ id: result.id, hb: pings(params), at: now });
     await this.apply(result);
   }
 
@@ -150,12 +163,54 @@ export class TournamentRoom extends DurableObject {
     await this.apply(tournament.leave(state, id, now, content));
   }
 
+  /** Closes the connections that went silent (no network): from then on
+   * the player is dropped like any other (liveness.js). */
+  async checkLiveness(now) {
+    for (const s of this.ctx.getWebSockets()) {
+      const a = s.deserializeAttachment();
+      if (!a?.hb || !Number.isInteger(a.id)) continue;
+      const pong = this.ctx.getWebSocketAutoResponseTimestamp(s);
+      if (!isStale(a.at, pong?.getTime() ?? null, now)) continue;
+      s.serializeAttachment({});
+      try {
+        s.close(4003, 'timeout');
+      } catch {
+        // already closed
+      }
+      const state = await this.ctx.storage.get('state');
+      const content =
+        state && state.phase !== 'lobby' ? await this.content(now) : null;
+      await this.apply(tournament.leave(state, a.id, now, content));
+    }
+  }
+
   async alarm() {
     const now = Date.now();
+    await this.checkLiveness(now);
     const state = await this.ctx.storage.get('state');
+    if (!state) return;
+    const due = await this.ctx.storage.get('due');
+    // undefined: a room from before 'due' was kept; its alarm was the rules'.
+    if (due !== undefined && (due === null || now < due)) {
+      return this.schedule(state, now);
+    }
     const content =
       state?.phase === 'question' ? await this.content(now) : null;
     await this.apply(tournament.alarm(state, now, content));
+  }
+
+  /** The alarm: the rules' time, or sooner for a liveness check. */
+  async schedule(state, now = Date.now()) {
+    const due = (await this.ctx.storage.get('due')) ?? null;
+    const watched = this.ctx
+      .getWebSockets()
+      .some((s) => s.deserializeAttachment()?.hb);
+    const every = watched
+      ? tournament.watchEvery(state, { play: CHECK_MS, idle: IDLE_CHECK_MS })
+      : null;
+    const at = nextAlarm(due, every, now);
+    if (at === null) await this.ctx.storage.deleteAlarm();
+    else await this.ctx.storage.setAlarm(at);
   }
 
   /** Stores the new state, sends its messages, closes and sets the alarm. */
@@ -175,8 +230,8 @@ export class TournamentRoom extends DurableObject {
         }
       }
     }
-    if (alarm === null) await this.ctx.storage.deleteAlarm();
-    else if (alarm !== undefined) await this.ctx.storage.setAlarm(alarm);
+    if (alarm !== undefined) await this.ctx.storage.put('due', alarm);
+    await this.schedule(state ?? (await this.ctx.storage.get('state')));
   }
 
   send(out) {

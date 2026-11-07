@@ -15,6 +15,9 @@
 // Protocol (JSON, version DUEL_VERSION; see lib/core/duel.dart):
 //   app → room   {t: 'lock', i, low, high}   low/high null: nothing typed
 //                {t: 'next', i}              ready for the next question
+//                {t: 'resign'}               gives up: the other one wins
+//                {"t":"ping"}                every few seconds with ?hb=1;
+//                    the runtime answers {"t":"pong"} (liveness.js)
 //   room → app   {t: 'waiting', code}
 //                {t: 'start', you, names, questions, questionMs, rejoin}
 //                    rejoin: this player's secret to come back after a
@@ -27,6 +30,7 @@
 //                    r = {low, high, points, hit}
 //                {t: 'end', totals, winner, reason}
 //                    winner 0 | 1 | null (draw); reason 'done' | 'left'
+//                    ('left': the loser gave up or did not come back)
 //                {t: 'error', code}
 //                {t: 'away', seat, ms}   the other player's connection
 //                    dropped: the clock stops, they have ms to come back
@@ -43,7 +47,11 @@
 // A dropped connection does not end the duel at once: the clock stops for
 // both and the player has RECONNECT_MS to come back with their rejoin
 // secret. Then the question goes on from the second it stopped; otherwise
-// the other player wins.
+// the other player wins. A connection that goes silent (no network) is
+// closed by the room after a few seconds and counts as dropped
+// (liveness.js). A player who left the app may also come back with only
+// their secret and give up from there (?rejoin=…&resign=1): the other
+// player wins at once instead of waiting.
 //
 // Random opponents go through the lobby first (duel_lobby.js):
 //   lobby → app  {t: 'searching'}
@@ -366,8 +374,12 @@ export function next(state, seat, { i }, now) {
   );
 }
 
-/** A player's connection closed. */
-export function leave(state, seat, now) {
+/**
+ * A player's connection closed. [since]: when it really went (a silent
+ * connection is noticed only seconds later); the clock stops from then, so
+ * the time spent finding out is given back.
+ */
+export function leave(state, seat, now, since = now) {
   if (!state || state.phase === 'over') return step(state);
   if (state.phase === 'waiting') {
     // The creator may be sharing the code from another app: the room stays
@@ -383,7 +395,7 @@ export function leave(state, seat, now) {
   if (away[seat] !== null) return step(state);
   away[seat] = now + RECONNECT_MS;
   const paused = state.paused ?? {
-    ms: Math.max(0, state.deadline - now),
+    ms: Math.max(0, state.deadline - Math.min(since, now)),
   };
   const waiting = { ...state, away, paused, deadline: null };
   return step(
@@ -391,6 +403,40 @@ export function leave(state, seat, now) {
     [{ to: 1 - seat, msg: { t: 'away', seat, ms: RECONNECT_MS } }],
     awayAlarm(waiting),
   );
+}
+
+/** [seat] gives up: the other player wins at once. */
+export function resign(state, seat, now) {
+  if (!state || state.phase === 'over') return step(state);
+  if (state.phase === 'waiting') return leave(state, seat, now);
+  return finish(state, 'left', now, 1 - seat);
+}
+
+/**
+ * Gives up with a rejoin secret, from a new connection (the app was closed
+ * meanwhile). Returns {seat, ...step} or {error}; a duel that is already
+ * over is only told to the player.
+ */
+export function resignWith(state, token, now) {
+  if (!state || typeof token !== 'string' || token.length === 0) {
+    return error('no_room');
+  }
+  const seat = state.players.findIndex((p) => p.token === token);
+  if (seat < 0) return error('no_room');
+  if (state.phase === 'over') return rejoin(state, token, now);
+  if (state.phase !== 'question' && state.phase !== 'reveal') {
+    return error('room_closed');
+  }
+  return { seat, ...resign(state, seat, now) };
+}
+
+/** Whether the room is in a phase whose connections are worth checking,
+ * and how often (liveness.js): often in play, rarely while waiting. */
+export function watchEvery(state, { play, idle }) {
+  if (!state) return null;
+  if (state.phase === 'question' || state.phase === 'reveal') return play;
+  if (state.phase === 'waiting') return idle;
+  return null;
 }
 
 /** The alarm while someone is away: the first time to come back to end. */

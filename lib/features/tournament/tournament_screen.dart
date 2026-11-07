@@ -12,6 +12,7 @@ import '../../core/strings.dart';
 import '../../core/theme.dart';
 import '../../core/tournament.dart';
 import '../../data/duel_client.dart';
+import '../../data/pending_match.dart';
 import '../../data/question.dart';
 import '../../data/question_repository.dart';
 import '../../data/sound.dart';
@@ -34,7 +35,16 @@ class TournamentScreen extends StatefulWidget {
     required this.name,
     this.scaled = true,
     this.now = DateTime.now,
+    this.rejoin,
+    this.pending,
   });
+
+  /// This player's secret to go back to a match in room [code] they left.
+  final String? rejoin;
+
+  /// Where the match in progress is kept for going back to it after
+  /// leaving the app; null keeps nothing (tests).
+  final PendingMatchStore? pending;
 
   final TournamentService service;
   final QuestionRepository repository;
@@ -77,6 +87,13 @@ class _TournamentScreenState extends State<TournamentScreen> {
 
   static const _tickEvery = Duration(milliseconds: 200);
 
+  /// Keeps the match in [TournamentScreen.pending] while it runs.
+  late final _keeper = PendingMatchKeeper(
+    widget.pending,
+    kind: PendingKind.tournament,
+    now: widget.now,
+  );
+
   @override
   void initState() {
     super.initState();
@@ -84,8 +101,36 @@ class _TournamentScreenState extends State<TournamentScreen> {
     _connect();
   }
 
+  /// Saves the match in progress (to go back to it after leaving the app)
+  /// or forgets it once it is over.
+  void _keep({bool now = false}) {
+    final room = _room;
+    final code = room.code;
+    final rejoin = room.rejoin;
+    final inMatch =
+        (room.phase == TournamentPhase.question ||
+            room.phase == TournamentPhase.reveal) &&
+        !room.roundOver;
+    if (inMatch && code != null && rejoin != null) {
+      if (room.reconnecting) return;
+      _keeper.playing(
+        code: code,
+        rejoin: rejoin,
+        name: widget.name,
+        window: tournamentRejoinWindow(room.questionsLeft),
+        force: now,
+      );
+    } else if (room.phase != TournamentPhase.connecting &&
+        !(room.phase == TournamentPhase.failed && room.error == 'offline')) {
+      _keeper.over(rejoin: rejoin ?? widget.rejoin);
+    }
+  }
+
   @override
   void dispose() {
+    // Left mid-match ("Çık"): the room keeps the player until the match
+    // ends; the home screen offers to go back.
+    _keep(now: true);
     _ticker?.cancel();
     _revealTicker?.cancel();
     _left.dispose();
@@ -106,6 +151,7 @@ class _TournamentScreenState extends State<TournamentScreen> {
         name: widget.name,
         bankSize: bank.length,
         room: _room,
+        rejoin: widget.rejoin,
       );
       if (!mounted) {
         await session.close();
@@ -126,6 +172,7 @@ class _TournamentScreenState extends State<TournamentScreen> {
   }
 
   void _onRoom() {
+    _keep();
     final room = _room;
     final ids = room.questionIds;
     // A new round: a fresh input for its questions.
@@ -329,7 +376,14 @@ class _TournamentScreenState extends State<TournamentScreen> {
     final error =
         _localError ??
         (room.phase == TournamentPhase.failed
-            ? AppStrings.tournamentErrorText(room.error ?? '')
+            ? (widget.rejoin != null &&
+                      const {
+                        'no_room',
+                        'expired',
+                        'rejoin_over',
+                      }.contains(room.error)
+                  ? AppStrings.tournamentEnded
+                  : AppStrings.tournamentErrorText(room.error ?? ''))
             : null);
     final Widget body;
     if (room.phase == TournamentPhase.kicked) {

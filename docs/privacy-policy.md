@@ -50,7 +50,7 @@ Düello (arkadaşınla ya da rastgele bir rakiple) ya da turnuva (3–8 kişilik
 
 Rakip ararken de yalnızca kullanıcı adın ve soru sayısı gider. Adın ve aralıkların yalnızca o odadaki oyunculara gösterilir: düelloda rakibine, turnuvada odadaki herkese.
 
-Bağlantın koparsa kaldığın yerden devam edebilmen için oda sana rastgele, tek kullanımlık bir **geri dönüş anahtarı** verir; bu anahtar yalnızca o odada ve oyun sürerken işe yarar. Turnuvada kurucunun odadan çıkardığı oyuncunun adı, aynı odaya yeniden girmesin diye oda açık kaldıkça tutulur.
+Bağlantın koparsa kaldığın yerden devam edebilmen için oda sana rastgele, tek kullanımlık bir **geri dönüş anahtarı** verir; bu anahtar yalnızca o odada ve oyun sürerken işe yarar. Uygulamayı kapatırsan geri dönebilmen için oda kodu ve bu anahtar telefonunda, yalnızca dönüş süresi bitene kadar saklanır. Bağlantının hâlâ açık olduğunu anlamak için uygulama birkaç saniyede bir odaya içeriksiz bir sinyal gönderir. Turnuvada kurucunun odadan çıkardığı oyuncunun adı, aynı odaya yeniden girmesin diye oda açık kaldıkça tutulur.
 
 Oda bittikten (ya da boş kaldıktan) en geç birkaç dakika sonra sunucudan tamamen silinir; hiçbir düello ya da turnuva verisi saklanmaz. Oynamazsan hiçbir şey gönderilmez.
 

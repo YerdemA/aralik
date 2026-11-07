@@ -271,6 +271,21 @@ test('the room closes when its last player leaves or the lobby idles', () => {
   assert.equal(t.isFree(t.createRoom('X', T0).state, T0 + 11 * 60_000), true);
 });
 
+test('rooms are checked for dead connections in a match or a lobby', () => {
+  const every = { play: 4, idle: 15 };
+  assert.equal(t.watchEvery(null, every), null);
+  const empty = t.createRoom('ABCDE', 0).state;
+  assert.equal(t.watchEvery(empty, every), null);
+  assert.equal(
+    t.watchEvery({ ...empty, players: [{ id: 1 }] }, every),
+    15,
+  );
+  assert.equal(
+    t.watchEvery({ ...empty, phase: 'question' }, every),
+    4,
+  );
+});
+
 test('the worker routes tournament rooms', async () => {
   const created = [];
   const env = {

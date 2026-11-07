@@ -3,6 +3,7 @@ import 'package:aralik/core/daily.dart';
 import 'package:aralik/core/strings.dart';
 import 'package:aralik/core/theme.dart';
 import 'package:aralik/data/leaderboard.dart';
+import 'package:aralik/data/pending_match.dart';
 import 'package:aralik/data/question_repository.dart';
 import 'package:aralik/data/settings_store.dart';
 import 'package:aralik/data/stats_store.dart';
@@ -19,6 +20,7 @@ Future<StatsStore> pumpHome(
   int? latestAppBuild,
   Future<bool> Function()? openStore,
   bool withServer = false,
+  PendingMatchStore? Function(SharedPreferences prefs)? pending,
 }) async {
   HomeScreen.updateOffered = false;
   tester.view.physicalSize = const Size(1080, 2340);
@@ -35,6 +37,7 @@ Future<StatsStore> pumpHome(
         settings: await SettingsStore.open(),
         latestAppBuild: () => latestAppBuild,
         openStore: openStore ?? () async => true,
+        pending: pending?.call(await SharedPreferences.getInstance()),
         leaderboard: withServer
             ? LeaderboardStore(
                 await SharedPreferences.getInstance(),
@@ -230,5 +233,49 @@ void main() {
     await tester.tap(find.byTooltip(AppStrings.settings));
     await tester.pumpAndSettle();
     expect(find.byType(SettingsScreen), findsOneWidget);
+  });
+
+  group('a match left behind', () {
+    String record(Duration fromNow) => PendingMatch(
+      kind: PendingKind.duel,
+      code: 'K7M2P',
+      rejoin: 's0',
+      name: 'Ayşe',
+      until: DateTime.now().add(fromNow),
+    ).toJsonString();
+
+    testWidgets('offers to go back or give up while the room waits', (
+      tester,
+    ) async {
+      late PendingMatchStore store;
+      await pumpHome(
+        tester,
+        prefs: {'pending_match': record(const Duration(seconds: 45))},
+        pending: (prefs) => store = PendingMatchStore(prefs),
+      );
+      await tester.pump();
+      expect(find.text(AppStrings.pendingDuelTitle), findsOneWidget);
+      expect(find.text(AppStrings.pendingJoin), findsOneWidget);
+      await tester.tap(find.text(AppStrings.duelResign));
+      await tester.pump();
+      expect(store.current, isNull);
+      expect(find.text(AppStrings.pendingDuelTitle), findsNothing);
+    });
+
+    testWidgets('one whose time ran out is forgotten, with a word', (
+      tester,
+    ) async {
+      late PendingMatchStore store;
+      await pumpHome(
+        tester,
+        prefs: {'pending_match': record(const Duration(seconds: -5))},
+        pending: (prefs) => store = PendingMatchStore(prefs),
+      );
+      await tester.pump();
+      await tester.pump();
+      expect(find.text(AppStrings.pendingDuelTitle), findsNothing);
+      expect(find.text(AppStrings.pendingDuelExpired), findsOneWidget);
+      expect(store.current, isNull);
+    });
   });
 }

@@ -4,6 +4,7 @@ import '../../core/duel.dart';
 import '../../core/strings.dart';
 import '../../data/duel_client.dart';
 import '../../data/leaderboard.dart';
+import '../../data/pending_match.dart';
 import '../../data/question_repository.dart';
 import '../../data/settings_store.dart';
 import '../../data/stats_store.dart';
@@ -23,6 +24,7 @@ class DuelLobbyScreen extends StatefulWidget {
     required this.stats,
     required this.settings,
     this.leaderboard,
+    this.pending,
     this.scaled = true,
   });
 
@@ -36,6 +38,9 @@ class DuelLobbyScreen extends StatefulWidget {
 
   /// Passed on to Settings, where the name is chosen or changed.
   final LeaderboardStore? leaderboard;
+
+  /// Keeps a match in progress for going back to it after leaving.
+  final PendingMatchStore? pending;
 
   @override
   State<DuelLobbyScreen> createState() => _DuelLobbyScreenState();
@@ -107,6 +112,7 @@ class _DuelLobbyScreenState extends State<DuelLobbyScreen> {
           code: code,
           name: name,
           scaled: widget.scaled,
+          pending: widget.pending,
         ),
       ),
     );
