@@ -38,6 +38,9 @@ abstract final class AppStrings {
   static const mathAdvancedHint =
       'Trigonometri, limit, türev, integral, matris…';
   static const mathRoundLabel = 'Matematik turu';
+  static const mathDuel = 'Düello';
+  static const mathDuelHint = 'Temel ve ileri karışık, rakibe karşı';
+  static const mathDuelTitle = 'Matematik düellosu';
   static const mathSource = 'Hesaplama';
   static String mathWorking(String working) => 'Çözüm: $working';
   static const mathCalibration = 'Matematik kalibrasyonu';

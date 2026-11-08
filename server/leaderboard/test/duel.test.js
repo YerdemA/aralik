@@ -66,7 +66,9 @@ test('checks the player of a connection', () => {
     name: 'Ayşe',
     bank: 12,
     rematch: false,
+    math: false,
   });
+  assert.equal(duel.playerFrom(q('v=1&name=Ayse&bank=12&math=1')).math, true);
   assert.equal(duel.playerFrom(q('v=1&name=Ayse&bank=12&rm=1')).rematch, true);
   assert.equal(duel.playerFrom(q('v=2&name=Ayse&bank=12')).error, 'version');
   assert.equal(duel.playerFrom(q('v=1&name=A&bank=12')).error, 'invalid_name');
@@ -580,4 +582,50 @@ test('coming back after the end hears of a rematch request', () => {
     ['end', 'rematch'],
   );
   assert.equal(back.out[0].msg.rematch, true);
+});
+
+test('a math duel: computed questions, 60 s each, ÷2 … ×2 and no minus', () => {
+  const ids = [
+    'math:carpma:1:12345',
+    'math:faktoriyel:1:7',
+    'math:turev:2:9',
+    'math:olasilik:2:11',
+    'math:integral:3:5',
+  ];
+  const pickMath = () => ids;
+  let r = duel.createRoom('ABCDE', T0, 'math');
+  // An app that cannot play math duels is turned away.
+  assert.equal(
+    duel.join(r.state, { name: 'Eski', bank: 99 }, T0, pickMath).error,
+    'version',
+  );
+  r = duel.join(r.state, { name: 'Ayşe', bank: 99, math: true }, T0, pickMath);
+  r = duel.join(r.state, { name: 'Bora', bank: 99, math: true }, T0, pickMath);
+  const start = r.out.find((o) => o.msg.t === 'start').msg;
+  assert.deepEqual(start.questions, ids);
+  assert.equal(start.questionMs, duel.MATH_QUESTION_MS);
+  assert.equal(r.out.at(-1).msg.ms, duel.MATH_QUESTION_MS);
+  // 18 × 37? Whatever it is: exact scores high, nothing typed scores 0.
+  const answer = duel.questionOf(content, ids[0]).answer;
+  r = duel.lock(r.state, 0, { i: 0, low: answer, high: answer }, T0, content);
+  r = duel.lock(r.state, 1, { i: 0, low: null, high: null }, T0, content);
+  const [mine, theirs] = r.out.at(-1).msg.results;
+  assert.equal(mine.points, 100);
+  assert.equal(theirs.points, 0);
+  // Far off: 0, not −50.
+  r = duel.next(r.state, 0, { i: 0 }, T0);
+  r = duel.next(r.state, 1, { i: 0 }, T0);
+  r = duel.lock(r.state, 0, { i: 1, low: 1, high: 2 }, T0, content);
+  r = duel.lock(r.state, 1, { i: 1, low: 1, high: 2 }, T0, content);
+  assert.deepEqual(
+    r.out.at(-1).msg.results.map((x) => x.points),
+    [0, 0],
+  );
+});
+
+test('a math id is scored with math rules, a bank id as before', () => {
+  const m = duel.questionOf(content, 'math:olasilik:1:3');
+  assert.equal(m.math, true);
+  assert.equal(m.unit, '%');
+  assert.equal(duel.questionOf(content, 'e1').math, undefined);
 });

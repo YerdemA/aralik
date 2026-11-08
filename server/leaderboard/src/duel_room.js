@@ -12,6 +12,7 @@ import { DurableObject } from 'cloudflare:workers';
 import { loadContent } from './content.js';
 import { turkeyDayIndex } from './days.js';
 import * as duel from './duel.js';
+import { pickMathQuestions } from './math.js';
 import {
   CHECK_MS,
   IDLE_CHECK_MS,
@@ -52,7 +53,9 @@ export class DuelRoom extends DurableObject {
         if (!duel.isFree(state, now)) return new Response(null, { status: 409 });
         const code = url.searchParams.get('code');
         await this.ctx.storage.deleteAll();
-        await this.apply(duel.createRoom(code, now));
+        await this.apply(
+          duel.createRoom(code, now, url.searchParams.get('mode') ?? 'bank'),
+        );
         return new Response(null, { status: 201 });
       });
     }
@@ -74,7 +77,7 @@ export class DuelRoom extends DurableObject {
     };
     const player = duel.playerFrom(params);
     if (player.error) return refuse(player.error);
-    const { name, bank, rematch } = player;
+    const { name, bank, rematch, math } = player;
     const seat = (n) =>
       socket.serializeAttachment({ seat: n, hb: pings(params), at: now });
 
@@ -105,9 +108,11 @@ export class DuelRoom extends DurableObject {
     const today = turkeyDayIndex(now);
     const result = duel.join(
       state,
-      { name, bank, token: duel.secret(), rematch },
+      { name, bank, token: duel.secret(), rematch, math },
       now,
-      (limit) => duel.pickDuelQuestions(content, limit, today, duel.randomInt),
+      state?.mode === 'math'
+        ? () => pickMathQuestions(duel.randomInt)
+        : (limit) => duel.pickDuelQuestions(content, limit, today, duel.randomInt),
     );
     if (result.error) return refuse(result.error);
     seat(result.seat);
@@ -142,7 +147,9 @@ export class DuelRoom extends DurableObject {
         return;
       }
       const today = turkeyDayIndex(now);
-      const pick = (limit, exclude) =>
+      const pick = state.mode === 'math'
+        ? () => pickMathQuestions(duel.randomInt)
+        : (limit, exclude) =>
         duel.pickDuelQuestions(
           content,
           limit,

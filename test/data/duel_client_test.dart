@@ -94,6 +94,7 @@ void main() {
       'bank': '1001',
       'hb': '1',
       'rm': '1',
+      'math': '1',
     });
 
     channel.incoming.add(jsonEncode({'t': 'waiting', 'code': 'K7M2P'}));
@@ -506,4 +507,30 @@ void main() {
       await session.close();
     },
   );
+
+  test('math duels: rooms and random opponents of their own', () async {
+    final calls = <String>[];
+    Uri? opened;
+    final service = DuelService(
+      serviceUri: () => base,
+      request: (method, uri, [body]) async {
+        calls.add('$method $uri');
+        return (status: 201, body: <String, Object?>{'code': 'K7M2P'});
+      },
+      connect: (uri) async {
+        opened = uri;
+        return FakeChannel();
+      },
+    );
+    await service.createRoom(math: true);
+    expect(calls, ['POST https://lb.example/v1/duel/rooms?mode=math']);
+    final search = await service.findOpponent(
+      name: 'Ayşe',
+      bankSize: 10,
+      math: true,
+    );
+    expect(opened!.path, '/v1/duel/random');
+    expect(opened!.queryParameters['mode'], 'math');
+    await search.cancel();
+  });
 }

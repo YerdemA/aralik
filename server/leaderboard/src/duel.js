@@ -80,9 +80,12 @@ import { scaleOn, upcomingIds } from './content.js';
 import { turkeyDayIndex } from './days.js';
 import { isHit, MIN_POINTS, scoreFor, validBound } from './scoring.js';
 import { cleanNickname, isBlocked, nicknameKey } from './nickname.js';
+import { MATH_MIN_POINTS, mathAnswer, mathScale } from './math.js';
 
 export const DUEL_VERSION = 1;
 export const QUESTION_MS = 15_000;
+/** A math duel (mode 'math', 2026-11-08): computed questions, 60 s each. */
+export const MATH_QUESTION_MS = 60_000;
 /** Network slack after a question's deadline before it is revealed. */
 export const LOCK_GRACE_MS = 1_500;
 /** Longest stay on a revealed question when a player does not go on. */
@@ -128,7 +131,14 @@ export function playerFrom(params) {
   const bank = Number(params.get('bank'));
   if (!Number.isSafeInteger(bank) || bank < 1) return { error: 'bad_request' };
   // Apps that know rematches say so (?rm=1); older ones never get one.
-  return { name, bank, rematch: params.get('rm') === '1' };
+  // Apps that can play math duels say ?math=1; others are turned away
+  // from a math room.
+  return {
+    name,
+    bank,
+    rematch: params.get('rm') === '1',
+    math: params.get('math') === '1',
+  };
 }
 
 /** A random room code; [randomInt](n) gives 0 ≤ k < n. */
@@ -209,11 +219,13 @@ function error(code) {
 }
 
 /** A new room waiting for its two players. */
-export function createRoom(code, now) {
+export function createRoom(code, now, mode = 'bank') {
   return step(
     {
       v: DUEL_VERSION,
       code,
+      // 'bank': the question bank; 'math': generated math questions.
+      mode: mode === 'math' ? 'math' : 'bank',
       phase: 'waiting',
       createdAt: now,
       players: [],
@@ -246,11 +258,12 @@ export function createRoom(code, now) {
  */
 export function join(
   state,
-  { name, bank, token = null, rematch = false },
+  { name, bank, token = null, rematch = false, math = false },
   now,
   pick,
 ) {
   if (!state) return error('no_room');
+  if (state.mode === 'math' && !math) return error('version');
   if (state.phase !== 'waiting') return error('room_closed');
   if (state.players.length >= 2) return error('room_full');
   const seat = state.players.length;
@@ -280,7 +293,7 @@ function startMessages(state) {
       you,
       names: state.players.map((p) => p.name),
       questions: state.questions,
-      questionMs: QUESTION_MS,
+      questionMs: questionMs(state),
       rejoin: state.players[you].token,
     };
     if (state.round > 1) msg.round = state.round;
@@ -288,8 +301,24 @@ function startMessages(state) {
   });
 }
 
+/** Time per question in [state]'s room. */
+function questionMs(state) {
+  return state.mode === 'math' ? MATH_QUESTION_MS : QUESTION_MS;
+}
+
+/**
+ * The question [id] as scoring needs it: from the bank, or computed for a
+ * math id ({answer, unit, kind, math: true}).
+ */
+export function questionOf(content, id) {
+  const computed = mathAnswer(id);
+  if (computed) return { ...computed, kind: 'magnitude', math: true };
+  return content.questions.get(id);
+}
+
 function askQuestion(state, index, now) {
-  const deadline = now + QUESTION_MS;
+  const ms = questionMs(state);
+  const deadline = now + ms;
   return step(
     {
       ...state,
@@ -299,7 +328,7 @@ function askQuestion(state, index, now) {
       locks: [null, null],
       ready: [false, false],
     },
-    [{ to: 'all', msg: { t: 'question', i: index, ms: QUESTION_MS } }],
+    [{ to: 'all', msg: { t: 'question', i: index, ms } }],
     deadline + LOCK_GRACE_MS,
   );
 }
@@ -310,7 +339,7 @@ export function lock(state, seat, { i, low, high }, now, content) {
   if (state.locks[seat]) return step(state);
   // Too late: the question's time (and the network slack) is over.
   if (now > state.deadline + LOCK_GRACE_MS) return step(state);
-  const q = content.questions.get(state.questions[i]);
+  const q = questionOf(content, state.questions[i]);
   const empty = low === null && high === null;
   if (
     !empty &&
@@ -334,7 +363,12 @@ export function lock(state, seat, { i, low, high }, now, content) {
 }
 
 function reveal(state, now, content) {
-  const q = content.questions.get(state.questions[state.index]);
+  const q = questionOf(content, state.questions[state.index]);
+  // Math: a ÷2 … ×2 slider and no minus points (answer_scale.dart).
+  const floor = q.math ? MATH_MIN_POINTS : MIN_POINTS;
+  const scale = q.math
+    ? mathScale(q.unit)
+    : scaleOn(content, q, turkeyDayIndex(now));
   const results = state.locks.map((l) => {
     const low = l?.low ?? null;
     const high = l?.high ?? null;
@@ -343,14 +377,8 @@ function reveal(state, now, content) {
       high,
       points:
         low === null
-          ? MIN_POINTS
-          : scoreFor(
-              q.kind,
-              low,
-              high,
-              q.answer,
-              scaleOn(content, q, turkeyDayIndex(now)),
-            ),
+          ? floor
+          : scoreFor(q.kind, low, high, q.answer, scale, floor),
       hit: isHit(low, high, q.answer),
     };
   });
@@ -578,7 +606,7 @@ function resumeMessage(state, seat, now) {
     you: seat,
     names: state.players.map((p) => p.name),
     questions: state.questions,
-    questionMs: QUESTION_MS,
+    questionMs: questionMs(state),
     rejoin: state.players[seat].token,
     index: state.index,
     phase: state.phase,

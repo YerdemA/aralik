@@ -51,13 +51,17 @@ class DuelService {
 
   bool get isAvailable => serviceUri() != null;
 
-  /// Opens a room for a friend and returns its code.
-  Future<String> createRoom() async {
+  /// Opens a room for a friend and returns its code; a math duel's room
+  /// with [math].
+  Future<String> createRoom({bool math = false}) async {
     final base = serviceUri();
     if (base == null) throw const DuelException(DuelFailure.offline);
     final JsonReply reply;
     try {
-      reply = await _request('POST', base.resolve('v1/duel/rooms'));
+      reply = await _request(
+        'POST',
+        base.resolve(math ? 'v1/duel/rooms?mode=math' : 'v1/duel/rooms'),
+      );
     } on Object {
       throw const DuelException(DuelFailure.offline);
     }
@@ -69,12 +73,19 @@ class DuelService {
     return code;
   }
 
-  /// Waits in the lobby for a random opponent.
+  /// Waits in the lobby for a random opponent (for a math duel with
+  /// [math]: a lobby of its own).
   Future<DuelSearch> findOpponent({
     required String name,
     required int bankSize,
+    bool math = false,
   }) async {
-    final channel = await _open('v1/duel/random', name, bankSize);
+    final channel = await _open(
+      'v1/duel/random',
+      name,
+      bankSize,
+      mode: math ? 'math' : null,
+    );
     return DuelSearch._(channel);
   }
 
@@ -84,6 +95,7 @@ class DuelService {
     int bankSize, {
     String? rejoin,
     bool resign = false,
+    String? mode,
   }) async {
     final base = serviceUri();
     if (base == null) throw const DuelException(DuelFailure.offline);
@@ -101,6 +113,9 @@ class DuelService {
         'hb': '1',
         // This app knows rematches.
         'rm': '1',
+        // This app can play math duels.
+        'math': '1',
+        'mode': ?mode,
       },
     );
     try {

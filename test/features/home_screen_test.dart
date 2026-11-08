@@ -142,10 +142,12 @@ void main() {
     expect(find.text(AppStrings.comingSoon), findsOneWidget);
   });
 
-  testWidgets('math mode: pick basic, play with a 30 s clock', (tester) async {
+  testWidgets('math mode: pick basic, play with a 60 s clock', (tester) async {
     await pumpHome(tester);
     await tester.tap(find.text(AppStrings.categoryMath));
-    await tester.pumpAndSettle();
+    // Explicit frames, not pumpAndSettle: the home screen keeps animating.
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 500));
     expect(find.byType(MathModeScreen), findsOneWidget);
     expect(find.text(AppStrings.mathAdvanced), findsOneWidget);
     await tester.tap(find.text(AppStrings.mathBasic));

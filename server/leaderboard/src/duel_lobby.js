@@ -14,6 +14,11 @@ import { playerFrom } from './duel.js';
 import { isStale, PING, PONG, pings } from './liveness.js';
 import { openRoom } from './rooms.js';
 
+/** 'math' for a math duel, else 'bank' (each has its own lobby). */
+export function duelMode(params) {
+  return params.get('mode') === 'math' ? 'math' : 'bank';
+}
+
 /** Waiting longer than this closes the socket (the app may search again). */
 export const SEARCH_TIMEOUT_MS = 2 * 60_000;
 
@@ -36,14 +41,14 @@ export class DuelLobby extends DurableObject {
       socket.close(4000, player.error);
     } else {
       await this.ctx.blockConcurrencyWhile(() =>
-        this.arrive(socket, pings(url.searchParams)),
+        this.arrive(socket, pings(url.searchParams), duelMode(url.searchParams)),
       );
     }
     return new Response(null, { status: 101, webSocket: client });
   }
 
   /** Pairs [socket] with the longest-waiting player, or lets it wait. */
-  async arrive(socket, hb) {
+  async arrive(socket, hb, mode = 'bank') {
     const now = Date.now();
     const waiting = this.ctx
       .getWebSockets()
@@ -63,7 +68,7 @@ export class DuelLobby extends DurableObject {
         this.drop(other, 'gone'); // no network any more: not a partner
         continue;
       }
-      const code = await openRoom(this.env);
+      const code = await openRoom(this.env, undefined, undefined, mode);
       if (!code) break;
       const matched = JSON.stringify({ t: 'matched', code });
       try {

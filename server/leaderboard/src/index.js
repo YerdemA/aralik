@@ -545,7 +545,8 @@ async function echo(request, env) {
 async function createRoom(request, env) {
   if (!env.DUEL_ROOMS) throw new HttpError(404, 'not_found');
   await limitDuel(request, env);
-  const code = await openRoom(env);
+  const mode = new URL(request.url).searchParams.get('mode');
+  const code = await openRoom(env, undefined, undefined, mode ?? 'bank');
   if (!code) throw new HttpError(503, 'busy');
   return json(201, { code });
 }
@@ -569,7 +570,10 @@ function requireWebSocket(request, env) {
 async function findOpponent(request, env) {
   requireWebSocket(request, env);
   await limitDuel(request, env);
-  return env.DUEL_LOBBY.get(env.DUEL_LOBBY.idFromName('lobby')).fetch(request);
+  // Math duels wait in a lobby of their own.
+  const mode = new URL(request.url).searchParams.get('mode');
+  const name = mode === 'math' ? 'lobby-math' : 'lobby';
+  return env.DUEL_LOBBY.get(env.DUEL_LOBBY.idFromName(name)).fetch(request);
 }
 
 async function deviceStatus(request, env, now) {

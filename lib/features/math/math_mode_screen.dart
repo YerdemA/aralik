@@ -7,7 +7,10 @@ import '../../core/theme.dart';
 /// Math mode's start: the rules in one line, then basic or further on.
 /// Pops with the chosen [MathTier].
 class MathModeScreen extends StatelessWidget {
-  const MathModeScreen({super.key});
+  const MathModeScreen({super.key, this.onDuel});
+
+  /// Opens the math duel's lobby; null hides it (no server).
+  final VoidCallback? onDuel;
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +45,16 @@ class MathModeScreen extends StatelessWidget {
               hint: AppStrings.mathAdvancedHint,
               colors: [Palette.heroTop, Palette.heroBottom],
             ),
+            if (onDuel != null) ...[
+              const SizedBox(height: 14),
+              _TierCard(
+                onTap: onDuel,
+                icon: Icons.bolt_rounded,
+                title: AppStrings.mathDuel,
+                hint: AppStrings.mathDuelHint,
+                colors: const [Palette.duelMe, Palette.duelOpponent],
+              ),
+            ],
           ],
         ),
       ),
@@ -51,14 +64,17 @@ class MathModeScreen extends StatelessWidget {
 
 class _TierCard extends StatelessWidget {
   const _TierCard({
-    required this.tier,
+    this.tier,
+    this.onTap,
     required this.icon,
     required this.title,
     required this.hint,
     required this.colors,
   });
 
-  final MathTier tier;
+  /// Picks this tier (pops with it); or [onTap] does something else.
+  final MathTier? tier;
+  final VoidCallback? onTap;
   final IconData icon;
   final String title;
   final String hint;
@@ -81,7 +97,7 @@ class _TierCard extends StatelessWidget {
         ),
         child: InkWell(
           borderRadius: radius,
-          onTap: () => Navigator.of(context).pop(tier),
+          onTap: onTap ?? () => Navigator.of(context).pop(tier),
           child: Padding(
             padding: const EdgeInsets.fromLTRB(20, 20, 16, 20),
             child: Row(

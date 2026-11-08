@@ -16,11 +16,13 @@ export async function openRoom(
   env,
   random = randomInt,
   rooms = env.DUEL_ROOMS,
+  mode = 'bank',
 ) {
   for (let attempt = 0; attempt < 5; attempt++) {
     const code = newRoomCode(random);
+    const query = mode === 'math' ? `code=${code}&mode=math` : `code=${code}`;
     const response = await roomStub(env, code, rooms).fetch(
-      `https://room/create?code=${code}`,
+      `https://room/create?${query}`,
       { method: 'POST' },
     );
     if (response.status === 201) return code;

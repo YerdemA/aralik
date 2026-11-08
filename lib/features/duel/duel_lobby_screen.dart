@@ -26,10 +26,14 @@ class DuelLobbyScreen extends StatefulWidget {
     this.leaderboard,
     this.pending,
     this.scaled = true,
+    this.math = false,
   });
 
   /// Whether today's duels use the scaled rule (see answer_scale.dart).
   final bool scaled;
+
+  /// A math duel's lobby: math rooms and math's random opponents.
+  final bool math;
 
   final DuelService service;
   final QuestionRepository repository;
@@ -80,7 +84,7 @@ class _DuelLobbyScreenState extends State<DuelLobbyScreen> {
     if (name == null || _busy) return;
     setState(() => _busy = true);
     try {
-      final code = await widget.service.createRoom();
+      final code = await widget.service.createRoom(math: widget.math);
       await _play(code: code, name: name);
     } on DuelException catch (e) {
       _snack(
@@ -113,6 +117,7 @@ class _DuelLobbyScreenState extends State<DuelLobbyScreen> {
           name: name,
           scaled: widget.scaled,
           pending: widget.pending,
+          math: widget.math,
         ),
       ),
     );
@@ -135,7 +140,11 @@ class _DuelLobbyScreenState extends State<DuelLobbyScreen> {
   Widget _build(BuildContext context, String? name) {
     final theme = Theme.of(context);
     return Scaffold(
-      appBar: AppBar(title: const Text(AppStrings.duelTitle)),
+      appBar: AppBar(
+        title: Text(
+          widget.math ? AppStrings.mathDuelTitle : AppStrings.duelTitle,
+        ),
+      ),
       body: SafeArea(
         child: ListView(
           padding: const EdgeInsets.fromLTRB(20, 8, 20, 24),

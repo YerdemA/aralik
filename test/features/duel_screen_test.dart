@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:aralik/core/duel.dart';
+import 'package:aralik/core/math/math_problem.dart';
 import 'package:aralik/core/strings.dart';
 import 'package:aralik/core/theme.dart';
 import 'package:aralik/data/duel_client.dart';
@@ -563,5 +564,64 @@ void main() {
       find.widgetWithText(FilledButton, AppStrings.duelPlayAgain),
       findsOneWidget,
     );
+  });
+
+  testWidgets('a math duel makes its questions from their ids', (tester) async {
+    tester.view.physicalSize = const Size(1080, 2340);
+    tester.view.devicePixelRatio = 3;
+    addTearDown(tester.view.reset);
+    SharedPreferences.setMockInitialValues({});
+    final stats = await StatsStore.open();
+    final repository = QuestionRepository();
+    await tester.runAsync(repository.load);
+    final channel = FakeChannel();
+    final service = DuelService(
+      serviceUri: () => Uri.parse('https://lb.example/'),
+      connect: (_) async => channel,
+    );
+    var clock = DateTime(2026, 11, 8, 12);
+    void say(Map<String, Object?> m) => channel.incoming.add(jsonEncode(m));
+    Future<void> settle() async {
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 300));
+    }
+
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: AppTheme.light,
+        home: DuelScreen(
+          service: service,
+          repository: repository,
+          stats: stats,
+          code: 'K7M2P',
+          name: 'Ayşe',
+          math: true,
+          now: () => clock,
+        ),
+      ),
+    );
+    await tester.runAsync(() => Future<void>.delayed(Duration.zero));
+    await settle();
+    const id = 'math:carpma:1:12345';
+    final problem = mathProblemFromId(id)!;
+    say({
+      't': 'start',
+      'you': 0,
+      'names': ['Ayşe', 'Bora'],
+      'questions': [id],
+      'questionMs': 60000,
+    });
+    say({'t': 'question', 'i': 0, 'ms': 60000});
+    await settle();
+    expect(find.text(problem.text), findsOneWidget);
+    expect(find.text(AppStrings.duelMissingQuestions), findsNothing);
+    // Time runs out with nothing typed: 0 here, never −50; math stats.
+    clock = clock.add(const Duration(seconds: 61));
+    await tester.pump(const Duration(seconds: 1));
+    await settle();
+    final lock = jsonDecode(channel.sent.last) as Map<String, dynamic>;
+    expect(lock['t'], 'lock');
+    expect((stats.mathAnswered, stats.answered), (1, 0));
+    expect(stats.seenIds, isEmpty);
   });
 }

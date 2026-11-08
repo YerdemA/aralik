@@ -346,9 +346,15 @@ class _HomeScreenState extends State<HomeScreen> {
   /// questions, 30 s each, until "Ana ekran". Answers count in math's own
   /// calibration only and may come again.
   Future<void> _playMath() => _guarded(() async {
-    final tier = await Navigator.of(
-      context,
-    ).push<MathTier>(MaterialPageRoute(builder: (_) => const MathModeScreen()));
+    final tier = await Navigator.of(context).push<MathTier>(
+      MaterialPageRoute(
+        builder: (_) => MathModeScreen(
+          onDuel: _leaderboard?.isAvailable == true
+              ? () => _openDuel(math: true)
+              : null,
+        ),
+      ),
+    );
     if (tier == null) return;
     while (mounted) {
       final round = [
@@ -405,9 +411,10 @@ class _HomeScreenState extends State<HomeScreen> {
     ),
   );
 
-  void _openDuel() => Navigator.of(context).push(
+  void _openDuel({bool math = false}) => Navigator.of(context).push(
     MaterialPageRoute<void>(
       builder: (_) => DuelLobbyScreen(
+        math: math,
         service: _duels,
         repository: _repository,
         stats: _stats,

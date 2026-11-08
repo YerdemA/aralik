@@ -84,8 +84,15 @@ export function pointsPerUnit(kind, scale) {
  * With a [scale] the current rule, without one the first rule (days
  * before the switch).
  */
-export function scoreFor(kind, low, high, answer, scale = null) {
-  if (low === null || high === null) return MIN_POINTS;
+export function scoreFor(
+  kind,
+  low,
+  high,
+  answer,
+  scale = null,
+  floor = MIN_POINTS,
+) {
+  if (low === null || high === null) return floor;
   const s = intervalScore(
     kind,
     low,
@@ -99,7 +106,7 @@ export function scoreFor(kind, low, high, answer, scale = null) {
       ? POINTS_PER_LOG2
       : POINTS_PER_YEAR;
   const points = dartRound(MAX_POINTS - k * s);
-  return Math.min(MAX_POINTS, Math.max(MIN_POINTS, points));
+  return Math.min(MAX_POINTS, Math.max(floor, points));
 }
 
 export function isHit(low, high, answer) {

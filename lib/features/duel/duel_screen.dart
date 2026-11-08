@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart';
 
+import '../../core/math/math_question.dart';
+import '../../core/math/math_problem.dart';
 import '../../core/answer_scale.dart';
 import '../../core/duel.dart';
 import '../../core/number_format.dart';
@@ -43,7 +45,12 @@ class DuelScreen extends StatefulWidget {
     this.scaled = true,
     this.rejoin,
     this.pending,
+    this.math = false,
   });
+
+  /// A math duel: a random opponent is looked for in math's own lobby.
+  /// (The questions tell math apart by their ids, also when coming back.)
+  final bool math;
 
   /// This player's secret to go back to a duel in room [code] they left.
   final String? rejoin;
@@ -200,6 +207,7 @@ class _DuelScreenState extends State<DuelScreen> {
       if (code == null) {
         setState(() => _searching = true);
         final search = await widget.service.findOpponent(
+          math: widget.math,
           name: widget.name,
           bankSize: bank.length,
         );
@@ -317,12 +325,26 @@ class _DuelScreenState extends State<DuelScreen> {
     _playSounds();
     final ids = _match.questionIds;
     if (_game == null && ids.isNotEmpty) {
-      final questions = [for (final id in ids) ?_bank[id]];
+      // Math duels' questions are made from their ids, not looked up.
+      final questions = [
+        for (final id in ids)
+          ?_bank[id] ??
+              switch (mathProblemFromId(id)) {
+                final p? => mathQuestion(p),
+                null => null,
+              },
+      ];
       if (questions.length != ids.length) {
         _localError = AppStrings.duelMissingQuestions;
         _session?.close();
       } else {
-        _game = GameController(questions, scaled: widget.scaled);
+        final math = questions.any((q) => q.category == QuestionCategory.math);
+        _game = GameController(
+          questions,
+          scaled: widget.scaled,
+          scale: math ? mathScaleOf : null,
+          minPoints: math ? mathMinPoints : minPointsPerQuestion,
+        );
       }
     }
     final game = _game;
@@ -440,12 +462,17 @@ class _DuelScreenState extends State<DuelScreen> {
     _session?.lock(_match.index, low: answer.low, high: answer.high);
     // Duel answers count like free play: calibration, and never again in
     // free play.
-    widget.stats.recordAnswer(
-      questionId: answer.question.id,
-      category: answer.question.category,
-      outcome: answer.outcome,
-      points: answer.points,
-    );
+    if (answer.question.category == QuestionCategory.math) {
+      // Math counts in its own calibration and may come again.
+      widget.stats.recordMathAnswer(hit: answer.hit);
+    } else {
+      widget.stats.recordAnswer(
+        questionId: answer.question.id,
+        category: answer.question.category,
+        outcome: answer.outcome,
+        points: answer.points,
+      );
+    }
     setState(() {});
   }
 
