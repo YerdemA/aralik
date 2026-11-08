@@ -1,12 +1,12 @@
 {
- "version": 31,
+ "version": 32,
  "questions": "questions.json",
  "places": "places.json",
  "schedule": "schedule.json",
  "hashes": {
-  "questions.json": "0d99bcc995660fdc2dbfed4c1c714a3914ba4a795ffc4eb6638459271e8267cf",
+  "questions.json": "45111507c76857f13a3925115f2a314f1e2be93f36392b501cd08ded4729d8e2",
   "places.json": "9c6f6f8b3b361e167cca743f3bf668a008730d93335914d57bf1b283058c2617",
-  "schedule.json": "07e26516a69a5e38e7d91b916e267fac5443cb9910d616a0415867e49a6f14e5"
+  "schedule.json": "6dccad7cdc69792602717342810d86ba5944afc22804e5854a2f0bce60dcc4f4"
  },
  "leaderboard": "https://api.kabaca.app/",
  "app_build": 6,

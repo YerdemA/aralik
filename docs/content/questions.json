@@ -114,7 +114,8 @@
   "data_year": 2026,
   "fun_fact": "Konum: Fatih.",
   "difficulty": 2,
-  "dataset": "universities_tr"
+  "dataset": "universities_tr",
+  "retired": true
  },
  {
   "id": "q0010",
@@ -161,7 +162,7 @@
   "answer": 1931,
   "unit": "",
   "kind": "year",
-  "category": "tarih",
+  "category": "mimari",
   "source": "https://www.wikidata.org/wiki/Q79961",
   "data_year": 2026,
   "fun_fact": "Konum: Alto da Boa Vista, Brezilya.",
@@ -439,7 +440,8 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Tuna.",
   "difficulty": 3,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "retired": true
  },
  {
   "id": "q0035",
@@ -699,7 +701,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_boiling"
+  "dataset": "elements_boiling",
+  "retired": true
  },
  {
   "id": "q0055",
@@ -734,7 +737,7 @@
   "answer": 1889,
   "unit": "",
   "kind": "year",
-  "category": "tarih",
+  "category": "mimari",
   "source": "https://www.wikidata.org/wiki/Q243",
   "data_year": 2026,
   "fun_fact": "Konum: Paris'in 7. bölgesi, Fransa.",
@@ -747,7 +750,7 @@
   "answer": 1931,
   "unit": "",
   "kind": "year",
-  "category": "tarih",
+  "category": "mimari",
   "source": "https://www.wikidata.org/wiki/Q9188",
   "data_year": 2026,
   "fun_fact": "Konum: Manhattan, Amerika Birleşik Devletleri.",
@@ -960,7 +963,8 @@
   "data_year": 2026,
   "fun_fact": "Kulüp 1990'da belediye kulübü olarak kurulmuştu.",
   "difficulty": 1,
-  "dataset": "clubs_tr"
+  "dataset": "clubs_tr",
+  "retired": true
  },
  {
   "id": "q0075",
@@ -1220,7 +1224,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_boiling"
+  "dataset": "elements_boiling",
+  "retired": true
  },
  {
   "id": "q0095",
@@ -1289,7 +1294,7 @@
  },
  {
   "id": "q0100",
-  "text": "Gürsel Aksel Stadyumu kaç kişiliktir?",
+  "text": "Göztepe'nin stadyumu Gürsel Aksel Stadyumu kaç kişiliktir?",
   "answer": 20040,
   "unit": "kişi",
   "kind": "magnitude",
@@ -1332,7 +1337,7 @@
   "answer": 2011,
   "unit": "",
   "kind": "year",
-  "category": "tarih",
+  "category": "mimari",
   "source": "https://www.wikidata.org/wiki/Q189476",
   "data_year": 2026,
   "fun_fact": "Konum: Mekke, Suudi Arabistan.",
@@ -1949,7 +1954,8 @@
   "data_year": 2026,
   "fun_fact": "Konum: Ankara.",
   "difficulty": 2,
-  "dataset": "universities_tr"
+  "dataset": "universities_tr",
+  "retired": true
  },
  {
   "id": "q0151",
@@ -1992,7 +1998,7 @@
  },
  {
   "id": "q0154",
-  "text": "Papara Park kaç kişiliktir?",
+  "text": "Trabzonspor'un stadyumu Papara Park kaç kişiliktir?",
   "answer": 41500,
   "unit": "kişi",
   "kind": "magnitude",
@@ -2096,7 +2102,7 @@
  },
  {
   "id": "q0162",
-  "text": "Kayseri Kadir Has Şehir Stadyumu kaç kişiliktir?",
+  "text": "Kayserispor'un stadyumu Kadir Has Şehir Stadyumu kaç kişiliktir?",
   "answer": 32864,
   "unit": "kişi",
   "kind": "magnitude",
@@ -2599,7 +2605,8 @@
   "data_year": 2026,
   "fun_fact": "Konum: Ümraniye.",
   "difficulty": 2,
-  "dataset": "structures_tr"
+  "dataset": "structures_tr",
+  "retired": true
  },
  {
   "id": "q0201",
@@ -2837,7 +2844,7 @@
  },
  {
   "id": "q0219",
-  "text": "Recep Tayyip Erdoğan Stadyumu kaç kişiliktir?",
+  "text": "Kasımpaşa'nın stadyumu Recep Tayyip Erdoğan Stadyumu kaç kişiliktir?",
   "answer": 14234,
   "unit": "kişi",
   "kind": "magnitude",
@@ -3015,7 +3022,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_melting"
+  "dataset": "elements_melting",
+  "retired": true
  },
  {
   "id": "q0233",
@@ -3435,7 +3443,7 @@
  },
  {
   "id": "q0265",
-  "text": "Timsah Arena kaç kişiliktir?",
+  "text": "Bursaspor'un stadyumu Timsah Arena kaç kişiliktir?",
   "answer": 43877,
   "unit": "kişi",
   "kind": "magnitude",
@@ -3517,7 +3525,7 @@
   "answer": 1958,
   "unit": "",
   "kind": "year",
-  "category": "tarih",
+  "category": "mimari",
   "source": "https://www.wikidata.org/wiki/Q183536",
   "data_year": 2026,
   "fun_fact": "Konum: Japonya.",
@@ -3574,7 +3582,8 @@
   "data_year": 2026,
   "fun_fact": "Konum: Yunanistan.",
   "difficulty": 3,
-  "dataset": "mountains_world"
+  "dataset": "mountains_world",
+  "retired": true
  },
  {
   "id": "q0276",
@@ -3886,7 +3895,8 @@
   "data_year": 2026,
   "fun_fact": "Konum: Çin Halk Cumhuriyeti.",
   "difficulty": 3,
-  "dataset": "mountains_world"
+  "dataset": "mountains_world",
+  "retired": true
  },
  {
   "id": "q0300",
@@ -4327,7 +4337,7 @@
   "source": "https://www.wikidata.org/wiki/Q1398111",
   "data_year": 2026,
   "fun_fact": null,
-  "difficulty": 1,
+  "difficulty": 2,
   "dataset": "clubs_tr"
  },
  {
@@ -4401,7 +4411,7 @@
   "answer": 2005,
   "unit": "",
   "kind": "year",
-  "category": "tarih",
+  "category": "mimari",
   "source": "https://www.wikidata.org/wiki/Q83101",
   "data_year": 2026,
   "fun_fact": "Konum: Tayvan.",
@@ -4484,7 +4494,8 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Sava.",
   "difficulty": 3,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "retired": true
  },
  {
   "id": "q0346",
@@ -4557,7 +4568,7 @@
   "answer": 1999,
   "unit": "",
   "kind": "year",
-  "category": "tarih",
+  "category": "mimari",
   "source": "https://www.wikidata.org/wiki/Q83063",
   "data_year": 2026,
   "fun_fact": "Konum: Kuala Lumpur, Malezya.",
@@ -4709,7 +4720,7 @@
  },
  {
   "id": "q0363",
-  "text": "Samsun 19 Mayıs Stadyumu kaç kişiliktir?",
+  "text": "Samsunspor'un stadyumu Samsun 19 Mayıs Stadyumu kaç kişiliktir?",
   "answer": 33919,
   "unit": "kişi",
   "kind": "magnitude",
@@ -4796,7 +4807,8 @@
   "data_year": 2026,
   "fun_fact": "Konum: İstanbul.",
   "difficulty": 1,
-  "dataset": "universities_tr"
+  "dataset": "universities_tr",
+  "retired": true
  },
  {
   "id": "q0370",
@@ -4952,7 +4964,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_boiling"
+  "dataset": "elements_boiling",
+  "retired": true
  },
  {
   "id": "q0382",
@@ -4978,7 +4991,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_melting"
+  "dataset": "elements_melting",
+  "retired": true
  },
  {
   "id": "q0384",
@@ -5194,7 +5208,7 @@
   "answer": 1967,
   "unit": "",
   "kind": "year",
-  "category": "tarih",
+  "category": "mimari",
   "source": "https://www.wikidata.org/wiki/Q1601986",
   "data_year": 2026,
   "fun_fact": "Konum: Rusya.",
@@ -5299,7 +5313,7 @@
   "answer": 1931,
   "unit": "",
   "kind": "year",
-  "category": "tarih",
+  "category": "mimari",
   "source": "https://www.wikidata.org/wiki/Q11274",
   "data_year": 2026,
   "fun_fact": "Konum: Manhattan, Amerika Birleşik Devletleri.",
@@ -5356,7 +5370,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_boiling"
+  "dataset": "elements_boiling",
+  "retired": true
  },
  {
   "id": "q0413",
@@ -5421,7 +5436,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "battles"
+  "dataset": "battles",
+  "retired": true
  },
  {
   "id": "q0418",
@@ -5499,7 +5515,8 @@
   "data_year": 2026,
   "fun_fact": "Konum: Edirne.",
   "difficulty": 2,
-  "dataset": "bridges_tr"
+  "dataset": "bridges_tr",
+  "retired": true
  },
  {
   "id": "q0424",
@@ -5650,7 +5667,7 @@
   "answer": 2010,
   "unit": "",
   "kind": "year",
-  "category": "tarih",
+  "category": "mimari",
   "source": "https://www.wikidata.org/wiki/Q12495",
   "data_year": 2026,
   "fun_fact": "Konum: Dubai, Birleşik Arap Emirlikleri.",
@@ -5750,7 +5767,7 @@
  },
  {
   "id": "q0443",
-  "text": "Konya Büyükşehir Belediye Stadyumu kaç kişiliktir?",
+  "text": "Konyaspor'un stadyumu Konya Büyükşehir Belediye Stadyumu kaç kişiliktir?",
   "answer": 42276,
   "unit": "kişi",
   "kind": "magnitude",
@@ -5954,7 +5971,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "history_to_1000"
+  "dataset": "history_to_1000",
+  "retired": true
  },
  {
   "id": "q0459",
@@ -6240,7 +6258,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "history_1200_1400"
+  "dataset": "history_1200_1400",
+  "retired": true
  },
  {
   "id": "q0481",
@@ -6344,7 +6363,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "turkey_republic"
+  "dataset": "turkey_republic",
+  "retired": true
  },
  {
   "id": "q0489",
@@ -6760,7 +6780,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "art_people"
+  "dataset": "art_people",
+  "retired": true
  },
  {
   "id": "q0521",
@@ -7033,7 +7054,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "history_1000_1200"
+  "dataset": "history_1000_1200",
+  "retired": true
  },
  {
   "id": "q0542",
@@ -7046,7 +7068,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "history_to_1000"
+  "dataset": "history_to_1000",
+  "retired": true
  },
  {
   "id": "q0543",
@@ -7488,7 +7511,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "history_to_1000"
+  "dataset": "history_to_1000",
+  "retired": true
  },
  {
   "id": "q0577",
@@ -7527,7 +7551,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "history_1000_1200"
+  "dataset": "history_1000_1200",
+  "retired": true
  },
  {
   "id": "q0580",
@@ -7644,7 +7669,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "history_1000_1200"
+  "dataset": "history_1000_1200",
+  "retired": true
  },
  {
   "id": "q0589",
@@ -7826,7 +7852,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "history_1200_1400"
+  "dataset": "history_1200_1400",
+  "retired": true
  },
  {
   "id": "q0603",
@@ -8164,7 +8191,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "history_1200_1400"
+  "dataset": "history_1200_1400",
+  "retired": true
  },
  {
   "id": "q0629",
@@ -8372,7 +8400,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "history_to_1000"
+  "dataset": "history_to_1000",
+  "retired": true
  },
  {
   "id": "q0645",
@@ -8944,7 +8973,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "history_1200_1400"
+  "dataset": "history_1200_1400",
+  "retired": true
  },
  {
   "id": "q0689",
@@ -9113,7 +9143,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "turkey_republic"
+  "dataset": "turkey_republic",
+  "retired": true
  },
  {
   "id": "q0702",
@@ -9763,7 +9794,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "history_1200_1400"
+  "dataset": "history_1200_1400",
+  "retired": true
  },
  {
   "id": "q0752",
@@ -10088,7 +10120,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "history_1000_1200"
+  "dataset": "history_1000_1200",
+  "retired": true
  },
  {
   "id": "q0777",
@@ -10140,7 +10173,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "history_1200_1400"
+  "dataset": "history_1200_1400",
+  "retired": true
  },
  {
   "id": "q0781",
@@ -10465,7 +10499,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "history_1000_1200"
+  "dataset": "history_1000_1200",
+  "retired": true
  },
  {
   "id": "q0806",
@@ -11258,7 +11293,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "history_to_1000"
+  "dataset": "history_to_1000",
+  "retired": true
  },
  {
   "id": "q0867",
@@ -12090,7 +12126,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "history_1000_1200"
+  "dataset": "history_1000_1200",
+  "retired": true
  },
  {
   "id": "q0931",
@@ -12298,7 +12335,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "history_1000_1200"
+  "dataset": "history_1000_1200",
+  "retired": true
  },
  {
   "id": "q0947",
@@ -12870,7 +12908,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "art_people"
+  "dataset": "art_people",
+  "retired": true
  },
  {
   "id": "q0991",
@@ -12987,7 +13026,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "art_people"
+  "dataset": "art_people",
+  "retired": true
  },
  {
   "id": "q1000",
@@ -13026,7 +13066,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "retired": true
  },
  {
   "id": "q1003",
@@ -13092,7 +13133,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_lifespan"
+  "dataset": "animals_lifespan",
+  "retired": true
  },
  {
   "id": "q1008",
@@ -13118,7 +13160,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_boiling"
+  "dataset": "elements_boiling",
+  "retired": true
  },
  {
   "id": "q1010",
@@ -13144,7 +13187,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_melting"
+  "dataset": "elements_melting",
+  "retired": true
  },
  {
   "id": "q1012",
@@ -13157,7 +13201,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_boiling"
+  "dataset": "elements_boiling",
+  "retired": true
  },
  {
   "id": "q1013",
@@ -13223,7 +13268,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "retired": true
  },
  {
   "id": "q1018",
@@ -13315,7 +13361,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_boiling"
+  "dataset": "elements_boiling",
+  "retired": true
  },
  {
   "id": "q1025",
@@ -13380,7 +13427,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "retired": true
  },
  {
   "id": "q1030",
@@ -13406,7 +13454,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "retired": true
  },
  {
   "id": "q1032",
@@ -13562,7 +13611,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_boiling"
+  "dataset": "elements_boiling",
+  "retired": true
  },
  {
   "id": "q1044",
@@ -13810,7 +13860,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_boiling"
+  "dataset": "elements_boiling",
+  "retired": true
  },
  {
   "id": "q1063",
@@ -13875,7 +13926,8 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Dicle Nehri.",
   "difficulty": 3,
-  "dataset": "rivers_tr"
+  "dataset": "rivers_tr",
+  "retired": true
  },
  {
   "id": "q1068",
@@ -13992,7 +14044,8 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Karadeniz.",
   "difficulty": 3,
-  "dataset": "rivers_tr"
+  "dataset": "rivers_tr",
+  "retired": true
  },
  {
   "id": "q1077",
@@ -14096,7 +14149,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_boiling"
+  "dataset": "elements_boiling",
+  "retired": true
  },
  {
   "id": "q1085",
@@ -14226,7 +14280,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "retired": true
  },
  {
   "id": "q1095",
@@ -14239,7 +14294,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_boiling"
+  "dataset": "elements_boiling",
+  "retired": true
  },
  {
   "id": "q1096",
@@ -14291,7 +14347,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "retired": true
  },
  {
   "id": "q1100",
@@ -14382,7 +14439,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_boiling"
+  "dataset": "elements_boiling",
+  "retired": true
  },
  {
   "id": "q1107",
@@ -14395,7 +14453,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_boiling"
+  "dataset": "elements_boiling",
+  "retired": true
  },
  {
   "id": "q1108",
@@ -14486,7 +14545,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_boiling"
+  "dataset": "elements_boiling",
+  "retired": true
  },
  {
   "id": "q1115",
@@ -14499,7 +14559,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_lifespan"
+  "dataset": "animals_lifespan",
+  "retired": true
  },
  {
   "id": "q1116",
@@ -14525,7 +14586,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_melting"
+  "dataset": "elements_melting",
+  "retired": true
  },
  {
   "id": "q1118",
@@ -14577,7 +14639,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_melting"
+  "dataset": "elements_melting",
+  "retired": true
  },
  {
   "id": "q1122",
@@ -14603,7 +14666,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "retired": true
  },
  {
   "id": "q1124",
@@ -14825,7 +14889,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_boiling"
+  "dataset": "elements_boiling",
+  "retired": true
  },
  {
   "id": "q1141",
@@ -14916,7 +14981,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "retired": true
  },
  {
   "id": "q1148",
@@ -14981,7 +15047,8 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Fırat.",
   "difficulty": 3,
-  "dataset": "rivers_tr"
+  "dataset": "rivers_tr",
+  "retired": true
  },
  {
   "id": "q1153",
@@ -14994,7 +15061,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_melting"
+  "dataset": "elements_melting",
+  "retired": true
  },
  {
   "id": "q1154",
@@ -15267,7 +15335,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_boiling"
+  "dataset": "elements_boiling",
+  "retired": true
  },
  {
   "id": "q1175",
@@ -15358,7 +15427,8 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Peri Çayı.",
   "difficulty": 3,
-  "dataset": "rivers_tr"
+  "dataset": "rivers_tr",
+  "retired": true
  },
  {
   "id": "q1182",
@@ -15449,7 +15519,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_lifespan"
+  "dataset": "animals_lifespan",
+  "retired": true
  },
  {
   "id": "q1189",
@@ -15475,7 +15546,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "retired": true
  },
  {
   "id": "q1191",
@@ -15670,7 +15742,8 @@
   "data_year": 2026,
   "fun_fact": "Konum: Birleşik Krallık.",
   "difficulty": 3,
-  "dataset": "islands_world"
+  "dataset": "islands_world",
+  "retired": true
  },
  {
   "id": "q1206",
@@ -15930,7 +16003,8 @@
   "data_year": 2026,
   "fun_fact": "Konum: Amerika Birleşik Devletleri.",
   "difficulty": 3,
-  "dataset": "lakes_world"
+  "dataset": "lakes_world",
+  "retired": true
  },
  {
   "id": "q1226",
@@ -15970,7 +16044,8 @@
   "data_year": 2026,
   "fun_fact": "Konum: Yunanistan.",
   "difficulty": 3,
-  "dataset": "islands_world"
+  "dataset": "islands_world",
+  "retired": true
  },
  {
   "id": "q1229",
@@ -15983,7 +16058,8 @@
   "data_year": 2026,
   "fun_fact": "Konum: Birleşik Krallık.",
   "difficulty": 3,
-  "dataset": "islands_world"
+  "dataset": "islands_world",
+  "retired": true
  },
  {
   "id": "q1230",
@@ -16152,7 +16228,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "solar_radius"
+  "dataset": "solar_radius",
+  "retired": true
  },
  {
   "id": "q1243",
@@ -16334,7 +16411,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "solar_radius"
+  "dataset": "solar_radius",
+  "retired": true
  },
  {
   "id": "q1257",
@@ -16660,7 +16738,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "solar_radius"
+  "dataset": "solar_radius",
+  "retired": true
  },
  {
   "id": "q1282",
@@ -17024,7 +17103,8 @@
   "data_year": 2026,
   "fun_fact": "Konum: Hindistan.",
   "difficulty": 3,
-  "dataset": "islands_world"
+  "dataset": "islands_world",
+  "retired": true
  },
  {
   "id": "q1310",
@@ -18012,7 +18092,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "turkey_curated"
+  "dataset": "turkey_curated",
+  "retired": true
  },
  {
   "id": "q1386",
@@ -19780,7 +19861,8 @@
   "data_year": 2026,
   "fun_fact": "Konum: Katar.",
   "difficulty": 3,
-  "dataset": "airports_runway"
+  "dataset": "airports_runway",
+  "retired": true
  },
  {
   "id": "q1522",
@@ -19819,7 +19901,8 @@
   "data_year": 2026,
   "fun_fact": "Konum: Sichuan, Çin.",
   "difficulty": 3,
-  "dataset": "airports_elevation"
+  "dataset": "airports_elevation",
+  "retired": true
  },
  {
   "id": "q1525",
@@ -19923,7 +20006,8 @@
   "data_year": 2026,
   "fun_fact": "Konum: Afganistan.",
   "difficulty": 3,
-  "dataset": "airports_elevation"
+  "dataset": "airports_elevation",
+  "retired": true
  },
  {
   "id": "q1533",
@@ -19962,7 +20046,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "airports_runway"
+  "dataset": "airports_runway",
+  "retired": true
  },
  {
   "id": "q1536",
@@ -19988,7 +20073,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "airports_runway"
+  "dataset": "airports_runway",
+  "retired": true
  },
  {
   "id": "q1538",
@@ -20014,7 +20100,8 @@
   "data_year": 2026,
   "fun_fact": "Konum: Kenya.",
   "difficulty": 3,
-  "dataset": "airports_elevation"
+  "dataset": "airports_elevation",
+  "retired": true
  },
  {
   "id": "q1540",
@@ -20040,7 +20127,8 @@
   "data_year": 2026,
   "fun_fact": "Konum: Fransa.",
   "difficulty": 3,
-  "dataset": "airports_runway"
+  "dataset": "airports_runway",
+  "retired": true
  },
  {
   "id": "q1542",
@@ -20092,7 +20180,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "airports_runway"
+  "dataset": "airports_runway",
+  "retired": true
  },
  {
   "id": "q1546",
@@ -20118,7 +20207,8 @@
   "data_year": 2026,
   "fun_fact": "Konum: Birleşik Arap Emirlikleri.",
   "difficulty": 3,
-  "dataset": "airports_runway"
+  "dataset": "airports_runway",
+  "retired": true
  },
  {
   "id": "q1548",
@@ -20144,7 +20234,8 @@
   "data_year": 2026,
   "fun_fact": "Konum: Güney Afrika.",
   "difficulty": 3,
-  "dataset": "airports_elevation"
+  "dataset": "airports_elevation",
+  "retired": true
  },
  {
   "id": "q1550",
@@ -20196,7 +20287,8 @@
   "data_year": 2026,
   "fun_fact": "Konum: Peru.",
   "difficulty": 3,
-  "dataset": "airports_elevation"
+  "dataset": "airports_elevation",
+  "retired": true
  },
  {
   "id": "q1554",
@@ -20209,7 +20301,8 @@
   "data_year": 2026,
   "fun_fact": "Konum: Etiyopya.",
   "difficulty": 3,
-  "dataset": "airports_elevation"
+  "dataset": "airports_elevation",
+  "retired": true
  },
  {
   "id": "q1555",
@@ -20222,7 +20315,8 @@
   "data_year": 2026,
   "fun_fact": "Konum: Tibet, Çin.",
   "difficulty": 3,
-  "dataset": "airports_elevation"
+  "dataset": "airports_elevation",
+  "retired": true
  },
  {
   "id": "q1556",
@@ -20884,7 +20978,7 @@
   "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS?locations=IL",
   "data_year": 2024,
   "fun_fact": null,
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_forest"
  },
  {
@@ -20897,7 +20991,7 @@
   "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=NG",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_gdp_per_capita"
  },
  {
@@ -20910,7 +21004,7 @@
   "source": "https://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS?locations=DE",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: %10,4.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_age_65"
  },
  {
@@ -20923,7 +21017,7 @@
   "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=LU",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_gdp_per_capita"
  },
  {
@@ -20936,7 +21030,7 @@
   "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS?locations=CA",
   "data_year": 2024,
   "fun_fact": null,
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_forest"
  },
  {
@@ -20949,7 +21043,7 @@
   "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS?locations=CN",
   "data_year": 2024,
   "fun_fact": null,
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_forest"
  },
  {
@@ -20962,7 +21056,7 @@
   "source": "https://data.worldbank.org/indicator/SP.DYN.TFRT.IN?locations=JP",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 2,19 çocuk.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_fertility"
  },
  {
@@ -20975,7 +21069,7 @@
   "source": "https://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS?locations=IT",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: %10,4.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_age_65"
  },
  {
@@ -20988,7 +21082,7 @@
   "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS?locations=GB",
   "data_year": 2024,
   "fun_fact": null,
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_forest"
  },
  {
@@ -21001,7 +21095,7 @@
   "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=CH",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_gdp_per_capita"
  },
  {
@@ -21014,7 +21108,7 @@
   "source": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=TR",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 73,5 yıl.",
-  "difficulty": 2,
+  "difficulty": 1,
   "dataset": "wdi_life_expectancy"
  },
  {
@@ -21027,7 +21121,7 @@
   "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS?locations=KR",
   "data_year": 2024,
   "fun_fact": null,
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_forest"
  },
  {
@@ -21040,7 +21134,7 @@
   "source": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=AZ",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 73,5 yıl.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_life_expectancy"
  },
  {
@@ -21053,7 +21147,7 @@
   "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=CN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_gdp_per_capita"
  },
  {
@@ -21066,7 +21160,7 @@
   "source": "https://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS?locations=JP",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: %10,4.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_age_65"
  },
  {
@@ -21092,7 +21186,7 @@
   "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=KR",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_gdp_per_capita"
  },
  {
@@ -21105,7 +21199,7 @@
   "source": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=IN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 73,5 yıl.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_life_expectancy"
  },
  {
@@ -21118,7 +21212,7 @@
   "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=IN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_gdp_per_capita"
  },
  {
@@ -21144,7 +21238,7 @@
   "source": "https://data.worldbank.org/indicator/SP.DYN.TFRT.IN?locations=FR",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 2,19 çocuk.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_fertility"
  },
  {
@@ -21157,7 +21251,7 @@
   "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS?locations=SA",
   "data_year": 2024,
   "fun_fact": null,
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_forest"
  },
  {
@@ -21170,7 +21264,7 @@
   "source": "https://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS?locations=TR",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: %10,4.",
-  "difficulty": 2,
+  "difficulty": 1,
   "dataset": "wdi_age_65"
  },
  {
@@ -21183,7 +21277,7 @@
   "source": "https://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS?locations=QA",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: %10,4.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_age_65"
  },
  {
@@ -21196,7 +21290,7 @@
   "source": "https://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS?locations=KR",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: %10,4.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_age_65"
  },
  {
@@ -21209,7 +21303,7 @@
   "source": "https://data.worldbank.org/indicator/SP.DYN.TFRT.IN?locations=NG",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 2,19 çocuk.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_fertility"
  },
  {
@@ -21222,7 +21316,7 @@
   "source": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=RU",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 73,5 yıl.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_life_expectancy"
  },
  {
@@ -21235,7 +21329,7 @@
   "source": "https://data.worldbank.org/indicator/SP.DYN.TFRT.IN?locations=NE",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 2,19 çocuk.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_fertility"
  },
  {
@@ -21248,7 +21342,7 @@
   "source": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=CN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 73,5 yıl.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_life_expectancy"
  },
  {
@@ -21261,7 +21355,7 @@
   "source": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=US",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 73,5 yıl.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_life_expectancy"
  },
  {
@@ -21274,7 +21368,7 @@
   "source": "https://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS?locations=NG",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: %10,4.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_age_65"
  },
  {
@@ -21287,7 +21381,7 @@
   "source": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=CH",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 73,5 yıl.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_life_expectancy"
  },
  {
@@ -21300,7 +21394,7 @@
   "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=QA",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_gdp_per_capita"
  },
  {
@@ -21313,7 +21407,7 @@
   "source": "https://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS?locations=IN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: %10,4.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_age_65"
  },
  {
@@ -21326,7 +21420,7 @@
   "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS?locations=FI",
   "data_year": 2024,
   "fun_fact": null,
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_forest"
  },
  {
@@ -21339,7 +21433,7 @@
   "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS?locations=BR",
   "data_year": 2024,
   "fun_fact": null,
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_forest"
  },
  {
@@ -21352,7 +21446,7 @@
   "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=GR",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_gdp_per_capita"
  },
  {
@@ -21365,7 +21459,7 @@
   "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=EG",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_gdp_per_capita"
  },
  {
@@ -21378,7 +21472,7 @@
   "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS?locations=DE",
   "data_year": 2024,
   "fun_fact": null,
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_forest"
  },
  {
@@ -21391,7 +21485,7 @@
   "source": "https://data.worldbank.org/indicator/SP.DYN.TFRT.IN?locations=IL",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 2,19 çocuk.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_fertility"
  },
  {
@@ -21404,7 +21498,7 @@
   "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=NO",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_gdp_per_capita"
  },
  {
@@ -21417,7 +21511,7 @@
   "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=DE",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_gdp_per_capita"
  },
  {
@@ -21430,7 +21524,7 @@
   "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS?locations=TR",
   "data_year": 2024,
   "fun_fact": null,
-  "difficulty": 2,
+  "difficulty": 1,
   "dataset": "wdi_forest"
  },
  {
@@ -21443,7 +21537,7 @@
   "source": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=CF",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 73,5 yıl.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_life_expectancy"
  },
  {
@@ -21456,7 +21550,7 @@
   "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=RU",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_gdp_per_capita"
  },
  {
@@ -21469,7 +21563,7 @@
   "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=TR",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
-  "difficulty": 2,
+  "difficulty": 1,
   "dataset": "wdi_gdp_per_capita"
  },
  {
@@ -21482,7 +21576,7 @@
   "source": "https://data.worldbank.org/indicator/SP.DYN.TFRT.IN?locations=KR",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 2,19 çocuk.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_fertility"
  },
  {
@@ -21495,7 +21589,7 @@
   "source": "https://data.worldbank.org/indicator/SP.DYN.TFRT.IN?locations=CN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 2,19 çocuk.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_fertility"
  },
  {
@@ -21508,7 +21602,7 @@
   "source": "https://data.worldbank.org/indicator/SP.DYN.TFRT.IN?locations=US",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 2,19 çocuk.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_fertility"
  },
  {
@@ -21521,7 +21615,7 @@
   "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=JP",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_gdp_per_capita"
  },
  {
@@ -21534,7 +21628,7 @@
   "source": "https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?locations=AZ",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_gdp_per_capita"
  },
  {
@@ -21547,7 +21641,7 @@
   "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS?locations=RU",
   "data_year": 2024,
   "fun_fact": null,
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_forest"
  },
  {
@@ -21560,7 +21654,7 @@
   "source": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS?locations=JP",
   "data_year": 2024,
   "fun_fact": null,
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_forest"
  },
  {
@@ -21573,7 +21667,7 @@
   "source": "https://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS?locations=CN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: %10,4.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_age_65"
  },
  {
@@ -21586,7 +21680,7 @@
   "source": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=IT",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 73,5 yıl.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_life_expectancy"
  },
  {
@@ -21599,7 +21693,7 @@
   "source": "https://data.worldbank.org/indicator/SP.DYN.TFRT.IN?locations=TR",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 2,19 çocuk.",
-  "difficulty": 2,
+  "difficulty": 1,
   "dataset": "wdi_fertility"
  },
  {
@@ -21612,7 +21706,7 @@
   "source": "https://data.worldbank.org/indicator/SP.DYN.TFRT.IN?locations=IN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 2,19 çocuk.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_fertility"
  },
  {
@@ -21625,7 +21719,7 @@
   "source": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=KR",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 73,5 yıl.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_life_expectancy"
  },
  {
@@ -21638,7 +21732,7 @@
   "source": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=NG",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 73,5 yıl.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_life_expectancy"
  },
  {
@@ -21651,7 +21745,7 @@
   "source": "https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=EG",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: %71,2.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_internet"
  },
  {
@@ -21664,7 +21758,7 @@
   "source": "https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=NE",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: %71,2.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_internet"
  },
  {
@@ -21677,7 +21771,7 @@
   "source": "https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=TR",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: %73,6.",
-  "difficulty": 2,
+  "difficulty": 1,
   "dataset": "wdi_internet"
  },
  {
@@ -21690,12 +21784,12 @@
   "source": "https://data.worldbank.org/indicator/ST.INT.ARVL?locations=EG",
   "data_year": 2019,
   "fun_fact": "Salgından önceki son yılın verisi.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_tourism"
  },
  {
   "id": "q1669",
-  "text": "2020 yılında Avusturya'ya kaç uluslararası turist gelmiştir?",
+  "text": "Pandemi yılı 2020'de Avusturya'ya kaç uluslararası turist gelmiştir?",
   "answer": 15091000,
   "unit": "kişi",
   "kind": "magnitude",
@@ -21703,7 +21797,7 @@
   "source": "https://data.worldbank.org/indicator/ST.INT.ARVL?locations=AT",
   "data_year": 2020,
   "fun_fact": "COVID-19 salgını yüzünden çok düşük: 2019'da 31,9 milyon turist gelmişti.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_tourism"
  },
  {
@@ -21716,12 +21810,12 @@
   "source": "https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=PK",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: %71,2.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_internet"
  },
  {
   "id": "q1671",
-  "text": "2020 yılında Rusya'ya kaç uluslararası turist gelmiştir?",
+  "text": "Pandemi yılı 2020'de Rusya'ya kaç uluslararası turist gelmiştir?",
   "answer": 6359000,
   "unit": "kişi",
   "kind": "magnitude",
@@ -21729,12 +21823,12 @@
   "source": "https://data.worldbank.org/indicator/ST.INT.ARVL?locations=RU",
   "data_year": 2020,
   "fun_fact": "COVID-19 salgını yüzünden çok düşük: 2019'da 24,4 milyon turist gelmişti.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_tourism"
  },
  {
   "id": "q1672",
-  "text": "2020 yılında Birleşik Arap Emirlikleri'ne kaç uluslararası turist gelmiştir?",
+  "text": "Pandemi yılı 2020'de Birleşik Arap Emirlikleri'ne kaç uluslararası turist gelmiştir?",
   "answer": 8084000,
   "unit": "kişi",
   "kind": "magnitude",
@@ -21742,7 +21836,7 @@
   "source": "https://data.worldbank.org/indicator/ST.INT.ARVL?locations=AE",
   "data_year": 2020,
   "fun_fact": "COVID-19 salgını yüzünden çok düşük: 2019'da 25,3 milyon turist gelmişti.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_tourism"
  },
  {
@@ -21755,12 +21849,12 @@
   "source": "https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=ET",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: %71,2.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_internet"
  },
  {
   "id": "q1674",
-  "text": "2020 yılında Türkiye'ye kaç uluslararası turist gelmiştir?",
+  "text": "Pandemi yılı 2020'de Türkiye'ye kaç uluslararası turist gelmiştir?",
   "answer": 15971000,
   "unit": "kişi",
   "kind": "magnitude",
@@ -21768,12 +21862,12 @@
   "source": "https://data.worldbank.org/indicator/ST.INT.ARVL?locations=TR",
   "data_year": 2020,
   "fun_fact": "COVID-19 salgını yüzünden çok düşük: 2019'da 51,7 milyon turist gelmişti. Yurt dışında yaşayan vatandaşlar da sayılır.",
-  "difficulty": 2,
+  "difficulty": 1,
   "dataset": "wdi_tourism"
  },
  {
   "id": "q1675",
-  "text": "2020 yılında Azerbaycan'a kaç uluslararası turist gelmiştir?",
+  "text": "Pandemi yılı 2020'de Azerbaycan'a kaç uluslararası turist gelmiştir?",
   "answer": 796000,
   "unit": "kişi",
   "kind": "magnitude",
@@ -21781,7 +21875,7 @@
   "source": "https://data.worldbank.org/indicator/ST.INT.ARVL?locations=AZ",
   "data_year": 2020,
   "fun_fact": "COVID-19 salgını yüzünden çok düşük: 2019'da 3,2 milyon turist gelmişti.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_tourism"
  },
  {
@@ -21794,12 +21888,12 @@
   "source": "https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=ID",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: %71,2.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_internet"
  },
  {
   "id": "q1677",
-  "text": "2020 yılında Yunanistan'a kaç uluslararası turist gelmiştir?",
+  "text": "Pandemi yılı 2020'de Yunanistan'a kaç uluslararası turist gelmiştir?",
   "answer": 7406000,
   "unit": "kişi",
   "kind": "magnitude",
@@ -21807,7 +21901,7 @@
   "source": "https://data.worldbank.org/indicator/ST.INT.ARVL?locations=GR",
   "data_year": 2020,
   "fun_fact": "COVID-19 salgını yüzünden çok düşük: 2019'da 34,0 milyon turist gelmişti.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_tourism"
  },
  {
@@ -21820,12 +21914,12 @@
   "source": "https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=BR",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: %71,2.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_internet"
  },
  {
   "id": "q1679",
-  "text": "2020 yılında Birleşik Krallık'a kaç uluslararası turist gelmiştir?",
+  "text": "Pandemi yılı 2020'de Birleşik Krallık'a kaç uluslararası turist gelmiştir?",
   "answer": 11101000,
   "unit": "kişi",
   "kind": "magnitude",
@@ -21833,12 +21927,12 @@
   "source": "https://data.worldbank.org/indicator/ST.INT.ARVL?locations=GB",
   "data_year": 2020,
   "fun_fact": "COVID-19 salgını yüzünden çok düşük: 2019'da 40,9 milyon turist gelmişti.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_tourism"
  },
  {
   "id": "q1680",
-  "text": "2020 yılında Japonya'ya kaç uluslararası turist gelmiştir?",
+  "text": "Pandemi yılı 2020'de Japonya'ya kaç uluslararası turist gelmiştir?",
   "answer": 4115800,
   "unit": "kişi",
   "kind": "magnitude",
@@ -21846,7 +21940,7 @@
   "source": "https://data.worldbank.org/indicator/ST.INT.ARVL?locations=JP",
   "data_year": 2020,
   "fun_fact": "COVID-19 salgını yüzünden çok düşük: 2019'da 31,9 milyon turist gelmişti.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_tourism"
  },
  {
@@ -21859,7 +21953,7 @@
   "source": "https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=IN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: %73,6.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_internet"
  },
  {
@@ -21872,7 +21966,7 @@
   "source": "https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=JP",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: %71,2.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_internet"
  },
  {
@@ -21885,7 +21979,7 @@
   "source": "https://data.worldbank.org/indicator/ST.INT.ARVL?locations=TH",
   "data_year": 2019,
   "fun_fact": "Salgından önceki son yılın verisi.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_tourism"
  },
  {
@@ -21898,12 +21992,12 @@
   "source": "https://data.worldbank.org/indicator/IT.NET.USER.ZS?locations=NG",
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: %71,2.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_internet"
  },
  {
   "id": "q1685",
-  "text": "2020 yılında Almanya'ya kaç uluslararası turist gelmiştir?",
+  "text": "Pandemi yılı 2020'de Almanya'ya kaç uluslararası turist gelmiştir?",
   "answer": 12449000,
   "unit": "kişi",
   "kind": "magnitude",
@@ -21911,7 +22005,7 @@
   "source": "https://data.worldbank.org/indicator/ST.INT.ARVL?locations=DE",
   "data_year": 2020,
   "fun_fact": "COVID-19 salgını yüzünden çok düşük: 2019'da 39,6 milyon turist gelmişti.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "wdi_tourism"
  },
  {
@@ -23720,7 +23814,8 @@
   "data_year": 2024,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "ibb_istanbul"
+  "dataset": "ibb_istanbul",
+  "retired": true
  },
  {
   "id": "q1825",
@@ -23746,7 +23841,8 @@
   "data_year": 2024,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "ibb_istanbul"
+  "dataset": "ibb_istanbul",
+  "retired": true
  },
  {
   "id": "q1827",
@@ -23836,7 +23932,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_nind?freq=A&indic_de=FAGEMAR1&geo=IT&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl Türkiye'de: 25,9 yaş.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_first_marriage"
  },
  {
@@ -23849,7 +23945,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=NMARPCT&geo=FR&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: %41,1.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_births_outside_marriage"
  },
  {
@@ -23862,7 +23958,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_wasmun?freq=A&wst_oper=GEN&unit=KG_HAB&geo=RO&time=2023&lang=EN",
   "data_year": 2023,
   "fun_fact": "Aynı yıl AB ortalaması: 510 kg.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_municipal_waste"
  },
  {
@@ -23875,7 +23971,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/yth_demo_030?freq=A&unit=AVG&sex=T&geo=FI&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 26,3 yaş.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_leaving_home"
  },
  {
@@ -23888,7 +23984,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=AGEMOTH1&geo=ES&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 29,9 yaş.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_first_child"
  },
  {
@@ -23901,7 +23997,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjanind?freq=A&indic_de=MEDAGEPOP&geo=NO&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 44,9 yaş. Nüfusun yarısı bu yaştan genç, yarısı yaşlıdır (1 Ocak itibarıyla).",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_median_age"
  },
  {
@@ -23914,7 +24010,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_lvho02?freq=A&rskpovth=TOTAL&hhcomp=TOTAL&tenure=OWN&unit=PC&geo=HU&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: %68,5.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_home_owners"
  },
  {
@@ -23927,7 +24023,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_lvho02?freq=A&rskpovth=TOTAL&hhcomp=TOTAL&tenure=OWN&unit=PC&geo=AT&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: %68,5.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_home_owners"
  },
  {
@@ -23940,7 +24036,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/road_eqs_carhab?freq=A&unit=NR&geo=PL&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 584 otomobil.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_cars"
  },
  {
@@ -23953,7 +24049,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/yth_demo_030?freq=A&unit=AVG&sex=T&geo=DE&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 26,3 yaş.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_leaving_home"
  },
  {
@@ -23966,7 +24062,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_lvho02?freq=A&rskpovth=TOTAL&hhcomp=TOTAL&tenure=OWN&unit=PC&geo=TR&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: %68,5.",
-  "difficulty": 2,
+  "difficulty": 1,
   "dataset": "es_home_owners"
  },
  {
@@ -23979,7 +24075,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=NMARPCT&geo=NO&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: %41,1.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_births_outside_marriage"
  },
  {
@@ -23992,7 +24088,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_wasmun?freq=A&wst_oper=GEN&unit=KG_HAB&geo=AT&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 513 kg.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_municipal_waste"
  },
  {
@@ -24005,7 +24101,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_nind?freq=A&indic_de=FAGEMAR1&geo=EL&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl Türkiye'de: 25,9 yaş.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_first_marriage"
  },
  {
@@ -24018,7 +24114,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/yth_demo_030?freq=A&unit=AVG&sex=T&geo=SE&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 26,3 yaş.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_leaving_home"
  },
  {
@@ -24031,7 +24127,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjanind?freq=A&indic_de=MEDAGEPOP&geo=IT&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 44,9 yaş. Nüfusun yarısı bu yaştan genç, yarısı yaşlıdır (1 Ocak itibarıyla).",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_median_age"
  },
  {
@@ -24044,7 +24140,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/yth_demo_030?freq=A&unit=AVG&sex=T&geo=HR&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 26,3 yaş.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_leaving_home"
  },
  {
@@ -24057,7 +24153,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_nind?freq=A&indic_de=FAGEMAR1&geo=NL&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl Türkiye'de: 25,9 yaş.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_first_marriage"
  },
  {
@@ -24070,7 +24166,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/road_eqs_carhab?freq=A&unit=NR&geo=DE&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 584 otomobil.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_cars"
  },
  {
@@ -24083,7 +24179,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjanind?freq=A&indic_de=MEDAGEPOP&geo=IE&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 44,9 yaş. Nüfusun yarısı bu yaştan genç, yarısı yaşlıdır (1 Ocak itibarıyla).",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_median_age"
  },
  {
@@ -24096,7 +24192,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/yth_demo_030?freq=A&unit=AVG&sex=T&geo=ES&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 26,3 yaş.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_leaving_home"
  },
  {
@@ -24109,7 +24205,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=NMARPCT&geo=DE&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: %41,1.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_births_outside_marriage"
  },
  {
@@ -24122,7 +24218,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/road_eqs_carhab?freq=A&unit=NR&geo=NL&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 584 otomobil.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_cars"
  },
  {
@@ -24135,7 +24231,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_lvph01?freq=A&unit=AVG&geo=PL&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 2,3 kişi.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_household_size"
  },
  {
@@ -24148,7 +24244,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_lvho02?freq=A&rskpovth=TOTAL&hhcomp=TOTAL&tenure=OWN&unit=PC&geo=RO&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: %68,5.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_home_owners"
  },
  {
@@ -24161,7 +24257,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_lvho02?freq=A&rskpovth=TOTAL&hhcomp=TOTAL&tenure=OWN&unit=PC&geo=IT&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: %68,5.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_home_owners"
  },
  {
@@ -24174,7 +24270,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=NMARPCT&geo=EL&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: %41,1.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_births_outside_marriage"
  },
  {
@@ -24187,7 +24283,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/road_eqs_carhab?freq=A&unit=NR&geo=SE&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 584 otomobil.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_cars"
  },
  {
@@ -24200,7 +24296,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_lvph01?freq=A&unit=AVG&geo=TR&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 2,3 kişi.",
-  "difficulty": 2,
+  "difficulty": 1,
   "dataset": "es_household_size"
  },
  {
@@ -24213,7 +24309,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_nind?freq=A&indic_de=FAGEMAR1&geo=ES&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl Türkiye'de: 25,9 yaş.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_first_marriage"
  },
  {
@@ -24226,7 +24322,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_nind?freq=A&indic_de=MAGEMAR1&geo=TR&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": null,
-  "difficulty": 2,
+  "difficulty": 1,
   "dataset": "es_first_marriage"
  },
  {
@@ -24239,7 +24335,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=AGEMOTH1&geo=DE&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 29,9 yaş.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_first_child"
  },
  {
@@ -24252,7 +24348,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_wasmun?freq=A&wst_oper=GEN&unit=KG_HAB&geo=DE&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 513 kg.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_municipal_waste"
  },
  {
@@ -24265,7 +24361,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=AGEMOTH1&geo=IT&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 29,9 yaş.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_first_child"
  },
  {
@@ -24278,7 +24374,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=NMARPCT&geo=BG&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: %41,1.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_births_outside_marriage"
  },
  {
@@ -24291,7 +24387,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_nind?freq=A&indic_de=MAGEMAR1&geo=PT&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl Türkiye'de: 28,4 yaş.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_first_marriage"
  },
  {
@@ -24304,7 +24400,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/yth_demo_030?freq=A&unit=AVG&sex=T&geo=FR&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 26,3 yaş.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_leaving_home"
  },
  {
@@ -24317,7 +24413,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_wasmun?freq=A&wst_oper=GEN&unit=KG_HAB&geo=TR&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 513 kg.",
-  "difficulty": 2,
+  "difficulty": 1,
   "dataset": "es_municipal_waste"
  },
  {
@@ -24330,7 +24426,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_lvph01?freq=A&unit=AVG&geo=DE&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 2,3 kişi.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_household_size"
  },
  {
@@ -24343,7 +24439,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/yth_demo_030?freq=A&unit=AVG&sex=T&geo=TR&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 26,2 yaş.",
-  "difficulty": 2,
+  "difficulty": 1,
   "dataset": "es_leaving_home"
  },
  {
@@ -24356,7 +24452,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_wasmun?freq=A&wst_oper=GEN&unit=KG_HAB&geo=NO&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 513 kg.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_municipal_waste"
  },
  {
@@ -24369,7 +24465,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_wasmun?freq=A&wst_oper=GEN&unit=KG_HAB&geo=DK&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 513 kg.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_municipal_waste"
  },
  {
@@ -24382,7 +24478,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=AGEMOTH1&geo=BG&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 29,9 yaş.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_first_child"
  },
  {
@@ -24395,7 +24491,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjanind?freq=A&indic_de=MEDAGEPOP&geo=TR&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 44,9 yaş. Nüfusun yarısı bu yaştan genç, yarısı yaşlıdır (1 Ocak itibarıyla).",
-  "difficulty": 2,
+  "difficulty": 1,
   "dataset": "es_median_age"
  },
  {
@@ -24408,7 +24504,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/road_eqs_carhab?freq=A&unit=NR&geo=AL&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 577 otomobil.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_cars"
  },
  {
@@ -24421,7 +24517,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_nind?freq=A&indic_de=MAGEMAR1&geo=IT&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl Türkiye'de: 28,4 yaş.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_first_marriage"
  },
  {
@@ -24434,7 +24530,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_wasmun?freq=A&wst_oper=GEN&unit=KG_HAB&geo=PL&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 513 kg.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_municipal_waste"
  },
  {
@@ -24447,7 +24543,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=AGEMOTH1&geo=TR&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 29,9 yaş.",
-  "difficulty": 2,
+  "difficulty": 1,
   "dataset": "es_first_child"
  },
  {
@@ -24460,7 +24556,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/yth_demo_030?freq=A&unit=AVG&sex=T&geo=IT&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 26,3 yaş.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_leaving_home"
  },
  {
@@ -24473,7 +24569,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=NMARPCT&geo=IT&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: %41,1.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_births_outside_marriage"
  },
  {
@@ -24486,7 +24582,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_wasmun?freq=A&wst_oper=GEN&unit=KG_HAB&geo=CH&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 513 kg.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_municipal_waste"
  },
  {
@@ -24499,7 +24595,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=AGEMOTH1&geo=NL&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 29,9 yaş.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_first_child"
  },
  {
@@ -24512,7 +24608,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjanind?freq=A&indic_de=MEDAGEPOP&geo=IS&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 44,9 yaş. Nüfusun yarısı bu yaştan genç, yarısı yaşlıdır (1 Ocak itibarıyla).",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_median_age"
  },
  {
@@ -24525,7 +24621,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=NMARPCT&geo=SE&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: %41,1.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_births_outside_marriage"
  },
  {
@@ -24538,7 +24634,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_nind?freq=A&indic_de=MAGEMAR1&geo=EL&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl Türkiye'de: 28,4 yaş.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_first_marriage"
  },
  {
@@ -24551,7 +24647,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=NMARPCT&geo=TR&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: %41,1.",
-  "difficulty": 2,
+  "difficulty": 1,
   "dataset": "es_births_outside_marriage"
  },
  {
@@ -24564,7 +24660,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjanind?freq=A&indic_de=MEDAGEPOP&geo=DE&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 44,9 yaş. Nüfusun yarısı bu yaştan genç, yarısı yaşlıdır (1 Ocak itibarıyla).",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_median_age"
  },
  {
@@ -24577,7 +24673,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_nind?freq=A&indic_de=FAGEMAR1&geo=TR&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": null,
-  "difficulty": 2,
+  "difficulty": 1,
   "dataset": "es_first_marriage"
  },
  {
@@ -24590,7 +24686,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_lvho02?freq=A&rskpovth=TOTAL&hhcomp=TOTAL&tenure=OWN&unit=PC&geo=DE&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: %68,5.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_home_owners"
  },
  {
@@ -24603,7 +24699,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_wasmun?freq=A&wst_oper=GEN&unit=KG_HAB&geo=IT&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 513 kg.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_municipal_waste"
  },
  {
@@ -24616,7 +24712,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=NMARPCT&geo=HU&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: %41,1.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_births_outside_marriage"
  },
  {
@@ -24629,7 +24725,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/road_eqs_carhab?freq=A&unit=NR&geo=LU&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 584 otomobil.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_cars"
  },
  {
@@ -24642,7 +24738,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_nind?freq=A&indic_de=FAGEMAR1&geo=HU&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl Türkiye'de: 25,9 yaş.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_first_marriage"
  },
  {
@@ -24655,7 +24751,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=AGEMOTH1&geo=IE&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 29,9 yaş.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_first_child"
  },
  {
@@ -24668,7 +24764,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/road_eqs_carhab?freq=A&unit=NR&geo=TR&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 584 otomobil.",
-  "difficulty": 2,
+  "difficulty": 1,
   "dataset": "es_cars"
  },
  {
@@ -24681,7 +24777,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=NMARPCT&geo=ES&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: %41,1.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_births_outside_marriage"
  },
  {
@@ -24694,7 +24790,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/yth_demo_030?freq=A&unit=AVG&sex=T&geo=DK&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 26,3 yaş.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_leaving_home"
  },
  {
@@ -24707,7 +24803,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/road_eqs_carhab?freq=A&unit=NR&geo=FI&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 584 otomobil.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_cars"
  },
  {
@@ -24720,7 +24816,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjanind?freq=A&indic_de=MEDAGEPOP&geo=EL&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 44,9 yaş. Nüfusun yarısı bu yaştan genç, yarısı yaşlıdır (1 Ocak itibarıyla).",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_median_age"
  },
  {
@@ -24733,7 +24829,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_lvho02?freq=A&rskpovth=TOTAL&hhcomp=TOTAL&tenure=OWN&unit=PC&geo=NO&time=2025&lang=EN",
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: %68,5.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_home_owners"
  },
  {
@@ -24746,7 +24842,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_nind?freq=A&indic_de=FAGEMAR1&geo=SE&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl Türkiye'de: 25,9 yaş.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_first_marriage"
  },
  {
@@ -24759,7 +24855,7 @@
   "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_lvho02?freq=A&rskpovth=TOTAL&hhcomp=TOTAL&tenure=OWN&unit=PC&geo=CH&time=2024&lang=EN",
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: %68,4.",
-  "difficulty": 3,
+  "difficulty": 2,
   "dataset": "es_home_owners"
  },
  {
@@ -25111,7 +25207,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "usgs_quake_years_world"
+  "dataset": "usgs_quake_years_world",
+  "retired": true
  },
  {
   "id": "q1932",
@@ -25150,7 +25247,8 @@
   "data_year": 2026,
   "fun_fact": "USGS'ye göre büyüklüğü 8,6.",
   "difficulty": 3,
-  "dataset": "usgs_quake_years_world"
+  "dataset": "usgs_quake_years_world",
+  "retired": true
  },
  {
   "id": "q1935",
@@ -25436,7 +25534,8 @@
   "data_year": 2026,
   "fun_fact": "USGS'ye göre büyüklüğü 8,8.",
   "difficulty": 3,
-  "dataset": "usgs_quake_years_world"
+  "dataset": "usgs_quake_years_world",
+  "retired": true
  },
  {
   "id": "q1957",
@@ -27503,7 +27602,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "brands_tr"
+  "dataset": "brands_tr",
+  "retired": true
  },
  {
   "id": "q2116",
@@ -28959,7 +29059,8 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "space_curated"
+  "dataset": "space_curated",
+  "retired": true
  },
  {
   "id": "q2228",
@@ -29155,5 +29256,278 @@
   "fun_fact": null,
   "difficulty": 2,
   "dataset": "space_curated"
+ },
+ {
+  "id": "q2243",
+  "text": "Ankara–İstanbul hızlı treni saatte en fazla kaç kilometre hızla gider?",
+  "answer": 250,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://en.wikipedia.org/wiki/Ankara%E2%80%93Istanbul_high-speed_railway",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "transport_curated"
+ },
+ {
+  "id": "q2244",
+  "text": "2010 verilerine göre Almanya'da her gün kaç ton döner eti üretiliyordu?",
+  "answer": 400,
+  "unit": "ton",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://en.wikipedia.org/wiki/Doner_kebab",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "food_curated"
+ },
+ {
+  "id": "q2245",
+  "text": "Uzay mekiği programında toplam kaç uçuş yapılmıştır?",
+  "answer": 135,
+  "unit": "uçuş",
+  "kind": "magnitude",
+  "category": "uzay",
+  "source": "https://en.wikipedia.org/wiki/Space_Shuttle",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "space_curated"
+ },
+ {
+  "id": "q2246",
+  "text": "İnsanlı ilk serbest sıcak hava balonu uçuşu hangi yıl yapılmıştır?",
+  "answer": 1783,
+  "unit": "",
+  "kind": "year",
+  "category": "ulaşım",
+  "source": "https://en.wikipedia.org/wiki/Hot_air_balloon",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "transport_curated"
+ },
+ {
+  "id": "q2247",
+  "text": "50 gramlık bir tavuk yumurtası yaklaşık kaç kilokalori enerji verir?",
+  "answer": 70,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://en.wikipedia.org/wiki/Eggs_as_food",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "food_curated"
+ },
+ {
+  "id": "q2248",
+  "text": "Ekmek tariflerinde tek bir somun için genelde kaç gram un kullanılır?",
+  "answer": 500,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://en.wikipedia.org/wiki/Bread",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "food_curated"
+ },
+ {
+  "id": "q2249",
+  "text": "Bir litre tam yağlı sütte kaç gram yağ vardır?",
+  "answer": 33,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://en.wikipedia.org/wiki/Milk",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "food_curated"
+ },
+ {
+  "id": "q2250",
+  "text": "Manş Tüneli'nin deniz altındaki bölümü kaç kilometredir?",
+  "answer": 37.9,
+  "unit": "km",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://en.wikipedia.org/wiki/Channel_Tunnel",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "transport_curated"
+ },
+ {
+  "id": "q2251",
+  "text": "Kabuğu soyulmuş çiğ bir muzun yüzde kaçı sudur?",
+  "answer": 75,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://en.wikipedia.org/wiki/Banana",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "food_curated"
+ },
+ {
+  "id": "q2252",
+  "text": "Diş minesinin yüzde kaçı mineraldir?",
+  "answer": 96,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "vücut",
+  "source": "https://en.wikipedia.org/wiki/Human_tooth",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "body_curated"
+ },
+ {
+  "id": "q2253",
+  "text": "21. yüzyılın başında dünyada kaç milyar bisiklet vardı?",
+  "answer": 1,
+  "unit": "milyar bisiklet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://en.wikipedia.org/wiki/Bicycle",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "transport_curated"
+ },
+ {
+  "id": "q2254",
+  "text": "Akciğerlerde ortalama kaç mililitre kan bulunur?",
+  "answer": 450,
+  "unit": "ml",
+  "kind": "magnitude",
+  "category": "vücut",
+  "source": "https://en.wikipedia.org/wiki/Lung",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "body_curated"
+ },
+ {
+  "id": "q2255",
+  "text": "Mayıs 2026 itibarıyla kaç kişi 100 kilometrenin üzerine çıkarak uzaya gitmiştir?",
+  "answer": 781,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "uzay",
+  "source": "https://en.wikipedia.org/wiki/Astronaut",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "space_curated"
+ },
+ {
+  "id": "q2256",
+  "text": "Gelişmiş ülkelerde zamanında doğan bir bebek ortalama kaç kilogram doğar?",
+  "answer": 3.4,
+  "unit": "kg",
+  "kind": "magnitude",
+  "category": "vücut",
+  "source": "https://en.wikipedia.org/wiki/Infant",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "body_curated"
+ },
+ {
+  "id": "q2257",
+  "text": "2025 itibarıyla dünyada kaç milyar otomobil kullanılmaktadır?",
+  "answer": 1.6,
+  "unit": "milyar otomobil",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://en.wikipedia.org/wiki/Car",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "transport_curated"
+ },
+ {
+  "id": "q2258",
+  "text": "2022–23 döneminde dünyada kaç milyon ton şeker üretilmiştir?",
+  "answer": 186,
+  "unit": "milyon ton",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://en.wikipedia.org/wiki/Sugar",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "food_curated"
+ },
+ {
+  "id": "q2259",
+  "text": "Boeing 737-800 tek sınıflı yoğun düzende kaç yolcu taşır?",
+  "answer": 189,
+  "unit": "yolcu",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://en.wikipedia.org/wiki/Boeing_737",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "transport_curated"
+ },
+ {
+  "id": "q2260",
+  "text": "Apollo 11 astronotları Ay'dan kaç kilogram örnek getirmiştir?",
+  "answer": 21.5,
+  "unit": "kg",
+  "kind": "magnitude",
+  "category": "uzay",
+  "source": "https://en.wikipedia.org/wiki/Apollo_11",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "space_curated"
+ },
+ {
+  "id": "q2261",
+  "text": "Dünyadaki kakaonun yüzde kaçı Fildişi Sahili ve Gana'dan gelir?",
+  "answer": 60,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://en.wikipedia.org/wiki/Chocolate",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "food_curated"
+ },
+ {
+  "id": "q2262",
+  "text": "Ekim 2026 itibarıyla Voyager 1 kaç milyar kilometre uzaktadır?",
+  "answer": 25.8,
+  "unit": "milyar km",
+  "kind": "magnitude",
+  "category": "uzay",
+  "source": "https://en.wikipedia.org/wiki/Voyager_1",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "space_curated"
+ },
+ {
+  "id": "q2263",
+  "text": "Bir Formula 1 aracı saatte en fazla kaç kilometre hıza ulaşabilir?",
+  "answer": 375,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://en.wikipedia.org/wiki/Formula_One_car",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "transport_curated"
  }
 ]
