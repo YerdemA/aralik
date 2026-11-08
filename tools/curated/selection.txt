@@ -834,3 +834,45 @@
 2|1978||en:Louise Brown|born|Tüp bebek yöntemiyle doğan ilk bebek hangi yıl doğmuştur?
 3|1983||en:Polymerase chain reaction|mullis|PCR yöntemi hangi yıl geliştirilmiştir?
 3|2012||en:CRISPR gene editing|doudna|CRISPR gen düzenleme yöntemi hangi yıl tanıtılmıştır?
+# literature_works|sanat
+1|1605||en:Don Quixote|published|Don Kişot'un ilk cildi hangi yıl yayımlanmıştır?
+2|1851||en:Moby-Dick|published|Moby Dick romanı hangi yıl yayımlanmıştır?
+2|1862||en:Les Misérables|published|Sefiller romanı hangi yıl yayımlanmıştır?
+2|1866||en:Crime and Punishment|published|Suç ve Ceza romanı hangi yıl yayımlanmıştır?
+1|1949||en:Nineteen Eighty-Four|published|George Orwell'in 1984 romanı hangi yıl yayımlanmıştır?
+1|1943||en:The Little Prince|published|Küçük Prens hangi yıl yayımlanmıştır?
+1|1997||en:Harry Potter and the Philosopher's Stone|published|İlk Harry Potter kitabı hangi yıl yayımlanmıştır?
+2|1923||tr:Çalıkuşu (roman)|kitap|Reşat Nuri Güntekin'in Çalıkuşu romanı hangi yıl kitap olarak yayımlanmıştır?
+2|1955||tr:İnce Memed|1955|Yaşar Kemal'in İnce Memed romanının ilk cildi hangi yıl yayımlanmıştır?
+2|1943||tr:Kürk Mantolu Madonna|1943|Kürk Mantolu Madonna hangi yıl kitap olarak yayımlanmıştır?
+2|1949||tr:Huzur (roman)|1949|Tanpınar'ın Huzur romanı hangi yıl kitap olarak yayımlanmıştır?
+2|1936||tr:Sinekli Bakkal|1936|Halide Edib'in Sinekli Bakkal romanı hangi yıl yayımlanmıştır?
+1|154|sone|en:Shakespeare's sonnets|154|Shakespeare kaç sone yazmıştır?
+2|100|kanto|en:Divine Comedy|cantos|Dante'nin İlahi Komedya'sı kaç kantodan oluşur?
+2|24|kitap|en:Iliad|books|Homeros'un İlyada destanı kaç kitaptan (bölümden) oluşur?
+
+# music_works|sanat
+2|1824||en:Symphony No. 9 (Beethoven)|premiere|Beethoven'ın 9. Senfonisi ilk kez hangi yıl seslendirilmiştir?
+2|1791||en:The Magic Flute|premiere|Mozart'ın Sihirli Flüt operası ilk kez hangi yıl sahnelenmiştir?
+2|1877||en:Swan Lake|bolshoi|Çaykovski'nin Kuğu Gölü balesi ilk kez hangi yıl sahnelenmiştir?
+3|1928||en:Boléro|1928|Ravel'in Bolero'su hangi yıl bestelenmiştir?
+3|1725||en:The Four Seasons (Vivaldi)|published|Vivaldi'nin Dört Mevsim'i hangi yıl yayımlanmıştır?
+2|1930||tr:İstiklâl Marşı|üngör|İstiklal Marşı'nın bugünkü bestesi hangi yıl kabul edilmiştir?
+2|32|sonat|en:Beethoven's piano sonatas|32|Beethoven'ın numaralı piyano sonatları kaç tanedir?
+3|104|senfoni|en:List of symphonies by Joseph Haydn|104|Haydn'ın numaralandırılmış kaç senfonisi vardır?
+
+# film_works|sanat
+2|1895||en:Auguste and Louis Lumière|screening|Lumière kardeşler ilk film gösterimlerini hangi yıl yapmıştır?
+2|1929||en:1st Academy Awards|1929|İlk Oscar ödül töreni hangi yıl yapılmıştır?
+2|1946||en:Cannes Film Festival|1946|Cannes Film Festivali ilk kez hangi yıl düzenlenmiştir?
+1|1977||en:Star Wars (film)|released|İlk Star Wars filmi hangi yıl vizyona girmiştir?
+1|1972||en:The Godfather|released|Baba (The Godfather) filmi hangi yıl vizyona girmiştir?
+2|1982||en:Yol (film)|palme|Yol filmi Cannes'da Altın Palmiye'yi hangi yıl kazanmıştır?
+2|2014||en:Winter Sleep (film)|palme|Kış Uykusu filmi Cannes'da Altın Palmiye'yi hangi yıl kazanmıştır?
+
+# art_works|sanat
+2|1830||en:Liberty Leading the People|revolution|Delacroix'nın Halka Yol Gösteren Özgürlük tablosu hangi yılın devrimini anlatır?
+2|1819||en:The Raft of the Medusa|1819|Géricault'nun Medusa'nın Salı tablosu hangi yıl tamamlanmıştır?
+2|1908||en:The Kiss (Klimt)|1908|Klimt'in Öpücük tablosu hangi yıl tamamlanmıştır?
+2|1906||tr:Kaplumbağa Terbiyecisi|1906|Osman Hamdi Bey'in Kaplumbağa Terbiyecisi tablosunun ilk versiyonu hangi yıl yapılmıştır?
+2|1504||en:David (Michelangelo)|1504|Michelangelo'nun Davut heykeli hangi yıl tamamlanmıştır?
