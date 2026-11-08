@@ -1,3 +1,4 @@
+import 'package:aralik/core/math/advanced.dart';
 import 'package:aralik/core/math/math_problem.dart';
 import 'package:aralik/core/math/seeded_random.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -43,6 +44,27 @@ void main() {
       expect(sharedBirthday(23), closeTo(0.5073, 0.0001));
       expect(roundTo(2.45, 1), 2.5);
       expect(superscript(16), '¹⁶');
+      expect(subscript(10), '₁₀');
+    });
+
+    test('further on: known values', () {
+      expect(gcd(84, 36), 12);
+      expect(lcm(4, 6), 12);
+      expect(divisorCount(360), 24);
+      expect(divisorCount(97), 2);
+      expect(totient(36), 12);
+      expect(totient(97), 96);
+      expect(
+        determinant([
+          [2, 0, 1],
+          [1, 3, 2],
+          [1, 1, 2],
+        ]),
+        6, // 2 × (6 − 2) − 0 + 1 × (1 − 3)
+      );
+      expect(normalCdf(0), closeTo(0.5, 1e-7));
+      expect(normalCdf(1.96), closeTo(0.975, 1e-4));
+      expect(normalCdf(-1), closeTo(0.1587, 1e-4));
     });
   });
 
@@ -55,7 +77,8 @@ void main() {
           for (var seed = 0; seed < seeds; seed++) {
             final p = generateMath(topic, level, seed * 7919);
             final where = '${p.id}: ${p.text}';
-            expect(p.answer, greaterThan(0), reason: where);
+            // At least 1: the number pad has no decimal point.
+            expect(p.answer, greaterThanOrEqualTo(1), reason: where);
             expect(p.answer.isFinite, isTrue, reason: where);
             expect(p.answer, lessThan(1e12), reason: where);
             if (p.isPercent) {
@@ -102,6 +125,15 @@ void main() {
   });
 
   group('mathRound', () {
+    test('only the chosen tiers', () {
+      for (var seed = 0; seed < 50; seed++) {
+        for (final tier in MathTier.values) {
+          final round = mathRound(seed, tiers: {tier});
+          expect(round.every((p) => p.topic.tier == tier), isTrue);
+        }
+      }
+    });
+
     test('easy to hard, five different topics, the same for the same seed', () {
       for (var seed = 0; seed < 100; seed++) {
         final round = mathRound(seed);

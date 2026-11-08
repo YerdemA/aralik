@@ -16,6 +16,7 @@ import 'dart:math' as math;
 
 import '../number_format.dart';
 import '../strings.dart';
+import 'advanced.dart';
 import 'seeded_random.dart';
 
 /// The kinds of math questions. [key] goes into the id; never rename one.
@@ -34,10 +35,26 @@ enum MathTopic {
   primes('asal'),
   digits('basamak'),
   fibonacci('fibonacci'),
-  folding('katlama');
+  folding('katlama'),
 
-  const MathTopic(this.key);
+  // Further on: high school and first-year university (lib/core/math/
+  // advanced.dart).
+  trigonometry('trigonometri', MathTier.advanced),
+  limit('limit', MathTier.advanced),
+  derivative('turev', MathTier.advanced),
+  integral('integral', MathTier.advanced),
+  logarithm('logaritma', MathTier.advanced),
+  exponential('ustel', MathTier.advanced),
+  sequence('dizi', MathTier.advanced),
+  statistics('istatistik', MathTier.advanced),
+  matrix('matris', MathTier.advanced),
+  complex('karmasik', MathTier.advanced),
+  vector('vektor', MathTier.advanced),
+  numberTheory('sayilar', MathTier.advanced);
+
+  const MathTopic(this.key, [this.tier = MathTier.basic]);
   final String key;
+  final MathTier tier;
 
   static MathTopic? byKey(String key) {
     for (final t in values) {
@@ -46,6 +63,10 @@ enum MathTopic {
     return null;
   }
 }
+
+/// Basic arithmetic and counting, or further on (trigonometry, calculus,
+/// linear algebra, …).
+enum MathTier { basic, advanced }
 
 /// One generated question.
 class MathProblem {
@@ -112,6 +133,18 @@ MathProblem generateMath(MathTopic topic, int difficulty, int seed) {
     MathTopic.digits => _digits(r, level),
     MathTopic.fibonacci => _fibonacci(r, level),
     MathTopic.folding => _folding(r, level),
+    MathTopic.trigonometry => mathTrigonometry(r, level),
+    MathTopic.limit => mathLimit(r, level),
+    MathTopic.derivative => mathDerivative(r, level),
+    MathTopic.integral => mathIntegral(r, level),
+    MathTopic.logarithm => mathLogarithm(r, level),
+    MathTopic.exponential => mathExponential(r, level),
+    MathTopic.sequence => mathSequence(r, level),
+    MathTopic.statistics => mathStatistics(r, level),
+    MathTopic.matrix => mathMatrix(r, level),
+    MathTopic.complex => mathComplex(r, level),
+    MathTopic.vector => mathVector(r, level),
+    MathTopic.numberTheory => mathNumberTheory(r, level),
   };
   return MathProblem(
     topic: topic,
@@ -125,13 +158,17 @@ MathProblem generateMath(MathTopic topic, int difficulty, int seed) {
 }
 
 /// A round of math questions for [seed], one per entry of [levels] (easy
-/// to hard by default), each from a different topic.
+/// to hard by default), each from a different topic of [tiers].
 List<MathProblem> mathRound(
   int seed, {
   List<int> levels = const [1, 1, 2, 2, 3],
+  Set<MathTier> tiers = const {MathTier.basic, MathTier.advanced},
 }) {
   final r = SeededRandom(seed);
-  final topics = [...MathTopic.values];
+  final topics = [
+    for (final t in MathTopic.values)
+      if (tiers.contains(t.tier)) t,
+  ];
   // Fisher–Yates with the seeded generator: the same seed, the same round.
   for (var i = topics.length - 1; i > 0; i--) {
     final j = r.nextInt(i + 1);
@@ -145,7 +182,8 @@ List<MathProblem> mathRound(
   ];
 }
 
-typedef _Made = (String text, num answer, String unit, String working);
+/// What a generator makes: the text, the answer, its unit, the working.
+typedef MathMade = (String text, num answer, String unit, String working);
 
 // ---------------------------------------------------------------------------
 // Pure helpers (also tested on their own).
@@ -228,6 +266,12 @@ String superscript(int exponent) {
   return [for (final c in '$exponent'.split('')) digits[int.parse(c)]].join();
 }
 
+/// "∫₀⁵": [n] in subscript digits.
+String subscript(int n) {
+  const digits = '₀₁₂₃₄₅₆₇₈₉';
+  return [for (final c in '$n'.split('')) digits[int.parse(c)]].join();
+}
+
 bool _isSquare(int n) {
   final s = math.sqrt(n).round();
   return s * s == n;
@@ -243,7 +287,7 @@ String _n(num v, [int decimals = 0]) => formatNumber(v, maxDecimals: decimals);
 // ---------------------------------------------------------------------------
 // Generators. Each returns the text, the answer, its unit and the working.
 
-_Made _multiply(SeededRandom r, int level) {
+MathMade _multiply(SeededRandom r, int level) {
   final List<int> factors = switch (level) {
     1 => [r.between(12, 99), r.between(12, 99)],
     2 => [r.between(100, 999), r.between(12, 99)],
@@ -257,7 +301,7 @@ _Made _multiply(SeededRandom r, int level) {
   return (AppStrings.mathMultiply(expr), answer, '', '$expr = ${_n(answer)}');
 }
 
-_Made _power(SeededRandom r, int level) {
+MathMade _power(SeededRandom r, int level) {
   final (base, exponent) = switch (level) {
     1 => (2, r.between(8, 16)),
     2 => switch (r.pick(const [3, 5, 6, 7])) {
@@ -276,7 +320,7 @@ _Made _power(SeededRandom r, int level) {
   return (AppStrings.mathPower(expr), answer, '', '$expr = ${_n(answer)}');
 }
 
-_Made _root(SeededRandom r, int level) {
+MathMade _root(SeededRandom r, int level) {
   if (level == 3) {
     int n;
     do {
@@ -308,7 +352,7 @@ _Made _root(SeededRandom r, int level) {
   );
 }
 
-_Made _factorial(SeededRandom r, int level) {
+MathMade _factorial(SeededRandom r, int level) {
   final n = switch (level) {
     1 => r.between(5, 7),
     2 => r.between(8, 10),
@@ -323,7 +367,7 @@ _Made _factorial(SeededRandom r, int level) {
   );
 }
 
-_Made _combination(SeededRandom r, int level) {
+MathMade _combination(SeededRandom r, int level) {
   switch (level) {
     case 1:
       final n = r.between(8, 30);
@@ -357,7 +401,7 @@ _Made _combination(SeededRandom r, int level) {
   }
 }
 
-_Made _series(SeededRandom r, int level) {
+MathMade _series(SeededRandom r, int level) {
   if (level == 3) {
     final n = r.between(20, 100);
     final answer = n * (n + 1) * (2 * n + 1) ~/ 6;
@@ -378,7 +422,7 @@ _Made _series(SeededRandom r, int level) {
   );
 }
 
-_Made _compound(SeededRandom r, int level) {
+MathMade _compound(SeededRandom r, int level) {
   if (level == 3) {
     final rate = r.between(3, 15);
     final years = roundTo(math.log(2) / math.log(1 + rate / 100), 1);
@@ -403,7 +447,7 @@ _Made _compound(SeededRandom r, int level) {
   );
 }
 
-_Made _percent(SeededRandom r, int level) {
+MathMade _percent(SeededRandom r, int level) {
   switch (level) {
     case 1:
       final x = r.between(2, 90) * 100;
@@ -439,7 +483,7 @@ _Made _percent(SeededRandom r, int level) {
   }
 }
 
-_Made _units(SeededRandom r, int level) {
+MathMade _units(SeededRandom r, int level) {
   switch (level) {
     case 1:
       if (r.nextBool()) {
@@ -491,7 +535,7 @@ _Made _units(SeededRandom r, int level) {
   }
 }
 
-_Made _geometry(SeededRandom r, int level) {
+MathMade _geometry(SeededRandom r, int level) {
   switch (level) {
     case 1:
       final radius = r.between(3, 30);
@@ -527,7 +571,7 @@ _Made _geometry(SeededRandom r, int level) {
   }
 }
 
-_Made _probability(SeededRandom r, int level) {
+MathMade _probability(SeededRandom r, int level) {
   switch (level) {
     case 1:
       final throws = r.between(2, 12);
@@ -560,7 +604,7 @@ _Made _probability(SeededRandom r, int level) {
   }
 }
 
-_Made _primes(SeededRandom r, int level) {
+MathMade _primes(SeededRandom r, int level) {
   final n = switch (level) {
     1 => r.stepped(50, 300, 10),
     2 => r.stepped(1000, 20000, 500),
@@ -575,7 +619,7 @@ _Made _primes(SeededRandom r, int level) {
   );
 }
 
-_Made _digits(SeededRandom r, int level) {
+MathMade _digits(SeededRandom r, int level) {
   switch (level) {
     case 1:
       final e = r.between(20, 60);
@@ -609,7 +653,7 @@ _Made _digits(SeededRandom r, int level) {
   }
 }
 
-_Made _fibonacci(SeededRandom r, int level) {
+MathMade _fibonacci(SeededRandom r, int level) {
   final n = switch (level) {
     1 => r.between(12, 20),
     2 => r.between(21, 35),
@@ -624,7 +668,7 @@ _Made _fibonacci(SeededRandom r, int level) {
   );
 }
 
-_Made _folding(SeededRandom r, int level) {
+MathMade _folding(SeededRandom r, int level) {
   // A 0,1 mm sheet doubles with every fold.
   final (folds, unit, perUnit) = switch (level) {
     1 => (r.between(8, 12), 'cm', 0.01),

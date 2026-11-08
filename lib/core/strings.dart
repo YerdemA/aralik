@@ -292,6 +292,82 @@ abstract final class AppStrings {
   static String mathFolding(int folds, String unit) =>
       '0,1 mm kalınlığındaki bir kâğıt $folds kez ikiye katlanabilseydi '
       'kalınlığı kaç $unit olurdu?';
+  // Math mode, further on (lib/core/math/advanced.dart).
+  static String mathLadder(int length, int angle) =>
+      '$length m uzunluğundaki bir merdiven yerle $angle° açı yapacak '
+      'şekilde duvara dayanıyor. Merdivenin üst ucu yerden kaç cm '
+      'yüksekte?';
+  static String mathShadow(int shadow, int angle) =>
+      'Güneş ışınları yerle $angle° açı yaparken bir ağacın gölgesi '
+      '$shadow m. Ağaç kaç m yüksekliğinde?';
+  static String mathLawOfCosines(int a, int b, int angle) =>
+      'Bir üçgenin iki kenarı $a cm ve $b cm, aralarındaki açı $angle°. '
+      'Üçüncü kenar kaç cm?';
+  static String mathProjectile(int speed, int angle) =>
+      'Yerden saniyede $speed m hızla, yerle $angle° açı yapacak şekilde '
+      'atılan bir top kaç m uzağa düşer? (g = 9,81 m/sn², hava direnci '
+      'yok)';
+  static String mathLimitAt(int a, String numerator, String denominator) =>
+      'lim (x → $a) ($numerator) ÷ ($denominator) kaçtır?';
+  static String mathLimitE(int k) => 'lim (n → ∞) (1 + $k/n)ⁿ kaçtır?';
+  static String mathLimitCos(int k) =>
+      'lim (x → 0) (1 − cos ${k}x) ÷ x² kaçtır? (x radyan)';
+  static String mathDerivativeAt(String f, int x) =>
+      'f(x) = $f ise f′($x) kaçtır?';
+  static String mathIntegral(String expr) => '$expr kaçtır?';
+  static String mathLog(String log, String n) => '$log $n kaçtır?';
+  static String mathSolvePower(int base, String n) =>
+      '$baseˣ = $n ise x kaçtır?';
+  static String mathSolveTwoToTen(int e) => '2ˣ = 10 üzeri $e ise x kaçtır?';
+  static String mathQuakeEnergy(String small, String big) =>
+      'Deprem büyüklüğü 1 arttıkça açığa çıkan enerji 10^1,5 katına '
+      'çıkar. $big büyüklüğündeki bir deprem, $small büyüklüğündekinden '
+      'kaç kat fazla enerji açığa çıkarır?';
+  static String mathBacteria(int every, int hours) =>
+      'Bir bakteri her $every dakikada bir ikiye bölünüyor. Tek bir '
+      'bakteriden $hours saatte kaç bakteri olur?';
+  static String mathHalfLife(int grams, int half, int years) =>
+      'Yarı ömrü $half yıl olan bir maddenin $grams gramından $years yıl '
+      'sonra kaç mg kalır?';
+  static String mathGrowthTimes(int rate, int times) =>
+      'Nüfusu her yıl %$rate artan bir şehrin nüfusu kaç yılda $times '
+      'katına çıkar?';
+  static String mathArithmeticSum(String terms, int n) =>
+      '$terms + … dizisinin ilk $n teriminin toplamı kaçtır?';
+  static String mathSumCubes(int n) => '1³ + 2³ + 3³ + … + $n³ toplamı kaçtır?';
+  static String mathGeometricSum(String terms, int n) =>
+      '$terms + … dizisinin ilk $n teriminin toplamı kaçtır?';
+  static String mathInfiniteSum(String terms) =>
+      '$terms + … sonsuz toplamı kaçtır?';
+  static String mathMean(String xs) => '$xs sayılarının ortalaması kaçtır?';
+  static String mathStdDev(String xs) =>
+      '$xs sayılarının standart sapması kaçtır? (Bölen 5)';
+  static String mathNormalBelow(int mean, int sd, int cut) =>
+      'Bir okuldaki boylar ortalaması $mean cm, standart sapması $sd cm '
+      'olan normal dağılıma uyuyor. Rastgele seçilen bir öğrencinin '
+      '$cut cm’den kısa olma olasılığı yüzde kaç?';
+  static String mathDeterminant(String matrix) =>
+      'Satırları $matrix olan matrisin determinantı kaçtır? (Satırlar ; '
+      'ile ayrılmış)';
+  static String mathModulus(String z) => '|$z| kaçtır?';
+  static String mathArgument(String z) =>
+      '$z sayısının argümanı, 0° ile 360° arasında kaç derecedir?';
+  static String mathVectorLength(String v) => '$v vektörünün boyu kaçtır?';
+  static String mathVectorAngle(String u, String v) =>
+      '$u ve $v vektörleri arasındaki açı kaç derecedir?';
+  static String mathTriangleVectors(String u, String v) =>
+      'Kenarları $u ve $v vektörleri olan üçgenin alanı kaçtır?';
+  static String mathLcm(String numbers) =>
+      '$numbers sayılarının EKOK’u kaçtır?';
+  static String mathDivisors(String n) =>
+      '$n sayısının kaç tane pozitif böleni vardır?';
+  static String mathDivisorsWorking(String n, int count) =>
+      '$n asal çarpanlarına ayrılır, üslerin birer fazlası çarpılır: $count';
+  static String mathTotient(String n) =>
+      '1 ile $n arasında, $n ile aralarında asal kaç sayı vardır?';
+  static const mathByDefinition = 'türevin tanımı';
+  static const mathSarrus = 'Sarrus kuralı';
+  static const mathTimes = 'kat';
   static const mathYears = 'yıl';
   static const mathMinutes = 'dakika';
   static const mathSeconds = 'saniye';
