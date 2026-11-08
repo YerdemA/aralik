@@ -99,6 +99,8 @@ class DuelService {
         // This app pings (see webSocketChannel): the room may close the
         // connection when the pings stop.
         'hb': '1',
+        // This app knows rematches.
+        'rm': '1',
       },
     );
     try {
@@ -255,6 +257,11 @@ class DuelSession {
       (text) {
         final event = DuelEvent.parse(text);
         if (event == null) return;
+        // A rematch starts afresh: nothing of the last duel is sent again.
+        if (event is DuelStart) {
+          _lastLock = null;
+          _lastNext = null;
+        }
         match.handle(event);
         if (event is DuelResume) _sendAgain();
         // Refused or over: the room closes the connection anyway, but may
@@ -332,6 +339,16 @@ class DuelSession {
 
   /// Gives up: the opponent wins at once.
   void resign() => _send(DuelMessages.resign());
+
+  /// After the end: asks for a rematch, or accepts the opponent's.
+  void rematch() {
+    if (match.askRematch()) _send(DuelMessages.rematch());
+  }
+
+  /// After the end: no rematch.
+  void declineRematch() {
+    if (match.declineRematch()) _send(DuelMessages.rematchNo());
+  }
 
   void _send(String message) {
     if (_closed || match.reconnecting) return;

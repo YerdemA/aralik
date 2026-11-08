@@ -74,6 +74,23 @@ void main() {
     );
   });
 
+  test('says so when the server address arrives or goes', () {
+    service = null;
+    final s = store();
+    var heard = 0;
+    s.addListener(() => heard++);
+    s.serviceChanged();
+    expect(heard, 0); // still none
+    service = Uri.parse('https://lb.example/'); // the first manifest
+    s.serviceChanged();
+    expect((heard, s.isAvailable), (1, true));
+    s.serviceChanged();
+    expect(heard, 1); // unchanged
+    service = null;
+    s.serviceChanged();
+    expect((heard, s.isAvailable), (2, false));
+  });
+
   test('join keeps the account', () async {
     final s = store();
     expect(s.joined, isFalse);

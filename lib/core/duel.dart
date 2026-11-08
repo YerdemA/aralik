@@ -12,6 +12,10 @@
 /// An open question does not stop for anyone (the one away loses its
 /// seconds), only a revealed one waits for them: dropping out to look an
 /// answer up gains nothing.
+///
+/// After a duel played to the end the two can ask for a rematch
+/// ([RematchState]): once both want it the same room starts again with new
+/// questions, no new code or search.
 library;
 
 import 'dart:convert';
@@ -67,6 +71,12 @@ sealed class DuelEvent {
           questionIds: (m['questions'] as List).cast<String>(),
           questionTime: Duration(milliseconds: m['questionMs'] as int),
           rejoin: m['rejoin'] as String?,
+          round: m['round'] as int? ?? 1,
+        ),
+        'rematch' => DuelRematch(m['seat'] as int),
+        'rematch_no' => DuelRematchNo(
+          m['seat'] as int?,
+          m['reason'] as String? ?? 'no',
         ),
         'away' => DuelAway(
           m['seat'] as int,
@@ -119,6 +129,7 @@ sealed class DuelEvent {
           totals: (m['totals'] as List).cast<int>(),
           winner: m['winner'] as int?,
           opponentLeft: m['reason'] == 'left',
+          rematch: m['rematch'] == true,
         ),
         'error' => DuelError(m['code'] as String),
         _ => null,
@@ -212,6 +223,7 @@ class DuelStart extends DuelEvent {
     required this.questionIds,
     required this.questionTime,
     this.rejoin,
+    this.round = 1,
   });
   final int you;
   final List<String> names;
@@ -220,6 +232,23 @@ class DuelStart extends DuelEvent {
 
   /// This player's secret to come back after a dropped connection.
   final String? rejoin;
+
+  /// 1 for the first duel in the room, 2 for the first rematch, …
+  final int round;
+}
+
+/// The player in [seat] wants a rematch.
+class DuelRematch extends DuelEvent {
+  const DuelRematch(this.seat);
+  final int seat;
+}
+
+/// No rematch: [seat] said no or left (null: the room closed it).
+/// [reason] is `no`, `left`, `expired` or `no_questions`.
+class DuelRematchNo extends DuelEvent {
+  const DuelRematchNo(this.seat, this.reason);
+  final int? seat;
+  final String reason;
 }
 
 /// Question [index] starts now, with [timeLeft] to lock.
@@ -260,10 +289,14 @@ class DuelEnd extends DuelEvent {
     required this.totals,
     required this.winner,
     required this.opponentLeft,
+    this.rematch = false,
   });
   final List<int> totals;
   final int? winner;
   final bool opponentLeft;
+
+  /// A rematch may be asked for (both apps know rematches).
+  final bool rematch;
 }
 
 /// The room refused or closed: `no_room`, `room_full`, `room_closed`,
@@ -284,6 +317,45 @@ abstract final class DuelMessages {
 
   /// Gives up: the opponent wins at once.
   static String resign() => jsonEncode({'t': 'resign'});
+
+  /// After the end: wants a rematch, or accepts the opponent's.
+  static String rematch() => jsonEncode({'t': 'rematch'});
+
+  /// After the end: no rematch (declines, or takes the request back).
+  static String rematchNo() => jsonEncode({'t': 'rematch_no'});
+}
+
+/// Where a rematch stands after the end, as this player sees it.
+enum RematchState {
+  /// Not offered: an older app or server, or the duel did not end normally.
+  unavailable,
+
+  /// Either may ask.
+  available,
+
+  /// This player asked; waiting for the opponent.
+  asked,
+
+  /// The opponent asked; this player may accept or decline.
+  offered,
+
+  /// Both want it; the room is starting again.
+  starting,
+
+  /// This player said no (or took the request back).
+  refused,
+
+  /// The opponent said no.
+  declined,
+
+  /// The opponent left, or the connection is gone.
+  gone,
+
+  /// The room closed before an answer.
+  expired,
+
+  /// The bank has no new questions left for these two.
+  noQuestions,
 }
 
 enum DuelPhase {
@@ -339,6 +411,43 @@ class DuelMatch extends ChangeNotifier {
   Duration _awayLeft = Duration.zero;
   bool _myLocked = false;
   int _clock = 0;
+  RematchState _rematch = RematchState.unavailable;
+  int _round = 1;
+
+  /// Where a rematch stands (after the end).
+  RematchState get rematch => _rematch;
+
+  /// 1 for the first duel, 2 after the first rematch, …: a new round
+  /// starts the screen afresh.
+  int get round => _round;
+
+  /// This player asks for a rematch (or accepts the opponent's). Returns
+  /// whether there is something to send.
+  bool askRematch() {
+    final next = switch (_rematch) {
+      RematchState.available => RematchState.asked,
+      RematchState.offered => RematchState.starting,
+      _ => null,
+    };
+    if (next == null) return false;
+    _rematch = next;
+    notifyListeners();
+    return true;
+  }
+
+  /// This player does not want a rematch (declines, or takes theirs back).
+  /// Returns whether there is something to send.
+  bool declineRematch() {
+    const open = {
+      RematchState.available,
+      RematchState.asked,
+      RematchState.offered,
+    };
+    if (!open.contains(_rematch)) return false;
+    _rematch = RematchState.refused;
+    notifyListeners();
+    return true;
+  }
 
   DuelPhase get phase => _phase;
 
@@ -426,12 +535,20 @@ class DuelMatch extends ChangeNotifier {
   bool _comingBack = false;
 
   void handle(DuelEvent event) {
-    if (_phase == DuelPhase.over || _phase == DuelPhase.failed) return;
+    if (_phase == DuelPhase.failed) return;
+    // After the end only the rematch goes on (and a new round's start).
+    if (_phase == DuelPhase.over &&
+        event is! DuelRematch &&
+        event is! DuelRematchNo &&
+        event is! DuelStart) {
+      return;
+    }
     switch (event) {
       case DuelWaiting(:final code):
         _code = code;
         _phase = DuelPhase.waiting;
       case DuelStart():
+        if (_phase == DuelPhase.over) _newRound(event.round);
         _you = event.you;
         _names = event.names;
         _questionIds = event.questionIds;
@@ -475,18 +592,59 @@ class DuelMatch extends ChangeNotifier {
         _nextIn = nextIn;
         _phase = DuelPhase.reveal;
         _clock++;
-      case DuelEnd(:final totals, :final winner, :final opponentLeft):
+      case DuelEnd(
+        :final totals,
+        :final winner,
+        :final opponentLeft,
+        :final rematch,
+      ):
         _totals = totals;
         _winner = winner;
         _opponentLeft = opponentLeft;
         _phase = DuelPhase.over;
         _reconnecting = false;
         _opponentAway = false;
+        _rematch = rematch ? RematchState.available : RematchState.unavailable;
+      case DuelRematch(:final seat):
+        if (seat == _you) return;
+        _rematch = switch (_rematch) {
+          RematchState.available => RematchState.offered,
+          // Both asked at once: the room starts again.
+          RematchState.asked => RematchState.starting,
+          final other => other,
+        };
+      case DuelRematchNo(:final seat, :final reason):
+        if (seat == _you) return;
+        if (_rematch == RematchState.refused) return;
+        _rematch = switch (reason) {
+          'left' => RematchState.gone,
+          'expired' => RematchState.expired,
+          'no_questions' => RematchState.noQuestions,
+          _ => RematchState.declined,
+        };
       case DuelError(:final code):
         _error = code;
         _phase = DuelPhase.failed;
     }
     notifyListeners();
+  }
+
+  /// The room starts again after a rematch: everything of the last duel
+  /// goes, the players stay.
+  void _newRound(int round) {
+    _round = round > _round ? round : _round + 1;
+    _results.clear();
+    _totals = const [0, 0];
+    _index = -1;
+    _winner = null;
+    _opponentLeft = false;
+    _opponentLocked = false;
+    _myLocked = false;
+    _opponentAway = false;
+    _nextIn = null;
+    _awayBudget = duelReconnectWindow;
+    _rematch = RematchState.unavailable;
+    _phase = DuelPhase.connecting;
   }
 
   void _resume(DuelResume r) {
@@ -522,6 +680,20 @@ class DuelMatch extends ChangeNotifier {
   /// The connection dropped. In play, with a secret to come back with, the
   /// app tries again ([reconnecting]); otherwise the duel has failed.
   void connectionLost() {
+    if (_phase == DuelPhase.over) {
+      // After the end: nothing to come back to, but no rematch either.
+      const open = {
+        RematchState.available,
+        RematchState.asked,
+        RematchState.offered,
+        RematchState.starting,
+      };
+      if (open.contains(_rematch)) {
+        _rematch = RematchState.gone;
+        notifyListeners();
+      }
+      return;
+    }
     final inPlay =
         _phase == DuelPhase.question ||
         _phase == DuelPhase.reveal ||

@@ -123,6 +123,17 @@ class _DuelScreenState extends State<DuelScreen> {
   /// Gave up: nothing to go back to.
   bool _gaveUp = false;
 
+  /// The round this screen is showing ([DuelMatch.round]): a rematch starts
+  /// a new one in the same room.
+  int _roundSeen = 1;
+
+  /// Questions of earlier rounds; disposed with the screen (the last view
+  /// may still be fading out when a rematch starts).
+  final List<GameController> _oldGames = [];
+
+  /// The opponent's rematch request was felt already.
+  bool _offerFelt = false;
+
   bool get _inPlay =>
       _match.phase == DuelPhase.question || _match.phase == DuelPhase.reveal;
 
@@ -174,6 +185,9 @@ class _DuelScreenState extends State<DuelScreen> {
     _search?.cancel();
     _session?.close();
     _game?.dispose();
+    for (final game in _oldGames) {
+      game.dispose();
+    }
     _match.dispose();
     super.dispose();
   }
@@ -268,7 +282,37 @@ class _DuelScreenState extends State<DuelScreen> {
     }
   }
 
+  /// A rematch: the same room starts again with new questions; everything
+  /// this screen kept of the last duel goes.
+  void _startRound() {
+    if (_game case final game?) _oldGames.add(game);
+    _game = null;
+    _readyFor = -1;
+    _resultShown = false;
+    _startHeard = false;
+    _revealsHeard = 0;
+    _outcomeHeard = false;
+    _offerFelt = false;
+    _clockSeen = -1;
+    _awayUntil = null;
+    _gaveUp = false;
+    _stopClock();
+    _revealTicker?.cancel();
+    _revealTicker = null;
+    _revealCounted = -1;
+    _nextIn.value = null;
+  }
+
   void _onMatch() {
+    if (_match.round != _roundSeen) {
+      _roundSeen = _match.round;
+      _startRound();
+    }
+    if (_match.rematch == RematchState.offered && !_offerFelt) {
+      _offerFelt = true;
+      HapticFeedback.mediumImpact();
+      Sounds.play(Sfx.duelStart);
+    }
     _keep();
     _playSounds();
     final ids = _match.questionIds;
@@ -514,7 +558,11 @@ class _DuelScreenState extends State<DuelScreen> {
         nextIn: over ? null : _nextIn,
       );
     } else {
-      body = _ResultView(match: _match);
+      body = _ResultView(
+        match: _match,
+        onRematch: () => _session?.rematch(),
+        onDecline: () => _session?.declineRematch(),
+      );
     }
 
     return PopScope(
@@ -572,7 +620,12 @@ class _DuelScreenState extends State<DuelScreen> {
                 child: AnimatedSwitcher(
                   duration: const Duration(milliseconds: 200),
                   child: KeyedSubtree(
-                    key: ValueKey((_match.phase, _match.index, _resultShown)),
+                    key: ValueKey((
+                      _match.round,
+                      _match.phase,
+                      _match.index,
+                      _resultShown,
+                    )),
                     child: body,
                   ),
                 ),
@@ -1061,9 +1114,19 @@ Color duelResultFill(Color surface, {required bool hit, required int points}) {
 /// The end: both philosophers, the winner on the higher step, the totals
 /// and every question's points side by side.
 class _ResultView extends StatelessWidget {
-  const _ResultView({required this.match});
+  const _ResultView({
+    required this.match,
+    required this.onRematch,
+    required this.onDecline,
+  });
 
   final DuelMatch match;
+
+  /// Asks for a rematch, or accepts the opponent's.
+  final VoidCallback onRematch;
+
+  /// No rematch: declines, or takes the request back.
+  final VoidCallback onDecline;
 
   @override
   Widget build(BuildContext context) {
@@ -1085,10 +1148,16 @@ class _ResultView extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, box) {
         // As wide as half the screen, but leave room for the rest.
+        final rematchOpen = const {
+          RematchState.available,
+          RematchState.asked,
+          RematchState.offered,
+          RematchState.starting,
+        }.contains(match.rematch);
         final figure = [
           box.maxWidth / 2 - 8,
           190.0,
-          box.maxHeight - 400,
+          box.maxHeight - (match.rematch == RematchState.offered ? 520 : 440),
         ].reduce((a, b) => a < b ? a : b).clamp(80.0, 190.0);
         return Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -1152,11 +1221,23 @@ class _ResultView extends StatelessWidget {
             const SizedBox(height: 14),
             _QuestionStrip(match: match),
             const Spacer(),
-            FilledButton.icon(
-              onPressed: () => Navigator.of(context).pop(true),
-              icon: const Icon(Icons.replay_rounded),
-              label: const Text(AppStrings.duelPlayAgain),
+            _RematchArea(
+              match: match,
+              onRematch: onRematch,
+              onDecline: onDecline,
             ),
+            if (rematchOpen)
+              OutlinedButton.icon(
+                onPressed: () => Navigator.of(context).pop(true),
+                icon: const Icon(Icons.search_rounded),
+                label: const Text(AppStrings.duelPlayAgain),
+              )
+            else
+              FilledButton.icon(
+                onPressed: () => Navigator.of(context).pop(true),
+                icon: const Icon(Icons.replay_rounded),
+                label: const Text(AppStrings.duelPlayAgain),
+              ),
             const SizedBox(height: 4),
             TextButton(
               onPressed: () => Navigator.of(context).pop(),
@@ -1165,6 +1246,116 @@ class _ResultView extends StatelessWidget {
           ],
         );
       },
+    );
+  }
+}
+
+/// The rematch after the end: ask for one, wait for the answer, or answer
+/// the opponent's; a short note once it is off the table.
+class _RematchArea extends StatelessWidget {
+  const _RematchArea({
+    required this.match,
+    required this.onRematch,
+    required this.onDecline,
+  });
+
+  final DuelMatch match;
+  final VoidCallback onRematch;
+  final VoidCallback onDecline;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final name = match.opponentName;
+    Widget busy(String text) => FilledButton.icon(
+      onPressed: null,
+      icon: const SizedBox.square(
+        dimension: 18,
+        child: CircularProgressIndicator(strokeWidth: 2.5),
+      ),
+      label: Text(text),
+    );
+    Widget note(String text) => Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: Text(
+        text,
+        textAlign: TextAlign.center,
+        style: theme.textTheme.bodyMedium?.copyWith(
+          color: theme.colorScheme.onSurfaceVariant,
+        ),
+      ),
+    );
+    final Widget? child = switch (match.rematch) {
+      RematchState.available => FilledButton.icon(
+        onPressed: onRematch,
+        icon: const Icon(Icons.replay_rounded),
+        label: const Text(AppStrings.duelRematch),
+      ),
+      RematchState.asked => Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          busy(AppStrings.duelRematchSent),
+          TextButton(
+            onPressed: onDecline,
+            child: const Text(AppStrings.duelRematchCancel),
+          ),
+        ],
+      ),
+      RematchState.offered => Card(
+        margin: const EdgeInsets.only(bottom: 4),
+        color: Palette.duelOpponent.withValues(alpha: 0.12),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+          side: const BorderSide(color: Palette.duelOpponent, width: 2),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Text(
+                AppStrings.duelRematchOffer(name),
+                textAlign: TextAlign.center,
+                style: theme.textTheme.titleMedium?.copyWith(
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+              const SizedBox(height: 12),
+              Row(
+                children: [
+                  Expanded(
+                    child: OutlinedButton(
+                      onPressed: onDecline,
+                      child: const Text(AppStrings.duelRematchDecline),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: FilledButton(
+                      onPressed: onRematch,
+                      child: const Text(AppStrings.duelRematchAccept),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+      RematchState.starting => busy(AppStrings.duelRematchStarting),
+      RematchState.declined => note(AppStrings.duelRematchDeclined(name)),
+      RematchState.gone => note(AppStrings.duelRematchGone(name)),
+      RematchState.expired => note(AppStrings.duelRematchExpired),
+      RematchState.noQuestions => note(AppStrings.duelRematchNoQuestions),
+      RematchState.refused || RematchState.unavailable => null,
+    };
+    if (child == null) return const SizedBox.shrink();
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8),
+      child: AnimatedSize(
+        duration: const Duration(milliseconds: 200),
+        child: child,
+      ),
     );
   }
 }

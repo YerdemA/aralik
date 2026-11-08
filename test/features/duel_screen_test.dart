@@ -410,4 +410,158 @@ void main() {
     expect(lock['t'], 'lock');
     await tester.pumpWidget(const SizedBox());
   });
+
+  testWidgets('a rematch: asked by the opponent, accepted, played again', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(1080, 2340);
+    tester.view.devicePixelRatio = 3;
+    addTearDown(tester.view.reset);
+    SharedPreferences.setMockInitialValues({});
+    final stats = await StatsStore.open();
+    final repository = QuestionRepository();
+    final bank = await tester.runAsync(repository.load);
+    final first = bank![0];
+    final second = bank[1];
+
+    final channel = FakeChannel();
+    final service = DuelService(
+      serviceUri: () => Uri.parse('https://lb.example/'),
+      connect: (_) async => channel,
+    );
+    void say(Map<String, Object?> m) => channel.incoming.add(jsonEncode(m));
+    Future<void> settle() async {
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 300));
+    }
+
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: AppTheme.light,
+        home: DuelScreen(
+          service: service,
+          repository: repository,
+          stats: stats,
+          code: 'K7M2P',
+          name: 'Ayşe',
+        ),
+      ),
+    );
+    await tester.runAsync(() => Future<void>.delayed(Duration.zero));
+    await settle();
+
+    void start(String id, int round, String rejoin) {
+      say({
+        't': 'start',
+        'you': 0,
+        'names': ['Ayşe', 'Bora'],
+        'questions': [id],
+        'questionMs': 15000,
+        'rejoin': rejoin,
+        'round': round,
+      });
+      say({'t': 'question', 'i': 0, 'ms': 15000});
+    }
+
+    start(first.id, 1, 'tA');
+    await settle();
+    expect(find.text(first.text), findsOneWidget);
+    say({
+      't': 'reveal',
+      'i': 0,
+      'results': [
+        {'low': null, 'high': null, 'points': -50, 'hit': false},
+        {'low': null, 'high': null, 'points': -50, 'hit': false},
+      ],
+      'totals': [-50, -50],
+    });
+    say({
+      't': 'end',
+      'totals': [-50, -50],
+      'winner': null,
+      'reason': 'done',
+      'rematch': true,
+    });
+    await settle();
+    await tester.tap(find.text(AppStrings.duelSeeResult));
+    await settle();
+    expect(find.text(AppStrings.duelRematch), findsOneWidget);
+    // With a rematch on offer, a new search is the second choice.
+    expect(
+      find.widgetWithText(OutlinedButton, AppStrings.duelPlayAgain),
+      findsOneWidget,
+    );
+
+    say({'t': 'rematch', 'seat': 1});
+    await settle();
+    expect(find.text(AppStrings.duelRematchOffer('Bora')), findsOneWidget);
+    channel.sent.clear();
+    await tester.tap(find.text(AppStrings.duelRematchAccept));
+    await settle();
+    expect(channel.sent, [DuelMessages.rematch()]);
+    expect(find.text(AppStrings.duelRematchStarting), findsOneWidget);
+
+    // Same room, same screen: the next duel's first question.
+    start(second.id, 2, 'nA');
+    await settle();
+    expect(find.text(second.text), findsOneWidget);
+    expect(find.text(AppStrings.duelWaitingOpponent), findsNothing);
+    expect(find.text(AppStrings.duelRematchStarting), findsNothing);
+  });
+
+  testWidgets('a rematch request the opponent turns down', (tester) async {
+    tester.view.physicalSize = const Size(1080, 2340);
+    tester.view.devicePixelRatio = 3;
+    addTearDown(tester.view.reset);
+    SharedPreferences.setMockInitialValues({});
+    final stats = await StatsStore.open();
+    final repository = QuestionRepository();
+    final bank = await tester.runAsync(repository.load);
+    final channel = FakeChannel();
+    final service = DuelService(
+      serviceUri: () => Uri.parse('https://lb.example/'),
+      connect: (_) async => channel,
+    );
+    void say(Map<String, Object?> m) => channel.incoming.add(jsonEncode(m));
+    Future<void> settle() async {
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 300));
+    }
+
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: AppTheme.light,
+        home: DuelScreen(
+          service: service,
+          repository: repository,
+          stats: stats,
+          code: 'K7M2P',
+          name: 'Ayşe',
+        ),
+      ),
+    );
+    await tester.runAsync(() => Future<void>.delayed(Duration.zero));
+    await settle();
+    say({
+      't': 'start',
+      'you': 0,
+      'names': ['Ayşe', 'Bora'],
+      'questions': [bank!.first.id],
+      'questionMs': 15000,
+    });
+    say({'t': 'question', 'i': 0, 'ms': 15000});
+    say({
+      't': 'end',
+      'totals': [0, 0],
+      'winner': null,
+      'reason': 'left',
+    });
+    await settle();
+    // Not played to the end: no rematch.
+    expect(find.text(AppStrings.duelRematch), findsNothing);
+    expect(
+      find.widgetWithText(FilledButton, AppStrings.duelPlayAgain),
+      findsOneWidget,
+    );
+  });
 }

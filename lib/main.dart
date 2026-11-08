@@ -38,5 +38,18 @@ Future<void> main() async {
   );
 
   // Look for new questions in the background; used from the next launch.
-  content.sync(accept: repository.acceptsContent).ignore();
+  // The manifest also names the server: on a first launch duels and the
+  // leaderboard appear as soon as it arrives.
+  Future<void> syncContent() async {
+    await content.sync(accept: repository.acceptsContent);
+    leaderboard.serviceChanged();
+  }
+
+  syncContent().ignore();
+  // A first launch without network: look again when the app comes back.
+  AppLifecycleListener(
+    onResume: () {
+      if (!leaderboard.isAvailable) syncContent().ignore();
+    },
+  );
 }

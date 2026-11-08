@@ -18,6 +18,10 @@
 //                {t: 'resign'}               gives up: the other one wins
 //                {"t":"ping"}                every few seconds with ?hb=1;
 //                    the runtime answers {"t":"pong"} (liveness.js)
+//                {t: 'rematch'}              after the end: wants a rematch
+//                    (or accepts the other's); needs ?rm=1 from both apps
+//                {t: 'rematch_no'}           does not (declines or takes
+//                    their own request back): no rematch in this room
 //   room → app   {t: 'waiting', code}
 //                {t: 'start', you, names, questions, questionMs, rejoin}
 //                    rejoin: this player's secret to come back after a
@@ -28,9 +32,17 @@
 //                    ms: the next question comes after this long at most
 //                    (absent after the last question)
 //                    r = {low, high, points, hit}
-//                {t: 'end', totals, winner, reason}
+//                {t: 'end', totals, winner, reason, rematch}
 //                    winner 0 | 1 | null (draw); reason 'done' | 'left'
-//                    ('left': the loser gave up or did not come back)
+//                    ('left': the loser gave up or did not come back);
+//                    rematch: true when a rematch may be asked for
+//                {t: 'rematch', seat}        [seat] wants a rematch
+//                {t: 'rematch_no', seat, reason}  no rematch: reason 'no'
+//                    (declined or taken back), 'left' (gone), 'expired'
+//                    (the room closes) or 'no_questions'
+//                    Both want one: the room starts again with a new
+//                    'start' (new questions, new rejoin secrets, round + 1)
+//                    and the first 'question'.
 //                {t: 'error', code}
 //                {t: 'away', seat, ms}   the other player's connection
 //                    dropped; ms: what is left of their time away. An open
@@ -81,6 +93,9 @@ export const JOIN_TIMEOUT_MS = 10 * 60_000;
 export const CLEANUP_MS = 60_000;
 /** A player's time away (dropped connections) for the whole duel. */
 export const AWAY_BUDGET_MS = 45_000;
+/** After a rematch request the room stays at least this long for the
+ * answer (it is otherwise wiped CLEANUP_MS after the end). */
+export const REMATCH_ANSWER_MS = 30_000;
 
 /** No I, L, O, 0 or 1: nothing to mix up when read aloud. */
 export const CODE_ALPHABET = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
@@ -112,7 +127,8 @@ export function playerFrom(params) {
   if (isBlocked(nicknameKey(name))) return { error: 'blocked_name' };
   const bank = Number(params.get('bank'));
   if (!Number.isSafeInteger(bank) || bank < 1) return { error: 'bad_request' };
-  return { name, bank };
+  // Apps that know rematches say so (?rm=1); older ones never get one.
+  return { name, bank, rematch: params.get('rm') === '1' };
 }
 
 /** A random room code; [randomInt](n) gives 0 ≤ k < n. */
@@ -151,11 +167,17 @@ export function pickDuelQuestions(
   today,
   randomInt,
   levels = DUEL_LEVELS,
+  exclude = new Set(),
 ) {
   const upcoming = upcomingIds(content.days, today);
   const pool = content.order
     .slice(0, Math.max(0, bankLimit))
-    .filter((id) => !upcoming.has(id) && !content.questions.get(id).retired);
+    .filter(
+      (id) =>
+        !upcoming.has(id) &&
+        !exclude.has(id) &&
+        !content.questions.get(id).retired,
+    );
   const byLevel = { 1: [], 2: [], 3: [] };
   for (const id of pool) {
     const level = content.questions.get(id).difficulty;
@@ -222,12 +244,17 @@ export function createRoom(code, now) {
  * pickDuelQuestions) and is called once both are in, which starts the
  * duel. Returns {error} for a full, closed or unknown room.
  */
-export function join(state, { name, bank, token = null }, now, pick) {
+export function join(
+  state,
+  { name, bank, token = null, rematch = false },
+  now,
+  pick,
+) {
   if (!state) return error('no_room');
   if (state.phase !== 'waiting') return error('room_closed');
   if (state.players.length >= 2) return error('room_full');
   const seat = state.players.length;
-  const players = [...state.players, { name, bank, token }];
+  const players = [...state.players, { name, bank, token, rematch }];
   if (players.length < 2) {
     return {
       seat,
@@ -239,19 +266,26 @@ export function join(state, { name, bank, token = null }, now, pick) {
   const questions = pick(Math.min(players[0].bank, players[1].bank));
   if (!questions) return error('no_questions');
   const started = { ...state, players, questions };
-  const out = [0, 1].map((you) => ({
-    to: you,
-    msg: {
+  const first = askQuestion(started, 0, now);
+  return {
+    seat,
+    ...step(first.state, [...startMessages(started), ...first.out], first.alarm),
+  };
+}
+
+function startMessages(state) {
+  return [0, 1].map((you) => {
+    const msg = {
       t: 'start',
       you,
-      names: players.map((p) => p.name),
-      questions,
+      names: state.players.map((p) => p.name),
+      questions: state.questions,
       questionMs: QUESTION_MS,
-      rejoin: players[you].token,
-    },
-  }));
-  const first = askQuestion(started, 0, now);
-  return { seat, ...step(first.state, [...out, ...first.out], first.alarm) };
+      rejoin: state.players[you].token,
+    };
+    if (state.round > 1) msg.round = state.round;
+    return { to: you, msg };
+  });
 }
 
 function askQuestion(state, index, now) {
@@ -353,24 +387,101 @@ function winnerOf(totals) {
 
 /** Ends the duel; the alarm then wipes the room. */
 function finish(state, reason, now, winner = winnerOf(state.totals)) {
-  return step(
-    {
-      ...state,
-      phase: 'over',
-      winner,
-      reason,
-      deadline: null,
-      paused: null,
-      away: [null, null],
-    },
-    [
-      {
-        to: 'all',
-        msg: { t: 'end', totals: state.totals, winner, reason },
-      },
-    ],
-    now + CLEANUP_MS,
+  // A rematch is offered after a duel played to the end, between two apps
+  // that know rematches.
+  const open =
+    reason === 'done' &&
+    state.players.length === 2 &&
+    state.players.every((p) => p.rematch);
+  const over = {
+    ...state,
+    phase: 'over',
+    winner,
+    reason,
+    deadline: null,
+    paused: null,
+    away: [null, null],
+    rematch: open ? [false, false] : null,
+    wipeAt: now + CLEANUP_MS,
+  };
+  return step(over, [{ to: 'all', msg: endMessage(over) }], over.wipeAt);
+}
+
+function endMessage(state) {
+  const msg = {
+    t: 'end',
+    totals: state.totals,
+    winner: state.winner,
+    reason: state.reason,
+  };
+  if (state.rematch) msg.rematch = true;
+  return msg;
+}
+
+/** Closes the rematch offer: [seat] said no or left (null: the room). */
+function noRematch(state, seat, reason) {
+  const msg = { t: 'rematch_no', seat, reason };
+  return step({ ...state, rematch: null }, [
+    { to: seat === null ? 'all' : 1 - seat, msg },
+  ]);
+}
+
+/**
+ * After the end, [seat] wants a rematch (or accepts one). Once both want
+ * it the room starts again: questions none of this room's rounds asked
+ * ([pick](bankLimit, exclude), see pickDuelQuestions), new rejoin secrets
+ * from [newToken](), a fresh time away, round + 1.
+ */
+export function rematch(state, seat, now, pick, newToken) {
+  if (!state || state.phase !== 'over' || !state.rematch) return step(state);
+  if (state.rematch[seat]) return step(state);
+  const want = [...state.rematch];
+  want[seat] = true;
+  if (!(want[0] && want[1])) {
+    const wipeAt = Math.max(state.wipeAt ?? now, now + REMATCH_ANSWER_MS);
+    return step(
+      { ...state, rematch: want, wipeAt },
+      [{ to: 1 - seat, msg: { t: 'rematch', seat } }],
+      wipeAt,
+    );
+  }
+  const played = [...(state.played ?? []), ...state.questions];
+  const questions = pick(
+    Math.min(state.players[0].bank, state.players[1].bank),
+    new Set(played),
   );
+  if (!questions) {
+    const none = noRematch(state, null, 'no_questions');
+    return step(none.state, none.out, state.wipeAt ?? now);
+  }
+  const again = {
+    ...state,
+    players: state.players.map((p) => ({ ...p, token: newToken() })),
+    questions,
+    played,
+    round: (state.round ?? 1) + 1,
+    results: [],
+    totals: [0, 0],
+    winner: null,
+    reason: null,
+    away: [null, null],
+    budget: [AWAY_BUDGET_MS, AWAY_BUDGET_MS],
+    paused: null,
+    rematch: null,
+    wipeAt: null,
+  };
+  const first = askQuestion(again, 0, now);
+  return step(
+    first.state,
+    [...startMessages(again), ...first.out],
+    first.alarm,
+  );
+}
+
+/** After the end, [seat] does not want a rematch (or takes theirs back). */
+export function declineRematch(state, seat) {
+  if (!state || state.phase !== 'over' || !state.rematch) return step(state);
+  return noRematch(state, seat, 'no');
 }
 
 /** A player is ready for the question after [i]. */
@@ -425,7 +536,11 @@ function questionAlarm(state) {
  * then. An open question runs on for both; a revealed one waits.
  */
 export function leave(state, seat, now, since = now) {
-  if (!state || state.phase === 'over') return step(state);
+  if (!state) return step(state);
+  if (state.phase === 'over') {
+    // Gone after the end: no rematch with them.
+    return state.rematch ? noRematch(state, seat, 'left') : step(state);
+  }
   if (state.phase === 'waiting') {
     // The creator may be sharing the code from another app: the room stays
     // open until it times out, and they can connect again.
@@ -489,21 +604,13 @@ export function rejoin(state, token, now) {
   const seat = state.players.findIndex((p) => p.token === token);
   if (seat < 0) return error('no_room');
   if (state.phase === 'over') {
-    // It ended while they were away: tell them how.
-    return {
-      seat,
-      ...step(state, [
-        {
-          to: seat,
-          msg: {
-            t: 'end',
-            totals: state.totals,
-            winner: state.winner,
-            reason: state.reason,
-          },
-        },
-      ]),
-    };
+    // It ended while they were away: tell them how (and whether the other
+    // one already asked for a rematch).
+    const out = [{ to: seat, msg: endMessage(state) }];
+    if (state.rematch?.[1 - seat]) {
+      out.push({ to: seat, msg: { t: 'rematch', seat: 1 - seat } });
+    }
+    return { seat, ...step(state, out) };
   }
   if (state.phase !== 'question' && state.phase !== 'reveal') {
     return error('room_closed');
@@ -590,6 +697,16 @@ export function alarm(state, now, content) {
       if (state.paused) return step(state, [], awayAlarm(state));
       if (now < state.deadline) return step(state, [], state.deadline);
       return askQuestion(state, state.index + 1, now);
+    case 'over': {
+      if (state.wipeAt && now < state.wipeAt) {
+        return step(state, [], state.wipeAt);
+      }
+      const expired = { t: 'rematch_no', seat: null, reason: 'expired' };
+      return {
+        wipe: true,
+        ...step(state, state.rematch ? [{ to: 'all', msg: expired }] : []),
+      };
+    }
     default:
       return { wipe: true, ...step(state) };
   }

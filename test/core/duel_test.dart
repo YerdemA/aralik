@@ -303,4 +303,113 @@ void main() {
       expect(DuelMatch().awayBudget, duelReconnectWindow);
     });
   });
+
+  group('rematch', () {
+    DuelMatch over({bool rematch = true}) {
+      final m = DuelMatch();
+      m.handle(
+        _parse({
+          't': 'start',
+          'you': 1,
+          'names': ['Bora', 'Ayşe'],
+          'questions': ['q1'],
+          'questionMs': 15000,
+          'rejoin': 'tB',
+        }),
+      );
+      m.handle(_parse({'t': 'question', 'i': 0, 'ms': 15000}));
+      m.handle(
+        _parse({
+          't': 'end',
+          'totals': [10, 20],
+          'winner': 1,
+          'reason': 'done',
+          'rematch': rematch,
+        }),
+      );
+      return m;
+    }
+
+    test('offered only when the room says so', () {
+      expect(over().rematch, RematchState.available);
+      final old = over(rematch: false);
+      expect(old.rematch, RematchState.unavailable);
+      expect(old.askRematch(), isFalse);
+    });
+
+    test('asking, being asked, and both at once', () {
+      final asker = over();
+      expect(asker.askRematch(), isTrue);
+      expect(asker.rematch, RematchState.asked);
+      expect(asker.askRematch(), isFalse);
+      // The other one asked too: the room is starting again.
+      asker.handle(_parse({'t': 'rematch', 'seat': 0}));
+      expect(asker.rematch, RematchState.starting);
+
+      final asked = over();
+      asked.handle(_parse({'t': 'rematch', 'seat': 0}));
+      expect(asked.rematch, RematchState.offered);
+      // Its own echo changes nothing.
+      asked.handle(_parse({'t': 'rematch', 'seat': 1}));
+      expect(asked.rematch, RematchState.offered);
+      expect(asked.askRematch(), isTrue); // accept
+      expect(asked.rematch, RematchState.starting);
+    });
+
+    test('no, left, expired and no questions close it', () {
+      for (final (reason, state) in [
+        ('no', RematchState.declined),
+        ('left', RematchState.gone),
+        ('expired', RematchState.expired),
+        ('no_questions', RematchState.noQuestions),
+      ]) {
+        final m = over()..askRematch();
+        m.handle(
+          _parse({
+            't': 'rematch_no',
+            'seat': reason == 'no' || reason == 'left' ? 0 : null,
+            'reason': reason,
+          }),
+        );
+        expect(m.rematch, state, reason: reason);
+      }
+      final refusing = over();
+      expect(refusing.declineRematch(), isTrue);
+      expect(refusing.rematch, RematchState.refused);
+      expect(refusing.declineRematch(), isFalse);
+    });
+
+    test('a lost connection after the end ends the offer', () {
+      final m = over()..askRematch();
+      m.connectionLost();
+      expect(m.phase, DuelPhase.over);
+      expect(m.rematch, RematchState.gone);
+    });
+
+    test('a new round starts from nothing, same players', () {
+      final m = over()..askRematch();
+      m.handle(_parse({'t': 'rematch', 'seat': 0}));
+      m.handle(
+        _parse({
+          't': 'start',
+          'you': 1,
+          'names': ['Bora', 'Ayşe'],
+          'questions': ['q7', 'q8'],
+          'questionMs': 15000,
+          'rejoin': 'nB',
+          'round': 2,
+        }),
+      );
+      expect(m.round, 2);
+      expect(m.phase, DuelPhase.connecting);
+      expect(m.results, isEmpty);
+      expect((m.myTotal, m.opponentTotal), (0, 0));
+      expect(m.outcome, isNull);
+      expect(m.rematch, RematchState.unavailable);
+      expect(m.rejoin, 'nB');
+      m.handle(_parse({'t': 'question', 'i': 0, 'ms': 15000}));
+      expect((m.phase, m.index), (DuelPhase.question, 0));
+      expect(m.questionIds, ['q7', 'q8']);
+    });
+  });
 }

@@ -93,6 +93,7 @@ void main() {
       'name': 'Ayşe Nur',
       'bank': '1001',
       'hb': '1',
+      'rm': '1',
     });
 
     channel.incoming.add(jsonEncode({'t': 'waiting', 'code': 'K7M2P'}));
@@ -416,4 +417,93 @@ void main() {
       {'t': 'resign'},
     ]);
   });
+
+  test(
+    'asks for a rematch once; a new round sends nothing old again',
+    () async {
+      final channel = FakeChannel();
+      final service = DuelService(
+        serviceUri: () => base,
+        connect: (_) async => channel,
+      );
+      final match = DuelMatch();
+      final session = await service.join(
+        code: 'K7M2P',
+        name: 'Ayşe',
+        bankSize: 10,
+        match: match,
+      );
+      void say(Map<String, Object?> m) => channel.incoming.add(jsonEncode(m));
+      say({
+        't': 'start',
+        'you': 0,
+        'names': ['Ayşe', 'Bora'],
+        'questions': ['q1'],
+        'questionMs': 15000,
+        'rejoin': 'tA',
+      });
+      say({'t': 'question', 'i': 0, 'ms': 15000});
+      await pumpEventQueue();
+      session.lock(0, low: 1, high: 2);
+      say({
+        't': 'reveal',
+        'i': 0,
+        'results': [
+          {'low': 1, 'high': 2, 'points': 50, 'hit': true},
+          {'low': null, 'high': null, 'points': -50, 'hit': false},
+        ],
+        'totals': [50, -50],
+      });
+      say({
+        't': 'end',
+        'totals': [50, -50],
+        'winner': 0,
+        'reason': 'done',
+        'rematch': true,
+      });
+      await pumpEventQueue();
+      channel.sent.clear();
+      session.rematch();
+      session.rematch(); // once is enough
+      expect(channel.sent, [DuelMessages.rematch()]);
+      expect(match.rematch, RematchState.asked);
+
+      say({'t': 'rematch', 'seat': 1});
+      say({
+        't': 'start',
+        'you': 0,
+        'names': ['Ayşe', 'Bora'],
+        'questions': ['q2'],
+        'questionMs': 15000,
+        'rejoin': 'nA',
+        'round': 2,
+      });
+      say({'t': 'question', 'i': 0, 'ms': 15000});
+      await pumpEventQueue();
+      expect(match.round, 2);
+      expect(match.phase, DuelPhase.question);
+      expect(match.rejoin, 'nA');
+      expect(match.questionIds, ['q2']);
+      // The last round's lock on question 0 is not sent again on a resume.
+      channel.sent.clear();
+      say({
+        't': 'resume',
+        'you': 0,
+        'names': ['Ayşe', 'Bora'],
+        'questions': ['q2'],
+        'questionMs': 15000,
+        'rejoin': 'nA',
+        'index': 0,
+        'phase': 'question',
+        'ms': 9000,
+        'results': <Object>[],
+        'totals': [0, 0],
+        'locked': [false, false],
+        'away': null,
+      });
+      await pumpEventQueue();
+      expect(channel.sent, isEmpty);
+      await session.close();
+    },
+  );
 }

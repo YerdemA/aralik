@@ -79,6 +79,17 @@ ThemeData _withRoboto(ThemeData t) => t.copyWith(
       ),
     ),
   ),
+  outlinedButtonTheme: OutlinedButtonThemeData(
+    style: (t.outlinedButtonTheme.style ?? const ButtonStyle()).copyWith(
+      textStyle: const WidgetStatePropertyAll(
+        TextStyle(
+          fontFamily: 'Roboto',
+          fontSize: 18,
+          fontWeight: FontWeight.w700,
+        ),
+      ),
+    ),
+  ),
   textButtonTheme: TextButtonThemeData(
     style: (t.textButtonTheme.style ?? const ButtonStyle()).copyWith(
       textStyle: const WidgetStatePropertyAll(
@@ -113,7 +124,10 @@ void main() {
     final boundary = GlobalKey();
 
     Future<void> snap(String name) async {
-      await tester.pump(const Duration(seconds: 1));
+      // A few frames: size animations (the rematch card) run to the end.
+      for (var i = 0; i < 4; i++) {
+        await tester.pump(const Duration(milliseconds: 250));
+      }
       final render =
           boundary.currentContext!.findRenderObject()! as RenderRepaintBoundary;
       await tester.runAsync(() async {
@@ -186,12 +200,22 @@ void main() {
           : totals[0] > totals[1]
           ? 0
           : 1;
-      say({'t': 'end', 'totals': totals, 'winner': winner, 'reason': 'done'});
+      say({
+        't': 'end',
+        'totals': totals,
+        'winner': winner,
+        'reason': 'done',
+        'rematch': true,
+      });
       await tester.pump();
       await tester.pump(const Duration(milliseconds: 300));
       await tester.tap(find.text('Sonucu gör'));
       await tester.pump();
       await snap('$name-sonuc');
+      // The opponent asks for a rematch.
+      say({'t': 'rematch', 'seat': 1});
+      await tester.pump();
+      await snap('$name-rovans');
     }
   }, timeout: const Timeout(Duration(minutes: 3)));
 

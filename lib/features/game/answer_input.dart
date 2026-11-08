@@ -129,6 +129,10 @@ class _Display extends StatelessWidget {
 String _formatGuess(GameController game, int value) =>
     game.isYear ? formatYear(value) : formatNumber(value);
 
+/// Everything in [GuessStep] but the pad, in dp (label, display, gaps,
+/// button), with a little to spare.
+const double _guessOthers = 196;
+
 class GuessStep extends StatelessWidget {
   const GuessStep({super.key, required this.game});
 
@@ -139,50 +143,58 @@ class GuessStep extends StatelessWidget {
     final theme = Theme.of(context);
     final guess = game.guess;
     final unit = game.question.unit;
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        const Spacer(),
-        Text(
-          AppStrings.yourGuess,
-          style: theme.textTheme.labelLarge,
-          textAlign: TextAlign.center,
-        ),
-        const SizedBox(height: 8),
-        _Display(
-          active: guess != null,
-          child: FittedBox(
-            fit: BoxFit.scaleDown,
-            child: Text(
-              guess == null
-                  ? AppStrings.typeYourGuess
-                  : [
-                      _formatGuess(game, guess),
-                      if (unit.isNotEmpty) unit,
-                    ].join(' '),
-              style: guess == null
-                  ? theme.textTheme.headlineMedium?.copyWith(
-                      color: theme.colorScheme.outline,
-                      height: 1.6,
-                    )
-                  : theme.textTheme.displayMedium,
+    // A long question above (and the duel's two-line bar) leaves less
+    // room: the keys get shorter instead of the button falling off.
+    return LayoutBuilder(
+      builder: (context, box) => Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          const Spacer(),
+          Text(
+            AppStrings.yourGuess,
+            style: theme.textTheme.labelLarge,
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 8),
+          _Display(
+            active: guess != null,
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                guess == null
+                    ? AppStrings.typeYourGuess
+                    : [
+                        _formatGuess(game, guess),
+                        if (unit.isNotEmpty) unit,
+                      ].join(' '),
+                style: guess == null
+                    ? theme.textTheme.headlineMedium?.copyWith(
+                        color: theme.colorScheme.outline,
+                        height: 1.6,
+                      )
+                    : theme.textTheme.displayMedium,
+              ),
             ),
           ),
-        ),
-        const Spacer(),
-        NumberPad(
-          showTripleZero: !game.isYear && !game.isPercent,
-          onDigits: game.type,
-          onBackspace: game.backspace,
-          onClear: game.clear,
-        ),
-        const SizedBox(height: 12),
-        FilledButton.icon(
-          onPressed: game.canConfirmGuess ? game.confirmGuess : null,
-          icon: const Icon(Icons.arrow_forward_rounded),
-          label: const Text(AppStrings.next),
-        ),
-      ],
+          const Spacer(),
+          NumberPad(
+            showTripleZero: !game.isYear && !game.isPercent,
+            onDigits: game.type,
+            onBackspace: game.backspace,
+            onClear: game.clear,
+            keyHeight: NumberPad.keyHeightFor(
+              box.maxHeight,
+              others: _guessOthers,
+            ),
+          ),
+          const SizedBox(height: 12),
+          FilledButton.icon(
+            onPressed: game.canConfirmGuess ? game.confirmGuess : null,
+            icon: const Icon(Icons.arrow_forward_rounded),
+            label: const Text(AppStrings.next),
+          ),
+        ],
+      ),
     );
   }
 }

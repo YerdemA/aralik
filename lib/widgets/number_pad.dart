@@ -12,6 +12,7 @@ class NumberPad extends StatelessWidget {
     required this.onBackspace,
     required this.onClear,
     this.showTripleZero = true,
+    this.keyHeight = NumberPad.fullKeyHeight,
   });
 
   final ValueChanged<String> onDigits;
@@ -19,12 +20,28 @@ class NumberPad extends StatelessWidget {
   final VoidCallback onClear;
   final bool showTripleZero;
 
-  static const double keyHeight = 60;
+  /// Height of each key; smaller on short screens (see [keyHeightFor]).
+  final double keyHeight;
+
+  static const double fullKeyHeight = 60;
+
+  /// Never smaller than this: with its padding a key stays a 52 dp target.
+  static const double minKeyHeight = 44;
+
+  /// The key height that fits the pad and [others] (the rest of the
+  /// column, in dp) into [maxHeight]: the full height when there is room.
+  static double keyHeightFor(double maxHeight, {required double others}) {
+    if (!maxHeight.isFinite) return fullKeyHeight;
+    return ((maxHeight - others) / 4 - 8).clamp(minKeyHeight, fullKeyHeight);
+  }
 
   @override
   Widget build(BuildContext context) {
-    Widget digit(String label) =>
-        _PadKey(onTap: () => onDigits(label), child: Text(label));
+    Widget digit(String label) => _PadKey(
+      onTap: () => onDigits(label),
+      height: keyHeight,
+      child: Text(label),
+    );
 
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -40,11 +57,12 @@ class NumberPad extends StatelessWidget {
             Expanded(
               child: showTripleZero
                   ? digit('000')
-                  : const SizedBox(height: keyHeight),
+                  : SizedBox(height: keyHeight),
             ),
             Expanded(child: digit('0')),
             Expanded(
               child: _PadKey(
+                height: keyHeight,
                 onTap: onBackspace,
                 onLongPress: onClear,
                 semanticLabel: AppStrings.delete,
@@ -62,6 +80,7 @@ class _PadKey extends StatelessWidget {
   const _PadKey({
     required this.onTap,
     required this.child,
+    required this.height,
     this.onLongPress,
     this.semanticLabel,
   });
@@ -70,6 +89,7 @@ class _PadKey extends StatelessWidget {
   final VoidCallback? onLongPress;
   final String? semanticLabel;
   final Widget child;
+  final double height;
 
   @override
   Widget build(BuildContext context) {
@@ -95,7 +115,7 @@ class _PadKey extends StatelessWidget {
             label: semanticLabel,
             button: true,
             child: SizedBox(
-              height: NumberPad.keyHeight,
+              height: height,
               child: Center(
                 child: DefaultTextStyle.merge(
                   style: theme.textTheme.headlineSmall,

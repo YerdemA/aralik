@@ -74,7 +74,7 @@ export class DuelRoom extends DurableObject {
     };
     const player = duel.playerFrom(params);
     if (player.error) return refuse(player.error);
-    const { name, bank } = player;
+    const { name, bank, rematch } = player;
     const seat = (n) =>
       socket.serializeAttachment({ seat: n, hb: pings(params), at: now });
 
@@ -103,8 +103,11 @@ export class DuelRoom extends DurableObject {
       return refuse('server_error');
     }
     const today = turkeyDayIndex(now);
-    const result = duel.join(state, { name, bank, token: duel.secret() }, now, (limit) =>
-      duel.pickDuelQuestions(content, limit, today, duel.randomInt),
+    const result = duel.join(
+      state,
+      { name, bank, token: duel.secret(), rematch },
+      now,
+      (limit) => duel.pickDuelQuestions(content, limit, today, duel.randomInt),
     );
     if (result.error) return refuse(result.error);
     seat(result.seat);
@@ -131,6 +134,26 @@ export class DuelRoom extends DurableObject {
       await this.apply(duel.next(state, seat, msg, now));
     } else if (msg?.t === 'resign') {
       await this.apply(duel.resign(state, seat, now));
+    } else if (msg?.t === 'rematch') {
+      let content;
+      try {
+        content = await this.content(now);
+      } catch {
+        return;
+      }
+      const today = turkeyDayIndex(now);
+      const pick = (limit, exclude) =>
+        duel.pickDuelQuestions(
+          content,
+          limit,
+          today,
+          duel.randomInt,
+          duel.DUEL_LEVELS,
+          exclude,
+        );
+      await this.apply(duel.rematch(state, seat, now, pick, duel.secret));
+    } else if (msg?.t === 'rematch_no') {
+      await this.apply(duel.declineRematch(state, seat));
     }
   }
 

@@ -65,7 +65,9 @@ test('checks the player of a connection', () => {
   assert.deepEqual(duel.playerFrom(q('v=1&name=%20Ay%C5%9Fe%20&bank=12')), {
     name: 'Ayşe',
     bank: 12,
+    rematch: false,
   });
+  assert.equal(duel.playerFrom(q('v=1&name=Ayse&bank=12&rm=1')).rematch, true);
   assert.equal(duel.playerFrom(q('v=2&name=Ayse&bank=12')).error, 'version');
   assert.equal(duel.playerFrom(q('v=1&name=A&bank=12')).error, 'invalid_name');
   assert.equal(duel.playerFrom(q('v=1&name=Ayse&bank=0')).error, 'bad_request');
@@ -473,4 +475,109 @@ test('the worker creates rooms and refuses bad codes', async () => {
     env,
   );
   assert.equal(await ok.text(), 'room');
+});
+
+/** A duel played to the end; [rematch] whether each app knows rematches. */
+function finished(rematch = [true, true]) {
+  let r = duel.createRoom('ABCDE', T0);
+  r = duel.join(r.state, { name: 'Ayşe', bank: 99, token: 'tA', rematch: rematch[0] }, T0, pick);
+  r = duel.join(r.state, { name: 'Bora', bank: 99, token: 'tB', rematch: rematch[1] }, T0, pick);
+  for (let i = 0; i < 5; i++) {
+    const exact = content.questions.get(r.state.questions[i]).answer;
+    r = duel.lock(r.state, 0, { i, low: exact, high: exact }, T0, content);
+    r = duel.lock(r.state, 1, { i, low: null, high: null }, T0, content);
+    if (i < 4) {
+      r = duel.next(r.state, 0, { i }, T0);
+      r = duel.next(r.state, 1, { i }, T0);
+    }
+  }
+  return r;
+}
+
+// Any five questions this room has not asked yet.
+const pickAgain = (limit, exclude) =>
+  content.order.filter((id) => !exclude.has(id)).slice(0, 5);
+let tokens = 0;
+const newToken = () => `n${++tokens}`;
+
+test('a rematch is offered only between apps that know it', () => {
+  const both = finished();
+  assert.equal(both.out.at(-1).msg.rematch, true);
+  const old = finished([true, false]);
+  assert.equal(old.out.at(-1).msg.rematch, undefined);
+  // Nothing happens when asked anyway.
+  const asked = duel.rematch(old.state, 0, T0, pickAgain, newToken);
+  assert.deepEqual(asked.out, []);
+});
+
+test('one asks, the other is told; both want it and the room starts again', () => {
+  const end = finished();
+  const before = end.state.questions;
+  const now = T0 + 50_000; // the room would be wiped at T0 + 60 s
+  let r = duel.rematch(end.state, 1, now, pickAgain, newToken);
+  assert.deepEqual(r.out, [{ to: 0, msg: { t: 'rematch', seat: 1 } }]);
+  assert.equal(r.alarm, now + duel.REMATCH_ANSWER_MS); // time to answer
+  // Asking twice changes nothing.
+  assert.deepEqual(duel.rematch(r.state, 1, now, pickAgain, newToken).out, []);
+  r = duel.rematch(r.state, 0, now + 1000, pickAgain, newToken);
+  const starts = r.out.filter((o) => o.msg.t === 'start');
+  assert.equal(starts.length, 2);
+  assert.equal(starts[0].msg.round, 2);
+  assert.notDeepEqual(starts[0].msg.questions, before);
+  for (const id of starts[0].msg.questions) assert.ok(!before.includes(id));
+  // New secrets: the old ones no longer bring anyone back.
+  assert.notEqual(starts[0].msg.rejoin, 'tA');
+  assert.notEqual(starts[0].msg.rejoin, starts[1].msg.rejoin);
+  assert.equal(r.out.at(-1).msg.t, 'question');
+  assert.equal(r.state.phase, 'question');
+  assert.deepEqual(r.state.totals, [0, 0]);
+  assert.deepEqual(r.state.results, []);
+  assert.deepEqual(r.state.budget, [duel.AWAY_BUDGET_MS, duel.AWAY_BUDGET_MS]);
+  assert.deepEqual(r.state.played, before);
+});
+
+test('saying no, leaving or running out of time ends the offer', () => {
+  const end = finished();
+  const no = duel.declineRematch(end.state, 0);
+  assert.deepEqual(no.out, [
+    { to: 1, msg: { t: 'rematch_no', seat: 0, reason: 'no' } },
+  ]);
+  assert.deepEqual(duel.rematch(no.state, 1, T0, pickAgain, newToken).out, []);
+
+  const gone = duel.leave(end.state, 1, T0 + 5000);
+  assert.deepEqual(gone.out, [
+    { to: 0, msg: { t: 'rematch_no', seat: 1, reason: 'left' } },
+  ]);
+
+  const asked = duel.rematch(end.state, 0, T0 + 1000, pickAgain, newToken);
+  const early = duel.alarm(asked.state, T0 + duel.CLEANUP_MS - 1, content);
+  assert.equal(early.wipe, undefined);
+  const late = duel.alarm(asked.state, T0 + duel.CLEANUP_MS, content);
+  assert.equal(late.wipe, true);
+  assert.deepEqual(late.out, [
+    { to: 'all', msg: { t: 'rematch_no', seat: null, reason: 'expired' } },
+  ]);
+});
+
+test('no rematch when the bank has no new questions left', () => {
+  const end = finished();
+  let r = duel.rematch(end.state, 0, T0, pick, newToken);
+  r = duel.rematch(r.state, 1, T0, (limit, exclude) =>
+    duel.pickDuelQuestions(content, limit, 0, first, duel.DUEL_LEVELS, exclude),
+  newToken);
+  assert.equal(r.state.phase, 'over');
+  assert.deepEqual(r.out, [
+    { to: 'all', msg: { t: 'rematch_no', seat: null, reason: 'no_questions' } },
+  ]);
+});
+
+test('coming back after the end hears of a rematch request', () => {
+  const end = finished();
+  const asked = duel.rematch(end.state, 1, T0, pickAgain, newToken);
+  const back = duel.rejoin(asked.state, 'tA', T0 + 100);
+  assert.deepEqual(
+    back.out.map((o) => o.msg.t),
+    ['end', 'rematch'],
+  );
+  assert.equal(back.out[0].msg.rematch, true);
 });

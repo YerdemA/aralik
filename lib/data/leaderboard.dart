@@ -186,6 +186,19 @@ class LeaderboardStore extends ChangeNotifier {
 
   bool get isAvailable => serviceUri != null;
 
+  late bool _wasAvailable = isAvailable;
+
+  /// Call when the server address may have changed (a content sync): tells
+  /// listeners when the leaderboard, duels and tournaments appear or go.
+  /// On a first launch the address only arrives with the first manifest,
+  /// after the home screen is already up.
+  void serviceChanged() {
+    final available = isAvailable;
+    if (available == _wasAvailable) return;
+    _wasAvailable = available;
+    notifyListeners();
+  }
+
   LeaderboardAccount? get account {
     final id = _prefs.getString(_idKey);
     final token = _prefs.getString(_tokenKey);

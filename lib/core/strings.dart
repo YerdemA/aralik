@@ -403,6 +403,17 @@ abstract final class AppStrings {
   static const tournamentReconnectingHint =
       'Oyun sürüyor. Dönünce kaldığı yerden katılırsın.';
   static const duelPlayAgain = 'Yeni düello';
+  static const duelRematch = 'Rövanş';
+  static const duelRematchSent = 'Rövanş isteği gönderildi';
+  static const duelRematchCancel = 'Vazgeç';
+  static String duelRematchOffer(String name) => '$name rövanş istiyor!';
+  static const duelRematchAccept = 'Kabul et';
+  static const duelRematchDecline = 'Reddet';
+  static const duelRematchStarting = 'Rövanş başlıyor…';
+  static String duelRematchDeclined(String name) => '$name rövanş istemedi.';
+  static String duelRematchGone(String name) => '$name ayrıldı.';
+  static const duelRematchExpired = 'Rövanş için süre doldu.';
+  static const duelRematchNoQuestions = 'Rövanş için yeni soru kalmadı.';
   static const duelHome = 'Ana ekran';
   static const duelQuitTitle = 'Düellodan çıkılsın mı?';
   static const duelQuitBody =
