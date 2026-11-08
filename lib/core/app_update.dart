@@ -5,7 +5,7 @@ library;
 
 /// This app's build number: the "+N" of `version` in pubspec.yaml. A test
 /// keeps the two equal, so bump both together.
-const int appBuild = 6;
+const int appBuild = 7;
 
 /// Whether [latest] (from the manifest, null when unknown) is newer than
 /// [current].
