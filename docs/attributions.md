@@ -2,7 +2,7 @@
 layout: page
 title: Veri kaynakları ve lisanslar
 lead: Kabaca'daki soruların cevapları bu açık kaynaklara dayanır.
-updated: 2026-11-06
+updated: 2026-11-09
 ---
 
 Kabaca'daki sorular ve cevapları aşağıdaki kaynaklara dayanır. Her soruda, cevabın
@@ -81,6 +81,6 @@ aynı liste yer alır.
 - Adres: https://ec.europa.eu/eurostat/
 
 ## Vikipedi
-- Vikipedi gönüllüleri (tarih, mimari, sanat ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0
+- Vikipedi gönüllüleri (tarih, bilim, mimari, sanat ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0
 - Lisans: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 - Adres: https://tr.wikipedia.org/

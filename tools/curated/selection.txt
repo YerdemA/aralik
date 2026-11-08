@@ -722,3 +722,51 @@
 2|80|diş|en:Crocodile|Bir timsahın ağzında yaklaşık kaç diş bulunur?
 1|8|göz|en:Tarantula|Bir tarantulanın kaç gözü vardır?
 2|11|kg|en:Giraffe|heart|Bir zürafanın kalbi yaklaşık kaç kilogramdır?
+
+# physics_school|bilim
+1|1687||en:Philosophiæ Naturalis Principia Mathematica|published|Newton, hareket yasalarını anlattığı Principia'yı hangi yıl yayımlamıştır?
+2|1543||en:De revolutionibus orbium coelestium|published|Kopernik, Güneş merkezli evren modelini anlattığı kitabını hangi yıl yayımlamıştır?
+3|1609||en:Astronomia nova|published|Kepler, gezegenlerin elips yörüngelerde döndüğünü gösterdiği Astronomia Nova'yı hangi yıl yayımlamıştır?
+3|1785||en:Coulomb's law|published|Coulomb, elektrik yükleri arasındaki kuvvet yasasını hangi yıl yayımlamıştır?
+2|1827||en:Ohm's law|ohm|Georg Ohm, akım, gerilim ve direnç arasındaki yasayı hangi yıl yayımlamıştır?
+2|1831||en:Electromagnetic induction|faraday|Faraday elektromanyetik indüksiyonu hangi yıl keşfetmiştir?
+2|1895||en:X-ray|röntgen|Röntgen X ışınlarını hangi yıl keşfetmiştir?
+2|1896||en:Radioactive decay|becquerel|Becquerel radyoaktifliği hangi yıl keşfetmiştir?
+2|1897||en:J. J. Thomson|electron|J. J. Thomson elektronu hangi yıl keşfetmiştir?
+3|1900||en:Planck's law|planck|Planck, enerjinin paketler hâlinde yayıldığı fikrini hangi yıl ortaya atmıştır?
+2|1911||en:Rutherford model|rutherford|Rutherford, atomun merkezinde küçük ve yoğun bir çekirdek olduğunu hangi yıl açıklamıştır?
+2|1913||en:Bohr model|bohr|Bohr atom modeli hangi yıl ortaya atılmıştır?
+2|1932||en:Neutron|chadwick|Chadwick nötronu hangi yıl keşfetmiştir?
+2|101325|Pa|en:Standard atmosphere (unit)|pa|1 atmosferlik basınç kaç pascaldır?
+3|4.184|J|en:Calorie|joule|1 kalori kaç joule'dür?
+2|29.78|km/s|en:Earth's orbit|km/s|Dünya, Güneş'in çevresinde saniyede ortalama kaç kilometre hızla döner?
+
+# chemistry_school|bilim
+1|1869||en:Periodic table|mendeleev|Mendeleyev ilk periyodik tablosunu hangi yıl yayımlamıştır?
+2|1808||en:John Dalton|atomic|Dalton, atom modelini anlattığı A New System of Chemical Philosophy'yi hangi yıl yayımlamıştır?
+3|1811||en:Avogadro's law|avogadro|Avogadro, eşit hacimdeki gazların eşit sayıda tanecik içerdiği hipotezini hangi yıl ortaya atmıştır?
+3|1662||en:Boyle's law|boyle|Boyle, gazın basıncı ile hacmi arasındaki yasayı hangi yıl yayımlamıştır?
+2|1898||en:Radium|curie|Marie ve Pierre Curie radyumu hangi yıl keşfetmiştir?
+3|1909||en:PH|sørensen|pH kavramı hangi yıl ortaya atılmıştır?
+1|26|proton|en:Iron|atomic number|Demir atomunun çekirdeğinde kaç proton vardır?
+2|79|proton|en:Gold|atomic number|Altın atomunun çekirdeğinde kaç proton vardır?
+2|47|proton|en:Silver|atomic number|Gümüş atomunun çekirdeğinde kaç proton vardır?
+2|29|proton|en:Copper|atomic number|Bakır atomunun çekirdeğinde kaç proton vardır?
+2|80|proton|en:Mercury (element)|atomic number|Cıva atomunun çekirdeğinde kaç proton vardır?
+2|92|proton|en:Uranium|atomic number|Uranyum atomunun çekirdeğinde kaç proton vardır?
+1|20|proton|en:Calcium|atomic number|Kalsiyum atomunun çekirdeğinde kaç proton vardır?
+1|17|proton|en:Chlorine|atomic number|Klor atomunun çekirdeğinde kaç proton vardır?
+1|11|proton|en:Sodium|atomic number|Sodyum atomunun çekirdeğinde kaç proton vardır?
+1|20.95|%|en:Atmosphere of Earth|oxygen|Kuru havanın yüzde kaçı oksijendir?
+
+# biology_school|bilim
+2|20|amino asit|en:Proteinogenic amino acid|genetic code|Standart genetik kod kaç farklı amino asidi kodlar?
+2|64|kodon|en:Genetic code|codons|Genetik kodda kaç farklı kodon vardır?
+1|1859||en:On the Origin of Species|published|Darwin, Türlerin Kökeni'ni hangi yıl yayımlamıştır?
+2|1866||en:Experiments on Plant Hybridization|published|Mendel, bezelyelerle yaptığı kalıtım deneylerini hangi yıl yayımlamıştır?
+2|1665||en:Micrographia|published|Hooke, "hücre" kelimesini ilk kez kullandığı Micrographia'yı hangi yıl yayımlamıştır?
+1|1953||en:Nucleic acid double helix|watson|Watson ve Crick DNA'nın çift sarmal yapısını hangi yıl açıklamıştır?
+2|1796||en:Edward Jenner|phipps|Jenner ilk çiçek aşısını hangi yıl uygulamıştır?
+2|1885||en:Rabies vaccine|pasteur|Pasteur ve Roux ilk kuduz aşısını hangi yıl geliştirmiştir?
+2|1921||en:Insulin|banting|Banting ve Best insülini ilk kez hangi yıl elde etmiştir?
+1|1996||en:Dolly (sheep)|born|Yetişkin bir hücreden klonlanan ilk memeli olan koyun Dolly hangi yıl doğmuştur?
