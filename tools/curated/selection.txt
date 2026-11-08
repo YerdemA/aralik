@@ -971,3 +971,53 @@
 2|1972||en:Pong|1972|Atari'nin Pong oyunu hangi yıl çıkmıştır?
 2|1980||en:Pac-Man|1980|Pac-Man oyunu hangi yıl çıkmıştır?
 2|1985||en:Super Mario Bros.|1985|Super Mario Bros. oyunu hangi yıl çıkmıştır?
+# literature_works|sanat
+2|1896||tr:Araba Sevdası|1896|Recaizade Mahmut Ekrem'in Araba Sevdası romanı ilk kez hangi yıl Servet-i Fünûn dergisinde yayımlanmıştır?
+2|1937||tr:Kuyucaklı Yusuf|1937|Sabahattin Ali'nin Kuyucaklı Yusuf romanı hangi yıl yayımlanmıştır?
+2|1961||tr:Saatleri Ayarlama Enstitüsü|1961|Tanpınar'ın Saatleri Ayarlama Enstitüsü romanı hangi yıl kitap olarak yayımlanmıştır?
+2|1972||tr:Tutunamayanlar|1972|Oğuz Atay'ın Tutunamayanlar romanı hangi yıl yayımlanmıştır?
+2|1998||en:My Name Is Red|1998|Orhan Pamuk'un Benim Adım Kırmızı romanı hangi yıl yayımlanmıştır?
+2|2008||en:The Museum of Innocence|2008|Orhan Pamuk'un Masumiyet Müzesi romanı hangi yıl yayımlanmıştır?
+2|1813||en:Pride and Prejudice|1813|Jane Austen'ın Aşk ve Gurur romanı hangi yıl yayımlanmıştır?
+2|1857||en:Madame Bovary|1857|Flaubert'in Madame Bovary romanı hangi yıl kitap olarak yayımlanmıştır?
+2|1925||en:The Great Gatsby|1925|Muhteşem Gatsby romanı hangi yıl yayımlanmıştır?
+2|1915||en:The Metamorphosis|1915|Kafka'nın Dönüşüm'ü hangi yıl yayımlanmıştır?
+2|1967||en:One Hundred Years of Solitude|1967|Márquez'in Yüzyıllık Yalnızlık romanı hangi yıl yayımlanmıştır?
+2|1865||en:Alice's Adventures in Wonderland|1865|Alis Harikalar Diyarında hangi yıl yayımlanmıştır?
+2|1818||en:Frankenstein|1818|Mary Shelley'nin Frankenstein romanı hangi yıl yayımlanmıştır?
+2|1897||en:Dracula|1897|Bram Stoker'ın Drakula romanı hangi yıl yayımlanmıştır?
+2|1887||en:A Study in Scarlet|1887|Sherlock Holmes'un ilk macerası Kızıl Dosya hangi yıl yayımlanmıştır?
+2|1937||en:The Hobbit|1937|Tolkien'in Hobbit'i hangi yıl yayımlanmıştır?
+1|1988||en:The Alchemist (novel)|1988|Paulo Coelho'nun Simyacı romanı hangi yıl yayımlanmıştır?
+
+# music_works|sanat
+2|1997||en:Şımarık|1997|Tarkan'ın Şımarık şarkısının yer aldığı Ölürüm Sana albümü hangi yıl çıkmıştır?
+1|2003||en:Everyway That I Can|eurovision|Sertab Erener Eurovision'u hangi yıl kazanmıştır?
+2|1956||en:Eurovision Song Contest 1956|1956|İlk Eurovision Şarkı Yarışması hangi yıl düzenlenmiştir?
+2|1975||en:Bohemian Rhapsody|1975|Queen'in Bohemian Rhapsody şarkısı hangi yıl yayımlanmıştır?
+2|1982||en:Thriller (album)|1982|Michael Jackson'ın Thriller albümü hangi yıl yayımlanmıştır?
+2|1960||en:The Beatles|liverpool|The Beatles grubu hangi yıl kurulmuştur?
+2|1971||en:Imagine (John Lennon song)|1971|John Lennon'ın Imagine şarkısı hangi yıl yayımlanmıştır?
+
+# film_works|sanat
+2|1975||tr:Hababam Sınıfı (film)|1975|Hababam Sınıfı filmi hangi yıl vizyona girmiştir?
+2|1977||tr:Selvi Boylum Al Yazmalım|1977|Selvi Boylum Al Yazmalım filmi hangi yıl vizyona girmiştir?
+2|1976||en:Tosun Paşa|1976|Tosun Paşa filmi hangi yıl vizyona girmiştir?
+2|1996||en:The Bandit (1996 film)|1996|Eşkıya filmi hangi yıl vizyona girmiştir?
+2|2004||en:G.O.R.A.|2004|G.O.R.A. filmi hangi yıl vizyona girmiştir?
+2|2005||tr:Babam ve Oğlum|2005|Babam ve Oğlum filmi hangi yıl vizyona girmiştir?
+1|1997||en:Titanic (1997 film)|1997|James Cameron'ın Titanik filmi hangi yıl vizyona girmiştir?
+2|1942||en:Casablanca (film)|1942|Kazablanka filmi hangi yıl vizyona girmiştir?
+2|1939||en:Gone with the Wind (film)|1939|Rüzgâr Gibi Geçti filmi hangi yıl vizyona girmiştir?
+1|1993||en:Jurassic Park (film)|1993|Jurassic Park filmi hangi yıl vizyona girmiştir?
+2|1995||en:Toy Story|1995|Tamamen bilgisayarla canlandırılan ilk uzun film Oyuncak Hikâyesi hangi yıl vizyona girmiştir?
+2|1937||en:Snow White and the Seven Dwarfs (1937 film)|1937|Disney'in Pamuk Prenses ve Yedi Cüceler filmi hangi yıl vizyona girmiştir?
+3|1927||en:The Jazz Singer|1927|İlk uzun metrajlı sesli film Caz Şarkıcısı hangi yıl vizyona girmiştir?
+1|1999||en:The Matrix|1999|Matrix filmi hangi yıl vizyona girmiştir?
+1|2009||en:Avatar (2009 film)|2009|James Cameron'ın Avatar filmi hangi yıl vizyona girmiştir?
+
+# art_works|sanat
+2|1930||en:American Gothic|1930|Grant Wood'un Amerikan Gotiği tablosu hangi yıl yapılmıştır?
+2|1942||en:Nighthawks (Hopper)|1942|Edward Hopper'ın Gece Kuşları tablosu hangi yıl yapılmıştır?
+2|1962||en:Campbell's Soup Cans|1962|Andy Warhol'un Campbell Çorba Kutuları serisi hangi yıl tamamlanmıştır?
+3|1434||en:Arnolfini Portrait|1434|Van Eyck'in Arnolfini Portresi hangi yıl yapılmıştır?
