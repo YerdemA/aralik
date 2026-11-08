@@ -81,6 +81,6 @@ aynı liste yer alır.
 - Adres: https://ec.europa.eu/eurostat/
 
 ## Vikipedi
-- Vikipedi gönüllüleri (tarih, bilim, coğrafya, mimari, sanat, edebiyat, müzik, sinema, şirket ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0
+- Vikipedi gönüllüleri (tarih, bilim, coğrafya, mimari, sanat, edebiyat, müzik, sinema, şirket, spor ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0
 - Lisans: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 - Adres: https://tr.wikipedia.org/

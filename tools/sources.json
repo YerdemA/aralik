@@ -200,7 +200,7 @@
    "license": "CC BY-SA 4.0",
    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
    "url": "https://tr.wikipedia.org/",
-   "attribution": "Vikipedi gönüllüleri (tarih, bilim, coğrafya, mimari, sanat, edebiyat, müzik, sinema, şirket ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0",
+   "attribution": "Vikipedi gönüllüleri (tarih, bilim, coğrafya, mimari, sanat, edebiyat, müzik, sinema, şirket, spor ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0",
    "status": "in_use",
    "datasets": [
     "history_to_1000", "history_1000_1200", "history_1200_1400", "history_modern", "ottoman_early", "ottoman_late", "turkey_republic",
@@ -210,7 +210,8 @@
     "chemistry_school", "biology_school", "geography_school",
     "astronomy_school", "earth_science_school",
     "literature_works", "music_works", "film_works",
-    "brands_world", "brands_tr"
+    "brands_world", "brands_tr", "sports_curated",
+    "architecture_tr"
    ]
   },
   {

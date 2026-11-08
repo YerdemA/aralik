@@ -927,3 +927,27 @@
 3|1777||tr:Hacı Bekir|1777|Hacı Bekir şekercisi hangi yıl kurulmuştur?
 2|1840||tr:PTT|kurul|Posta Nezareti (bugünkü PTT) hangi yıl kurulmuştur?
 2|2002||tr:Simit Sarayı|kurul|Simit Sarayı hangi yıl kurulmuştur?
+# sports_curated|spor
+1|1896||en:1896 Summer Olympics|athens|İlk modern Olimpiyat Oyunları hangi yıl yapılmıştır?
+1|1930||en:1930 FIFA World Cup|uruguay|İlk FIFA Dünya Kupası hangi yıl düzenlenmiştir?
+1|2002||en:Turkey national football team|third|Türkiye Dünya Kupası'nda üçüncülüğü hangi yıl elde etmiştir?
+1|2000||en:2000 UEFA Cup final|galatasaray|Galatasaray UEFA Kupası'nı hangi yıl kazanmıştır?
+2|1959||en:Süper Lig|1959|Türkiye'de ulusal futbol ligi (bugünkü Süper Lig) hangi yıl başlamıştır?
+2|1891||en:Basketball|naismith|Basketbol hangi yıl icat edilmiştir?
+2|1895||en:Volleyball|morgan|Voleybol hangi yıl icat edilmiştir?
+2|1877||en:The Championships, Wimbledon|1877|Wimbledon tenis turnuvası ilk kez hangi yıl düzenlenmiştir?
+2|1946||en:National Basketball Association|founded|NBA hangi yıl kurulmuştur?
+2|1950||en:Formula One|championship|İlk Formula 1 Dünya Şampiyonası hangi yıl düzenlenmiştir?
+2|1988||en:Naim Süleymanoğlu|gold|Naim Süleymanoğlu ilk olimpiyat altın madalyasını hangi yıl kazanmıştır?
+3|1936||en:Yaşar Erkan|1936|Türkiye ilk olimpiyat altın madalyasını hangi yıl kazanmıştır?
+2|2010||en:2010 FIBA World Championship|turkey|Türkiye'nin ev sahipliği yaptığı FIBA Dünya Basketbol Şampiyonası hangi yıl düzenlenmiştir?
+2|2023||en:Turkey women's national volleyball team|nations league|Filenin Sultanları Milletler Ligi'ni ilk kez hangi yıl kazanmıştır?
+2|23|altın madalya|en:Michael Phelps|gold medals|Michael Phelps olimpiyatlarda toplam kaç altın madalya kazanmıştır?
+2|8|kez|en:Lionel Messi|ballon d'or|2026 itibarıyla Lionel Messi Ballon d'Or ödülünü kaç kez kazanmıştır?
+2|1997||en:Deep Blue versus Garry Kasparov|1997|Deep Blue bilgisayarı Kasparov'u hangi yıl yenmiştir?
+1|1953||en:1953 British Mount Everest expedition|hillary|Everest'in zirvesine ilk kez hangi yıl çıkılmıştır?
+
+# architecture_tr|mimari
+2|2013||en:Marmaray|opened|Marmaray hangi yıl açılmıştır?
+2|2016||en:Eurasia Tunnel|opened|Avrasya Tüneli hangi yıl açılmıştır?
+2|1408|m|en:Yavuz Sultan Selim Bridge|span|Yavuz Sultan Selim Köprüsü'nün orta açıklığı kaç metredir?
