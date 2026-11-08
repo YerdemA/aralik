@@ -4,6 +4,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 
 import '../math/math_mode_screen.dart';
+import '../../widgets/coach_tour.dart';
 import '../../core/math/math_question.dart';
 import '../../core/math/math_problem.dart';
 import '../../core/daily.dart';
@@ -100,6 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
     syncUserName(widget.settings, _leaderboard);
     _checkDevice();
     _checkPending();
+    WidgetsBinding.instance.addPostFrameCallback((_) => _firstLaunchTour());
   }
 
   /// A match left behind whose time to go back ran out while the app was
@@ -241,6 +243,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final answers = await Navigator.of(context).push<List<RoundAnswer>>(
       MaterialPageRoute(
         builder: (_) => GameScreen(
+          settings: widget.settings,
           questions: remaining,
           scaled: scaledOn(day, widget.scoringV2Day?.call()),
           alreadyAnswered: done,
@@ -317,6 +320,7 @@ class _HomeScreenState extends State<HomeScreen> {
       final answers = await Navigator.of(context).push<List<RoundAnswer>>(
         MaterialPageRoute(
           builder: (_) => GameScreen(
+            settings: widget.settings,
             questions: round,
             onLocked: (a) => _stats.recordAnswer(
               questionId: a.question.id,
@@ -359,6 +363,7 @@ class _HomeScreenState extends State<HomeScreen> {
       final answers = await Navigator.of(context).push<List<RoundAnswer>>(
         MaterialPageRoute(
           builder: (_) => GameScreen(
+            settings: widget.settings,
             questions: round,
             startQuestion: (_) => DateTime.now(),
             timeLimit: mathTimeLimit,
@@ -420,12 +425,94 @@ class _HomeScreenState extends State<HomeScreen> {
     ),
   );
 
-  void _openSettings() => Navigator.of(context).push(
-    MaterialPageRoute<void>(
-      builder: (_) =>
-          SettingsScreen(settings: widget.settings, leaderboard: _leaderboard),
-    ),
-  );
+  Future<void> _openSettings() async {
+    final replay = await Navigator.of(context).push<bool>(
+      MaterialPageRoute(
+        builder: (_) => SettingsScreen(
+          settings: widget.settings,
+          leaderboard: _leaderboard,
+        ),
+      ),
+    );
+    // "Tanıtımı yeniden oynat": settings closed itself for it.
+    if (replay == true && mounted) await _tour();
+  }
+
+  final _tourDay = GlobalKey();
+  final _tourDuel = GlobalKey();
+  final _tourFree = GlobalKey();
+  final _tourMath = GlobalKey();
+  final _tourCup = GlobalKey();
+  final _tourBoard = GlobalKey();
+  final _tourStats = GlobalKey();
+  final _tourSettings = GlobalKey();
+
+  /// The first launch shows the home screen around, once. Players from
+  /// before the tour (they have answers) are not shown it.
+  Future<void> _firstLaunchTour() async {
+    final settings = widget.settings;
+    if (settings.tourSeen(TourPart.home)) return;
+    if (_stats.answered > 0 || _stats.mathAnswered > 0) {
+      await settings.markAllToursSeen();
+      return;
+    }
+    await _tour();
+  }
+
+  Future<void> _tour() async {
+    // After the screen's own entrance.
+    await Future<void>.delayed(const Duration(milliseconds: 450));
+    // Something on top (the update notice): next launch then.
+    if (!mounted || !(ModalRoute.of(context)?.isCurrent ?? false)) return;
+    await widget.settings.markTourSeen(TourPart.home);
+    if (!mounted) return;
+    await showCoachTour(context, [
+      const CoachStep(
+        title: AppStrings.tourWelcomeTitle,
+        body: AppStrings.tourWelcome,
+      ),
+      CoachStep(
+        target: _tourDay,
+        title: AppStrings.tourDayTitle,
+        body: AppStrings.tourDay,
+      ),
+      CoachStep(
+        target: _tourDuel,
+        title: AppStrings.tourDuelTitle,
+        body: AppStrings.tourDuel,
+      ),
+      CoachStep(
+        target: _tourFree,
+        title: AppStrings.tourFreeTitle,
+        body: AppStrings.tourFree,
+      ),
+      CoachStep(
+        target: _tourMath,
+        title: AppStrings.tourMathTitle,
+        body: AppStrings.tourMath,
+      ),
+      CoachStep(
+        target: _tourCup,
+        title: AppStrings.tourCupTitle,
+        body: AppStrings.tourCup,
+      ),
+      CoachStep(
+        target: _tourBoard,
+        title: AppStrings.tourBoardTitle,
+        body: AppStrings.tourBoard,
+      ),
+      CoachStep(
+        target: _tourStats,
+        title: AppStrings.tourStatsTitle,
+        body: AppStrings.tourStats,
+      ),
+      CoachStep(
+        target: _tourSettings,
+        title: AppStrings.tourSettingsTitle,
+        body: AppStrings.tourSettings,
+      ),
+    ]);
+  }
 
   void _openStats() => Navigator.of(context).push(
     MaterialPageRoute<void>(
@@ -509,6 +596,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                                 if (_leaderboard?.isAvailable == true) ...[
                                   IconButton.filledTonal(
+                                    key: _tourBoard,
                                     onPressed: () => _openLeaderboard(today),
                                     tooltip: AppStrings.leaderboard,
                                     icon: const Icon(
@@ -518,12 +606,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                   const SizedBox(width: 4),
                                 ],
                                 IconButton.filledTonal(
+                                  key: _tourStats,
                                   onPressed: _openStats,
                                   tooltip: AppStrings.stats,
                                   icon: const Icon(Icons.bar_chart_rounded),
                                 ),
                                 const SizedBox(width: 4),
                                 IconButton.filledTonal(
+                                  key: _tourSettings,
                                   onPressed: _openSettings,
                                   tooltip: AppStrings.settings,
                                   icon: const Icon(Icons.settings_rounded),
@@ -554,6 +644,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               // Free play is the main card now; the duel
                               // sits below it.
                               Expanded(
+                                key: _tourFree,
                                 child: _FreePlayHero(
                                   mascotSize: mascotSize,
                                   onPlay: _loading ? null : _playFree,
@@ -562,6 +653,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               if (hasDuel) ...[
                                 const SizedBox(height: 12),
                                 SizedBox(
+                                  key: _tourDuel,
                                   height: _ModeTile.height,
                                   child: _DuelTile(
                                     onTap: _loading ? null : _openDuel,
@@ -570,6 +662,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               ],
                             ] else ...[
                               Expanded(
+                                key: _tourDay,
                                 child: _TodayCard(
                                   results: results,
                                   today: today,
@@ -590,6 +683,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   children: [
                                     if (hasDuel) ...[
                                       Expanded(
+                                        key: _tourDuel,
                                         child: _DuelTile(
                                           onTap: _loading ? null : _openDuel,
                                         ),
@@ -597,6 +691,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       const SizedBox(width: 12),
                                     ],
                                     Expanded(
+                                      key: _tourFree,
                                       child: _FreePlayTile(
                                         onTap: _loading ? null : _playFree,
                                       ),
@@ -612,12 +707,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                 crossAxisAlignment: CrossAxisAlignment.stretch,
                                 children: [
                                   Expanded(
+                                    key: _tourMath,
                                     child: _MathTile(
                                       onTap: _loading ? null : _playMath,
                                     ),
                                   ),
                                   const SizedBox(width: 12),
                                   Expanded(
+                                    key: _tourCup,
                                     // Tournaments need the server, like duels.
                                     child: hasDuel
                                         ? _TournamentTile(

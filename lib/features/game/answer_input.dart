@@ -134,9 +134,12 @@ String _formatGuess(GameController game, int value) =>
 const double _guessOthers = 196;
 
 class GuessStep extends StatelessWidget {
-  const GuessStep({super.key, required this.game});
+  const GuessStep({super.key, required this.game, this.padKey});
 
   final GameController game;
+
+  /// Marks the number pad for the first-question tour.
+  final GlobalKey? padKey;
 
   @override
   Widget build(BuildContext context) {
@@ -178,6 +181,7 @@ class GuessStep extends StatelessWidget {
           ),
           const Spacer(),
           NumberPad(
+            key: padKey,
             showTripleZero: !game.isYear && !game.isPercent,
             onDigits: game.type,
             onBackspace: game.backspace,
@@ -200,10 +204,20 @@ class GuessStep extends StatelessWidget {
 }
 
 class WidthStep extends StatelessWidget {
-  const WidthStep({super.key, required this.game, required this.onLock});
+  const WidthStep({
+    super.key,
+    required this.game,
+    required this.onLock,
+    this.rangeKey,
+    this.lockKey,
+  });
 
   final GameController game;
   final VoidCallback onLock;
+
+  /// Mark the interval and the lock button for the first-question tour.
+  final GlobalKey? rangeKey;
+  final GlobalKey? lockKey;
 
   @override
   Widget build(BuildContext context) {
@@ -246,6 +260,7 @@ class WidthStep extends StatelessWidget {
         Center(child: _PotentialPill(points: game.potentialPoints)),
         const Spacer(),
         Slider(
+          key: rangeKey,
           value: game.width,
           onChanged: game.setWidth,
           semanticFormatterCallback: (_) => range,
@@ -262,6 +277,7 @@ class WidthStep extends StatelessWidget {
         ),
         const SizedBox(height: 24),
         FilledButton.icon(
+          key: lockKey,
           onPressed: onLock,
           icon: const Icon(Icons.lock_outline),
           label: const Text(AppStrings.lock),

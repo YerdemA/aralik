@@ -36,6 +36,19 @@ class SettingsStore extends ChangeNotifier {
   /// Sound effects on (default) or off.
   bool get soundOn => _prefs.getBool(_soundKey) ?? true;
 
+  /// Whether the first-launch tour's [part] was shown.
+  bool tourSeen(TourPart part) => _prefs.getBool(part.key) ?? false;
+
+  Future<void> markTourSeen(TourPart part) => _prefs.setBool(part.key, true);
+
+  /// Players from before the tour: they know the app already.
+  Future<void> markAllToursSeen() =>
+      Future.wait([for (final p in TourPart.values) markTourSeen(p)]);
+
+  /// Ayarlar → "Tanıtımı yeniden oynat".
+  Future<void> replayTours() =>
+      Future.wait([for (final p in TourPart.values) _prefs.remove(p.key)]);
+
   Future<void> setSoundOn(bool on) async {
     if (on == soundOn) return;
     await _prefs.setBool(_soundKey, on);
@@ -88,4 +101,15 @@ class SettingsStore extends ChangeNotifier {
     await _prefs.remove(_nameChangedKey);
     notifyListeners();
   }
+}
+
+/// The first-launch tour comes in parts, each shown once: the home screen,
+/// the first question's guess, and its interval.
+enum TourPart {
+  home('tour_home_seen'),
+  guess('tour_guess_seen'),
+  range('tour_range_seen');
+
+  const TourPart(this.key);
+  final String key;
 }

@@ -399,6 +399,70 @@ abstract final class AppStrings {
   static const mathSeconds = 'saniye';
   static const mathBillionKm = 'milyar km';
 
+  // First-launch tour (lib/widgets/coach_tour.dart).
+  static String tourCounter(int step, int count) => '$step / $count';
+  static const tourNext = 'Geç';
+  static const tourDone = 'Bitti';
+  static const tourSkip = 'Tanıtımdan çık';
+  static const tourReplay = 'Tanıtımı yeniden oynat';
+  static const tourReplayHint = 'Ana ekranı ve ilk soruyu yeniden anlatır';
+  static const tourWelcomeTitle = "Kabaca'ya hoş geldin";
+  static const tourWelcome =
+      'Sayısal sorulara tek bir sayıyla değil, %90 emin olduğun bir '
+      'aralıkla cevap verirsin. Aralık cevabı içeriyorsa puan alırsın; ne '
+      'kadar darsa o kadar çok. Kısaca etrafı gezelim.';
+  static const tourDayTitle = 'Günün seti';
+  static const tourDay =
+      'Her gün herkes aynı 5 soruyu çözer. Her gün oynarsan serin (🔥) '
+      'büyür.';
+  static const tourDuelTitle = 'Düello';
+  static const tourDuel =
+      'Bilgi ya da matematik: canlı bir rakiple ya da arkadaşınla aynı 5 '
+      'soru, aynı anda.';
+  static const tourFreeTitle = 'Bir tur at';
+  static const tourFree =
+      'Günün seti bitince durma: sınırsız 5 soruluk turlar. Gördüğün '
+      'sorular bir daha gelmez.';
+  static const tourMathTitle = 'Matematik';
+  static const tourMath =
+      'Hesapla üretilen sorular, temel ya da ileri. Kafadan, kabaca tahmin '
+      'et; eksi puan yok.';
+  static const tourCupTitle = 'Turnuva';
+  static const tourCup =
+      '3–8 arkadaşınla bir oda kur, kodu paylaş, aynı '
+      'soruları birlikte çözün.';
+  static const tourBoardTitle = 'Günün liderleri';
+  static const tourBoard =
+      'İstersen kullanıcı adınla günün tablosuna gir. İlk üçe altın, '
+      'gümüş, bronz.';
+  static const tourStatsTitle = 'İstatistikler';
+  static const tourStats =
+      'Kalibrasyonun burada: "%90 eminim" dediğinde gerçekten 10 sorunun '
+      "9'unu tutturuyor musun?";
+  static const tourSettingsTitle = 'Ayarlar';
+  static const tourSettings =
+      'Kullanıcı adın, tema ve sesler. Bu tanıtımı da buradan yeniden '
+      'izleyebilirsin.';
+  static const tourQuestionTitle = 'Soru';
+  static const tourQuestion =
+      'Sayısal bir soru. Cevabı tam bilmen gerekmez: kabaca tahmin et.';
+  static const tourClockTitle = 'Süre';
+  static const tourClock =
+      'Süre dolunca ekrandaki cevap kendiliğinden kilitlenir. Bu anlatım '
+      'sürerken süre işlemez.';
+  static const tourPadTitle = 'En iyi tahminin';
+  static const tourPad =
+      "Önce aklındaki tek sayıyı yaz, sonra Devam'a bas. 000 tuşu büyük "
+      'sayıları hızlandırır.';
+  static const tourRangeTitle = 'Aralığın';
+  static const tourRange =
+      'Kaydırıcıyla aralığını aç ya da daralt. %90 emin olduğun aralığı '
+      'ver: cevabı içerirse puan alırsın, ne kadar darsa o kadar çok.';
+  static const tourLockTitle = 'Kilitle';
+  static const tourLock =
+      'Hazır olunca kilitle. Bilerek dar tutmak kazandırmaz: ıskalarsan '
+      'puan gider.';
+
   // Settings
   static const appearance = 'Görünüm';
   static const theme = 'Tema';

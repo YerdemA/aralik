@@ -233,6 +233,8 @@ void main() {
     ]) {
       // ignore: invalid_use_of_visible_for_testing_member
       SharedPreferences.setMockInitialValues({
+        // The first-launch tour has its own render (tools/tour/).
+        'tour_home_seen': true,
         if (finished) ...{
           'daily_results_$today': ['92:1', '75:1', '-50:0', '40:1', '81:1'],
           'completed_days': ['$today'],

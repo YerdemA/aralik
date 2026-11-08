@@ -271,4 +271,45 @@ void main() {
     expect(settings.userName, 'Ayşe');
     expect(find.text(AppStrings.leaveLeaderboard), findsNothing);
   });
+
+  testWidgets('the tour can be played again from settings', (tester) async {
+    tester.view.physicalSize = const Size(1080, 2340);
+    tester.view.devicePixelRatio = 3;
+    addTearDown(tester.view.reset);
+    final settings = await settingsStore({
+      'tour_home_seen': true,
+      'tour_guess_seen': true,
+      'tour_range_seen': true,
+    });
+    bool? replay;
+    await tester.pumpWidget(
+      app(
+        Builder(
+          builder: (context) => TextButton(
+            onPressed: () async {
+              replay = await Navigator.of(context).push<bool>(
+                MaterialPageRoute(
+                  builder: (_) => SettingsScreen(settings: settings),
+                ),
+              );
+            },
+            child: const Text('ayarlar'),
+          ),
+        ),
+      ),
+    );
+    await tester.tap(find.text('ayarlar'));
+    await tester.pumpAndSettle();
+    await tester.scrollUntilVisible(
+      find.text(AppStrings.tourReplay),
+      200,
+      scrollable: find.byType(Scrollable).first,
+    );
+    await tester.tap(find.text(AppStrings.tourReplay));
+    await tester.pumpAndSettle();
+    expect(replay, isTrue); // home starts it
+    for (final part in TourPart.values) {
+      expect(settings.tourSeen(part), isFalse);
+    }
+  });
 }

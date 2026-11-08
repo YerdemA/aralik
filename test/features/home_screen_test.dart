@@ -25,12 +25,22 @@ Future<StatsStore> pumpHome(
   Future<bool> Function()? openStore,
   bool withServer = false,
   PendingMatchStore? Function(SharedPreferences prefs)? pending,
+  bool tour = false,
 }) async {
   HomeScreen.updateOffered = false;
   tester.view.physicalSize = const Size(1080, 2340);
   tester.view.devicePixelRatio = 3;
   addTearDown(tester.view.reset);
-  SharedPreferences.setMockInitialValues(prefs);
+  // The first-launch tour is tested on its own ([tour]); elsewhere it is
+  // taken as seen so it does not cover the screen.
+  SharedPreferences.setMockInitialValues({
+    if (!tour) ...{
+      'tour_home_seen': true,
+      'tour_guess_seen': true,
+      'tour_range_seen': true,
+    },
+    ...prefs,
+  });
   final stats = await StatsStore.open();
   await tester.pumpWidget(
     MaterialApp(
@@ -294,5 +304,32 @@ void main() {
       expect(find.text(AppStrings.pendingDuelExpired), findsOneWidget);
       expect(store.current, isNull);
     });
+  });
+
+  testWidgets('a first launch shows the home screen around, once', (
+    tester,
+  ) async {
+    await pumpHome(tester, tour: true);
+    await tester.pump(const Duration(milliseconds: 500));
+    await tester.pump(const Duration(milliseconds: 300));
+    expect(find.text(AppStrings.tourWelcomeTitle), findsOneWidget);
+    await tester.tap(find.text(AppStrings.tourNext));
+    await tester.pump(const Duration(milliseconds: 400));
+    expect(find.text(AppStrings.tourDay), findsOneWidget);
+    await tester.tap(find.text(AppStrings.tourSkip));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 400));
+    await tester.pump();
+    expect(find.text(AppStrings.tourDay), findsNothing);
+    final prefs = await SharedPreferences.getInstance();
+    expect(prefs.getBool('tour_home_seen'), isTrue);
+  });
+
+  testWidgets('a player from before the tour does not get it', (tester) async {
+    await pumpHome(tester, tour: true, prefs: {'answered': 12, 'hits': 10});
+    await tester.pump(const Duration(milliseconds: 800));
+    expect(find.text(AppStrings.tourWelcomeTitle), findsNothing);
+    final prefs = await SharedPreferences.getInstance();
+    expect(prefs.getBool('tour_guess_seen'), isTrue);
   });
 }

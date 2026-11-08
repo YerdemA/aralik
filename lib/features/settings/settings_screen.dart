@@ -140,6 +140,18 @@ class SettingsScreen extends StatelessWidget {
                     const Divider(height: 1),
                   ],
                   ListTile(
+                    leading: const Icon(Icons.tour_rounded),
+                    title: const Text(AppStrings.tourReplay),
+                    subtitle: const Text(AppStrings.tourReplayHint),
+                    trailing: const Icon(Icons.chevron_right_rounded),
+                    onTap: () async {
+                      await settings.replayTours();
+                      // Back home, where the tour starts.
+                      if (context.mounted) Navigator.of(context).pop(true);
+                    },
+                  ),
+                  const Divider(height: 1),
+                  ListTile(
                     leading: const Icon(Icons.dataset_rounded),
                     title: const Text(AppStrings.dataSources),
                     subtitle: const Text(AppStrings.dataSourcesHint),

@@ -5,6 +5,8 @@ import 'package:aralik/data/question.dart';
 import 'package:aralik/data/sound.dart';
 import 'package:aralik/features/game/game_controller.dart';
 import 'package:aralik/features/game/game_screen.dart';
+import 'package:aralik/data/settings_store.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -186,5 +188,67 @@ void main() {
       find.text(AppStrings.secondsLeft(dailyTimeLimit.inSeconds)),
       findsNothing,
     );
+  });
+
+  testWidgets('the first question is shown around before its clock starts', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(1080, 2340);
+    tester.view.devicePixelRatio = 3;
+    addTearDown(tester.view.reset);
+    SharedPreferences.setMockInitialValues({});
+    final settings = await SettingsStore.open();
+    var clock = DateTime(2026, 11, 8, 12);
+    var started = 0;
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: AppTheme.light,
+        home: GameScreen(
+          questions: const [_question],
+          settings: settings,
+          startQuestion: (_) {
+            started++;
+            return clock;
+          },
+          now: () => clock,
+        ),
+      ),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 400));
+    expect(find.text(AppStrings.tourQuestion), findsOneWidget);
+    // The clock waits, showing its full time.
+    expect(started, 0);
+    expect(
+      find.text(AppStrings.secondsLeft(dailyTimeLimit.inSeconds)),
+      findsOneWidget,
+    );
+    for (final _ in [1, 2]) {
+      await tester.tap(find.text(AppStrings.tourNext));
+      await tester.pump(const Duration(milliseconds: 400));
+    }
+    expect(find.text(AppStrings.tourPad), findsOneWidget);
+    await tester.tap(find.text(AppStrings.tourDone));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 400));
+    expect(started, 1);
+    expect(settings.tourSeen(TourPart.guess), isTrue);
+
+    // The first interval: the slider and the lock, the clock paused.
+    await tester.tap(find.text('5'));
+    await tester.pump();
+    await tester.tap(find.text(AppStrings.next));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 700));
+    expect(find.text(AppStrings.tourRange), findsOneWidget);
+    clock = clock.add(const Duration(seconds: 30)); // reading takes a while
+    await tester.tap(find.text(AppStrings.tourNext));
+    await tester.pump(const Duration(milliseconds: 400));
+    await tester.tap(find.text(AppStrings.tourDone));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 400));
+    // Not timed out: the 30 s of reading were given back.
+    expect(find.text(AppStrings.lock), findsOneWidget);
+    expect(settings.tourSeen(TourPart.range), isTrue);
   });
 }

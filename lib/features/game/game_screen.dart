@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../../widgets/coach_tour.dart';
+import '../../data/settings_store.dart';
 import '../../core/answer_scale.dart';
 import '../../core/question_timer.dart';
 import '../../core/scoring.dart';
@@ -27,7 +29,11 @@ class GameScreen extends StatefulWidget {
     this.scaled = true,
     this.scale,
     this.minPoints = minPointsPerQuestion,
+    this.settings,
   });
+
+  /// For the first-question tour (shown once); null shows none.
+  final SettingsStore? settings;
 
   /// Each question's scale by math mode's rule; see [GameController.scale].
   final AnswerScale Function(Question)? scale;
@@ -83,11 +89,101 @@ class _GameScreenState extends State<GameScreen> {
     super.initState();
     // After the first frame: a resumed question may already be out of time,
     // and timing out opens the result screen.
-    WidgetsBinding.instance.addPostFrameCallback((_) => _startClock());
+    WidgetsBinding.instance.addPostFrameCallback((_) => _begin());
+    _game.addListener(_onGame);
+  }
+
+  final _questionKey = GlobalKey();
+  final _clockKey = GlobalKey();
+  final _padKey = GlobalKey();
+  final _rangeKey = GlobalKey();
+  final _lockKey = GlobalKey();
+  bool _touring = false;
+
+  /// The first time ever: the guess is shown around before the clock
+  /// starts (a daily question's start is recorded only then).
+  Future<void> _begin() async {
+    final settings = widget.settings;
+    if (settings != null && !settings.tourSeen(TourPart.guess) && mounted) {
+      await settings.markTourSeen(TourPart.guess);
+      _touring = true;
+      if (!mounted) return;
+      // The clock shows its full time, still, while it is explained.
+      if (widget.startQuestion != null) {
+        _left.value = widget.timeLimit;
+        await WidgetsBinding.instance.endOfFrame; // so it can be pointed at
+        if (!mounted) return;
+      }
+      await showCoachTour(context, [
+        CoachStep(
+          target: _questionKey,
+          title: AppStrings.tourQuestionTitle,
+          body: AppStrings.tourQuestion,
+        ),
+        // Left out without a clock (free play): it has no size.
+        CoachStep(
+          target: _clockKey,
+          title: AppStrings.tourClockTitle,
+          body: AppStrings.tourClock,
+        ),
+        CoachStep(
+          target: _padKey,
+          title: AppStrings.tourPadTitle,
+          body: AppStrings.tourPad,
+        ),
+      ]);
+      _touring = false;
+    }
+    _startClock();
+  }
+
+  /// The first interval ever: the slider and the lock are shown around;
+  /// the clock waits meanwhile.
+  void _onGame() {
+    final settings = widget.settings;
+    if (settings == null ||
+        _touring ||
+        _game.phase != GamePhase.width ||
+        settings.tourSeen(TourPart.range)) {
+      return;
+    }
+    _touring = true;
+    WidgetsBinding.instance.addPostFrameCallback((_) => _rangeTour(settings));
+  }
+
+  Future<void> _rangeTour(SettingsStore settings) async {
+    await settings.markTourSeen(TourPart.range);
+    if (!mounted) return;
+    final running = _ticker != null;
+    _ticker?.cancel();
+    _ticker = null;
+    final pausedAt = widget.now();
+    // Let the interval step fade in before pointing at it.
+    await Future<void>.delayed(const Duration(milliseconds: 250));
+    if (!mounted) return;
+    await showCoachTour(context, [
+      CoachStep(
+        target: _rangeKey,
+        title: AppStrings.tourRangeTitle,
+        body: AppStrings.tourRange,
+      ),
+      CoachStep(
+        target: _lockKey,
+        title: AppStrings.tourLockTitle,
+        body: AppStrings.tourLock,
+      ),
+    ]);
+    _touring = false;
+    if (!mounted || !running || _game.isLocked) return;
+    // The time the tour took is given back.
+    _startedAt = _startedAt?.add(widget.now().difference(pausedAt));
+    _ticker = Timer.periodic(_tickEvery, (_) => _tick());
+    _tick();
   }
 
   @override
   void dispose() {
+    _game.removeListener(_onGame);
     _ticker?.cancel();
     _left.dispose();
     _game.dispose();
@@ -160,11 +256,14 @@ class _GameScreenState extends State<GameScreen> {
             onPressed: () => Navigator.of(context).pop(),
           ),
           actions: [
-            ValueListenableBuilder(
-              valueListenable: _left,
-              builder: (context, left, _) => left == null
-                  ? const SizedBox.shrink()
-                  : Countdown(left: left, limit: widget.timeLimit),
+            KeyedSubtree(
+              key: _clockKey,
+              child: ValueListenableBuilder(
+                valueListenable: _left,
+                builder: (context, left, _) => left == null
+                    ? const SizedBox.shrink()
+                    : Countdown(left: left, limit: widget.timeLimit),
+              ),
             ),
             const SizedBox(width: 12),
           ],
@@ -182,16 +281,25 @@ class _GameScreenState extends State<GameScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                QuestionCard(question: _game.question),
+                KeyedSubtree(
+                  key: _questionKey,
+                  child: QuestionCard(question: _game.question),
+                ),
                 Expanded(
                   child: AnimatedSwitcher(
                     duration: const Duration(milliseconds: 200),
                     child: _game.phase == GamePhase.guess
-                        ? GuessStep(key: const ValueKey('guess'), game: _game)
+                        ? GuessStep(
+                            key: const ValueKey('guess'),
+                            game: _game,
+                            padKey: _padKey,
+                          )
                         : WidthStep(
                             key: const ValueKey('width'),
                             game: _game,
                             onLock: _lock,
+                            rangeKey: _rangeKey,
+                            lockKey: _lockKey,
                           ),
                   ),
                 ),
