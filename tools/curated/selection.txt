@@ -770,3 +770,32 @@
 2|1885||en:Rabies vaccine|pasteur|Pasteur ve Roux ilk kuduz aşısını hangi yıl geliştirmiştir?
 2|1921||en:Insulin|banting|Banting ve Best insülini ilk kez hangi yıl elde etmiştir?
 1|1996||en:Dolly (sheep)|born|Yetişkin bir hücreden klonlanan ilk memeli olan koyun Dolly hangi yıl doğmuştur?
+# physics_school|bilim
+2|1643||en:Barometer|torricelli|Torricelli ilk cıvalı barometreyi hangi yıl yapmıştır?
+3|1724||en:Fahrenheit|proposed|Fahrenheit sıcaklık ölçeği hangi yıl önerilmiştir?
+2|1742||en:Anders Celsius|scale|Anders Celsius, bugün adını taşıyan sıcaklık ölçeğini hangi yıl önermiştir?
+3|1865||en:A Dynamical Theory of the Electromagnetic Field|published|Maxwell, elektromanyetik alan teorisini anlattığı makalesini hangi yıl yayımlamıştır?
+2|1915||en:General relativity|einstein|Einstein genel görelilik teorisini hangi yıl ortaya koymuştur?
+2|1947||en:Transistor|bell|İlk çalışan transistör hangi yıl yapılmıştır?
+2|3.6|MJ|en:Kilowatt-hour|megajoules|1 kilovatsaat kaç megajoule'dür?
+2|5772|K|en:Sun|temperature|Güneş'in yüzey sıcaklığı kaç kelvindir?
+
+# chemistry_school|bilim
+3|1907||en:Bakelite|baekeland|İlk tamamen sentetik plastik olan bakalit hangi yıl bulunmuştur?
+2|1935||en:Nylon|carothers|İlk naylon hangi yıl sentezlenmiştir?
+2|82|proton|en:Lead|atomic number|Kurşun atomunun çekirdeğinde kaç proton vardır?
+2|30|proton|en:Zinc|atomic number|Çinko atomunun çekirdeğinde kaç proton vardır?
+2|19|proton|en:Potassium|atomic number|Potasyum atomunun çekirdeğinde kaç proton vardır?
+3|78|proton|en:Platinum|atomic number|Platin atomunun çekirdeğinde kaç proton vardır?
+
+# biology_school|bilim
+2|1628||en:De Motu Cordis|published|Harvey, kanın vücutta dolaştığını anlattığı kitabını hangi yıl yayımlamıştır?
+2|1735||en:Systema Naturae|published|Linnaeus, canlıları sınıflandırdığı Systema Naturae'yı hangi yıl yayımlamıştır?
+2|1839||en:Cell theory|schwann|Schwann, hayvanların da hücrelerden oluştuğunu hangi yıl ortaya koymuştur?
+2|1901||en:ABO blood group system|landsteiner|Landsteiner ABO kan gruplarını hangi yıl keşfetmiştir?
+2|33|omur|en:Vertebral column|vertebrae|İnsan omurgası kaç omurdan oluşur?
+2|24|kaburga|en:Rib cage|ribs|İnsanda kaç kaburga kemiği vardır?
+2|12|çift|en:Cranial nerves|pairs|İnsanda kaç çift kafa siniri vardır?
+
+# geography_school|coğrafya
+3|451|m|en:Lake Van|depth|Van Gölü'nün en derin yeri kaç metredir?

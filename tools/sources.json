@@ -200,14 +200,14 @@
    "license": "CC BY-SA 4.0",
    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
    "url": "https://tr.wikipedia.org/",
-   "attribution": "Vikipedi gönüllüleri (tarih, bilim, mimari, sanat ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0",
+   "attribution": "Vikipedi gönüllüleri (tarih, bilim, coğrafya, mimari, sanat ve hayvan sorularının cevapları bu maddelerden doğrulandı; metin kopyalanmadı), CC BY-SA 4.0",
    "status": "in_use",
    "datasets": [
     "history_to_1000", "history_1000_1200", "history_1200_1400", "history_modern", "ottoman_early", "ottoman_late", "turkey_republic",
     "science_modern", "tech_companies", "architecture_years", "architecture_sizes",
     "art_people", "art_works", "animals_curated", "everyday_curated",
     "turkey_curated", "science_curated", "physics_school",
-    "chemistry_school", "biology_school"
+    "chemistry_school", "biology_school", "geography_school"
    ]
   },
   {
