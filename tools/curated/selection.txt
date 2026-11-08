@@ -799,3 +799,38 @@
 
 # geography_school|coğrafya
 3|451|m|en:Lake Van|depth|Van Gölü'nün en derin yeri kaç metredir?
+# astronomy_school|bilim
+1|1610||en:Galilean moons|galileo|Galileo, Jüpiter'in dört büyük uydusunu hangi yıl keşfetmiştir?
+2|1781||en:Uranus|herschel|Herschel Uranüs'ü hangi yıl keşfetmiştir?
+2|1846||en:Neptune|galle|Neptün hangi yıl keşfedilmiştir?
+3|1929||en:Hubble's law|hubble|Hubble, evrenin genişlediğini gösteren yasasını hangi yıl yayımlamıştır?
+1|1961||en:Vostok 1|gagarin|Gagarin ilk insanlı uzay uçuşunu hangi yıl yapmıştır?
+2|1977||en:Voyager 1|launched|Voyager 1 uzay aracı hangi yıl fırlatılmıştır?
+1|1990||en:Hubble Space Telescope|launched|Hubble Uzay Teleskobu hangi yıl fırlatılmıştır?
+2|2015||en:First observation of gravitational waves|september|Kütleçekim dalgaları ilk kez hangi yıl doğrudan gözlenmiştir?
+2|2019||en:Event Horizon Telescope|image|Bir kara deliğin ilk görüntüsü hangi yıl yayımlanmıştır?
+2|4.25|ışık yılı|en:Proxima Centauri|light-years|Güneş'e en yakın yıldız Proxima Centauri kaç ışık yılı uzaklıktadır?
+
+# earth_science_school|bilim
+2|1912||en:Continental drift|wegener|Wegener kıtaların kaydığı fikrini hangi yıl ortaya atmıştır?
+2|1935||en:Richter scale|richter|Richter ölçeği hangi yıl geliştirilmiştir?
+2|1883||en:1883 eruption of Krakatoa|august|Krakatoa Yanardağı'nın büyük patlaması hangi yıl olmuştur?
+2|79||en:Eruption of Mount Vesuvius in 79 AD|vesuvius,erupt|Pompeii'yi küller altında bırakan Vezüv patlaması hangi yıl olmuştur?
+
+# physics_school|bilim
+2|1752||en:Kite experiment|franklin|Benjamin Franklin uçurtma deneyini hangi yıl yapmıştır?
+2|1942||en:Chicago Pile-1|december|İlk nükleer reaktör hangi yıl çalıştırılmıştır?
+2|1960||en:Laser|maiman|İlk çalışan lazer hangi yıl yapılmıştır?
+
+# chemistry_school|bilim
+2|1807||en:Humphry Davy|sodium|Davy sodyumu ilk kez hangi yıl elde etmiştir?
+3|1868||en:Helium|lockyer|Helyum, Güneş'in tayfında ilk kez hangi yıl gözlenmiştir?
+3|1886||en:Fluorine|moissan|Moissan floru ilk kez hangi yıl saf olarak elde etmiştir?
+3|1894||en:Argon|rayleigh|Argon hangi yıl keşfedilmiştir?
+
+# biology_school|bilim
+2|1831||en:Second voyage of HMS Beagle|december|Darwin'in katıldığı Beagle yolculuğu hangi yıl başlamıştır?
+2|1882||en:Robert Koch|tuberculosis|Koch verem mikrobunu hangi yıl keşfetmiştir?
+2|1978||en:Louise Brown|born|Tüp bebek yöntemiyle doğan ilk bebek hangi yıl doğmuştur?
+3|1983||en:Polymerase chain reaction|mullis|PCR yöntemi hangi yıl geliştirilmiştir?
+3|2012||en:CRISPR gene editing|doudna|CRISPR gen düzenleme yöntemi hangi yıl tanıtılmıştır?

@@ -207,7 +207,8 @@
     "science_modern", "tech_companies", "architecture_years", "architecture_sizes",
     "art_people", "art_works", "animals_curated", "everyday_curated",
     "turkey_curated", "science_curated", "physics_school",
-    "chemistry_school", "biology_school", "geography_school"
+    "chemistry_school", "biology_school", "geography_school",
+    "astronomy_school", "earth_science_school"
    ]
   },
   {
