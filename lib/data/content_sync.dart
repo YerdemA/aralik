@@ -4,6 +4,8 @@ import 'dart:io';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'net.dart';
+
 /// Fetches a URL as text; throws on any failure.
 typedef HttpGet = Future<String> Function(Uri uri);
 
@@ -157,9 +159,7 @@ class ContentSync implements RemoteContent {
 
 /// Plain GET with short timeouts, UTF-8 body. No package needed.
 Future<String> defaultHttpGet(Uri uri) async {
-  final client = HttpClient()
-    ..connectionTimeout = const Duration(seconds: 8)
-    ..userAgent = 'Kabaca-Android';
+  final client = await newHttpClient();
   try {
     final request = await client.getUrl(uri);
     final response = await request.close().timeout(const Duration(seconds: 15));

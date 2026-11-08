@@ -4,6 +4,7 @@ import 'dart:io';
 
 import '../core/duel.dart';
 import 'leaderboard.dart';
+import 'net.dart';
 
 /// A text connection to a duel room. The real one is a WebSocket; tests
 /// pass a fake.
@@ -366,8 +367,7 @@ Future<DuelChannel> webSocketChannel(
   Duration pingEvery = duelPingEvery,
   Duration silenceLimit = duelSilenceLimit,
 }) async {
-  final socket = await WebSocket.connect(uri.toString())
-      .timeout(const Duration(seconds: 10));
+  final socket = await connectWebSocket(uri);
   return _WebSocketChannel(socket, silenceLimit)..start(pingEvery);
 }
 

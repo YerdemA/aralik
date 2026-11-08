@@ -6,6 +6,7 @@ import '../../data/settings_store.dart';
 import '../../widgets/link_text.dart';
 import '../leaderboard/join_sheet.dart';
 import 'attributions_screen.dart';
+import 'connection_test_screen.dart';
 import 'user_name_sheet.dart';
 
 /// Settings: the player's one name (the only place it is typed), the
@@ -123,6 +124,21 @@ class SettingsScreen extends StatelessWidget {
               clipBehavior: Clip.antiAlias,
               child: Column(
                 children: [
+                  if (leaderboard?.serviceUri case final service?) ...[
+                    ListTile(
+                      leading: const Icon(Icons.network_check_rounded),
+                      title: const Text(AppStrings.netTest),
+                      subtitle: const Text(AppStrings.netTestHint),
+                      trailing: const Icon(Icons.chevron_right_rounded),
+                      onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute<void>(
+                          builder: (_) =>
+                              ConnectionTestScreen(service: service),
+                        ),
+                      ),
+                    ),
+                    const Divider(height: 1),
+                  ],
                   ListTile(
                     leading: const Icon(Icons.dataset_rounded),
                     title: const Text(AppStrings.dataSources),

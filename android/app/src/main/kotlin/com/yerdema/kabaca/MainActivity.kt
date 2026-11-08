@@ -6,6 +6,7 @@ import android.content.Intent
 import android.media.AudioAttributes
 import android.media.AudioManager
 import android.media.SoundPool
+import android.net.ConnectivityManager
 import android.net.Uri
 import android.provider.Settings
 import java.io.File
@@ -55,6 +56,16 @@ class MainActivity : FlutterActivity() {
             .setMethodCallHandler { call, result ->
                 if (call.method == "deviceKey") {
                     result.success(deviceKey())
+                } else {
+                    result.notImplemented()
+                }
+            }
+        // Android's HTTP proxy for the current network (lib/data/net.dart):
+        // dart:io does not read it by itself.
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "com.yerdema.kabaca/net")
+            .setMethodCallHandler { call, result ->
+                if (call.method == "proxy") {
+                    result.success(proxy())
                 } else {
                     result.notImplemented()
                 }
@@ -114,6 +125,15 @@ class MainActivity : FlutterActivity() {
         val audio = getSystemService(Context.AUDIO_SERVICE) as AudioManager
         if (audio.ringerMode != AudioManager.RINGER_MODE_NORMAL) return false
         return pool().play(id, 0.7f, 0.7f, 1, 0, 1f) != 0
+    }
+
+    /** "host:port" of the proxy in use, or null (also for a PAC file Android cannot serve). */
+    private fun proxy(): String? = try {
+        val info = (getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager).defaultProxy
+        val host = info?.host
+        if (info == null || host.isNullOrEmpty() || info.port <= 0) null else "$host:${info.port}"
+    } catch (_: Exception) {
+        null
     }
 
     private fun deviceKey(): String? {

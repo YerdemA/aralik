@@ -6,6 +6,7 @@ import 'package:aralik/data/attributions.dart';
 import 'package:aralik/data/leaderboard.dart';
 import 'package:aralik/data/settings_store.dart';
 import 'package:aralik/features/settings/attributions_screen.dart';
+import 'package:aralik/features/settings/connection_test_screen.dart';
 import 'package:aralik/features/settings/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -38,6 +39,26 @@ void main() {
     expect(find.text(AppStrings.dataSources), findsOneWidget);
     expect(find.text(AppStrings.openSourceLicenses), findsOneWidget);
     expect(find.text(AppStrings.privacyPolicyUrl), findsOneWidget);
+    // No server, nothing to test.
+    expect(find.text(AppStrings.netTest), findsNothing);
+  });
+
+  testWidgets('with a server the connection test opens from settings', (
+    tester,
+  ) async {
+    final store = LeaderboardStore(
+      await SharedPreferences.getInstance(),
+      serviceUri: () => Uri.parse('https://lb.example/'),
+      deviceKey: () async => null,
+      request: (method, uri, [body]) async => (status: 200, body: null),
+    );
+    await tester.pumpWidget(
+      app(SettingsScreen(settings: await settingsStore(), leaderboard: store)),
+    );
+    await tester.tap(find.text(AppStrings.netTest));
+    await tester.pumpAndSettle();
+    expect(find.byType(ConnectionTestScreen), findsOneWidget);
+    expect(find.text(AppStrings.netTestRun), findsOneWidget);
   });
 
   testWidgets('choosing a theme updates and keeps it', (tester) async {

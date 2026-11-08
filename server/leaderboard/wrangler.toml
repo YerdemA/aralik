@@ -7,7 +7,13 @@ workers_dev = true
 # kabaca.app is on this Cloudflare account; Wrangler makes the DNS record
 # for api.kabaca.app itself. workers_dev stays on for older manifests.
 # Must stay above the [sections] below.
-routes = [{ pattern = "api.kabaca.app", custom_domain = true }]
+# kabaca.app and www.kabaca.app show a small page about the game
+# (src/landing.js), so the domain is a real site for web filters to rate.
+routes = [
+  { pattern = "api.kabaca.app", custom_domain = true },
+  { pattern = "kabaca.app", custom_domain = true },
+  { pattern = "www.kabaca.app", custom_domain = true },
+]
 
 # Daily clean-up of the hashed IPs used by the registration limit.
 [triggers]

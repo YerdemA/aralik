@@ -125,7 +125,8 @@ abstract final class AppStrings {
       'Günün setini bitirince puanın buraya eklenir.';
   static const leaderboardSendFailed = 'Puanın henüz gönderilemedi.';
   static const leaderboardOffline =
-      'Bağlanılamadı. İnternetini kontrol edip tekrar dene.';
+      'Bağlanılamadı. İnternetini kontrol et; sorun sürerse Ayarlar → '
+      'Bağlantı testi.';
   static const leaderboardError = 'Bir sorun oldu. Biraz sonra tekrar dene.';
   static const leaderboardMissing =
       'Hesabın sunucuda bulunamadı. Yeniden katılabilirsin.';
@@ -230,6 +231,61 @@ abstract final class AppStrings {
   static const about = 'Hakkında';
   static const dataSources = 'Veri kaynakları ve lisanslar';
   static const dataSourcesHint = 'Soruların ve cevapların kaynakları';
+
+  // Connection test (Ayarlar → Bağlantı testi)
+  static const netTest = 'Bağlantı testi';
+  static const netTestHint = 'Liderlik ya da düello bu ağda çalışmıyorsa';
+  static const netTestIntro =
+      'Kabaca sunucusuna bu ağdan nasıl ulaşıldığını adım adım dener. '
+      'Yaklaşık 20 sn sürer.';
+  static const netTestRun = 'Testi başlat';
+  static const netTestAgain = 'Yeniden dene';
+  static const netTestCopy = 'Sonucu kopyala';
+  static const netTestCopied = 'Sonuç kopyalandı';
+  static const netChecking = 'Deneniyor…';
+  static const netCheckProxy = 'Vekil sunucu (proxy)';
+  static const netCheckDns = 'Ad çözümleme (DNS)';
+  static const netCheckDirect = 'Doğrudan bağlantı';
+  static const netCheckHttps = 'Liderlik sunucusu';
+  static const netCheckContent = 'Soru güncellemeleri';
+  static const netCheckSni = 'Aynı sunucu, başka adla';
+  static const netOtherNameOk = 'Bağlandı';
+  static const netCertificate = 'Sertifikayı veren';
+  static const netCheckSocket = 'Düello bağlantısı';
+  static const netNoProxy = 'Yok';
+  static String netAddresses(int v4, int v6) => '$v4 IPv4, $v6 IPv6 adres';
+  static String netPongs(int answered, int sent, int longest) =>
+      '$sent yoklamadan $answered yanıt, en uzun sessizlik $longest sn';
+  static const netSocketUnsupported = 'Sunucu bu testi henüz desteklemiyor';
+  static const netFailDns = 'Adres bulunamadı';
+  static const netFailTimeout = 'Zaman aşımı';
+  static const netFailRefused = 'Bağlantı reddedildi';
+  static const netFailTls = 'Güvenli bağlantı kurulamadı';
+  static const netFailBlocked = 'Araya başka bir şey girdi';
+  static const netFailOther = 'Bilinmeyen hata';
+  static const netVerdictOk = 'Bu ağda Kabaca sorunsuz çalışmalı.';
+  static const netVerdictProxy =
+      'Bu ağ bir vekil sunucu kullanıyor. Kabaca artık onun üzerinden '
+      'bağlanıyor.';
+  static const netVerdictDns =
+      'Bu ağ Kabaca sunucusunun adresini vermiyor. Mobil veriyi dene.';
+  static const netVerdictTls =
+      'Bu ağ şifreli bağlantıları denetliyor, Kabaca bağlanamıyor. Mobil '
+      'veriyi dene.';
+  static const netVerdictBlocked =
+      'Bu ağ Kabaca sunucusunu engelliyor ya da önce bir giriş sayfası '
+      'istiyor. Mobil veriyi dene.';
+  static const netVerdictName =
+      'Bu ağ kabaca.app adını engelliyor (sunucunun kendisini değil). '
+      'Liderlik ve düello için mobil veriyi dene.';
+  static const netVerdictHttps =
+      'Kabaca sunucusuna ulaşılamadı. İnternetini kontrol et ya da mobil '
+      'veriyi dene.';
+  static const netVerdictSocket =
+      'Liderlik tablosu çalışır, ama bu ağ düello bağlantısını geçirmiyor. '
+      'Düello için mobil veriyi dene.';
+  static const netVerdictUnstable =
+      'Bu ağda bağlantı kesik kesik. Düelloda kopmalar olabilir.';
   static const dataSourcesIntro =
       'Sorular ve cevapları aşağıdaki kaynaklara dayanır. Sonuç ekranında '
       'her cevabın görüldüğü sayfa ayrıca gösterilir.';
@@ -369,7 +425,8 @@ abstract final class AppStrings {
   static const duelEnded = 'Bu düello sona erdi.';
   static const tournamentEnded = 'Bu turnuva maçı sona erdi.';
   static const pendingDuelExpired = 'Yarım kalan düellonun dönüş süresi doldu.';
-  static const duelOffline = 'Bağlanılamadı. İnternetini kontrol et.';
+  static const duelOffline =
+      'Bağlanılamadı. Sorun sürerse Ayarlar → Bağlantı testi.';
   static const duelServerError = 'Oda açılamadı. Biraz sonra tekrar dene.';
   static const duelMissingQuestions =
       'Bu düellonun soruları uygulamanda yok. Uygulamayı güncelle.';

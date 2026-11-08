@@ -31,6 +31,7 @@
 //   POST /v1/tournament/rooms                        → {code}  (tournament.js)
 //   GET  /v1/tournament/rooms/{code}?v=1&name=…&bank=N  WebSocket to the room
 
+import { LANDING_HOSTS, landing } from './landing.js';
 import {
   acceptsDay,
   readableDay,
@@ -512,6 +513,35 @@ async function connectTournament(request, env, code) {
   return roomStub(env, room, env.TOURNAMENT_ROOMS).fetch(request);
 }
 
+/** How long the connection test's WebSocket stays open at most. */
+export const ECHO_MS = 30_000;
+
+/** What the echo socket answers to [data]: the app's ping gets a pong. */
+export function echoReply(data) {
+  return data === '{"t":"ping"}' ? '{"t":"pong"}' : null;
+}
+
+/**
+ * A WebSocket that answers pings, for the app's connection test (Ayarlar →
+ * Bağlantı testi): shows whether a network lets WebSockets through and
+ * keeps them alive. No Durable Object, nothing stored; closes after ECHO_MS.
+ */
+async function echo(request, env) {
+  if (request.headers.get('upgrade') !== 'websocket') {
+    throw new HttpError(426, 'websocket_only');
+  }
+  await limitDuel(request, env);
+  const [client, server] = Object.values(new WebSocketPair());
+  server.accept();
+  const timer = setTimeout(() => server.close(1000, 'done'), ECHO_MS);
+  server.addEventListener('message', (event) => {
+    const reply = echoReply(event.data);
+    if (reply) server.send(reply);
+  });
+  server.addEventListener('close', () => clearTimeout(timer));
+  return new Response(null, { status: 101, webSocket: client });
+}
+
 async function createRoom(request, env) {
   if (!env.DUEL_ROOMS) throw new HttpError(404, 'not_found');
   await limitDuel(request, env);
@@ -572,6 +602,7 @@ async function deviceStatus(request, env, now) {
 /** Routes one request. [now] and [fetchFn] are replaceable in tests. */
 export async function handle(request, env, now = Date.now(), fetchFn = fetch) {
   const url = new URL(request.url);
+  if (LANDING_HOSTS.has(url.hostname)) return landing(request);
   const path = url.pathname.replace(/\/+$/, '');
   try {
     if (request.method === 'GET') {
@@ -583,6 +614,7 @@ export async function handle(request, env, now = Date.now(), fetchFn = fetch) {
       const cup = /^\/v1\/tournament\/rooms\/([^/]+)$/.exec(path);
       if (cup) return await connectTournament(request, env, cup[1]);
       if (path === '' || path === '/v1') return json(200, { ok: true });
+      if (path === '/v1/echo') return await echo(request, env);
       throw new HttpError(404, 'not_found');
     }
     if (request.method === 'POST') {

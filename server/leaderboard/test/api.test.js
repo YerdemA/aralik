@@ -1,6 +1,6 @@
 import { beforeEach, test } from 'node:test';
 import assert from 'node:assert/strict';
-import { cleanUp, handle } from '../src/index.js';
+import { cleanUp, echoReply, handle } from '../src/index.js';
 import { scaleOf, scoreFor } from '../src/scoring.js';
 import { resetContentCache, isDailySet } from '../src/content.js';
 import { turkeyDayIndex } from '../src/days.js';
@@ -602,4 +602,22 @@ test('duel rooms and the lobby are limited per address', async () => {
   assert.equal(second.status, 429);
   assert.equal(second.body.error, 'rate_limited');
   assert.deepEqual(seen, ['duel:1.2.3.4', 'duel:1.2.3.4']);
+});
+
+test('the connection test echo answers pings and wants a WebSocket', async () => {
+  assert.equal(echoReply('{"t":"ping"}'), '{"t":"pong"}');
+  assert.equal(echoReply('hello'), null);
+  const plain = await call('GET', '/v1/echo');
+  assert.deepEqual(plain, { status: 426, body: { error: 'websocket_only' } });
+});
+
+test('kabaca.app shows the page about the game, not the API', async () => {
+  const page = await handle(new Request('https://kabaca.app/'), env);
+  assert.equal(page.status, 200);
+  assert.match(await page.text(), /%90 emin olduğun aralığı ver/);
+  const www = await handle(new Request('https://www.kabaca.app/x'), env);
+  assert.equal(www.status, 301);
+  assert.equal(www.headers.get('location'), 'https://kabaca.app/x');
+  const api = await handle(new Request('https://kabaca.app/v1'), env);
+  assert.equal(api.status, 404);
 });

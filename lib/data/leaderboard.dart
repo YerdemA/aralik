@@ -7,6 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../core/daily.dart';
 import 'device_key.dart' as device;
+import 'net.dart';
 
 /// Optional daily leaderboard (server/leaderboard, a Cloudflare Worker).
 ///
@@ -432,15 +433,14 @@ class LeaderboardStore extends ChangeNotifier {
   }
 }
 
-/// JSON over [HttpClient] with short timeouts. No package needed.
+/// JSON over [HttpClient] with short timeouts, through Android's proxy
+/// ([newHttpClient]). No package needed.
 Future<JsonReply> defaultJsonRequest(
   String method,
   Uri uri, [
   Map<String, Object?>? body,
 ]) async {
-  final client = HttpClient()
-    ..connectionTimeout = const Duration(seconds: 8)
-    ..userAgent = 'Kabaca-Android';
+  final client = await newHttpClient();
   try {
     final request = await client.openUrl(method, uri);
     if (body != null) {
