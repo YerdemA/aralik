@@ -1059,3 +1059,31 @@
 2|93|dakika|en:International Space Station|minutes|Uluslararası Uzay İstasyonu Dünya'nın çevresini kaç dakikada bir dolaşır?
 2|24.6|saat|en:Mars|sol|Mars'ta bir gün kaç saat sürer?
 2|76|yıl|en:Halley's Comet|returning|Halley Kuyruklu Yıldızı yaklaşık kaç yılda bir görünür?
+# body_curated|vücut
+2|96|%|en:Human tooth|enamel consists|Diş minesinin yüzde kaçı mineraldir?
+1|3.4|kg|en:Infant|birth weight|Gelişmiş ülkelerde zamanında doğan bir bebek ortalama kaç kilogram doğar?
+3|450|ml|en:Lung|blood volume of the lungs|Akciğerlerde ortalama kaç mililitre kan bulunur?
+
+# food_curated|mutfak
+1|70|kcal|en:Egg as food|kilocalories|50 gramlık bir tavuk yumurtası yaklaşık kaç kilokalori enerji verir?
+2|500|g|en:Bread|500 grams|Ekmek tariflerinde tek bir somun için genelde kaç gram un kullanılır?
+1|75|%|en:Banana|water|Kabuğu soyulmuş çiğ bir muzun yüzde kaçı sudur?
+2|186|milyon ton|en:Sugar|world production|2022–23 döneminde dünyada kaç milyon ton şeker üretilmiştir?
+2|60|%|en:Chocolate|ivory coast|Dünyadaki kakaonun yüzde kaçı Fildişi Sahili ve Gana'dan gelir?
+2|33|g|en:Milk|full fat milk|Bir litre tam yağlı sütte kaç gram yağ vardır?
+3|400|ton|en:Doner kebab|tonnes|2010 verilerine göre Almanya'da her gün kaç ton döner eti üretiliyordu?
+
+# transport_curated|ulaşım
+2|189|yolcu|en:Boeing 737|one-class|Boeing 737-800 tek sınıflı yoğun düzende kaç yolcu taşır?
+2|1.6|milyar otomobil|en:Car|in use worldwide|2025 itibarıyla dünyada kaç milyar otomobil kullanılmaktadır?
+2|1|milyar bisiklet|en:Bicycle|billion bicycles|21. yüzyılın başında dünyada kaç milyar bisiklet vardı?
+1|250|km/h|en:Ankara–Istanbul high-speed railway|maximum operating speed|Ankara–İstanbul hızlı treni saatte en fazla kaç kilometre hızla gider?
+2|37.9|km|en:Channel Tunnel|underwater section|Manş Tüneli'nin deniz altındaki bölümü kaç kilometredir?
+2|1783||en:Hot air balloon|november 21|İnsanlı ilk serbest sıcak hava balonu uçuşu hangi yıl yapılmıştır?
+2|375|km/h|en:Formula One car|speeds of up to|Bir Formula 1 aracı saatte en fazla kaç kilometre hıza ulaşabilir?
+
+# space_curated|uzay
+2|21.5|kg|en:Apollo 11|lunar material|Apollo 11 astronotları Ay'dan kaç kilogram örnek getirmiştir?
+2|135|uçuş|en:Space Shuttle|missions|Uzay mekiği programında toplam kaç uçuş yapılmıştır?
+3|781|kişi|en:Astronaut|100 km|Mayıs 2026 itibarıyla kaç kişi 100 kilometrenin üzerine çıkarak uzaya gitmiştir?
+2|25.8|milyar km|en:Voyager 1|october 2026|Ekim 2026 itibarıyla Voyager 1 kaç milyar kilometre uzaktadır?
