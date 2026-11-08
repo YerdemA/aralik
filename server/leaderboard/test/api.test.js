@@ -636,3 +636,17 @@ test('kabaca.app serves the website, not the API', async () => {
   assert.deepEqual(await api.json(), { ok: true });
   assert.deepEqual(served, ['/']);
 });
+
+test('kabaca.app proves it belongs to the app (Digital Asset Links)', async () => {
+  const r = await handle(
+    new Request('https://kabaca.app/.well-known/assetlinks.json'),
+    env,
+  );
+  assert.equal(r.status, 200);
+  assert.equal(r.headers.get('content-type'), 'application/json');
+  const [link] = await r.json();
+  assert.equal(link.target.package_name, 'com.yerdema.kabaca');
+  for (const f of link.target.sha256_cert_fingerprints) {
+    assert.match(f, /^([0-9A-F]{2}:){31}[0-9A-F]{2}$/);
+  }
+});
