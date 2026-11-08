@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Kabaca · Davet</title>
+<meta name="theme-color" content="#2C209E">
+<meta property="og:title" content="Kabaca'da seni bekliyorlar">
+<meta property="og:description" content="Bir düello ya da turnuvaya davet edildin. Tek sayı değil, aralık tahmin et.">
+<meta property="og:image" content="https://kabaca.app/img/og.jpg">
+<link rel="icon" type="image/png" href="/favicon.png">
+<style>
+  :root {
+    --hero-top: #5140E6;
+    --hero-bottom: #2C209E;
+    --sun: #FFC53D;
+    --on-sun: #2B2100;
+    --bg: #FFF9F1;
+    --panel: #FFFFFF;
+    --ink: #1B1640;
+    --muted: #5B5675;
+    --line: #E8E1F5;
+    --duel-me: #2F6FED;
+    --duel-op: #E5484D;
+    --cup-a: #0E8A6A;
+    --cup-b: #0B5F7A;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14152B;
+      --panel: #1F2140;
+      --ink: #F1EEFF;
+      --muted: #B6B2D6;
+      --line: #2F335E;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh;
+    background: var(--bg); color: var(--ink);
+    font: 17px/1.55 Roboto, system-ui, -apple-system, "Segoe UI", sans-serif;
+    display: flex; flex-direction: column;
+  }
+  .top {
+    background: linear-gradient(180deg, var(--hero-top), var(--hero-bottom));
+    color: #fff; padding: 20px 16px 72px; text-align: center;
+  }
+  .top.duel { background: linear-gradient(135deg, var(--duel-me), var(--duel-op)); }
+  .top.cup { background: linear-gradient(135deg, var(--cup-a), var(--cup-b)); }
+  .brand { display: inline-flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; font-weight: 800; font-size: 20px; }
+  .brand img { width: 36px; height: 36px; border-radius: 10px; }
+  .lang { position: absolute; top: 18px; right: 16px; background: rgba(255,255,255,.18); color: #fff; border: 0; border-radius: 999px; padding: 6px 12px; font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; }
+  h1 { margin: 28px auto 0; max-width: 520px; font-size: 28px; line-height: 1.25; }
+  main { flex: 1; padding: 0 16px 32px; }
+  .card {
+    max-width: 480px; margin: -48px auto 0; background: var(--panel);
+    border: 1px solid var(--line); border-radius: 28px; padding: 28px 22px;
+    box-shadow: 0 10px 30px rgba(44, 32, 158, .10); text-align: center;
+  }
+  .label { color: var(--muted); font-size: 15px; margin: 0; }
+  .code { font-size: 44px; font-weight: 800; letter-spacing: 8px; margin: 4px 0 18px; font-variant-numeric: tabular-nums; }
+  .btn {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 54px; border-radius: 999px; padding: 0 22px; font-weight: 800;
+    text-decoration: none; background: var(--sun); color: var(--on-sun); font-size: 17px;
+  }
+  .btn svg { width: 20px; height: 20px; }
+  ol { text-align: left; color: var(--muted); padding-left: 22px; margin: 22px 0 0; }
+  ol li { margin: 6px 0; }
+  .more { display: block; margin-top: 22px; color: var(--muted); font-size: 15px; }
+</style>
+</head>
+<body>
+<div class="top" id="top">
+  <a class="brand" href="/"><img src="/img/icon-192.png" alt="">Kabaca</a>
+  <button class="lang" id="lang" type="button">EN</button>
+  <h1 id="title">Kabaca'ya davet edildin</h1>
+</div>
+<main>
+  <div class="card">
+    <p class="label" id="label">Oda kodu</p>
+    <div class="code" id="code">·····</div>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.yerdema.kabaca">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 3.3v17.4c0 .5.5.8.9.6l15-8.7c.4-.3.4-.9 0-1.2l-15-8.7C4.5 2.5 4 2.8 4 3.3z"/></svg>
+      <span id="get">Uygulamayı indir</span>
+    </a>
+    <ol>
+      <li id="s1">Kabaca'yı Google Play'den indir.</li>
+      <li id="s2">Bu bağlantıya yeniden dokun ya da kodu uygulamada gir.</li>
+    </ol>
+    <a class="more" href="/" id="more">Kabaca nedir?</a>
+  </div>
+</main>
+<script>
+(function () {
+  // /d/KOD (duel) or /t/KOD (tournament); the server only sends this page
+  // for a valid code (src/landing.js).
+  var m = /^\/([dt])\/([A-Za-z0-9]{5})\/?$/.exec(location.pathname);
+  var duel = !m || m[1] === 'd';
+  var code = m ? m[2].toUpperCase() : '';
+  document.getElementById('code').textContent = code || '·····';
+  document.getElementById('top').className = 'top ' + (duel ? 'duel' : 'cup');
+  var text = {
+    tr: {
+      title: duel ? 'Düelloya davet edildin' : 'Turnuvaya davet edildin',
+      label: 'Oda kodu', get: 'Uygulamayı indir',
+      s1: "Kabaca'yı Google Play'den indir.",
+      s2: duel ? "Bu bağlantıya yeniden dokun ya da Düello'da kodu gir."
+               : "Bu bağlantıya yeniden dokun ya da Turnuva'da kodu gir.",
+      more: 'Kabaca nedir?', other: 'EN'
+    },
+    en: {
+      title: duel ? "You're invited to a duel" : "You're invited to a tournament",
+      label: 'Room code', get: 'Get the app',
+      s1: 'Install Kabaca from Google Play.',
+      s2: duel ? 'Tap this link again, or enter the code under Duel.'
+               : 'Tap this link again, or enter the code under Tournament.',
+      more: 'What is Kabaca?', other: 'TR'
+    }
+  };
+  function apply(lang) {
+    var t = text[lang];
+    document.documentElement.lang = lang;
+    ['title', 'label', 'get', 's1', 's2', 'more'].forEach(function (k) {
+      document.getElementById(k).textContent = t[k];
+    });
+    document.getElementById('lang').textContent = t.other;
+    document.title = 'Kabaca · ' + t.title;
+    return lang;
+  }
+  var lang = null;
+  try { lang = new URL(location.href).searchParams.get('lang'); } catch (e) {}
+  if (!lang) { try { lang = localStorage.getItem('kabaca-lang'); } catch (e) {} }
+  if (lang !== 'tr' && lang !== 'en') {
+    lang = /^tr\b/i.test(navigator.language || 'tr') ? 'tr' : 'en';
+  }
+  lang = apply(lang);
+  document.getElementById('lang').addEventListener('click', function () {
+    lang = apply(lang === 'tr' ? 'en' : 'tr');
+    try { localStorage.setItem('kabaca-lang', lang); } catch (e) {}
+  });
+})();
+</script>
+</body>
+</html>

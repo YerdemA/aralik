@@ -25,7 +25,12 @@ class TournamentEntryScreen extends StatefulWidget {
     this.leaderboard,
     this.pending,
     this.scaled = true,
+    this.code,
   });
+
+  /// A room from an invite link: filled in, and joined at once when the
+  /// player has a name.
+  final String? code;
 
   final TournamentService service;
   final QuestionRepository repository;
@@ -46,9 +51,19 @@ class TournamentEntryScreen extends StatefulWidget {
 }
 
 class _TournamentEntryScreenState extends State<TournamentEntryScreen> {
-  final _code = TextEditingController();
+  late final _code = TextEditingController(text: widget.code);
   String? _codeError;
   bool _busy = false;
+
+  @override
+  void initState() {
+    super.initState();
+    if (widget.code != null && _name != null) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) _join();
+      });
+    }
+  }
 
   @override
   void dispose() {

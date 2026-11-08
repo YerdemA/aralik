@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import 'core/strings.dart';
 import 'core/theme.dart';
+import 'data/invite_links.dart';
 import 'data/leaderboard.dart';
 import 'data/pending_match.dart';
 import 'data/question_repository.dart';
@@ -22,7 +23,11 @@ class KabacaApp extends StatelessWidget {
     this.pending,
     this.latestAppBuild,
     this.scoringV2Day,
+    this.invites,
   });
+
+  /// Invite links the app was opened with; null in tests.
+  final InviteLinks? invites;
 
   /// A duel or tournament left mid-way, to go back to; null in tests.
   final PendingMatchStore? pending;
@@ -75,6 +80,7 @@ class KabacaApp extends StatelessWidget {
             pending: pending,
             latestAppBuild: latestAppBuild,
             scoringV2Day: scoringV2Day,
+            invites: invites,
           ),
         ),
       ),

@@ -10,6 +10,8 @@ import '../../core/math/math_problem.dart';
 import '../../core/daily.dart';
 import '../../core/question_timer.dart';
 import '../../core/free_play.dart';
+import '../../core/invite_link.dart';
+import '../../data/invite_links.dart';
 import '../../core/scoring.dart';
 import '../../core/strings.dart';
 import '../../core/theme.dart';
@@ -51,7 +53,12 @@ class HomeScreen extends StatefulWidget {
     this.latestAppBuild,
     this.openStore = openStorePage,
     this.scoringV2Day,
+    this.invites,
   });
+
+  /// Invite links the app was opened with (kabaca.app/d/KOD); each opens
+  /// the duel or tournament screen with its code. Null in tests.
+  final InviteLinks? invites;
 
   /// First day of the scaled scoring rule (content manifest), or null.
   final int? Function()? scoringV2Day;
@@ -102,6 +109,34 @@ class _HomeScreenState extends State<HomeScreen> {
     _checkDevice();
     _checkPending();
     WidgetsBinding.instance.addPostFrameCallback((_) => _firstLaunchTour());
+    widget.invites?.addListener(_openInvite);
+    WidgetsBinding.instance.addPostFrameCallback((_) => _openInvite());
+  }
+
+  @override
+  void dispose() {
+    widget.invites?.removeListener(_openInvite);
+    super.dispose();
+  }
+
+  /// Opens the room of an invite link the app was opened with, on top of
+  /// whatever is on screen (nothing in play is left).
+  void _openInvite() {
+    final invites = widget.invites;
+    if (!mounted || invites == null || invites.pending == null) return;
+    final invite = invites.take()!;
+    if (_leaderboard?.isAvailable != true) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(AppStrings.inviteUnavailable(invite.code))),
+      );
+      return;
+    }
+    switch (invite.kind) {
+      case InviteKind.duel:
+        _openDuel(code: invite.code);
+      case InviteKind.tournament:
+        _openTournament(code: invite.code);
+    }
   }
 
   /// A match left behind whose time to go back ran out while the app was
@@ -396,9 +431,10 @@ class _HomeScreenState extends State<HomeScreen> {
     serviceUri: () => _leaderboard?.serviceUri,
   );
 
-  void _openTournament() => Navigator.of(context).push(
+  void _openTournament({String? code}) => Navigator.of(context).push(
     MaterialPageRoute<void>(
       builder: (_) => TournamentEntryScreen(
+        code: code,
         service: _tournaments,
         repository: _repository,
         stats: _stats,
@@ -410,20 +446,22 @@ class _HomeScreenState extends State<HomeScreen> {
     ),
   );
 
-  void _openDuel({bool math = false}) => Navigator.of(context).push(
-    MaterialPageRoute<void>(
-      builder: (_) => DuelLobbyScreen(
-        math: math,
-        service: _duels,
-        repository: _repository,
-        stats: _stats,
-        settings: widget.settings,
-        leaderboard: _leaderboard,
-        pending: widget.pending,
-        scaled: scaledOn(_today, widget.scoringV2Day?.call()),
-      ),
-    ),
-  );
+  void _openDuel({bool math = false, String? code}) =>
+      Navigator.of(context).push(
+        MaterialPageRoute<void>(
+          builder: (_) => DuelLobbyScreen(
+            code: code,
+            math: math,
+            service: _duels,
+            repository: _repository,
+            stats: _stats,
+            settings: widget.settings,
+            leaderboard: _leaderboard,
+            pending: widget.pending,
+            scaled: scaledOn(_today, widget.scoringV2Day?.call()),
+          ),
+        ),
+      );
 
   Future<void> _openSettings() async {
     final replay = await Navigator.of(context).push<bool>(

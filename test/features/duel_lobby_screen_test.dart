@@ -72,6 +72,35 @@ void main() {
     expect(find.text(AppStrings.duelNameNeeded), findsNothing);
   });
 
+  testWidgets('an invite link fills in the code; without a name it waits', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(1080, 2340);
+    tester.view.devicePixelRatio = 3;
+    addTearDown(tester.view.reset);
+    SharedPreferences.setMockInitialValues({});
+    final settings = await SettingsStore.open();
+    final stats = await StatsStore.open();
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: AppTheme.light,
+        home: DuelLobbyScreen(
+          code: 'K7M3P',
+          service: DuelService(
+            serviceUri: () => Uri.parse('https://lb.example/'),
+          ),
+          repository: QuestionRepository(),
+          stats: stats,
+          settings: settings,
+        ),
+      ),
+    );
+    await tester.pump();
+    expect(find.text('K7M3P', skipOffstage: false), findsOneWidget);
+    expect(find.byType(DuelLobbyScreen), findsOneWidget);
+    expect(find.text(AppStrings.duelNameNeeded), findsOneWidget);
+  });
+
   testWidgets('one lobby for both duels: math is a choice at the top', (
     tester,
   ) async {

@@ -39,6 +39,14 @@ export function assetLinks() {
   ];
 }
 
+/**
+ * Whether [path] is an invite link: /d/KOD (duel) or /t/KOD (tournament),
+ * KOD in the room code alphabet (no I, L, O, 0, 1; lib/core/invite_link.dart).
+ */
+export function isInvitePath(path) {
+  return /^\/[dt]\/[A-HJKMNP-Z2-9]{5}\/?$/i.test(path);
+}
+
 /** The answer for a request to one of LANDING_HOSTS. */
 export async function landing(request, env) {
   const url = new URL(request.url);
@@ -62,10 +70,14 @@ export async function landing(request, env) {
     });
   }
   if (!env.ASSETS) return new Response('Not found', { status: 404 });
-  const response = await env.ASSETS.fetch(request);
+  // An invite link opened without the app (with it, Android opens the
+  // app instead): the code and the store button (public/invite.html).
+  const invite = isInvitePath(url.pathname);
+  if (invite) url.pathname = '/invite';
+  const response = await env.ASSETS.fetch(invite ? new Request(url, request) : request);
   if (response.status !== 200) return response;
   // Pages may change between deploys; images are cached longer.
-  const page = /\.html$|\/$/.test(url.pathname);
+  const page = invite || /\.html$|\/$/.test(url.pathname);
   const headers = new Headers(response.headers);
   headers.set('cache-control', page ? 'public, max-age=600' : 'public, max-age=86400');
   headers.set('x-content-type-options', 'nosniff');

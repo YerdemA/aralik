@@ -1,4 +1,5 @@
 import '../data/question.dart';
+import 'invite_link.dart';
 
 /// Every user-facing Turkish string lives here.
 abstract final class AppStrings {
@@ -609,8 +610,11 @@ abstract final class AppStrings {
       'Kodu arkadaşına gönder. Katıldığı anda düello başlar.';
   static const duelShareCode = 'Kodu paylaş';
   static String duelInvite(String code) =>
-      "Kabaca'da düelloya var mısın? Uygulamada Düello'ya dokun, "
-      'oda kodu: $code';
+      "Kabaca'da düelloya var mısın? Bağlantıya dokun ya da Düello'da "
+      '$code kodunu gir: ${inviteLink(InviteKind.duel, code)}';
+  static String inviteUnavailable(String code) =>
+      'Davet açılamadı, sunucuya ulaşılamıyor. Biraz sonra Düello ya da '
+      'Turnuva ekranında $code kodunu gir.';
   static const duelConnecting = 'Bağlanıyor…';
   static const duelOpponentLocked = 'Rakibin kilitledi';
   static const duelOpponentThinking = 'Rakibin düşünüyor';
@@ -721,7 +725,8 @@ abstract final class AppStrings {
   static const tournamentKickBody = 'Bu odaya tekrar giremez.';
   static const tournamentKicked = 'Kurucu seni odadan çıkardı.';
   static String tournamentInvite(String code) =>
-      'Kabaca turnuvasına gel! Oda kodu: $code';
+      "Kabaca turnuvasına gel! Bağlantıya dokun ya da Turnuva'da $code "
+      'kodunu gir: ${inviteLink(InviteKind.tournament, code)}';
   static const tournamentLocked = 'Kilitledin. Diğerleri bekleniyor…';
   static String tournamentLockedCount(int n, int of) => '$n / $of kilitledi';
   static const tournamentSeeStandings = 'Sonuçları gör';

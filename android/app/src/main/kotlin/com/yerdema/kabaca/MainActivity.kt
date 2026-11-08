@@ -26,8 +26,25 @@ class MainActivity : FlutterActivity() {
     private val readyIds = mutableSetOf<Int>()
     private val pendingIds = mutableSetOf<Int>()
 
+    // Invite links (lib/data/invite_links.dart): the one the app was
+    // started with is asked for once; later ones are sent as they come.
+    private var links: MethodChannel? = null
+    private var initialLink: String? = null
+
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
+        initialLink = linkOf(intent)
+        links = MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "com.yerdema.kabaca/links")
+            .apply {
+                setMethodCallHandler { call, result ->
+                    if (call.method == "initial") {
+                        result.success(initialLink)
+                        initialLink = null
+                    } else {
+                        result.notImplemented()
+                    }
+                }
+            }
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "com.yerdema.kabaca/sound")
             .setMethodCallHandler { call, result ->
                 when (call.method) {
@@ -71,6 +88,16 @@ class MainActivity : FlutterActivity() {
                 }
             }
     }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        val link = linkOf(intent) ?: return
+        links?.invokeMethod("open", link)
+    }
+
+    private fun linkOf(intent: Intent?): String? =
+        if (intent?.action == Intent.ACTION_VIEW) intent.dataString else null
 
     override fun onDestroy() {
         soundPool?.release()

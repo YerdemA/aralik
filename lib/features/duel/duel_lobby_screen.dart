@@ -27,7 +27,12 @@ class DuelLobbyScreen extends StatefulWidget {
     this.pending,
     this.scaled = true,
     this.math = false,
+    this.code,
   });
+
+  /// A friend's room from an invite link: filled in, and joined at once
+  /// when the player has a name.
+  final String? code;
 
   /// Whether today's duels use the scaled rule (see answer_scale.dart).
   final bool scaled;
@@ -54,9 +59,19 @@ class _DuelLobbyScreenState extends State<DuelLobbyScreen> {
   /// Math duel (computed questions) or the bank's; starts as asked.
   late bool _math = widget.math;
 
-  final _code = TextEditingController();
+  late final _code = TextEditingController(text: widget.code);
   String? _codeError;
   bool _busy = false;
+
+  @override
+  void initState() {
+    super.initState();
+    if (widget.code != null && _name != null) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) _join();
+      });
+    }
+  }
 
   @override
   void dispose() {

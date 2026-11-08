@@ -3,6 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'app.dart';
 import 'data/content_sync.dart';
+import 'data/invite_links.dart';
 import 'data/leaderboard.dart';
 import 'data/pending_match.dart';
 import 'data/question_repository.dart';
@@ -25,6 +26,8 @@ Future<void> main() async {
   Sounds.enabled = settings.soundOn;
   settings.addListener(() => Sounds.enabled = settings.soundOn);
   Sounds.preload().ignore();
+  // Invite links (kabaca.app/d/KOD) the app was opened with.
+  InviteLinks.instance.start().ignore();
   runApp(
     KabacaApp(
       repository: repository,
@@ -34,6 +37,7 @@ Future<void> main() async {
       pending: PendingMatchStore(prefs),
       latestAppBuild: () => content.latestAppBuild,
       scoringV2Day: () => content.scoringV2Day,
+      invites: InviteLinks.instance,
     ),
   );
 

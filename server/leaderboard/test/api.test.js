@@ -637,6 +637,29 @@ test('kabaca.app serves the website, not the API', async () => {
   assert.deepEqual(served, ['/']);
 });
 
+test('an invite link without the app gets the invite page', async () => {
+  const served = [];
+  const site = {
+    ...env,
+    ASSETS: {
+      fetch: async (request) => {
+        served.push(new URL(request.url).pathname);
+        return new Response('<h1>Davet</h1>', {
+          headers: { 'content-type': 'text/html' },
+        });
+      },
+    },
+  };
+  for (const path of ['/d/K7M3P', '/t/k7m3p/']) {
+    const r = await handle(new Request(`https://kabaca.app${path}`), site);
+    assert.equal(r.status, 200);
+    assert.match(r.headers.get('cache-control'), /max-age=600/);
+  }
+  // Not a room code: the path goes to the assets as it is (404 there).
+  await handle(new Request('https://kabaca.app/d/K7MOP'), site);
+  assert.deepEqual(served, ['/invite', '/invite', '/d/K7MOP']);
+});
+
 test('kabaca.app proves it belongs to the app (Digital Asset Links)', async () => {
   const r = await handle(
     new Request('https://kabaca.app/.well-known/assetlinks.json'),
