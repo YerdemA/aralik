@@ -19,6 +19,7 @@ class ShareCardData {
   const ShareCardData({
     this.dayIndex,
     this.label,
+    this.math = false,
     required this.results,
     required this.hits,
     required this.answered,
@@ -29,6 +30,9 @@ class ShareCardData {
 
   /// A round's name on the card instead of "Serbest tur".
   final String? label;
+
+  /// A math round: the mood follows [DayMood.ofMath].
+  final bool math;
   final List<QuestionResult> results;
 
   /// All-time calibration counts.
@@ -45,7 +49,7 @@ class ShareCardData {
 
   /// The mood thresholds are for five questions: a shorter round counts
   /// as if it had five.
-  DayMood get mood => DayMood.of(
+  DayMood get mood => (math ? DayMood.ofMath : DayMood.of)(
     isRound && results.isNotEmpty && results.length != questionsPerDay
         ? (total * questionsPerDay / results.length).round()
         : total,

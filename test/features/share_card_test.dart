@@ -109,6 +109,29 @@ void main() {
     expect(find.text(AppStrings.shareTextOnly), findsOneWidget);
   });
 
+  test('a math round: 0 points is a bad round, not "idare eder"', () {
+    ShareCardData math(List<int> points) => ShareCardData(
+      results: [for (final p in points) (points: p, hit: p > 0)],
+      hits: 0,
+      answered: 5,
+      math: true,
+    );
+    expect(math([0, 0, 0, 0, 0]).mood, DayMood.down);
+    expect(math([30, 30, 0, 0, 0]).mood, DayMood.unsure);
+    expect(math([60, 50, 40, 0, 0]).mood, DayMood.proud);
+    expect(math([90, 80, 70, 40, 0]).mood, DayMood.great);
+    expect(math([90, 90, 90, 80, 60]).mood, DayMood.legend);
+    // The same 0 on a bank round is still "idare eder".
+    expect(
+      ShareCardData(
+        results: [for (var i = 0; i < 5; i++) (points: 0, hit: false)],
+        hits: 0,
+        answered: 5,
+      ).mood,
+      DayMood.unsure,
+    );
+  });
+
   test('a round card: out of its questions, mood as if it had five', () {
     const short = ShareCardData(
       results: [(points: 90, hit: true), (points: 90, hit: true)],

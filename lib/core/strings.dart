@@ -27,10 +27,10 @@ abstract final class AppStrings {
   static const modeStart = 'Başla';
   static const modeMath = 'Matematik modu';
   static const categoryMath = 'Matematik';
-  static const mathHomeHint = 'Temel ya da ileri, 30 sn';
+  static const mathHomeHint = 'Temel ya da ileri, 60 sn';
   static const mathChoose = 'Hangi matematik?';
   static const mathRules =
-      'Soru başına 30 saniye. Kafadan, kabaca tahmin et: aralık en fazla '
+      'Soru başına 60 saniye. Kafadan, kabaca tahmin et: aralık en fazla '
       '÷2 … ×2 açılır, isabetli tahmin çok puan getirir. Eksi puan yok.';
   static const mathBasic = 'Temel';
   static const mathBasicHint = 'Çarpma, kök, yüzde, faiz, olasılık, geometri…';

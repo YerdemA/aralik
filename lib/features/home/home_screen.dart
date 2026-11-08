@@ -378,6 +378,7 @@ class _HomeScreenState extends State<HomeScreen> {
             answered: _stats.mathAnswered,
             roundLabel: AppStrings.mathRoundLabel,
             calibrationTitle: AppStrings.mathCalibration,
+            math: true,
           ),
         ),
       );

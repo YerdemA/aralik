@@ -24,4 +24,18 @@ enum DayMood {
 
   static DayMood of(int total) =>
       values.firstWhere((m) => m.minTotal == null || total >= m.minTotal!);
+
+  /// Math mode (2026-11-08): no minus points and a strict slider, so the
+  /// bands sit over 0…500 instead: 0 there is a bad round, not "idare
+  /// eder".
+  static const Map<DayMood, int> mathMinTotals = {
+    legend: 400,
+    great: 275,
+    proud: 150,
+    unsure: 50,
+  };
+
+  static DayMood ofMath(int total) => values.firstWhere(
+    (m) => !mathMinTotals.containsKey(m) || total >= mathMinTotals[m]!,
+  );
 }

@@ -27,7 +27,11 @@ class SummaryScreen extends StatelessWidget {
     this.onLeaderboard,
     this.roundLabel,
     this.calibrationTitle,
+    this.math = false,
   });
+
+  /// A math round: the share card's mood uses math's bands.
+  final bool math;
 
   /// A round's name when shared ("Matematik turu"); "Serbest tur" without.
   final String? roundLabel;
@@ -61,6 +65,7 @@ class SummaryScreen extends StatelessWidget {
       card: ShareCardData(
         dayIndex: dayIndex,
         label: roundLabel,
+        math: math,
         results: results,
         hits: hits,
         answered: answered,
