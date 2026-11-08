@@ -14,6 +14,8 @@ export const LANDING_HOSTS = new Set(['kabaca.app', 'www.kabaca.app']);
  * Served as JSON with no redirect, which is what the check needs.
  */
 export const APP_CERT_FINGERPRINTS = [
+  // Play's app signing key (the one installed apps are signed with).
+  '26:E6:0D:C7:A3:78:46:D8:F8:AF:C8:CD:25:B3:2A:54:22:EC:4E:6B:9E:EE:87:A6:7B:5A:C3:51:19:03:9E:02',
   // Upload key (aralik-upload.jks).
   'C0:7D:46:33:A7:FC:77:90:8F:C2:54:A4:D2:34:1F:0A:B1:41:D8:FF:C8:99:B7:70:53:82:FD:7F:96:F1:B5:58',
 ];
