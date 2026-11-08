@@ -951,3 +951,23 @@
 2|2013||en:Marmaray|opened|Marmaray hangi yıl açılmıştır?
 2|2016||en:Eurasia Tunnel|opened|Avrasya Tüneli hangi yıl açılmıştır?
 2|1408|m|en:Yavuz Sultan Selim Bridge|span|Yavuz Sultan Selim Köprüsü'nün orta açıklığı kaç metredir?
+# inventions_everyday|gündelik
+1|1876||en:Invention of the telephone|patent|Graham Bell telefon için patent başvurusunu hangi yıl yapmıştır?
+1|1989||en:World Wide Web|berners-lee|Tim Berners-Lee World Wide Web'i hangi yıl önermiştir?
+2|1971||en:Ray Tomlinson|email|Ray Tomlinson, bilgisayarlar arasında e-posta gönderen ilk programı hangi yıl geliştirmiştir?
+2|1992||en:SMS|merry christmas|İlk SMS mesajı hangi yıl gönderilmiştir?
+2|1973||en:Martin Cooper (inventor)|1973|Elde taşınan bir cep telefonuyla ilk görüşme hangi yıl yapılmıştır?
+2|1938||en:Ballpoint pen|bíró|Bíró tükenmez kalem için patent başvurusunu hangi yıl yapmıştır?
+2|1945||en:Microwave oven|spencer|Percy Spencer mikrodalgaların yiyecekleri ısıttığını hangi yıl fark etmiştir?
+1|1974||en:Rubik's Cube|invented|Rubik Küpü hangi yıl icat edilmiştir?
+2|1958||en:Instant noodles|ando|Hazır erişte (instant noodle) ilk kez hangi yıl satışa çıkmıştır?
+2|1873||en:Jeans|patent|Levi Strauss perçinli kot pantolonun patentini hangi yıl almıştır?
+2|1974||en:Universal Product Code|scanned|Bir ürünün barkodu kasada ilk kez hangi yıl okutulmuştur?
+2|1994||en:QR code|denso|QR kod hangi yıl icat edilmiştir?
+2|1997||en:Wi-Fi|1997|Wi-Fi standardının ilk sürümü hangi yıl yayımlanmıştır?
+2|1996||en:USB|1996|USB'nin ilk sürümü hangi yıl tanıtılmıştır?
+2|2008||en:Android (operating system)|htc dream|Android işletim sistemli ilk telefon hangi yıl satışa çıkmıştır?
+3|1959||en:Barbie|1959|Barbie bebek hangi yıl piyasaya çıkmıştır?
+2|1972||en:Pong|1972|Atari'nin Pong oyunu hangi yıl çıkmıştır?
+2|1980||en:Pac-Man|1980|Pac-Man oyunu hangi yıl çıkmıştır?
+2|1985||en:Super Mario Bros.|1985|Super Mario Bros. oyunu hangi yıl çıkmıştır?
