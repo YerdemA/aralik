@@ -646,6 +646,7 @@ test('kabaca.app proves it belongs to the app (Digital Asset Links)', async () =
   assert.equal(r.headers.get('content-type'), 'application/json');
   const [link] = await r.json();
   assert.equal(link.target.package_name, 'com.yerdema.kabaca');
+  assert.equal(link.target.sha256_cert_fingerprints.length, 4);
   for (const f of link.target.sha256_cert_fingerprints) {
     assert.match(f, /^([0-9A-F]{2}:){31}[0-9A-F]{2}$/);
   }

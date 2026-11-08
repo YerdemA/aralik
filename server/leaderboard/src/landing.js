@@ -13,11 +13,14 @@ export const LANDING_HOSTS = new Set(['kabaca.app', 'www.kabaca.app']);
  * Console → Uygulama bütünlüğü → Uygulama imzalama) and our upload key.
  * Served as JSON with no redirect, which is what the check needs.
  */
+// Exactly the list Play Console gives for the association (2026-11-08); its
+// check fails ("Web sitesi ilişkilendirmesi oluşturulamadı") unless every
+// fingerprint it shows is here. Copy a new list from there if it changes.
 export const APP_CERT_FINGERPRINTS = [
-  // Play's app signing key (the one installed apps are signed with).
   '26:E6:0D:C7:A3:78:46:D8:F8:AF:C8:CD:25:B3:2A:54:22:EC:4E:6B:9E:EE:87:A6:7B:5A:C3:51:19:03:9E:02',
-  // Upload key (aralik-upload.jks).
   'C0:7D:46:33:A7:FC:77:90:8F:C2:54:A4:D2:34:1F:0A:B1:41:D8:FF:C8:99:B7:70:53:82:FD:7F:96:F1:B5:58',
+  '68:F4:CB:E2:1D:F2:C7:35:0D:3C:A5:8E:15:D7:D8:6A:30:54:A2:E0:CF:8E:9B:72:58:54:0B:D9:5D:9C:4B:35',
+  '63:38:C8:3F:18:AD:C9:E5:20:C7:8E:14:5E:C7:CB:4C:06:59:2E:D4:5F:EF:79:83:B7:92:8E:2F:53:C4:11:BC',
 ];
 
 export function assetLinks() {
