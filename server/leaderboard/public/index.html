@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kabaca · Günlük tahmin oyunu</title>
+<meta name="description" content="Kabaca, Türkçe bir günlük tahmin oyunudur. Sayısal sorulara tek bir sayıyla değil, %90 emin olduğun bir aralıkla cevap verirsin. Android için.">
+<meta name="theme-color" content="#2C209E">
+<meta property="og:title" content="Kabaca · %90 emin olduğun aralığı ver">
+<meta property="og:description" content="Tek sayı değil, aralık tahmin et. Her gün 5 yeni soru, düello, turnuva ve kalibrasyon.">
+<meta property="og:image" content="https://kabaca.app/img/og.jpg">
+<meta property="og:url" content="https://kabaca.app/">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/img/icon-192.png">
+<style>
+  :root {
+    --hero-top: #5140E6;
+    --hero-bottom: #2C209E;
+    --indigo: #4338CA;
+    --primary: #2A1BB5;
+    --sun: #FFC53D;
+    --on-sun: #2B2100;
+    --bg: #FFF9F1;
+    --panel: #FFFFFF;
+    --panel-soft: #F3EEFF;
+    --ink: #1B1640;
+    --muted: #5B5675;
+    --line: #E8E1F5;
+    --hit: #2E9E5B;
+    --hit-soft: #DDF3E5;
+    --duel-me: #2F6FED;
+    --duel-op: #E5484D;
+    --round-a: #CF3F1A;
+    --round-b: #C22F66;
+    --cup-a: #0E8A6A;
+    --cup-b: #0B5F7A;
+    --shadow: 0 10px 30px rgba(44, 32, 158, .10);
+    --radius: 28px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14152B;
+      --panel: #1F2140;
+      --panel-soft: #262A52;
+      --ink: #F1EEFF;
+      --muted: #B6B2D6;
+      --line: #2F335E;
+      --hit-soft: #1D3B2B;
+      --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.6 Roboto, system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+
+  /* Top bar */
+  .bar {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--hero-top) 92%, transparent);
+    backdrop-filter: blur(10px);
+  }
+  .bar .wrap { display: flex; align-items: center; gap: 12px; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #fff; }
+  .brand img { width: 36px; height: 36px; border-radius: 10px; }
+  .brand span { font-weight: 900; font-size: 24px; letter-spacing: -.5px; }
+  .nav { margin-left: auto; display: flex; gap: 20px; }
+  .nav a { color: #E4E0FF; text-decoration: none; font-weight: 500; font-size: 15px; }
+  .nav a:hover { color: #fff; }
+  .lang {
+    display: flex; background: rgba(255,255,255,.14); border-radius: 999px; padding: 4px;
+  }
+  .lang button {
+    border: 0; background: transparent; color: #E4E0FF; font: inherit; font-weight: 700; font-size: 14px; line-height: 1;
+    padding: 9px 14px; border-radius: 999px; cursor: pointer; min-width: 46px;
+  }
+  .lang button[aria-pressed="true"] { background: var(--sun); color: var(--on-sun); }
+  @media (max-width: 760px) { .nav { display: none; } .lang { margin-left: auto; } }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(170deg, var(--hero-top), var(--hero-bottom));
+    color: #fff;
+    border-radius: 0 0 40px 40px;
+    overflow: hidden;
+  }
+  .hero .wrap {
+    display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center;
+    padding-top: 48px; padding-bottom: 0;
+  }
+  .pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,.14); border-radius: 999px; padding: 7px 14px;
+    font-weight: 700; font-size: 14px;
+  }
+  .pill b { color: var(--sun); }
+  h1 {
+    font-size: clamp(36px, 5.4vw, 60px); line-height: 1.07; letter-spacing: -1.5px;
+    margin: 18px 0 16px; font-weight: 900;
+  }
+  h1 em { font-style: normal; color: var(--sun); }
+  .hero p.lead { font-size: 19px; color: #E4E0FF; margin: 0 0 28px; max-width: 34em; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 36px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px; min-height: 54px;
+    padding: 0 24px; border-radius: 18px; font-weight: 700; font-size: 17px;
+    text-decoration: none; border: 0;
+  }
+  .btn-sun { background: var(--sun); color: var(--on-sun); }
+  .btn-ghost { background: rgba(255,255,255,.12); color: #fff; }
+  .btn small { font-weight: 500; opacity: .8; }
+  .btn[aria-disabled="true"] { cursor: default; }
+  .btn svg { width: 22px; height: 22px; flex: none; }
+
+  /* Example card in the hero */
+  .example {
+    background: var(--panel); color: var(--ink); border-radius: 22px; padding: 18px 20px;
+    box-shadow: 0 18px 40px rgba(0,0,0,.18); max-width: 440px; margin-bottom: 48px;
+  }
+  .example .q { font-weight: 700; font-size: 18px; margin: 6px 0 12px; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700;
+    color: var(--hit); background: var(--hit-soft); border-radius: 999px; padding: 4px 10px;
+  }
+  .track { position: relative; height: 12px; border-radius: 6px; background: var(--line); margin: 18px 0 10px; }
+  .track .range { position: absolute; left: 30%; right: 22%; top: 0; bottom: 0; border-radius: 6px; background: var(--hit); }
+  .track .mark { position: absolute; left: 63%; top: -7px; width: 3px; height: 26px; background: var(--ink); border-radius: 2px; }
+  .example .row { display: flex; justify-content: space-between; font-size: 15px; color: var(--muted); }
+  .example .row b { color: var(--ink); font-size: 17px; }
+  .example .score { margin-top: 10px; font-weight: 800; color: var(--hit); }
+
+  .phone {
+    align-self: end; justify-self: center; width: min(320px, 100%);
+    border-radius: 34px 34px 0 0; overflow: hidden;
+    border: 8px solid #17124A; border-bottom: 0;
+    box-shadow: 0 -10px 50px rgba(0,0,0,.30);
+  }
+  @media (max-width: 860px) {
+    .hero .wrap { grid-template-columns: 1fr; padding-top: 36px; }
+    .phone { width: min(280px, 80%); }
+    .example { margin-bottom: 8px; }
+  }
+
+  /* Sections */
+  section { padding: 72px 0 0; }
+  .eyebrow { color: var(--indigo); font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; font-size: 13px; }
+  @media (prefers-color-scheme: dark) { .eyebrow { color: #A9A1FF; } }
+  h2 { font-size: clamp(28px, 3.6vw, 40px); line-height: 1.15; letter-spacing: -.8px; margin: 8px 0 14px; font-weight: 900; }
+  .intro { color: var(--muted); font-size: 18px; max-width: 40em; margin: 0 0 32px; }
+
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .step {
+    background: var(--panel); border-radius: var(--radius); box-shadow: var(--shadow);
+    padding: 24px 24px 0; display: flex; flex-direction: column; overflow: hidden;
+  }
+  .num {
+    width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center;
+    background: var(--panel-soft); color: var(--indigo); font-weight: 900; font-size: 18px;
+  }
+  @media (prefers-color-scheme: dark) { .num { color: #C9C3FF; } }
+  .step h3 { margin: 14px 0 6px; font-size: 21px; }
+  .step p { margin: 0 0 20px; color: var(--muted); }
+  .step img { margin-top: auto; width: 100%; aspect-ratio: 9 / 13; object-fit: cover; object-position: top; border-radius: 18px 18px 0 0; border: 1px solid var(--line); border-bottom: 0; }
+  @media (max-width: 860px) { .steps { grid-template-columns: 1fr; } .step img { max-width: 300px; align-self: center; } }
+
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .split .shot { justify-self: center; width: min(320px, 100%); border-radius: 28px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--line); }
+  @media (max-width: 860px) { .split { grid-template-columns: 1fr; } }
+  .facts { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+  .facts li { background: var(--panel); border-radius: 20px; padding: 16px 18px; box-shadow: var(--shadow); }
+  .facts b { display: block; font-size: 17px; margin-bottom: 2px; }
+  .facts span { color: var(--muted); }
+
+  .modes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .mode {
+    border-radius: var(--radius); padding: 24px; color: #fff; min-height: 190px;
+    display: flex; flex-direction: column; position: relative; overflow: hidden;
+  }
+  .mode .icon { width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,.2); display: grid; place-items: center; margin-bottom: auto; }
+  .mode .icon svg { width: 26px; height: 26px; fill: currentColor; }
+  .mode h3 { margin: 18px 0 4px; font-size: 24px; font-weight: 900; }
+  .mode p { margin: 0; color: rgba(255,255,255,.88); }
+  .m-daily { background: linear-gradient(160deg, var(--hero-top), var(--hero-bottom)); }
+  .m-duel { background: linear-gradient(135deg, var(--duel-me), #8A5AA8 55%, var(--duel-op)); }
+  .m-round { background: linear-gradient(135deg, var(--round-a), var(--round-b)); }
+  .m-cup { background: linear-gradient(135deg, var(--cup-a), var(--cup-b)); }
+  .m-board { background: var(--sun); color: var(--on-sun); }
+  .m-board p { color: rgba(43,33,0,.8); }
+  .m-board .icon { background: rgba(43,33,0,.12); }
+  .m-math { background: var(--panel); color: var(--muted); border: 2px dashed var(--line); }
+  .m-math p { color: var(--muted); }
+  .m-math .icon { background: var(--panel-soft); }
+  @media (max-width: 860px) { .modes { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px) { .modes { grid-template-columns: 1fr; } .mode { min-height: 160px; } }
+
+  .gallery {
+    display: flex; gap: 18px; overflow-x: auto; scroll-snap-type: x mandatory;
+    padding: 4px 16px 20px; margin: 0 -16px; -webkit-overflow-scrolling: touch;
+  }
+  .gallery figure { flex: 0 0 230px; margin: 0; scroll-snap-align: start; }
+  .gallery img { border-radius: 22px; border: 1px solid var(--line); box-shadow: var(--shadow); }
+  .gallery figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; text-align: center; }
+
+  .score-box {
+    background: var(--panel); border-radius: var(--radius); box-shadow: var(--shadow); padding: 26px;
+  }
+  .legend { display: grid; gap: 12px; margin-top: 8px; }
+  .legend div { display: flex; gap: 12px; align-items: baseline; }
+  .legend .sq { font-size: 22px; line-height: 1; }
+  .share-text {
+    font-family: ui-monospace, "Roboto Mono", Menlo, monospace; font-size: 15px;
+    background: var(--panel-soft); border-radius: 16px; padding: 14px 16px; margin-top: 18px; white-space: pre;
+    overflow-x: auto;
+  }
+
+  .sources { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
+  .sources li { background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; font-weight: 600; font-size: 15px; }
+
+  .privacy {
+    margin-top: 72px; background: linear-gradient(160deg, var(--hero-top), var(--hero-bottom));
+    color: #fff; border-radius: 36px; padding: 40px 32px; display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center;
+  }
+  .privacy img { width: 120px; height: 120px; border-radius: 30px; }
+  .privacy h2 { margin-top: 0; }
+  .privacy p { color: #E4E0FF; margin: 0; }
+  @media (max-width: 640px) { .privacy { grid-template-columns: 1fr; padding: 28px 22px; } .privacy img { width: 88px; height: 88px; } }
+
+  footer { padding: 48px 0 40px; color: var(--muted); font-size: 15px; }
+  footer .links { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-bottom: 14px; }
+  footer a { font-weight: 600; color: var(--ink); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  .note { font-size: 14px; }
+  [hidden] { display: none !important; }
+  .hero .wrap > *, .split > *, .steps > *, .modes > * { min-width: 0; }
+  h1, h2 { overflow-wrap: break-word; }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Kabaca">
+      <img src="/img/icon-192.png" alt="" width="36" height="36">
+      <span>Kabaca</span>
+    </a>
+    <nav class="nav">
+      <a href="#nasil" data-i18n="navHow">Nasıl oynanır</a>
+      <a href="#modlar" data-i18n="navModes">Modlar</a>
+      <a href="#puan" data-i18n="navScore">Puan</a>
+      <a href="#gizlilik" data-i18n="navPrivacy">Gizlilik</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Dil / Language">
+      <button type="button" data-lang="tr" aria-pressed="true">TR</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="pill" data-i18n="pill">🔥 <b>Her gün</b> 5 yeni soru</span>
+      <h1 data-i18n="title">Tek sayı değil, <em>aralık</em> tahmin et.</h1>
+      <p class="lead" data-i18n="lead">Kabaca, 5–10 dakikalık beklemelerde oynanan Türkçe bir günlük tahmin oyunu. Sayısal sorulara %90 emin olduğun bir aralıkla cevap verirsin. Aralık cevabı içeriyorsa puan alırsın; ne kadar darsa o kadar çok.</p>
+      <div class="cta">
+        <span class="btn btn-sun" aria-disabled="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 3.3v17.4c0 .5.5.8.9.6l15-8.7c.4-.3.4-.9 0-1.2l-15-8.7C4.5 2.5 4 2.8 4 3.3z"/></svg>
+          <span data-i18n="play">Google Play · <small>yakında</small></span>
+        </span>
+        <a class="btn btn-ghost" href="#nasil" data-i18n="howBtn">Nasıl oynanır?</a>
+      </div>
+      <div class="example" aria-label="Örnek soru">
+        <span class="chip" data-i18n="exChip">✓ İsabet · +89 puan</span>
+        <div class="q" data-i18n="exQ">Ağrı Dağı kaç metre yüksekliktedir?</div>
+        <div class="track" aria-hidden="true"><div class="range"></div><div class="mark"></div></div>
+        <div class="row"><span data-i18n="exRange">Aralığın</span><b>3.200 – 6.400 m</b></div>
+        <div class="row"><span data-i18n="exAnswer">Cevap</span><b>5.137 m</b></div>
+      </div>
+    </div>
+    <img class="phone" src="/img/home.webp" width="540" height="1200" alt="Kabaca ana ekranı: günün kartı, Düello, Bir tur at ve Turnuva" data-i18n-alt="altHome">
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section id="nasil">
+    <div class="eyebrow" data-i18n="howEyebrow">Nasıl oynanır</div>
+    <h2 data-i18n="howTitle">Üç adım, 15 saniye.</h2>
+    <p class="intro" data-i18n="howIntro">Günün setinde her soru için 15 saniyen var. Uzun uzun hesap yapmak yok: kabaca tahmin et, ne kadar emin olduğuna karar ver, kilitle.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3 data-i18n="s1Title">Tahminini yaz</h3>
+        <p data-i18n="s1Text">Uygulamanın kendi sayı klavyesiyle en iyi tahminini gir. 000 tuşu büyük sayıları hızlandırır.</p>
+        <img src="/img/guess.webp" width="540" height="1200" loading="lazy" alt="Tahmin ekranı: 4.500 m" data-i18n-alt="altGuess">
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3 data-i18n="s2Title">Aralığını aç</h3>
+        <p data-i18n="s2Text">Kaydırıcıyla aralığı daralt ya da genişlet. İsabet edersen kaç puan alacağın canlı olarak yazar.</p>
+        <img src="/img/range.webp" width="540" height="1200" loading="lazy" alt="Aralık ekranı: 3.200 – 6.400 m, isabet edersen 89 puan" data-i18n-alt="altRange">
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3 data-i18n="s3Title">Kilitle, cevabı gör</h3>
+        <p data-i18n="s3Text">İsabet mi, kıl payı mı, ıska mı? Cevap aralığının üstünde işaretlenir; yanında kaynağı ve ilginç bir bilgi durur.</p>
+        <img src="/img/result.webp" width="540" height="1200" loading="lazy" alt="Sonuç ekranı: İsabet, +89 puan, cevap 5.137 m" data-i18n-alt="altResult">
+      </div>
+    </div>
+  </section>
+
+  <section id="kalibrasyon">
+    <div class="split">
+      <div>
+        <div class="eyebrow" data-i18n="calEyebrow">Kalibrasyon</div>
+        <h2 data-i18n="calTitle">"%90 eminim" dediğinde gerçekten 10'da 9 mu?</h2>
+        <p class="intro" data-i18n="calIntro">Bilgi yarışmaları doğru ya da yanlışa bakar. Kabaca ne kadar emin olduğunu ölçer. Zamanla aralıklarının ne kadarının cevabı içerdiğini görürsün ve oyun sana söyler: "aralıkların fazla dar" ya da "daha cesur ol".</p>
+        <ul class="facts">
+          <li><b data-i18n="f1Title">Kalibrasyon grafiği</b><span data-i18n="f1Text">Her 10 soruda kaç isabet ettiğin, %90 hedef çizgisiyle.</span></li>
+          <li><b data-i18n="f2Title">Iskaların yönü</b><span data-i18n="f2Text">Fazla mı yüksek tahmin ediyorsun, fazla mı düşük?</span></li>
+          <li><b data-i18n="f3Title">Kategoriye göre isabet</b><span data-i18n="f3Text">Coğrafyada mı iyisin, tarihte mi?</span></li>
+        </ul>
+      </div>
+      <img class="shot" src="/img/stats.webp" width="540" height="1200" loading="lazy" alt="İstatistikler: seri, ortalama, kalibrasyon %89" data-i18n-alt="altStats">
+    </div>
+  </section>
+
+  <section id="modlar">
+    <div class="eyebrow" data-i18n="modesEyebrow">Modlar</div>
+    <h2 data-i18n="modesTitle">Tek başına, birebir ya da kalabalık.</h2>
+    <p class="intro" data-i18n="modesIntro">Günün seti herkes için aynıdır. Bitirince durmak zorunda değilsin.</p>
+    <div class="modes">
+      <div class="mode m-daily">
+        <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10z"/></svg></div>
+        <h3 data-i18n="mDailyT">Günün seti</h3>
+        <p data-i18n="mDailyP">Herkes aynı gün aynı 5 soruyu çözer: 2 kolay, 2 orta, 1 zor. Seriyi bozma.</p>
+      </div>
+      <div class="mode m-duel">
+        <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 21h-1l1-7H7.5c-.6 0-.6-.3-.4-.7L13 3h1l-1 7h3.5c.5 0 .6.3.4.7L11 21z"/></svg></div>
+        <h3 data-i18n="mDuelT">Düello</h3>
+        <p data-i18n="mDuelP">Rastgele bir rakiple ya da oda koduyla arkadaşınla canlı 5 soru. Her sorudan sonra iki aralık yan yana açılır.</p>
+      </div>
+      <div class="mode m-round">
+        <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.6 6.6c-1.4 0-2.7.6-4.2 1.9L12 10.6 10.5 12l-2.3 2c-1 .9-1.7 1.3-2.8 1.3a3.3 3.3 0 0 1 0-6.6c1.1 0 1.8.4 2.9 1.4l.8.7 1.5-1.3-.9-.8C8.3 7.5 7 6.6 5.4 6.6a5.4 5.4 0 0 0 0 10.8c1.4 0 2.7-.6 4.2-1.9l2.4-2.1 1.5-1.4 2.3-2c1-.9 1.7-1.3 2.8-1.3a3.3 3.3 0 0 1 0 6.6c-1.1 0-1.8-.4-2.9-1.4l-.8-.7-1.5 1.3.9.8c1.4 1.3 2.7 2.2 4.3 2.2a5.4 5.4 0 0 0 0-10.8z"/></svg></div>
+        <h3 data-i18n="mRoundT">Bir tur at</h3>
+        <p data-i18n="mRoundP">Sınırsız 5'erli tur. Daha önce gördüğün sorular bir daha gelmez.</p>
+      </div>
+      <div class="mode m-cup">
+        <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11.4V3H8v8.4c0 .4.2.7.5.9l3.5 2.1-.8 1.9-2.7.2 2.1 1.8-.6 2.7 2.3-1.4 2.3 1.4-.6-2.7 2.1-1.8-2.7-.2-.8-1.9 3.5-2.1c.3-.2.5-.5.5-.9zM13 12.2l-1 .6-1-.6V4h2v8.2z"/></svg></div>
+        <h3 data-i18n="mCupT">Turnuva</h3>
+        <p data-i18n="mCupP">3–8 kişilik oda kur, kodu paylaş. 5 ya da 10 soru; sonunda sıralama ve isabet sayıları.</p>
+      </div>
+      <div class="mode m-board">
+        <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5h-2V3H7v2H5a2 2 0 0 0-2 2v1a5 5 0 0 0 4.4 5A5 5 0 0 0 11 15.9V19H7v2h10v-2h-4v-3.1a5 5 0 0 0 3.6-2.9A5 5 0 0 0 21 8V7a2 2 0 0 0-2-2zM5 8V7h2v3.8A3 3 0 0 1 5 8zm14 0a3 3 0 0 1-2 2.8V7h2v1z"/></svg></div>
+        <h3 data-i18n="mBoardT">Günün liderleri</h3>
+        <p data-i18n="mBoardP">İstersen takma adınla günün tablosuna gir. İlk üçe altın, gümüş, bronz. Tamamen isteğe bağlı.</p>
+      </div>
+      <div class="mode m-math">
+        <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-5.9 4.1 1.1-1.1 1.4 1.4 1.4-1.4 1.1 1.1-1.4 1.4 1.4 1.4-1.1 1.1-1.4-1.4-1.4 1.4-1.1-1.1 1.4-1.4-1.4-1.4zM6.3 7.7h5v1.5h-5V7.7zM11.5 16h-2v2H8v-2H6v-1.5h2v-2h1.5v2h2V16zm6.2 1.3h-5v-1.5h5v1.5zm0-2.5h-5v-1.5h5v1.5z"/></svg></div>
+        <h3 data-i18n="mMathT">Matematik modu</h3>
+        <p data-i18n="mMathP">Yakında: hesapla üretilen, hiç tükenmeyen tahmin soruları.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeri" aria-label="Ekran görüntüleri">
+    <div class="eyebrow" data-i18n="galEyebrow">Uygulamadan</div>
+    <h2 data-i18n="galTitle">Kupayı kim kaldıracak?</h2>
+    <p class="intro" data-i18n="galIntro">Düelloda kazanan filozof defne tacını takar, kaybeden beyaz bayrağı sallar. Günün skorunu sevimli bir kartla paylaşırsın.</p>
+    <div class="gallery">
+      <figure><img src="/img/duel.webp" width="540" height="1200" loading="lazy" alt="Düello: iki oyuncunun aralıkları yan yana" data-i18n-alt="altDuel"><figcaption data-i18n="capDuel">Düelloda iki aralık yan yana</figcaption></figure>
+      <figure><img src="/img/duel-end.webp" width="540" height="1200" loading="lazy" alt="Düello sonu: Kazandın!" data-i18n-alt="altDuelEnd"><figcaption data-i18n="capDuelEnd">Kürsüde filozoflar</figcaption></figure>
+      <figure><img src="/img/share.webp" width="540" height="1200" loading="lazy" alt="Paylaşım kartı: 340 / 500" data-i18n-alt="altShare"><figcaption data-i18n="capShare">Hikâyede paylaşılacak kart</figcaption></figure>
+      <figure><img src="/img/dark.webp" width="540" height="1200" loading="lazy" alt="Koyu tema ana ekran" data-i18n-alt="altDark"><figcaption data-i18n="capDark">Koyu tema</figcaption></figure>
+    </div>
+    <p class="note" data-i18n="galNote" hidden></p>
+  </section>
+
+  <section id="puan">
+    <div class="split">
+      <div>
+        <div class="eyebrow" data-i18n="scoreEyebrow">Puan</div>
+        <h2 data-i18n="scoreTitle">Dürüst olmak kazandırır.</h2>
+        <p class="intro" data-i18n="scoreIntro">İsabette en fazla 100 puan alırsın; dar aralık daha çok getirir. Kıl payı ıska yine puan alabilir, uzak ıska eksidir (en düşük −50). Kural bilerek dar aralık vermeyi kârsız kılar: en iyi strateji gerçekten %90 emin olduğun aralığı vermek.</p>
+      </div>
+      <div class="score-box">
+        <div class="legend">
+          <div><span class="sq">🟩</span><span data-i18n="lgGreen">İsabet ve 70 puan ya da fazlası</span></div>
+          <div><span class="sq">🟨</span><span data-i18n="lgYellow">İsabet, 70 puandan az</span></div>
+          <div><span class="sq">⬛</span><span data-i18n="lgBlack">Iska</span></div>
+        </div>
+        <div class="share-text" data-i18n="shareText">Kabaca · 4 Kasım · 380/500
+🟩🟩🟨⬛🟩
+Kalibrasyon %80</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kaynaklar">
+    <div class="eyebrow" data-i18n="srcEyebrow">Kaynaklı sorular</div>
+    <h2 data-i18n="srcTitle">1.900'den fazla soru, hiçbiri uydurma değil.</h2>
+    <p class="intro" data-i18n="srcIntro">Her cevap açık bir kaynaktan gelir ve sonuç ekranında bağlantısıyla gösterilir. Coğrafya, tarih, Türkiye, bilim, spor, gündelik hayat, hayvanlar, şirketler, Osmanlı, mimari ve sanat.</p>
+    <ul class="sources">
+      <li>Wikidata</li><li data-i18n="srcWiki">Vikipedi</li><li data-i18n="srcWb">Dünya Bankası</li><li>Eurostat</li><li>FAO</li><li>NASA</li><li>USGS</li><li data-i18n="srcIbb">İBB Açık Veri</li><li>Our World in Data</li><li>USDA</li><li>OurAirports</li><li data-i18n="srcMore">ve daha fazlası</li>
+    </ul>
+  </section>
+
+  <div class="privacy" id="gizlilik">
+    <img src="/img/icon-192.png" width="120" height="120" alt="">
+    <div>
+      <h2 data-i18n="privTitle">Hesap yok, reklam yok, takip yok.</h2>
+      <p data-i18n="privText">Oyun verilerin telefonunda kalır ve uygulama internetsiz de eksiksiz çalışır. İnternet yalnızca yeni soruları indirmek, düello, turnuva ve katılırsan günün liderleri tablosu için kullanılır. Tabloda yalnızca takma adın ve günlük puanın görünür; istediğin an ayrılıp verini silebilirsin.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="https://yerdema.github.io/aralik/privacy-policy.html" data-i18n="lnkPrivacy">Gizlilik politikası</a>
+      <a href="https://yerdema.github.io/aralik/attributions.html" data-i18n="lnkSources">Veri kaynakları ve lisanslar</a>
+      <a href="https://github.com/YerdemA/aralik" data-i18n="lnkCode">Kaynak kodu (GitHub)</a>
+    </div>
+    <div data-i18n="credit">Kabaca · Geliştirici: Yusuf Erdem Aykaç · Android 7.0 ve üstü</div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var en = {
+    _title: 'Kabaca · Daily estimation game',
+    _desc: 'Kabaca is a daily estimation game in Turkish. Answer numeric questions not with a single number but with a range you are 90% sure of. For Android.',
+    navHow: 'How to play', navModes: 'Modes', navScore: 'Scoring', navPrivacy: 'Privacy',
+    pill: '🔥 <b>Every day</b> 5 new questions',
+    title: 'Not a number. Guess a <em>range</em>.',
+    lead: 'Kabaca is a daily estimation game for the 5–10 minutes you spend waiting. You answer numeric questions with a range you are 90% sure of. If the range holds the answer you score, and the narrower it is, the more you get.',
+    play: 'Google Play · <small>coming soon</small>',
+    howBtn: 'How to play',
+    exChip: '✓ Hit · +89 points',
+    exQ: 'How high is Mount Ararat, in metres?',
+    exRange: 'Your range', exAnswer: 'Answer',
+    altHome: 'Kabaca home screen: the daily card, Duel, Play a round and Tournament',
+    howEyebrow: 'How to play',
+    howTitle: 'Three steps, 15 seconds.',
+    howIntro: 'In the daily set you have 15 seconds per question. No long calculations: guess roughly, decide how sure you are, lock it in.',
+    s1Title: 'Type your guess', s1Text: 'Enter your best guess on the app’s own number pad. The 000 key makes big numbers quick.',
+    s2Title: 'Open your range', s2Text: 'Narrow or widen the range with a slider. It shows live how many points a hit would bring.',
+    s3Title: 'Lock it, see the answer', s3Text: 'A hit, a near miss or a miss? The answer is marked on your range, with its source and a fun fact.',
+    altGuess: 'Guess screen: 4,500 m', altRange: 'Range screen: 3,200 – 6,400 m, 89 points if it hits', altResult: 'Result screen: Hit, +89 points, the answer is 5,137 m',
+    calEyebrow: 'Calibration',
+    calTitle: 'When you say “90% sure”, do you hit 9 out of 10?',
+    calIntro: 'Quizzes check right or wrong. Kabaca measures how sure you are. Over time you see how many of your ranges held the answer, and the game tells you: “your ranges are too narrow” or “be bolder”.',
+    f1Title: 'Calibration chart', f1Text: 'Hits per 10 questions, against the 90% target line.',
+    f2Title: 'Which way you miss', f2Text: 'Do you guess too high or too low?',
+    f3Title: 'Hits by category', f3Text: 'Better at geography or at history?',
+    altStats: 'Statistics: streak, average, calibration 89%',
+    modesEyebrow: 'Modes',
+    modesTitle: 'Alone, head to head, or as a crowd.',
+    modesIntro: 'The daily set is the same for everyone. When you finish it, you don’t have to stop.',
+    mDailyT: 'Daily set', mDailyP: 'Everyone gets the same 5 questions on the same day: 2 easy, 2 medium, 1 hard. Keep your streak going.',
+    mDuelT: 'Duel', mDuelP: 'Five live questions against a random opponent, or a friend with a room code. After each question both ranges open side by side.',
+    mRoundT: 'Play a round', mRoundP: 'Unlimited rounds of five. Questions you have already seen never come back.',
+    mCupT: 'Tournament', mCupP: 'Open a room for 3–8 players and share the code. 5 or 10 questions; standings and hits at the end.',
+    mBoardT: 'Daily leaders', mBoardP: 'Join the day’s table with a nickname if you like. Gold, silver and bronze for the top three. Entirely optional.',
+    mMathT: 'Math mode', mMathP: 'Coming soon: estimation questions generated by calculation, which never run out.',
+    galEyebrow: 'In the app',
+    galTitle: 'Who lifts the cup?',
+    galIntro: 'In a duel the winning philosopher wears the laurel wreath and the loser waves a white flag. Share your daily score with a cheerful card.',
+    altDuel: 'Duel: both players’ ranges side by side', altDuelEnd: 'End of a duel: You won!', altShare: 'Share card: 340 / 500', altDark: 'Home screen in dark theme',
+    capDuel: 'Two ranges side by side', capDuelEnd: 'Philosophers on the podium', capShare: 'A card for your story', capDark: 'Dark theme',
+    galNote: 'The app and its questions are in Turkish.',
+    scoreEyebrow: 'Scoring',
+    scoreTitle: 'Honesty pays.',
+    scoreIntro: 'A hit is worth up to 100 points, and narrower ranges earn more. A near miss can still score; a far miss costs points (down to −50). The rule makes deliberately narrow ranges a losing bet: the best strategy is to give the range you are truly 90% sure of.',
+    lgGreen: 'Hit with 70 points or more', lgYellow: 'Hit with under 70 points', lgBlack: 'Miss',
+    shareText: 'Kabaca · 4 November · 380/500\n🟩🟩🟨⬛🟩\nCalibration 80%',
+    srcEyebrow: 'Sourced questions',
+    srcTitle: 'Over 1,900 questions, not one made up.',
+    srcIntro: 'Every answer comes from an open source and is linked on the result screen. Geography, history, Türkiye, science, sport, everyday life, animals, companies, the Ottomans, architecture and art.',
+    srcWiki: 'Wikipedia', srcWb: 'World Bank', srcIbb: 'Istanbul Open Data', srcMore: 'and more',
+    privTitle: 'No account, no ads, no tracking.',
+    privText: 'Your game data stays on your phone and the app works fully offline. The internet is only used to download new questions, for duels and tournaments, and for the daily leaders table if you join. The table shows only your nickname and daily score; you can leave and delete your data at any time.',
+    lnkPrivacy: 'Privacy policy', lnkSources: 'Data sources and licences', lnkCode: 'Source code (GitHub)',
+    credit: 'Kabaca · Developer: Yusuf Erdem Aykaç · Android 7.0 and later'
+  };
+
+  var nodes = document.querySelectorAll('[data-i18n]');
+  var alts = document.querySelectorAll('[data-i18n-alt]');
+  var desc = document.querySelector('meta[name="description"]');
+  var tr = { _title: document.title, _desc: desc.getAttribute('content') };
+  nodes.forEach(function (n) { tr[n.dataset.i18n] = n.innerHTML; });
+  alts.forEach(function (n) { tr[n.dataset.i18nAlt] = n.getAttribute('alt'); });
+  var dict = { tr: tr, en: en };
+  var note = document.querySelector('[data-i18n="galNote"]');
+
+  function apply(lang) {
+    var d = dict[lang] || tr;
+    document.documentElement.lang = lang;
+    document.title = d._title;
+    desc.setAttribute('content', d._desc);
+    nodes.forEach(function (n) {
+      var v = d[n.dataset.i18n];
+      if (v !== undefined) n.innerHTML = v;
+    });
+    alts.forEach(function (n) {
+      var v = d[n.dataset.i18nAlt];
+      if (v !== undefined) n.setAttribute('alt', v);
+    });
+    note.hidden = lang !== 'en';
+    document.querySelectorAll('[data-lang]').forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
+    });
+  }
+
+  function choose(lang) {
+    apply(lang);
+    try { localStorage.setItem('kabaca-lang', lang); } catch (e) {}
+    var url = new URL(location.href);
+    if (lang === 'en') url.searchParams.set('lang', 'en'); else url.searchParams.delete('lang');
+    history.replaceState(null, '', url);
+  }
+
+  document.querySelectorAll('[data-lang]').forEach(function (b) {
+    b.addEventListener('click', function () { choose(b.dataset.lang); });
+  });
+
+  var start = new URLSearchParams(location.search).get('lang');
+  if (!start) { try { start = localStorage.getItem('kabaca-lang'); } catch (e) {} }
+  if (!start) start = /^tr\b/i.test(navigator.language || 'tr') ? 'tr' : 'en';
+  if (start === 'en') apply('en');
+})();
+</script>
+</body>
+</html>

@@ -602,7 +602,7 @@ async function deviceStatus(request, env, now) {
 /** Routes one request. [now] and [fetchFn] are replaceable in tests. */
 export async function handle(request, env, now = Date.now(), fetchFn = fetch) {
   const url = new URL(request.url);
-  if (LANDING_HOSTS.has(url.hostname)) return landing(request);
+  if (LANDING_HOSTS.has(url.hostname)) return landing(request, env);
   const path = url.pathname.replace(/\/+$/, '');
   try {
     if (request.method === 'GET') {

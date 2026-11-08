@@ -14,6 +14,9 @@ routes = [
   { pattern = "kabaca.app", custom_domain = true },
   { pattern = "www.kabaca.app", custom_domain = true },
 ]
+# The website's files (public/). The Worker runs first and serves them only
+# on kabaca.app (src/landing.js); api.kabaca.app stays the API.
+assets = { directory = "./public", binding = "ASSETS", run_worker_first = true }
 
 # Daily clean-up of the hashed IPs used by the registration limit.
 [triggers]

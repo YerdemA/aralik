@@ -611,13 +611,28 @@ test('the connection test echo answers pings and wants a WebSocket', async () =>
   assert.deepEqual(plain, { status: 426, body: { error: 'websocket_only' } });
 });
 
-test('kabaca.app shows the page about the game, not the API', async () => {
-  const page = await handle(new Request('https://kabaca.app/'), env);
+test('kabaca.app serves the website, not the API', async () => {
+  const served = [];
+  const site = {
+    ...env,
+    ASSETS: {
+      fetch: async (request) => {
+        served.push(new URL(request.url).pathname);
+        return new Response('<h1>Kabaca</h1>', {
+          headers: { 'content-type': 'text/html' },
+        });
+      },
+    },
+  };
+  const page = await handle(new Request('https://kabaca.app/'), site);
   assert.equal(page.status, 200);
-  assert.match(await page.text(), /%90 emin olduğun aralığı ver/);
-  const www = await handle(new Request('https://www.kabaca.app/x'), env);
+  assert.equal(await page.text(), '<h1>Kabaca</h1>');
+  assert.match(page.headers.get('cache-control'), /max-age=600/);
+  const www = await handle(new Request('https://www.kabaca.app/x?lang=en'), site);
   assert.equal(www.status, 301);
-  assert.equal(www.headers.get('location'), 'https://kabaca.app/x');
-  const api = await handle(new Request('https://kabaca.app/v1'), env);
-  assert.equal(api.status, 404);
+  assert.equal(www.headers.get('location'), 'https://kabaca.app/x?lang=en');
+  // The API host never serves the site.
+  const api = await handle(new Request('https://api.kabaca.app/v1'), site);
+  assert.deepEqual(await api.json(), { ok: true });
+  assert.deepEqual(served, ['/']);
 });
