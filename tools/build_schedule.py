@@ -3,8 +3,9 @@
 Usage:  python tools/build_schedule.py [--days N] [--fresh] [--dry-run] [--bank PATH]
 
 Every day has 2 easy + 2 medium + 1 hard question (the bank's "difficulty"),
-from at least 3 categories and with at least 2 magnitude questions (days
-added from 2026-11-05 on), never two from the same data set and never two
+from at least 3 categories and with at least 3 magnitude questions and at
+most 1 history (tarih, osmanlı) question (days added from 2026-11-09 on;
+2 magnitudes from 2026-11-05), never two from the same data set and never two
 about the same item (e.g. a company's founding year and its employees).
 Easy magnitude questions are scarce: new days get them evenly spread, at
 most one a day (2026-11-06). Within a day they are ordered easy → hard.
@@ -37,8 +38,15 @@ DEFAULT_DAYS = 45
 DAY_SHAPE = {1: 2, 2: 2, 3: 1}
 MIN_CATEGORIES_PER_DAY = 3
 # Most easy questions are years; without this most days would be all years.
-# Applies to new days only (2026-11-05 on); earlier days are kept.
-MIN_MAGNITUDES_PER_DAY = 2
+# Applies to new days only; earlier days are kept. 2 from 2026-11-05, 3 (so
+# at most two year questions) from 2026-11-09: years ask for knowledge one
+# cannot reason towards (lib/core/free_play.dart RoundLimits, server
+# duel.js roundLimits use the same rule).
+MIN_MAGNITUDES_PER_DAY = 3
+# At most one history question (tarih, osmanlı) a day (2026-11-09); they
+# filled 30% of the first 150 days and bored players without the knowledge.
+HISTORY_CATEGORIES = {"tarih", "osmanlı"}
+MAX_HISTORY_PER_DAY = 1
 ATTEMPTS_PER_DAY = 200
 
 
@@ -73,6 +81,10 @@ def make_day(pool: dict[int, list[dict]], rng: random.Random, easy_magnitude: bo
                 if len([d for d in day if d.get("difficulty") == difficulty]) == count:
                     break
                 if q["dataset"] in datasets or q["source"] in sources:
+                    continue
+                if q["category"] in HISTORY_CATEGORIES and sum(
+                    d["category"] in HISTORY_CATEGORIES for d in day
+                ) >= MAX_HISTORY_PER_DAY:
                     continue
                 if difficulty == 1 and q["kind"] == "magnitude" and any(
                     d["difficulty"] == 1 and d["kind"] == "magnitude" for d in day

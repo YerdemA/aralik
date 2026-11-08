@@ -22,6 +22,14 @@ enum QuestionCategory {
   architecture('mimari'),
   art('sanat'),
 
+  // Questions one can reason towards without knowing the answer
+  // (2026-11-09). No magnitude factor of their own (answer_scale.dart), so
+  // an older app that shows them as "Diğer" scores them the same.
+  body('vücut'),
+  food('mutfak'),
+  transport('ulaşım'),
+  space('uzay'),
+
   /// Math mode's generated questions (lib/core/math/); never in the bank.
   math('matematik'),
 

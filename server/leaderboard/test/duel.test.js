@@ -81,6 +81,40 @@ test('picks 2 easy, 2 medium, 1 hard outside the upcoming schedule', () => {
   assert.deepEqual(ids, ['e1', 'e2', 'm1', 'm2', 'h1']);
 });
 
+test('at most one history and two year questions in five', () => {
+  const questions = new Map();
+  const order = [];
+  const add = (id, difficulty, kind, category) => {
+    questions.set(id, { answer: 1500, kind, category, difficulty });
+    order.push(id);
+  };
+  // History and years first, so a plain draw would take only them.
+  for (const level of [1, 2, 3]) {
+    for (let i = 0; i < 4; i++) add(`t${level}${i}`, level, 'year', 'tarih');
+    for (let i = 0; i < 4; i++) add(`o${level}${i}`, level, 'year', 'osmanlı');
+    for (let i = 0; i < 4; i++) add(`y${level}${i}`, level, 'year', 'sanat');
+    for (let i = 0; i < 4; i++) add(`g${level}${i}`, level, 'magnitude', 'coğrafya');
+  }
+  const pool = { questions, order, days: [] };
+  for (const size of [5, 10]) {
+    const levels = size === 5 ? duel.DUEL_LEVELS : [1, 1, 1, 1, 2, 2, 2, 2, 3, 3];
+    for (let seed = 0; seed < 20; seed++) {
+      let n = seed;
+      const random = (k) => (n = (n * 31 + 7) % 101) % k;
+      const ids = duel.pickDuelQuestions(pool, 999, 0, random, levels);
+      const qs = ids.map((id) => questions.get(id));
+      const limits = duel.roundLimits(size);
+      assert.equal(ids.length, size);
+      assert.ok(qs.filter((q) => duel.HISTORY_CATEGORIES.has(q.category)).length <= limits.history);
+      assert.ok(qs.filter((q) => q.kind === 'year').length <= limits.years);
+    }
+  }
+  // A pool of only history still fills the match.
+  const onlyHistory = new Map([...questions].filter(([, q]) => q.category === 'tarih'));
+  const thin = { questions: onlyHistory, order: [...onlyHistory.keys()], days: [] };
+  assert.equal(duel.pickDuelQuestions(thin, 999, 0, first).length, 5);
+});
+
 test('never picks a retired question', () => {
   const withRetired = makeContent();
   withRetired.questions.get('e1').retired = true;

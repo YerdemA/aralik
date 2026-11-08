@@ -118,4 +118,68 @@ void main() {
     };
     expect(positions.length, greaterThan(2));
   });
+
+  group('variety', () {
+    Question typed(String id, QuestionKind kind, QuestionCategory category) =>
+        Question(
+          id: id,
+          text: '$id?',
+          answer: 1500,
+          unit: kind == QuestionKind.year ? '' : 'km',
+          kind: kind,
+          category: category,
+          source: 'https://example.org/$id',
+          dataYear: 2026,
+        );
+
+    final pool = [
+      for (var i = 0; i < 20; i++) ...[
+        typed('t$i', QuestionKind.year, QuestionCategory.history),
+        typed('o$i', QuestionKind.year, QuestionCategory.ottoman),
+        typed('a$i', QuestionKind.year, QuestionCategory.art),
+      ],
+      for (var i = 0; i < 10; i++)
+        typed('g$i', QuestionKind.magnitude, QuestionCategory.geography),
+    ];
+
+    test('at most one history and two year questions in five', () {
+      for (var seed = 0; seed < 50; seed++) {
+        final round = buildFreeRound(
+          bankPool: pool,
+          generators: const [],
+          seen: const {},
+          rng: math.Random(seed),
+        );
+        expect(round, hasLength(5));
+        expect(
+          round.where((q) => historyCategories.contains(q.category)).length,
+          lessThanOrEqualTo(1),
+        );
+        expect(
+          round.where((q) => q.kind == QuestionKind.year).length,
+          lessThanOrEqualTo(2),
+        );
+      }
+    });
+
+    test('a pool of only history still fills the round', () {
+      final round = buildFreeRound(
+        bankPool: [
+          for (final q in pool)
+            if (q.id.startsWith('t')) q,
+        ],
+        generators: const [],
+        seen: const {},
+        rng: math.Random(1),
+      );
+      expect(round, hasLength(5));
+    });
+
+    test('limits scale with the round', () {
+      expect(RoundLimits.of(5).history, 1);
+      expect(RoundLimits.of(5).years, 2);
+      expect(RoundLimits.of(10).history, 2);
+      expect(RoundLimits.of(10).years, 4);
+    });
+  });
 }

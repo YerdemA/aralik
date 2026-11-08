@@ -29,7 +29,7 @@ MAX_DATASET_SHARE = 0.10
 KINDS = {"magnitude", "year"}
 # "diğer" is the app's fallback for categories it does not know yet; it is
 # never written to the bank.
-CATEGORIES = {"coğrafya", "tarih", "türkiye", "bilim", "spor", "gündelik", "hayvanlar", "şirketler", "osmanlı", "mimari", "sanat"}
+CATEGORIES = {"coğrafya", "tarih", "türkiye", "bilim", "spor", "gündelik", "hayvanlar", "şirketler", "osmanlı", "mimari", "sanat", "vücut", "mutfak", "ulaşım", "uzay"}
 REQUIRED = {
     "id": str,
     "text": str,

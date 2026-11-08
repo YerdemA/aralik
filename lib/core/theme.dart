@@ -227,6 +227,10 @@ extension CategoryStyle on QuestionCategory {
     QuestionCategory.ottoman => Icons.mosque_rounded,
     QuestionCategory.architecture => Icons.apartment_rounded,
     QuestionCategory.art => Icons.palette_rounded,
+    QuestionCategory.body => Icons.accessibility_new_rounded,
+    QuestionCategory.food => Icons.restaurant_rounded,
+    QuestionCategory.transport => Icons.directions_car_rounded,
+    QuestionCategory.space => Icons.rocket_launch_rounded,
     QuestionCategory.math => Icons.calculate_rounded,
     QuestionCategory.other => Icons.category_rounded,
   };
@@ -256,6 +260,14 @@ extension CategoryStyle on QuestionCategory {
         light ? const Color(0xFF4A6572) : const Color(0xFFA9C4D1),
       QuestionCategory.art =>
         light ? const Color(0xFFD1495B) : const Color(0xFFFFADB8),
+      QuestionCategory.body =>
+        light ? const Color(0xFFC2185B) : const Color(0xFFFF9FC4),
+      QuestionCategory.food =>
+        light ? const Color(0xFF9E6B00) : const Color(0xFFFFCB6B),
+      QuestionCategory.transport =>
+        light ? const Color(0xFF1565C0) : const Color(0xFF90C2FF),
+      QuestionCategory.space =>
+        light ? const Color(0xFF3949AB) : const Color(0xFFAAB4FF),
       QuestionCategory.math =>
         light ? const Color(0xFFB45309) : const Color(0xFFFBBF6A),
       QuestionCategory.other =>

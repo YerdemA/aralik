@@ -160,6 +160,19 @@ export function normalizeRoomCode(raw) {
   return code;
 }
 
+/** Categories that ask what one knows rather than what one can estimate. */
+export const HISTORY_CATEGORIES = new Set(['tarih', 'osmanlı']);
+
+/**
+ * At most this many history and year questions in a match of [size]: one
+ * history and two year questions in every five (lib/core/free_play.dart and
+ * tools/build_schedule.py use the same rule).
+ */
+export function roundLimits(size) {
+  const fives = Math.max(1, Math.ceil(size / 5));
+  return { history: fives, years: 2 * fives };
+}
+
 /** A duel's difficulty mix: two easy, two medium, one hard. */
 export const DUEL_LEVELS = [1, 1, 2, 2, 3];
 
@@ -195,17 +208,33 @@ export function pickDuelQuestions(
     (byLevel[level] ?? byLevel[2]).push(id);
   }
   const picked = [];
-  const take = (list) => {
-    if (list.length === 0) return false;
-    const k = randomInt(list.length);
-    const [id] = list.splice(k, 1);
+  // Variety (2026-11-09): history and year questions need knowledge one
+  // cannot reason towards, so a match has few of them (see roundLimits).
+  const limits = roundLimits(levels.length);
+  const count = (test) =>
+    picked.filter((id) => test(content.questions.get(id))).length;
+  const fits = (id) => {
+    const q = content.questions.get(id);
+    if (HISTORY_CATEGORIES.has(q.category) && count((p) => HISTORY_CATEGORIES.has(p.category)) >= limits.history) {
+      return false;
+    }
+    return !(q.kind === 'year' && count((p) => p.kind === 'year') >= limits.years);
+  };
+  const take = (list, strict = true) => {
+    const candidates = strict
+      ? list.map((id, i) => [id, i]).filter(([id]) => fits(id))
+      : list.map((id, i) => [id, i]);
+    if (candidates.length === 0) return false;
+    const [, i] = candidates[randomInt(candidates.length)];
+    const [id] = list.splice(i, 1);
     picked.push(id);
     return true;
   };
   for (const level of levels) take(byLevel[level]);
-  // A thin pool: fill up from whatever is left.
+  // A thin pool: fill up from whatever is left, within the limits first.
   const rest = [...byLevel[1], ...byLevel[2], ...byLevel[3]];
   while (picked.length < levels.length && take(rest));
+  while (picked.length < levels.length && take(rest, false));
   if (picked.length < levels.length) return null;
   const level = (id) => content.questions.get(id).difficulty;
   return picked.sort((a, b) => level(a) - level(b));

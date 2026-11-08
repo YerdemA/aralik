@@ -1021,3 +1021,41 @@
 2|1942||en:Nighthawks (Hopper)|1942|Edward Hopper'ın Gece Kuşları tablosu hangi yıl yapılmıştır?
 2|1962||en:Campbell's Soup Cans|1962|Andy Warhol'un Campbell Çorba Kutuları serisi hangi yıl tamamlanmıştır?
 3|1434||en:Arnolfini Portrait|1434|Van Eyck'in Arnolfini Portresi hangi yıl yapılmıştır?
+# body_curated|vücut
+1|72|atış|en:Heart|beats per minute|Dinlenmekte olan bir yetişkinin kalbi dakikada kaç kez atar?
+1|1|cm|en:Human hair growth|anagen|Saç ayda kaç santimetre uzar?
+2|1.5|m|en:Large intestine|large intestine is about|Yetişkin bir insanın kalın bağırsağı kaç metre uzunluğundadır?
+2|3.5|mm|en:Nail (anatomy)|month|El tırnakları ayda kaç milimetre uzar?
+3|480|milyon alveol|en:Pulmonary alveolus|alveoli|İnsanın iki akciğerinde kaç milyon hava keseciği (alveol) vardır?
+2|1.9|m²|en:Human skin|average 1.9|Yetişkin bir insanın derisi ortalama kaç metrekaredir?
+1|17|kez|en:Blinking|blinks per minute|Bir insan dakikada ortalama kaç kez göz kırpar?
+3|26.74|%|en:Femur|height|Uyluk kemiğinin uzunluğu insan boyunun yüzde kaçı kadardır?
+2|24|mm|en:Human eye|anterior to posterior|Yetişkin bir insan gözünün önden arkaya çapı kaç milimetredir?
+3|30|trilyon hücre|en:Human body|trillion cells|Yetişkin bir insanın vücudunda kaç trilyon hücre vardır?
+2|30|ml|en:Stomach|newborn|Yeni doğmuş bir bebeğin midesi kaç mililitre alır?
+
+# food_curated|mutfak
+1|95|%|en:Cucumber|water|Salatalığın yüzde kaçı sudur?
+2|485|°C|en:Neapolitan pizza|oven|Geleneksel Napoli pizzası kaç °C'deki odun fırınında pişirilir?
+2|3.5|%|en:Seawater|salinity|Okyanuslardaki deniz suyunun ortalama yüzde kaçı tuzdur?
+2|3.16|kg|en:Tea in Turkey|per person|Türkiye'de kişi başına yılda kaç kilogram çay tüketilir?
+1|57.7|%|en:Hazelnut|largest producer|2023'te dünyadaki fındık üretiminin yüzde kaçı Türkiye'den gelmiştir?
+2|800|milyon ton|en:Rice|world production|2023'te dünyada kaç milyon ton pirinç üretilmiştir?
+3|2.7|milyon ton|en:Olive oil|world production|2022'de dünyada kaç milyon ton zeytinyağı üretilmiştir?
+2|120|°C|en:Pressure cooking|approximately 120|Düdüklü tencerede su yaklaşık kaç °C'ye kadar ısınabilir?
+2|180|°C|en:Deep frying|in excess of|Derin yağda kızartmada yağ kaç °C'nin üzerine ısıtılır?
+
+# transport_curated|ulaşım
+2|574.8|km/h|en:TGV world speed record|world speed record|Çelik tekerlekli bir trenin dünya hız rekoru saatte kaç kilometredir?
+1|1964||en:Shinkansen|began service|Japonya'nın hızlı treni Şinkansen hangi yıl hizmete girmiştir?
+2|84|milyon yolcu|en:Istanbul Airport|2025|İstanbul Havalimanı 2025'te kaç milyon yolcuya hizmet vermiştir?
+2|400|m|en:Container ship|largest container ships|Dünyanın en büyük konteyner gemileri kaç metre uzunluğundadır?
+2|1886||en:Benz Patent-Motorwagen|patent|Benz, ilk otomobil sayılan motorlu aracının patentini hangi yıl almıştır?
+
+# space_curated|uzay
+1|3474|km|en:Moon|diameter|Ay'ın çapı kaç kilometredir?
+2|109|kat|en:Sun|times that of earth|Güneş'in çapı Dünya'nın çapının kaç katıdır?
+2|27600|km/h|en:International Space Station|km/h|Uluslararası Uzay İstasyonu saatte kaç kilometre hızla yol alır?
+2|93|dakika|en:International Space Station|minutes|Uluslararası Uzay İstasyonu Dünya'nın çevresini kaç dakikada bir dolaşır?
+2|24.6|saat|en:Mars|sol|Mars'ta bir gün kaç saat sürer?
+2|76|yıl|en:Halley's Comet|returning|Halley Kuyruklu Yıldızı yaklaşık kaç yılda bir görünür?

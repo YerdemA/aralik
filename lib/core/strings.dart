@@ -250,6 +250,10 @@ abstract final class AppStrings {
   static const categoryOttoman = 'Osmanlı';
   static const categoryArchitecture = 'Mimari';
   static const categoryArt = 'Sanat';
+  static const categoryBody = 'İnsan vücudu';
+  static const categoryFood = 'Mutfak';
+  static const categoryTransport = 'Ulaşım';
+  static const categorySpace = 'Uzay';
   static const categoryOther = 'Diğer';
 
   // Math mode: question texts (lib/core/math/math_problem.dart). Every
@@ -804,6 +808,10 @@ String categoryName(QuestionCategory c) => switch (c) {
   QuestionCategory.ottoman => AppStrings.categoryOttoman,
   QuestionCategory.architecture => AppStrings.categoryArchitecture,
   QuestionCategory.art => AppStrings.categoryArt,
+  QuestionCategory.body => AppStrings.categoryBody,
+  QuestionCategory.food => AppStrings.categoryFood,
+  QuestionCategory.transport => AppStrings.categoryTransport,
+  QuestionCategory.space => AppStrings.categorySpace,
   QuestionCategory.math => AppStrings.categoryMath,
   QuestionCategory.other => AppStrings.categoryOther,
 };
