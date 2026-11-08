@@ -225,6 +225,78 @@ abstract final class AppStrings {
   static const categoryArt = 'Sanat';
   static const categoryOther = 'Diğer';
 
+  // Math mode: question texts (lib/core/math/math_problem.dart). Every
+  // assumption the answer needs is in the text.
+  static String mathMultiply(String expr) => '$expr kaçtır?';
+  static String mathPower(String expr) => '$expr kaçtır?';
+  static String mathSquareRoot(String n) => '√$n kaçtır?';
+  static String mathCubeRoot(String n) => '∛$n (küpkök) kaçtır?';
+  static String mathFactorial(int n) => '$n! (1 × 2 × … × $n) kaçtır?';
+  static String mathHandshakes(int n) =>
+      '$n kişilik bir grupta herkes herkesle bir kez tokalaşırsa kaç '
+      'tokalaşma olur?';
+  static String mathTeams(int n, int k) =>
+      '$n kişilik bir sınıftan $k kişilik bir ekip kaç farklı şekilde '
+      'seçilebilir?';
+  static String mathLottery(int n, int k) =>
+      '1 ile $n arasından $k farklı sayı seçilen bir piyangoda kaç farklı '
+      'kupon vardır?';
+  static String mathSumTo(String n) => '1 + 2 + 3 + … + $n toplamı kaçtır?';
+  static String mathSumSquares(int n) =>
+      '1² + 2² + 3² + … + $n² toplamı kaçtır?';
+  static String mathDoubling(int rate) =>
+      'Yıllık %$rate bileşik faizle para kaç yılda iki katına çıkar?';
+  static String mathCompound(String principal, int rate, int years) =>
+      '$principal TL, yıllık %$rate bileşik faizle $years yıl sonra kaç TL '
+      'olur?';
+  static String mathPercentOf(String x, int p) =>
+      '$x sayısının %$p kadarı kaçtır?';
+  static String mathRaiseThenCut(String x, int up, int down) =>
+      '$x TL fiyatlı bir ürüne önce %$up zam, sonra %$down indirim '
+      'yapılıyor. Son fiyat kaç TL?';
+  static String mathMonthlyRise(int p) =>
+      'Fiyatlar her ay %$p artarsa 12 ayda toplam yüzde kaç artar?';
+  static String mathKmhToMs(int v) =>
+      'Saatte $v km hız, saniyede kaç metredir?';
+  static String mathDaysToMinutes(int days) => '$days gün kaç dakikadır?';
+  static String mathMilesToKm(int miles) =>
+      '$miles mil kaç kilometredir? (1 mil = 1,609344 km)';
+  static String mathYearsToSeconds(int years) =>
+      '$years yıl kaç saniyedir? (Yıl 365 gün)';
+  static String mathLightDays(int days) =>
+      'Işık saniyede 299.792,458 km yol alır. $days günde kaç milyar km '
+      'yol alır?';
+  static String mathCircleArea(int r) =>
+      'Yarıçapı $r cm olan bir dairenin alanı kaç cm²?';
+  static String mathSphereVolume(int d) =>
+      'Çapı $d cm olan bir kürenin hacmi kaç cm³?';
+  static String mathTriangleArea(int a, int b, int c) =>
+      'Kenarları $a, $b ve $c cm olan bir üçgenin alanı kaç cm²?';
+  static String mathAtLeastOneSix(int throws) =>
+      'Hilesiz bir zar $throws kez atılıyor. En az bir kez 6 gelme '
+      'olasılığı yüzde kaç?';
+  static String mathSharedBirthday(int people) =>
+      '$people kişilik bir grupta en az iki kişinin doğum gününün aynı '
+      'olma olasılığı yüzde kaç? (Yıl 365 gün, her gün eşit olasılıklı)';
+  static String mathMyBirthday(int people) =>
+      '$people kişiden en az birinin senin doğum gününde doğmuş olma '
+      'olasılığı yüzde kaç? (Yıl 365 gün, her gün eşit olasılıklı)';
+  static String mathPrimes(String n) =>
+      '1 ile $n arasında kaç asal sayı vardır?';
+  static String mathPrimesWorking(String n, String count) =>
+      'Eratosthenes kalburuyla 1…$n arası sayıldı: $count asal';
+  static String mathDigits(String expr) => '$expr kaç basamaklı bir sayıdır?';
+  static String mathFibonacci(int n) =>
+      'Fibonacci dizisi 1, 1, 2, 3, 5, 8, 13, … diye gider. $n. terimi '
+      'kaçtır?';
+  static String mathFolding(int folds, String unit) =>
+      '0,1 mm kalınlığındaki bir kâğıt $folds kez ikiye katlanabilseydi '
+      'kalınlığı kaç $unit olurdu?';
+  static const mathYears = 'yıl';
+  static const mathMinutes = 'dakika';
+  static const mathSeconds = 'saniye';
+  static const mathBillionKm = 'milyar km';
+
   // Settings
   static const appearance = 'Görünüm';
   static const theme = 'Tema';
