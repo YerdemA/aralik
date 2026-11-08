@@ -209,8 +209,10 @@ def validate_schedule(schedule: object, questions: list) -> tuple[list[str], lis
         datasets = Counter(q.get("dataset") for q in qs if q.get("dataset"))
         if any(n > 1 for n in datasets.values()):
             warnings.append(f"{where}: aynı veri setinden birden çok soru.")
-        if sorted(q.get("difficulty") for q in qs) != [1, 1, 2, 2, 3]:
-            warnings.append(f"{where}: 2 kolay + 2 orta + 1 zor değil.")
+        # 2 easy + 2 medium + 1 hard; days added from 2026-11-09 on have
+        # 1 + 3 + 1 (easy questions ran short, tools/build_schedule.py).
+        if sorted(q.get("difficulty") for q in qs) not in ([1, 1, 2, 2, 3], [1, 2, 2, 2, 3]):
+            warnings.append(f"{where}: 2-2-1 ya da 1-3-1 kolay-orta-zor değil.")
     return errors, warnings
 
 

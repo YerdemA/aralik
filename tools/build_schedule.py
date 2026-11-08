@@ -2,7 +2,7 @@
 
 Usage:  python tools/build_schedule.py [--days N] [--fresh] [--dry-run] [--bank PATH]
 
-Every day has 2 easy + 2 medium + 1 hard question (the bank's "difficulty"),
+Every day has 1 easy + 3 medium + 1 hard question (the bank's "difficulty"; 2 + 2 + 1 for days before 2026-11-09),
 from at least 3 categories and with at least 3 magnitude questions and at
 most 1 history (tarih, osmanlı) question (days added from 2026-11-09 on;
 2 magnitudes from 2026-11-05), never two from the same data set and never two
@@ -34,8 +34,10 @@ OUT_PATH = ROOT / "assets" / "questions" / "schedule.json"
 
 SEED = 20261101
 DEFAULT_DAYS = 45
-# How many questions of each difficulty a day takes, in play order.
-DAY_SHAPE = {1: 2, 2: 2, 3: 1}
+# How many questions of each difficulty a day takes, in play order. Days
+# added from 2026-11-09 on: 1 easy + 3 medium + 1 hard (2 + 2 + 1 before);
+# easy questions ran short, more are being added (then back to 2 + 2 + 1).
+DAY_SHAPE = {1: 1, 2: 3, 3: 1}
 MIN_CATEGORIES_PER_DAY = 3
 # Most easy questions are years; without this most days would be all years.
 # Applies to new days only; earlier days are kept. 2 from 2026-11-05, 3 (so
