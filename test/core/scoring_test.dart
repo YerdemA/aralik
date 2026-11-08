@@ -335,4 +335,44 @@ void main() {
       expect(score(1, 11, 6), score(45, 55, 50));
     });
   });
+
+  group('math mode', () {
+    int score(num low, num high, num answer) => scoreFor(
+      kind: QuestionKind.magnitude,
+      low: low,
+      high: high,
+      answer: answer,
+      scale: (maxFactor: mathMaxFactor, maxYearHalf: 0, maxPercentHalf: 0),
+      floor: mathMinPoints,
+    );
+
+    test('the widest hit (÷2 … ×2) still scores 30', () {
+      expect(score(500, 2000, 1000), pointsAtWidest);
+    });
+
+    test('a close guess scores high, a 10% miss scores nothing', () {
+      // ±10% around the answer: ~90.
+      expect(score(900, 1100, 1000), inInclusiveRange(88, 92));
+      // The whole interval 10% too high: no minus, just 0.
+      expect(score(1100, 1300, 1000), 0);
+      // A far miss: still 0, never below.
+      expect(score(100000, 200000, 1000), 0);
+    });
+
+    test('a percentage opens ±10 points, scored linearly', () {
+      final pct = scoreFor(
+        kind: QuestionKind.magnitude,
+        low: 40,
+        high: 60,
+        answer: 50,
+        scale: (
+          maxFactor: 0,
+          maxYearHalf: 0,
+          maxPercentHalf: mathMaxPercentHalf,
+        ),
+        floor: mathMinPoints,
+      );
+      expect(pct, pointsAtWidest);
+    });
+  });
 }

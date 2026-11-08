@@ -179,4 +179,15 @@ void main() {
     // Other days are independent.
     expect(stats.startDailyQuestion(4, 0, later), later);
   });
+
+  test('math answers count apart and are not marked as seen', () async {
+    final stats = await StatsStore.open();
+    await stats.recordMathAnswer(hit: true);
+    await stats.recordMathAnswer(hit: false);
+    expect((stats.mathHits, stats.mathAnswered), (1, 2));
+    expect((stats.hits, stats.answered), (0, 0));
+    expect(stats.seenIds, isEmpty);
+    final again = await StatsStore.open();
+    expect((again.mathHits, again.mathAnswered), (1, 2));
+  });
 }

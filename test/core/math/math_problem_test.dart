@@ -1,3 +1,5 @@
+import 'package:aralik/data/question.dart';
+import 'package:aralik/core/math/math_question.dart';
 import 'package:aralik/core/math/advanced.dart';
 import 'package:aralik/core/math/math_problem.dart';
 import 'package:aralik/core/math/seeded_random.dart';
@@ -142,5 +144,16 @@ void main() {
         expect(mathRound(seed).map((p) => p.id), round.map((p) => p.id));
       }
     });
+  });
+
+  test('a math problem plays as a question of its own category', () {
+    final p = generateMath(MathTopic.multiply, 1, 42);
+    final q = mathQuestion(p);
+    expect(q.id, p.id);
+    expect(q.answer, p.answer);
+    expect(q.category, QuestionCategory.math);
+    expect(q.kind, QuestionKind.magnitude);
+    expect(q.source, isEmpty); // the working stands in for it
+    expect(q.funFact, contains(p.working));
   });
 }

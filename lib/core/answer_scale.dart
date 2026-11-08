@@ -48,6 +48,21 @@ const int maxPercentHalfWidth = 20;
 
 bool isPercentUnit(String unit) => unit == percentUnit;
 
+/// Math mode (2026-11-08): answers follow from the numbers, so the slider
+/// opens only to ÷2 … ×2 (percentages ±10 points) and a close guess is
+/// what scores; the widest hit still scores [pointsAtWidest]. No points
+/// below [mathMinPoints]: a miss scores 0, never minus. (With a floor of 0
+/// a far miss costs nothing, so a narrow interval pays a little more than
+/// an honest 90% one; math mode accepts that, the bank does not.)
+const double mathMaxFactor = 2;
+const int mathMaxPercentHalf = 10;
+const int mathMinPoints = 0;
+
+/// Math mode's scale for [q]: ÷2 … ×2, or ±10 points for a percentage.
+AnswerScale mathScaleOf(Question q) => isPercentUnit(q.unit)
+    ? (maxFactor: 0, maxYearHalf: 0, maxPercentHalf: mathMaxPercentHalf)
+    : (maxFactor: mathMaxFactor, maxYearHalf: 0, maxPercentHalf: 0);
+
 /// A question's scale. For a magnitude only [maxFactor] matters, for a year
 /// only [maxYearHalf], for a percentage only [maxPercentHalf] (non-zero only
 /// for percentages, which are scored linearly in points).

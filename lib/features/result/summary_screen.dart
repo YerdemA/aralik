@@ -25,7 +25,16 @@ class SummaryScreen extends StatelessWidget {
     required this.answered,
     this.dayIndex,
     this.onLeaderboard,
+    this.roundLabel,
+    this.calibrationTitle,
   });
+
+  /// A round's name when shared ("Matematik turu"); "Serbest tur" without.
+  final String? roundLabel;
+
+  /// Shown above the calibration line when it is not the general one
+  /// ("Matematik kalibrasyonu").
+  final String? calibrationTitle;
 
   /// Opens today's leaderboard; null hides the button.
   final VoidCallback? onLeaderboard;
@@ -51,6 +60,7 @@ class SummaryScreen extends StatelessWidget {
     builder: (_) => ShareSheet(
       card: ShareCardData(
         dayIndex: dayIndex,
+        label: roundLabel,
         results: results,
         hits: hits,
         answered: answered,
@@ -122,9 +132,21 @@ class SummaryScreen extends StatelessWidget {
                       ),
                       const SizedBox(width: 12),
                       Expanded(
-                        child: Text(
-                          calibrationSummary(hits, answered),
-                          style: theme.textTheme.titleMedium,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            if (calibrationTitle != null)
+                              Text(
+                                calibrationTitle!,
+                                style: theme.textTheme.labelLarge?.copyWith(
+                                  color: theme.colorScheme.onSurfaceVariant,
+                                ),
+                              ),
+                            Text(
+                              calibrationSummary(hits, answered),
+                              style: theme.textTheme.titleMedium,
+                            ),
+                          ],
                         ),
                       ),
                     ],
@@ -259,6 +281,7 @@ class _ShareSheetState extends State<ShareSheet> {
 
   String get _text => shareText(
     dayIndex: widget.card.dayIndex,
+    label: widget.card.label,
     results: widget.card.results,
     hits: widget.card.hits,
     answered: widget.card.answered,

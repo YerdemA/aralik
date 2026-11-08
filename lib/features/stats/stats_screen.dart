@@ -24,7 +24,7 @@ class StatsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text(AppStrings.stats)),
       body: SafeArea(
-        child: stats.answered == 0
+        child: stats.answered == 0 && stats.mathAnswered == 0
             ? const Center(
                 child: Padding(
                   padding: EdgeInsets.all(24),
@@ -37,18 +37,47 @@ class StatsScreen extends StatelessWidget {
             : ListView(
                 padding: const EdgeInsets.fromLTRB(24, 8, 24, 24),
                 children: [
-                  _Section(
-                    child: _DailySection(stats: stats, today: today),
-                  ),
-                  const SizedBox(height: 16),
-                  _Section(child: _CalibrationSection(stats: stats)),
+                  if (stats.answered > 0) ...[
+                    _Section(
+                      child: _DailySection(stats: stats, today: today),
+                    ),
+                    const SizedBox(height: 16),
+                    _Section(child: _CalibrationSection(stats: stats)),
+                  ],
                   if (stats.answerLog.isNotEmpty) ...[
                     const SizedBox(height: 16),
                     _Section(child: _CategorySection(log: stats.answerLog)),
                   ],
+                  if (stats.mathAnswered > 0) ...[
+                    const SizedBox(height: 16),
+                    _Section(child: _MathSection(stats: stats)),
+                  ],
                 ],
               ),
       ),
+    );
+  }
+}
+
+/// Math mode's own calibration (kept apart from the general one).
+class _MathSection extends StatelessWidget {
+  const _MathSection({required this.stats});
+
+  final StatsStore stats;
+
+  @override
+  Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(AppStrings.mathCalibration, style: textTheme.titleLarge),
+        const SizedBox(height: 4),
+        Text(
+          calibrationSummary(stats.mathHits, stats.mathAnswered),
+          style: textTheme.bodyLarge,
+        ),
+      ],
     );
   }
 }

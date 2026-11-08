@@ -3,7 +3,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../../core/answer_scale.dart';
 import '../../core/question_timer.dart';
+import '../../core/scoring.dart';
 import '../../core/strings.dart';
 import '../../data/question.dart';
 import '../../data/sound.dart';
@@ -23,7 +25,15 @@ class GameScreen extends StatefulWidget {
     this.timeLimit = dailyTimeLimit,
     this.now = DateTime.now,
     this.scaled = true,
+    this.scale,
+    this.minPoints = minPointsPerQuestion,
   });
+
+  /// Each question's scale by math mode's rule; see [GameController.scale].
+  final AnswerScale Function(Question)? scale;
+
+  /// The lowest a question scores; 0 in math mode.
+  final int minPoints;
 
   /// Intervals and points follow each question's scale (the current rule).
   final bool scaled;
@@ -57,6 +67,8 @@ class _GameScreenState extends State<GameScreen> {
   late final GameController _game = GameController(
     widget.questions,
     scaled: widget.scaled,
+    scale: widget.scale,
+    minPoints: widget.minPoints,
   );
 
   /// Time left on the current question; null without a time limit.

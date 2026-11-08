@@ -26,6 +26,21 @@ abstract final class AppStrings {
   static String streakPill(int days) => '$days gün seri';
   static const modeStart = 'Başla';
   static const modeMath = 'Matematik modu';
+  static const categoryMath = 'Matematik';
+  static const mathHomeHint = 'Temel ya da ileri, 30 sn';
+  static const mathChoose = 'Hangi matematik?';
+  static const mathRules =
+      'Soru başına 30 saniye. Kafadan, kabaca tahmin et: aralık en fazla '
+      '÷2 … ×2 açılır, isabetli tahmin çok puan getirir. Eksi puan yok.';
+  static const mathBasic = 'Temel';
+  static const mathBasicHint = 'Çarpma, kök, yüzde, faiz, olasılık, geometri…';
+  static const mathAdvanced = 'İleri';
+  static const mathAdvancedHint =
+      'Trigonometri, limit, türev, integral, matris…';
+  static const mathRoundLabel = 'Matematik turu';
+  static const mathSource = 'Hesaplama';
+  static String mathWorking(String working) => 'Çözüm: $working';
+  static const mathCalibration = 'Matematik kalibrasyonu';
   static const modeTournament = 'Turnuva modu';
   static const comingSoon = '(Yakında gelecek)';
   static const noValue = '–';
@@ -710,5 +725,6 @@ String categoryName(QuestionCategory c) => switch (c) {
   QuestionCategory.ottoman => AppStrings.categoryOttoman,
   QuestionCategory.architecture => AppStrings.categoryArchitecture,
   QuestionCategory.art => AppStrings.categoryArt,
+  QuestionCategory.math => AppStrings.categoryMath,
   QuestionCategory.other => AppStrings.categoryOther,
 };

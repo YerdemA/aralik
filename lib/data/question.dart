@@ -22,6 +22,9 @@ enum QuestionCategory {
   architecture('mimari'),
   art('sanat'),
 
+  /// Math mode's generated questions (lib/core/math/); never in the bank.
+  math('matematik'),
+
   /// Fallback for a category this app version does not know yet (added by
   /// a content update). The question stays playable and is shown under
   /// "Diğer" until an app update brings the real category. Never written

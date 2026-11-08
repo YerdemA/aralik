@@ -1,3 +1,7 @@
+import 'package:aralik/features/game/answer_input.dart';
+import 'package:aralik/core/question_timer.dart';
+import 'package:aralik/features/game/game_screen.dart';
+import 'package:aralik/features/math/math_mode_screen.dart';
 import 'package:aralik/core/app_update.dart';
 import 'package:aralik/core/daily.dart';
 import 'package:aralik/core/strings.dart';
@@ -130,17 +134,28 @@ void main() {
     expect(find.text(AppStrings.leaderboard), findsNothing);
   });
 
-  testWidgets('modes still to come are shown but do nothing', (tester) async {
+  testWidgets('without a server the tournament is still to come', (
+    tester,
+  ) async {
     await pumpHome(tester);
-    expect(find.text(AppStrings.modeMath), findsOneWidget);
     expect(find.text(AppStrings.modeTournament), findsOneWidget);
-    expect(find.text(AppStrings.comingSoon), findsNWidgets(2));
+    expect(find.text(AppStrings.comingSoon), findsOneWidget);
+  });
+
+  testWidgets('math mode: pick basic, play with a 30 s clock', (tester) async {
+    await pumpHome(tester);
+    await tester.tap(find.text(AppStrings.categoryMath));
+    await tester.pumpAndSettle();
+    expect(find.byType(MathModeScreen), findsOneWidget);
+    expect(find.text(AppStrings.mathAdvanced), findsOneWidget);
+    await tester.tap(find.text(AppStrings.mathBasic));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 500));
+    expect(find.byType(GameScreen), findsOneWidget);
+    // The clock counts from 30 s (its text depends on the real time).
     expect(
-      find.ancestor(
-        of: find.text(AppStrings.modeMath),
-        matching: find.byType(InkWell),
-      ),
-      findsNothing,
+      find.byWidgetPredicate((w) => w is Countdown && w.limit == mathTimeLimit),
+      findsOneWidget,
     );
   });
 

@@ -101,6 +101,7 @@ int scoreFor({
   required num high,
   required num answer,
   AnswerScale? scale,
+  int floor = minPointsPerQuestion,
 }) {
   final s = intervalScore(
     kind: kind,
@@ -116,7 +117,7 @@ int scoreFor({
           QuestionKind.year => yearPointsPerYear,
         };
   return (maxPointsPerQuestion - k * s).round().clamp(
-    minPointsPerQuestion,
+    floor,
     maxPointsPerQuestion,
   );
 }

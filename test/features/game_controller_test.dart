@@ -1,3 +1,4 @@
+import 'package:aralik/core/answer_scale.dart';
 import 'package:aralik/core/scoring.dart';
 import 'package:aralik/data/question.dart';
 import 'package:aralik/features/game/game_controller.dart';
@@ -161,5 +162,25 @@ void main() {
     expect(pct.interval, (low: 70, high: 100));
     pct.setWidth(0.5);
     expect(pct.interval, (low: 80, high: 100));
+  });
+
+  test('math mode: ÷2 … ×2 at most, nothing below 0', () {
+    final math = GameController(
+      [q('m', 1000, unit: '')],
+      scale: mathScaleOf,
+      minPoints: mathMinPoints,
+    );
+    math.type('1000');
+    math.confirmGuess();
+    math.setWidth(1);
+    expect(math.interval, (low: 500, high: 2000));
+    expect(math.potentialPoints, pointsAtWidest);
+    // Nothing typed when time runs out: 0, not −50.
+    final empty = GameController(
+      [q('m', 1000, unit: '')],
+      scale: mathScaleOf,
+      minPoints: mathMinPoints,
+    );
+    expect(empty.timeOut().points, 0);
   });
 }

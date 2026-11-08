@@ -53,15 +53,27 @@ class RoundAnswer {
 
 /// State of one round (a list of questions answered in order).
 class GameController extends ChangeNotifier {
-  GameController(this.questions, {this.scaled = true})
-    : assert(questions.isNotEmpty);
+  GameController(
+    this.questions, {
+    this.scaled = true,
+    this.scale,
+    this.minPoints = minPointsPerQuestion,
+  }) : assert(questions.isNotEmpty);
+
+  /// Each question's scale by another rule than its own (math mode).
+  final AnswerScale Function(Question)? scale;
+
+  /// The lowest a question scores (also an empty timeout): −50, or 0 in
+  /// math mode.
+  final int minPoints;
 
   /// Whether intervals and points follow each question's scale (the
   /// current rule, answer_scale.dart). False for daily sets of days before
   /// the leaderboard switched rules.
   final bool scaled;
 
-  AnswerScale? get _scale => scaled ? scaleOf(question) : null;
+  AnswerScale? get _scale =>
+      scale?.call(question) ?? (scaled ? scaleOf(question) : null);
 
   /// Longest guess the pad accepts (12 digits ≈ 1 trillion).
   static const maxMagnitudeDigits = 12;
@@ -140,10 +152,13 @@ class GameController extends ChangeNotifier {
   /// The interval as shown and scored. Only valid in the width phase.
   Bounds get interval {
     final g = guess!;
-    if (isPercent) {
-      return percentInterval(g, _width, maxHalf: maxPercentHalfWidth);
-    }
     final scale = _scale;
+    if (isPercent) {
+      final half = scale != null && scale.maxPercentHalf > 0
+          ? scale.maxPercentHalf
+          : maxPercentHalfWidth;
+      return percentInterval(g, _width, maxHalf: half);
+    }
     if (scale == null) {
       return isYear ? yearInterval(g, _width) : magnitudeInterval(g, _width);
     }
@@ -161,6 +176,7 @@ class GameController extends ChangeNotifier {
       high: b.high,
       answer: b.low,
       scale: _scale,
+      floor: minPoints,
     );
   }
 
@@ -187,7 +203,7 @@ class GameController extends ChangeNotifier {
         guess: null,
         low: null,
         high: null,
-        points: minPointsPerQuestion,
+        points: minPoints,
         timedOut: true,
       ),
     );
@@ -206,6 +222,7 @@ class GameController extends ChangeNotifier {
         high: b.high,
         answer: question.answer,
         scale: _scale,
+        floor: minPoints,
       ),
       timedOut: timedOut,
     );

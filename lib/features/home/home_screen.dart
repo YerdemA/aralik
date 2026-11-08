@@ -3,6 +3,9 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
+import '../math/math_mode_screen.dart';
+import '../../core/math/math_question.dart';
+import '../../core/math/math_problem.dart';
 import '../../core/daily.dart';
 import '../../core/question_timer.dart';
 import '../../core/free_play.dart';
@@ -339,6 +342,49 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   });
 
+  /// Math mode: basic or further on, then rounds of five generated
+  /// questions, 30 s each, until "Ana ekran". Answers count in math's own
+  /// calibration only and may come again.
+  Future<void> _playMath() => _guarded(() async {
+    final tier = await Navigator.of(
+      context,
+    ).push<MathTier>(MaterialPageRoute(builder: (_) => const MathModeScreen()));
+    if (tier == null) return;
+    while (mounted) {
+      final round = [
+        for (final p in mathRound(_rng.nextInt(1 << 31), tiers: {tier}))
+          mathQuestion(p),
+      ];
+      if (!mounted) return;
+      final answers = await Navigator.of(context).push<List<RoundAnswer>>(
+        MaterialPageRoute(
+          builder: (_) => GameScreen(
+            questions: round,
+            startQuestion: (_) => DateTime.now(),
+            timeLimit: mathTimeLimit,
+            scale: mathScaleOf,
+            minPoints: mathMinPoints,
+            onLocked: (a) => _stats.recordMathAnswer(hit: a.hit),
+          ),
+        ),
+      );
+      if (!mounted || answers == null) return;
+      Sounds.play(Sfx.done);
+      final action = await Navigator.of(context).push<SummaryAction>(
+        MaterialPageRoute(
+          builder: (_) => SummaryScreen(
+            results: [for (final a in answers) (points: a.points, hit: a.hit)],
+            hits: _stats.mathHits,
+            answered: _stats.mathAnswered,
+            roundLabel: AppStrings.mathRoundLabel,
+            calibrationTitle: AppStrings.mathCalibration,
+          ),
+        ),
+      );
+      if (action != SummaryAction.newRound) return;
+    }
+  });
+
   late final _duels = DuelService(serviceUri: () => _leaderboard?.serviceUri);
   late final _tournaments = TournamentService(
     serviceUri: () => _leaderboard?.serviceUri,
@@ -563,10 +609,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.stretch,
                                 children: [
-                                  const Expanded(
-                                    child: _SoonTile(
-                                      icon: Icons.calculate_rounded,
-                                      title: AppStrings.modeMath,
+                                  Expanded(
+                                    child: _MathTile(
+                                      onTap: _loading ? null : _playMath,
                                     ),
                                   ),
                                   const SizedBox(width: 12),
@@ -1256,6 +1301,48 @@ class _TournamentTile extends StatelessWidget {
   final VoidCallback? onTap;
 
   @override
+  Widget build(BuildContext context) => _SmallModeTile(
+    onTap: onTap,
+    icon: Icons.military_tech_rounded,
+    title: AppStrings.tournament,
+    hint: AppStrings.tournamentHomeHint,
+    colors: const [Palette.cupStart, Palette.cupEnd],
+  );
+}
+
+/// Math mode: basic or further on, 30 s a question.
+class _MathTile extends StatelessWidget {
+  const _MathTile({required this.onTap});
+
+  final VoidCallback? onTap;
+
+  @override
+  Widget build(BuildContext context) => _SmallModeTile(
+    onTap: onTap,
+    icon: Icons.calculate_rounded,
+    title: AppStrings.categoryMath,
+    hint: AppStrings.mathHomeHint,
+    colors: const [Palette.mathStart, Palette.mathEnd],
+  );
+}
+
+/// A small gradient tile under the main ones (tournament, math).
+class _SmallModeTile extends StatelessWidget {
+  const _SmallModeTile({
+    required this.onTap,
+    required this.icon,
+    required this.title,
+    required this.hint,
+    required this.colors,
+  });
+
+  final VoidCallback? onTap;
+  final IconData icon;
+  final String title;
+  final String hint;
+  final List<Color> colors;
+
+  @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final radius = BorderRadius.circular(20);
@@ -1264,10 +1351,10 @@ class _TournamentTile extends StatelessWidget {
       child: Ink(
         decoration: BoxDecoration(
           borderRadius: radius,
-          gradient: const LinearGradient(
+          gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [Palette.cupStart, Palette.cupEnd],
+            colors: colors,
           ),
         ),
         child: InkWell(
@@ -1280,18 +1367,14 @@ class _TournamentTile extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    const Icon(
-                      Icons.military_tech_rounded,
-                      size: 22,
-                      color: Colors.white,
-                    ),
+                    Icon(icon, size: 22, color: Colors.white),
                     const SizedBox(width: 8),
                     Expanded(
                       child: FittedBox(
                         fit: BoxFit.scaleDown,
                         alignment: Alignment.centerLeft,
                         child: Text(
-                          AppStrings.tournament,
+                          title,
                           maxLines: 1,
                           style: theme.textTheme.titleSmall?.copyWith(
                             color: Colors.white,
@@ -1309,7 +1392,7 @@ class _TournamentTile extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  AppStrings.tournamentHomeHint,
+                  hint,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: theme.textTheme.bodySmall?.copyWith(

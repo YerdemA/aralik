@@ -143,13 +143,15 @@ class ResultScreen extends StatelessWidget {
                               const SizedBox(height: 12),
                               _FunFact(text: q.funFact!),
                             ],
-                            const SizedBox(height: 12),
-                            Text(
-                              '${AppStrings.source}: ${q.source}',
-                              style: theme.textTheme.bodySmall?.copyWith(
-                                color: theme.colorScheme.outline,
+                            if (q.source.isNotEmpty) ...[
+                              const SizedBox(height: 12),
+                              Text(
+                                '${AppStrings.source}: ${q.source}',
+                                style: theme.textTheme.bodySmall?.copyWith(
+                                  color: theme.colorScheme.outline,
+                                ),
                               ),
-                            ),
+                            ],
                           ],
                         ),
                       ),

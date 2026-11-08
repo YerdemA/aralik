@@ -18,6 +18,7 @@ import '../../widgets/philosopher.dart';
 class ShareCardData {
   const ShareCardData({
     this.dayIndex,
+    this.label,
     required this.results,
     required this.hits,
     required this.answered,
@@ -25,6 +26,9 @@ class ShareCardData {
 
   /// The daily set's day; null for a free-play round.
   final int? dayIndex;
+
+  /// A round's name on the card instead of "Serbest tur".
+  final String? label;
   final List<QuestionResult> results;
 
   /// All-time calibration counts.
@@ -126,7 +130,7 @@ void paintShareCard(Canvas c, ShareCardData data) {
   );
   _pill(
     c,
-    shareLabel(data.dayIndex),
+    shareLabel(data.dayIndex, label: data.label),
     const Offset(w / 2, 300),
     fill: Colors.white.withValues(alpha: 0.18),
     text: Colors.white,

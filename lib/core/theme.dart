@@ -25,6 +25,10 @@ abstract final class Palette {
   static const cupStart = Color(0xFF0E8A6A);
   static const cupEnd = Color(0xFF0B5F7A);
 
+  /// Math mode: amber to burnt orange.
+  static const mathStart = Color(0xFFD97706);
+  static const mathEnd = Color(0xFF9A3412);
+
   /// Duel: this player in blue, the opponent in red.
   static const duelMe = Color(0xFF2F6FED);
   static const duelOpponent = Color(0xFFE5484D);
@@ -223,6 +227,7 @@ extension CategoryStyle on QuestionCategory {
     QuestionCategory.ottoman => Icons.mosque_rounded,
     QuestionCategory.architecture => Icons.apartment_rounded,
     QuestionCategory.art => Icons.palette_rounded,
+    QuestionCategory.math => Icons.calculate_rounded,
     QuestionCategory.other => Icons.category_rounded,
   };
 
@@ -251,6 +256,8 @@ extension CategoryStyle on QuestionCategory {
         light ? const Color(0xFF4A6572) : const Color(0xFFA9C4D1),
       QuestionCategory.art =>
         light ? const Color(0xFFD1495B) : const Color(0xFFFFADB8),
+      QuestionCategory.math =>
+        light ? const Color(0xFFB45309) : const Color(0xFFFBBF6A),
       QuestionCategory.other =>
         light ? const Color(0xFF5F6368) : const Color(0xFFB0B6BE),
     };

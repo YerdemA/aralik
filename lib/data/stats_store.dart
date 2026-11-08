@@ -31,6 +31,8 @@ class StatsStore extends ChangeNotifier {
   static const _hitsKey = 'hits';
   static const _completedKey = 'completed_days';
   static const _logKey = 'answer_log';
+  static const _mathAnsweredKey = 'math_answered';
+  static const _mathHitsKey = 'math_hits';
   static String _dailyKey(int day) => 'daily_results_$day';
   static String _startedKey(int day) => 'daily_started_$day';
 
@@ -50,6 +52,20 @@ class StatsStore extends ChangeNotifier {
 
   /// All-time intervals that contained the answer.
   int get hits => _hits;
+
+  /// Math mode's own calibration: kept apart from [answered] and [hits]
+  /// (estimating a computation is another skill), and its questions are
+  /// never added to [seenIds] (they may come again).
+  int get mathAnswered => _prefs.getInt(_mathAnsweredKey) ?? 0;
+  int get mathHits => _prefs.getInt(_mathHitsKey) ?? 0;
+
+  Future<void> recordMathAnswer({required bool hit}) async {
+    await Future.wait([
+      _prefs.setInt(_mathAnsweredKey, mathAnswered + 1),
+      if (hit) _prefs.setInt(_mathHitsKey, mathHits + 1),
+    ]);
+    notifyListeners();
+  }
 
   /// Every locked interval since the log was added, oldest first. Older
   /// answers only count in [answered] and [hits].

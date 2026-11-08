@@ -1,6 +1,9 @@
 // Time limit of daily-set questions (pure functions).
 
 /// Time allowed per daily question, from the moment it is first shown.
+/// Math mode: long enough to estimate, too short to work it out exactly.
+const Duration mathTimeLimit = Duration(seconds: 30);
+
 const Duration dailyTimeLimit = Duration(seconds: 15);
 
 /// Below this the countdown turns to the warning colour.

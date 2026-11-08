@@ -16,11 +16,12 @@ import 'strings.dart';
 /// "Kabaca · Serbest tur · 320/500" (out of its own questions' maximum).
 String shareText({
   int? dayIndex,
+  String? label,
   required List<QuestionResult> results,
   required int hits,
   required int answered,
 }) {
-  final title = '${AppStrings.appName} · ${shareLabel(dayIndex)}';
+  final title = '${AppStrings.appName} · ${shareLabel(dayIndex, label: label)}';
   final total = totalPoints(results);
   final max = dayIndex == null
       ? results.length * maxPointsPerQuestion
@@ -36,7 +37,8 @@ String shareText({
   ].join('\n');
 }
 
-/// What the share text and card call the set: "4 Kasım", or "Serbest tur".
-String shareLabel(int? dayIndex) => dayIndex == null
-    ? AppStrings.freeRoundLabel
+/// What the share text and card call the set: "4 Kasım", "Serbest tur",
+/// or a round's own [label] ("Matematik turu").
+String shareLabel(int? dayIndex, {String? label}) => dayIndex == null
+    ? label ?? AppStrings.freeRoundLabel
     : dayLabel(dateOfDay(dayIndex));
