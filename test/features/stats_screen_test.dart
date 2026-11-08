@@ -76,4 +76,13 @@ void main() {
     expect(find.byType(CalibrationChart), findsNothing);
     expect(find.text(AppStrings.calibrationChartEmpty(10)), findsOneWidget);
   });
+
+  testWidgets('math only: its calibration and how many were answered', (
+    tester,
+  ) async {
+    await pumpStats(tester, prefs: {'math_answered': 12, 'math_hits': 9});
+    expect(find.text(AppStrings.statsEmpty), findsNothing);
+    expect(find.text(AppStrings.mathCalibration), findsOneWidget);
+    expect(find.text(AppStrings.mathAnsweredLine(12, 9)), findsOneWidget);
+  });
 }

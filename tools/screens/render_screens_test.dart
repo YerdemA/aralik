@@ -70,6 +70,13 @@ ThemeData _withRoboto(ThemeData t) => t.copyWith(
       ),
     ),
   ),
+  outlinedButtonTheme: OutlinedButtonThemeData(
+    style: (t.outlinedButtonTheme.style ?? const ButtonStyle()).copyWith(
+      textStyle: const WidgetStatePropertyAll(
+        TextStyle(fontFamily: 'Roboto', fontWeight: FontWeight.w700),
+      ),
+    ),
+  ),
   textButtonTheme: TextButtonThemeData(
     style: (t.textButtonTheme.style ?? const ButtonStyle()).copyWith(
       textStyle: const WidgetStatePropertyAll(

@@ -77,6 +77,13 @@ class _MathSection extends StatelessWidget {
           calibrationSummary(stats.mathHits, stats.mathAnswered),
           style: textTheme.bodyLarge,
         ),
+        const SizedBox(height: 4),
+        Text(
+          AppStrings.mathAnsweredLine(stats.mathAnswered, stats.mathHits),
+          style: textTheme.bodyMedium?.copyWith(
+            color: Theme.of(context).colorScheme.onSurfaceVariant,
+          ),
+        ),
       ],
     );
   }

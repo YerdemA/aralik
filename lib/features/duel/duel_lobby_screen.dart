@@ -32,7 +32,7 @@ class DuelLobbyScreen extends StatefulWidget {
   /// Whether today's duels use the scaled rule (see answer_scale.dart).
   final bool scaled;
 
-  /// A math duel's lobby: math rooms and math's random opponents.
+  /// Start with math chosen (the player can switch either way).
   final bool math;
 
   final DuelService service;
@@ -51,6 +51,9 @@ class DuelLobbyScreen extends StatefulWidget {
 }
 
 class _DuelLobbyScreenState extends State<DuelLobbyScreen> {
+  /// Math duel (computed questions) or the bank's; starts as asked.
+  late bool _math = widget.math;
+
   final _code = TextEditingController();
   String? _codeError;
   bool _busy = false;
@@ -84,7 +87,7 @@ class _DuelLobbyScreenState extends State<DuelLobbyScreen> {
     if (name == null || _busy) return;
     setState(() => _busy = true);
     try {
-      final code = await widget.service.createRoom(math: widget.math);
+      final code = await widget.service.createRoom(math: _math);
       await _play(code: code, name: name);
     } on DuelException catch (e) {
       _snack(
@@ -117,7 +120,7 @@ class _DuelLobbyScreenState extends State<DuelLobbyScreen> {
           name: name,
           scaled: widget.scaled,
           pending: widget.pending,
-          math: widget.math,
+          math: _math,
         ),
       ),
     );
@@ -140,11 +143,7 @@ class _DuelLobbyScreenState extends State<DuelLobbyScreen> {
   Widget _build(BuildContext context, String? name) {
     final theme = Theme.of(context);
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          widget.math ? AppStrings.mathDuelTitle : AppStrings.duelTitle,
-        ),
-      ),
+      appBar: AppBar(title: const Text(AppStrings.duelTitle)),
       body: SafeArea(
         child: ListView(
           padding: const EdgeInsets.fromLTRB(20, 8, 20, 24),
@@ -158,6 +157,37 @@ class _DuelLobbyScreenState extends State<DuelLobbyScreen> {
               PlayingAsCard(name: name, onChange: _openSettings),
               const SizedBox(height: 16),
             ],
+            // Which duel: the bank's questions or computed math ones. A
+            // friend's code needs no choice: the room knows its kind.
+            Text(AppStrings.duelWhich, style: theme.textTheme.titleMedium),
+            const SizedBox(height: 10),
+            SegmentedButton<bool>(
+              segments: const [
+                ButtonSegment(
+                  value: false,
+                  icon: Icon(Icons.lightbulb_rounded),
+                  label: Text(AppStrings.duelKindBank),
+                ),
+                ButtonSegment(
+                  value: true,
+                  icon: Icon(Icons.calculate_rounded),
+                  label: Text(AppStrings.duelKindMath),
+                ),
+              ],
+              selected: {_math},
+              showSelectedIcon: false,
+              onSelectionChanged: _busy
+                  ? null
+                  : (choice) => setState(() => _math = choice.single),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              _math ? AppStrings.duelKindMathHint : AppStrings.duelKindBankHint,
+              style: theme.textTheme.bodyMedium?.copyWith(
+                color: theme.colorScheme.onSurfaceVariant,
+              ),
+            ),
+            const SizedBox(height: 16),
             FilledButton.icon(
               onPressed: _busy || name == null ? null : _findOpponent,
               icon: const Icon(Icons.person_search_rounded),

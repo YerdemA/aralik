@@ -346,15 +346,9 @@ class _HomeScreenState extends State<HomeScreen> {
   /// questions, 30 s each, until "Ana ekran". Answers count in math's own
   /// calibration only and may come again.
   Future<void> _playMath() => _guarded(() async {
-    final tier = await Navigator.of(context).push<MathTier>(
-      MaterialPageRoute(
-        builder: (_) => MathModeScreen(
-          onDuel: _leaderboard?.isAvailable == true
-              ? () => _openDuel(math: true)
-              : null,
-        ),
-      ),
-    );
+    final tier = await Navigator.of(
+      context,
+    ).push<MathTier>(MaterialPageRoute(builder: (_) => const MathModeScreen()));
     if (tier == null) return;
     while (mounted) {
       final round = [

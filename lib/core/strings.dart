@@ -38,12 +38,20 @@ abstract final class AppStrings {
   static const mathAdvancedHint =
       'Trigonometri, limit, türev, integral, matris…';
   static const mathRoundLabel = 'Matematik turu';
-  static const mathDuel = 'Düello';
-  static const mathDuelHint = 'Temel ve ileri karışık, rakibe karşı';
+  static const duelWhich = 'Hangi düello?';
+  static const duelKindBank = 'Bilgi';
+  static const duelKindMath = 'Matematik';
+  static const duelKindBankHint = 'Bilgi soruları, soru başına 15 saniye.';
+  static const duelKindMathHint =
+      'Temel ve ileri matematik karışık, soru başına 60 saniye, eksi puan '
+      'yok.';
   static const mathDuelTitle = 'Matematik düellosu';
   static const mathSource = 'Hesaplama';
   static String mathWorking(String working) => 'Çözüm: $working';
   static const mathCalibration = 'Matematik kalibrasyonu';
+  static String mathAnsweredLine(int answered, int hits) =>
+      '$answered soru cevaplandı, $hits isabet';
+  static const duelModeBank = 'Bilgi düellosu';
   static const modeTournament = 'Turnuva modu';
   static const comingSoon = '(Yakında gelecek)';
   static const noValue = '–';
@@ -483,8 +491,7 @@ abstract final class AppStrings {
   static const duelHomeHint = 'Canlı rakibe karşı 5 soru';
   static const duelTitle = 'Düello';
   static const duelIntro =
-      'Aynı 5 soru, aynı anda. Soru başına 15 saniye. '
-      'Kim daha iyi aralık verirse kazanır.';
+      'Aynı 5 soru, aynı anda. Kim daha iyi aralık verirse kazanır.';
   static const duelFindOpponent = 'Rakip bul';
   static const duelWithFriend = 'Arkadaşınla oyna';
   static const duelSearching = 'Rakip aranıyor…';

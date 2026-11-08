@@ -3,6 +3,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
+import '../../data/question.dart';
 import '../../core/duel.dart';
 import '../../core/strings.dart';
 import '../../core/theme.dart';
@@ -11,7 +12,15 @@ import '../../core/theme.dart';
 /// sends out radar rings and a red "?" circles around it, the wait is
 /// counted, and a short note changes every [duelTipEvery].
 class DuelSearchView extends StatefulWidget {
-  const DuelSearchView({super.key, required this.name, this.firstTip});
+  const DuelSearchView({
+    super.key,
+    required this.name,
+    this.firstTip,
+    this.math = false,
+  });
+
+  /// Looking for a math duel's opponent (said above the title).
+  final bool math;
 
   /// The player's display name; its first letter is on the badge.
   final String name;
@@ -61,61 +70,69 @@ class _DuelSearchViewState extends State<DuelSearchView>
     final initial = widget.name.trim().isEmpty
         ? '?'
         : widget.name.trim().characters.first.toUpperCase();
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        const Spacer(),
-        Center(
-          child: SizedBox.square(
-            dimension: 240,
-            child: RepaintBoundary(
-              child: AnimatedBuilder(
-                animation: _radar,
-                builder: (context, child) => CustomPaint(
-                  painter: _RadarPainter(t: _radar.value),
-                  child: child,
+    // The radar gives way on a short screen; the texts and the note keep
+    // their size (about 380 dp with the gaps).
+    return LayoutBuilder(
+      builder: (context, box) => Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          const Spacer(),
+          Center(
+            child: SizedBox.square(
+              dimension: box.maxHeight.isFinite
+                  ? (box.maxHeight - 380).clamp(120.0, 240.0)
+                  : 240,
+              child: RepaintBoundary(
+                child: AnimatedBuilder(
+                  animation: _radar,
+                  builder: (context, child) => CustomPaint(
+                    painter: _RadarPainter(t: _radar.value),
+                    child: child,
+                  ),
+                  child: Center(child: _Badge(letter: initial)),
                 ),
-                child: Center(child: _Badge(letter: initial)),
               ),
             ),
           ),
-        ),
-        const SizedBox(height: 28),
-        Text(
-          AppStrings.duelSearching,
-          style: theme.textTheme.headlineSmall?.copyWith(
-            fontWeight: FontWeight.w800,
-          ),
-          textAlign: TextAlign.center,
-        ),
-        const SizedBox(height: 6),
-        Text(
-          AppStrings.duelSearchingHint,
-          style: theme.textTheme.bodyMedium?.copyWith(
-            color: theme.colorScheme.onSurfaceVariant,
-          ),
-          textAlign: TextAlign.center,
-        ),
-        const SizedBox(height: 12),
-        Center(
-          child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
-            decoration: BoxDecoration(
-              color: Palette.duelMe.withValues(alpha: .12),
-              borderRadius: BorderRadius.circular(99),
+          const SizedBox(height: 28),
+          Center(child: _ModePill(math: widget.math)),
+          const SizedBox(height: 10),
+          Text(
+            AppStrings.duelSearching,
+            style: theme.textTheme.headlineSmall?.copyWith(
+              fontWeight: FontWeight.w800,
             ),
-            child: Text(
-              AppStrings.duelSearchElapsed(_waited),
-              style: theme.textTheme.labelLarge?.copyWith(
-                color: Palette.duelMe,
-                fontFeatures: const [FontFeature.tabularFigures()],
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 6),
+          Text(
+            AppStrings.duelSearchingHint,
+            style: theme.textTheme.bodyMedium?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 12),
+          Center(
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+              decoration: BoxDecoration(
+                color: Palette.duelMe.withValues(alpha: .12),
+                borderRadius: BorderRadius.circular(99),
+              ),
+              child: Text(
+                AppStrings.duelSearchElapsed(_waited),
+                style: theme.textTheme.labelLarge?.copyWith(
+                  color: Palette.duelMe,
+                  fontFeatures: const [FontFeature.tabularFigures()],
+                ),
               ),
             ),
           ),
-        ),
-        const Spacer(),
-        _TipCard(index: tip),
-      ],
+          const Spacer(),
+          _TipCard(index: tip),
+        ],
+      ),
     );
   }
 }
@@ -296,6 +313,46 @@ class _TipCard extends StatelessWidget {
               minHeight: 3,
               color: scheme.tertiary,
               backgroundColor: scheme.tertiary.withValues(alpha: .12),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Which duel the search is for: "Bilgi düellosu" or "Matematik düellosu".
+class _ModePill extends StatelessWidget {
+  const _ModePill({required this.math});
+
+  final bool math;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final colour = math
+        ? QuestionCategory.math.color(theme.brightness)
+        : theme.colorScheme.primary;
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+      decoration: BoxDecoration(
+        color: colour.withValues(alpha: 0.14),
+        borderRadius: BorderRadius.circular(999),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(
+            math ? Icons.calculate_rounded : Icons.lightbulb_rounded,
+            size: 18,
+            color: colour,
+          ),
+          const SizedBox(width: 6),
+          Text(
+            math ? AppStrings.mathDuelTitle : AppStrings.duelModeBank,
+            style: theme.textTheme.labelLarge?.copyWith(
+              color: colour,
+              fontWeight: FontWeight.w800,
             ),
           ),
         ],

@@ -544,7 +544,7 @@ class _DuelScreenState extends State<DuelScreen> {
         ),
       );
     } else if (_searching) {
-      body = DuelSearchView(name: widget.name);
+      body = DuelSearchView(name: widget.name, math: widget.math);
     } else if (_match.phase == DuelPhase.connecting ||
         (widget.isRandom && _match.phase == DuelPhase.waiting)) {
       body = _Message(

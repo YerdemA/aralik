@@ -15,6 +15,9 @@ void main() {
     WidgetTester tester, {
     Map<String, Object> prefs = const {},
   }) async {
+    tester.view.physicalSize = const Size(1080, 2340);
+    tester.view.devicePixelRatio = 3;
+    addTearDown(tester.view.reset);
     SharedPreferences.setMockInitialValues(prefs);
     final settings = await SettingsStore.open();
     final stats = await StatsStore.open();
@@ -46,7 +49,7 @@ void main() {
   ) async {
     await open(tester);
     // Only the room code is typed here, never the name.
-    expect(find.byType(TextField), findsOneWidget);
+    expect(find.byType(TextField, skipOffstage: false), findsOneWidget);
     expect(find.text(AppStrings.duelNameNeeded), findsOneWidget);
     expect(findButton(tester).onPressed, isNull);
     await tester.tap(find.text(AppStrings.duelPickName));
@@ -67,5 +70,43 @@ void main() {
     await tester.pump();
     expect(find.text('Pars'), findsOneWidget);
     expect(find.text(AppStrings.duelNameNeeded), findsNothing);
+  });
+
+  testWidgets('one lobby for both duels: math is a choice at the top', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(1080, 2340);
+    tester.view.devicePixelRatio = 3;
+    addTearDown(tester.view.reset);
+    SharedPreferences.setMockInitialValues({'duel_name': 'Ayşe'});
+    final settings = await SettingsStore.open();
+    final stats = await StatsStore.open();
+    final calls = <String>[];
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: AppTheme.light,
+        home: DuelLobbyScreen(
+          service: DuelService(
+            serviceUri: () => Uri.parse('https://lb.example/'),
+            request: (method, uri, [body]) async {
+              calls.add('$method $uri');
+              // Refused: the lobby stays, nothing else opens.
+              return (status: 503, body: null);
+            },
+          ),
+          repository: QuestionRepository(),
+          stats: stats,
+          settings: settings,
+        ),
+      ),
+    );
+    expect(find.text(AppStrings.duelKindBankHint), findsOneWidget);
+    await tester.tap(find.text(AppStrings.duelKindMath));
+    await tester.pump();
+    expect(find.text(AppStrings.duelKindMathHint), findsOneWidget);
+    await tester.tap(find.text(AppStrings.duelCreate));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 500));
+    expect(calls, ['POST https://lb.example/v1/duel/rooms?mode=math']);
   });
 }
