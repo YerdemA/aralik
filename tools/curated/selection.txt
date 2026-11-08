@@ -876,3 +876,54 @@
 2|1908||en:The Kiss (Klimt)|1908|Klimt'in Öpücük tablosu hangi yıl tamamlanmıştır?
 2|1906||tr:Kaplumbağa Terbiyecisi|1906|Osman Hamdi Bey'in Kaplumbağa Terbiyecisi tablosunun ilk versiyonu hangi yıl yapılmıştır?
 2|1504||en:David (Michelangelo)|1504|Michelangelo'nun Davut heykeli hangi yıl tamamlanmıştır?
+
+# brands_world|şirketler
+1|1976||en:Apple Inc.|founded|Apple hangi yıl kurulmuştur?
+1|1975||en:Microsoft|founded|Microsoft hangi yıl kurulmuştur?
+1|1998||en:Google|founded|Google hangi yıl kurulmuştur?
+2|1938||en:Samsung|founded|Samsung hangi yıl kurulmuştur?
+2|1946||en:Sony|founded|Sony hangi yıl kurulmuştur?
+2|1937||en:Toyota|founded|Toyota hangi yıl kurulmuştur?
+2|1903||en:Ford Motor Company|founded|Ford Motor Company hangi yıl kurulmuştur?
+2|1939||en:Ferrari|founded|Ferrari hangi yıl kurulmuştur?
+2|1943||en:IKEA|founded|IKEA hangi yıl kurulmuştur?
+2|1932||en:Lego Group|founded|LEGO hangi yıl kurulmuştur?
+3|1889||en:Nintendo|founded|Nintendo hangi yıl kurulmuştur?
+3|1865||en:Nokia|nokia|Nokia, bir kâğıt hamuru fabrikası olarak hangi yıl kurulmuştur?
+2|1949||en:Adidas|adidas|Adidas hangi yıl kurulmuştur?
+2|1948||en:Puma (brand)|founded|Puma hangi yıl kurulmuştur?
+2|1971||en:Starbucks|founded|Starbucks hangi yıl kurulmuştur?
+1|1997||en:Netflix|founded|Netflix hangi yıl kurulmuştur?
+1|2010||en:Instagram|launched|Instagram hangi yıl kullanıma açılmıştır?
+1|2009||en:WhatsApp|whatsapp|WhatsApp hangi yıl kullanıma açılmıştır?
+2|2006||en:Spotify|founded|Spotify hangi yıl kurulmuştur?
+2|1923||en:The Walt Disney Company|founded|Walt Disney şirketi hangi yıl kurulmuştur?
+3|1864||en:Heineken|founded|Gerard Heineken, şirketin temeli olan bira fabrikasını hangi yıl satın almıştır?
+3|1889||en:Michelin|founded|Michelin hangi yıl kurulmuştur?
+3|1905||en:Rolex|founded|Rolex hangi yıl kurulmuştur?
+2|1975||en:Zara (retailer)|zara|Zara hangi yıl kurulmuştur?
+2|1947||en:H&M|founded|H&M hangi yıl kurulmuştur?
+2|1964||en:Nutella|1964|Nutella hangi yıl piyasaya çıkmıştır?
+2|2006||en:Twitter|launched|Twitter hangi yıl kullanıma açılmıştır?
+
+# brands_tr|şirketler
+2|1955||tr:Arçelik|kurul|Arçelik hangi yıl kurulmuştur?
+2|1926||tr:Koç Holding|koç|Koç Topluluğu'nun temeli hangi yıl atılmıştır?
+2|1967||tr:Sabancı Holding|kurul|Sabancı Holding hangi yıl kurulmuştur?
+2|1962||tr:Eti (şirket)|kurul|Eti hangi yıl kurulmuştur?
+1|1994||tr:Turkcell|turkcell|Turkcell, Türkiye'nin ilk GSM şebekesi olarak hangi yıl hizmete başlamıştır?
+2|1995||tr:BİM|kurul|BİM hangi yıl kurulmuştur?
+2|1954||tr:Migros Ticaret|migros|Migros Türkiye hangi yıl kurulmuştur?
+2|1924||tr:Türkiye İş Bankası|kurul|Türkiye İş Bankası hangi yıl kurulmuştur?
+2|1948||tr:Akbank|kurul|Akbank hangi yıl kurulmuştur?
+2|1946||tr:Garanti BBVA|kurul|Garanti Bankası hangi yıl kurulmuştur?
+2|1944||tr:Yapı Kredi|kurul|Yapı Kredi hangi yıl kurulmuştur?
+2|1968||tr:Tofaş|kurul|Tofaş hangi yıl kurulmuştur?
+1|2018||tr:Togg|kurul|Togg hangi yıl kurulmuştur?
+1|2010||tr:Trendyol|kurul|Trendyol hangi yıl kurulmuştur?
+1|2015||tr:Getir|kurul|Getir hangi yıl kurulmuştur?
+2|1975||tr:Aselsan|kurul|Aselsan hangi yıl kurulmuştur?
+3|1935||tr:Şişecam|kurul|Şişecam hangi yıl kurulmuştur?
+3|1777||tr:Hacı Bekir|1777|Hacı Bekir şekercisi hangi yıl kurulmuştur?
+2|1840||tr:PTT|kurul|Posta Nezareti (bugünkü PTT) hangi yıl kurulmuştur?
+2|2002||tr:Simit Sarayı|kurul|Simit Sarayı hangi yıl kurulmuştur?
