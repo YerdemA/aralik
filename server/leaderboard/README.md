@@ -11,11 +11,13 @@ Uygulamaya dahil değildir.
 | `POST /v1/submit` | `{id, token, day, answers: [{q, low, high}] × 5, device}` | `{day, points, hits, rank, players}` |
 | `GET /v1/day/{n}?player={id}` | | `{day, players, limit, top: [...], me}` |
 | `POST /v1/delete` | `{id, token}` | `{deleted: true}` |
-| `POST /v1/duel/rooms` | | `{code}` (201) |
-| `GET /v1/duel/rooms/{code}?v=1&name=…&bank=N` | WebSocket | odanın mesajları |
-| `GET /v1/duel/random?v=1&name=…&bank=N` | WebSocket | `searching`, sonra `matched` (oda kodu) |
+| `POST /v1/duel/rooms[?mode=math]` | | `{code}` (201) |
+| `GET /v1/duel/rooms/{code}?v=1&name=…&bank=N&hb=1&rm=1&math=1` | WebSocket | odanın mesajları |
+| `GET /v1/duel/random?v=1&name=…&bank=N[&mode=math]` | WebSocket | `searching`, sonra `matched` (oda kodu) |
 | `POST /v1/tournament/rooms` | | `{code}` (201) |
 | `GET /v1/tournament/rooms/{code}?v=1&name=…&bank=N` | WebSocket | turnuva odasının mesajları |
+| `GET /v1` | | `{ok: true}` |
+| `GET /v1/echo` | WebSocket | `{"t":"ping"}` → `{"t":"pong"}`, 30 sn (uygulamanın Bağlantı testi) |
 
 Düello ve turnuva bağlantılarına `&rejoin=ANAHTAR` eklenirse kopan oyuncu oyuna geri döner (anahtar `start` / `welcome` mesajında gelir).
 
@@ -58,6 +60,11 @@ aramak için bağlantıyı kesmek bir şey kazandırmaz), açılan soru ise kopa
 rakip kazanır; ikisinin de biterse oda silinir. Sessiz bağlantılar `src/liveness.js` ile 10 sn'de fark edilir. Aynı oyuncunun eski, ölü bağlantısı
 yenisi gelince kapatılır. Turnuva: oyun durmaz; kopan oyuncu maç bitene kadar anahtarla döner (`resume`), dönmezse `left`.
 
+## Web sitesi
+`kabaca.app` ve `www.kabaca.app` (→ `kabaca.app`) aynı Worker'dan `public/` klasörünü sunar (Workers Static Assets, `ASSETS`,
+`run_worker_first`; `src/landing.js`). Tek sayfa (`public/index.html`), üstte TR / EN, çerez ve script dışı istek yok.
+`api.kabaca.app` yalnızca API'dir. Görseller `play-store/screenshots/` kökündeki ham görüntülerden ffmpeg ile 540 px WebP.
+
 ## Düello odaları
 Her oda kodundan türetilen bir Durable Object'tir (`src/duel_room.js`, SQLite tabanlı, ücretsiz katmanda çalışır).
 Rastgele rakip arayanlar önce tek bir lobiye bağlanır (`src/duel_lobby.js`): lobi bekleyen iki oyuncu için oda açar,
@@ -65,6 +72,16 @@ ikisine de kodu gönderir; uygulamalar sonra odaya arkadaş gibi katılır. 2 da
 Kurallar `src/duel.js` içinde saf fonksiyonlardır; protokol dosyanın başında yazar. Giriş noktası `src/worker.js`.
 `npm run deploy`, `wrangler.toml` içindeki göçlerle (`v1-duel`, `v2-duel-lobby`) sınıfları oluşturur. Ek kurulum gerekmez.
 Yerel deneme: `npm run dev`, sonra `ws://127.0.0.1:8787/v1/duel/rooms/KOD?v=1&name=Ayse&bank=1000`.
+
+**Rövanş:** sonuna kadar oynanan düellodan sonra (iki uygulama da `rm=1` dediyse) `{"t":"rematch"}` / `{"t":"rematch_no"}`;
+ikisi isteyince aynı oda yeni `start` (`round` + 1) ve o odada sorulmamış sorularla başlar. Oda bitişten 60 sn sonra silinir,
+istek gelince en az 30 sn bekler.
+
+**Matematik düellosu** (`mode=math`, ayrı lobi `lobby-math`): sorular hesapla üretilir, kimlik `math:<konu>:<zorluk>:<tohum>`.
+`src/math.js`, uygulamanın Dart üreteçlerinin (`lib/core/math/`) cevap kısmının birebir karşılığıdır (mulberry32, aynı çekim
+sırası). Soru başına 30 sn, puan ÷2 … ×2 ölçeği ve taban 0. `math=1` demeyen uygulama `version` hatası alır.
+`test/math_vectors.json` (3.240 kimlik ve cevap) uygulamanın `tools/math/write_math_vectors_test.dart` aracıyla yazılır ve iki
+tarafta test edilir; üreteç değişirse ikisi birlikte değişir. Zor asal sayımları `PRIME_COUNTS` tablosundan gelir.
 
 ## Turnuva odaları
 `POST /v1/tournament/rooms` bir oda açar ve kodu döner; `GET /v1/tournament/rooms/KOD?v=1&name=…&bank=N` WebSocket ile katılır.
@@ -115,7 +132,7 @@ npx wrangler d1 execute kabaca-leaderboard --remote --command "DELETE FROM score
 ```
 
 ## Testler
-`npm test`: Node'un yerleşik test aracı ve `node:sqlite` ile (Node 22.5+, ek paket yok), 40 test.
+`npm test`: Node'un yerleşik test aracı ve `node:sqlite` ile (Node 22.5+, ek paket yok), 86 test.
 Gerçek Workers ortamında yerel deneme: `npx wrangler d1 execute kabaca-leaderboard --local --file=schema.sql`, sonra `npm run dev`.
 `test/scoring_vectors.json`, uygulamanın `test/core/scoring_vectors_test.dart` testiyle ortaktır: puan formülü
 iki tarafta birlikte değişmelidir.

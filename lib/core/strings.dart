@@ -43,7 +43,7 @@ abstract final class AppStrings {
   static const duelKindMath = 'Matematik';
   static const duelKindBankHint = 'Bilgi soruları, soru başına 15 saniye.';
   static const duelKindMathHint =
-      'Temel ve ileri matematik karışık, soru başına 60 saniye, eksi puan '
+      'Temel ve ileri matematik karışık, soru başına 30 saniye, eksi puan '
       'yok.';
   static const mathDuelTitle = 'Matematik düellosu';
   static const mathSource = 'Hesaplama';

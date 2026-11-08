@@ -16,14 +16,17 @@ import 'package:flutter_test/flutter_test.dart';
 
 /// Raw shot and headline of each store screenshot, in store order.
 const _shots = [
-  ('01-ana-ekran', 'Her gün 5 yeni soru'),
-  ('02-tahmin', 'Önce en iyi tahminini yaz'),
-  ('03-aralik', '%90 emin olduğun\naralığı seç'),
-  ('04-sonuc', 'Aralık ne kadar darsa\no kadar çok puan'),
-  ('05-duello', 'Canlı düello:\naynı soru, iki aralık'),
-  ('06-duello-sonuc', 'Kim daha iyi tahmin ediyor?'),
-  ('07-paylasim-karti', 'Skorunu hikâyende paylaş'),
-  ('08-istatistikler', 'Gerçekten %90 emin misin?\nKalibrasyonunu gör'),
+  ('01-ana-ekran', 'Her gün 5 yeni soru,\ndüello, matematik, turnuva'),
+  ('02-aralik', '%90 emin olduğun\naralığı seç'),
+  ('03-sonuc', 'Aralık ne kadar darsa\no kadar çok puan'),
+  ('04-duello', 'Canlı düello:\naynı soru, iki aralık'),
+  ('05-rovans', 'Kaybettin mi?\nTek dokunuşla rövanş'),
+  ('06-matematik', 'Matematik modu:\ntemel ya da ileri'),
+  (
+    '07-matematik-soru',
+    'Trigonometri, türev, olasılık:\nkafadan kabaca tahmin',
+  ),
+  ('08-turnuva', 'Turnuva: 3–8 kişi,\naynı sorular aynı anda'),
 ];
 
 const _sun = Palette.sun;

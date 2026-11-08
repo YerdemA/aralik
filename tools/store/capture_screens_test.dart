@@ -11,6 +11,12 @@ import 'dart:io';
 import 'dart:math' as math;
 import 'dart:ui' as ui;
 
+import 'package:aralik/features/tournament/tournament_screen.dart';
+import 'package:aralik/features/math/math_mode_screen.dart';
+import 'package:aralik/data/tournament_client.dart';
+import 'package:aralik/core/question_timer.dart';
+import 'package:aralik/core/math/math_question.dart';
+import 'package:aralik/core/math/math_problem.dart';
 import 'package:aralik/core/answer_scale.dart';
 import 'package:aralik/core/daily.dart';
 import 'package:aralik/core/scoring.dart';
@@ -25,8 +31,6 @@ import 'package:aralik/data/stats_store.dart';
 import 'package:aralik/features/duel/duel_screen.dart';
 import 'package:aralik/features/game/game_screen.dart';
 import 'package:aralik/features/home/home_screen.dart';
-import 'package:aralik/features/result/summary_screen.dart';
-import 'package:aralik/features/stats/stats_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
@@ -276,15 +280,11 @@ void main() {
       ),
     );
 
-    // 01 Home, and 09 the same in the dark theme.
-    for (final (name, dark) in [
-      ('01-ana-ekran', false),
-      ('09-koyu-tema', true),
-    ]) {
-      await tester.pumpWidget(_app(home(), dark: dark));
-      await tester.pump(const Duration(seconds: 2));
-      await _snap(tester, name);
-    }
+    // 01 Home (the seeded stats make this a player from before the
+    // first-launch tour: it is not shown).
+    await tester.pumpWidget(_app(home()));
+    await tester.pump(const Duration(seconds: 2));
+    await _snap(tester, '01-ana-ekran');
 
     // 02 Guess, 03 interval, 04 result: a daily question with its clock.
     final agri = _byText(bank, 'Ağrı Dağı');
@@ -307,7 +307,6 @@ void main() {
       await tester.pump();
     }
     await tester.pump(const Duration(milliseconds: 500));
-    await _snap(tester, '02-tahmin');
 
     await tester.tap(find.text(AppStrings.next));
     await tester.pump(const Duration(milliseconds: 500));
@@ -315,12 +314,12 @@ void main() {
     final slider = find.byType(Slider);
     await tester.drag(slider, const Offset(-115, 0));
     await tester.pump(const Duration(milliseconds: 500));
-    await _snap(tester, '03-aralik');
+    await _snap(tester, '02-aralik');
 
     await tester.tap(find.text(AppStrings.lock));
     await tester.pump();
     await tester.pump(const Duration(seconds: 2));
-    await _snap(tester, '04-sonuc');
+    await _snap(tester, '03-sonuc');
 
     // 05 A revealed duel question, 06 the podium: real intervals, points
     // by the real rule.
@@ -399,7 +398,7 @@ void main() {
       await tester.pump();
       if (i == 0) {
         await tester.pump(const Duration(seconds: 1));
-        await _snap(tester, '05-duello');
+        await _snap(tester, '04-duello');
       }
     }
     say({
@@ -407,6 +406,7 @@ void main() {
       'totals': totals,
       'winner': totals[0] >= totals[1] ? 0 : 1,
       'reason': 'done',
+      'rematch': true,
     });
     for (var i = 0; i < 3; i++) {
       await tester.runAsync(() => Future<void>.delayed(Duration.zero));
@@ -416,34 +416,121 @@ void main() {
     for (var i = 0; i < 5; i++) {
       await tester.pump(const Duration(milliseconds: 400));
     }
-    await _snap(tester, '06-duello-sonuc');
+    // 05 The podium, the opponent asking for a rematch.
+    say({'t': 'rematch', 'seat': 1});
+    for (var i = 0; i < 4; i++) {
+      await tester.pump(const Duration(milliseconds: 250));
+    }
+    await _snap(tester, '05-rovans');
 
-    // 07 The share sheet of a finished day.
-    final day = today - 1;
+    // 06 Math mode: basic or further on.
+    await tester.pumpWidget(_app(const MathModeScreen()));
+    await tester.pump(const Duration(seconds: 1));
+    await _snap(tester, '06-matematik');
+
+    // 07 A math question (further on) with its interval, 60 s clock.
+    final ladder = mathQuestion(generateMath(MathTopic.trigonometry, 1, 2026));
+    final mathShown = DateTime(2026, 11, 8, 9);
+    var mathClock = mathShown.add(const Duration(seconds: 9));
     await tester.pumpWidget(
       _app(
-        SummaryScreen(
-          results: stats.dailyResults(day),
-          hits: stats.hits,
-          answered: stats.answered,
-          dayIndex: day,
+        GameScreen(
+          questions: [ladder, bank[1], bank[2], bank[3]],
+          alreadyAnswered: 1,
+          startQuestion: (_) => mathShown,
+          now: () => mathClock,
+          timeLimit: mathTimeLimit,
+          scale: mathScaleOf,
+          minPoints: mathMinPoints,
         ),
       ),
     );
-    await tester.pump(const Duration(seconds: 2));
-    await tester.tap(find.text(AppStrings.share));
-    // The card image is drawn off screen, outside the fake clock.
-    for (var i = 0; i < 20; i++) {
-      await tester.runAsync(
-        () => Future<void>.delayed(const Duration(milliseconds: 100)),
-      );
-      await tester.pump(const Duration(milliseconds: 100));
+    await tester.pump();
+    final guess = (ladder.answer * 1.08).round().toString();
+    for (final key in guess.split('')) {
+      await tester.tap(find.text(key).last);
+      await tester.pump();
     }
-    await _snap(tester, '07-paylasim-karti');
+    await tester.tap(find.text(AppStrings.next));
+    await tester.pump(const Duration(milliseconds: 500));
+    mathClock = mathShown.add(const Duration(seconds: 21));
+    await tester.drag(find.byType(Slider), const Offset(-60, 0));
+    await tester.pump(const Duration(milliseconds: 500));
+    await _snap(tester, '07-matematik-soru');
 
-    // 08 Statistics.
-    await tester.pumpWidget(_app(StatsScreen(stats: stats, today: today)));
-    await tester.pump(const Duration(seconds: 2));
-    await _snap(tester, '08-istatistikler');
+    // 08 A tournament question revealed: five intervals, best first.
+    final cupChannel = _Channel();
+    void tell(Map<String, Object?> m) => cupChannel.incoming.add(jsonEncode(m));
+    const names = ['Ayşe', 'Bora', 'Cem', 'Deniz', 'Ece'];
+    final cupQuestion = _byText(bank, 'Galata Kulesi');
+    await tester.pumpWidget(
+      _app(
+        TournamentScreen(
+          service: TournamentService(
+            serviceUri: () => Uri.parse('https://lb.example/'),
+            connect: (_) async => cupChannel,
+          ),
+          repository: repository,
+          stats: stats,
+          code: 'K7M2P',
+          name: 'Ayşe',
+        ),
+      ),
+    );
+    await tester.runAsync(() => Future<void>.delayed(Duration.zero));
+    await tester.pump();
+    final players = [
+      for (final (k, n) in names.indexed) {'id': k + 1, 'name': n},
+    ];
+    tell({'t': 'welcome', 'you': 1});
+    tell({
+      't': 'room',
+      'code': 'K7M2P',
+      'host': 1,
+      'count': 5,
+      'players': players,
+      'min': 3,
+      'max': 8,
+    });
+    tell({
+      't': 'start',
+      'questions': [
+        cupQuestion.id,
+        for (final q in bank.skip(10).take(4)) q.id,
+      ],
+      'questionMs': 15000,
+      'players': players,
+    });
+    tell({'t': 'question', 'i': 0, 'ms': 15000});
+    await tester.pump(const Duration(milliseconds: 400));
+    final a = cupQuestion.answer.round();
+    Map<String, Object?> range(int id, int low, int high) {
+      final points = scoreFor(
+        kind: cupQuestion.kind,
+        low: low,
+        high: high,
+        answer: cupQuestion.answer,
+        scale: scaleOf(cupQuestion),
+      );
+      final hit = low <= cupQuestion.answer && cupQuestion.answer <= high;
+      return {'id': id, 'low': low, 'high': high, 'points': points, 'hit': hit};
+    }
+
+    tell({
+      't': 'reveal',
+      'i': 0,
+      'results': [
+        range(1, a - 5, a + 8),
+        range(2, a - 20, a + 25),
+        range(3, a + 15, a + 50),
+        range(4, a - 30, a + 10),
+        range(5, a - 9, a + 12),
+      ],
+      'ms': 12000,
+    });
+    for (var i = 0; i < 4; i++) {
+      await tester.pump(const Duration(milliseconds: 300));
+    }
+    await _snap(tester, '08-turnuva');
   }, timeout: const Timeout(Duration(minutes: 3)));
 }

@@ -609,14 +609,14 @@ void main() {
       'you': 0,
       'names': ['Ayşe', 'Bora'],
       'questions': [id],
-      'questionMs': 60000,
+      'questionMs': 30000,
     });
-    say({'t': 'question', 'i': 0, 'ms': 60000});
+    say({'t': 'question', 'i': 0, 'ms': 30000});
     await settle();
     expect(find.text(problem.text), findsOneWidget);
     expect(find.text(AppStrings.duelMissingQuestions), findsNothing);
     // Time runs out with nothing typed: 0 here, never −50; math stats.
-    clock = clock.add(const Duration(seconds: 61));
+    clock = clock.add(const Duration(seconds: 31));
     await tester.pump(const Duration(seconds: 1));
     await settle();
     final lock = jsonDecode(channel.sent.last) as Map<String, dynamic>;

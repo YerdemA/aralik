@@ -196,9 +196,7 @@
   .m-board { background: var(--sun); color: var(--on-sun); }
   .m-board p { color: rgba(43,33,0,.8); }
   .m-board .icon { background: rgba(43,33,0,.12); }
-  .m-math { background: var(--panel); color: var(--muted); border: 2px dashed var(--line); }
-  .m-math p { color: var(--muted); }
-  .m-math .icon { background: var(--panel-soft); }
+  .m-math { background: linear-gradient(135deg, #D97706, #9A3412); }
   @media (max-width: 860px) { .modes { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 520px) { .modes { grid-template-columns: 1fr; } .mode { min-height: 160px; } }
 
@@ -255,6 +253,7 @@
     <nav class="nav">
       <a href="#nasil" data-i18n="navHow">Nasıl oynanır</a>
       <a href="#modlar" data-i18n="navModes">Modlar</a>
+      <a href="#matematik" data-i18n="navMath">Matematik</a>
       <a href="#puan" data-i18n="navScore">Puan</a>
       <a href="#gizlilik" data-i18n="navPrivacy">Gizlilik</a>
     </nav>
@@ -347,12 +346,12 @@
       <div class="mode m-duel">
         <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 21h-1l1-7H7.5c-.6 0-.6-.3-.4-.7L13 3h1l-1 7h3.5c.5 0 .6.3.4.7L11 21z"/></svg></div>
         <h3 data-i18n="mDuelT">Düello</h3>
-        <p data-i18n="mDuelP">Rastgele bir rakiple ya da oda koduyla arkadaşınla canlı 5 soru. Her sorudan sonra iki aralık yan yana açılır.</p>
+        <p data-i18n="mDuelP">Bilgi ya da matematik: rastgele bir rakiple ya da oda koduyla arkadaşınla canlı 5 soru. Bitince tek dokunuşla rövanş.</p>
       </div>
       <div class="mode m-round">
         <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.6 6.6c-1.4 0-2.7.6-4.2 1.9L12 10.6 10.5 12l-2.3 2c-1 .9-1.7 1.3-2.8 1.3a3.3 3.3 0 0 1 0-6.6c1.1 0 1.8.4 2.9 1.4l.8.7 1.5-1.3-.9-.8C8.3 7.5 7 6.6 5.4 6.6a5.4 5.4 0 0 0 0 10.8c1.4 0 2.7-.6 4.2-1.9l2.4-2.1 1.5-1.4 2.3-2c1-.9 1.7-1.3 2.8-1.3a3.3 3.3 0 0 1 0 6.6c-1.1 0-1.8-.4-2.9-1.4l-.8-.7-1.5 1.3.9.8c1.4 1.3 2.7 2.2 4.3 2.2a5.4 5.4 0 0 0 0-10.8z"/></svg></div>
         <h3 data-i18n="mRoundT">Bir tur at</h3>
-        <p data-i18n="mRoundP">Sınırsız 5'erli tur. Daha önce gördüğün sorular bir daha gelmez.</p>
+        <p data-i18n="mRoundP">Sınırsız 5'erli tur. Daha önce gördüğün sorular bir daha gelmez; turunu da paylaşabilirsin.</p>
       </div>
       <div class="mode m-cup">
         <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11.4V3H8v8.4c0 .4.2.7.5.9l3.5 2.1-.8 1.9-2.7.2 2.1 1.8-.6 2.7 2.3-1.4 2.3 1.4-.6-2.7 2.1-1.8-2.7-.2-.8-1.9 3.5-2.1c.3-.2.5-.5.5-.9zM13 12.2l-1 .6-1-.6V4h2v8.2z"/></svg></div>
@@ -366,8 +365,24 @@
       </div>
       <div class="mode m-math">
         <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-5.9 4.1 1.1-1.1 1.4 1.4 1.4-1.4 1.1 1.1-1.4 1.4 1.4 1.4-1.1 1.1-1.4-1.4-1.4 1.4-1.1-1.1 1.4-1.4-1.4-1.4zM6.3 7.7h5v1.5h-5V7.7zM11.5 16h-2v2H8v-2H6v-1.5h2v-2h1.5v2h2V16zm6.2 1.3h-5v-1.5h5v1.5zm0-2.5h-5v-1.5h5v1.5z"/></svg></div>
-        <h3 data-i18n="mMathT">Matematik modu</h3>
-        <p data-i18n="mMathP">Yakında: hesapla üretilen, hiç tükenmeyen tahmin soruları.</p>
+        <h3 data-i18n="mMathT">Matematik</h3>
+        <p data-i18n="mMathP">Temel ya da ileri, 27 konu. Hesapla üretilen, hiç tükenmeyen sorular; eksi puan yok.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="matematik">
+    <div class="split">
+      <img class="shot" src="/img/math-question.webp" width="540" height="1200" loading="lazy" alt="Matematik sorusu: merdivenin yüksekliği, aralık 480 – 760 cm" data-i18n-alt="altMathQ">
+      <div>
+        <div class="eyebrow" data-i18n="mathEyebrow">Matematik modu</div>
+        <h2 data-i18n="mathTitle">Kafadan, kabaca tahmin.</h2>
+        <p class="intro" data-i18n="mathIntro">438 × 60 kaç? √49.938? 8 metrelik merdiven 45° açıyla dayanırsa kaç cm yükselir? Sorular hesapla üretilir; cevap kaynaktan değil, sorunun içindeki sayılardan gelir. Sonuçta çözümü de görürsün.</p>
+        <ul class="facts">
+          <li><b data-i18n="mf1Title">Temel</b><span data-i18n="mf1Text">Çarpma, üs, kök, faktöriyel, kombinasyon, faiz, yüzde, birim, geometri, olasılık, asal sayılar.</span></li>
+          <li><b data-i18n="mf2Title">İleri</b><span data-i18n="mf2Text">Trigonometri, limit, türev, integral, logaritma, diziler, istatistik, matris, karmaşık sayılar, vektörler.</span></li>
+          <li><b data-i18n="mf3Title">Kurallar</b><span data-i18n="mf3Text">Soru başına 60 saniye (düelloda 30). Aralık en fazla ÷2 … ×2 açılır, isabetli tahmin çok puan getirir, eksi puan yok.</span></li>
+        </ul>
       </div>
     </div>
   </section>
@@ -375,12 +390,13 @@
   <section id="galeri" aria-label="Ekran görüntüleri">
     <div class="eyebrow" data-i18n="galEyebrow">Uygulamadan</div>
     <h2 data-i18n="galTitle">Kupayı kim kaldıracak?</h2>
-    <p class="intro" data-i18n="galIntro">Düelloda kazanan filozof defne tacını takar, kaybeden beyaz bayrağı sallar. Günün skorunu sevimli bir kartla paylaşırsın.</p>
+    <p class="intro" data-i18n="galIntro">Düelloda kazanan filozof defne tacını takar, kaybeden beyaz bayrağı sallar ve rövanş ister. Turnuvada herkesin aralığı yan yana açılır.</p>
     <div class="gallery">
       <figure><img src="/img/duel.webp" width="540" height="1200" loading="lazy" alt="Düello: iki oyuncunun aralıkları yan yana" data-i18n-alt="altDuel"><figcaption data-i18n="capDuel">Düelloda iki aralık yan yana</figcaption></figure>
-      <figure><img src="/img/duel-end.webp" width="540" height="1200" loading="lazy" alt="Düello sonu: Kazandın!" data-i18n-alt="altDuelEnd"><figcaption data-i18n="capDuelEnd">Kürsüde filozoflar</figcaption></figure>
+      <figure><img src="/img/rematch.webp" width="540" height="1200" loading="lazy" alt="Düello sonu: rakip rövanş istiyor" data-i18n-alt="altRematch"><figcaption data-i18n="capRematch">Kürsü ve rövanş</figcaption></figure>
+      <figure><img src="/img/cup.webp" width="540" height="1200" loading="lazy" alt="Turnuva: beş oyuncunun aralıkları puana göre sıralı" data-i18n-alt="altCup"><figcaption data-i18n="capCup">Turnuvada herkesin aralığı</figcaption></figure>
+      <figure><img src="/img/math.webp" width="540" height="1200" loading="lazy" alt="Matematik modu: temel ya da ileri" data-i18n-alt="altMath"><figcaption data-i18n="capMath">Matematik: temel ya da ileri</figcaption></figure>
       <figure><img src="/img/share.webp" width="540" height="1200" loading="lazy" alt="Paylaşım kartı: 340 / 500" data-i18n-alt="altShare"><figcaption data-i18n="capShare">Hikâyede paylaşılacak kart</figcaption></figure>
-      <figure><img src="/img/dark.webp" width="540" height="1200" loading="lazy" alt="Koyu tema ana ekran" data-i18n-alt="altDark"><figcaption data-i18n="capDark">Koyu tema</figcaption></figure>
     </div>
     <p class="note" data-i18n="galNote" hidden></p>
   </section>
@@ -439,7 +455,7 @@ Kalibrasyon %80</div>
   var en = {
     _title: 'Kabaca · Daily estimation game',
     _desc: 'Kabaca is a daily estimation game in Turkish. Answer numeric questions not with a single number but with a range you are 90% sure of. For Android.',
-    navHow: 'How to play', navModes: 'Modes', navScore: 'Scoring', navPrivacy: 'Privacy',
+    navHow: 'How to play', navModes: 'Modes', navMath: 'Math', navScore: 'Scoring', navPrivacy: 'Privacy',
     pill: '🔥 <b>Every day</b> 5 new questions',
     title: 'Not a number. Guess a <em>range</em>.',
     lead: 'Kabaca is a daily estimation game for the 5–10 minutes you spend waiting. You answer numeric questions with a range you are 90% sure of. If the range holds the answer you score, and the narrower it is, the more you get.',
@@ -467,14 +483,23 @@ Kalibrasyon %80</div>
     modesTitle: 'Alone, head to head, or as a crowd.',
     modesIntro: 'The daily set is the same for everyone. When you finish it, you don’t have to stop.',
     mDailyT: 'Daily set', mDailyP: 'Everyone gets the same 5 questions on the same day: 2 easy, 2 medium, 1 hard. Keep your streak going.',
-    mDuelT: 'Duel', mDuelP: 'Five live questions against a random opponent, or a friend with a room code. After each question both ranges open side by side.',
-    mRoundT: 'Play a round', mRoundP: 'Unlimited rounds of five. Questions you have already seen never come back.',
+    mDuelT: 'Duel', mDuelP: 'Trivia or math: five live questions against a random opponent, or a friend with a room code. A rematch is one tap away.',
+    mRoundT: 'Play a round', mRoundP: 'Unlimited rounds of five. Questions you have already seen never come back, and you can share your round.',
     mCupT: 'Tournament', mCupP: 'Open a room for 3–8 players and share the code. 5 or 10 questions; standings and hits at the end.',
     mBoardT: 'Daily leaders', mBoardP: 'Join the day’s table with a nickname if you like. Gold, silver and bronze for the top three. Entirely optional.',
-    mMathT: 'Math mode', mMathP: 'Coming soon: estimation questions generated by calculation, which never run out.',
+    mMathT: 'Math', mMathP: 'Basic or advanced, 27 topics. Generated questions that never run out; no minus points.',
+    mathEyebrow: 'Math mode',
+    mathTitle: 'Estimate it in your head.',
+    mathIntro: 'What is 438 × 60? √49,938? How high does an 8-metre ladder reach at 45°? Questions are generated: the answer comes from the numbers in the question, not from a source. The result shows the working.',
+    mf1Title: 'Basic', mf1Text: 'Multiplication, powers, roots, factorials, combinations, interest, percentages, units, geometry, probability, primes.',
+    mf2Title: 'Advanced', mf2Text: 'Trigonometry, limits, derivatives, integrals, logarithms, sequences, statistics, matrices, complex numbers, vectors.',
+    mf3Title: 'Rules', mf3Text: '60 seconds a question (30 in a duel). The range opens to ÷2 … ×2 at most, a close estimate scores high, and there are no minus points.',
+    altMathQ: 'Math question: the height of a ladder, range 480 – 760 cm',
+    altRematch: 'End of a duel: the opponent asks for a rematch', altCup: 'Tournament: five players’ ranges, best first', altMath: 'Math mode: basic or advanced',
+    capRematch: 'The podium and a rematch', capCup: 'Everyone’s range in a tournament', capMath: 'Math: basic or advanced',
     galEyebrow: 'In the app',
     galTitle: 'Who lifts the cup?',
-    galIntro: 'In a duel the winning philosopher wears the laurel wreath and the loser waves a white flag. Share your daily score with a cheerful card.',
+    galIntro: 'In a duel the winning philosopher wears the laurel wreath; the loser waves a white flag and asks for a rematch. In a tournament everyone’s range opens side by side.',
     altDuel: 'Duel: both players’ ranges side by side', altDuelEnd: 'End of a duel: You won!', altShare: 'Share card: 340 / 500', altDark: 'Home screen in dark theme',
     capDuel: 'Two ranges side by side', capDuelEnd: 'Philosophers on the podium', capShare: 'A card for your story', capDark: 'Dark theme',
     galNote: 'The app and its questions are in Turkish.',

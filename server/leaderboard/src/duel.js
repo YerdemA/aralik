@@ -84,8 +84,9 @@ import { MATH_MIN_POINTS, mathAnswer, mathScale } from './math.js';
 
 export const DUEL_VERSION = 1;
 export const QUESTION_MS = 15_000;
-/** A math duel (mode 'math', 2026-11-08): computed questions, 60 s each. */
-export const MATH_QUESTION_MS = 60_000;
+/** A math duel (mode 'math', 2026-11-08): computed questions, 30 s each
+ * (math's free play has 60 s; a duel keeps the pace up). */
+export const MATH_QUESTION_MS = 30_000;
 /** Network slack after a question's deadline before it is revealed. */
 export const LOCK_GRACE_MS = 1_500;
 /** Longest stay on a revealed question when a player does not go on. */

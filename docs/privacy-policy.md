@@ -3,7 +3,7 @@ layout: page
 title: Gizlilik Politikası
 lead: Kabaca hangi verileri nasıl kullanır? Kısa cevap, neredeyse hiçbirini.
 description: Kabaca kişisel veri toplamaz. Oyun verileri cihazda kalır; istisnalar isteğe bağlı liderlik tablosu, düello ve turnuvadır.
-updated: 7 Kasım 2026
+updated: 8 Kasım 2026
 ---
 
 Kabaca, Yusuf Erdem Aykaç tarafından geliştirilen bir tahmin oyunudur. Bu politika uygulamanın hangi verileri nasıl kullandığını açıklar.
@@ -21,6 +21,10 @@ Uygulama yeni soru ve veri dosyalarını en fazla 6 saatte bir `yerdema.github.i
 Her internet isteğinde olduğu gibi, sunucuyu işleten GitHub bağlantı sırasında IP adresini ve cihaz bilgisini teknik kayıtlarında tutabilir. Bu kayıtlara erişimimiz yoktur. Ayrıntılar için [GitHub Gizlilik Bildirimi](https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement)'ne bakabilirsin.
 
 İnternet yoksa uygulama, içindeki sorularla eksiksiz çalışmaya devam eder.
+
+Telefonunun bağlı olduğu ağ bir vekil sunucu (proxy) kullanıyorsa, uygulama da bağlantılarını Android'in bu ayarı üzerinden kurar (bazı okul, kütüphane ve iş yeri ağları bunu ister). Bu ayar yalnızca bağlanmak için okunur; hiçbir yere gönderilmez.
+
+**Bağlantı testi (Ayarlar → Bağlantı testi):** Yalnızca sen başlatırsan çalışır. Liderlik sunucusuna ve soru dosyalarının durduğu adrese birkaç deneme bağlantısı kurar, düello bağlantısını 15 saniye boyunca içeriksiz sinyallerle yoklar ve sonucu ekranda gösterir. Bu bağlantılarda senin hakkında hiçbir bilgi gönderilmez ve sunucuda hiçbir şey saklanmaz. "Sonucu kopyala" ile aldığın rapor yalnızca senin panonda durur; onu kimseye kendiliğinden göndermeyiz.
 
 ## Günün liderleri (isteğe bağlı)
 Günün liderleri tablosuna katılmak tamamen isteğe bağlıdır. Katılmak için yalnızca Ayarlar'da seçtiğin **kullanıcı adı** gerekir; e-posta, telefon numarası, gerçek isim ya da giriş istenmez. Uygulamada tek bir kullanıcı adın vardır: tabloda, düelloda ve turnuvada aynı ad görünür. Bu ad, sunucuya gönderilene kadar yalnızca telefonunda durur.
@@ -46,15 +50,23 @@ Bu veriler yalnızca liderlik tablosu için kullanılır; satılmaz, reklam ya d
 {: .callout}
 
 ## Düello ve turnuva
-Düello (arkadaşınla ya da rastgele bir rakiple) ya da turnuva (3–8 kişilik oda) oynadığında, aynı sunucudaki odaya şunlar gönderilir: Ayarlar'da seçtiğin **kullanıcı adın**, uygulamadaki soru sayısı ve kilitlediğin **aralıklar**. Hesap ya da kimlik gerekmez.
+Düello (bilgi ya da matematik düellosu; arkadaşınla ya da rastgele bir rakiple) ya da turnuva (3–8 kişilik oda) oynadığında, aynı sunucudaki odaya şunlar gönderilir: Ayarlar'da seçtiğin **kullanıcı adın**, uygulamadaki soru sayısı ve kilitlediğin **aralıklar**. Hesap ya da kimlik gerekmez.
 
 Rakip ararken de yalnızca kullanıcı adın ve soru sayısı gider. Adın ve aralıkların yalnızca o odadaki oyunculara gösterilir: düelloda rakibine, turnuvada odadaki herkese.
 
 Bağlantın koparsa kaldığın yerden devam edebilmen için oda sana rastgele, tek kullanımlık bir **geri dönüş anahtarı** verir; bu anahtar yalnızca o odada ve oyun sürerken işe yarar. Uygulamayı kapatırsan geri dönebilmen için oda kodu ve bu anahtar telefonunda, yalnızca dönüş süresi bitene kadar saklanır. Bağlantının hâlâ açık olduğunu anlamak için uygulama birkaç saniyede bir odaya içeriksiz bir sinyal gönderir. Turnuvada kurucunun odadan çıkardığı oyuncunun adı, aynı odaya yeniden girmesin diye oda açık kaldıkça tutulur.
 
+Düello bittiğinde ikiniz de isterseniz aynı odada **rövanş** oynanır; bunun için yeni bir şey gönderilmez, yalnızca "rövanş istiyorum" ya da "istemiyorum" bilgisi rakibine iletilir. Matematik düellosunun soruları cihazlarda ve sunucuda hesapla üretilir; aynı veriler (adın ve aralıkların) kullanılır.
+
 Oda bittikten (ya da boş kaldıktan) en geç birkaç dakika sonra sunucudan tamamen silinir; hiçbir düello ya da turnuva verisi saklanmaz. Oynamazsan hiçbir şey gönderilmez.
 
 Odaların kötüye kullanılmasını (örneğin binlerce oda açılmasını) önlemek için oda açma ve odaya bağlanma istekleri IP adresi başına dakikalık bir sınırla sayılır. Bu sayımı Cloudflare kısa süreliğine yapar; IP adresini biz saklamayız.
+
+## Telefonunda kalanlar
+Matematik modundaki cevapların ayrı bir kalibrasyon olarak, tanıtımı görüp görmediğin bilgisi ve ayarların yalnızca telefonunda saklanır.
+
+## Web sitesi
+[kabaca.app](https://kabaca.app) oyunu tanıtan statik bir sayfadır: çerez, analiz ya da takip aracı kullanmaz, form içermez. Seçtiğin dil (TR / EN) yalnızca tarayıcında hatırlanır. Sayfayı Cloudflare sunar; bağlantı bilgileri için yukarıdaki Cloudflare politikası geçerlidir.
 
 ## Paylaşım
 "Paylaş" düğmesine bastığında skor kartın, senin seçtiğin uygulamaya (örneğin bir mesajlaşma uygulamasına) Android'in paylaşım penceresi üzerinden gönderilir. Bu yalnızca sen istediğinde olur ve içerik yalnızca skorundur.
