@@ -14,7 +14,8 @@ import 'share_card.dart';
 
 enum SummaryAction { newRound, home }
 
-/// End of a daily set (share) or a free-play round (new round).
+/// End of a daily set (share) or a free-play round (new round; it can be
+/// shared too).
 /// Pops with the chosen [SummaryAction].
 class SummaryScreen extends StatelessWidget {
   const SummaryScreen({
@@ -41,6 +42,21 @@ class SummaryScreen extends StatelessWidget {
   final int? dayIndex;
 
   bool get _isDaily => dayIndex != null;
+
+  /// The share preview: the day's card, or the round's.
+  void _openShare(BuildContext context) => showModalBottomSheet<void>(
+    context: context,
+    isScrollControlled: true,
+    showDragHandle: true,
+    builder: (_) => ShareSheet(
+      card: ShareCardData(
+        dayIndex: dayIndex,
+        results: results,
+        hits: hits,
+        answered: answered,
+      ),
+    ),
+  );
 
   /// Green when calibrated, amber when off, neutral without enough data.
   Color _calibrationColor(ThemeData theme) {
@@ -126,29 +142,24 @@ class SummaryScreen extends StatelessWidget {
               const Spacer(),
               if (_isDaily)
                 FilledButton.icon(
-                  onPressed: () => showModalBottomSheet<void>(
-                    context: context,
-                    isScrollControlled: true,
-                    showDragHandle: true,
-                    builder: (_) => ShareSheet(
-                      card: ShareCardData(
-                        dayIndex: dayIndex!,
-                        results: results,
-                        hits: hits,
-                        answered: answered,
-                      ),
-                    ),
-                  ),
+                  onPressed: () => _openShare(context),
                   icon: const Icon(Icons.share_outlined),
                   label: const Text(AppStrings.share),
                 )
-              else
+              else ...[
                 FilledButton.icon(
                   onPressed: () =>
                       Navigator.of(context).pop(SummaryAction.newRound),
                   icon: const Icon(Icons.refresh_rounded),
                   label: const Text(AppStrings.newRound),
                 ),
+                const SizedBox(height: 8),
+                OutlinedButton.icon(
+                  onPressed: () => _openShare(context),
+                  icon: const Icon(Icons.share_outlined),
+                  label: const Text(AppStrings.share),
+                ),
+              ],
               if (_isDaily && onLeaderboard != null) ...[
                 const SizedBox(height: 8),
                 OutlinedButton.icon(
@@ -246,7 +257,7 @@ class ShareSheet extends StatefulWidget {
 class _ShareSheetState extends State<ShareSheet> {
   late final Future<Uint8List> _png = widget.render(widget.card);
 
-  String get _text => dailyShareText(
+  String get _text => shareText(
     dayIndex: widget.card.dayIndex,
     results: widget.card.results,
     hits: widget.card.hits,
@@ -254,7 +265,9 @@ class _ShareSheetState extends State<ShareSheet> {
   );
 
   String get _fileName {
-    final d = dateOfDay(widget.card.dayIndex);
+    final day = widget.card.dayIndex;
+    if (day == null) return AppStrings.shareRoundFileName;
+    final d = dateOfDay(day);
     String two(int n) => n.toString().padLeft(2, '0');
     return 'kabaca-${d.year}-${two(d.month)}-${two(d.day)}.png';
   }

@@ -87,6 +87,10 @@ abstract final class AppStrings {
   static const shareImage = 'Görseli paylaş';
   static const shareTextOnly = 'Metni paylaş';
   static const shareCardScoreLabel = 'Bugünkü skorum';
+  // A free-play round on the share card and text: no day, no "bugün".
+  static const freeRoundLabel = 'Serbest tur';
+  static const shareCardRoundLabel = 'Tur skorum';
+  static const shareRoundFileName = 'kabaca-serbest-tur.png';
   static const shareCardInvite = 'Sen de dene: Kabaca';
   // Share card moods: the player speaks, since the card is theirs to share.
   static const moodLegend = 'Efsane!';
@@ -99,6 +103,9 @@ abstract final class AppStrings {
   static const moodUnsureLine = 'Bazen tuttu, bazen tutmadı.';
   static const moodDown = 'Bugün olmadı.';
   static const moodDownLine = 'Yarın 5 yeni soruyla rövanş.';
+  static const moodGreatRoundLine = 'Sayılar benden yanaydı.';
+  static const moodDownRound = 'Bu tur olmadı.';
+  static const moodDownRoundLine = 'Bir tur daha atarım.';
 
   // Leaderboard
   static const leaderboard = 'Günün liderleri';

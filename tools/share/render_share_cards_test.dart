@@ -1,4 +1,4 @@
-// Renders one daily share card per mood into build/share_cards/ with the
+// Renders one daily share card per mood (and two free-play rounds) into build/share_cards/ with the
 // real Roboto font, to look at the design:
 //
 //   flutter test tools/share/render_share_cards_test.dart
@@ -48,6 +48,20 @@ void main() {
         final png = await renderShareCard(
           ShareCardData(
             dayIndex: 3,
+            results: [for (final p in points) (points: p, hit: p >= 40)],
+            hits: 41,
+            answered: 50,
+          ),
+        );
+        File('${out.path}/$name.png').writeAsBytesSync(png);
+      }
+      // Free-play rounds ("Bir tur at"): no day, and a short one.
+      for (final (name, points) in [
+        ('tur-harika', [92, 85, 61, 88, 74]),
+        ('tur-olmadi', [-50, 20, -50]),
+      ]) {
+        final png = await renderShareCard(
+          ShareCardData(
             results: [for (final p in points) (points: p, hit: p >= 40)],
             hits: 41,
             answered: 50,

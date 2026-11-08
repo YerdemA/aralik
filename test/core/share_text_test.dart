@@ -6,10 +6,10 @@ import 'package:aralik/widgets/calibration_text.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  group('dailyShareText', () {
+  group('shareText', () {
     test('matches the Wordle-style card', () {
       expect(
-        dailyShareText(
+        shareText(
           dayIndex: 41,
           results: [
             (points: 93, hit: true),
@@ -25,9 +25,24 @@ void main() {
       );
     });
 
+    test('a free round: no day, out of its own questions', () {
+      expect(
+        shareText(
+          results: [
+            (points: 93, hit: true),
+            (points: -20, hit: false),
+            (points: 72, hit: true),
+          ],
+          hits: 80,
+          answered: 100,
+        ),
+        'Kabaca · Serbest tur · 145/300\n🟩⬛🟩\nKalibrasyon %80',
+      );
+    });
+
     test('omits calibration with too few answers', () {
       expect(
-        dailyShareText(
+        shareText(
           dayIndex: 0,
           results: [
             (points: 100, hit: true),
@@ -45,7 +60,7 @@ void main() {
 
     test('dates the closed-test days before the epoch too', () {
       expect(
-        dailyShareText(
+        shareText(
           dayIndex: -3,
           results: [for (var i = 0; i < 5; i++) (points: 0, hit: false)],
           hits: 0,

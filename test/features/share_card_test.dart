@@ -108,6 +108,43 @@ void main() {
     expect(find.byType(ShareSheet), findsOneWidget);
     expect(find.text(AppStrings.shareTextOnly), findsOneWidget);
   });
+
+  test('a round card: out of its questions, mood as if it had five', () {
+    const short = ShareCardData(
+      results: [(points: 90, hit: true), (points: 90, hit: true)],
+      hits: 1,
+      answered: 2,
+    );
+    expect(short.isRound, isTrue);
+    expect(short.max, 200);
+    // 180 of 2 questions counts as 450 of 5: a legend.
+    expect(short.mood, DayMood.legend);
+    expect(_card.isRound, isFalse);
+    expect(_card.max, 500);
+  });
+
+  testWidgets('a free round can be shared too; a new round stays first', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(1080, 2340);
+    tester.view.devicePixelRatio = 3;
+    addTearDown(tester.view.reset);
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: AppTheme.light,
+        home: SummaryScreen(results: _card.results, hits: 40, answered: 50),
+      ),
+    );
+    await tester.pump(const Duration(seconds: 2));
+    expect(
+      find.widgetWithText(FilledButton, AppStrings.newRound),
+      findsOneWidget,
+    );
+    await tester.tap(find.widgetWithText(OutlinedButton, AppStrings.share));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 500));
+    expect(find.byType(ShareSheet), findsOneWidget);
+  });
 }
 
 /// A 1 × 1 transparent PNG.

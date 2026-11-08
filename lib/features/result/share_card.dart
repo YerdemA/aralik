@@ -8,6 +8,7 @@ import '../../core/daily.dart';
 import '../../core/day_mood.dart';
 import '../../core/number_format.dart';
 import '../../core/scoring.dart';
+import '../../core/share_text.dart';
 import '../../core/strings.dart';
 import '../../core/theme.dart';
 import '../../widgets/philosopher.dart';
@@ -16,13 +17,14 @@ import '../../widgets/philosopher.dart';
 @immutable
 class ShareCardData {
   const ShareCardData({
-    required this.dayIndex,
+    this.dayIndex,
     required this.results,
     required this.hits,
     required this.answered,
   });
 
-  final int dayIndex;
+  /// The daily set's day; null for a free-play round.
+  final int? dayIndex;
   final List<QuestionResult> results;
 
   /// All-time calibration counts.
@@ -31,7 +33,19 @@ class ShareCardData {
 
   int get total => totalPoints(results);
 
-  DayMood get mood => DayMood.of(total);
+  bool get isRound => dayIndex == null;
+
+  /// Out of: 500 for a day; a round that ran short has fewer questions.
+  int get max =>
+      isRound ? results.length * maxPointsPerQuestion : maxDailyPoints;
+
+  /// The mood thresholds are for five questions: a shorter round counts
+  /// as if it had five.
+  DayMood get mood => DayMood.of(
+    isRound && results.isNotEmpty && results.length != questionsPerDay
+        ? (total * questionsPerDay / results.length).round()
+        : total,
+  );
 }
 
 /// Story / status size (9:16).
@@ -58,7 +72,20 @@ const _indigoText = Palette.heroBottom;
 const _grey = Color(0xFF6B6680);
 
 /// Headline and line under it for each mood.
-(String, String) _moodText(DayMood mood) => switch (mood) {
+(String, String) _moodText(DayMood mood, {required bool round}) =>
+    switch (mood) {
+      DayMood.great when round => (
+        AppStrings.moodGreat,
+        AppStrings.moodGreatRoundLine,
+      ),
+      DayMood.down when round => (
+        AppStrings.moodDownRound,
+        AppStrings.moodDownRoundLine,
+      ),
+      _ => _dayMoodText(mood),
+    };
+
+(String, String) _dayMoodText(DayMood mood) => switch (mood) {
   DayMood.legend => (AppStrings.moodLegend, AppStrings.moodLegendLine),
   DayMood.great => (AppStrings.moodGreat, AppStrings.moodGreatLine),
   DayMood.proud => (AppStrings.moodProud, AppStrings.moodProudLine),
@@ -99,14 +126,14 @@ void paintShareCard(Canvas c, ShareCardData data) {
   );
   _pill(
     c,
-    dayLabel(dateOfDay(data.dayIndex)),
+    shareLabel(data.dayIndex),
     const Offset(w / 2, 300),
     fill: Colors.white.withValues(alpha: 0.18),
     text: Colors.white,
   );
 
   // The mood in words.
-  final (headline, line) = _moodText(mood);
+  final (headline, line) = _moodText(mood, round: data.isRound);
   _text(
     c,
     headline,
@@ -276,7 +303,9 @@ void _panel(Canvas c, ShareCardData data, double w, double top) {
 
   _text(
     c,
-    AppStrings.shareCardScoreLabel,
+    data.isRound
+        ? AppStrings.shareCardRoundLabel
+        : AppStrings.shareCardScoreLabel,
     Offset(120, top + 40),
     38,
     _grey,
@@ -298,7 +327,7 @@ void _panel(Canvas c, ShareCardData data, double w, double top) {
     c.drawParagraph(label, Offset(w - 120 - label.longestLine, top + 40));
   }
 
-  _score(c, data.total, Offset(w / 2, top + 80));
+  _score(c, data.total, data.max, Offset(w / 2, top + 80));
 
   // The day's squares with their points.
   const square = 112.0, gap = 30.0;
@@ -372,7 +401,7 @@ ui.Paragraph _paragraph(
 }
 
 /// "380 / 500": the total large, the maximum small, on one baseline.
-void _score(Canvas c, int total, Offset topCentre) {
+void _score(Canvas c, int total, int max, Offset topCentre) {
   final builder =
       ui.ParagraphBuilder(ui.ParagraphStyle(textAlign: TextAlign.center))
         ..pushStyle(
@@ -394,7 +423,7 @@ void _score(Canvas c, int total, Offset topCentre) {
             fontWeight: FontWeight.w600,
           ),
         )
-        ..addText(' / $maxDailyPoints');
+        ..addText(' / $max');
   const width = 1000.0;
   final p = builder.build()
     ..layout(const ui.ParagraphConstraints(width: width));
