@@ -59,7 +59,7 @@ __pycache__/
 # video, listing drafts, release bundles). Kept out of git.
 /play-store/
 
-# Vikipedi doðrulama önbelleði (tools/import_curated.py)
+# Vikipedi doÄŸrulama Ã¶nbelleÄŸi (tools/import_curated.py)
 tools/raw/wikipedia/
 
 # Internal development notes: rules for the AI assistant, roadmap, technical
