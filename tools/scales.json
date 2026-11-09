@@ -1,0 +1,30 @@
+{
+ "_doc": "Puan kuralı v3 (2026-11-09, onaylandı): sorunun kendi kaydırıcı ölçeği. half: tahmin ± en fazla N birim, doğrusal puan. factor: ÷f … ×f (kategorininkinden dar). questions satırı datasets satırını ezer. Yüzde (%) ve yıl soruları atlanır. tools/apply_scales.py bankaya 'scale' alanı olarak yazar; publish_content.py her yayında çalıştırır, validate_questions.py denetler. Değiştirmek puanları değiştirir: yeni değer ancak yeni bir geçiş günüyle (scoring_v3_day gibi) devreye alınmalı.",
+ "datasets": {
+  "foods_protein": {"half": 10},
+  "es_first_marriage": {"half": 6},
+  "es_leaving_home": {"half": 6},
+  "es_first_child": {"half": 6},
+  "es_median_age": {"half": 6},
+  "wdi_life_expectancy": {"half": 8},
+  "owid_life_expectancy_history": {"half": 8},
+  "es_household_size": {"half": 1},
+  "foods_energy": {"factor": 3},
+  "foods_caffeine": {"factor": 3},
+  "foods_vitamin_c": {"factor": 3},
+  "anage_gestation": {"factor": 3},
+  "body_curated": {"factor": 3},
+  "animals_mass": {"factor": 4},
+  "anage_birth_weight": {"factor": 4},
+  "animaltraits_brain": {"factor": 4},
+  "animaltraits_mass": {"factor": 4},
+  "wdi_fertility": {"factor": 4}
+ },
+ "questions": {
+  "q1390": {"half": 4},
+  "q1392": {"half": 4},
+  "q1398": {"half": 4},
+  "q0500": {"factor": 3},
+  "q1396": {"factor": 3}
+ }
+}

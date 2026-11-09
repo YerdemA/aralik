@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart';
 
+import '../../core/answer_scale.dart';
 import '../../core/number_format.dart';
 import '../../core/question_timer.dart';
 import '../../core/scoring.dart';
@@ -36,7 +37,7 @@ class TournamentScreen extends StatefulWidget {
     required this.stats,
     required this.code,
     required this.name,
-    this.scaled = true,
+    this.rule = ScoreRule.refined,
     this.now = DateTime.now,
     this.rejoin,
     this.pending,
@@ -54,7 +55,9 @@ class TournamentScreen extends StatefulWidget {
   final StatsStore stats;
   final String code;
   final String name;
-  final bool scaled;
+
+  /// The scoring rule of today's matches; matches the room's.
+  final ScoreRule rule;
 
   /// The clock; replaceable in tests.
   final DateTime Function() now;
@@ -198,7 +201,7 @@ class _TournamentScreenState extends State<TournamentScreen> {
         _localError = AppStrings.duelMissingQuestions;
         _session?.close();
       } else {
-        _game = GameController(questions, scaled: widget.scaled);
+        _game = GameController(questions, rule: widget.rule);
       }
     }
     final game = _game;

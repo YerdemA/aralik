@@ -108,7 +108,7 @@ int scoreFor({
     low: low,
     high: high,
     answer: answer,
-    linear: (scale?.maxPercentHalf ?? 0) > 0,
+    linear: (scale?.linearHalf ?? 0) > 0,
   );
   final k = scale != null
       ? pointsPerUnit(kind, scale)

@@ -20,20 +20,36 @@ void main() {
           ? QuestionKind.year
           : QuestionKind.magnitude;
       AnswerScale? scale;
-      if (v['scaled'] == true) {
+      if (v['refined'] == true) {
+        scale = refinedScaleOf(
+          Question.fromJson({
+            'id': 'v',
+            'text': 'v',
+            'answer': v['answer'],
+            'unit': v['unit'] ?? '',
+            'kind': v['kind'],
+            'category': v['category'],
+            'source': 's',
+            'data_year': 2026,
+            'scale': v['scale'],
+          }),
+        );
+      } else if (v['scaled'] == true) {
         scale = scaleFor(
           kind,
           QuestionCategory.fromJson(v['category'] as String),
           v['answer'] as num,
           unit: v['unit'] as String? ?? '',
         );
+      }
+      if (scale != null) {
         expect(
           scale.maxFactor,
           (v['maxFactor'] as num).toDouble(),
           reason: '$v',
         );
         expect(scale.maxYearHalf, v['maxYearHalf'], reason: '$v');
-        expect(scale.maxPercentHalf, v['maxPercentHalf'] ?? 0, reason: '$v');
+        expect(scale.linearHalf, v['linearHalf'] ?? 0, reason: '$v');
       }
       expect(
         scoreFor(

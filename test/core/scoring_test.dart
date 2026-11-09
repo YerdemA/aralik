@@ -64,6 +64,53 @@ double bestCoverage(double sigma) {
   return 2 * _normalCdf(bestH / sigma) - 1;
 }
 
+/// Coverage of the best-paying interval when the player's error is
+/// Normal(0, σ) in the question's axis units (years, log2 or linear units),
+/// σ a fifth of the widest half width [unitsPerHalf].
+double bestScaledCoverage(
+  double unitsPerHalf,
+  num Function(double) at,
+  QuestionKind kind,
+  AnswerScale scale,
+  num answer,
+) {
+  final sigma = unitsPerHalf / 5;
+  double expected(double h) {
+    const n = 401;
+    final step = 16 * sigma / (n - 1);
+    var total = 0.0;
+    for (var i = 0; i < n; i++) {
+      final x = -8 * sigma + i * step;
+      final pdf =
+          math.exp(-x * x / (2 * sigma * sigma)) /
+          (sigma * math.sqrt(2 * math.pi));
+      total +=
+          scoreFor(
+            kind: kind,
+            low: at(-h),
+            high: at(h),
+            answer: at(x),
+            scale: scale,
+          ) *
+          pdf *
+          step;
+    }
+    return total;
+  }
+
+  var bestH = 0.0;
+  var best = double.negativeInfinity;
+  for (var i = 1; i <= 200; i++) {
+    final h = unitsPerHalf * i / 200;
+    final e = expected(h);
+    if (e > best) {
+      best = e;
+      bestH = h;
+    }
+  }
+  return 2 * _normalCdf(bestH / sigma) - 1;
+}
+
 void main() {
   group('isHit', () {
     test('is inclusive on both ends', () {
@@ -230,49 +277,6 @@ void main() {
     test('an honest 90% interval stays the best play on every scale', () {
       // The player's error is Normal(0, σ) in the question's axis units
       // (years or log2); σ is a fifth of the widest half width.
-      double bestCoverage(
-        double unitsPerHalf,
-        num Function(double) at,
-        QuestionKind kind,
-        AnswerScale scale,
-        num answer,
-      ) {
-        final sigma = unitsPerHalf / 5;
-        double expected(double h) {
-          const n = 401;
-          final step = 16 * sigma / (n - 1);
-          var total = 0.0;
-          for (var i = 0; i < n; i++) {
-            final x = -8 * sigma + i * step;
-            final pdf =
-                math.exp(-x * x / (2 * sigma * sigma)) /
-                (sigma * math.sqrt(2 * math.pi));
-            total +=
-                scoreFor(
-                  kind: kind,
-                  low: at(-h),
-                  high: at(h),
-                  answer: at(x),
-                  scale: scale,
-                ) *
-                pdf *
-                step;
-          }
-          return total;
-        }
-
-        var bestH = 0.0;
-        var best = double.negativeInfinity;
-        for (var i = 1; i <= 200; i++) {
-          final h = unitsPerHalf * i / 200;
-          final e = expected(h);
-          if (e > best) {
-            best = e;
-            bestH = h;
-          }
-        }
-        return 2 * _normalCdf(bestH / sigma) - 1;
-      }
 
       final ottoman = scaleFor(
         QuestionKind.year,
@@ -280,7 +284,7 @@ void main() {
         1453,
       );
       expect(
-        bestCoverage(
+        bestScaledCoverage(
           ottoman.maxYearHalf.toDouble(),
           (x) => 1453 + x,
           QuestionKind.year,
@@ -296,7 +300,7 @@ void main() {
       );
       final log2Factor = math.log(sports.maxFactor) / math.ln2;
       expect(
-        bestCoverage(
+        bestScaledCoverage(
           log2Factor,
           (x) => 40000 * math.pow(2, x),
           QuestionKind.magnitude,
@@ -305,6 +309,85 @@ void main() {
         ),
         closeTo(0.89, 0.02),
       );
+    });
+
+    test("rule v3: the bank's own scale, linear or narrower", () {
+      Question q(num answer, String unit, QuestionScale? scale) => Question(
+        id: 'q',
+        text: 't',
+        answer: answer,
+        unit: unit,
+        kind: QuestionKind.magnitude,
+        category: QuestionCategory.geography,
+        source: 's',
+        dataYear: 2024,
+        scale: scale,
+      );
+      final age = q(29.8, 'yaş', const QuestionScale.linear(6));
+      expect(refinedScaleOf(age), (
+        maxFactor: 0,
+        maxYearHalf: 0,
+        linearHalf: 6,
+      ));
+      // The scaled rule ignores it: geography ×10.
+      expect(scaleOf(age).maxFactor, 10);
+      expect(scaleUnder(ScoreRule.first, age), isNull);
+      expect(isLinearUnder(ScoreRule.refined, age), isTrue);
+      expect(isLinearUnder(ScoreRule.scaled, age), isFalse);
+
+      final kcal = q(155, 'kcal', const QuestionScale.log(3));
+      expect(refinedScaleOf(kcal).maxFactor, 3);
+      // Percentages keep their own rule.
+      final pct = q(40, '%', const QuestionScale.linear(6));
+      expect(refinedScaleOf(pct), scaleOf(pct));
+      expect(refinedScaleOf(q(5, 'km', null)), scaleOf(q(5, 'km', null)));
+
+      // Widest hit 30 points; ±2 years 77; ×2 on a ×3 scale 56 (70 at ×5).
+      final s = refinedScaleOf(age);
+      int pts(num low, num high, num answer, AnswerScale scale) => scoreFor(
+        kind: QuestionKind.magnitude,
+        low: low,
+        high: high,
+        answer: answer,
+        scale: scale,
+      );
+      expect(pts(24, 36, 30, s), pointsAtWidest);
+      expect(pts(28, 32, 30, s), 77);
+      final k = refinedScaleOf(kcal);
+      expect(pts(155 / 3, 155 * 3, 155, k), pointsAtWidest);
+      expect(pts(155 / 2, 155 * 2, 155, k), 56);
+    });
+
+    test('rule v3 keeps the honest 90% interval the best play', () {
+      const linear = (maxFactor: 0.0, maxYearHalf: 0, linearHalf: 6);
+      expect(
+        bestScaledCoverage(
+          6,
+          (x) => 30 + x,
+          QuestionKind.magnitude,
+          linear,
+          30,
+        ),
+        closeTo(0.89, 0.02),
+      );
+      const narrow = (maxFactor: 3.0, maxYearHalf: 0, linearHalf: 0);
+      expect(
+        bestScaledCoverage(
+          math.log(3) / math.ln2,
+          (x) => 155 * math.pow(2, x),
+          QuestionKind.magnitude,
+          narrow,
+          155,
+        ),
+        closeTo(0.89, 0.02),
+      );
+    });
+
+    test('the switch days decide the rule of a day', () {
+      expect(ruleOn(10), ScoreRule.first);
+      expect(ruleOn(10, v2Day: 6), ScoreRule.scaled);
+      expect(ruleOn(10, v2Day: 6, v3Day: 11), ScoreRule.scaled);
+      expect(ruleOn(11, v2Day: 6, v3Day: 11), ScoreRule.refined);
     });
 
     test('the switch day decides the rule of a day', () {
@@ -321,7 +404,7 @@ void main() {
         42,
         unit: '%',
       );
-      expect(pct.maxPercentHalf, 20);
+      expect(pct.linearHalf, 20);
       int score(int low, int high, num answer) => scoreFor(
         kind: QuestionKind.magnitude,
         low: low,
@@ -342,7 +425,7 @@ void main() {
       low: low,
       high: high,
       answer: answer,
-      scale: (maxFactor: mathMaxFactor, maxYearHalf: 0, maxPercentHalf: 0),
+      scale: (maxFactor: mathMaxFactor, maxYearHalf: 0, linearHalf: 0),
       floor: mathMinPoints,
     );
 
@@ -365,11 +448,7 @@ void main() {
         low: 40,
         high: 60,
         answer: 50,
-        scale: (
-          maxFactor: 0,
-          maxYearHalf: 0,
-          maxPercentHalf: mathMaxPercentHalf,
-        ),
+        scale: (maxFactor: 0, maxYearHalf: 0, linearHalf: mathMaxPercentHalf),
         floor: mathMinPoints,
       );
       expect(pct, pointsAtWidest);

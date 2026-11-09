@@ -65,6 +65,18 @@ Bounds percentInterval(int guess, double t, {required int maxHalf}) {
   );
 }
 
+/// Linear ± interval for a quantity with a linear scale (rule v3: ages,
+/// grams in 100 g): half width `round(maxHalf·t)`, the low end kept ≥ 1
+/// like every magnitude bound.
+Bounds linearInterval(int guess, double t, {required int maxHalf}) {
+  final position = t.clamp(0.0, 1.0);
+  final half = (maxHalf * position).round();
+  return (
+    low: math.max(minPercentBound, math.min(guess, guess - half)),
+    high: guess + half,
+  );
+}
+
 /// Bounds of a percentage interval. The low end stays ≥ 1 like every
 /// magnitude bound (the leaderboard server rejects 0).
 const int minPercentBound = 1;

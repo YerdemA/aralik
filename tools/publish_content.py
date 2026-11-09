@@ -1,6 +1,6 @@
 """Publish the question bank, daily schedule and place data for over-the-air updates.
 
-Usage:  python tools/publish_content.py [--reset] [--leaderboard URL] [--app-build N]
+Usage:  python tools/publish_content.py [--reset] [--leaderboard URL] [--scoring-v3-day N] [--app-build N]
         [--ios-build N] [--app-store-id ID]
 
 Copies the question bank, the daily schedule and the place data to
@@ -18,6 +18,11 @@ one. Use it only before the first player: installed apps would reject it.
 --scoring-v2-day N makes the daily sets and duels of day N on use the
 scaled scoring rule (lib/core/answer_scale.dart); app and leaderboard
 server both read it. -1 removes it.
+
+--scoring-v3-day N does the same for rule v3: from day N on, a question
+with its own "scale" (tools/scales.json) is scored by it. Set it only once
+the app version that reads it is out and widely installed; older apps keep
+showing their own (v2) points while the board uses v3. -1 removes it.
 
 --app-build N announces that build N (pubspec's "+N") is on Google Play:
 apps with an older build offer the update. Set it only once the release is
@@ -109,6 +114,12 @@ def main(argv: list[str]) -> int:
         metavar="N",
         help="günlük set ve düellolar bu gün indeksinden itibaren ölçekli puanla (-1 kaldırır)",
     )
+    parser.add_argument(
+        "--scoring-v3-day",
+        type=int,
+        metavar="N",
+        help="günlük set ve düellolar bu gün indeksinden itibaren sorunun kendi ölçeğiyle (kural v3; -1 kaldırır)",
+    )
     args = parser.parse_args(argv)
     if args.app_build is not None and args.app_build < 0:
         print("HATA: --app-build 0 ya da pozitif olmalı.")
@@ -124,6 +135,10 @@ def main(argv: list[str]) -> int:
     if args.leaderboard and not args.leaderboard.startswith("https://"):
         print("HATA: --leaderboard bir https adresi olmalı.")
         return 1
+
+    # Each question's own scale (rule v3) from tools/scales.json, also for
+    # questions the import scripts added since the last publish.
+    subprocess.run([sys.executable, str(ROOT / "tools" / "apply_scales.py")], check=True)
 
     validate = subprocess.run(
         [
@@ -179,6 +194,11 @@ def main(argv: list[str]) -> int:
             if args.scoring_v2_day is None
             else (None if args.scoring_v2_day < 0 else args.scoring_v2_day)
         ),
+        "scoring_v3_day": (
+            manifest.get("scoring_v3_day")
+            if args.scoring_v3_day is None
+            else (None if args.scoring_v3_day < 0 else args.scoring_v3_day)
+        ),
     }
 
     def with_extras(m: dict) -> dict:
@@ -200,6 +220,7 @@ def main(argv: list[str]) -> int:
             print(f"Güncelleme önerilen build: {extras['app_build'] or 'kapalı'}")
             print(f"iOS: build {extras['ios_build'] or 'kapalı'}, App Store kimliği {extras['app_store_id'] or 'yok'}")
             print(f"Ölçekli puan başlangıç günü: {extras['scoring_v2_day'] if extras['scoring_v2_day'] is not None else 'yok'}")
+            print(f"Kural v3 başlangıç günü: {extras['scoring_v3_day'] if extras['scoring_v3_day'] is not None else 'yok'}")
             print("Canlıya almak için docs/ klasörünü commit edip push edin.")
             return 0
         print(f"Değişiklik yok, sürüm {manifest['version']} kaldı.")

@@ -2,7 +2,8 @@
 # the Swift side (ios/Runner/AppDelegate.swift) is compiled without a Mac.
 # Unsigned for now: signing and the TestFlight upload come once the Apple
 # Developer account exists (certificate and provisioning profile as
-# repository secrets).
+# repository secrets). Build errors are also written as annotations, which
+# can be read without signing in.
 name: iOS build
 
 on:
@@ -22,7 +23,7 @@ jobs:
     runs-on: macos-15
     timeout-minutes: 45
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - uses: subosito/flutter-action@v2
         with:
@@ -33,7 +34,18 @@ jobs:
       - run: flutter pub get
 
       - name: Build (no code signing)
-        run: flutter build ios --release --no-codesign
+        run: |
+          set -o pipefail
+          flutter build ios --release --no-codesign 2>&1 | tee build.log
+
+      - name: Errors as annotations
+        if: failure()
+        run: |
+          grep -E "error:|Error:|error \(|warning: .*(nearly matches|never used)" build.log \
+            | grep -v "^\s*$" | head -40 > errors.txt || true
+          if [ ! -s errors.txt ]; then tail -40 build.log > errors.txt; fi
+          body=$(sed 's/%/%25/g' errors.txt | awk '{printf "%s%%0A", $0}')
+          echo "::error title=iOS build::${body}"
 
       - name: Size of the app
         run: du -sh build/ios/iphoneos/Runner.app

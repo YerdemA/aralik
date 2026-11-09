@@ -82,6 +82,44 @@ class Anchor {
   }
 }
 
+/// A magnitude question's own slider scale (`"scale"` in the bank, written
+/// by tools/apply_scales.py from tools/scales.json; 2026-11-09, rule v3):
+/// either linear, guess ± up to [half] units (ages, grams in 100 g), or
+/// log, ÷[factor] … ×[factor] (narrower than the category's). Read only
+/// under the refined rule (answer_scale.dart); never for years or
+/// percentages. Must match `questionScale` in server/leaderboard/src/scoring.js.
+class QuestionScale {
+  const QuestionScale.linear(int this.half) : factor = null;
+  const QuestionScale.log(double this.factor) : half = null;
+
+  final int? half;
+  final double? factor;
+
+  static const maxHalf = 1000;
+  static const maxFactor = 20.0;
+
+  /// The scale in [json], or null when it is missing or not valid (an
+  /// invalid one is ignored, as on the server).
+  static QuestionScale? fromJson(Object? json) {
+    if (json is! Map || json.length != 1) return null;
+    final half = json['half'], factor = json['factor'];
+    if (half is int && half >= 1 && half <= maxHalf) {
+      return QuestionScale.linear(half);
+    }
+    if (factor is num && factor > 1 && factor <= maxFactor) {
+      return QuestionScale.log(factor.toDouble());
+    }
+    return null;
+  }
+
+  @override
+  bool operator ==(Object other) =>
+      other is QuestionScale && other.half == half && other.factor == factor;
+
+  @override
+  int get hashCode => Object.hash(half, factor);
+}
+
 /// One question from assets/questions/questions.json.
 class Question {
   const Question({
@@ -98,6 +136,7 @@ class Question {
     this.anchor,
     this.dataset,
     this.retired = false,
+    this.scale,
   });
 
   static const minDifficulty = 1;
@@ -131,6 +170,10 @@ class Question {
   /// so a bad question keeps its id and is only left out of free play and
   /// duels; it is never in the daily schedule.
   final bool retired;
+
+  /// Its own slider scale under the refined rule, or null for the
+  /// category's (see [QuestionScale]).
+  final QuestionScale? scale;
 
   /// Throws [FormatException] on missing or mistyped fields.
   factory Question.fromJson(Map<String, dynamic> json) {
@@ -177,6 +220,9 @@ class Question {
       anchor: anchorJson == null ? null : Anchor.fromJson(anchorJson),
       dataset: field<String?>('dataset'),
       retired: field<bool?>('retired') ?? false,
+      scale: kind == QuestionKind.magnitude
+          ? QuestionScale.fromJson(json['scale'])
+          : null,
     );
   }
 }

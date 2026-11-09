@@ -61,6 +61,7 @@ class ContentSync implements RemoteContent {
   static const _iosBuildKey = 'latest_ios_build';
   static const _appStoreIdKey = 'app_store_id';
   static const _scoringDayKey = 'scoring_v2_day';
+  static const _scoringV3DayKey = 'scoring_v3_day';
 
   final SharedPreferences _prefs;
   final HttpGet _get;
@@ -103,6 +104,11 @@ class ContentSync implements RemoteContent {
   /// the same field, so the app's points match the leaderboard's.
   int? get scoringV2Day => _prefs.getInt(_scoringDayKey);
 
+  /// The first day the daily sets and duels use the refined rule
+  /// (`"scoring_v3_day"`, the bank's own scales), or null; like
+  /// [scoringV2Day], the server reads the same field.
+  int? get scoringV3Day => _prefs.getInt(_scoringV3DayKey);
+
   /// Checks for new content. [accept] decides whether the downloaded files
   /// may replace the current ones; they are stored all together or not at
   /// all.
@@ -123,12 +129,8 @@ class ContentSync implements RemoteContent {
       final remoteVersion = manifest['version'] as int;
       await _prefs.setInt(_checkedKey, now.millisecondsSinceEpoch);
       await _storeLeaderboard(manifest['leaderboard']);
-      final switchDay = manifest['scoring_v2_day'];
-      if (switchDay is int) {
-        await _prefs.setInt(_scoringDayKey, switchDay);
-      } else {
-        await _prefs.remove(_scoringDayKey);
-      }
+      await _storeDay(_scoringDayKey, manifest['scoring_v2_day']);
+      await _storeDay(_scoringV3DayKey, manifest['scoring_v3_day']);
       await _storeBuild(_appBuildKey, manifest['app_build']);
       await _storeBuild(_iosBuildKey, manifest['ios_build']);
       final storeId = manifest['app_store_id'];
@@ -159,6 +161,14 @@ class ContentSync implements RemoteContent {
   }
 
   /// Stores an https leaderboard URL; anything else turns it off.
+  Future<void> _storeDay(String key, Object? day) async {
+    if (day is int) {
+      await _prefs.setInt(key, day);
+    } else {
+      await _prefs.remove(key);
+    }
+  }
+
   Future<void> _storeBuild(String key, Object? build) async {
     if (build is int && build > 0) {
       await _prefs.setInt(key, build);

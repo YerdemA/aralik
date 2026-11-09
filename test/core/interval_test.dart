@@ -52,6 +52,16 @@ void main() {
     });
   });
 
+  group('linearInterval', () {
+    test('guess ± up to the half width, linear, low end at least 1', () {
+      expect(linearInterval(30, 0, maxHalf: 6), (low: 30, high: 30));
+      expect(linearInterval(30, 0.5, maxHalf: 6), (low: 27, high: 33));
+      expect(linearInterval(30, 1, maxHalf: 6), (low: 24, high: 36));
+      expect(linearInterval(3, 1, maxHalf: 6), (low: 1, high: 9));
+      expect(linearInterval(150, 1, maxHalf: 10), (low: 140, high: 160));
+    });
+  });
+
   group('percentInterval', () {
     test('is the guess ± up to 20 points', () {
       expect(percentInterval(50, 0, maxHalf: 20), (low: 50, high: 50));

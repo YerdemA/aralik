@@ -633,6 +633,6 @@ export const MATH_MIN_POINTS = 0;
 
 export function mathScale(unit) {
   return unit === PERCENT
-    ? { maxFactor: 0, maxYearHalf: 0, maxPercentHalf: MATH_MAX_PERCENT_HALF }
-    : { maxFactor: MATH_MAX_FACTOR, maxYearHalf: 0, maxPercentHalf: 0 };
+    ? { maxFactor: 0, maxYearHalf: 0, linearHalf: MATH_MAX_PERCENT_HALF }
+    : { maxFactor: MATH_MAX_FACTOR, maxYearHalf: 0, linearHalf: 0 };
 }

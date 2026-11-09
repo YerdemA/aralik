@@ -26,7 +26,7 @@ class GameScreen extends StatefulWidget {
     this.startQuestion,
     this.timeLimit = dailyTimeLimit,
     this.now = DateTime.now,
-    this.scaled = true,
+    this.rule = ScoreRule.refined,
     this.scale,
     this.minPoints = minPointsPerQuestion,
     this.settings,
@@ -41,8 +41,8 @@ class GameScreen extends StatefulWidget {
   /// The lowest a question scores; 0 in math mode.
   final int minPoints;
 
-  /// Intervals and points follow each question's scale (the current rule).
-  final bool scaled;
+  /// The scoring rule of the round (answer_scale.dart).
+  final ScoreRule rule;
 
   final List<Question> questions;
 
@@ -72,7 +72,7 @@ class GameScreen extends StatefulWidget {
 class _GameScreenState extends State<GameScreen> {
   late final GameController _game = GameController(
     widget.questions,
-    scaled: widget.scaled,
+    rule: widget.rule,
     scale: widget.scale,
     minPoints: widget.minPoints,
   );

@@ -60,13 +60,14 @@ const int mathMinPoints = 0;
 
 /// Math mode's scale for [q]: ÷2 … ×2, or ±10 points for a percentage.
 AnswerScale mathScaleOf(Question q) => isPercentUnit(q.unit)
-    ? (maxFactor: 0, maxYearHalf: 0, maxPercentHalf: mathMaxPercentHalf)
-    : (maxFactor: mathMaxFactor, maxYearHalf: 0, maxPercentHalf: 0);
+    ? (maxFactor: 0, maxYearHalf: 0, linearHalf: mathMaxPercentHalf)
+    : (maxFactor: mathMaxFactor, maxYearHalf: 0, linearHalf: 0);
 
 /// A question's scale. For a magnitude only [maxFactor] matters, for a year
-/// only [maxYearHalf], for a percentage only [maxPercentHalf] (non-zero only
-/// for percentages, which are scored linearly in points).
-typedef AnswerScale = ({double maxFactor, int maxYearHalf, int maxPercentHalf});
+/// only [maxYearHalf]; a non-zero [linearHalf] makes the question linear
+/// (guess ± up to that many units, scored in units): percentages, and
+/// under the refined rule the bank's linear quantities.
+typedef AnswerScale = ({double maxFactor, int maxYearHalf, int linearHalf});
 
 AnswerScale scaleOf(Question q) =>
     scaleFor(q.kind, q.category, q.answer, unit: q.unit);
@@ -80,16 +81,12 @@ AnswerScale scaleFor(
   switch (kind) {
     case QuestionKind.magnitude:
       if (isPercentUnit(unit)) {
-        return (
-          maxFactor: 0,
-          maxYearHalf: 0,
-          maxPercentHalf: maxPercentHalfWidth,
-        );
+        return (maxFactor: 0, maxYearHalf: 0, linearHalf: maxPercentHalfWidth);
       }
       return (
         maxFactor: magnitudeFactors[category] ?? defaultMagnitudeFactor,
         maxYearHalf: 0,
-        maxPercentHalf: 0,
+        linearHalf: 0,
       );
     case QuestionKind.year:
       final age = math.max(0, scaleBaseYear - answer.round());
@@ -97,10 +94,63 @@ AnswerScale scaleFor(
       return (
         maxFactor: 0,
         maxYearHalf: half.clamp(minYearHalfWidth, maxYearHalfWidthScaled),
-        maxPercentHalf: 0,
+        linearHalf: 0,
       );
   }
 }
+
+/// The scoring rules in order. Points and slider bounds of a daily set or
+/// a duel follow the rule of its day ([ruleOn]); free play and math mode
+/// always use the newest.
+enum ScoreRule {
+  /// Days before `scoring_v2_day`: one width for every question.
+  first,
+
+  /// From `scoring_v2_day` (2026-11-05): [scaleOf], by kind, category and
+  /// answer.
+  scaled,
+
+  /// From `scoring_v3_day` (2026-11-09): [refinedScaleOf], the bank's own
+  /// scale where a question has one.
+  refined,
+}
+
+/// The rule of [day], given the manifest's switch days (null: not set).
+ScoreRule ruleOn(int day, {int? v2Day, int? v3Day}) {
+  if (v3Day != null && day >= v3Day) return ScoreRule.refined;
+  if (v2Day != null && day >= v2Day) return ScoreRule.scaled;
+  return ScoreRule.first;
+}
+
+/// [q]'s scale under [rule]; null under the first rule.
+AnswerScale? scaleUnder(ScoreRule rule, Question q) => switch (rule) {
+  ScoreRule.first => null,
+  ScoreRule.scaled => scaleOf(q),
+  ScoreRule.refined => refinedScaleOf(q),
+};
+
+/// The refined rule (v3): a question with its own [Question.scale] gets it
+/// (linear ± units, or a narrower ÷f … ×f); the rest, percentages and
+/// years keep [scaleOf].
+AnswerScale refinedScaleOf(Question q) {
+  final own = q.scale;
+  if (own == null ||
+      q.kind != QuestionKind.magnitude ||
+      isPercentUnit(q.unit)) {
+    return scaleOf(q);
+  }
+  if (own.half case final half?) {
+    return (maxFactor: 0, maxYearHalf: 0, linearHalf: half);
+  }
+  return (maxFactor: own.factor!, maxYearHalf: 0, linearHalf: 0);
+}
+
+/// Whether [q] is answered on a linear slider under [rule]: percentages
+/// always, a question with a linear scale under the refined rule.
+bool isLinearUnder(ScoreRule rule, Question q) =>
+    q.kind == QuestionKind.magnitude &&
+    (isPercentUnit(q.unit) ||
+        (rule == ScoreRule.refined && q.scale?.half != null));
 
 /// Whether [day]'s daily set (and a duel played on [day]) follows the
 /// current, scaled rule. [switchDay] is the first such day, from the
@@ -112,8 +162,8 @@ bool scaledOn(int day, int? switchDay) => switchDay != null && day >= switchDay;
 /// per year for years, per percentage point for percentages. Chosen so the
 /// widest hit scores [pointsAtWidest]: `(100 − 30) / widest width`.
 double pointsPerUnit(QuestionKind kind, AnswerScale scale) {
-  if (scale.maxPercentHalf > 0) {
-    return (100 - pointsAtWidest) / (2.0 * scale.maxPercentHalf);
+  if (scale.linearHalf > 0) {
+    return (100 - pointsAtWidest) / (2.0 * scale.linearHalf);
   }
   final widest = switch (kind) {
     QuestionKind.magnitude => 2 * math.log(scale.maxFactor) / math.ln2,

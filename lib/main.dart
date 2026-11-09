@@ -45,6 +45,7 @@ Future<void> main() async {
       latestAppBuild: () => content.latestAppBuild,
       openStore: () => openStorePage(appStoreId: content.appStoreId),
       scoringV2Day: () => content.scoringV2Day,
+      scoringV3Day: () => content.scoringV3Day,
       invites: InviteLinks.instance,
     ),
   );

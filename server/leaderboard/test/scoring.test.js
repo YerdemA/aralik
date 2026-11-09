@@ -1,7 +1,14 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { isHit, scaleOf, scoreFor, MIN_POINTS } from '../src/scoring.js';
+import {
+  isHit,
+  questionScale,
+  refinedScaleOf,
+  scaleOf,
+  scoreFor,
+  MIN_POINTS,
+} from '../src/scoring.js';
 
 const vectors = JSON.parse(
   readFileSync(new URL('./scoring_vectors.json', import.meta.url), 'utf8'),
@@ -10,11 +17,15 @@ const vectors = JSON.parse(
 test('matches the app (vectors from lib/core/scoring.dart)', () => {
   assert.ok(vectors.length > 10);
   for (const v of vectors) {
-    const scale = v.scaled ? scaleOf(v.kind, v.category, v.answer, v.unit) : null;
+    const scale = v.refined
+      ? refinedScaleOf({ ...v, scale: questionScale(v.kind, v.scale) })
+      : v.scaled
+        ? scaleOf(v.kind, v.category, v.answer, v.unit)
+        : null;
     if (scale) {
       assert.equal(scale.maxFactor, v.maxFactor, JSON.stringify(v));
       assert.equal(scale.maxYearHalf, v.maxYearHalf, JSON.stringify(v));
-      assert.equal(scale.maxPercentHalf, v.maxPercentHalf ?? 0, JSON.stringify(v));
+      assert.equal(scale.linearHalf, v.linearHalf ?? 0, JSON.stringify(v));
     }
     assert.equal(
       scoreFor(v.kind, v.low, v.high, v.answer, scale),

@@ -15,7 +15,7 @@ const BANK = [
   { id: 'b', answer: 1923, kind: 'year' },
   { id: 'c', answer: 85000000, kind: 'magnitude' },
   { id: 'd', answer: 1453, kind: 'year' },
-  { id: 'e', answer: 42, kind: 'magnitude' },
+  { id: 'e', answer: 42, kind: 'magnitude', unit: 'yaş', scale: { half: 10 } },
   { id: 'f', answer: 10, kind: 'magnitude' },
 ];
 const ALL_DAYS = [
@@ -37,6 +37,9 @@ function fakeFetch(url) {
       ...(content.scoringV2Day === undefined
         ? {}
         : { scoring_v2_day: content.scoringV2Day }),
+      ...(content.scoringV3Day === undefined
+        ? {}
+        : { scoring_v3_day: content.scoringV3Day }),
       questions: 'questions.json',
       schedule: 'schedule.json',
     },
@@ -498,6 +501,29 @@ test('days from the switch day on are scored with the scale of each question', a
   });
   assert.equal(r.body.points, expected(true));
   assert.ok(expected(true) > expected(false)); // ±40 years is fair now
+});
+
+test('from scoring_v3_day on, a question with its own scale is scored by it', async () => {
+  const answers = content.days[DAY % content.days.length].map((q) => ({
+    q,
+    low: q === 'e' ? 40 : EXACT[q],
+    high: q === 'e' ? 44 : EXACT[q],
+  }));
+  content.scoringV2Day = 0;
+  const v2 = await join('Kaplan');
+  let r = await call('POST', '/v1/submit', { id: v2.id, token: v2.token, day: DAY, answers });
+  const e = BANK.find((b) => b.id === 'e');
+  const scaled = scoreFor('magnitude', 40, 44, 42, scaleOf('magnitude', undefined, 42, 'yaş'));
+  assert.equal(r.body.points, 400 + scaled);
+
+  content.scoringV3Day = DAY;
+  resetContentCache();
+  const v3 = await join('Aslan', 'x');
+  r = await call('POST', '/v1/submit', { id: v3.id, token: v3.token, day: DAY, answers });
+  // ±2 on a ±10 linear scale: 100 − 3,5 · 4 = 86.
+  assert.equal(r.body.points, 400 + 86);
+  assert.notEqual(scaled, 86);
+  assert.ok(e.scale);
 });
 
 test('a nickname can change once every three days', async () => {

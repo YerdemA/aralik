@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../core/answer_scale.dart';
 import '../../core/duel.dart';
 import '../../core/strings.dart';
 import '../../data/duel_client.dart';
@@ -25,7 +26,7 @@ class DuelLobbyScreen extends StatefulWidget {
     required this.settings,
     this.leaderboard,
     this.pending,
-    this.scaled = true,
+    this.rule = ScoreRule.refined,
     this.math = false,
     this.code,
   });
@@ -34,8 +35,8 @@ class DuelLobbyScreen extends StatefulWidget {
   /// when the player has a name.
   final String? code;
 
-  /// Whether today's duels use the scaled rule (see answer_scale.dart).
-  final bool scaled;
+  /// The scoring rule of today's duels (see answer_scale.dart).
+  final ScoreRule rule;
 
   /// Start with math chosen (the player can switch either way).
   final bool math;
@@ -133,7 +134,7 @@ class _DuelLobbyScreenState extends State<DuelLobbyScreen> {
           stats: widget.stats,
           code: code,
           name: name,
-          scaled: widget.scaled,
+          rule: widget.rule,
           pending: widget.pending,
           math: _math,
         ),

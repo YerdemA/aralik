@@ -193,7 +193,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0016",
@@ -219,7 +222,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0018",
@@ -1198,7 +1204,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0093",
@@ -1771,7 +1780,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0137",
@@ -1797,7 +1809,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0139",
@@ -1876,7 +1891,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0145",
@@ -2488,7 +2506,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0192",
@@ -2996,7 +3017,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0231",
@@ -3114,7 +3138,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0240",
@@ -3596,7 +3623,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0277",
@@ -3609,7 +3639,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0278",
@@ -3804,7 +3837,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0293",
@@ -4377,7 +4413,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0337",
@@ -4873,7 +4912,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0375",
@@ -5279,7 +5321,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0406",
@@ -6520,7 +6565,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "animals_curated"
+  "dataset": "animals_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0501",
@@ -13067,7 +13115,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "animals_mass",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1003",
@@ -13228,7 +13279,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1015",
@@ -13269,7 +13323,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "animals_mass",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1018",
@@ -13428,7 +13485,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "animals_mass",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1030",
@@ -13455,7 +13515,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "animals_mass",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1032",
@@ -13507,7 +13570,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1036",
@@ -13651,7 +13717,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1047",
@@ -13979,7 +14048,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1072",
@@ -14136,7 +14208,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1084",
@@ -14176,7 +14251,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1087",
@@ -14281,7 +14359,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "animals_mass",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1095",
@@ -14348,7 +14429,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "animals_mass",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1100",
@@ -14426,7 +14510,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1106",
@@ -14667,7 +14754,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "animals_mass",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1124",
@@ -14982,7 +15072,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "animals_mass",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1148",
@@ -15296,7 +15389,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1172",
@@ -15401,7 +15497,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1180",
@@ -15547,7 +15646,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "animals_mass",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1191",
@@ -15586,7 +15688,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1194",
@@ -15599,7 +15704,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_mass"
+  "dataset": "animals_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1195",
@@ -18158,7 +18266,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "animals_curated"
+  "dataset": "animals_curated",
+  "scale": {
+   "half": 4
+  }
  },
  {
   "id": "q1391",
@@ -18184,7 +18295,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "animals_curated"
+  "dataset": "animals_curated",
+  "scale": {
+   "half": 4
+  }
  },
  {
   "id": "q1393",
@@ -18236,7 +18350,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "animals_curated"
+  "dataset": "animals_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1397",
@@ -18262,7 +18379,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "animals_curated"
+  "dataset": "animals_curated",
+  "scale": {
+   "half": 4
+  }
  },
  {
   "id": "q1399",
@@ -18314,7 +18434,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 15 g protein ve 4,3 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1403",
@@ -18327,7 +18450,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 0,9 g protein ve 2,6 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1404",
@@ -18340,7 +18466,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 0 g protein ve 99,8 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1405",
@@ -18353,7 +18482,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 9 g protein ve 1,8 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1406",
@@ -18366,7 +18498,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 9 kcal var.",
   "difficulty": 2,
-  "dataset": "foods_caffeine"
+  "dataset": "foods_caffeine",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1407",
@@ -18379,7 +18514,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 12,9 g protein ve 0,9 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1408",
@@ -18392,7 +18530,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 1 kcal var.",
   "difficulty": 2,
-  "dataset": "foods_caffeine"
+  "dataset": "foods_caffeine",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1409",
@@ -18405,7 +18546,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 1 kcal var.",
   "difficulty": 2,
-  "dataset": "foods_caffeine"
+  "dataset": "foods_caffeine",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1410",
@@ -18418,7 +18562,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 392 kcal var.",
   "difficulty": 3,
-  "dataset": "foods_protein"
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 10
+  }
  },
  {
   "id": "q1411",
@@ -18431,7 +18578,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 14,2 g protein ve 0 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1412",
@@ -18444,7 +18594,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 0,9 g protein ve 4,7 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1413",
@@ -18457,7 +18610,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 29 kcal var.",
   "difficulty": 2,
-  "dataset": "foods_vitamin_c"
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1414",
@@ -18470,7 +18626,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 86 kcal var.",
   "difficulty": 2,
-  "dataset": "foods_protein"
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 10
+  }
  },
  {
   "id": "q1415",
@@ -18483,7 +18642,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 10,3 g protein ve 0,3 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1416",
@@ -18496,7 +18658,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 1 g protein ve 0,6 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1417",
@@ -18509,7 +18674,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 0 g protein ve 0 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1418",
@@ -18522,7 +18690,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 8,9 g protein ve 5,7 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1419",
@@ -18535,7 +18706,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 2,5 g protein ve 63,4 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1420",
@@ -18548,7 +18722,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 8,9 g protein ve 4,8 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1421",
@@ -18561,7 +18738,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 0,7 g protein ve 15,5 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1422",
@@ -18574,7 +18754,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 165 kcal var.",
   "difficulty": 1,
-  "dataset": "foods_protein"
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 10
+  }
  },
  {
   "id": "q1423",
@@ -18587,7 +18770,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 1,1 g protein ve 12,2 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1424",
@@ -18600,7 +18786,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 12,5 g protein ve 4,3 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1425",
@@ -18613,7 +18802,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 299 kcal var.",
   "difficulty": 2,
-  "dataset": "foods_protein"
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 10
+  }
  },
  {
   "id": "q1426",
@@ -18626,7 +18818,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 0,7 g protein ve 4,9 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1427",
@@ -18639,7 +18834,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 2 g protein ve 0,7 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1428",
@@ -18652,7 +18850,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 0,6 g protein ve 6,2 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1429",
@@ -18665,7 +18866,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 25,8 g protein ve 4,7 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1430",
@@ -18678,7 +18882,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 535 kcal var.",
   "difficulty": 3,
-  "dataset": "foods_caffeine"
+  "dataset": "foods_caffeine",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1431",
@@ -18691,7 +18898,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 17,2 g protein ve 0 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1432",
@@ -18704,7 +18914,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 0,7 g protein ve 8,4 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1433",
@@ -18717,7 +18930,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 1,1 g protein ve 4,2 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1434",
@@ -18730,7 +18946,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 0 g protein ve 9,9 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1435",
@@ -18743,7 +18962,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 3,5 g protein ve 4,7 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1436",
@@ -18756,7 +18978,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 3,3 g protein ve 65,2 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1437",
@@ -18769,7 +18994,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 20,4 g protein ve 0 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1438",
@@ -18782,7 +19010,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 2,9 g protein ve 0,4 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1439",
@@ -18795,7 +19026,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 26 kcal var.",
   "difficulty": 3,
-  "dataset": "foods_vitamin_c"
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1440",
@@ -18808,7 +19042,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 208 kcal var.",
   "difficulty": 3,
-  "dataset": "foods_protein"
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 10
+  }
  },
  {
   "id": "q1441",
@@ -18821,7 +19058,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 18,6 g protein ve 0 g şeker var.",
   "difficulty": 3,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1442",
@@ -18834,7 +19074,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 1,9 g protein ve 0,9 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1443",
@@ -18847,7 +19090,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 1,7 g protein ve 13,7 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1444",
@@ -18860,7 +19106,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 228 kcal var.",
   "difficulty": 3,
-  "dataset": "foods_caffeine"
+  "dataset": "foods_caffeine",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1445",
@@ -18873,7 +19122,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 22,2 g protein ve 10,5 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1446",
@@ -18886,7 +19138,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 47 kcal var.",
   "difficulty": 2,
-  "dataset": "foods_vitamin_c"
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1447",
@@ -18899,7 +19154,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 57 kcal var.",
   "difficulty": 3,
-  "dataset": "foods_vitamin_c"
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1448",
@@ -18912,7 +19170,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 34 kcal var.",
   "difficulty": 3,
-  "dataset": "foods_vitamin_c"
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1449",
@@ -18925,7 +19186,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 3,4 g protein ve 53,4 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1450",
@@ -18938,7 +19202,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 206 kcal var.",
   "difficulty": 2,
-  "dataset": "foods_protein"
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 10
+  }
  },
  {
   "id": "q1451",
@@ -18951,7 +19218,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 587 kcal var.",
   "difficulty": 2,
-  "dataset": "foods_protein"
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 10
+  }
  },
  {
   "id": "q1452",
@@ -18964,7 +19234,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 22 kcal var.",
   "difficulty": 3,
-  "dataset": "foods_protein"
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 10
+  }
  },
  {
   "id": "q1453",
@@ -18977,7 +19250,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 1 kcal var.",
   "difficulty": 3,
-  "dataset": "foods_caffeine"
+  "dataset": "foods_caffeine",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1454",
@@ -18990,7 +19266,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 25 kcal var.",
   "difficulty": 3,
-  "dataset": "foods_vitamin_c"
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1455",
@@ -19003,7 +19282,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 15,2 g protein ve 2,6 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1456",
@@ -19016,7 +19298,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 3,3 g protein ve 47,9 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1457",
@@ -19029,7 +19314,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 13,2 g protein ve 1 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1458",
@@ -19042,7 +19330,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 333 kcal var.",
   "difficulty": 2,
-  "dataset": "foods_protein"
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 10
+  }
  },
  {
   "id": "q1459",
@@ -19055,7 +19346,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 43 kcal var.",
   "difficulty": 3,
-  "dataset": "foods_vitamin_c"
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1460",
@@ -19068,7 +19362,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 3,2 g protein ve 5,1 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1461",
@@ -19081,7 +19378,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 3,4 g protein ve 0,3 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1462",
@@ -19094,7 +19394,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 12,5 g protein var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1463",
@@ -19107,7 +19410,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 61 kcal var.",
   "difficulty": 2,
-  "dataset": "foods_vitamin_c"
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1464",
@@ -19120,7 +19426,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 2,7 g protein ve 0,1 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1465",
@@ -19133,7 +19442,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 352 kcal var.",
   "difficulty": 2,
-  "dataset": "foods_protein"
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 10
+  }
  },
  {
   "id": "q1466",
@@ -19146,7 +19458,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 18,4 g protein ve 0 g şeker var.",
   "difficulty": 3,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1467",
@@ -19159,7 +19474,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 378 kcal var.",
   "difficulty": 2,
-  "dataset": "foods_protein"
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 10
+  }
  },
  {
   "id": "q1468",
@@ -19172,7 +19490,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 1,1 g protein ve 12,8 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1469",
@@ -19185,7 +19506,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 559 kcal var.",
   "difficulty": 3,
-  "dataset": "foods_protein"
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 10
+  }
  },
  {
   "id": "q1470",
@@ -19198,7 +19522,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 598 kcal var.",
   "difficulty": 3,
-  "dataset": "foods_caffeine"
+  "dataset": "foods_caffeine",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1471",
@@ -19211,7 +19538,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 20,8 g protein ve 2,6 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1472",
@@ -19224,7 +19554,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 5,1 g protein ve 32,9 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1473",
@@ -19237,7 +19570,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 0,9 g protein ve 0,1 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1474",
@@ -19250,7 +19586,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 5,8 g protein ve 0,6 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1475",
@@ -19263,7 +19602,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 0,8 g protein ve 16,3 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1476",
@@ -19276,7 +19618,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 3,1 g protein ve 0,1 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1477",
@@ -19289,7 +19634,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 7,7 g protein ve 51,5 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1478",
@@ -19302,7 +19650,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 20,4 g protein ve 0 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1479",
@@ -19315,7 +19666,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 579 kcal var.",
   "difficulty": 2,
-  "dataset": "foods_protein"
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 10
+  }
  },
  {
   "id": "q1480",
@@ -19328,7 +19682,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 20,2 g protein ve 7,7 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1481",
@@ -19341,7 +19698,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 1 g protein ve 3,5 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1482",
@@ -19354,7 +19714,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 0,9 g protein ve 8,4 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1483",
@@ -19367,7 +19730,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 6,4 g protein ve 1 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1484",
@@ -19380,7 +19746,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 3,5 g protein ve 21,2 g şeker var.",
   "difficulty": 2,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1485",
@@ -19393,7 +19762,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 20 kcal var.",
   "difficulty": 3,
-  "dataset": "foods_vitamin_c"
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1486",
@@ -19406,7 +19778,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 0,7 g protein ve 1,7 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1487",
@@ -19419,7 +19794,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 42 kcal var.",
   "difficulty": 2,
-  "dataset": "foods_caffeine"
+  "dataset": "foods_caffeine",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1488",
@@ -19432,7 +19810,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 0,3 g protein ve 10,4 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1489",
@@ -19445,7 +19826,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 6,4 g protein ve 0,3 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1490",
@@ -19458,7 +19842,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 0,3 g protein ve 82,1 g şeker var.",
   "difficulty": 1,
-  "dataset": "foods_energy"
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1491",
@@ -19471,7 +19858,10 @@
   "data_year": 2018,
   "fun_fact": "Aynı 100 gramda 155 kcal var.",
   "difficulty": 1,
-  "dataset": "foods_protein"
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 10
+  }
  },
  {
   "id": "q1492",
@@ -21057,7 +21447,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 2,19 çocuk.",
   "difficulty": 2,
-  "dataset": "wdi_fertility"
+  "dataset": "wdi_fertility",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1613",
@@ -21109,7 +21502,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 73,5 yıl.",
   "difficulty": 1,
-  "dataset": "wdi_life_expectancy"
+  "dataset": "wdi_life_expectancy",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1617",
@@ -21135,7 +21531,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 73,5 yıl.",
   "difficulty": 2,
-  "dataset": "wdi_life_expectancy"
+  "dataset": "wdi_life_expectancy",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1619",
@@ -21200,7 +21599,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 73,5 yıl.",
   "difficulty": 2,
-  "dataset": "wdi_life_expectancy"
+  "dataset": "wdi_life_expectancy",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1624",
@@ -21226,7 +21628,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 73,5 yıl.",
   "difficulty": 2,
-  "dataset": "wdi_life_expectancy"
+  "dataset": "wdi_life_expectancy",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1626",
@@ -21239,7 +21644,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 2,19 çocuk.",
   "difficulty": 2,
-  "dataset": "wdi_fertility"
+  "dataset": "wdi_fertility",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1627",
@@ -21304,7 +21712,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 2,19 çocuk.",
   "difficulty": 2,
-  "dataset": "wdi_fertility"
+  "dataset": "wdi_fertility",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1632",
@@ -21317,7 +21728,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 73,5 yıl.",
   "difficulty": 2,
-  "dataset": "wdi_life_expectancy"
+  "dataset": "wdi_life_expectancy",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1633",
@@ -21330,7 +21744,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 2,19 çocuk.",
   "difficulty": 2,
-  "dataset": "wdi_fertility"
+  "dataset": "wdi_fertility",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1634",
@@ -21343,7 +21760,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 73,5 yıl.",
   "difficulty": 2,
-  "dataset": "wdi_life_expectancy"
+  "dataset": "wdi_life_expectancy",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1635",
@@ -21356,7 +21776,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 73,5 yıl.",
   "difficulty": 2,
-  "dataset": "wdi_life_expectancy"
+  "dataset": "wdi_life_expectancy",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1636",
@@ -21382,7 +21805,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 73,5 yıl.",
   "difficulty": 2,
-  "dataset": "wdi_life_expectancy"
+  "dataset": "wdi_life_expectancy",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1638",
@@ -21486,7 +21912,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 2,19 çocuk.",
   "difficulty": 2,
-  "dataset": "wdi_fertility"
+  "dataset": "wdi_fertility",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1646",
@@ -21538,7 +21967,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 73,5 yıl.",
   "difficulty": 2,
-  "dataset": "wdi_life_expectancy"
+  "dataset": "wdi_life_expectancy",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1650",
@@ -21577,7 +22009,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 2,19 çocuk.",
   "difficulty": 2,
-  "dataset": "wdi_fertility"
+  "dataset": "wdi_fertility",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1653",
@@ -21590,7 +22025,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 2,19 çocuk.",
   "difficulty": 2,
-  "dataset": "wdi_fertility"
+  "dataset": "wdi_fertility",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1654",
@@ -21603,7 +22041,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 2,19 çocuk.",
   "difficulty": 2,
-  "dataset": "wdi_fertility"
+  "dataset": "wdi_fertility",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1655",
@@ -21681,7 +22122,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 73,5 yıl.",
   "difficulty": 2,
-  "dataset": "wdi_life_expectancy"
+  "dataset": "wdi_life_expectancy",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1661",
@@ -21694,7 +22138,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 2,19 çocuk.",
   "difficulty": 1,
-  "dataset": "wdi_fertility"
+  "dataset": "wdi_fertility",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1662",
@@ -21707,7 +22154,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 2,19 çocuk.",
   "difficulty": 2,
-  "dataset": "wdi_fertility"
+  "dataset": "wdi_fertility",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1663",
@@ -21720,7 +22170,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 73,5 yıl.",
   "difficulty": 2,
-  "dataset": "wdi_life_expectancy"
+  "dataset": "wdi_life_expectancy",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1664",
@@ -21733,7 +22186,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl dünya ortalaması: 73,5 yıl.",
   "difficulty": 2,
-  "dataset": "wdi_life_expectancy"
+  "dataset": "wdi_life_expectancy",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1665",
@@ -22734,7 +23190,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1742",
@@ -22760,7 +23219,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "anage_birth_weight"
+  "dataset": "anage_birth_weight",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1744",
@@ -22773,7 +23235,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_birth_weight"
+  "dataset": "anage_birth_weight",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1745",
@@ -22786,7 +23251,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1746",
@@ -22799,7 +23267,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1747",
@@ -22825,7 +23296,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1749",
@@ -22838,7 +23312,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1750",
@@ -22851,7 +23328,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1751",
@@ -22864,7 +23344,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_birth_weight"
+  "dataset": "anage_birth_weight",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1752",
@@ -22877,7 +23360,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1753",
@@ -22890,7 +23376,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1754",
@@ -22929,7 +23418,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1757",
@@ -22942,7 +23434,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1758",
@@ -22981,7 +23476,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1761",
@@ -22994,7 +23492,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1762",
@@ -23007,7 +23508,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_birth_weight"
+  "dataset": "anage_birth_weight",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1763",
@@ -23033,7 +23537,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1765",
@@ -23046,7 +23553,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1766",
@@ -23059,7 +23569,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1767",
@@ -23072,7 +23585,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1768",
@@ -23085,7 +23601,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1769",
@@ -23111,7 +23630,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1771",
@@ -23150,7 +23672,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_birth_weight"
+  "dataset": "anage_birth_weight",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1774",
@@ -23163,7 +23688,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_birth_weight"
+  "dataset": "anage_birth_weight",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1775",
@@ -23176,7 +23704,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1776",
@@ -23215,7 +23746,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_birth_weight"
+  "dataset": "anage_birth_weight",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1779",
@@ -23241,7 +23775,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_birth_weight"
+  "dataset": "anage_birth_weight",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1781",
@@ -23267,7 +23804,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1783",
@@ -23280,7 +23820,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1784",
@@ -23293,7 +23836,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_birth_weight"
+  "dataset": "anage_birth_weight",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1785",
@@ -23319,7 +23865,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1787",
@@ -23332,7 +23881,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "anage_birth_weight"
+  "dataset": "anage_birth_weight",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1788",
@@ -23345,7 +23897,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1789",
@@ -23371,7 +23926,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_birth_weight"
+  "dataset": "anage_birth_weight",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1791",
@@ -23384,7 +23942,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1792",
@@ -23397,7 +23958,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "anage_gestation"
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1793",
@@ -23410,7 +23974,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animaltraits_mass"
+  "dataset": "animaltraits_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1794",
@@ -23423,7 +23990,10 @@
   "data_year": 2026,
   "fun_fact": "3 ölçümün ortancası.",
   "difficulty": 3,
-  "dataset": "animaltraits_mass"
+  "dataset": "animaltraits_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1795",
@@ -23436,7 +24006,10 @@
   "data_year": 2026,
   "fun_fact": "4 ölçümün ortancası. Ölçülen bireylerin vücut ağırlığı: 2,9 kg.",
   "difficulty": 3,
-  "dataset": "animaltraits_brain"
+  "dataset": "animaltraits_brain",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1796",
@@ -23449,7 +24022,10 @@
   "data_year": 2026,
   "fun_fact": "10 ölçümün ortancası. Ölçülen bireylerin vücut ağırlığı: 704 g.",
   "difficulty": 3,
-  "dataset": "animaltraits_brain"
+  "dataset": "animaltraits_brain",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1797",
@@ -23462,7 +24038,10 @@
   "data_year": 2026,
   "fun_fact": "3 ölçümün ortancası. Ölçülen bireylerin vücut ağırlığı: 2,2 kg.",
   "difficulty": 3,
-  "dataset": "animaltraits_brain"
+  "dataset": "animaltraits_brain",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1798",
@@ -23475,7 +24054,10 @@
   "data_year": 2026,
   "fun_fact": "26 ölçümün ortancası. Ölçülen bireylerin vücut ağırlığı: 84 mg.",
   "difficulty": 3,
-  "dataset": "animaltraits_brain"
+  "dataset": "animaltraits_brain",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1799",
@@ -23488,7 +24070,10 @@
   "data_year": 2026,
   "fun_fact": "2 ölçümün ortancası. Ölçülen bireylerin vücut ağırlığı: 137 kg.",
   "difficulty": 3,
-  "dataset": "animaltraits_brain"
+  "dataset": "animaltraits_brain",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1800",
@@ -23501,7 +24086,10 @@
   "data_year": 2026,
   "fun_fact": "Ölçülen bireylerin vücut ağırlığı: 84 kg.",
   "difficulty": 3,
-  "dataset": "animaltraits_brain"
+  "dataset": "animaltraits_brain",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1801",
@@ -23514,7 +24102,10 @@
   "data_year": 2026,
   "fun_fact": "4 ölçümün ortancası. Ölçülen bireylerin vücut ağırlığı: 266 g.",
   "difficulty": 3,
-  "dataset": "animaltraits_brain"
+  "dataset": "animaltraits_brain",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1802",
@@ -23527,7 +24118,10 @@
   "data_year": 2026,
   "fun_fact": "3 ölçümün ortancası. Ölçülen bireylerin vücut ağırlığı: 195 kg.",
   "difficulty": 3,
-  "dataset": "animaltraits_brain"
+  "dataset": "animaltraits_brain",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1803",
@@ -23540,7 +24134,10 @@
   "data_year": 2026,
   "fun_fact": "10 ölçümün ortancası. Ölçülen bireylerin vücut ağırlığı: 21,5 kg.",
   "difficulty": 3,
-  "dataset": "animaltraits_brain"
+  "dataset": "animaltraits_brain",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1804",
@@ -23553,7 +24150,10 @@
   "data_year": 2026,
   "fun_fact": "44 ölçümün ortancası. Ölçülen bireylerin vücut ağırlığı: 59,1 kg.",
   "difficulty": 2,
-  "dataset": "animaltraits_brain"
+  "dataset": "animaltraits_brain",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1805",
@@ -23566,7 +24166,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animaltraits_mass"
+  "dataset": "animaltraits_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1806",
@@ -23579,7 +24182,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animaltraits_mass"
+  "dataset": "animaltraits_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1807",
@@ -23592,7 +24198,10 @@
   "data_year": 2026,
   "fun_fact": "Ölçülen bireylerin vücut ağırlığı: 54,2 kg.",
   "difficulty": 3,
-  "dataset": "animaltraits_brain"
+  "dataset": "animaltraits_brain",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1808",
@@ -23605,7 +24214,10 @@
   "data_year": 2026,
   "fun_fact": "Ölçülen bireylerin vücut ağırlığı: 121 kg.",
   "difficulty": 3,
-  "dataset": "animaltraits_brain"
+  "dataset": "animaltraits_brain",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1809",
@@ -23618,7 +24230,10 @@
   "data_year": 2026,
   "fun_fact": "Ölçülen bireylerin vücut ağırlığı: 39 kg.",
   "difficulty": 3,
-  "dataset": "animaltraits_brain"
+  "dataset": "animaltraits_brain",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1810",
@@ -23631,7 +24246,10 @@
   "data_year": 2026,
   "fun_fact": "2 ölçümün ortancası. Ölçülen bireylerin vücut ağırlığı: 258,3 kg.",
   "difficulty": 3,
-  "dataset": "animaltraits_brain"
+  "dataset": "animaltraits_brain",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1811",
@@ -23644,7 +24262,10 @@
   "data_year": 2026,
   "fun_fact": "2 ölçümün ortancası. Ölçülen bireylerin vücut ağırlığı: 23 g.",
   "difficulty": 3,
-  "dataset": "animaltraits_brain"
+  "dataset": "animaltraits_brain",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1812",
@@ -23657,7 +24278,10 @@
   "data_year": 2026,
   "fun_fact": "3 ölçümün ortancası.",
   "difficulty": 3,
-  "dataset": "animaltraits_mass"
+  "dataset": "animaltraits_mass",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1813",
@@ -23670,7 +24294,10 @@
   "data_year": 2026,
   "fun_fact": "2 ölçümün ortancası. Ölçülen bireylerin vücut ağırlığı: 264 g.",
   "difficulty": 3,
-  "dataset": "animaltraits_brain"
+  "dataset": "animaltraits_brain",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1814",
@@ -23683,7 +24310,10 @@
   "data_year": 2026,
   "fun_fact": "Ölçülen bireylerin vücut ağırlığı: 22,7 kg.",
   "difficulty": 3,
-  "dataset": "animaltraits_brain"
+  "dataset": "animaltraits_brain",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1815",
@@ -23696,7 +24326,10 @@
   "data_year": 2026,
   "fun_fact": "4 ölçümün ortancası. Ölçülen bireylerin vücut ağırlığı: 50,3 kg.",
   "difficulty": 3,
-  "dataset": "animaltraits_brain"
+  "dataset": "animaltraits_brain",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1816",
@@ -23709,7 +24342,10 @@
   "data_year": 2026,
   "fun_fact": "2 ölçümün ortancası. Ölçülen bireylerin vücut ağırlığı: 5 kg.",
   "difficulty": 3,
-  "dataset": "animaltraits_brain"
+  "dataset": "animaltraits_brain",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1817",
@@ -23722,7 +24358,10 @@
   "data_year": 2026,
   "fun_fact": "150 sığırın ortalaması (Ballarin ve ark., 2016). Ortalama vücut ağırlıkları: 597 kg.",
   "difficulty": 3,
-  "dataset": "animaltraits_brain"
+  "dataset": "animaltraits_brain",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1818",
@@ -23736,7 +24375,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "animaltraits_brain",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1819",
@@ -23749,7 +24391,10 @@
   "data_year": 2026,
   "fun_fact": "Ölçülen bireylerin vücut ağırlığı: 5,9 kg.",
   "difficulty": 3,
-  "dataset": "animaltraits_brain"
+  "dataset": "animaltraits_brain",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1820",
@@ -23762,7 +24407,10 @@
   "data_year": 2026,
   "fun_fact": "Ölçülen bireylerin vücut ağırlığı: 123 kg.",
   "difficulty": 3,
-  "dataset": "animaltraits_brain"
+  "dataset": "animaltraits_brain",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1821",
@@ -23933,7 +24581,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl Türkiye'de: 25,9 yaş.",
   "difficulty": 2,
-  "dataset": "es_first_marriage"
+  "dataset": "es_first_marriage",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1834",
@@ -23972,7 +24623,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 26,3 yaş.",
   "difficulty": 2,
-  "dataset": "es_leaving_home"
+  "dataset": "es_leaving_home",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1837",
@@ -23985,7 +24639,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 29,9 yaş.",
   "difficulty": 2,
-  "dataset": "es_first_child"
+  "dataset": "es_first_child",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1838",
@@ -23998,7 +24655,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 44,9 yaş. Nüfusun yarısı bu yaştan genç, yarısı yaşlıdır (1 Ocak itibarıyla).",
   "difficulty": 2,
-  "dataset": "es_median_age"
+  "dataset": "es_median_age",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1839",
@@ -24050,7 +24710,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 26,3 yaş.",
   "difficulty": 2,
-  "dataset": "es_leaving_home"
+  "dataset": "es_leaving_home",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1843",
@@ -24102,7 +24765,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl Türkiye'de: 25,9 yaş.",
   "difficulty": 2,
-  "dataset": "es_first_marriage"
+  "dataset": "es_first_marriage",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1847",
@@ -24115,7 +24781,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 26,3 yaş.",
   "difficulty": 2,
-  "dataset": "es_leaving_home"
+  "dataset": "es_leaving_home",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1848",
@@ -24128,7 +24797,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 44,9 yaş. Nüfusun yarısı bu yaştan genç, yarısı yaşlıdır (1 Ocak itibarıyla).",
   "difficulty": 2,
-  "dataset": "es_median_age"
+  "dataset": "es_median_age",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1849",
@@ -24141,7 +24813,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 26,3 yaş.",
   "difficulty": 2,
-  "dataset": "es_leaving_home"
+  "dataset": "es_leaving_home",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1850",
@@ -24154,7 +24829,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl Türkiye'de: 25,9 yaş.",
   "difficulty": 2,
-  "dataset": "es_first_marriage"
+  "dataset": "es_first_marriage",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1851",
@@ -24180,7 +24858,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 44,9 yaş. Nüfusun yarısı bu yaştan genç, yarısı yaşlıdır (1 Ocak itibarıyla).",
   "difficulty": 2,
-  "dataset": "es_median_age"
+  "dataset": "es_median_age",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1853",
@@ -24193,7 +24874,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 26,3 yaş.",
   "difficulty": 2,
-  "dataset": "es_leaving_home"
+  "dataset": "es_leaving_home",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1854",
@@ -24232,7 +24916,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 2,3 kişi.",
   "difficulty": 2,
-  "dataset": "es_household_size"
+  "dataset": "es_household_size",
+  "scale": {
+   "half": 1
+  }
  },
  {
   "id": "q1857",
@@ -24297,7 +24984,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 2,3 kişi.",
   "difficulty": 1,
-  "dataset": "es_household_size"
+  "dataset": "es_household_size",
+  "scale": {
+   "half": 1
+  }
  },
  {
   "id": "q1862",
@@ -24310,7 +25000,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl Türkiye'de: 25,9 yaş.",
   "difficulty": 2,
-  "dataset": "es_first_marriage"
+  "dataset": "es_first_marriage",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1863",
@@ -24323,7 +25016,10 @@
   "data_year": 2024,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "es_first_marriage"
+  "dataset": "es_first_marriage",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1864",
@@ -24336,7 +25032,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 29,9 yaş.",
   "difficulty": 2,
-  "dataset": "es_first_child"
+  "dataset": "es_first_child",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1865",
@@ -24362,7 +25061,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 29,9 yaş.",
   "difficulty": 2,
-  "dataset": "es_first_child"
+  "dataset": "es_first_child",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1867",
@@ -24388,7 +25090,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl Türkiye'de: 28,4 yaş.",
   "difficulty": 2,
-  "dataset": "es_first_marriage"
+  "dataset": "es_first_marriage",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1869",
@@ -24401,7 +25106,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 26,3 yaş.",
   "difficulty": 2,
-  "dataset": "es_leaving_home"
+  "dataset": "es_leaving_home",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1870",
@@ -24427,7 +25135,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 2,3 kişi.",
   "difficulty": 2,
-  "dataset": "es_household_size"
+  "dataset": "es_household_size",
+  "scale": {
+   "half": 1
+  }
  },
  {
   "id": "q1872",
@@ -24440,7 +25151,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 26,2 yaş.",
   "difficulty": 1,
-  "dataset": "es_leaving_home"
+  "dataset": "es_leaving_home",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1873",
@@ -24479,7 +25193,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 29,9 yaş.",
   "difficulty": 2,
-  "dataset": "es_first_child"
+  "dataset": "es_first_child",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1876",
@@ -24492,7 +25209,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 44,9 yaş. Nüfusun yarısı bu yaştan genç, yarısı yaşlıdır (1 Ocak itibarıyla).",
   "difficulty": 1,
-  "dataset": "es_median_age"
+  "dataset": "es_median_age",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1877",
@@ -24518,7 +25238,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl Türkiye'de: 28,4 yaş.",
   "difficulty": 2,
-  "dataset": "es_first_marriage"
+  "dataset": "es_first_marriage",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1879",
@@ -24544,7 +25267,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 29,9 yaş.",
   "difficulty": 1,
-  "dataset": "es_first_child"
+  "dataset": "es_first_child",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1881",
@@ -24557,7 +25283,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 26,3 yaş.",
   "difficulty": 2,
-  "dataset": "es_leaving_home"
+  "dataset": "es_leaving_home",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1882",
@@ -24596,7 +25325,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 29,9 yaş.",
   "difficulty": 2,
-  "dataset": "es_first_child"
+  "dataset": "es_first_child",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1885",
@@ -24609,7 +25341,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 44,9 yaş. Nüfusun yarısı bu yaştan genç, yarısı yaşlıdır (1 Ocak itibarıyla).",
   "difficulty": 2,
-  "dataset": "es_median_age"
+  "dataset": "es_median_age",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1886",
@@ -24635,7 +25370,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl Türkiye'de: 28,4 yaş.",
   "difficulty": 2,
-  "dataset": "es_first_marriage"
+  "dataset": "es_first_marriage",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1888",
@@ -24661,7 +25399,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 44,9 yaş. Nüfusun yarısı bu yaştan genç, yarısı yaşlıdır (1 Ocak itibarıyla).",
   "difficulty": 2,
-  "dataset": "es_median_age"
+  "dataset": "es_median_age",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1890",
@@ -24674,7 +25415,10 @@
   "data_year": 2024,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "es_first_marriage"
+  "dataset": "es_first_marriage",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1891",
@@ -24739,7 +25483,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl Türkiye'de: 25,9 yaş.",
   "difficulty": 2,
-  "dataset": "es_first_marriage"
+  "dataset": "es_first_marriage",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1896",
@@ -24752,7 +25499,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 29,9 yaş.",
   "difficulty": 2,
-  "dataset": "es_first_child"
+  "dataset": "es_first_child",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1897",
@@ -24791,7 +25541,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 26,3 yaş.",
   "difficulty": 2,
-  "dataset": "es_leaving_home"
+  "dataset": "es_leaving_home",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1900",
@@ -24817,7 +25570,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 44,9 yaş. Nüfusun yarısı bu yaştan genç, yarısı yaşlıdır (1 Ocak itibarıyla).",
   "difficulty": 2,
-  "dataset": "es_median_age"
+  "dataset": "es_median_age",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1902",
@@ -24843,7 +25599,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl Türkiye'de: 25,9 yaş.",
   "difficulty": 2,
-  "dataset": "es_first_marriage"
+  "dataset": "es_first_marriage",
+  "scale": {
+   "half": 6
+  }
  },
  {
   "id": "q1904",
@@ -24869,7 +25628,10 @@
   "data_year": 2026,
   "fun_fact": "2023 yılında: 73,2 yıl.",
   "difficulty": 3,
-  "dataset": "owid_life_expectancy_history"
+  "dataset": "owid_life_expectancy_history",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1906",
@@ -24934,7 +25696,10 @@
   "data_year": 2026,
   "fun_fact": "1950 yılında: 68,6 yıl.",
   "difficulty": 3,
-  "dataset": "owid_life_expectancy_history"
+  "dataset": "owid_life_expectancy_history",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1911",
@@ -24986,7 +25751,10 @@
   "data_year": 2026,
   "fun_fact": "1900 yılında: 52,2 yıl.",
   "difficulty": 3,
-  "dataset": "owid_life_expectancy_history"
+  "dataset": "owid_life_expectancy_history",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1915",
@@ -24999,7 +25767,10 @@
   "data_year": 2026,
   "fun_fact": "2023 yılında: 77,2 yıl.",
   "difficulty": 2,
-  "dataset": "owid_life_expectancy_history"
+  "dataset": "owid_life_expectancy_history",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1916",
@@ -25025,7 +25796,10 @@
   "data_year": 2026,
   "fun_fact": "2023 yılında: 84,7 yıl.",
   "difficulty": 3,
-  "dataset": "owid_life_expectancy_history"
+  "dataset": "owid_life_expectancy_history",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1918",
@@ -25116,7 +25890,10 @@
   "data_year": 2026,
   "fun_fact": "2023 yılında: 73,2 yıl.",
   "difficulty": 2,
-  "dataset": "owid_life_expectancy_history"
+  "dataset": "owid_life_expectancy_history",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1925",
@@ -25155,7 +25932,10 @@
   "data_year": 2026,
   "fun_fact": "2023 yılında: 73,2 yıl.",
   "difficulty": 3,
-  "dataset": "owid_life_expectancy_history"
+  "dataset": "owid_life_expectancy_history",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1928",
@@ -28877,7 +29657,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "body_curated"
+  "dataset": "body_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2214",
@@ -28929,7 +29712,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "body_curated"
+  "dataset": "body_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2218",
@@ -28942,7 +29728,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "body_curated"
+  "dataset": "body_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2219",
@@ -28994,7 +29783,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "body_curated"
+  "dataset": "body_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2223",
@@ -29033,7 +29825,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "body_curated"
+  "dataset": "body_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2226",
@@ -29112,7 +29907,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "body_curated"
+  "dataset": "body_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2232",
@@ -29125,7 +29923,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "body_curated"
+  "dataset": "body_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2233",
@@ -29177,7 +29978,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "body_curated"
+  "dataset": "body_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2237",
@@ -29203,7 +30007,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "body_curated"
+  "dataset": "body_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2239",
@@ -29229,7 +30036,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "body_curated"
+  "dataset": "body_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2241",
@@ -29411,7 +30221,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "body_curated"
+  "dataset": "body_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2255",
@@ -29437,7 +30250,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "body_curated"
+  "dataset": "body_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2257",

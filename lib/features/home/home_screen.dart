@@ -53,6 +53,7 @@ class HomeScreen extends StatefulWidget {
     this.latestAppBuild,
     this.openStore = openStorePage,
     this.scoringV2Day,
+    this.scoringV3Day,
     this.invites,
   });
 
@@ -62,6 +63,9 @@ class HomeScreen extends StatefulWidget {
 
   /// First day of the scaled scoring rule (content manifest), or null.
   final int? Function()? scoringV2Day;
+
+  /// First day of the refined scoring rule (content manifest), or null.
+  final int? Function()? scoringV3Day;
 
   final QuestionRepository repository;
   final StatsStore stats;
@@ -157,7 +161,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   /// Back to the match left behind, with the player's secret.
   Future<void> _rejoin(PendingMatch match) async {
-    final scaled = scaledOn(_today, widget.scoringV2Day?.call());
+    final rule = _ruleOn(_today);
     final again = await Navigator.of(context).push<bool>(
       MaterialPageRoute(
         builder: (_) => switch (match.kind) {
@@ -169,7 +173,7 @@ class _HomeScreenState extends State<HomeScreen> {
             name: match.name,
             rejoin: match.rejoin,
             pending: widget.pending,
-            scaled: scaled,
+            rule: rule,
           ),
           PendingKind.tournament => TournamentScreen(
             service: _tournaments,
@@ -179,7 +183,7 @@ class _HomeScreenState extends State<HomeScreen> {
             name: match.name,
             rejoin: match.rejoin,
             pending: widget.pending,
-            scaled: scaled,
+            rule: rule,
           ),
         },
       ),
@@ -251,6 +255,14 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
+  /// The scoring rule of [day]'s daily set and duels, from the manifest's
+  /// switch days (the leaderboard server reads the same).
+  ScoreRule _ruleOn(int day) => ruleOn(
+    day,
+    v2Day: widget.scoringV2Day?.call(),
+    v3Day: widget.scoringV3Day?.call(),
+  );
+
   // Read on every build, so the screen rolls over at midnight on resume.
   int get _today => dayIndexFor(DateTime.now());
 
@@ -280,7 +292,7 @@ class _HomeScreenState extends State<HomeScreen> {
         builder: (_) => GameScreen(
           settings: widget.settings,
           questions: remaining,
-          scaled: scaledOn(day, widget.scoringV2Day?.call()),
+          rule: _ruleOn(day),
           alreadyAnswered: done,
           startQuestion: (position) =>
               _stats.startDailyQuestion(day, position, DateTime.now()),
@@ -441,7 +453,7 @@ class _HomeScreenState extends State<HomeScreen> {
         settings: widget.settings,
         leaderboard: _leaderboard,
         pending: widget.pending,
-        scaled: scaledOn(_today, widget.scoringV2Day?.call()),
+        rule: _ruleOn(_today),
       ),
     ),
   );
@@ -458,7 +470,7 @@ class _HomeScreenState extends State<HomeScreen> {
             settings: widget.settings,
             leaderboard: _leaderboard,
             pending: widget.pending,
-            scaled: scaledOn(_today, widget.scoringV2Day?.call()),
+            rule: _ruleOn(_today),
           ),
         ),
       );

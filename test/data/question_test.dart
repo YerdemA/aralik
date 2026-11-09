@@ -32,6 +32,28 @@ void main() {
       expect(q.funFact, 'Konum: Ağrı.');
     });
 
+    test('reads its own scale; an invalid one or a year has none', () {
+      QuestionScale? scale(Object? json, {String kind = 'magnitude'}) =>
+          Question.fromJson(
+            sample(override: {'scale': json, 'kind': kind, 'answer': 1923}),
+          ).scale;
+      expect(scale(null), isNull);
+      expect(scale({'half': 6}), const QuestionScale.linear(6));
+      expect(scale({'factor': 3}), const QuestionScale.log(3));
+      expect(scale({'factor': 2.5}), const QuestionScale.log(2.5));
+      for (final bad in [
+        {'half': 0},
+        {'half': 2.5},
+        {'factor': 1},
+        {'factor': 50},
+        {'half': 6, 'factor': 3},
+        'wide',
+      ]) {
+        expect(scale(bad), isNull, reason: '$bad');
+      }
+      expect(scale({'half': 6}, kind: 'year'), isNull);
+    });
+
     test('reads retired, false when missing', () {
       expect(Question.fromJson(sample()).retired, isFalse);
       expect(

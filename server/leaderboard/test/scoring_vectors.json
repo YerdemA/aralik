@@ -438,7 +438,7 @@
     "scaled": true,
     "maxFactor": 0,
     "maxYearHalf": 0,
-    "maxPercentHalf": 20,
+    "linearHalf": 20,
     "points": 100
   },
   {
@@ -451,7 +451,7 @@
     "scaled": true,
     "maxFactor": 0,
     "maxYearHalf": 0,
-    "maxPercentHalf": 20,
+    "linearHalf": 20,
     "points": 65
   },
   {
@@ -464,7 +464,7 @@
     "scaled": true,
     "maxFactor": 0,
     "maxYearHalf": 0,
-    "maxPercentHalf": 20,
+    "linearHalf": 20,
     "points": 30
   },
   {
@@ -477,7 +477,7 @@
     "scaled": true,
     "maxFactor": 0,
     "maxYearHalf": 0,
-    "maxPercentHalf": 20,
+    "linearHalf": 20,
     "points": 65
   },
   {
@@ -490,7 +490,7 @@
     "scaled": true,
     "maxFactor": 0,
     "maxYearHalf": 0,
-    "maxPercentHalf": 20,
+    "linearHalf": 20,
     "points": 65
   },
   {
@@ -503,7 +503,7 @@
     "scaled": true,
     "maxFactor": 0,
     "maxYearHalf": 0,
-    "maxPercentHalf": 20,
+    "linearHalf": 20,
     "points": 13
   },
   {
@@ -516,7 +516,7 @@
     "scaled": true,
     "maxFactor": 0,
     "maxYearHalf": 0,
-    "maxPercentHalf": 20,
+    "linearHalf": 20,
     "points": -50
   },
   {
@@ -529,7 +529,7 @@
     "scaled": true,
     "maxFactor": 0,
     "maxYearHalf": 0,
-    "maxPercentHalf": 20,
+    "linearHalf": 20,
     "points": 83
   },
   {
@@ -540,5 +540,258 @@
     "high": 80,
     "answer": 60,
     "points": 90
+  },
+  {
+    "kind": "magnitude",
+    "category": "coğrafya",
+    "unit": "yaş",
+    "low": 24,
+    "high": 36,
+    "answer": 30,
+    "refined": true,
+    "scale": {
+      "half": 6
+    },
+    "maxFactor": 0,
+    "maxYearHalf": 0,
+    "linearHalf": 6,
+    "points": 30
+  },
+  {
+    "kind": "magnitude",
+    "category": "coğrafya",
+    "unit": "yaş",
+    "low": 28,
+    "high": 32,
+    "answer": 30,
+    "refined": true,
+    "scale": {
+      "half": 6
+    },
+    "maxFactor": 0,
+    "maxYearHalf": 0,
+    "linearHalf": 6,
+    "points": 77
+  },
+  {
+    "kind": "magnitude",
+    "category": "coğrafya",
+    "unit": "yaş",
+    "low": 30,
+    "high": 30,
+    "answer": 30,
+    "refined": true,
+    "scale": {
+      "half": 6
+    },
+    "maxFactor": 0,
+    "maxYearHalf": 0,
+    "linearHalf": 6,
+    "points": 100
+  },
+  {
+    "kind": "magnitude",
+    "category": "coğrafya",
+    "unit": "yaş",
+    "low": 31,
+    "high": 33,
+    "answer": 30,
+    "refined": true,
+    "scale": {
+      "half": 6
+    },
+    "maxFactor": 0,
+    "maxYearHalf": 0,
+    "linearHalf": 6,
+    "points": -28
+  },
+  {
+    "kind": "magnitude",
+    "category": "coğrafya",
+    "unit": "yaş",
+    "low": 28,
+    "high": 32,
+    "answer": 29.8,
+    "refined": true,
+    "scale": {
+      "half": 6
+    },
+    "maxFactor": 0,
+    "maxYearHalf": 0,
+    "linearHalf": 6,
+    "points": 77
+  },
+  {
+    "kind": "magnitude",
+    "category": "coğrafya",
+    "unit": "kişi",
+    "low": 2,
+    "high": 4,
+    "answer": 2.8,
+    "refined": true,
+    "scale": {
+      "half": 1
+    },
+    "maxFactor": 0,
+    "maxYearHalf": 0,
+    "linearHalf": 1,
+    "points": 30
+  },
+  {
+    "kind": "magnitude",
+    "category": "coğrafya",
+    "unit": "kişi",
+    "low": 3,
+    "high": 3,
+    "answer": 2.8,
+    "refined": true,
+    "scale": {
+      "half": 1
+    },
+    "maxFactor": 0,
+    "maxYearHalf": 0,
+    "linearHalf": 1,
+    "points": -40
+  },
+  {
+    "kind": "magnitude",
+    "category": "gündelik",
+    "unit": "kcal",
+    "low": 52,
+    "high": 465,
+    "answer": 155,
+    "refined": true,
+    "scale": {
+      "factor": 3
+    },
+    "maxFactor": 3,
+    "maxYearHalf": 0,
+    "linearHalf": 0,
+    "points": 30
+  },
+  {
+    "kind": "magnitude",
+    "category": "gündelik",
+    "unit": "kcal",
+    "low": 78,
+    "high": 310,
+    "answer": 155,
+    "refined": true,
+    "scale": {
+      "factor": 3
+    },
+    "maxFactor": 3,
+    "maxYearHalf": 0,
+    "linearHalf": 0,
+    "points": 56
+  },
+  {
+    "kind": "magnitude",
+    "category": "gündelik",
+    "unit": "kcal",
+    "low": 500,
+    "high": 600,
+    "answer": 155,
+    "refined": true,
+    "scale": {
+      "factor": 3
+    },
+    "maxFactor": 3,
+    "maxYearHalf": 0,
+    "linearHalf": 0,
+    "points": -50
+  },
+  {
+    "kind": "magnitude",
+    "category": "hayvanlar",
+    "unit": "kg",
+    "low": 100,
+    "high": 1600,
+    "answer": 400,
+    "refined": true,
+    "scale": {
+      "factor": 4
+    },
+    "maxFactor": 4,
+    "maxYearHalf": 0,
+    "linearHalf": 0,
+    "points": 30
+  },
+  {
+    "kind": "magnitude",
+    "category": "hayvanlar",
+    "unit": "kg",
+    "low": 200,
+    "high": 800,
+    "answer": 400,
+    "refined": true,
+    "scale": {
+      "factor": 4
+    },
+    "maxFactor": 4,
+    "maxYearHalf": 0,
+    "linearHalf": 0,
+    "points": 65
+  },
+  {
+    "kind": "magnitude",
+    "category": "coğrafya",
+    "unit": "%",
+    "low": 30,
+    "high": 50,
+    "answer": 40,
+    "refined": true,
+    "scale": {
+      "half": 6
+    },
+    "maxFactor": 0,
+    "maxYearHalf": 0,
+    "linearHalf": 20,
+    "points": 65
+  },
+  {
+    "kind": "magnitude",
+    "category": "coğrafya",
+    "unit": "km²",
+    "low": 200,
+    "high": 800,
+    "answer": 400,
+    "refined": true,
+    "scale": {
+      "half": 0
+    },
+    "maxFactor": 10,
+    "maxYearHalf": 0,
+    "linearHalf": 0,
+    "points": 79
+  },
+  {
+    "kind": "magnitude",
+    "category": "coğrafya",
+    "unit": "km²",
+    "low": 200,
+    "high": 800,
+    "answer": 400,
+    "refined": true,
+    "maxFactor": 10,
+    "maxYearHalf": 0,
+    "linearHalf": 0,
+    "points": 79
+  },
+  {
+    "kind": "year",
+    "category": "türkiye",
+    "unit": "",
+    "low": 1913,
+    "high": 1933,
+    "answer": 1923,
+    "refined": true,
+    "scale": {
+      "half": 6
+    },
+    "maxFactor": 0,
+    "maxYearHalf": 50,
+    "linearHalf": 0,
+    "points": 86
   }
 ]

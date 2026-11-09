@@ -45,7 +45,7 @@ class DuelScreen extends StatefulWidget {
     required this.code,
     required this.name,
     this.now = DateTime.now,
-    this.scaled = true,
+    this.rule = ScoreRule.refined,
     this.rejoin,
     this.pending,
     this.math = false,
@@ -62,8 +62,8 @@ class DuelScreen extends StatefulWidget {
   /// the app; null keeps nothing (tests).
   final PendingMatchStore? pending;
 
-  /// Intervals follow each question's scale; matches the room's rule.
-  final bool scaled;
+  /// The scoring rule of today's duels; matches the room's.
+  final ScoreRule rule;
 
   /// Clock, replaceable in tests.
   final DateTime Function() now;
@@ -344,7 +344,7 @@ class _DuelScreenState extends State<DuelScreen> {
         final math = questions.any((q) => q.category == QuestionCategory.math);
         _game = GameController(
           questions,
-          scaled: widget.scaled,
+          rule: widget.rule,
           scale: math ? mathScaleOf : null,
           minPoints: math ? mathMinPoints : minPointsPerQuestion,
         );
@@ -1092,7 +1092,7 @@ class _PlayerResult extends StatelessWidget {
           if (low != null && high != null) ...[
             const SizedBox(height: 6),
             IntervalBar(
-              isYear: isYear || isPercentUnit(question.unit),
+              isYear: isYear || isLinearUnder(ScoreRule.refined, question),
               low: low,
               high: high,
               answer: question.answer,

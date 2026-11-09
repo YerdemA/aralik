@@ -2,7 +2,7 @@
 // Scores are computed from these, never taken from the app.
 
 import { QUESTIONS_PER_DAY } from './days.js';
-import { scaleOf } from './scoring.js';
+import { questionScale, refinedScaleOf, scaleOf } from './scoring.js';
 
 const MANIFEST_TTL_MS = 5 * 60 * 1000;
 
@@ -27,6 +27,7 @@ export async function loadContent(base, fetchFn, nowMs) {
   if (cache && cache.version === manifest.version) {
     cache.checkedAt = nowMs;
     cache.scoringV2Day = scoringDay(manifest);
+    cache.scoringV3Day = scoringDay(manifest, 'scoring_v3_day');
     return cache;
   }
   const [bank, schedule] = await Promise.all([
@@ -46,21 +47,21 @@ export async function loadContent(base, fetchFn, nowMs) {
           unit: q.unit ?? '',
           difficulty: q.difficulty ?? 2,
           retired: q.retired === true,
+          scale: questionScale(q.kind, q.scale),
         },
       ]),
     ),
     order: bank.map((q) => q.id),
     scoringV2Day: scoringDay(manifest),
+    scoringV3Day: scoringDay(manifest, 'scoring_v3_day'),
     days: schedule.days,
   };
   return cache;
 }
 
-/** First day of the scaled rule (`scoring_v2_day`), or null. */
-function scoringDay(manifest) {
-  return Number.isInteger(manifest.scoring_v2_day)
-    ? manifest.scoring_v2_day
-    : null;
+/** First day of a rule (`scoring_v2_day`, `scoring_v3_day`), or null. */
+function scoringDay(manifest, key = 'scoring_v2_day') {
+  return Number.isInteger(manifest[key]) ? manifest[key] : null;
 }
 
 /** Whether [day] uses the scaled rule (lib/core/answer_scale.dart). */
@@ -69,8 +70,15 @@ export function scaledOn(content, day) {
     && day >= content.scoringV2Day;
 }
 
+/** Whether [day] uses the refined rule (rule v3, the bank's own scales). */
+export function refinedOn(content, day) {
+  return content.scoringV3Day !== null && content.scoringV3Day !== undefined
+    && day >= content.scoringV3Day;
+}
+
 /** The scale of [q] on [day], or null under the first rule. */
 export function scaleOn(content, q, day) {
+  if (refinedOn(content, day)) return refinedScaleOf(q);
   return scaledOn(content, day) ? scaleOf(q.kind, q.category, q.answer, q.unit) : null;
 }
 

@@ -19,6 +19,10 @@ from collections import Counter
 from datetime import date
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from apply_scales import load_scales, valid_scale  # noqa: E402
+from apply_scales import wanted as wanted_scale  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_PATH = ROOT / "assets" / "questions" / "questions.json"
 DEFAULT_SCHEDULE = ROOT / "assets" / "questions" / "schedule.json"
@@ -48,6 +52,9 @@ OPTIONAL = {
     # Withdrawn from play (wrong or unsourced answer); never scheduled. The
     # bank is append-only, so this is how a bad question leaves the pool.
     "retired": bool,
+    # Own slider scale under rule v3, written by tools/apply_scales.py from
+    # tools/scales.json; checked against it below.
+    "scale": dict,
 }
 ANCHOR_FIELDS = {"text": str, "value": (int, float), "unit": str, "source": str}
 ID_PATTERN = re.compile(r"^q(\d{4,})$")
@@ -68,6 +75,7 @@ def validate(questions: object) -> tuple[list[str], list[str]]:
         return ["Kök öğe bir liste olmalı."], warnings
 
     this_year = date.today().year
+    scale_datasets, scale_questions = load_scales()
     attributed = in_use_datasets()
     seen_ids: set[str] = set()
     seen_texts: dict[str, str] = {}
@@ -161,6 +169,11 @@ def validate(questions: object) -> tuple[list[str], list[str]]:
             errors.append(
                 f"{where}: '{dataset}' veri seti tools/sources.json içinde kullanımdaki bir kaynağa bağlı değil."
             )
+        if "scale" in q and not valid_scale(q["scale"]):
+            errors.append(f"{where}: scale geçersiz ({q['scale']}); half 1–1000 tam sayı ya da factor 1–20.")
+        if q.get("scale") != wanted_scale(q, scale_datasets, scale_questions):
+            errors.append(f"{where}: scale tools/scales.json ile uyuşmuyor; python tools/apply_scales.py çalıştır.")
+
         anchor = q.get("anchor")
         if isinstance(anchor, dict):
             for key, expected in ANCHOR_FIELDS.items():

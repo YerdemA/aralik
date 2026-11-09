@@ -111,7 +111,9 @@ class ResultScreen extends StatelessWidget {
                                     if (answer.hasInterval) ...[
                                       const SizedBox(height: 16),
                                       IntervalBar(
-                                        isYear: isYear || isPercentUnit(q.unit),
+                                        isYear:
+                                            isYear ||
+                                            isLinearUnder(ScoreRule.refined, q),
                                         low: answer.low!,
                                         high: answer.high!,
                                         answer: q.answer,

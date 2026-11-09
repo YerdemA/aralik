@@ -47,16 +47,16 @@ const DEFAULT_MAGNITUDE_FACTOR = 8;
 const PERCENT_UNIT = '%';
 const MAX_PERCENT_HALF = 20;
 
-/** {maxFactor, maxYearHalf, maxPercentHalf} of a question; see answer_scale.dart. */
+/** {maxFactor, maxYearHalf, linearHalf} of a question; see answer_scale.dart. */
 export function scaleOf(kind, category, answer, unit = '') {
   if (kind === 'magnitude') {
     if (unit === PERCENT_UNIT) {
-      return { maxFactor: 0, maxYearHalf: 0, maxPercentHalf: MAX_PERCENT_HALF };
+      return { maxFactor: 0, maxYearHalf: 0, linearHalf: MAX_PERCENT_HALF };
     }
     return {
       maxFactor: MAGNITUDE_FACTORS[category] ?? DEFAULT_MAGNITUDE_FACTOR,
       maxYearHalf: 0,
-      maxPercentHalf: 0,
+      linearHalf: 0,
     };
   }
   const age = Math.max(0, SCALE_BASE_YEAR - dartRound(answer));
@@ -64,13 +64,41 @@ export function scaleOf(kind, category, answer, unit = '') {
   return {
     maxFactor: 0,
     maxYearHalf: Math.min(400, Math.max(30, half)),
-    maxPercentHalf: 0,
+    linearHalf: 0,
   };
 }
 
+/**
+ * A question's own scale from the bank's `scale` field (rule v3; Dart:
+ * QuestionScale.fromJson): {half} linear ± units, or {factor} ÷f … ×f.
+ * Null when missing, invalid, or the question is not a magnitude.
+ */
+export function questionScale(kind, raw) {
+  if (kind !== 'magnitude' || !raw || typeof raw !== 'object') return null;
+  if (Array.isArray(raw) || Object.keys(raw).length !== 1) return null;
+  const { half, factor } = raw;
+  if (Number.isInteger(half) && half >= 1 && half <= 1000) return { half };
+  if (typeof factor === 'number' && factor > 1 && factor <= 20) return { factor };
+  return null;
+}
+
+/**
+ * The refined rule (v3, lib/core/answer_scale.dart refinedScaleOf): [q]'s
+ * own scale ([questionScale], already parsed in q.scale) if it has one,
+ * else scaleOf. Percentages and years keep scaleOf.
+ */
+export function refinedScaleOf(q) {
+  const own = q.scale;
+  if (!own || q.kind !== 'magnitude' || q.unit === PERCENT_UNIT) {
+    return scaleOf(q.kind, q.category, q.answer, q.unit);
+  }
+  if (own.half) return { maxFactor: 0, maxYearHalf: 0, linearHalf: own.half };
+  return { maxFactor: own.factor, maxYearHalf: 0, linearHalf: 0 };
+}
+
 export function pointsPerUnit(kind, scale) {
-  if (scale.maxPercentHalf > 0) {
-    return (MAX_POINTS - POINTS_AT_WIDEST) / (2 * scale.maxPercentHalf);
+  if (scale.linearHalf > 0) {
+    return (MAX_POINTS - POINTS_AT_WIDEST) / (2 * scale.linearHalf);
   }
   const widest =
     kind === 'magnitude'
@@ -98,7 +126,7 @@ export function scoreFor(
     low,
     high,
     answer,
-    (scale?.maxPercentHalf ?? 0) > 0,
+    (scale?.linearHalf ?? 0) > 0,
   );
   const k = scale
     ? pointsPerUnit(kind, scale)

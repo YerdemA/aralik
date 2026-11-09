@@ -55,7 +55,7 @@ class RoundAnswer {
 class GameController extends ChangeNotifier {
   GameController(
     this.questions, {
-    this.scaled = true,
+    this.rule = ScoreRule.refined,
     this.scale,
     this.minPoints = minPointsPerQuestion,
   }) : assert(questions.isNotEmpty);
@@ -67,13 +67,13 @@ class GameController extends ChangeNotifier {
   /// math mode.
   final int minPoints;
 
-  /// Whether intervals and points follow each question's scale (the
-  /// current rule, answer_scale.dart). False for daily sets of days before
-  /// the leaderboard switched rules.
-  final bool scaled;
+  /// The scoring rule of the round (answer_scale.dart): the newest for
+  /// free play; a daily set or a duel uses the rule of its day, the same
+  /// as the leaderboard server.
+  final ScoreRule rule;
 
   AnswerScale? get _scale =>
-      scale?.call(question) ?? (scaled ? scaleOf(question) : null);
+      scale?.call(question) ?? scaleUnder(rule, question);
 
   /// Longest guess the pad accepts (12 digits ≈ 1 trillion).
   static const maxMagnitudeDigits = 12;
@@ -153,9 +153,12 @@ class GameController extends ChangeNotifier {
   Bounds get interval {
     final g = guess!;
     final scale = _scale;
+    if (scale != null && scale.linearHalf > 0 && !isPercent) {
+      return linearInterval(g, _width, maxHalf: scale.linearHalf);
+    }
     if (isPercent) {
-      final half = scale != null && scale.maxPercentHalf > 0
-          ? scale.maxPercentHalf
+      final half = scale != null && scale.linearHalf > 0
+          ? scale.linearHalf
           : maxPercentHalfWidth;
       return percentInterval(g, _width, maxHalf: half);
     }

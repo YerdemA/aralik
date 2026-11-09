@@ -25,6 +25,7 @@ class KabacaApp extends StatelessWidget {
     this.latestAppBuild,
     this.openStore,
     this.scoringV2Day,
+    this.scoringV3Day,
     this.invites,
   });
 
@@ -36,6 +37,9 @@ class KabacaApp extends StatelessWidget {
 
   /// First day of the scaled scoring rule (content manifest), or null.
   final int? Function()? scoringV2Day;
+
+  /// First day of the refined scoring rule (content manifest), or null.
+  final int? Function()? scoringV3Day;
 
   final QuestionRepository repository;
   final StatsStore stats;
@@ -86,6 +90,7 @@ class KabacaApp extends StatelessWidget {
             latestAppBuild: latestAppBuild,
             openStore: openStore ?? openStorePage,
             scoringV2Day: scoringV2Day,
+            scoringV3Day: scoringV3Day,
             invites: invites,
           ),
         ),
