@@ -17,6 +17,7 @@ on:
       - 'pubspec.yaml'
       - 'pubspec.lock'
       - '.github/workflows/ios.yml'
+      - '.gitignore'
 
 jobs:
   build:
