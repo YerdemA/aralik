@@ -144,12 +144,12 @@ void main() {
     expect(find.text(AppStrings.leaderboard), findsNothing);
   });
 
-  testWidgets('without a server the tournament is still to come', (
+  testWidgets('without a server the tournament asks for the internet', (
     tester,
   ) async {
     await pumpHome(tester);
     expect(find.text(AppStrings.modeTournament), findsOneWidget);
-    expect(find.text(AppStrings.comingSoon), findsOneWidget);
+    expect(find.text(AppStrings.needsInternet), findsOneWidget);
   });
 
   testWidgets('math mode: pick basic, play with a 60 s clock', (tester) async {

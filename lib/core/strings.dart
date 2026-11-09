@@ -54,7 +54,7 @@ abstract final class AppStrings {
       '$answered soru cevaplandı, $hits isabet';
   static const duelModeBank = 'Bilgi düellosu';
   static const modeTournament = 'Turnuva modu';
-  static const comingSoon = '(Yakında gelecek)';
+  static const needsInternet = 'İnternet bağlantısı gerekir';
   static const noValue = '–';
   static const streak = 'Seri';
   static const lastScore = 'Son skor';
@@ -547,13 +547,32 @@ abstract final class AppStrings {
   static const privacyPolicyUrl =
       'https://yerdema.github.io/aralik/privacy-policy.html';
 
+  // Report and block (names other players see)
+  static const blockedPlayer = 'Engellenen oyuncu';
+  static const reportName = 'Uygunsuz adı bildir';
+  static const reportNameHint = 'İnceleyip gerekirse adı kaldırırız.';
+  static const reportSent = 'Bildirildi, teşekkürler.';
+  static const reportFailed = 'Bildirilemedi. İnternet bağlantını kontrol et.';
+  static const blockPlayer = 'Engelle';
+  static const blockPlayerHint = 'Bu ad sana bir daha gösterilmez.';
+  static const unblockPlayer = 'Engeli kaldır';
+  static const playerBlocked = 'Engellendi.';
+  static const playerUnblocked = 'Engel kaldırıldı.';
+  static const reportOrBlockOpponent = 'Rakibi bildir ya da engelle';
+  static const blockedPlayers = 'Engellenen oyuncular';
+  static String blockedPlayersHint(int n) =>
+      n == 0 ? 'Kimseyi engellemedin' : '$n oyuncu';
+  static const contact = 'İletişim';
+  static const contactHint = 'Soru, öneri ve şikâyetler';
+  static const contactUrl = 'https://github.com/YerdemA/aralik/issues';
+
   // Update notice
   static const updateTitle = 'Yeni sürüm var';
   static const updateBody =
-      "Kabaca'nın yeni sürümü Google Play'de. Şimdi güncellemek ister misin?";
+      "Kabaca'nın yeni sürümü çıktı. Şimdi güncellemek ister misin?";
   static const updateNow = 'Güncelle';
   static const updateLater = 'Sonra';
-  static const updateStoreMissing = "Google Play açılamadı.";
+  static const updateStoreMissing = 'Uygulama mağazası açılamadı.';
 
   // Duel
   static const duel = 'Düello';

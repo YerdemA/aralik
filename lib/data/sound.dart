@@ -7,7 +7,8 @@ import '../core/question_timer.dart';
 import '../core/scoring.dart';
 
 /// The app's sound effects (assets/sounds/, Ogg Vorbis made by
-/// tools/sounds/make_sounds.py).
+/// tools/sounds/make_sounds.py; iOS cannot play Ogg and gets the same
+/// sounds as IMA4 CAF files from assets/sounds/ios/).
 enum Sfx {
   /// The app opens (the intro screen). Loaded first.
   intro('intro'),
@@ -48,7 +49,12 @@ enum Sfx {
   /// File name without extension; also the name on the platform side.
   final String file;
 
-  String get asset => 'assets/sounds/$file.ogg';
+  String get asset => assetFor(defaultTargetPlatform);
+
+  /// The file the platform side can play: Ogg on Android, CAF on iOS.
+  String assetFor(TargetPlatform platform) => platform == TargetPlatform.iOS
+      ? 'assets/sounds/ios/$file.caf'
+      : 'assets/sounds/$file.ogg';
 
   /// The sound of a question's outcome.
   static Sfx of(ResultTier tier) => switch (tier) {
@@ -66,7 +72,8 @@ bool clockTicks(Duration? before, Duration left) =>
     left <= timeWarning &&
     secondsShown(left) != secondsShown(before);
 
-/// Plays [Sfx] through a SoundPool in MainActivity.kt (no package). Silent
+/// Plays [Sfx] through a SoundPool in MainActivity.kt or AVAudioPlayers in
+/// AppDelegate.swift (no package). Silent
 /// when [enabled] is off, when the phone is on silent or vibrate, and where
 /// there is no platform side (tests).
 abstract final class Sounds {

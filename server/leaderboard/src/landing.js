@@ -40,6 +40,26 @@ export function assetLinks() {
 }
 
 /**
+ * Universal links for iOS: the App Store app with Team ID [teamId] opens
+ * kabaca.app/d/… and /t/… (the rest of the site stays in the browser). iOS
+ * fetches it through Apple's CDN when the app is installed; served as JSON
+ * with no redirect. Null without a Team ID (wrangler.toml APPLE_TEAM_ID).
+ */
+export function appleAppSiteAssociation(teamId) {
+  if (!teamId || !/^[A-Z0-9]{10}$/.test(teamId)) return null;
+  return {
+    applinks: {
+      details: [
+        {
+          appIDs: [`${teamId}.com.yerdema.kabaca`],
+          components: [{ '/': '/d/*' }, { '/': '/t/*' }],
+        },
+      ],
+    },
+  };
+}
+
+/**
  * Whether [path] is an invite link: /d/KOD (duel) or /t/KOD (tournament),
  * KOD in the room code alphabet (no I, L, O, 0, 1; lib/core/invite_link.dart).
  */
@@ -58,6 +78,16 @@ export async function landing(request, env) {
   }
   if (url.pathname === '/.well-known/assetlinks.json') {
     return new Response(JSON.stringify(assetLinks(), null, 2), {
+      headers: {
+        'content-type': 'application/json',
+        'cache-control': 'public, max-age=300',
+      },
+    });
+  }
+  if (url.pathname === '/.well-known/apple-app-site-association') {
+    const aasa = appleAppSiteAssociation(env.APPLE_TEAM_ID);
+    if (!aasa) return new Response('Not found', { status: 404 });
+    return new Response(JSON.stringify(aasa, null, 2), {
       headers: {
         'content-type': 'application/json',
         'cache-control': 'public, max-age=300',

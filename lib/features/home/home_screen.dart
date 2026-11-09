@@ -1545,7 +1545,8 @@ class _SmallModeTile extends StatelessWidget {
   }
 }
 
-/// A mode that is not here yet: muted, not tappable, "(Yakında gelecek)".
+/// A mode that needs the server while its address is not known yet (a
+/// first launch without internet): muted, not tappable.
 class _SoonTile extends StatelessWidget {
   const _SoonTile({required this.icon, required this.title});
 
@@ -1559,7 +1560,7 @@ class _SoonTile extends StatelessWidget {
     final muted = scheme.onSurfaceVariant.withValues(alpha: .8);
     return Semantics(
       enabled: false,
-      label: '$title ${AppStrings.comingSoon}',
+      label: '$title ${AppStrings.needsInternet}',
       excludeSemantics: true,
       child: Container(
         padding: const EdgeInsets.fromLTRB(14, 12, 12, 12),
@@ -1593,7 +1594,7 @@ class _SoonTile extends StatelessWidget {
             ),
             const SizedBox(height: 4),
             Text(
-              AppStrings.comingSoon,
+              AppStrings.needsInternet,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: theme.textTheme.bodySmall?.copyWith(color: muted),

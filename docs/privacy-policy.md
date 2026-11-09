@@ -3,7 +3,7 @@ layout: page
 title: Gizlilik Politikası
 lead: Kabaca hangi verileri nasıl kullanır? Kısa cevap, neredeyse hiçbirini.
 description: Kabaca kişisel veri toplamaz. Oyun verileri cihazda kalır; istisnalar isteğe bağlı liderlik tablosu, düello ve turnuvadır.
-updated: 8 Kasım 2026
+updated: 9 Kasım 2026
 ---
 
 Kabaca, Yusuf Erdem Aykaç tarafından geliştirilen bir tahmin oyunudur. Bu politika uygulamanın hangi verileri nasıl kullandığını açıklar.
@@ -22,7 +22,7 @@ Her internet isteğinde olduğu gibi, sunucuyu işleten GitHub bağlantı sıras
 
 İnternet yoksa uygulama, içindeki sorularla eksiksiz çalışmaya devam eder.
 
-Telefonunun bağlı olduğu ağ bir vekil sunucu (proxy) kullanıyorsa, uygulama da bağlantılarını Android'in bu ayarı üzerinden kurar (bazı okul, kütüphane ve iş yeri ağları bunu ister). Bu ayar yalnızca bağlanmak için okunur; hiçbir yere gönderilmez.
+Telefonunun bağlı olduğu ağ bir vekil sunucu (proxy) kullanıyorsa, uygulama da bağlantılarını telefonun (Android ya da iOS) bu ayarı üzerinden kurar (bazı okul, kütüphane ve iş yeri ağları bunu ister). Bu ayar yalnızca bağlanmak için okunur; hiçbir yere gönderilmez.
 
 **Bağlantı testi (Ayarlar → Bağlantı testi):** Yalnızca sen başlatırsan çalışır. Liderlik sunucusuna ve soru dosyalarının durduğu adrese birkaç deneme bağlantısı kurar, düello bağlantısını 15 saniye boyunca içeriksiz sinyallerle yoklar ve sonucu ekranda gösterir. Bu bağlantılarda senin hakkında hiçbir bilgi gönderilmez ve sunucuda hiçbir şey saklanmaz. "Sonucu kopyala" ile aldığın rapor yalnızca senin panonda durur; onu kimseye kendiliğinden göndermeyiz.
 
@@ -34,7 +34,7 @@ Katıldığında şunlar Cloudflare üzerinde çalışan sunucumuza gönderilir 
 - Uygulamanın ürettiği **rastgele bir kimlik** ve gizli bir anahtar (anahtarın yalnızca özeti saklanır), hesabın senin olduğunu kanıtlamak için,
 - Bitirdiğin her günlük set için **5 cevabın (aralıkların)**, bunlardan hesaplanan **puanın ve isabet sayın**, ve gönderim zamanı.
 - Kullanıcı adını en son ne zaman değiştirdiğin. Ad 3 günde bir değiştirilebilir; bu, adların kötüye kullanılmasını önlemek içindir.
-- **Cihazının tek yönlü özeti.** Android'in her uygulamaya ayrı verdiği cihaz kimliğinden telefonunda üretilen bir özet (hash). Kimliğin kendisi telefondan çıkmaz; sunucu bu özeti bir kez daha özetleyerek saklar. Amacı hileyi önlemek: her cihazda tek hesap olur ve aynı günün puanı ikinci kez gönderilemez. Uygulamayı silip yeniden kurduğunda ya da verilerini temizlediğinde hesabın bu sayede geri gelir.
+- **Cihazının tek yönlü özeti.** Android'de, Android'in her uygulamaya ayrı verdiği cihaz kimliğinden; iPhone'da, uygulamanın ilk kez gerektiğinde ürettiği ve telefonun anahtar zincirinde (Keychain) yalnızca o cihazda sakladığı rastgele bir kimlikten telefonunda üretilen bir özet (hash). Kimliğin kendisi telefondan çıkmaz; sunucu bu özeti bir kez daha özetleyerek saklar. Amacı hileyi önlemek: her cihazda tek hesap olur ve aynı günün puanı ikinci kez gönderilemez. Uygulamayı silip yeniden kurduğunda ya da verilerini temizlediğinde hesabın bu sayede geri gelir.
 
 Bu yüzden uygulama, telefonunda tabloya katılmış bir hesap bulamadığında günde en fazla bir kez aynı özeti sunucuya sorar: "Bu cihazın hesabı var mı, bugünün setini gönderdi mi?" Cevaba göre hesabın geri gelir ve aynı günün seti yeniden oynanamaz. Tabloya hiç katılmamış bir cihaz için bu sorgudan sunucuda hiçbir şey saklanmaz.
 
@@ -62,17 +62,23 @@ Oda bittikten (ya da boş kaldıktan) en geç birkaç dakika sonra sunucudan tam
 
 Odaların kötüye kullanılmasını (örneğin binlerce oda açılmasını) önlemek için oda açma ve odaya bağlanma istekleri IP adresi başına dakikalık bir sınırla sayılır. Bu sayımı Cloudflare kısa süreliğine yapar; IP adresini biz saklamayız.
 
+## Bildirme ve engelleme
+Tabloda, düelloda ya da turnuvada gördüğün başka bir oyuncunun adına dokunarak onu **bildirebilir** ya da **engelleyebilirsin**.
+
+- **Bildir:** Sunucuya yalnızca bildirilen ad ve nerede görüldüğü (tablo, düello, turnuva) gider. Aynı kişinin aynı adı iki kez saymaması için IP adresinin tek yönlü özeti en fazla 7 gün saklanır; IP adresinin kendisi saklanmaz, senin adın gönderilmez. Birkaç farklı kişinin bildirdiği bir ad, geliştirici inceleyene kadar tabloda gizlenir. Uygunsuz bulunan ad kaldırılır ve tabloda, düelloda ve turnuvada bir daha kullanılamaz.
+- **Engelle:** Yalnızca telefonunda tutulur; engellediğin ad sana "Engellenen oyuncu" olarak gösterilir. Ayarlar → Engellenen oyuncular'dan engeli kaldırabilirsin.
+
 ## Telefonunda kalanlar
-Matematik modundaki cevapların ayrı bir kalibrasyon olarak, tanıtımı görüp görmediğin bilgisi ve ayarların yalnızca telefonunda saklanır.
+Matematik modundaki cevapların ayrı bir kalibrasyon olarak, tanıtımı görüp görmediğin bilgisi, engellediğin adlar ve ayarların yalnızca telefonunda saklanır.
 
 ## Web sitesi
 [kabaca.app](https://kabaca.app) oyunu tanıtan statik bir sayfadır: çerez, analiz ya da takip aracı kullanmaz, form içermez. Seçtiğin dil (TR / EN) yalnızca tarayıcında hatırlanır. Sayfayı Cloudflare sunar; bağlantı bilgileri için yukarıdaki Cloudflare politikası geçerlidir.
 
 ## Paylaşım
-"Paylaş" düğmesine bastığında skor kartın, senin seçtiğin uygulamaya (örneğin bir mesajlaşma uygulamasına) Android'in paylaşım penceresi üzerinden gönderilir. Bu yalnızca sen istediğinde olur ve içerik yalnızca skorundur.
+"Paylaş" düğmesine bastığında skor kartın, senin seçtiğin uygulamaya (örneğin bir mesajlaşma uygulamasına) telefonunun paylaşım penceresi üzerinden gönderilir. Bu yalnızca sen istediğinde olur ve içerik yalnızca skorundur.
 
 ## Verilerin silinmesi
-Cihazındaki tüm oyun verilerini (kullanıcı adın dahil) silmek için uygulamayı kaldırman ya da Android ayarlarından uygulamanın verilerini temizlemen yeterlidir. Liderlik tablosuna katıldıysan, önce Ayarlar → Liderlik tablosu → Tablodan ayrıl ile sunucudaki verini sil.
+Cihazındaki tüm oyun verilerini (kullanıcı adın dahil) silmek için uygulamayı kaldırman ya da Android ayarlarından uygulamanın verilerini temizlemen yeterlidir. iPhone'da cihaz özetinin kaynağı olan rastgele kimlik, uygulama kaldırılsa da anahtar zincirinde kalır; yalnızca o cihazda tabloya katıldığında kullanılır, tek başına seninle ilişkilendirilemez. Liderlik tablosuna katıldıysan, önce Ayarlar → Liderlik tablosu → Tablodan ayrıl ile sunucudaki verini sil.
 
 ## Çocuklar
 Uygulama hiçbir yaş grubundan kişisel veri istemez. Kullanıcı adı seçerken gerçek adını kullanmamanı öneririz.

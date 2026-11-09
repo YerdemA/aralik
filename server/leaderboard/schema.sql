@@ -42,3 +42,23 @@ CREATE TABLE IF NOT EXISTS device_days (
   day INTEGER NOT NULL,
   PRIMARY KEY (device_hash, day)
 );
+
+-- Reports of names other players see (App Store guideline 1.2). One row
+-- per name and reporter (a salted hash of the IP, not linked to anything
+-- else); kept 7 days. Reviewed with scripts/admin.mjs.
+CREATE TABLE IF NOT EXISTS reports (
+  name_key TEXT NOT NULL,
+  nickname TEXT NOT NULL,
+  place TEXT NOT NULL,           -- board, duel or tournament
+  reporter TEXT NOT NULL,
+  at INTEGER NOT NULL,
+  PRIMARY KEY (name_key, reporter)
+);
+CREATE INDEX IF NOT EXISTS reports_at ON reports (at);
+
+-- Names the moderator banned: they cannot be taken, nor used in duels or
+-- tournaments.
+CREATE TABLE IF NOT EXISTS banned_names (
+  name_key TEXT PRIMARY KEY,
+  at INTEGER NOT NULL
+);

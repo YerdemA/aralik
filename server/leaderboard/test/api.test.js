@@ -586,6 +586,42 @@ test('a hidden player sees themselves; nobody else does', async () => {
   assert.equal(own.players, 2);
 });
 
+test('three reporters hide a name from the board; a report needs a name and place', async () => {
+  const rude = await join('Kaplan');
+  await call('POST', '/v1/submit', {
+    id: rude.id,
+    token: rude.token,
+    day: DAY,
+    answers: answers(),
+  });
+  const bad = await call('POST', '/v1/report', { name: 'Kaplan', place: 'chat' });
+  assert.equal(bad.status, 400);
+  // The same reporter counts once.
+  for (const ip of ['1', '1', '2']) {
+    const r = await call('POST', '/v1/report', { name: 'kaplan', place: 'board' }, { ip });
+    assert.deepEqual(r, { status: 200, body: { ok: true } });
+  }
+  let board = (await call('GET', `/v1/day/${DAY}`)).body;
+  assert.deepEqual(board.top.map((r) => r.nickname), ['Kaplan']);
+  await call('POST', '/v1/report', { name: 'Kaplan', place: 'duel' }, { ip: '3' });
+  board = (await call('GET', `/v1/day/${DAY}`)).body;
+  assert.deepEqual(board.top, []);
+
+  // Reports older than a week are cleaned up.
+  await cleanUp(env, NOW + 8 * 24 * 60 * 60 * 1000);
+  const left = env.DB.raw.prepare('SELECT COUNT(*) AS n FROM reports').get();
+  assert.equal(left.n, 0);
+});
+
+test('a banned name cannot be taken', async () => {
+  env.DB.raw
+    .prepare('INSERT INTO banned_names (name_key, at) VALUES (?, ?)')
+    .run('kaplan', NOW);
+  const r = await call('POST', '/v1/register', { nickname: 'Kaplan' });
+  assert.equal(r.status, 400);
+  assert.equal(r.body.error, 'blocked_nickname');
+});
+
 test('duel rooms and the lobby are limited per address', async () => {
   const seen = [];
   env.DUEL_ROOMS = {};
@@ -673,4 +709,16 @@ test('kabaca.app proves it belongs to the app (Digital Asset Links)', async () =
   for (const f of link.target.sha256_cert_fingerprints) {
     assert.match(f, /^([0-9A-F]{2}:){31}[0-9A-F]{2}$/);
   }
+});
+
+test('kabaca.app opens the iOS app for invites once the Team ID is set', async () => {
+  const url = 'https://kabaca.app/.well-known/apple-app-site-association';
+  const without = await handle(new Request(url), env);
+  assert.equal(without.status, 404);
+  const r = await handle(new Request(url), { ...env, APPLE_TEAM_ID: 'AB12CD34EF' });
+  assert.equal(r.status, 200);
+  assert.equal(r.headers.get('content-type'), 'application/json');
+  const { applinks } = await r.json();
+  assert.deepEqual(applinks.details[0].appIDs, ['AB12CD34EF.com.yerdema.kabaca']);
+  assert.deepEqual(applinks.details[0].components, [{ '/': '/d/*' }, { '/': '/t/*' }]);
 });

@@ -1,10 +1,14 @@
-"""Synthesizes the app's sound effects into assets/sounds/ (Ogg Vorbis, mono).
+"""Synthesizes the app's sound effects into assets/sounds/ (Ogg Vorbis, mono)
+and assets/sounds/ios/ (IMA4 in CAF, for iOS).
 
 Usage:  python tools/sounds/make_sounds.py
 
 Needs ffmpeg on PATH (winget install Gyan.FFmpeg): each sound is rendered
 to a 16-bit WAV in a temporary folder and encoded to Ogg Vorbis, about a
-sixth of the WAV's size; Android's SoundPool plays Ogg natively.
+sixth of the WAV's size; Android's SoundPool plays Ogg natively. iOS cannot
+play Ogg, so each sound is also encoded to IMA4 ADPCM in a CAF file (a
+quarter of the WAV, no encoder delay, so a tap sounds at once; AVAudioPlayer
+plays it natively).
 
 No samples, no licences: every sound is a few sine partials with an envelope,
 so the files are small and reproducible. Each sound is short and soft; they
@@ -26,6 +30,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "assets" / "sounds"
+IOS_OUT = OUT / "ios"
 RATE = 16000
 PEAK = 0.5  # about -6 dBFS
 
@@ -201,6 +206,14 @@ def encode(wav: Path, ogg: Path, ffmpeg: str) -> None:
     )
 
 
+def encode_ios(wav: Path, caf: Path, ffmpeg: str) -> None:
+    subprocess.run(
+        [ffmpeg, "-y", "-loglevel", "error", "-i", str(wav),
+         "-c:a", "adpcm_ima_qt", "-map_metadata", "-1", "-f", "caf", str(caf)],
+        check=True,
+    )
+
+
 def main() -> int:
     sys.stdout.reconfigure(encoding="utf-8")
     ffmpeg = shutil.which("ffmpeg")
@@ -208,6 +221,7 @@ def main() -> int:
         print("ffmpeg bulunamadı: winget install Gyan.FFmpeg")
         return 1
     OUT.mkdir(parents=True, exist_ok=True)
+    IOS_OUT.mkdir(parents=True, exist_ok=True)
     for old in OUT.glob("*.wav"):
         old.unlink()
     total = 0
@@ -217,8 +231,10 @@ def main() -> int:
             write(wav, samples, GAIN.get(name, 1.0))
             path = OUT / f"{name}.ogg"
             encode(wav, path, ffmpeg)
+            caf = IOS_OUT / f"{name}.caf"
+            encode_ios(wav, caf, ffmpeg)
             size = path.stat().st_size
-            total += size
+            total += size + caf.stat().st_size
             print(f"  {path.relative_to(ROOT)}  {len(samples) / RATE:.2f} sn  {size / 1024:.1f} KB")
     print(f"Toplam {total // 1024} KB")
     return 0

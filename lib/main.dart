@@ -5,11 +5,13 @@ import 'app.dart';
 import 'data/content_sync.dart';
 import 'data/invite_links.dart';
 import 'data/leaderboard.dart';
+import 'data/moderation.dart';
 import 'data/pending_match.dart';
 import 'data/question_repository.dart';
 import 'data/settings_store.dart';
 import 'data/sound.dart';
 import 'data/stats_store.dart';
+import 'data/store_link.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,6 +28,11 @@ Future<void> main() async {
   Sounds.enabled = settings.soundOn;
   settings.addListener(() => Sounds.enabled = settings.soundOn);
   Sounds.preload().ignore();
+  // Reporting and blocking other players' names.
+  Moderation.instance = Moderation(
+    prefs: prefs,
+    report: (name, place) => leaderboard.report(name, place.name),
+  );
   // Invite links (kabaca.app/d/KOD) the app was opened with.
   InviteLinks.instance.start().ignore();
   runApp(
@@ -36,6 +43,7 @@ Future<void> main() async {
       leaderboard: leaderboard,
       pending: PendingMatchStore(prefs),
       latestAppBuild: () => content.latestAppBuild,
+      openStore: () => openStorePage(appStoreId: content.appStoreId),
       scoringV2Day: () => content.scoringV2Day,
       invites: InviteLinks.instance,
     ),

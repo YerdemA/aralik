@@ -10,6 +10,7 @@ import '../../core/strings.dart';
 import '../../core/theme.dart';
 import '../../widgets/calibration_text.dart';
 import '../../widgets/count_up.dart';
+import '../../widgets/share_origin.dart';
 import 'share_card.dart';
 
 enum SummaryAction { newRound, home }
@@ -306,6 +307,7 @@ class _ShareSheetState extends State<ShareSheet> {
       ShareParams(
         text: _text,
         subject: AppStrings.shareSubject,
+        sharePositionOrigin: shareOrigin(context),
         files: png == null
             ? null
             : [XFile.fromData(png, mimeType: 'image/png', name: _fileName)],

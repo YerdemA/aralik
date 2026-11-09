@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../core/strings.dart';
+import '../../data/moderation.dart';
 import '../../data/leaderboard.dart';
 import '../../data/settings_store.dart';
 import '../../widgets/link_text.dart';
@@ -181,6 +182,33 @@ class SettingsScreen extends StatelessWidget {
                     padding: EdgeInsets.fromLTRB(72, 0, 8, 8),
                     child: LinkText(url: AppStrings.privacyPolicyUrl),
                   ),
+                  const Divider(height: 1),
+                  ListenableBuilder(
+                    listenable: Moderation.instance,
+                    builder: (context, _) => ListTile(
+                      leading: const Icon(Icons.block_rounded),
+                      title: const Text(AppStrings.blockedPlayers),
+                      subtitle: Text(
+                        AppStrings.blockedPlayersHint(
+                          Moderation.instance.blocked.length,
+                        ),
+                      ),
+                      trailing: const Icon(Icons.chevron_right_rounded),
+                      onTap: Moderation.instance.blocked.isEmpty
+                          ? null
+                          : () => _showBlocked(context),
+                    ),
+                  ),
+                  const Divider(height: 1),
+                  const ListTile(
+                    leading: Icon(Icons.mail_outline_rounded),
+                    title: Text(AppStrings.contact),
+                    subtitle: Text(AppStrings.contactHint),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.fromLTRB(72, 0, 8, 8),
+                    child: LinkText(url: AppStrings.contactUrl),
+                  ),
                 ],
               ),
             ),
@@ -190,6 +218,39 @@ class SettingsScreen extends StatelessWidget {
     );
   }
 }
+
+/// The blocked names, each with "Engeli kaldır".
+Future<void> _showBlocked(BuildContext context) => showModalBottomSheet<void>(
+  context: context,
+  showDragHandle: true,
+  builder: (context) => SafeArea(
+    child: ListenableBuilder(
+      listenable: Moderation.instance,
+      builder: (context, _) => ListView(
+        shrinkWrap: true,
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(24, 0, 24, 8),
+            child: Text(
+              AppStrings.blockedPlayers,
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
+          ),
+          for (final name in Moderation.instance.blocked)
+            ListTile(
+              leading: const Icon(Icons.person_off_rounded),
+              title: Text(name),
+              trailing: TextButton(
+                onPressed: () => Moderation.instance.unblock(name),
+                child: const Text(AppStrings.unblockPlayer),
+              ),
+            ),
+          const SizedBox(height: 8),
+        ],
+      ),
+    ),
+  ),
+);
 
 class _SectionTitle extends StatelessWidget {
   const _SectionTitle(this.text);

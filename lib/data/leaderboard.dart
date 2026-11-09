@@ -372,6 +372,17 @@ class LeaderboardStore extends ChangeNotifier {
     }
   }
 
+  /// Reports [name], seen at [place] (`board`, `duel`, `tournament`), to
+  /// the server; no account needed. True once the server took it.
+  Future<bool> report(String name, String place) async {
+    try {
+      await _call('POST', 'v1/report', {'name': name, 'place': place});
+      return true;
+    } on LeaderboardException {
+      return false;
+    }
+  }
+
   /// [day]'s board. Throws [LeaderboardException].
   Future<LeaderboardBoard> fetchBoard(int day) async {
     final id = account?.id;

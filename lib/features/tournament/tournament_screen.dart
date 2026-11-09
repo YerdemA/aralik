@@ -11,6 +11,7 @@ import '../../core/scoring.dart';
 import '../../core/strings.dart';
 import '../../core/theme.dart';
 import '../../core/tournament.dart';
+import '../../data/moderation.dart';
 import '../../data/duel_client.dart';
 import '../../data/pending_match.dart';
 import '../../data/question.dart';
@@ -18,6 +19,8 @@ import '../../data/question_repository.dart';
 import '../../data/sound.dart';
 import '../../data/stats_store.dart';
 import '../../data/tournament_client.dart';
+import '../../widgets/player_actions.dart';
+import '../../widgets/share_origin.dart';
 import '../game/answer_input.dart';
 import '../game/game_controller.dart';
 import '../leaderboard/leaderboard_screen.dart' show Medal;
@@ -98,6 +101,7 @@ class _TournamentScreenState extends State<TournamentScreen> {
   void initState() {
     super.initState();
     _room.addListener(_onRoom);
+    Moderation.instance.addListener(_blockedChanged);
     _connect();
   }
 
@@ -131,6 +135,7 @@ class _TournamentScreenState extends State<TournamentScreen> {
     // Left mid-match ("Çık"): the room keeps the player until the match
     // ends; the home screen offers to go back.
     _keep(now: true);
+    Moderation.instance.removeListener(_blockedChanged);
     _ticker?.cancel();
     _revealTicker?.cancel();
     _left.dispose();
@@ -169,6 +174,10 @@ class _TournamentScreenState extends State<TournamentScreen> {
     } on Object {
       if (mounted) _room.handle(const TournamentError('offline'));
     }
+  }
+
+  void _blockedChanged() {
+    if (mounted) setState(() {});
   }
 
   void _onRoom() {
@@ -605,7 +614,10 @@ class _LobbyView extends StatelessWidget {
                 color: Colors.white,
                 icon: const Icon(Icons.share_rounded),
                 onPressed: () => SharePlus.instance.share(
-                  ShareParams(text: AppStrings.tournamentInvite(code)),
+                  ShareParams(
+                    text: AppStrings.tournamentInvite(code),
+                    sharePositionOrigin: shareOrigin(context),
+                  ),
                 ),
               ),
             ],
@@ -653,7 +665,13 @@ class _LobbyView extends StatelessWidget {
                       foregroundColor: p.id == room.you
                           ? Colors.white
                           : scheme.onSurface,
-                      child: Text(p.name.characters.first.toUpperCase()),
+                      child: Text(
+                        Moderation.instance
+                            .shown(p.name)
+                            .characters
+                            .first
+                            .toUpperCase(),
+                      ),
                     ),
                     title: Row(
                       children: [
@@ -661,7 +679,7 @@ class _LobbyView extends StatelessWidget {
                           child: Text(
                             p.id == room.you
                                 ? '${p.name} (${AppStrings.you})'
-                                : p.name,
+                                : Moderation.instance.shown(p.name),
                             overflow: TextOverflow.ellipsis,
                             style: theme.textTheme.titleMedium?.copyWith(
                               color: p.id == room.you
@@ -684,6 +702,13 @@ class _LobbyView extends StatelessWidget {
                         ],
                       ],
                     ),
+                    onTap: p.id == room.you
+                        ? null
+                        : () => showPlayerActions(
+                            context,
+                            name: p.name,
+                            place: ReportPlace.tournament,
+                          ),
                     trailing: room.isHost && p.id != room.you
                         ? IconButton(
                             tooltip: AppStrings.tournamentKick,
@@ -817,7 +842,7 @@ class _RevealView extends StatelessWidget {
               const SizedBox(height: 8),
               for (final r in room.ranked(index))
                 _ResultRow(
-                  name: room.nameOf(r.id),
+                  name: Moderation.instance.shown(room.nameOf(r.id)),
                   me: r.id == room.you,
                   result: r,
                   question: question,
@@ -969,82 +994,95 @@ class _StandingsView extends StatelessWidget {
                     return Card(
                       color: me ? scheme.primaryContainer : null,
                       margin: const EdgeInsets.symmetric(vertical: 4),
+                      clipBehavior: Clip.antiAlias,
                       shape: medal == null
                           ? null
                           : RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(18),
                               side: BorderSide(color: medal.mid, width: 2.5),
                             ),
-                      child: Padding(
-                        padding: const EdgeInsets.fromLTRB(12, 10, 16, 10),
-                        child: Row(
-                          children: [
-                            Container(
-                              width: 36,
-                              height: 36,
-                              alignment: Alignment.center,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                gradient: medal?.gradient,
-                                color: medal == null
-                                    ? scheme.surfaceContainerHigh
-                                    : null,
+                      child: InkWell(
+                        onTap: me
+                            ? null
+                            : () => showPlayerActions(
+                                context,
+                                name: s.name,
+                                place: ReportPlace.tournament,
                               ),
-                              child: Text(
-                                '${k + 1}',
-                                style: theme.textTheme.titleMedium?.copyWith(
-                                  fontWeight: FontWeight.w800,
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(12, 10, 16, 10),
+                          child: Row(
+                            children: [
+                              Container(
+                                width: 36,
+                                height: 36,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  gradient: medal?.gradient,
                                   color: medal == null
-                                      ? scheme.onSurface
-                                      : Colors.white,
-                                  shadows: medal == null
-                                      ? null
-                                      : [
-                                          Shadow(
-                                            color: medal.dark,
-                                            blurRadius: 3,
-                                          ),
-                                        ],
+                                      ? scheme.surfaceContainerHigh
+                                      : null,
+                                ),
+                                child: Text(
+                                  '${k + 1}',
+                                  style: theme.textTheme.titleMedium?.copyWith(
+                                    fontWeight: FontWeight.w800,
+                                    color: medal == null
+                                        ? scheme.onSurface
+                                        : Colors.white,
+                                    shadows: medal == null
+                                        ? null
+                                        : [
+                                            Shadow(
+                                              color: medal.dark,
+                                              blurRadius: 3,
+                                            ),
+                                          ],
+                                  ),
                                 ),
                               ),
-                            ),
-                            const SizedBox(width: 12),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    [
-                                      me
-                                          ? '${s.name} (${AppStrings.you})'
-                                          : s.name,
-                                      if (s.left)
-                                        '· ${AppStrings.tournamentLeft}',
-                                    ].join(' '),
-                                    overflow: TextOverflow.ellipsis,
-                                    style: theme.textTheme.titleMedium
-                                        ?.copyWith(color: onRow),
-                                  ),
-                                  Text(
-                                    AppStrings.tournamentHits(
-                                      s.hits,
-                                      room.roundQuestions,
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      [
+                                        me
+                                            ? '${s.name} (${AppStrings.you})'
+                                            : Moderation.instance.shown(s.name),
+                                        if (s.left)
+                                          '· ${AppStrings.tournamentLeft}',
+                                      ].join(' '),
+                                      overflow: TextOverflow.ellipsis,
+                                      style: theme.textTheme.titleMedium
+                                          ?.copyWith(color: onRow),
                                     ),
-                                    style: theme.textTheme.bodySmall?.copyWith(
-                                      color: onRow ?? scheme.onSurfaceVariant,
+                                    Text(
+                                      AppStrings.tournamentHits(
+                                        s.hits,
+                                        room.roundQuestions,
+                                      ),
+                                      style: theme.textTheme.bodySmall
+                                          ?.copyWith(
+                                            color:
+                                                onRow ??
+                                                scheme.onSurfaceVariant,
+                                          ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
-                            ),
-                            Text(
-                              '${s.points}',
-                              style: theme.textTheme.titleLarge?.copyWith(
-                                fontWeight: FontWeight.w800,
-                                color: onRow,
+                              Text(
+                                '${s.points}',
+                                style: theme.textTheme.titleLarge?.copyWith(
+                                  fontWeight: FontWeight.w800,
+                                  color: onRow,
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     );

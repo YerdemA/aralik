@@ -55,4 +55,11 @@ void main() {
       expect(settings.nextNameChange(now), isNull);
     },
   );
+
+  test('names compare like the server: Turkish case, no separators', () {
+    expect(nameKey('  Işık_Ali '), nameKey('ışıkali'));
+    expect(nameKey('İREM'), 'irem');
+    expect(nameKey('Ka.p-lan'), 'kaplan');
+    expect(nameKey('Aslan'), isNot(nameKey('Pars')));
+  });
 }

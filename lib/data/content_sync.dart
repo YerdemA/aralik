@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'net.dart';
@@ -57,6 +58,8 @@ class ContentSync implements RemoteContent {
   static const _scheduleKey = 'content_schedule';
   static const _leaderboardKey = 'leaderboard_url';
   static const _appBuildKey = 'latest_app_build';
+  static const _iosBuildKey = 'latest_ios_build';
+  static const _appStoreIdKey = 'app_store_id';
   static const _scoringDayKey = 'scoring_v2_day';
 
   final SharedPreferences _prefs;
@@ -83,10 +86,17 @@ class ContentSync implements RemoteContent {
     return url == null ? null : Uri.tryParse(url);
   }
 
-  /// The newest app build on Google Play, as the manifest announces it
-  /// (`"app_build"`), or null. Read on every manifest check like the
-  /// leaderboard address.
-  int? get latestAppBuild => _prefs.getInt(_appBuildKey);
+  /// The newest app build in this platform's store, as the manifest
+  /// announces it, or null: `"app_build"` for Google Play, `"ios_build"`
+  /// for the App Store. Read on every manifest check like the leaderboard
+  /// address.
+  int? get latestAppBuild => _prefs.getInt(
+    defaultTargetPlatform == TargetPlatform.iOS ? _iosBuildKey : _appBuildKey,
+  );
+
+  /// The app's numeric App Store id (`"app_store_id"`), or null before it
+  /// is published there; the update notice opens its page.
+  String? get appStoreId => _prefs.getString(_appStoreIdKey);
 
   /// The first day the daily sets and duels use the scaled rule
   /// (`"scoring_v2_day"`, see answer_scale.dart), or null. The server reads
@@ -119,11 +129,13 @@ class ContentSync implements RemoteContent {
       } else {
         await _prefs.remove(_scoringDayKey);
       }
-      final build = manifest['app_build'];
-      if (build is int && build > 0) {
-        await _prefs.setInt(_appBuildKey, build);
+      await _storeBuild(_appBuildKey, manifest['app_build']);
+      await _storeBuild(_iosBuildKey, manifest['ios_build']);
+      final storeId = manifest['app_store_id'];
+      if (storeId is String && RegExp(r'^\d{6,12}$').hasMatch(storeId)) {
+        await _prefs.setString(_appStoreIdKey, storeId);
       } else {
-        await _prefs.remove(_appBuildKey);
+        await _prefs.remove(_appStoreIdKey);
       }
       if (remoteVersion <= version) return SyncResult.upToDate;
 
@@ -147,6 +159,14 @@ class ContentSync implements RemoteContent {
   }
 
   /// Stores an https leaderboard URL; anything else turns it off.
+  Future<void> _storeBuild(String key, Object? build) async {
+    if (build is int && build > 0) {
+      await _prefs.setInt(key, build);
+    } else {
+      await _prefs.remove(key);
+    }
+  }
+
   Future<void> _storeLeaderboard(Object? url) async {
     final uri = url is String ? Uri.tryParse(url) : null;
     if (uri != null && uri.isScheme('https') && uri.host.isNotEmpty) {

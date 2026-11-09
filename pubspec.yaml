@@ -26,3 +26,4 @@ flutter:
     - assets/data/places.json
     - assets/data/attributions.json
     - assets/sounds/
+    - assets/sounds/ios/

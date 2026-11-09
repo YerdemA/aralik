@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:aralik/data/content_sync.dart';
 import 'package:aralik/data/question_repository.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -142,6 +143,30 @@ void main() {
     server['manifest.json'] = jsonEncode(manifest);
     expect(await sync(force: true), SyncResult.upToDate);
     expect(content().latestAppBuild, isNull);
+  });
+
+  test('on iOS the App Store build and id are used', () async {
+    ContentSync content() =>
+        ContentSync(prefs, httpGet: fakeGet, clock: () => now);
+    final manifest = jsonDecode(server['manifest.json']!) as Map;
+    server['manifest.json'] = jsonEncode({
+      ...manifest,
+      'app_build': 9,
+      'ios_build': 7,
+      'app_store_id': '6740000000',
+    });
+    await sync();
+    expect(content().latestAppBuild, 9);
+    debugDefaultTargetPlatformOverride = TargetPlatform.iOS;
+    try {
+      expect(content().latestAppBuild, 7);
+    } finally {
+      debugDefaultTargetPlatformOverride = null;
+    }
+    expect(content().appStoreId, '6740000000');
+    server['manifest.json'] = jsonEncode({...manifest, 'app_store_id': 'x'});
+    await sync(force: true);
+    expect(content().appStoreId, isNull);
   });
 
   test('stores the scoring switch day from the manifest', () async {

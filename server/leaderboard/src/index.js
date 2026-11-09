@@ -30,6 +30,15 @@
 //   GET  /v1/duel/random?v=1&name=…&bank=N           WebSocket to the lobby
 //   POST /v1/tournament/rooms                        → {code}  (tournament.js)
 //   GET  /v1/tournament/rooms/{code}?v=1&name=…&bank=N  WebSocket to the room
+//
+// Reports (App Store guideline 1.2: names other players see):
+//   POST /v1/report    {name, place}                 → {ok: true}
+//      Anyone may report a name seen on the board, in a duel or in a
+//      tournament. One report per reporter (a salted hash of the IP, kept 7
+//      days) and name counts; at REPORT_HIDE_AT the name is hidden from the
+//      board for everyone else until reviewed (scripts/admin.mjs: reports,
+//      ban, unban). A banned name cannot be taken, nor used in duels or
+//      tournaments.
 
 import { LANDING_HOSTS, landing } from './landing.js';
 import {
@@ -62,7 +71,13 @@ const DEFAULTS = {
   SUSPECT_POINTS: '470',
   // Seconds a day's board may be served from the edge cache.
   BOARD_CACHE_SECONDS: '30',
+  // Different reporters within REPORT_DAYS after which a name is hidden
+  // from the board until reviewed.
+  REPORT_HIDE_AT: '3',
 };
+
+const REPORT_DAYS = 7;
+const REPORT_PLACES = new Set(['board', 'duel', 'tournament']);
 
 const HOUR_MS = 60 * 60 * 1000;
 const MAX_BODY_BYTES = 4096;
@@ -165,12 +180,73 @@ async function deviceHash(env, raw) {
   return sha256(`${env.DEVICE_SALT ?? env.IP_SALT ?? 'kabaca'}:device:${raw}`);
 }
 
+/** Whether the moderator banned the name with [key] (scripts/admin.mjs). */
+async function isBanned(db, key) {
+  const row = await db
+    .prepare('SELECT 1 AS b FROM banned_names WHERE name_key = ?')
+    .bind(key)
+    .first();
+  return row !== null;
+}
+
+/**
+ * A banned name asking to play a duel or a tournament gets the room's own
+ * refusal (`blocked_name`), so every app version shows it. Null lets the
+ * request through.
+ */
+async function refuseBanned(request, env) {
+  const raw = new URL(request.url).searchParams.get('name');
+  const name = raw ? cleanNickname(raw) : null;
+  if (!name || !env.DB || !(await isBanned(env.DB, nicknameKey(name)))) {
+    return null;
+  }
+  const [client, server] = Object.values(new WebSocketPair());
+  server.accept();
+  server.send(JSON.stringify({ t: 'error', code: 'blocked_name' }));
+  server.close(4000, 'blocked_name');
+  return new Response(null, { status: 101, webSocket: client });
+}
+
+async function report(request, env, now) {
+  await limitDuel(request, env);
+  const body = await readBody(request);
+  const name = typeof body.name === 'string' ? cleanNickname(body.name) : null;
+  if (!name || !REPORT_PLACES.has(body.place)) {
+    throw new HttpError(400, 'bad_request');
+  }
+  const key = nicknameKey(name);
+  const ip = request.headers.get('cf-connecting-ip') ?? 'unknown';
+  const reporter = await sha256(`${env.IP_SALT ?? 'kabaca'}:report:${ip}`);
+  const db = env.DB;
+  await db
+    .prepare(
+      `INSERT INTO reports (name_key, nickname, place, reporter, at)
+         VALUES (?, ?, ?, ?, ?)
+       ON CONFLICT (name_key, reporter) DO UPDATE SET place = excluded.place, at = excluded.at`,
+    )
+    .bind(key, name, body.place, reporter, now)
+    .run();
+  const { n } = await db
+    .prepare('SELECT COUNT(*) AS n FROM reports WHERE name_key = ? AND at >= ?')
+    .bind(key, now - REPORT_DAYS * 24 * HOUR_MS)
+    .first();
+  if (n >= setting(env, 'REPORT_HIDE_AT')) {
+    await db
+      .prepare('UPDATE players SET hidden = 1 WHERE nickname_key = ?')
+      .bind(key)
+      .run();
+  }
+  return json(200, { ok: true });
+}
+
 /** A valid, free nickname as {name, key}; throws otherwise. */
 async function checkNickname(db, raw, exceptId = null) {
   const name = cleanNickname(raw);
   if (!name) throw new HttpError(400, 'invalid_nickname');
   const key = nicknameKey(name);
-  if (isBlocked(key)) throw new HttpError(400, 'blocked_nickname');
+  if (isBlocked(key) || (await isBanned(db, key))) {
+    throw new HttpError(400, 'blocked_nickname');
+  }
   const owner = await db
     .prepare('SELECT id FROM players WHERE nickname_key = ?')
     .bind(key)
@@ -510,6 +586,8 @@ async function connectTournament(request, env, code) {
     throw new HttpError(426, 'websocket_only');
   }
   await limitDuel(request, env);
+  const banned = await refuseBanned(request, env);
+  if (banned) return banned;
   return roomStub(env, room, env.TOURNAMENT_ROOMS).fetch(request);
 }
 
@@ -556,6 +634,8 @@ async function connectRoom(request, env, code) {
   if (!room) throw new HttpError(404, 'no_room');
   requireWebSocket(request, env);
   await limitDuel(request, env);
+  const banned = await refuseBanned(request, env);
+  if (banned) return banned;
   return roomStub(env, room).fetch(request);
 }
 
@@ -570,6 +650,8 @@ function requireWebSocket(request, env) {
 async function findOpponent(request, env) {
   requireWebSocket(request, env);
   await limitDuel(request, env);
+  const banned = await refuseBanned(request, env);
+  if (banned) return banned;
   // Math duels wait in a lobby of their own.
   const mode = new URL(request.url).searchParams.get('mode');
   const name = mode === 'math' ? 'lobby-math' : 'lobby';
@@ -637,6 +719,8 @@ export async function handle(request, env, now = Date.now(), fetchFn = fetch) {
           return await createRoom(request, env);
         case '/v1/tournament/rooms':
           return await createTournament(request, env);
+        case '/v1/report':
+          return await report(request, env, now);
       }
       throw new HttpError(404, 'not_found');
     }
@@ -654,6 +738,9 @@ export async function handle(request, env, now = Date.now(), fetchFn = fetch) {
 export async function cleanUp(env, now = Date.now()) {
   await env.DB.prepare('DELETE FROM register_log WHERE at < ?')
     .bind(now - 24 * HOUR_MS)
+    .run();
+  await env.DB.prepare('DELETE FROM reports WHERE at < ?')
+    .bind(now - REPORT_DAYS * 24 * HOUR_MS)
     .run();
   // Scores are accepted up to yesterday: older device days are not needed.
   await env.DB.prepare('DELETE FROM device_days WHERE day < ?')

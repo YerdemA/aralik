@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import '../../core/daily.dart';
 import '../../core/strings.dart';
 import '../../data/leaderboard.dart';
+import '../../data/moderation.dart';
 import '../../data/settings_store.dart';
+import '../../widgets/player_actions.dart';
 import 'join_sheet.dart';
 
 /// Today's board: the best players, the player's own rank, and the one
@@ -38,7 +40,18 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
   @override
   void initState() {
     super.initState();
+    Moderation.instance.addListener(_blockedChanged);
     _load();
+  }
+
+  @override
+  void dispose() {
+    Moderation.instance.removeListener(_blockedChanged);
+    super.dispose();
+  }
+
+  void _blockedChanged() {
+    if (mounted) setState(() {});
   }
 
   Future<void> _load() async {
@@ -135,7 +148,20 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
     final me = board.me;
     return [
       for (final e in board.top)
-        _Row(entry: e, nickname: e.nickname ?? nickname ?? AppStrings.you),
+        _Row(
+          entry: e,
+          nickname: e.isMe
+              ? e.nickname ?? nickname ?? AppStrings.you
+              : Moderation.instance.shown(e.nickname ?? ''),
+          // Someone else's name: report or block it.
+          onTap: e.isMe || e.nickname == null
+              ? null
+              : () => showPlayerActions(
+                  context,
+                  name: e.nickname!,
+                  place: ReportPlace.board,
+                ),
+        ),
       if (me != null && !board.meInTop) ...[
         const Padding(
           padding: EdgeInsets.symmetric(vertical: 4),
@@ -205,10 +231,13 @@ enum Medal {
 }
 
 class _Row extends StatelessWidget {
-  const _Row({required this.entry, required this.nickname});
+  const _Row({required this.entry, required this.nickname, this.onTap});
 
   final LeaderboardEntry entry;
   final String nickname;
+
+  /// Opens report / block for another player's row.
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -219,7 +248,22 @@ class _Row extends StatelessWidget {
     final cardColor = theme.cardTheme.color ?? scheme.surfaceContainer;
     // The player's own row sits on primaryContainer: text to match.
     final onRow = entry.isMe ? scheme.onPrimaryContainer : null;
-    final content = Padding(
+    final content = InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(16),
+      child: _rowContent(theme, scheme, medal, isLight, onRow),
+    );
+    return _frame(theme, scheme, medal, isLight, cardColor, content);
+  }
+
+  Widget _rowContent(
+    ThemeData theme,
+    ColorScheme scheme,
+    Medal? medal,
+    bool isLight,
+    Color? onRow,
+  ) {
+    return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: 14,
         vertical: medal == Medal.gold ? 14 : 10,
@@ -261,6 +305,16 @@ class _Row extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Widget _frame(
+    ThemeData theme,
+    ColorScheme scheme,
+    Medal? medal,
+    bool isLight,
+    Color cardColor,
+    Widget content,
+  ) {
     if (medal == null) {
       return Card(
         color: entry.isMe ? scheme.primaryContainer : null,

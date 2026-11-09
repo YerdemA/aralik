@@ -30,6 +30,17 @@ NicknameProblem? nicknameProblem(String raw) {
   return null;
 }
 
+/// A name as the server compares names (`nicknameKey` in
+/// server/leaderboard/src/nickname.js, without its accent folding):
+/// Turkish lower case, without spaces, dots, dashes and underscores.
+String nameKey(String name) =>
+    tidyNickname(name)
+        .replaceAll('I', 'ı')
+        .replaceAll('İ', 'i')
+        .toLowerCase()
+        .replaceAll('ı', 'i')
+        .replaceAll(RegExp(r'[ ._-]'), '');
+
 /// How often the player's one name may change: the same everywhere
 /// (leaderboard, duel, tournament) and the server's `RENAME_DAYS`.
 const nameChangeEvery = Duration(days: 3);

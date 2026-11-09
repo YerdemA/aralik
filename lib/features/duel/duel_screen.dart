@@ -14,15 +14,18 @@ import '../../core/question_timer.dart';
 import '../../core/scoring.dart';
 import '../../core/strings.dart';
 import '../../core/theme.dart';
+import '../../data/moderation.dart';
 import '../../data/duel_client.dart';
 import '../../data/pending_match.dart';
 import '../../data/question.dart';
 import '../../data/question_repository.dart';
 import '../../data/sound.dart';
 import '../../data/stats_store.dart';
+import '../../widgets/player_actions.dart';
 import '../../widgets/duelist.dart';
 import '../../widgets/interval_bar.dart';
 import '../../widgets/philosopher.dart';
+import '../../widgets/share_origin.dart';
 import '../game/answer_input.dart';
 import '../game/game_controller.dart';
 import 'duel_search_view.dart';
@@ -668,13 +671,15 @@ class _DuelScreenState extends State<DuelScreen> {
                   left: 12,
                   right: 12,
                   bottom: 8,
-                  child: _AwayNote(name: _match.opponentName),
+                  child: _AwayNote(
+                    name: Moderation.instance.shown(_match.opponentName),
+                  ),
                 ),
               if ((_match.paused || _match.reconnecting) && error == null)
                 Positioned.fill(
                   child: _PausedCover(
                     reconnecting: _match.reconnecting,
-                    opponent: _match.opponentName,
+                    opponent: Moderation.instance.shown(_match.opponentName),
                     awayUntil: _awayUntil,
                     now: widget.now,
                   ),
@@ -714,7 +719,8 @@ class _ScoreLine extends StatelessWidget {
             ),
             const TextSpan(text: '  ·  '),
             TextSpan(
-              text: '${match.opponentTotal} ${match.opponentName}',
+              text:
+                  '${match.opponentTotal} ${Moderation.instance.shown(match.opponentName)}',
               style: bold.copyWith(color: Palette.duelOpponent),
             ),
           ],
@@ -822,7 +828,10 @@ class _WaitingRoom extends StatelessWidget {
         const Spacer(),
         FilledButton.icon(
           onPressed: () => SharePlus.instance.share(
-            ShareParams(text: AppStrings.duelInvite(code)),
+            ShareParams(
+              text: AppStrings.duelInvite(code),
+              sharePositionOrigin: shareOrigin(context),
+            ),
           ),
           icon: const Icon(Icons.share_rounded),
           label: const Text(AppStrings.duelShareCode),
@@ -961,7 +970,7 @@ class _RevealView extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 _PlayerResult(
-                  name: match.opponentName,
+                  name: Moderation.instance.shown(match.opponentName),
                   colour: Palette.duelOpponent,
                   result: last.opponent,
                   question: question,
@@ -1172,107 +1181,122 @@ class _ResultView extends StatelessWidget {
       ),
       DuelOutcome.draw => (AppStrings.duelDraw, DuelPose.even, DuelPose.even),
     };
-    return LayoutBuilder(
-      builder: (context, box) {
-        // As wide as half the screen, but leave room for the rest.
-        final rematchOpen = const {
-          RematchState.available,
-          RematchState.asked,
-          RematchState.offered,
-          RematchState.starting,
-        }.contains(match.rematch);
-        final figure = [
-          box.maxWidth / 2 - 8,
-          190.0,
-          box.maxHeight - (match.rematch == RematchState.offered ? 520 : 440),
-        ].reduce((a, b) => a < b ? a : b).clamp(80.0, 190.0);
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            const SizedBox(height: 4),
-            TweenAnimationBuilder<double>(
-              tween: Tween(begin: 0.6, end: 1),
-              duration: const Duration(milliseconds: 500),
-              curve: Curves.elasticOut,
-              builder: (context, scale, child) =>
-                  Transform.scale(scale: scale, child: child),
-              child: Text(
-                title,
-                style: theme.textTheme.displaySmall?.copyWith(
-                  fontWeight: FontWeight.w900,
-                  color: switch (outcome) {
-                    DuelOutcome.win => Palette.duelMe,
-                    DuelOutcome.loss => Palette.duelOpponent,
-                    DuelOutcome.draw => theme.colorScheme.primary,
-                  },
+    return ListenableBuilder(
+      listenable: Moderation.instance,
+      builder: (context, _) => LayoutBuilder(
+        builder: (context, box) {
+          // As wide as half the screen, but leave room for the rest.
+          final rematchOpen = const {
+            RematchState.available,
+            RematchState.asked,
+            RematchState.offered,
+            RematchState.starting,
+          }.contains(match.rematch);
+          final figure = [
+            box.maxWidth / 2 - 8,
+            190.0,
+            box.maxHeight - (match.rematch == RematchState.offered ? 568 : 488),
+          ].reduce((a, b) => a < b ? a : b).clamp(80.0, 190.0);
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              const SizedBox(height: 4),
+              TweenAnimationBuilder<double>(
+                tween: Tween(begin: 0.6, end: 1),
+                duration: const Duration(milliseconds: 500),
+                curve: Curves.elasticOut,
+                builder: (context, scale, child) =>
+                    Transform.scale(scale: scale, child: child),
+                child: Text(
+                  title,
+                  style: theme.textTheme.displaySmall?.copyWith(
+                    fontWeight: FontWeight.w900,
+                    color: switch (outcome) {
+                      DuelOutcome.win => Palette.duelMe,
+                      DuelOutcome.loss => Palette.duelOpponent,
+                      DuelOutcome.draw => theme.colorScheme.primary,
+                    },
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              Text(
+                match.opponentLeft
+                    ? AppStrings.duelOpponentLeft
+                    : AppStrings.duelMargin(
+                        (match.myTotal - match.opponentTotal).abs(),
+                      ),
+                style: theme.textTheme.titleMedium?.copyWith(
+                  color: theme.colorScheme.onSurfaceVariant,
                 ),
                 textAlign: TextAlign.center,
               ),
-            ),
-            Text(
-              match.opponentLeft
-                  ? AppStrings.duelOpponentLeft
-                  : AppStrings.duelMargin(
-                      (match.myTotal - match.opponentTotal).abs(),
+              const Spacer(),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Expanded(
+                    child: _Podium(
+                      name: AppStrings.duelYou,
+                      total: match.myTotal,
+                      colour: Palette.duelMe,
+                      pose: mePose,
+                      figure: figure,
                     ),
-              style: theme.textTheme.titleMedium?.copyWith(
-                color: theme.colorScheme.onSurfaceVariant,
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: _Podium(
+                      name: Moderation.instance.shown(match.opponentName),
+                      total: match.opponentTotal,
+                      colour: Palette.duelOpponent,
+                      pose: opponentPose,
+                      figure: figure,
+                    ),
+                  ),
+                ],
               ),
-              textAlign: TextAlign.center,
-            ),
-            const Spacer(),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Expanded(
-                  child: _Podium(
-                    name: AppStrings.duelYou,
-                    total: match.myTotal,
-                    colour: Palette.duelMe,
-                    pose: mePose,
-                    figure: figure,
+              const SizedBox(height: 14),
+              _QuestionStrip(match: match),
+              if (match.opponentName.isNotEmpty)
+                Center(
+                  child: TextButton.icon(
+                    onPressed: () => showPlayerActions(
+                      context,
+                      name: match.opponentName,
+                      place: ReportPlace.duel,
+                    ),
+                    icon: const Icon(Icons.flag_outlined, size: 18),
+                    label: const Text(AppStrings.reportOrBlockOpponent),
                   ),
                 ),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: _Podium(
-                    name: match.opponentName,
-                    total: match.opponentTotal,
-                    colour: Palette.duelOpponent,
-                    pose: opponentPose,
-                    figure: figure,
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 14),
-            _QuestionStrip(match: match),
-            const Spacer(),
-            _RematchArea(
-              match: match,
-              onRematch: onRematch,
-              onDecline: onDecline,
-            ),
-            if (rematchOpen)
-              OutlinedButton.icon(
-                onPressed: () => Navigator.of(context).pop(true),
-                icon: const Icon(Icons.search_rounded),
-                label: const Text(AppStrings.duelPlayAgain),
-              )
-            else
-              FilledButton.icon(
-                onPressed: () => Navigator.of(context).pop(true),
-                icon: const Icon(Icons.replay_rounded),
-                label: const Text(AppStrings.duelPlayAgain),
+              const Spacer(),
+              _RematchArea(
+                match: match,
+                onRematch: onRematch,
+                onDecline: onDecline,
               ),
-            const SizedBox(height: 4),
-            TextButton(
-              onPressed: () => Navigator.of(context).pop(),
-              child: const Text(AppStrings.duelHome),
-            ),
-          ],
-        );
-      },
+              if (rematchOpen)
+                OutlinedButton.icon(
+                  onPressed: () => Navigator.of(context).pop(true),
+                  icon: const Icon(Icons.search_rounded),
+                  label: const Text(AppStrings.duelPlayAgain),
+                )
+              else
+                FilledButton.icon(
+                  onPressed: () => Navigator.of(context).pop(true),
+                  icon: const Icon(Icons.replay_rounded),
+                  label: const Text(AppStrings.duelPlayAgain),
+                ),
+              const SizedBox(height: 4),
+              TextButton(
+                onPressed: () => Navigator.of(context).pop(),
+                child: const Text(AppStrings.duelHome),
+              ),
+            ],
+          );
+        },
+      ),
     );
   }
 }
@@ -1293,7 +1317,7 @@ class _RematchArea extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final name = match.opponentName;
+    final name = Moderation.instance.shown(match.opponentName);
     Widget busy(String text) => FilledButton.icon(
       onPressed: null,
       icon: const SizedBox.square(

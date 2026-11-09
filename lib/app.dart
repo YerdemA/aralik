@@ -9,6 +9,7 @@ import 'data/pending_match.dart';
 import 'data/question_repository.dart';
 import 'data/settings_store.dart';
 import 'data/stats_store.dart';
+import 'data/store_link.dart';
 import 'features/home/home_screen.dart';
 import 'features/intro/intro_screen.dart';
 import 'widgets/tap_sounds.dart';
@@ -22,6 +23,7 @@ class KabacaApp extends StatelessWidget {
     this.leaderboard,
     this.pending,
     this.latestAppBuild,
+    this.openStore,
     this.scoringV2Day,
     this.invites,
   });
@@ -42,8 +44,11 @@ class KabacaApp extends StatelessWidget {
   /// Null hides the leaderboard (tests).
   final LeaderboardStore? leaderboard;
 
-  /// The newest build on Google Play (content manifest), or null.
+  /// The newest build in the store (content manifest), or null.
   final int? Function()? latestAppBuild;
+
+  /// Opens the app's store page; null uses [openStorePage] as it is.
+  final Future<bool> Function()? openStore;
 
   static final _pageSounds = PageSounds();
 
@@ -79,6 +84,7 @@ class KabacaApp extends StatelessWidget {
             leaderboard: leaderboard,
             pending: pending,
             latestAppBuild: latestAppBuild,
+            openStore: openStore ?? openStorePage,
             scoringV2Day: scoringV2Day,
             invites: invites,
           ),

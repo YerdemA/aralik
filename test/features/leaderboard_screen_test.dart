@@ -1,6 +1,7 @@
 import 'package:aralik/core/strings.dart';
 import 'package:aralik/core/theme.dart';
 import 'package:aralik/data/leaderboard.dart';
+import 'package:aralik/data/moderation.dart';
 import 'package:aralik/data/settings_store.dart';
 import 'package:aralik/features/leaderboard/leaderboard_screen.dart';
 import 'package:aralik/features/settings/settings_screen.dart';
@@ -72,6 +73,43 @@ void main() {
     );
     await tester.pumpAndSettle();
   }
+
+  testWidgets('another player can be reported and blocked from the board', (
+    tester,
+  ) async {
+    final reports = <String>[];
+    Moderation.instance = Moderation(
+      prefs: await SharedPreferences.getInstance(),
+      report: (name, place) async {
+        reports.add('$name@${place.name}');
+        return store.report(name, place.name);
+      },
+    );
+    addTearDown(() => Moderation.instance = Moderation());
+    await open(tester);
+
+    await tester.tap(find.text('Pars'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text(AppStrings.reportName));
+    await tester.pumpAndSettle();
+    expect(reports, ['Pars@board']);
+    expect(paths, contains('/v1/report'));
+    expect(find.text(AppStrings.reportSent), findsOneWidget);
+
+    await tester.tap(find.text('Pars'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text(AppStrings.blockPlayer));
+    await tester.pumpAndSettle();
+    expect(find.text('Pars'), findsNothing);
+    expect(find.text(AppStrings.blockedPlayer), findsOneWidget);
+    expect(find.text('Aslan'), findsOneWidget);
+    // Kept on the phone.
+    expect(
+      Moderation(prefs: await SharedPreferences.getInstance())
+          .isBlocked('pars'),
+      isTrue,
+    );
+  });
 
   testWidgets('shows the board and invites to join', (tester) async {
     await open(tester);

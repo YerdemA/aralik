@@ -1,6 +1,7 @@
 """Publish the question bank, daily schedule and place data for over-the-air updates.
 
 Usage:  python tools/publish_content.py [--reset] [--leaderboard URL] [--app-build N]
+        [--ios-build N] [--app-store-id ID]
 
 Copies the question bank, the daily schedule and the place data to
 docs/content/ (served by GitHub Pages) and bumps the version in
@@ -21,6 +22,10 @@ server both read it. -1 removes it.
 --app-build N announces that build N (pubspec's "+N") is on Google Play:
 apps with an older build offer the update. Set it only once the release is
 live on Play, or players are sent to a store page without the update.
+
+--ios-build N does the same for the App Store, and --app-store-id ID gives
+the app's numeric App Store id (App Store Connect → App Information → Apple
+ID), which the iOS update notice needs to open the store page.
 """
 
 from __future__ import annotations
@@ -88,6 +93,17 @@ def main(argv: list[str]) -> int:
         help="Play'de yayındaki en yeni build numarası (eskiler güncelleme önerir; 0 kapatır)",
     )
     parser.add_argument(
+        "--ios-build",
+        type=int,
+        metavar="N",
+        help="App Store'da yayındaki en yeni build numarası (0 kapatır)",
+    )
+    parser.add_argument(
+        "--app-store-id",
+        metavar="ID",
+        help="uygulamanın App Store sayısal kimliği ('' kaldırır)",
+    )
+    parser.add_argument(
         "--scoring-v2-day",
         type=int,
         metavar="N",
@@ -96,6 +112,14 @@ def main(argv: list[str]) -> int:
     args = parser.parse_args(argv)
     if args.app_build is not None and args.app_build < 0:
         print("HATA: --app-build 0 ya da pozitif olmalı.")
+        return 1
+    if args.ios_build is not None and args.ios_build < 0:
+        print("HATA: --ios-build 0 ya da pozitif olmalı.")
+        return 1
+    if args.app_store_id and not (
+        args.app_store_id.isdigit() and 6 <= len(args.app_store_id) <= 12
+    ):
+        print("HATA: --app-store-id yalnızca rakamlardan oluşmalı (ör. 6740000000).")
         return 1
     if args.leaderboard and not args.leaderboard.startswith("https://"):
         print("HATA: --leaderboard bir https adresi olmalı.")
@@ -140,6 +164,16 @@ def main(argv: list[str]) -> int:
             if args.app_build is None
             else args.app_build or None
         ),
+        "ios_build": (
+            manifest.get("ios_build")
+            if args.ios_build is None
+            else args.ios_build or None
+        ),
+        "app_store_id": (
+            manifest.get("app_store_id")
+            if args.app_store_id is None
+            else args.app_store_id or None
+        ),
         "scoring_v2_day": (
             manifest.get("scoring_v2_day")
             if args.scoring_v2_day is None
@@ -164,6 +198,7 @@ def main(argv: list[str]) -> int:
             )
             print(f"Liderlik adresi: {extras['leaderboard'] or 'kapalı'}")
             print(f"Güncelleme önerilen build: {extras['app_build'] or 'kapalı'}")
+            print(f"iOS: build {extras['ios_build'] or 'kapalı'}, App Store kimliği {extras['app_store_id'] or 'yok'}")
             print(f"Ölçekli puan başlangıç günü: {extras['scoring_v2_day'] if extras['scoring_v2_day'] is not None else 'yok'}")
             print("Canlıya almak için docs/ klasörünü commit edip push edin.")
             return 0

@@ -3,8 +3,10 @@
 //   flutter test tools/icon/render_icon_test.dart
 //
 // Writes the Android launcher icons (legacy, round, adaptive layers and the
-// Android 13 monochrome layer) into android/app/src/main/res/ and a 512 px
-// Play Store icon into docs/store/icon-512.png.
+// Android 13 monochrome layer) into android/app/src/main/res/, a 512 px
+// Play Store icon into docs/store/icon-512.png and the iOS icon (one
+// 1024 px PNG without an alpha channel, which the App Store refuses; iOS
+// rounds the corners itself) into ios/Runner/Assets.xcassets/AppIcon.appiconset/.
 //
 // Design: the Kabaca mascot (lib/widgets/philosopher.dart), a thinking
 // philosopher with a "?" thought bubble, on the app's navy.
@@ -69,7 +71,12 @@ enum _Layer {
   store,
 }
 
-Future<void> _render(_Layer layer, int size, String path) async {
+Future<void> _render(
+  _Layer layer,
+  int size,
+  String path, {
+  bool opaque = false,
+}) async {
   final recorder = ui.PictureRecorder();
   final canvas = Canvas(recorder);
   canvas.scale(size / 1024);
@@ -114,10 +121,52 @@ Future<void> _render(_Layer layer, int size, String path) async {
   }
 
   final image = await recorder.endRecording().toImage(size, size);
-  final png = await image.toByteData(format: ui.ImageByteFormat.png);
   final file = File(path)..createSync(recursive: true);
+  if (opaque) {
+    final rgba = await image.toByteData(format: ui.ImageByteFormat.rawRgba);
+    file.writeAsBytesSync(_rgbPng(rgba!.buffer.asUint8List(), size, size));
+    return;
+  }
+  final png = await image.toByteData(format: ui.ImageByteFormat.png);
   file.writeAsBytesSync(png!.buffer.asUint8List());
 }
+
+/// A PNG of [rgba] without its alpha channel (colour type 2, 8 bit).
+List<int> _rgbPng(List<int> rgba, int width, int height) {
+  final raw = <int>[];
+  for (var y = 0; y < height; y++) {
+    raw.add(0); // filter: none
+    for (var x = 0; x < width; x++) {
+      final i = (y * width + x) * 4;
+      raw.addAll([rgba[i], rgba[i + 1], rgba[i + 2]]);
+    }
+  }
+  List<int> u32(int v) => [v >> 24 & 255, v >> 16 & 255, v >> 8 & 255, v & 255];
+  List<int> chunk(String type, List<int> data) {
+    final body = [...type.codeUnits, ...data];
+    return [...u32(data.length), ...body, ...u32(_crc32(body))];
+  }
+
+  return [
+    137, 80, 78, 71, 13, 10, 26, 10, // signature
+    ...chunk('IHDR', [...u32(width), ...u32(height), 8, 2, 0, 0, 0]),
+    ...chunk('IDAT', ZLibCodec(level: 9).encode(raw)),
+    ...chunk('IEND', const []),
+  ];
+}
+
+int _crc32(List<int> bytes) {
+  var crc = 0xFFFFFFFF;
+  for (final b in bytes) {
+    crc ^= b;
+    for (var k = 0; k < 8; k++) {
+      crc = (crc & 1) != 0 ? (crc >> 1) ^ 0xEDB88320 : crc >> 1;
+    }
+  }
+  return crc ^ 0xFFFFFFFF;
+}
+
+const _iosIcons = 'ios/Runner/Assets.xcassets/AppIcon.appiconset';
 
 void main() {
   test('render launcher icons', () async {
@@ -149,6 +198,18 @@ void main() {
       ..createSync(recursive: true)
       ..writeAsStringSync(_adaptiveXml);
     await _render(_Layer.store, 512, 'docs/store/icon-512.png');
+    // iOS: one full-bleed square; Xcode makes the smaller sizes.
+    final iosDir = Directory(_iosIcons)..createSync(recursive: true);
+    for (final old in iosDir.listSync().whereType<File>()) {
+      if (old.path.endsWith('.png')) old.deleteSync();
+    }
+    await _render(
+      _Layer.store,
+      1024,
+      '$_iosIcons/Icon-App-1024x1024@1x.png',
+      opaque: true,
+    );
+    File('$_iosIcons/Contents.json').writeAsStringSync(_iosContents);
     // Large previews for review (not shipped).
     await _render(_Layer.full, 1024, 'build/icon_preview/full.png');
     await _render(_Layer.round, 256, 'build/icon_preview/round-256.png');
@@ -156,6 +217,22 @@ void main() {
     await _render(_Layer.monoPreview, 432, 'build/icon_preview/mono-432.png');
   });
 }
+
+const _iosContents = '''{
+  "images" : [
+    {
+      "filename" : "Icon-App-1024x1024@1x.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "size" : "1024x1024"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
+''';
 
 const _adaptiveXml = '''<?xml version="1.0" encoding="utf-8"?>
 <adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">

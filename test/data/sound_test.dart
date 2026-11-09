@@ -15,6 +15,16 @@ void main() {
     }
   });
 
+  test('every effect has a small CAF asset for iOS', () async {
+    for (final sfx in Sfx.values) {
+      final asset = sfx.assetFor(TargetPlatform.iOS);
+      final data = await rootBundle.load(asset);
+      final bytes = data.buffer.asUint8List(data.offsetInBytes, 4);
+      expect(String.fromCharCodes(bytes), 'caff', reason: asset);
+      expect(data.lengthInBytes, lessThan(40 * 1024), reason: asset);
+    }
+  });
+
   test('each outcome has its sound', () {
     expect(Sfx.of(ResultTier.good), Sfx.good);
     expect(Sfx.of(ResultTier.partial), Sfx.partial);
