@@ -5,9 +5,11 @@ import '../../data/moderation.dart';
 import '../../data/leaderboard.dart';
 import '../../data/settings_store.dart';
 import '../../widgets/link_text.dart';
+import '../../widgets/mascot_portrait.dart';
 import '../leaderboard/join_sheet.dart';
 import 'attributions_screen.dart';
 import 'connection_test_screen.dart';
+import 'mascot_screen.dart';
 import 'user_name_sheet.dart';
 
 /// Settings: the player's one name (the only place it is typed), the
@@ -50,6 +52,32 @@ class SettingsScreen extends StatelessWidget {
                     trailing: const Icon(Icons.edit_rounded),
                     onTap: () =>
                         showUserNameSheet(context, settings, leaderboard),
+                  );
+                },
+              ),
+            ),
+            const SizedBox(height: 24),
+            const _SectionTitle(AppStrings.mascotSection),
+            Card(
+              clipBehavior: Clip.antiAlias,
+              child: ListenableBuilder(
+                listenable: settings,
+                builder: (context, _) {
+                  final next = settings.nextMascotChange();
+                  return ListTile(
+                    leading: MascotPortrait(look: settings.mascot, size: 44),
+                    title: const Text(AppStrings.mascotEdit),
+                    subtitle: Text(
+                      next == null
+                          ? AppStrings.mascotSubtitle
+                          : AppStrings.mascotNextChange(next),
+                    ),
+                    trailing: const Icon(Icons.chevron_right_rounded),
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute<void>(
+                        builder: (_) => MascotScreen(settings: settings),
+                      ),
+                    ),
                   );
                 },
               ),

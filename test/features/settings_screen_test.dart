@@ -29,10 +29,19 @@ Future<SettingsStore> settingsStore([Map<String, Object> prefs = const {}]) {
   return SettingsStore.open();
 }
 
+/// The whole settings list on one screen (the mascot card made it longer
+/// than the default 800 × 600 test view).
+void _tall(WidgetTester tester) {
+  tester.view.physicalSize = const Size(800, 2000);
+  tester.view.devicePixelRatio = 1;
+  addTearDown(tester.view.reset);
+}
+
 void main() {
   testWidgets('settings lists data sources, licenses and privacy', (
     tester,
   ) async {
+    _tall(tester);
     await tester.pumpWidget(
       app(SettingsScreen(settings: await settingsStore())),
     );
@@ -46,6 +55,7 @@ void main() {
   testWidgets('with a server the connection test opens from settings', (
     tester,
   ) async {
+    _tall(tester);
     final store = LeaderboardStore(
       await SharedPreferences.getInstance(),
       serviceUri: () => Uri.parse('https://lb.example/'),
@@ -245,6 +255,7 @@ void main() {
   });
 
   testWidgets('leaving the table keeps the name', (tester) async {
+    _tall(tester);
     final settings = await settingsStore({'duel_name': 'Ayşe'});
     final store = LeaderboardStore(
       await SharedPreferences.getInstance(),

@@ -323,6 +323,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Future<void> _showDaySummary(int day) => Navigator.of(context).push(
     MaterialPageRoute<SummaryAction>(
       builder: (_) => SummaryScreen(
+        mascot: widget.settings.mascot,
         results: _stats.dailyResults(day),
         hits: _stats.hits,
         answered: _stats.answered,
@@ -383,6 +384,7 @@ class _HomeScreenState extends State<HomeScreen> {
       final action = await Navigator.of(context).push<SummaryAction>(
         MaterialPageRoute(
           builder: (_) => SummaryScreen(
+            mascot: widget.settings.mascot,
             results: [for (final a in answers) (points: a.points, hit: a.hit)],
             hits: _stats.hits,
             answered: _stats.answered,
@@ -425,6 +427,7 @@ class _HomeScreenState extends State<HomeScreen> {
       final action = await Navigator.of(context).push<SummaryAction>(
         MaterialPageRoute(
           builder: (_) => SummaryScreen(
+            mascot: widget.settings.mascot,
             results: [for (final a in answers) (points: a.points, hit: a.hit)],
             hits: _stats.mathHits,
             answered: _stats.mathAnswered,
@@ -438,9 +441,13 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   });
 
-  late final _duels = DuelService(serviceUri: () => _leaderboard?.serviceUri);
+  late final _duels = DuelService(
+    serviceUri: () => _leaderboard?.serviceUri,
+    look: () => widget.settings.mascotCode,
+  );
   late final _tournaments = TournamentService(
     serviceUri: () => _leaderboard?.serviceUri,
+    look: () => widget.settings.mascotCode,
   );
 
   void _openTournament({String? code}) => Navigator.of(context).push(

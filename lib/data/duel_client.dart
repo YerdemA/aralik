@@ -39,12 +39,17 @@ class DuelException implements Exception {
 class DuelService {
   DuelService({
     required this.serviceUri,
+    this.look,
     JsonRequest? request,
     DuelConnector? connect,
   }) : _request = request ?? defaultJsonRequest,
        _connect = connect ?? webSocketChannel;
 
   /// The server (manifest's `leaderboard` field), or null without one.
+  /// The player's mascot code (Ayarlar → Maskotun), sent along so the
+  /// others draw it; null while never chosen.
+  final String? Function()? look;
+
   final Uri? Function() serviceUri;
   final JsonRequest _request;
   final DuelConnector _connect;
@@ -106,6 +111,7 @@ class DuelService {
         'v': '$duelProtocolVersion',
         'name': name,
         'bank': '$bankSize',
+        'look': ?look?.call(),
         'rejoin': ?rejoin,
         if (resign) 'resign': '1',
         // This app pings (see webSocketChannel): the room may close the

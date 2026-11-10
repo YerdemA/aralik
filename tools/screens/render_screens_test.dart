@@ -20,6 +20,7 @@ import 'package:aralik/features/duel/duel_search_view.dart';
 import 'package:aralik/data/tournament_client.dart';
 import 'package:aralik/features/tournament/tournament_screen.dart';
 import 'package:aralik/features/leaderboard/leaderboard_screen.dart';
+import 'package:aralik/features/settings/mascot_screen.dart';
 import 'package:aralik/features/settings/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -239,6 +240,26 @@ void main() {
     await tester.tap(find.text('Ayşe'));
     await tester.pumpAndSettle();
     await snap(tester, 'ayarlar-ad');
+  });
+
+  testWidgets('render mascot editor', (tester) async {
+    phone(tester);
+    await tester.runAsync(_loadRoboto);
+    // ignore: invalid_use_of_visible_for_testing_member
+    SharedPreferences.setMockInitialValues({'mascot_look': '110021212'});
+    final prefs = await SharedPreferences.getInstance();
+    await tester.pumpWidget(
+      RepaintBoundary(
+        key: boundary,
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: _withRoboto(AppTheme.light),
+          home: MascotScreen(settings: SettingsStore(prefs)),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+    await snap(tester, 'maskot');
   });
 
   testWidgets('render duel lobby', (tester) async {

@@ -101,7 +101,7 @@ void paintMatchShareCard(Canvas c, MatchShare data) {
     c.save();
     c.translate(w / 2, headY);
     c.scale(scale);
-    const Philosopher().paintPhilosopher(
+    Philosopher(look: data.me.look).paintPhilosopher(
       c,
       Offset.zero,
       1.25,
@@ -132,13 +132,17 @@ void _duelFigures(Canvas c, MatchShare data) {
     MatchOutcome.draw => (DuelPose.even, DuelPose.even),
   };
   const size = 520.0, top = 600.0;
-  for (final (x, pose, sash) in [
-    (20.0, me, Palette.duelMe),
-    (540.0, them, Palette.duelOpponent),
+  for (final (x, pose, sash, look) in [
+    (20.0, me, Palette.duelMe, data.me.look),
+    (540.0, them, Palette.duelOpponent, data.opponent.look),
   ]) {
     c.save();
     c.translate(x, top);
-    DuelistPainter(pose: pose, sash: sash).paint(c, const Size.square(size));
+    DuelistPainter(
+      pose: pose,
+      sash: sash,
+      look: look,
+    ).paint(c, const Size.square(size));
     c.restore();
   }
 }

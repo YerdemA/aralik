@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:aralik/core/mascot_look.dart';
 import 'package:aralik/core/tournament.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -20,6 +21,23 @@ Map<String, Object?> roomMsg({int host = 1, List<String>? names}) => {
 };
 
 void main() {
+  test('players show the mascot they sent', () {
+    final room = TournamentRoom()
+      ..handle(ev({'t': 'welcome', 'you': 1}))
+      ..handle(
+        ev({
+          ...roomMsg(),
+          'players': [
+            {'id': 1, 'name': 'Ayşe', 'look': '120131212'},
+            {'id': 2, 'name': 'Bora'},
+          ],
+        }),
+      );
+    expect(room.lookOf(1), MascotLook.parse('120131212'));
+    expect(room.lookOf(2), MascotLook.philosopher);
+    expect(room.lookOf(9), MascotLook.philosopher);
+  });
+
   test('the lobby knows the host and when a round can start', () {
     final room = TournamentRoom()
       ..handle(ev({'t': 'welcome', 'you': 1}))

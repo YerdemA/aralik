@@ -12,10 +12,15 @@ import 'leaderboard.dart';
 class TournamentService {
   TournamentService({
     required this.serviceUri,
+    this.look,
     JsonRequest? request,
     DuelConnector? connect,
   }) : _request = request ?? defaultJsonRequest,
        _connect = connect ?? webSocketChannel;
+
+  /// The player's mascot code (Ayarlar → Maskotun), sent along so the
+  /// others draw it; null while never chosen.
+  final String? Function()? look;
 
   final Uri? Function() serviceUri;
   final JsonRequest _request;
@@ -61,6 +66,7 @@ class TournamentService {
           'v': '$tournamentProtocolVersion',
           'name': name,
           'bank': '$bankSize',
+          'look': ?look?.call(),
           'rejoin': ?rejoin,
           // This app pings (see webSocketChannel).
           'hb': '1',

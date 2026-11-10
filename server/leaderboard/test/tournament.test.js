@@ -25,10 +25,10 @@ const content = makeContent();
 const pick = (limit, levels) =>
   pickDuelQuestions(content, limit, 0, () => 0, levels);
 
-function player(name, bank = 99) {
-  return t.playerFrom(
-    new URLSearchParams({ v: `${t.TOURNAMENT_VERSION}`, name, bank: `${bank}` }),
-  );
+function player(name, bank = 99, look) {
+  const q = { v: `${t.TOURNAMENT_VERSION}`, name, bank: `${bank}` };
+  if (look) q.look = look;
+  return t.playerFrom(new URLSearchParams(q));
 }
 
 /** A lobby with [names] in it; returns the last step and the ids. */
@@ -396,4 +396,20 @@ test('the worker routes tournament rooms', async () => {
     env,
   );
   assert.equal(plain.status, 426);
+});
+
+test('shows each mascot that was sent in the room, start and resume', () => {
+  let r = t.createRoom('ABCDE', T0);
+  r = t.join(r.state, player('Ayşe', 99, '120131212'), T0);
+  r = t.join(r.state, player('Bora', 99, 'bad'), T0);
+  r = t.join(r.state, player('Cem'), T0);
+  const room = sent(r).find((m) => m.t === 'room');
+  assert.deepEqual(room.players, [
+    { id: 1, name: 'Ayşe', look: '120131212' },
+    { id: 2, name: 'Bora' },
+    { id: 3, name: 'Cem' },
+  ]);
+  r = t.start(r.state, 1, T0, pick);
+  const start = sent(r).find((m) => m.t === 'start');
+  assert.deepEqual(start.players[0], { id: 1, name: 'Ayşe', look: '120131212' });
 });

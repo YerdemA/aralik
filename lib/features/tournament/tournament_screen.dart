@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart';
 
+import '../../core/mascot_look.dart';
 import '../../core/answer_scale.dart';
 import '../../core/match_share.dart';
 import '../../core/number_format.dart';
@@ -21,6 +22,7 @@ import '../../data/question_repository.dart';
 import '../../data/sound.dart';
 import '../../data/stats_store.dart';
 import '../../data/tournament_client.dart';
+import '../../widgets/mascot_portrait.dart';
 import '../../widgets/player_actions.dart';
 import '../../widgets/share_origin.dart';
 import '../game/answer_input.dart';
@@ -666,20 +668,11 @@ class _LobbyView extends StatelessWidget {
                     subtitle: room.isAway(p.id)
                         ? const Text(AppStrings.tournamentAway)
                         : null,
-                    leading: CircleAvatar(
-                      backgroundColor: p.id == room.you
+                    leading: _Face(
+                      look: room.lookOf(p.id),
+                      background: p.id == room.you
                           ? Palette.duelMe
                           : scheme.surfaceContainerHigh,
-                      foregroundColor: p.id == room.you
-                          ? Colors.white
-                          : scheme.onSurface,
-                      child: Text(
-                        Moderation.instance
-                            .shown(p.name)
-                            .characters
-                            .first
-                            .toUpperCase(),
-                      ),
                     ),
                     title: Row(
                       children: [
@@ -1050,6 +1043,13 @@ class _StandingsView extends StatelessWidget {
                                   ),
                                 ),
                               ),
+                              const SizedBox(width: 8),
+                              _Face(
+                                look: room.lookOf(s.id),
+                                background: me
+                                    ? Palette.duelMe
+                                    : scheme.surfaceContainerHigh,
+                              ),
                               const SizedBox(width: 12),
                               Expanded(
                                 child: Column(
@@ -1131,6 +1131,7 @@ class _StandingsView extends StatelessWidget {
             hits: s.hits,
             me: s.id == room.you,
             left: s.left,
+            look: room.lookOf(s.id),
             tiers: s.id == room.you
                 ? [
                     for (final r in mine)
@@ -1190,4 +1191,21 @@ class _ReconnectingCover extends StatelessWidget {
       ),
     );
   }
+}
+
+/// A player's mascot in a round frame of [background].
+class _Face extends StatelessWidget {
+  const _Face({required this.look, required this.background});
+
+  final MascotLook look;
+  final Color background;
+
+  @override
+  Widget build(BuildContext context) => Container(
+    width: 44,
+    height: 44,
+    decoration: BoxDecoration(shape: BoxShape.circle, color: background),
+    clipBehavior: Clip.antiAlias,
+    child: MascotPortrait(look: look, size: 44),
+  );
 }

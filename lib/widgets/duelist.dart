@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../core/mascot_look.dart';
 import 'philosopher.dart';
 
 /// The philosopher at a duel's end, full figure, wearing a sash in the
@@ -10,8 +11,10 @@ class Duelist extends StatelessWidget {
     required this.pose,
     required this.sash,
     required this.size,
+    this.look = MascotLook.philosopher,
   });
 
+  final MascotLook look;
   final DuelPose pose;
   final Color sash;
   final double size;
@@ -22,7 +25,7 @@ class Duelist extends StatelessWidget {
       child: RepaintBoundary(
         child: CustomPaint(
           size: Size.square(size),
-          painter: DuelistPainter(pose: pose, sash: sash),
+          painter: DuelistPainter(pose: pose, sash: sash, look: look),
         ),
       ),
     );
@@ -30,7 +33,13 @@ class Duelist extends StatelessWidget {
 }
 
 class DuelistPainter extends CustomPainter {
-  const DuelistPainter({required this.pose, required this.sash});
+  const DuelistPainter({
+    required this.pose,
+    required this.sash,
+    this.look = MascotLook.philosopher,
+  });
+
+  final MascotLook look;
 
   final DuelPose pose;
   final Color sash;
@@ -40,7 +49,7 @@ class DuelistPainter extends CustomPainter {
     canvas.save();
     canvas.scale(size.width);
     canvas.clipRect(const Rect.fromLTWH(0, 0, 1, 1));
-    const Philosopher().paintPhilosopher(
+    Philosopher(look: look).paintPhilosopher(
       canvas,
       const Offset(0.47, 0.38),
       0.64,
@@ -53,5 +62,5 @@ class DuelistPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(DuelistPainter old) =>
-      old.pose != pose || old.sash != sash;
+      old.pose != pose || old.sash != sash || old.look != look;
 }

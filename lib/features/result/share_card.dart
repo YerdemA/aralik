@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 import '../../core/daily.dart';
 import '../../core/day_mood.dart';
+import '../../core/mascot_look.dart';
 import '../../core/match_share.dart';
 import '../../core/number_format.dart';
 import '../../core/scoring.dart';
@@ -28,7 +29,11 @@ class ShareCardData {
     required this.results,
     required this.hits,
     required this.answered,
+    this.mascot = MascotLook.philosopher,
   });
+
+  /// The player's own mascot.
+  final MascotLook mascot;
 
   /// The daily set's day; null for a free-play round.
   final int? dayIndex;
@@ -172,7 +177,7 @@ void paintShareCard(Canvas c, ShareCardData data) {
   c.save();
   c.translate(w / 2, headY);
   c.scale(scale);
-  const Philosopher().paintPhilosopher(
+  Philosopher(look: data.mascot).paintPhilosopher(
     c,
     Offset.zero,
     1.25,

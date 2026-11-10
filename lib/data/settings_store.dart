@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../core/mascot_look.dart';
 import '../core/nickname.dart' as nick;
 
 /// User settings (shared_preferences): the theme, sound effects and the
@@ -19,6 +20,8 @@ class SettingsStore extends ChangeNotifier {
   static const _nameKey = 'duel_name';
   static const _nameChangedKey = 'name_changed_at';
   static const _soundKey = 'sound_on';
+  static const _mascotKey = 'mascot_look';
+  static const _mascotChangedKey = 'mascot_changed_at';
 
   final SharedPreferences _prefs;
   ThemeMode _themeMode;
@@ -99,6 +102,36 @@ class SettingsStore extends ChangeNotifier {
   /// pick another one right away.
   Future<void> freeNameChange() async {
     await _prefs.remove(_nameChangedKey);
+    notifyListeners();
+  }
+
+  /// The player's own mascot as an eight-digit code (see [MascotLook]),
+  /// or null while never chosen (the default philosopher).
+  String? get mascotCode => _prefs.getString(_mascotKey);
+
+  MascotLook get mascot => MascotLook.parse(mascotCode);
+
+  DateTime? get mascotChangedAt {
+    final ms = _prefs.getInt(_mascotChangedKey);
+    return ms == null ? null : DateTime.fromMillisecondsSinceEpoch(ms);
+  }
+
+  /// When the mascot may change again, or null when it may change now.
+  DateTime? nextMascotChange([DateTime? now]) =>
+      nextMascotChangeAfter(mascotChangedAt, now ?? DateTime.now());
+
+  /// Saves the mascot. A change (not the first choice) starts the wait of
+  /// [mascotChangeEvery]; callers check [nextMascotChange].
+  Future<void> setMascot(MascotLook look, {DateTime? now}) async {
+    final old = mascotCode;
+    if (old == look.code) return;
+    await _prefs.setString(_mascotKey, look.code);
+    if (old != null) {
+      await _prefs.setInt(
+        _mascotChangedKey,
+        (now ?? DateTime.now()).millisecondsSinceEpoch,
+      );
+    }
     notifyListeners();
   }
 }

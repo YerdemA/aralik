@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart';
 
+import '../../core/mascot_look.dart';
 import '../../core/math/math_question.dart';
 import '../../core/math/math_problem.dart';
 import '../../core/answer_scale.dart';
@@ -1264,6 +1265,7 @@ class _ResultView extends StatelessWidget {
                       colour: Palette.duelMe,
                       pose: mePose,
                       figure: figure,
+                      look: match.myLook,
                     ),
                   ),
                   const SizedBox(width: 12),
@@ -1274,6 +1276,7 @@ class _ResultView extends StatelessWidget {
                       colour: Palette.duelOpponent,
                       pose: opponentPose,
                       figure: figure,
+                      look: match.opponentLook,
                     ),
                   ),
                 ],
@@ -1341,6 +1344,7 @@ class _ResultView extends StatelessWidget {
         MatchShareRow(
           name: name,
           me: me,
+          look: me ? match.myLook : match.opponentLook,
           points: results.fold(0, (sum, r) => sum + r.points),
           hits: results.where((r) => r.hit).length,
           tiers: [
@@ -1485,8 +1489,10 @@ class _Podium extends StatelessWidget {
     required this.colour,
     required this.pose,
     required this.figure,
+    required this.look,
   });
 
+  final MascotLook look;
   final String name;
   final int total;
   final Color colour;
@@ -1512,7 +1518,7 @@ class _Podium extends StatelessWidget {
             offset: Offset(0, (1 - t) * 40),
             child: Opacity(opacity: t.clamp(0.0, 1.0), child: child),
           ),
-          child: Duelist(pose: pose, sash: colour, size: figure),
+          child: Duelist(pose: pose, sash: colour, size: figure, look: look),
         ),
         AnimatedContainer(
           duration: const Duration(milliseconds: 400),

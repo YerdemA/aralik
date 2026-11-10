@@ -22,6 +22,8 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 
+import 'mascot_look.dart';
+
 /// Must match DUEL_VERSION in duel.js; the server refuses other versions.
 const int duelProtocolVersion = 1;
 
@@ -53,6 +55,13 @@ String? normalizeRoomCode(String raw) {
 /// ran out with nothing typed.
 typedef DuelResult = ({int? low, int? high, int points, bool hit});
 
+/// The mascot codes of a `start` or `resume` (by seat); older servers
+/// send none.
+List<String?> _parseLooks(Object? list) {
+  if (list is! List || list.length != 2) return const [null, null];
+  return [for (final l in list) l is String ? l : null];
+}
+
 /// A message from the room.
 @immutable
 sealed class DuelEvent {
@@ -68,6 +77,7 @@ sealed class DuelEvent {
         'start' => DuelStart(
           you: m['you'] as int,
           names: (m['names'] as List).cast<String>(),
+          looks: _parseLooks(m['looks']),
           questionIds: (m['questions'] as List).cast<String>(),
           questionTime: Duration(milliseconds: m['questionMs'] as int),
           rejoin: m['rejoin'] as String?,
@@ -89,6 +99,7 @@ sealed class DuelEvent {
         'resume' => DuelResume(
           you: m['you'] as int,
           names: (m['names'] as List).cast<String>(),
+          looks: _parseLooks(m['looks']),
           questionIds: (m['questions'] as List).cast<String>(),
           questionTime: Duration(milliseconds: m['questionMs'] as int),
           rejoin: m['rejoin'] as String?,
@@ -168,6 +179,7 @@ class DuelResume extends DuelEvent {
   const DuelResume({
     required this.you,
     required this.names,
+    this.looks = const [null, null],
     required this.questionIds,
     required this.questionTime,
     required this.rejoin,
@@ -183,6 +195,9 @@ class DuelResume extends DuelEvent {
   });
   final int you;
   final List<String> names;
+
+  /// Both players' mascot codes by seat; null where not sent.
+  final List<String?> looks;
   final List<String> questionIds;
   final Duration questionTime;
   final String? rejoin;
@@ -220,6 +235,7 @@ class DuelStart extends DuelEvent {
   const DuelStart({
     required this.you,
     required this.names,
+    this.looks = const [null, null],
     required this.questionIds,
     required this.questionTime,
     this.rejoin,
@@ -227,6 +243,9 @@ class DuelStart extends DuelEvent {
   });
   final int you;
   final List<String> names;
+
+  /// Both players' mascot codes by seat; null where not sent.
+  final List<String?> looks;
   final List<String> questionIds;
   final Duration questionTime;
 
@@ -395,6 +414,7 @@ class DuelMatch extends ChangeNotifier {
   String? _code;
   int _you = 0;
   List<String> _names = const [];
+  List<String?> _looks = const [null, null];
   List<String> _questionIds = const [];
   Duration _questionTime = Duration.zero;
   int _index = -1;
@@ -485,6 +505,12 @@ class DuelMatch extends ChangeNotifier {
   String? get code => _code;
   String get myName => _names.isEmpty ? '' : _names[_you];
   String get opponentName => _names.length < 2 ? '' : _names[1 - _you];
+
+  /// This player's mascot as the room has it.
+  MascotLook get myLook => MascotLook.parse(_looks[_you]);
+
+  /// The opponent's mascot; the default philosopher when not sent.
+  MascotLook get opponentLook => MascotLook.parse(_looks[1 - _you]);
   List<String> get questionIds => _questionIds;
   Duration get questionTime => _questionTime;
 
@@ -551,6 +577,7 @@ class DuelMatch extends ChangeNotifier {
         if (_phase == DuelPhase.over) _newRound(event.round);
         _you = event.you;
         _names = event.names;
+        _looks = event.looks;
         _questionIds = event.questionIds;
         _questionTime = event.questionTime;
         _rejoin = event.rejoin;
@@ -650,6 +677,7 @@ class DuelMatch extends ChangeNotifier {
   void _resume(DuelResume r) {
     _you = r.you;
     _names = r.names;
+    _looks = r.looks;
     _questionIds = r.questionIds;
     _questionTime = r.questionTime;
     _rejoin = r.rejoin ?? _rejoin;

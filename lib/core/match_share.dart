@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 
+import 'mascot_look.dart';
 import 'scoring.dart';
 import 'strings.dart';
 
@@ -29,7 +30,11 @@ class MatchShareRow {
     this.me = false,
     this.left = false,
     this.tiers = const [],
+    this.look = MascotLook.philosopher,
   });
+
+  /// The player's mascot on the card.
+  final MascotLook look;
 
   /// As shown on this phone (a blocked name is already replaced).
   final String name;

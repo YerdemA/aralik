@@ -77,7 +77,7 @@ export class DuelRoom extends DurableObject {
     };
     const player = duel.playerFrom(params);
     if (player.error) return refuse(player.error);
-    const { name, bank, rematch, math } = player;
+    const { name, bank, look, rematch, math } = player;
     const seat = (n) =>
       socket.serializeAttachment({ seat: n, hb: pings(params), at: now });
 
@@ -108,7 +108,7 @@ export class DuelRoom extends DurableObject {
     const today = turkeyDayIndex(now);
     const result = duel.join(
       state,
-      { name, bank, token: duel.secret(), rematch, math },
+      { name, bank, look, token: duel.secret(), rematch, math },
       now,
       state?.mode === 'math'
         ? () => pickMathQuestions(duel.randomInt)

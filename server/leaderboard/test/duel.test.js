@@ -65,9 +65,15 @@ test('checks the player of a connection', () => {
   assert.deepEqual(duel.playerFrom(q('v=1&name=%20Ay%C5%9Fe%20&bank=12')), {
     name: 'Ayşe',
     bank: 12,
+    look: null,
     rematch: false,
     math: false,
   });
+  assert.equal(
+    duel.playerFrom(q('v=1&name=Ayse&bank=12&look=011100000')).look,
+    '011100000',
+  );
+  assert.equal(duel.playerFrom(q('v=1&name=Ayse&bank=12&look=299999999')).look, null);
   assert.equal(duel.playerFrom(q('v=1&name=Ayse&bank=12&math=1')).math, true);
   assert.equal(duel.playerFrom(q('v=1&name=Ayse&bank=12&rm=1')).rematch, true);
   assert.equal(duel.playerFrom(q('v=2&name=Ayse&bank=12')).error, 'version');
@@ -142,6 +148,7 @@ test('the first player waits, the second starts the duel', () => {
   assert.deepEqual(r.state.questions, ['e1', 'e2', 'e3', 'm1', 'm2']);
   const start = r.out.find((o) => o.to === 1).msg;
   assert.deepEqual(start.names, ['Ayşe', 'Bora']);
+  assert.deepEqual(start.looks, [null, null]);
   assert.equal(start.you, 1);
   assert.deepEqual(r.out.at(-1).msg, {
     t: 'question',
@@ -151,6 +158,16 @@ test('the first player waits, the second starts the duel', () => {
   assert.equal(r.alarm, T0 + 5 + duel.QUESTION_MS + duel.LOCK_GRACE_MS);
   assert.equal(duel.join(r.state, { name: 'Can', bank: 99 }, T0, pick).error, 'room_closed');
   assert.equal(duel.join(undefined, { name: 'Can', bank: 99 }, T0, pick).error, 'no_room');
+});
+
+test("passes both mascots on in start", () => {
+  let r = duel.createRoom('ABCDE', T0);
+  r = duel.join(r.state, { name: 'Ayşe', bank: 15, look: '120131212' }, T0, pick);
+  r = duel.join(r.state, { name: 'Bora', bank: 99 }, T0 + 5, pick);
+  for (const to of [0, 1]) {
+    const start = r.out.find((o) => o.to === to).msg;
+    assert.deepEqual(start.looks, ['120131212', null]);
+  }
 });
 
 test('both locks reveal at once, scored by the server', () => {

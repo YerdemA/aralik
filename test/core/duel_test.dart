@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:aralik/core/duel.dart';
+import 'package:aralik/core/mascot_look.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 String _msg(Map<String, Object?> m) => jsonEncode(m);
@@ -21,6 +22,33 @@ void main() {
     expect(normalizeRoomCode('ABCD'), isNull);
     expect(normalizeRoomCode('ABCDEF'), isNull);
     expect(roomCodeAlphabet.length, 31);
+  });
+
+  test('both mascots come with start; older servers send none', () {
+    final match = DuelMatch()
+      ..handle(
+        _parse({
+          't': 'start',
+          'you': 1,
+          'names': ['Ayşe', 'Bora'],
+          'looks': ['120131212', null],
+          'questions': ['q1'],
+          'questionMs': 15000,
+        }),
+      );
+    expect(match.opponentLook, MascotLook.parse('120131212'));
+    expect(match.myLook, MascotLook.philosopher);
+    final old = DuelMatch()
+      ..handle(
+        _parse({
+          't': 'start',
+          'you': 0,
+          'names': ['Ayşe', 'Bora'],
+          'questions': ['q1'],
+          'questionMs': 15000,
+        }),
+      );
+    expect(old.opponentLook, MascotLook.philosopher);
   });
 
   test('parses every message of the protocol', () {

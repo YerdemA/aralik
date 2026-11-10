@@ -12,6 +12,8 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 
+import 'mascot_look.dart';
+
 import 'duel.dart';
 
 /// Must match TOURNAMENT_VERSION in tournament.js.
@@ -20,7 +22,9 @@ const int tournamentProtocolVersion = 1;
 /// Question counts the host can pick.
 const List<int> tournamentQuestionCounts = [5, 10];
 
-typedef TournamentPlayer = ({int id, String name});
+/// [look] is the player's mascot code, null when not sent (older apps,
+/// or never chosen).
+typedef TournamentPlayer = ({int id, String name, String? look});
 
 /// One player's interval on a revealed question; null bounds: nothing
 /// typed in time.
@@ -53,7 +57,11 @@ sealed class TournamentEvent {
       if (m is! Map<String, dynamic>) return null;
       List<TournamentPlayer> players(Object? list) => [
         for (final p in (list as List).cast<Map<String, dynamic>>())
-          (id: p['id'] as int, name: p['name'] as String),
+          (
+            id: p['id'] as int,
+            name: p['name'] as String,
+            look: p['look'] as String?,
+          ),
       ];
       TournamentRoomState room(Map<String, dynamic> m) => TournamentRoomState(
         code: m['code'] as String,
@@ -374,6 +382,14 @@ class TournamentRoom extends ChangeNotifier {
       if (p.id == id) return p.name;
     }
     return '?';
+  }
+
+  /// The mascot of player [id]; the default philosopher when not sent.
+  MascotLook lookOf(int id) {
+    for (final p in [..._matchPlayers, ..._players]) {
+      if (p.id == id) return MascotLook.parse(p.look);
+    }
+    return MascotLook.philosopher;
   }
 
   /// This player's place in the last standings (1 = first), or null.

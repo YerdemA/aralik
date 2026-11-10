@@ -79,6 +79,7 @@
 import { scaleOn, upcomingIds } from './content.js';
 import { turkeyDayIndex } from './days.js';
 import { isHit, MIN_POINTS, scoreFor, validBound } from './scoring.js';
+import { cleanLook } from './look.js';
 import { cleanNickname, isBlocked, nicknameKey } from './nickname.js';
 import { MATH_MIN_POINTS, mathAnswer, mathScale } from './math.js';
 
@@ -137,6 +138,8 @@ export function playerFrom(params) {
   return {
     name,
     bank,
+    // The mascot code (?look=…), passed on to the opponent; null without.
+    look: cleanLook(params.get('look')),
     rematch: params.get('rm') === '1',
     math: params.get('math') === '1',
   };
@@ -288,7 +291,7 @@ export function createRoom(code, now, mode = 'bank') {
  */
 export function join(
   state,
-  { name, bank, token = null, rematch = false, math = false },
+  { name, bank, look = null, token = null, rematch = false, math = false },
   now,
   pick,
 ) {
@@ -297,7 +300,7 @@ export function join(
   if (state.phase !== 'waiting') return error('room_closed');
   if (state.players.length >= 2) return error('room_full');
   const seat = state.players.length;
-  const players = [...state.players, { name, bank, token, rematch }];
+  const players = [...state.players, { name, bank, look, token, rematch }];
   if (players.length < 2) {
     return {
       seat,
@@ -322,6 +325,7 @@ function startMessages(state) {
       t: 'start',
       you,
       names: state.players.map((p) => p.name),
+      looks: state.players.map((p) => p.look ?? null),
       questions: state.questions,
       questionMs: questionMs(state),
       rejoin: state.players[you].token,
@@ -635,6 +639,7 @@ function resumeMessage(state, seat, now) {
     t: 'resume',
     you: seat,
     names: state.players.map((p) => p.name),
+      looks: state.players.map((p) => p.look ?? null),
     questions: state.questions,
     questionMs: questionMs(state),
     rejoin: state.players[seat].token,

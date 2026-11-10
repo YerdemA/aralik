@@ -3,6 +3,7 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 
+import '../../core/mascot_look.dart';
 import '../../core/daily.dart';
 import '../../core/scoring.dart';
 import '../../core/match_share.dart';
@@ -30,7 +31,11 @@ class SummaryScreen extends StatelessWidget {
     this.roundLabel,
     this.calibrationTitle,
     this.math = false,
+    this.mascot = MascotLook.philosopher,
   });
+
+  /// The player's mascot on the share card.
+  final MascotLook mascot;
 
   /// A math round: the share card's mood uses math's bands.
   final bool math;
@@ -71,6 +76,7 @@ class SummaryScreen extends StatelessWidget {
         results: results,
         hits: hits,
         answered: answered,
+        mascot: mascot,
       ),
     ),
   );

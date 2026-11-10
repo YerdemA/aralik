@@ -63,6 +63,7 @@ import {
   REVEAL_MS,
   JOIN_TIMEOUT_MS,
 } from './duel.js';
+import { cleanLook } from './look.js';
 import { cleanNickname, isBlocked, nicknameKey } from './nickname.js';
 import { isHit, MIN_POINTS, scoreFor, validBound } from './scoring.js';
 
@@ -94,7 +95,8 @@ export function playerFrom(params) {
   if (isBlocked(key)) return { error: 'blocked_name' };
   const bank = Number(params.get('bank'));
   if (!Number.isSafeInteger(bank) || bank < 1) return { error: 'bad_request' };
-  return { name, key, bank };
+  // The mascot code (?look=…), shown to the others; null without.
+  return { name, key, bank, look: cleanLook(params.get('look')) };
 }
 
 function step(state, out = [], alarm = undefined, extra = {}) {
@@ -138,6 +140,11 @@ function prune(state, now) {
   return { ...state, players, host };
 }
 
+/** A player as the others see them: id, name and mascot (when sent). */
+function shown({ id, name, look }) {
+  return look ? { id, name, look } : { id, name };
+}
+
 /** The room as everyone sees it in the lobby. */
 function roomMessage(state) {
   return {
@@ -147,8 +154,8 @@ function roomMessage(state) {
       code: state.code,
       host: state.host,
       count: state.count,
-      players: state.players.map(({ id, name, away }) =>
-        away != null ? { id, name, away: true } : { id, name },
+      players: state.players.map((p) =>
+        p.away != null ? { ...shown(p), away: true } : shown(p),
       ),
       min: MIN_PLAYERS,
       max: MAX_PLAYERS,
@@ -191,7 +198,7 @@ export function isFree(state, now) {
 }
 
 /** Seats a player in the lobby. Returns {id, ...step} or {error}. */
-export function join(state, { name, key, bank, token = null }, now) {
+export function join(state, { name, key, bank, look = null, token = null }, now) {
   if (!state) return { error: 'no_room' };
   if (state.phase !== 'lobby') return { error: 'in_progress' };
   if (state.banned.includes(key)) return { error: 'kicked' };
@@ -200,7 +207,7 @@ export function join(state, { name, key, bank, token = null }, now) {
     // The same name back without its secret (the app gave up or is an
     // older one): the seat is theirs again.
     const players = state.players.map((p) =>
-      p.id === seat.id ? { ...p, name, bank, token, away: null } : p,
+      p.id === seat.id ? { ...p, name, bank, look, token, away: null } : p,
     );
     return {
       id: seat.id,
@@ -212,7 +219,7 @@ export function join(state, { name, key, bank, token = null }, now) {
   if (seat) return { error: 'name_taken' };
   if (state.players.length >= MAX_PLAYERS) return { error: 'room_full' };
   const id = state.nextId;
-  const players = [...state.players, { id, name, key, bank, token }];
+  const players = [...state.players, { id, name, key, bank, look, token }];
   const joined = {
     ...state,
     nextId: id + 1,
@@ -269,12 +276,13 @@ export function start(state, id, now, pick) {
   if (!questions) {
     return step(state, [{ to: id, msg: { t: 'error', code: 'no_questions' } }]);
   }
-  const players = state.players.map(({ id: pid, name }) => ({ id: pid, name }));
+  const players = state.players.map(shown);
   const match = {
     questions,
-    players: state.players.map(({ id: pid, name, key, bank, token, away }) => ({
+    players: state.players.map(({ id: pid, name, key, look, bank, token, away }) => ({
       id: pid,
       name,
+      look,
       key,
       bank,
       token,
@@ -489,7 +497,7 @@ function resumeMessage(state, id, now) {
       t: 'start',
       questions: match.questions,
       questionMs: QUESTION_MS,
-      players: match.players.map(({ id: pid, name }) => ({ id: pid, name })),
+      players: match.players.map(shown),
     },
     index: match.index,
     phase: state.phase,

@@ -219,6 +219,60 @@ abstract final class AppStrings {
       'Liderlik tablosunda, düelloda ve turnuvada bu adla görünürsün. '
       'Adını 3 günde bir değiştirebilirsin.';
 
+  // Mascot (Ayarlar → Maskotun).
+  static const mascotSection = 'Maskotun';
+  static const mascotTitle = 'Maskotun';
+  static const mascotEdit = 'Maskotunu tasarla';
+  static const mascotSubtitle =
+      'Düelloda, turnuvada ve paylaşım kartlarında seni temsil eder';
+  static const mascotBody =
+      'Maskotunu 3 günde bir değiştirebilirsin. İlk seçim serbest.';
+  static String mascotNextChange(DateTime at) =>
+      'Bir sonraki değişiklik: ${dayLabel(at)}';
+  static String mascotLocked(DateTime at) =>
+      'Maskotunu ${dayLabel(at)} tarihinde değiştirebilirsin.';
+  static const mascotSaved = 'Maskotun kaydedildi.';
+  static const mascotConfirmTitle = 'Maskot kaydedilsin mi?';
+  static const mascotConfirmBody =
+      'Kaydettikten sonra 3 gün boyunca değiştiremezsin.';
+  static const mascotGender = 'Cinsiyet';
+  static const mascotSkin = 'Ten rengi';
+  static const mascotHair = 'Saç';
+  static const mascotHairColor = 'Saç rengi';
+  static const mascotBeard = 'Sakal';
+  static const mascotMoustache = 'Bıyık';
+  static const mascotEyes = 'Gözler';
+  static const mascotGlasses = 'Gözlük';
+  static const mascotHat = 'Şapka';
+  static const mascotGenderNames = ['Erkek', 'Kadın'];
+  static const mascotSkinNames = ['Açık', 'Buğday', 'Esmer'];
+  static const mascotBeardNames = ['Yok', 'Gür', 'Kısa', 'Keçi', 'Büyücü'];
+  static const mascotMoustacheNames = [
+    'Yok',
+    'Klasik',
+    'İnce',
+    'Burma',
+    'Pala',
+  ];
+  static const mascotHairNames = ['Kel', 'Kıvırcık', 'Uzun', 'Topuz'];
+  static const mascotHatNames = ['Yok', 'Fes', 'Kep', 'Bere'];
+  static const mascotEyesNames = ['Nokta', 'İri', 'Sürmeli', 'Uykulu'];
+  static const mascotGlassesNames = [
+    'Yok',
+    'Tel',
+    'Kalın',
+    'Okuma',
+    'Pilot',
+    'Monokl',
+  ];
+  static const mascotHairColorNames = [
+    'Beyaz',
+    'Siyah',
+    'Kahve',
+    'Sarı',
+    'Kızıl',
+  ];
+
   // Calibration feedback
   static const calibrationTooNarrow = 'Aralıkların fazla dar.';
   static const calibrationTooWide = 'Daha cesur ol.';
