@@ -634,6 +634,21 @@ class _DuelScreenState extends State<DuelScreen> {
                   ],
                 ),
           actions: [
+            // Report or block the opponent at any time; the result view
+            // has its own button.
+            if (_match.opponentName.isNotEmpty &&
+                error == null &&
+                body is! _ResultView)
+              IconButton(
+                icon: const Icon(Icons.flag_outlined, size: 20),
+                tooltip: AppStrings.reportOrBlockOpponent,
+                visualDensity: VisualDensity.compact,
+                onPressed: () => showPlayerActions(
+                  context,
+                  name: _match.opponentName,
+                  place: ReportPlace.duel,
+                ),
+              ),
             if (_match.phase == DuelPhase.question)
               _OpponentStatus(locked: _match.opponentLocked),
             ValueListenableBuilder(

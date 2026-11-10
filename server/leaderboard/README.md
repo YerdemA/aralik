@@ -107,6 +107,15 @@ npx wrangler d1 execute kabaca-leaderboard --remote --file=migrations/0003_moder
   npm run admin -- unhide Kaplan
   ```
   Gizli oyuncu kendi tablosunda kendini görür, görünür oyuncular arasında sıralanır; oyuncu sayısına yalnızca kendisi için sayılır.
+- **Web paneli:** `https://api.kabaca.app/admin` aynı işleri tarayıcıdan yapar (bildirimler, kuşkulu puanlar, oyuncu arama,
+  yasaklı adlar; gizle / göster / yasakla / yasağı kaldır / bildirimleri sil). Açmak için uzun rastgele bir anahtar:
+  ```powershell
+  node -e "console.log(require('crypto').randomBytes(32).toString('base64url'))"
+  npx wrangler secret put ADMIN_TOKEN
+  ```
+  Anahtar yoksa ya da 24 karakterden kısaysa sayfa ve `/v1/admin/*` 404 döner. Yanlış anahtar IP başına `DUEL_LIMITER`
+  sınırına sayılır. Anahtar tarayıcıda yalnızca o sekmede (`sessionStorage`) tutulur. Kod: `src/admin.js`, `public/admin.html`
+  (kabaca.app'te sunulmaz).
 - **Tablo önbelleği:** bir günün tablosu `BOARD_CACHE_SECONDS` (30) saniye kenar önbellekte tutulur; yeni puan gelince silinir.
 
 ## Cihaz başına tek hesap

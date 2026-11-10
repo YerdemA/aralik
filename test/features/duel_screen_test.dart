@@ -87,6 +87,13 @@ void main() {
     await settle();
     expect(find.text(question.text), findsOneWidget);
     expect(find.byTooltip(AppStrings.duelOpponentThinking), findsOneWidget);
+    // The opponent can be reported mid-question from the corner flag.
+    await tester.tap(find.byTooltip(AppStrings.reportOrBlockOpponent));
+    await settle();
+    expect(find.text(AppStrings.blockPlayer), findsOneWidget);
+    await tester.tapAt(const Offset(10, 10)); // closes the sheet
+    await settle();
+    expect(find.text(AppStrings.blockPlayer), findsNothing);
 
     say({'t': 'locked', 'i': 0, 'seat': 1});
     await settle();
@@ -129,6 +136,9 @@ void main() {
     await tester.tap(find.text(AppStrings.duelSeeResult));
     await settle();
     expect(find.text(AppStrings.duelWin), findsOneWidget);
+    // The result view has its own report button instead of the flag.
+    expect(find.byTooltip(AppStrings.reportOrBlockOpponent), findsNothing);
+    expect(find.text(AppStrings.reportOrBlockOpponent), findsOneWidget);
     expect(played.first, Sfx.duelStart);
     expect(played.where((s) => s == Sfx.duelWin), hasLength(1));
     expect(played.last, Sfx.duelWin);

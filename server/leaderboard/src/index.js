@@ -39,6 +39,9 @@
 //      board for everyone else until reviewed (scripts/admin.mjs: reports,
 //      ban, unban). A banned name cannot be taken, nor used in duels or
 //      tournaments.
+//
+// Moderation panel (admin.js): GET /admin on this host, its API under
+// /v1/admin/, both 404 unless the ADMIN_TOKEN secret is set.
 
 import { LANDING_HOSTS, landing } from './landing.js';
 import {
@@ -52,6 +55,7 @@ import { cleanNickname, isBlocked, nicknameKey } from './nickname.js';
 import { isHit, scoreFor, validBound } from './scoring.js';
 import { normalizeRoomCode } from './duel.js';
 import { openRoom, roomStub } from './rooms.js';
+import * as admin from './admin.js';
 
 const DEFAULTS = {
   CONTENT_BASE: 'https://yerdema.github.io/aralik/content/',
@@ -685,13 +689,71 @@ async function deviceStatus(request, env, now) {
   return json(200, { account, days: results.map((r) => r.day) });
 }
 
+/** The moderation panel's page (public/admin.html) on the API host. */
+async function adminPage(request, env) {
+  if (!admin.adminEnabled(env) || !env.ASSETS) throw new HttpError(404, 'not_found');
+  const url = new URL(request.url);
+  url.pathname = '/admin.html';
+  const response = await env.ASSETS.fetch(new Request(url));
+  if (response.status !== 200) return response;
+  const headers = new Headers(response.headers);
+  headers.set('cache-control', 'no-store');
+  headers.set('x-content-type-options', 'nosniff');
+  headers.set('x-frame-options', 'DENY');
+  headers.set('referrer-policy', 'no-referrer');
+  headers.set('x-robots-tag', 'noindex, nofollow');
+  headers.set(
+    'content-security-policy',
+    "default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'unsafe-inline'; " +
+      "connect-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+  );
+  return new Response(response.body, { status: 200, headers });
+}
+
+/** /v1/admin/…: the panel's API. A wrong token is limited per IP. */
+async function adminApi(request, env, path, url, now) {
+  if (!admin.adminEnabled(env)) throw new HttpError(404, 'not_found');
+  if (!(await admin.isAdmin(request, env))) {
+    await limitDuel(request, env);
+    throw new HttpError(401, 'unauthorized');
+  }
+  const db = env.DB;
+  try {
+    if (request.method === 'GET') {
+      switch (path) {
+        case '/v1/admin/reports':
+          return json(200, { reports: await admin.reports(db) });
+        case '/v1/admin/suspects':
+          return json(200, {
+            suspects: await admin.suspects(db, Number(url.searchParams.get('days') ?? 3), now),
+          });
+        case '/v1/admin/players':
+          return json(200, { players: await admin.players(db, url.searchParams.get('q')) });
+        case '/v1/admin/banned':
+          return json(200, { banned: await admin.banned(db) });
+      }
+    } else if (request.method === 'POST' && path === '/v1/admin/action') {
+      const body = await readBody(request);
+      return json(200, await admin.act(db, body.action, body.name, now));
+    }
+  } catch (e) {
+    if (e instanceof admin.AdminError) throw new HttpError(e.status, e.code);
+    throw e;
+  }
+  throw new HttpError(404, 'not_found');
+}
+
 /** Routes one request. [now] and [fetchFn] are replaceable in tests. */
 export async function handle(request, env, now = Date.now(), fetchFn = fetch) {
   const url = new URL(request.url);
   if (LANDING_HOSTS.has(url.hostname)) return landing(request, env);
   const path = url.pathname.replace(/\/+$/, '');
   try {
+    if (path.startsWith('/v1/admin/')) {
+      return await adminApi(request, env, path, url, now);
+    }
     if (request.method === 'GET') {
+      if (path === '/admin') return await adminPage(request, env);
       const match = /^\/v1\/day\/(-?\d+)$/.exec(path);
       if (match) return await board(Number(match[1]), url, env, now);
       const room = /^\/v1\/duel\/rooms\/([^/]+)$/.exec(path);

@@ -639,6 +639,95 @@ test('three reporters hide a name from the board; a report needs a name and plac
   assert.equal(left.n, 0);
 });
 
+const ADMIN = 'a'.repeat(32);
+
+async function adminCall(method, path, body, token = ADMIN) {
+  const request = new Request(`https://lb.example${path}`, {
+    method,
+    headers: { 'cf-connecting-ip': '9.9.9.9', authorization: `Bearer ${token}` },
+    body: body === undefined ? undefined : JSON.stringify(body),
+  });
+  const response = await handle(request, env, NOW, fakeFetch);
+  return { status: response.status, body: await response.json() };
+}
+
+test('the admin API is off without a long ADMIN_TOKEN and refuses a wrong one', async () => {
+  assert.equal((await adminCall('GET', '/v1/admin/reports')).status, 404);
+  env.ADMIN_TOKEN = 'short';
+  assert.equal((await adminCall('GET', '/v1/admin/reports', undefined, 'short')).status, 404);
+  env.ADMIN_TOKEN = ADMIN;
+  const limited = [];
+  env.DUEL_LIMITER = {
+    limit: async ({ key }) => {
+      limited.push(key);
+      return { success: true };
+    },
+  };
+  assert.equal((await adminCall('GET', '/v1/admin/reports', undefined, 'b'.repeat(32))).status, 401);
+  assert.deepEqual(limited, ['duel:9.9.9.9']);
+  assert.equal((await adminCall('GET', '/v1/admin/reports')).status, 200);
+  // The panel page needs the token's existence, not the token.
+  delete env.ADMIN_TOKEN;
+  const page = await handle(new Request('https://lb.example/admin'), env, NOW, fakeFetch);
+  assert.equal(page.status, 404);
+});
+
+test('the admin API lists reports and bans, dismisses and searches', async () => {
+  env.ADMIN_TOKEN = ADMIN;
+  const rude = await join('Kaplan', '5');
+  await join('Kaplumbağa', '6');
+  await call('POST', '/v1/submit', { id: rude.id, token: rude.token, day: DAY, answers: answers() });
+  for (const ip of ['1', '2', '3']) {
+    await call('POST', '/v1/report', { name: 'Kaplan', place: ip === '1' ? 'duel' : 'board' }, { ip });
+  }
+  await call('POST', '/v1/report', { name: 'Hayalet', place: 'duel' }, { ip: '1' });
+
+  const { reports } = (await adminCall('GET', '/v1/admin/reports')).body;
+  assert.equal(reports.length, 2);
+  assert.equal(reports[0].name, 'Kaplan');
+  assert.equal(reports[0].reports, 3);
+  assert.deepEqual(reports[0].places.sort(), ['board', 'duel']);
+  assert.equal(reports[0].hidden, true);
+  assert.equal(reports[1].player, false);
+
+  const found = (await adminCall('GET', '/v1/admin/players?q=kap')).body.players;
+  assert.deepEqual(found.map((p) => p.name), ['Kaplan', 'Kaplumbağa']);
+  assert.equal(found[0].days, 1);
+
+  // Dismissing clears the reports and shows the player again.
+  let r = await adminCall('POST', '/v1/admin/action', { action: 'dismiss', name: 'kaplan' });
+  assert.deepEqual(r.body, { name: 'Kaplan', player: true, hidden: false, banned: false });
+  assert.equal((await adminCall('GET', '/v1/admin/reports')).body.reports.length, 1);
+
+  r = await adminCall('POST', '/v1/admin/action', { action: 'ban', name: 'Hayalet' });
+  assert.deepEqual(r.body, { name: 'Hayalet', player: false, hidden: false, banned: true });
+  assert.equal((await call('POST', '/v1/register', { nickname: 'Hayalet' })).body.error, 'blocked_nickname');
+  assert.deepEqual(
+    (await adminCall('GET', '/v1/admin/banned')).body.banned.map((b) => b.name),
+    ['hayalet'],
+  );
+  r = await adminCall('POST', '/v1/admin/action', { action: 'unban', name: 'Hayalet' });
+  assert.equal(r.body.banned, false);
+
+  r = await adminCall('POST', '/v1/admin/action', { action: 'hide', name: 'Kaplan' });
+  assert.equal(r.body.hidden, true);
+  assert.equal((await call('GET', `/v1/day/${DAY}`)).body.top.length, 0);
+
+  assert.equal((await adminCall('POST', '/v1/admin/action', { action: 'drop', name: 'Kaplan' })).status, 400);
+  assert.equal((await adminCall('POST', '/v1/admin/action', { action: 'ban', name: 'x' })).status, 400);
+});
+
+test('the admin API lists suspect scores', async () => {
+  env.ADMIN_TOKEN = ADMIN;
+  env.SUSPECT_POINTS = '400';
+  const p = await join('Kaplan');
+  await call('POST', '/v1/submit', { id: p.id, token: p.token, day: DAY, answers: answers() });
+  const { suspects } = (await adminCall('GET', '/v1/admin/suspects?days=2')).body;
+  assert.equal(suspects.length, 1);
+  assert.equal(suspects[0].name, 'Kaplan');
+  assert.equal(suspects[0].day, DAY);
+});
+
 test('a banned name cannot be taken', async () => {
   env.DB.raw
     .prepare('INSERT INTO banned_names (name_key, at) VALUES (?, ?)')

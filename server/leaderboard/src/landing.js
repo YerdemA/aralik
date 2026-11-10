@@ -100,6 +100,10 @@ export async function landing(request, env) {
     });
   }
   if (!env.ASSETS) return new Response('Not found', { status: 404 });
+  // The moderation panel is served only on the API host (index.js).
+  if (/^\/admin(\.html)?\/?$/.test(url.pathname)) {
+    return new Response('Not found', { status: 404 });
+  }
   // An invite link opened without the app (with it, Android opens the
   // app instead): the code and the store button (public/invite.html).
   const invite = isInvitePath(url.pathname);

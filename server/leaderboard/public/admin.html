@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Kabaca Moderasyon</title>
+<style>
+  :root {
+    --bg: #FFF9F1; --panel: #FFFFFF; --soft: #F3EEFF; --text: #1C1B22;
+    --muted: #625E70; --line: #E4DEF0; --primary: #2A1BB5; --on-primary: #FFFFFF;
+    --danger: #B3261E; --ok: #1E7B3A; --warn: #8A5A00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14131A; --panel: #1E1D26; --soft: #26233A; --text: #ECE9F5;
+      --muted: #A9A4BA; --line: #34313F; --primary: #A9A0FF; --on-primary: #14131A;
+      --danger: #FFB4AB; --ok: #7DDB95; --warn: #F2C063;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 960px; margin: 0 auto; padding: 16px; }
+  h1 { font-size: 20px; margin: 8px 0 16px; display: flex; align-items: center; gap: 12px; }
+  h1 .grow { flex: 1; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 16px; }
+  .tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+  .tabs button { background: var(--soft); color: var(--text); }
+  .tabs button[aria-selected="true"] { background: var(--primary); color: var(--on-primary); }
+  button {
+    border: 0; border-radius: 999px; padding: 8px 14px; font: inherit; font-weight: 600;
+    background: var(--primary); color: var(--on-primary); cursor: pointer; min-height: 36px;
+  }
+  button.ghost { background: transparent; color: var(--primary); border: 1px solid var(--line); }
+  button.danger { background: var(--danger); color: var(--bg); }
+  button:disabled { opacity: .5; cursor: default; }
+  input {
+    font: inherit; padding: 8px 12px; border-radius: 10px; border: 1px solid var(--line);
+    background: var(--bg); color: var(--text); min-height: 36px;
+  }
+  form { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  form input { flex: 1; min-width: 180px; }
+  .scroll { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  th { color: var(--muted); font-weight: 600; font-size: 13px; }
+  td.actions { white-space: nowrap; }
+  td.actions button { padding: 6px 10px; min-height: 30px; font-size: 13px; margin: 2px 0; }
+  .tag { display: inline-block; font-size: 12px; padding: 1px 8px; border-radius: 999px; background: var(--soft); margin-right: 4px; }
+  .tag.bad { color: var(--danger); } .tag.warn { color: var(--warn); }
+  .muted { color: var(--muted); }
+  .note { margin: 12px 0 0; min-height: 1.4em; }
+  .note.err { color: var(--danger); } .note.ok { color: var(--ok); }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <h1><span class="grow">Kabaca · Moderasyon</span><button id="logout" class="ghost" hidden>Çıkış</button></h1>
+
+  <section id="login" class="panel">
+    <form id="login-form">
+      <input id="token" type="password" autocomplete="current-password" placeholder="Yönetici anahtarı" required>
+      <button type="submit">Giriş</button>
+    </form>
+    <p class="note muted">Anahtar yalnızca bu sekmede tutulur.</p>
+  </section>
+
+  <section id="app" hidden>
+    <nav class="tabs" role="tablist">
+      <button data-tab="reports" aria-selected="true">Bildirimler</button>
+      <button data-tab="suspects" aria-selected="false">Kuşkulu puanlar</button>
+      <button data-tab="players" aria-selected="false">Oyuncu ara</button>
+      <button data-tab="banned" aria-selected="false">Yasaklı adlar</button>
+    </nav>
+    <div class="panel">
+      <form id="search" hidden>
+        <input id="q" placeholder="Adın başı" autocomplete="off">
+        <button type="submit">Ara</button>
+      </form>
+      <form id="days-form" hidden>
+        <label class="muted" for="days">Son</label>
+        <input id="days" type="number" min="1" max="30" value="3" style="flex:0;width:90px">
+        <span class="muted">gün</span>
+        <button type="submit">Göster</button>
+      </form>
+      <div class="scroll"><table id="table"></table></div>
+      <p id="empty" class="muted" hidden></p>
+      <p id="note" class="note"></p>
+    </div>
+  </section>
+</main>
+<script>
+(() => {
+  'use strict';
+  const KEY = 'kabaca-admin-token';
+  const $ = (id) => document.getElementById(id);
+  let token = null;
+  let tab = 'reports';
+  try { token = sessionStorage.getItem(KEY); } catch {}
+
+  const PLACES = { board: 'tablo', duel: 'düello', tournament: 'turnuva' };
+  const LABELS = {
+    hide: 'Gizle', unhide: 'Göster', ban: 'Yasakla', unban: 'Yasağı kaldır', dismiss: 'Bildirimleri sil',
+  };
+  const CONFIRM = {
+    ban: (n) => `"${n}" yasaklansın mı? Ad tabloda gizlenir, düello ve turnuvaya giremez, kimse alamaz.`,
+    unban: (n) => `"${n}" yasağı kalksın mı? Bildirimleri de silinir.`,
+    dismiss: (n) => `"${n}" için bildirimler silinsin ve ad yeniden görünsün mü?`,
+  };
+
+  function note(text, kind = '') {
+    const el = $('note');
+    el.textContent = text;
+    el.className = 'note ' + kind;
+  }
+
+  function when(ms) {
+    if (!ms) return '';
+    const d = new Date(ms);
+    return d.toLocaleString('tr-TR', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+  }
+
+  function dayLabel(day) {
+    const d = new Date(Date.UTC(2026, 10, 1 + day));
+    return d.toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', timeZone: 'UTC' });
+  }
+
+  async function api(path, body) {
+    const res = await fetch(path, {
+      method: body ? 'POST' : 'GET',
+      headers: { authorization: 'Bearer ' + token, ...(body ? { 'content-type': 'application/json' } : {}) },
+      body: body ? JSON.stringify(body) : undefined,
+      cache: 'no-store',
+    });
+    if (res.status === 401) { logout('Anahtar geçersiz.'); throw new Error('unauthorized'); }
+    if (res.status === 429) throw new Error('Çok fazla deneme, bir dakika bekle.');
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.error || ('HTTP ' + res.status));
+    return data;
+  }
+
+  function tags(row) {
+    const out = [];
+    if (row.banned) out.push(['yasaklı', 'bad']);
+    if (row.hidden) out.push(['gizli', 'warn']);
+    if (row.player === false) out.push(['hesap yok', '']);
+    return out;
+  }
+
+  function cell(tr, content) {
+    const td = document.createElement('td');
+    if (content instanceof Node) td.append(content); else td.textContent = content ?? '';
+    tr.append(td);
+    return td;
+  }
+
+  function tagCell(tr, row) {
+    const td = cell(tr, '');
+    for (const [text, kind] of tags(row)) {
+      const s = document.createElement('span');
+      s.className = 'tag ' + kind;
+      s.textContent = text;
+      td.append(s);
+    }
+  }
+
+  function actionsFor(row, extra = []) {
+    const list = [...extra];
+    if (row.banned) list.push('unban');
+    else {
+      list.push('ban');
+      if (row.player !== false) list.push(row.hidden ? 'unhide' : 'hide');
+    }
+    return list;
+  }
+
+  function actionCell(tr, row, list) {
+    const td = cell(tr, '');
+    td.className = 'actions';
+    for (const action of list) {
+      const b = document.createElement('button');
+      b.textContent = LABELS[action];
+      b.className = action === 'ban' ? 'danger' : 'ghost';
+      b.addEventListener('click', () => act(action, row.name, b));
+      td.append(b, ' ');
+    }
+  }
+
+  function render(head, rows, build, emptyText) {
+    const table = $('table');
+    table.replaceChildren();
+    $('empty').hidden = rows.length > 0;
+    $('empty').textContent = emptyText;
+    if (rows.length === 0) return;
+    const thead = document.createElement('thead');
+    const tr = document.createElement('tr');
+    for (const h of head) { const th = document.createElement('th'); th.textContent = h; tr.append(th); }
+    thead.append(tr);
+    const tbody = document.createElement('tbody');
+    for (const row of rows) { const r = document.createElement('tr'); build(r, row); tbody.append(r); }
+    table.append(thead, tbody);
+  }
+
+  const VIEWS = {
+    async reports() {
+      const { reports } = await api('/v1/admin/reports');
+      render(['Ad', 'Bildiren', 'Yer', 'Son', 'Durum', ''], reports, (tr, r) => {
+        cell(tr, r.name);
+        cell(tr, String(r.reports));
+        cell(tr, r.places.map((p) => PLACES[p] || p).join(', '));
+        cell(tr, when(r.last));
+        tagCell(tr, r);
+        actionCell(tr, r, actionsFor(r, r.banned ? [] : ['dismiss']));
+      }, 'Son 7 günde bildirim yok.');
+    },
+    async suspects() {
+      const days = Number($('days').value) || 3;
+      const { suspects } = await api('/v1/admin/suspects?days=' + days);
+      render(['Gün', 'Ad', 'Puan', 'İsabet', 'Durum', ''], suspects, (tr, r) => {
+        cell(tr, dayLabel(r.day));
+        cell(tr, r.name);
+        cell(tr, String(r.points));
+        cell(tr, r.hits + ' / 5');
+        tagCell(tr, r);
+        actionCell(tr, r, [r.hidden ? 'unhide' : 'hide']);
+      }, 'Kuşkulu puan yok.');
+    },
+    async players() {
+      const q = $('q').value.trim();
+      if (!q) { render([], [], null, 'Aramak için bir adın başını yaz.'); return; }
+      const { players } = await api('/v1/admin/players?q=' + encodeURIComponent(q));
+      render(['Ad', 'Katıldı', 'Gün', 'Durum', ''], players, (tr, r) => {
+        cell(tr, r.name);
+        cell(tr, when(r.joined));
+        cell(tr, String(r.days));
+        tagCell(tr, r);
+        actionCell(tr, r, actionsFor(r));
+      }, 'Bu adla başlayan oyuncu yok.');
+    },
+    async banned() {
+      const { banned } = await api('/v1/admin/banned');
+      render(['Ad', 'Yasaklandı', ''], banned, (tr, r) => {
+        cell(tr, r.name);
+        cell(tr, when(r.at));
+        actionCell(tr, r, ['unban']);
+      }, 'Yasaklı ad yok.');
+    },
+  };
+
+  async function show(name) {
+    tab = name;
+    for (const b of document.querySelectorAll('[data-tab]')) {
+      b.setAttribute('aria-selected', String(b.dataset.tab === name));
+    }
+    $('search').hidden = name !== 'players';
+    $('days-form').hidden = name !== 'suspects';
+    note('');
+    try { await VIEWS[name](); } catch (e) { if (e.message !== 'unauthorized') note(e.message, 'err'); }
+  }
+
+  async function act(action, name, button) {
+    const ask = CONFIRM[action];
+    if (ask && !confirm(ask(name))) return;
+    button.disabled = true;
+    try {
+      const r = await api('/v1/admin/action', { action, name });
+      note(`${r.name}: ${LABELS[action].toLowerCase()} tamam.`, 'ok');
+      const text = $('note').textContent;
+      await VIEWS[tab]();
+      note(text, 'ok');
+    } catch (e) {
+      if (e.message !== 'unauthorized') note(e.message, 'err');
+      button.disabled = false;
+    }
+  }
+
+  function enter() {
+    $('login').hidden = true;
+    $('app').hidden = false;
+    $('logout').hidden = false;
+    show(tab);
+  }
+
+  function logout(message) {
+    token = null;
+    try { sessionStorage.removeItem(KEY); } catch {}
+    $('app').hidden = true;
+    $('logout').hidden = true;
+    $('login').hidden = false;
+    $('login').querySelector('.note').textContent = message || 'Anahtar yalnızca bu sekmede tutulur.';
+  }
+
+  $('login-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    token = $('token').value.trim();
+    $('token').value = '';
+    try { sessionStorage.setItem(KEY, token); } catch {}
+    enter();
+  });
+  $('logout').addEventListener('click', () => logout());
+  for (const b of document.querySelectorAll('[data-tab]')) {
+    b.addEventListener('click', () => show(b.dataset.tab));
+  }
+  $('search').addEventListener('submit', (e) => { e.preventDefault(); show('players'); });
+  $('days-form').addEventListener('submit', (e) => { e.preventDefault(); show('suspects'); });
+
+  if (token) enter();
+})();
+</script>
+</body>
+</html>
