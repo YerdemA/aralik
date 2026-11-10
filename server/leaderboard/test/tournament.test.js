@@ -238,8 +238,93 @@ test('a dropped player comes back mid-match where it is', () => {
   }
   assert.equal(state.phase, 'lobby');
   assert.deepEqual(state.players.map((p) => p.name), ['Ayşe', 'Bora', 'Cem']);
-  // After the match the secret no longer works; the code does.
-  assert.equal(t.rejoin(state, 'tC', T0).error, 'rejoin_over');
+  // After the match the secret takes him back to his seat in the lobby;
+  // one without a seat no longer works (the code does).
+  assert.equal(t.rejoin(state, 'tC', T0).id, 3);
+  assert.equal(t.rejoin(state, 'nope', T0).error, 'rejoin_over');
+});
+
+/** A lobby whose players have secrets: Ayşe (tA, host), Bora, Cem. */
+function lobbyWithSecrets(...names) {
+  let r = t.createRoom('ABCDE', T0);
+  for (const name of names) {
+    r = t.join(r.state, { ...player(name), token: `t${name[0]}` }, T0);
+  }
+  return r.state;
+}
+
+test('a player dropped in the lobby keeps their seat for a while', () => {
+  let state = lobbyWithSecrets('Ayşe', 'Bora', 'Cem');
+  // The host's app goes to the background.
+  const gone = t.leave(state, 1, T0 + 1000);
+  state = gone.state;
+  assert.equal(state.host, 1);
+  const room = sent(gone).find((m) => m.t === 'room');
+  assert.deepEqual(room.players[0], { id: 1, name: 'Ayşe', away: true });
+  assert.deepEqual(room.players[1], { id: 2, name: 'Bora' });
+  assert.equal(gone.alarm, T0 + 1000 + t.AWAY_MS);
+  // Back with the secret: the same seat, still the host.
+  const back = t.rejoin(state, 'tA', T0 + 60_000);
+  assert.equal(back.id, 1);
+  assert.deepEqual(sent(back, 1)[0], { t: 'welcome', you: 1, rejoin: 'tA' });
+  assert.equal(back.state.host, 1);
+  assert.ok(back.state.players.every((p) => p.away == null));
+  assert.ok(!JSON.stringify(sent(back)).includes('away'));
+});
+
+test('an away seat ends after AWAY_MS and the host role passes', () => {
+  let state = lobbyWithSecrets('Ayşe', 'Bora', 'Cem');
+  state = t.leave(state, 1, T0).state;
+  const early = t.alarm(state, T0 + t.AWAY_MS - 1, content);
+  assert.equal(early.state.players.length, 3);
+  const late = t.alarm(state, T0 + t.AWAY_MS, content);
+  assert.deepEqual(late.state.players.map((p) => p.name), ['Bora', 'Cem']);
+  assert.equal(late.state.host, 2);
+  assert.equal(sent(late).find((m) => m.t === 'room').host, 2);
+  assert.equal(t.rejoin(late.state, 'tA', T0).error, 'rejoin_over');
+  // Everyone away for good: the room closes.
+  let all = lobbyWithSecrets('Ayşe');
+  all = t.leave(all, 1, T0).state;
+  assert.equal(t.alarm(all, T0 + t.AWAY_MS, content).wipe, true);
+});
+
+test('the same name takes an away seat back; a present one is taken', () => {
+  let state = lobbyWithSecrets('Ayşe', 'Bora', 'Cem');
+  assert.equal(t.join(state, player('bora'), T0).error, 'name_taken');
+  state = t.leave(state, 2, T0).state;
+  const again = t.join(state, { ...player('Bora'), token: 'tB2' }, T0);
+  assert.equal(again.id, 2);
+  assert.deepEqual(sent(again, 2)[0], { t: 'welcome', you: 2, rejoin: 'tB2' });
+  assert.equal(again.state.players.length, 3);
+  assert.ok(again.state.players.every((p) => p.away == null));
+});
+
+test('a match started while someone is away lists them as left', () => {
+  let state = lobbyWithSecrets('Ayşe', 'Bora', 'Cem', 'Deniz');
+  state = t.leave(state, 4, T0).state;
+  state = t.start(state, 1, T0, pick).state;
+  assert.equal(state.match.players.find((p) => p.id === 4).left, true);
+  // The question opens without waiting for Deniz.
+  state = lockAll(state, 0, () => ({ low: 100, high: 100 })).state;
+  assert.equal(state.phase, 'reveal');
+  // Deniz comes back into the match.
+  const back = t.rejoin(state, 'tD', T0 + 1000);
+  assert.equal(sent(back, 4)[0].t, 'resume');
+  assert.equal(back.state.match.players.find((p) => p.id === 4).left, false);
+});
+
+test('a player dropped mid-match is still seated after it', () => {
+  let state = lobbyWithSecrets('Ayşe', 'Bora', 'Cem');
+  state = t.start(state, 1, T0, pick).state;
+  state = t.leave(state, 3, T0, content).state;
+  for (let i = 0; i < 5; i++) {
+    const r = lockAll(state, i, () => ({ low: 100, high: 100 }));
+    state = i < 4 ? readyAll(r.state, i).state : r.state;
+  }
+  assert.equal(state.phase, 'lobby');
+  const cem = state.players.find((p) => p.id === 3);
+  assert.notEqual(cem.away, null);
+  assert.equal(t.rejoin(state, 'tC', T0 + 2000).id, 3);
 });
 
 test('standings never carry the secrets', () => {

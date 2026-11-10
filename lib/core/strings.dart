@@ -119,6 +119,17 @@ abstract final class AppStrings {
   static const shareCardRoundLabel = 'Tur skorum';
   static const shareRoundFileName = 'kabaca-serbest-tur.png';
   static const shareCardInvite = 'Sen de dene: Kabaca';
+  // Duel and tournament results, shared: the player speaks.
+  static const shareMe = 'Ben';
+  static const shareDuelWin = 'Kazandım!';
+  static const shareDuelLoss = 'Kaybettim';
+  static const shareDuelDraw = 'Berabere';
+  static String shareTournamentRank(int rank) =>
+      rank == 1 ? 'Birinci oldum!' : '$rank. oldum';
+  static String shareTournamentOf(int players) => '$players oyunculu turnuvada';
+  static const shareMatchStandings = 'Sıralama';
+  static const shareDuelFileName = 'kabaca-duello.png';
+  static const shareTournamentFileName = 'kabaca-turnuva.png';
   // Share card moods: the player speaks, since the card is theirs to share.
   static const moodLegend = 'Efsane!';
   static const moodLegendLine = 'Aralıklarım tam isabet, kaslarım yerinde.';
@@ -736,6 +747,9 @@ abstract final class AppStrings {
   static const tournamentRoomCode = 'Oda kodu';
   static String tournamentPlayers(int n, int max) => 'Oyuncular $n / $max';
   static const tournamentHost = 'Kurucu';
+
+  /// Under a lobby player whose app went to the background.
+  static const tournamentAway = 'Uygulamadan çıktı, dönmesi bekleniyor';
   static const tournamentQuestions = 'Soru sayısı';
   static String tournamentQuestionCount(int n) => '$n soru';
   static const tournamentStart = 'Başlat';

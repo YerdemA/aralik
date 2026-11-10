@@ -9,6 +9,7 @@ import '../../core/math/math_question.dart';
 import '../../core/math/math_problem.dart';
 import '../../core/answer_scale.dart';
 import '../../core/duel.dart';
+import '../../core/match_share.dart';
 import '../../core/number_format.dart';
 import '../../core/question_timer.dart';
 import '../../core/scoring.dart';
@@ -28,6 +29,7 @@ import '../../widgets/philosopher.dart';
 import '../../widgets/share_origin.dart';
 import '../game/answer_input.dart';
 import '../game/game_controller.dart';
+import '../result/summary_screen.dart' show ShareSheet;
 import 'duel_search_view.dart';
 
 /// One live duel in room [code]: waiting for the friend, five questions
@@ -590,6 +592,7 @@ class _DuelScreenState extends State<DuelScreen> {
     } else {
       body = _ResultView(
         match: _match,
+        myName: widget.name,
         onRematch: () => _session?.rematch(),
         onDecline: () => _session?.declineRematch(),
       );
@@ -1152,11 +1155,15 @@ Color duelResultFill(Color surface, {required bool hit, required int points}) {
 class _ResultView extends StatelessWidget {
   const _ResultView({
     required this.match,
+    required this.myName,
     required this.onRematch,
     required this.onDecline,
   });
 
   final DuelMatch match;
+
+  /// This player's name, for the shared result.
+  final String myName;
 
   /// Asks for a rematch, or accepts the opponent's.
   final VoidCallback onRematch;
@@ -1289,14 +1296,58 @@ class _ResultView extends StatelessWidget {
                   label: const Text(AppStrings.duelPlayAgain),
                 ),
               const SizedBox(height: 4),
-              TextButton(
-                onPressed: () => Navigator.of(context).pop(),
-                child: const Text(AppStrings.duelHome),
+              Row(
+                children: [
+                  Expanded(
+                    child: TextButton.icon(
+                      onPressed: () => _openShare(context),
+                      icon: const Icon(Icons.share_outlined),
+                      label: const Text(AppStrings.share),
+                    ),
+                  ),
+                  Expanded(
+                    child: TextButton(
+                      onPressed: () => Navigator.of(context).pop(),
+                      child: const Text(AppStrings.duelHome),
+                    ),
+                  ),
+                ],
               ),
             ],
           );
         },
       ),
+    );
+  }
+
+  /// The result as a story card or text, like the daily set's.
+  void _openShare(BuildContext context) {
+    MatchShareRow row(String name, Iterable<DuelResult> results, bool me) =>
+        MatchShareRow(
+          name: name,
+          me: me,
+          points: results.fold(0, (sum, r) => sum + r.points),
+          hits: results.where((r) => r.hit).length,
+          tiers: [
+            for (final r in results)
+              ResultTier.of(points: r.points, hit: r.hit),
+          ],
+        );
+    final share = MatchShare.duel(
+      math: match.questionIds.any((id) => id.startsWith('math:')),
+      me: row(myName, match.results.map((r) => r.me), true),
+      opponent: row(
+        Moderation.instance.shown(match.opponentName),
+        match.results.map((r) => r.opponent),
+        false,
+      ),
+      opponentLeft: match.opponentLeft,
+    );
+    showModalBottomSheet<void>(
+      context: context,
+      isScrollControlled: true,
+      showDragHandle: true,
+      builder: (_) => ShareSheet.match(match: share),
     );
   }
 }

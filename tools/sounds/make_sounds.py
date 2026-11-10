@@ -85,32 +85,15 @@ def noise_tick(length: float) -> list[float]:
     )]
 
 
-def whoosh(length: float, *, start_hz: float, end_hz: float, seed: int) -> list[float]:
-    """Soft air: noise through a one-pole low-pass whose cutoff sweeps from
-    [start_hz] to [end_hz], with a rise-and-fall envelope."""
-    import random
-
-    rng = random.Random(seed)
-    n = int(RATE * length)
-    out = []
-    y = 0.0
-    for i in range(n):
-        p = i / n
-        cutoff = start_hz * (end_hz / start_hz) ** p
-        a = 1 - math.exp(-2 * math.pi * cutoff / RATE)
-        y += a * (rng.uniform(-1, 1) - y)
-        env = math.sin(math.pi * p) ** 1.5
-        out.append(env * y)
-    return out
-
-
 BELL = ((1, 1.0), (2, 0.35), (3, 0.12), (4.2, 0.05))
 SOFT = ((1, 1.0), (2, 0.15))
+# Hollow and woody: the fundamental and a faint twelfth.
+WOOD = ((1, 1.0), (3, 0.08))
 
 
 # Loudness of each sound relative to the others (1 = PEAK). The sounds
 # that come with every tap or page stay well below the game's own.
-GAIN = {"tap": 0.35, "page": 0.4, "back": 0.35, "intro": 0.8}
+GAIN = {"tap": 0.35, "page": 0.3, "back": 0.28, "intro": 0.8}
 
 
 def sounds() -> dict[str, list[float]]:
@@ -124,10 +107,11 @@ def sounds() -> dict[str, list[float]]:
         ),
         # Any button, card or key: a tiny, dry click.
         "tap": tone(1400, 0.035, attack=0.001, decay=140, partials=((1, 1.0), (2.3, 0.3))),
-        # A page opens: air rising.
-        "page": whoosh(0.20, start_hz=500, end_hz=3500, seed=1),
-        # Back to the previous page: air falling.
-        "back": whoosh(0.18, start_hz=3000, end_hz=450, seed=2),
+        # A page opens: a soft, round "bloop" that bends up. (Until
+        # 2026-11-10 a filtered-noise whoosh, which sounded like hiss.)
+        "page": tone(note("C5"), 0.11, attack=0.004, decay=32, partials=WOOD, glide=0.45),
+        # Back to the previous page: the same, lower and bending down.
+        "back": tone(note("G4"), 0.11, attack=0.004, decay=32, partials=WOOD, glide=-0.3),
         # Locking an interval: a short, round pop.
         "lock": tone(note("A5"), 0.09, attack=0.002, decay=45, partials=SOFT, glide=-0.25),
         # A hit with ≥70 points: a quick rising arpeggio.

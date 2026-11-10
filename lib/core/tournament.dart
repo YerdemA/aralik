@@ -60,6 +60,10 @@ sealed class TournamentEvent {
         host: m['host'] as int?,
         count: m['count'] as int,
         players: players(m['players']),
+        away: {
+          for (final p in (m['players'] as List).cast<Map<String, dynamic>>())
+            if (p['away'] == true) p['id'] as int,
+        },
         min: m['min'] as int,
         max: m['max'] as int,
       );
@@ -174,6 +178,7 @@ class TournamentRoomState extends TournamentEvent {
     required this.host,
     required this.count,
     required this.players,
+    this.away = const {},
     required this.min,
     required this.max,
   });
@@ -181,6 +186,9 @@ class TournamentRoomState extends TournamentEvent {
   final int? host;
   final int count;
   final List<TournamentPlayer> players;
+
+  /// Players whose connection is down; the room keeps their seat a while.
+  final Set<int> away;
   final int min;
   final int max;
 }
@@ -275,6 +283,7 @@ class TournamentRoom extends ChangeNotifier {
   int? _host;
   int _count = 5;
   List<TournamentPlayer> _players = const [];
+  Set<int> _away = const {};
   int _min = 3;
   int _max = 8;
 
@@ -332,8 +341,14 @@ class TournamentRoom extends ChangeNotifier {
   bool get isHost => _you != null && _you == _host;
   int get count => _count;
   List<TournamentPlayer> get players => _players;
+
+  /// Whether player [id] is in the room but their connection is down
+  /// (their app went to the background, say).
+  bool isAway(int id) => _away.contains(id);
   int get minPlayers => _min;
   int get maxPlayers => _max;
+
+  /// Away players count: the room starts with them, as left until back.
   bool get canStart => isHost && _players.length >= _min;
 
   List<String> get questionIds => _questionIds;
@@ -372,6 +387,8 @@ class TournamentRoom extends ChangeNotifier {
       case TournamentWelcome(:final you, :final rejoin):
         _you = you;
         _rejoin = rejoin;
+        // Back in the lobby after a dropped connection.
+        _reconnecting = false;
       case TournamentResume():
         _resume(event);
       case TournamentRoomState():
@@ -438,6 +455,7 @@ class TournamentRoom extends ChangeNotifier {
     _host = event.host;
     _count = event.count;
     _players = event.players;
+    _away = event.away;
     _min = event.min;
     _max = event.max;
     if (_phase == TournamentPhase.connecting) {
@@ -482,14 +500,18 @@ class TournamentRoom extends ChangeNotifier {
     _clock++;
   }
 
-  /// The connection dropped. Mid-match, with a secret, the app tries to
-  /// come back ([reconnecting]); otherwise the room is lost.
+  /// The connection dropped (the app went to the background, the network
+  /// went away). With a secret the app tries to come back ([reconnecting]):
+  /// mid-match to the match, in the lobby or the standings to its seat,
+  /// which the room keeps for a few minutes. Otherwise the room is lost.
   void connectionLost() {
-    final inMatch =
+    final seated =
         _phase == TournamentPhase.question ||
         _phase == TournamentPhase.reveal ||
+        _phase == TournamentPhase.lobby ||
+        _phase == TournamentPhase.standings ||
         (_comingBack && _phase == TournamentPhase.connecting);
-    if (inMatch && _rejoin != null) {
+    if (seated && _rejoin != null) {
       if (_reconnecting) return;
       _reconnecting = true;
       notifyListeners();

@@ -174,12 +174,38 @@ void main() {
     expect(identical(room.questionIds, ids), isTrue);
   });
 
-  test('a drop in the lobby is not a match to come back to', () {
+  test('a drop in the lobby comes back to the seat', () {
     final room = TournamentRoom()
       ..handle(ev({'t': 'welcome', 'you': 1, 'rejoin': 's'}))
       ..handle(ev(roomMsg()))
       ..connectionLost();
+    expect(room.reconnecting, isTrue);
+    expect(room.phase, TournamentPhase.lobby);
+    room.handle(ev({'t': 'welcome', 'you': 1, 'rejoin': 's'}));
+    expect(room.reconnecting, isFalse);
+    expect(room.phase, TournamentPhase.lobby);
+  });
+
+  test('a drop in the lobby without a secret loses the room', () {
+    final room = TournamentRoom()
+      ..handle(ev({'t': 'welcome', 'you': 1}))
+      ..handle(ev(roomMsg()))
+      ..connectionLost();
     expect(room.phase, TournamentPhase.failed);
+  });
+
+  test('away players are shown', () {
+    final msg = roomMsg(names: ['Ayşe', 'Bora', 'Cem']);
+    (msg['players']! as List)[2] = {'id': 3, 'name': 'Cem', 'away': true};
+    final room = TournamentRoom()
+      ..handle(ev({'t': 'welcome', 'you': 1, 'rejoin': 's'}))
+      ..handle(ev(msg));
+    expect(room.players, hasLength(3));
+    expect(room.isAway(3), isTrue);
+    expect(room.isAway(2), isFalse);
+    expect(room.canStart, isTrue);
+    room.handle(ev(roomMsg(names: ['Ayşe', 'Bora', 'Cem'])));
+    expect(room.isAway(3), isFalse);
   });
 
   test('a refusal stays the reason when the connection then closes', () {

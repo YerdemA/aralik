@@ -6,12 +6,17 @@ import 'package:flutter/material.dart';
 
 import '../../core/daily.dart';
 import '../../core/day_mood.dart';
+import '../../core/match_share.dart';
 import '../../core/number_format.dart';
 import '../../core/scoring.dart';
 import '../../core/share_text.dart';
 import '../../core/strings.dart';
 import '../../core/theme.dart';
+import '../../widgets/duelist.dart';
 import '../../widgets/philosopher.dart';
+import '../leaderboard/leaderboard_screen.dart' show Medal;
+
+part 'match_share_card.dart';
 
 /// What the daily share card shows.
 @immutable

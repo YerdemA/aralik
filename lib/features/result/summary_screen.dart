@@ -5,6 +5,7 @@ import 'package:share_plus/share_plus.dart';
 
 import '../../core/daily.dart';
 import '../../core/scoring.dart';
+import '../../core/match_share.dart';
 import '../../core/share_text.dart';
 import '../../core/strings.dart';
 import '../../core/theme.dart';
@@ -269,32 +270,50 @@ class _TierRow extends StatelessWidget {
 class ShareSheet extends StatefulWidget {
   const ShareSheet({
     super.key,
-    required this.card,
+    required ShareCardData this.card,
     this.render = renderShareCard,
-  });
+  }) : match = null,
+       renderMatch = renderMatchShareCard;
 
-  final ShareCardData card;
+  /// A duel's or a tournament's result.
+  const ShareSheet.match({
+    super.key,
+    required MatchShare this.match,
+    this.renderMatch = renderMatchShareCard,
+  }) : card = null,
+       render = renderShareCard;
+
+  final ShareCardData? card;
+  final MatchShare? match;
 
   /// Injectable for tests.
   final Future<Uint8List> Function(ShareCardData) render;
+  final Future<Uint8List> Function(MatchShare) renderMatch;
 
   @override
   State<ShareSheet> createState() => _ShareSheetState();
 }
 
 class _ShareSheetState extends State<ShareSheet> {
-  late final Future<Uint8List> _png = widget.render(widget.card);
+  late final Future<Uint8List> _png = switch (widget.match) {
+    final match? => widget.renderMatch(match),
+    null => widget.render(widget.card!),
+  };
 
-  String get _text => shareText(
-    dayIndex: widget.card.dayIndex,
-    label: widget.card.label,
-    results: widget.card.results,
-    hits: widget.card.hits,
-    answered: widget.card.answered,
-  );
+  String get _text => switch (widget.match) {
+    final match? => matchShareText(match),
+    null => shareText(
+      dayIndex: widget.card!.dayIndex,
+      label: widget.card!.label,
+      results: widget.card!.results,
+      hits: widget.card!.hits,
+      answered: widget.card!.answered,
+    ),
+  };
 
   String get _fileName {
-    final day = widget.card.dayIndex;
+    if (widget.match case final match?) return match.fileName;
+    final day = widget.card!.dayIndex;
     if (day == null) return AppStrings.shareRoundFileName;
     final d = dateOfDay(day);
     String two(int n) => n.toString().padLeft(2, '0');

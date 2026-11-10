@@ -13,7 +13,13 @@
 // play on, the questions they miss score the floor, and they may come back
 // with their rejoin secret (?rejoin=… on the room URL) until the match
 // ends, picking it up where it is. Not back by then, they are listed as
-// left. The host's role passes to the earliest player still there. The room (tournament_room.js, a Durable Object) only
+// left. A player whose connection drops in the lobby (the app went to the
+// background) stays in the room as away for AWAY_MS and comes back the
+// same way; joining again with the same name also takes the seat back.
+// A match started while someone is away lists them as left until they
+// come back. The host stays the host while
+// away; once a host is gone for good the role passes to the earliest
+// player still there. The room (tournament_room.js, a Durable Object) only
 // stores the state, routes messages and runs the alarm.
 //
 // Every step returns {state, out, alarm, close?, wipe?}:
@@ -32,7 +38,8 @@
 //                    the runtime answers {"t":"pong"} (liveness.js). A
 //                    silent connection is closed and counts as dropped.
 //   room → app   {t: 'welcome', you, rejoin}   your player id and secret
-//                {t: 'room', code, host, count, players: [{id, name}], min, max}
+//                {t: 'room', code, host, count, players: [{id, name, away?}], min, max}
+//                    away: true while the player's connection is down
 //                {t: 'start', questions, questionMs, players: [{id, name}]}
 //                {t: 'question', i, ms}
 //                {t: 'locked', i, id}
@@ -70,6 +77,8 @@ export const LEVELS = {
 };
 /** A lobby nobody touches closes after this. */
 export const LOBBY_IDLE_MS = 30 * 60_000;
+/** How long a dropped player keeps their seat in the room. */
+export const AWAY_MS = 5 * 60_000;
 
 /**
  * The player of a connection's query (`v`, `name`, `bank`) as
@@ -99,6 +108,36 @@ function idleAlarm(state) {
   );
 }
 
+function isAway(player) {
+  return player.away != null;
+}
+
+/** Players whose connection is up. */
+function here(players) {
+  return players.filter((p) => !isAway(p));
+}
+
+/** The lobby's alarm: when it idles out or an away player's seat ends. */
+function lobbyAlarm(state) {
+  let at = idleAlarm(state);
+  for (const p of state.players) {
+    if (isAway(p)) at = Math.min(at, p.away + AWAY_MS);
+  }
+  return at;
+}
+
+/** Frees the seats of players away for AWAY_MS or longer. */
+function prune(state, now) {
+  const players = state.players.filter(
+    (p) => !isAway(p) || now < p.away + AWAY_MS,
+  );
+  if (players.length === state.players.length) return state;
+  const host = players.some((p) => p.id === state.host)
+    ? state.host
+    : nextHost(players);
+  return { ...state, players, host };
+}
+
 /** The room as everyone sees it in the lobby. */
 function roomMessage(state) {
   return {
@@ -108,7 +147,9 @@ function roomMessage(state) {
       code: state.code,
       host: state.host,
       count: state.count,
-      players: state.players.map(({ id, name }) => ({ id, name })),
+      players: state.players.map(({ id, name, away }) =>
+        away != null ? { id, name, away: true } : { id, name },
+      ),
       min: MIN_PLAYERS,
       max: MAX_PLAYERS,
     },
@@ -118,7 +159,7 @@ function roomMessage(state) {
 /** A lobby step: the room message and the idle alarm. */
 function lobbyStep(state, now, out = [], extra = {}) {
   const touched = { ...state, touchedAt: now };
-  return step(touched, [...out, roomMessage(touched)], idleAlarm(touched), extra);
+  return step(touched, [...out, roomMessage(touched)], lobbyAlarm(touched), extra);
 }
 
 /** A new, empty room. */
@@ -154,7 +195,21 @@ export function join(state, { name, key, bank, token = null }, now) {
   if (!state) return { error: 'no_room' };
   if (state.phase !== 'lobby') return { error: 'in_progress' };
   if (state.banned.includes(key)) return { error: 'kicked' };
-  if (state.players.some((p) => p.key === key)) return { error: 'name_taken' };
+  const seat = state.players.find((p) => p.key === key);
+  if (seat && isAway(seat)) {
+    // The same name back without its secret (the app gave up or is an
+    // older one): the seat is theirs again.
+    const players = state.players.map((p) =>
+      p.id === seat.id ? { ...p, name, bank, token, away: null } : p,
+    );
+    return {
+      id: seat.id,
+      ...lobbyStep({ ...state, players }, now, [
+        { to: seat.id, msg: { t: 'welcome', you: seat.id, rejoin: token } },
+      ]),
+    };
+  }
+  if (seat) return { error: 'name_taken' };
   if (state.players.length >= MAX_PLAYERS) return { error: 'room_full' };
   const id = state.nextId;
   const players = [...state.players, { id, name, key, bank, token }];
@@ -204,6 +259,8 @@ export function kick(state, id, { id: target }, now) {
  */
 export function start(state, id, now, pick) {
   if (state.phase !== 'lobby' || id !== state.host) return step(state);
+  // Away players count (older apps count them too, and a refusal would
+  // end their session): they enter the match as left and may come back.
   if (state.players.length < MIN_PLAYERS) {
     return step(state, [{ to: id, msg: { t: 'error', code: 'too_few' } }]);
   }
@@ -215,13 +272,14 @@ export function start(state, id, now, pick) {
   const players = state.players.map(({ id: pid, name }) => ({ id: pid, name }));
   const match = {
     questions,
-    players: state.players.map(({ id: pid, name, key, bank, token }) => ({
+    players: state.players.map(({ id: pid, name, key, bank, token, away }) => ({
       id: pid,
       name,
       key,
       bank,
       token,
-      left: false,
+      // Away when it starts: in the match, and back with their secret.
+      left: away != null,
       points: 0,
       hits: 0,
     })),
@@ -348,7 +406,10 @@ function finish(state, now, out = []) {
     standings: standingsOf(match.players),
     questions: match.questions.length,
   };
-  const lobby = { ...state, phase: 'lobby', match: null };
+  const lobby = prune({ ...state, phase: 'lobby', match: null }, now);
+  if (lobby.players.length === 0) {
+    return { wipe: true, ...step(lobby, [...out, { to: 'all', msg: end }]) };
+  }
   return lobbyStep(lobby, now, [...out, { to: 'all', msg: end }]);
 }
 
@@ -365,20 +426,35 @@ export function next(state, id, { i }, now) {
   return step(waiting);
 }
 
-/** The earliest player still in the room, or null. */
+/** The earliest player still in the room (connected first), or null. */
 function nextHost(players) {
-  return players.length === 0 ? null : players[0].id;
+  return (here(players)[0] ?? players[0])?.id ?? null;
 }
 
-/** A player's connection closed. */
+/**
+ * A player's connection closed. One with a secret keeps their seat as
+ * away (see AWAY_MS); one without is gone.
+ */
 export function leave(state, id, now, content) {
   if (!state) return step(state);
-  const players = state.players.filter((p) => p.id !== id);
-  if (players.length === state.players.length) return step(state);
-  const host = state.host === id ? nextHost(players) : state.host;
-  if (players.length === 0) return { wipe: true, ...step(state) };
-  const rest = { ...state, players, host };
-  if (state.phase === 'lobby') return lobbyStep(rest, now);
+  const player = state.players.find((p) => p.id === id);
+  if (!player || isAway(player)) return step(state);
+  let rest;
+  if (player.token) {
+    const players = state.players.map((p) =>
+      p.id === id ? { ...p, away: now } : p,
+    );
+    rest = { ...state, players };
+  } else {
+    const players = state.players.filter((p) => p.id !== id);
+    if (players.length === 0) return { wipe: true, ...step(state) };
+    const host = state.host === id ? nextHost(players) : state.host;
+    rest = { ...state, players, host };
+  }
+  if (state.phase === 'lobby') {
+    // Not touched: an away player does not keep the room open.
+    return step(rest, [roomMessage(rest)], lobbyAlarm(rest));
+  }
 
   // In a match: the player stays in its standings, marked as left.
   const match = {
@@ -424,14 +500,27 @@ function resumeMessage(state, id, now) {
 }
 
 /**
- * A player comes back mid-match with their secret. Returns {id, ...step}
- * or {error}; after the match the code works as usual instead.
+ * A player comes back with their secret: mid-match where it is, in the
+ * lobby to their seat. Returns {id, ...step} or {error}; 'rejoin_over'
+ * when the seat is gone (the code works as usual instead).
  */
 export function rejoin(state, token, now) {
   if (!state || typeof token !== 'string' || token.length === 0) {
     return { error: 'no_room' };
   }
-  if (state.phase === 'lobby' || !state.match) return { error: 'rejoin_over' };
+  if (state.phase === 'lobby' || !state.match) {
+    const seat = state.players.find((p) => p.token === token);
+    if (!seat) return { error: 'rejoin_over' };
+    const players = state.players.map((p) =>
+      p.id === seat.id ? { ...p, away: null } : p,
+    );
+    return {
+      id: seat.id,
+      ...lobbyStep({ ...state, players }, now, [
+        { to: seat.id, msg: { t: 'welcome', you: seat.id, rejoin: token } },
+      ]),
+    };
+  }
   const player = state.match.players.find((p) => p.token === token);
   if (!player) return { error: 'no_room' };
   const id = player.id;
@@ -442,7 +531,7 @@ export function rejoin(state, token, now) {
     ),
   };
   const players = state.players.some((p) => p.id === id)
-    ? state.players
+    ? state.players.map((p) => (p.id === id ? { ...p, away: null } : p))
     : [
         ...state.players,
         {
@@ -481,12 +570,18 @@ export function watchEvery(state, { play, idle }) {
 export function alarm(state, now, content) {
   if (!state) return { wipe: true, ...step(state) };
   switch (state.phase) {
-    case 'lobby':
-      if (now < idleAlarm(state)) return step(state, [], idleAlarm(state));
+    case 'lobby': {
+      if (now < idleAlarm(state)) {
+        const kept = prune(state, now);
+        if (kept.players.length === 0) return { wipe: true, ...step(kept) };
+        const out = kept === state ? [] : [roomMessage(kept)];
+        return step(kept, out, lobbyAlarm(kept));
+      }
       return {
         wipe: true,
         ...step(state, [{ to: 'all', msg: { t: 'error', code: 'expired' } }]),
       };
+    }
     case 'question':
       if (now < state.match.deadline + LOCK_GRACE_MS) {
         return step(state, [], state.match.deadline + LOCK_GRACE_MS);

@@ -1,9 +1,12 @@
-// Renders one daily share card per mood (and two free-play rounds) into build/share_cards/ with the
+// Renders one daily share card per mood (two free-play rounds, duels and
+// tournaments) into build/share_cards/ with the
 // real Roboto font, to look at the design:
 //
 //   flutter test tools/share/render_share_cards_test.dart
 import 'dart:io';
 
+import 'package:aralik/core/match_share.dart';
+import 'package:aralik/core/scoring.dart';
 import 'package:aralik/features/result/share_card.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -67,6 +70,68 @@ void main() {
             answered: 50,
           ),
         );
+        File('${out.path}/$name.png').writeAsBytesSync(png);
+      }
+      // Duels and tournaments.
+      List<ResultTier> tiers(List<int> points) => [
+        for (final p in points) ResultTier.of(points: p, hit: p >= 40),
+      ];
+      MatchShareRow row(String name, List<int> points, {bool me = false}) =>
+          MatchShareRow(
+            name: name,
+            points: points.fold(0, (a, b) => a + b),
+            hits: points.where((p) => p >= 40).length,
+            me: me,
+            tiers: tiers(points),
+          );
+      final matches = {
+        'duello-kazandi': MatchShare.duel(
+          math: false,
+          me: row('Yusuf', [92, 85, 61, -20, 74], me: true),
+          opponent: row('Bilgekaan', [70, 40, -50, 30, 88]),
+        ),
+        'duello-kaybetti': MatchShare.duel(
+          math: true,
+          me: row('Yusuf', [40, -10, 0, 30, 20], me: true),
+          opponent: row('Zeynep_34', [90, 80, 60, 40, 70]),
+        ),
+        'duello-berabere': MatchShare.duel(
+          math: false,
+          me: row('Yusuf', [50, 50, 50, 50, 50], me: true),
+          opponent: row('Cem', [60, 40, 50, 50, 50]),
+        ),
+        'turnuva-birinci': MatchShare.tournament(
+          rows: [
+            row('Yusuf', [92, 85, 61, 88, 74], me: true),
+            row('Bora', [70, 40, -50, 30, 88]),
+            row('Cem', [40, -10, 0, 30, 20]),
+          ],
+        ),
+        'turnuva-sekiz': MatchShare.tournament(
+          rows: [
+            for (final (k, n) in [
+              'Ayşe',
+              'Bora',
+              'Cem',
+              'Yusuf',
+              'Deniz',
+              'Ece',
+              'Fırat',
+              'Gül',
+            ].indexed)
+              MatchShareRow(
+                name: n,
+                points: 420 - k * 55,
+                hits: 5 - k ~/ 2,
+                me: n == 'Yusuf',
+                left: n == 'Gül',
+                tiers: n == 'Yusuf' ? tiers([92, 40, -50, 30, 88]) : const [],
+              ),
+          ],
+        ),
+      };
+      for (final MapEntry(key: name, value: share) in matches.entries) {
+        final png = await renderMatchShareCard(share);
         File('${out.path}/$name.png').writeAsBytesSync(png);
       }
     });

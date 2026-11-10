@@ -176,6 +176,13 @@ void main() {
     expect(played.first, Sfx.duelStart);
     expect(played.last, Sfx.duelWin);
 
+    // The standings can be shared.
+    await tester.tap(find.text(AppStrings.share));
+    await settle(tester);
+    expect(find.text(AppStrings.shareTextOnly), findsOneWidget);
+    await tester.tapAt(const Offset(20, 20));
+    await settle(tester);
+
     await tester.tap(find.text(AppStrings.tournamentBackToRoom));
     await settle(tester);
     expect(find.text(AppStrings.tournamentWaitHost), findsOneWidget);

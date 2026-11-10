@@ -82,9 +82,11 @@ class TournamentService {
 }
 
 /// An open room: forwards its events to [room] and sends this player's
-/// moves. When the connection drops mid-match it comes back by itself
-/// (the room keeps the player until the match ends) and sends again a lock
-/// or "next" the room did not get.
+/// moves. When the connection drops (the app went to the background, the
+/// network went away) it comes back by itself: mid-match the room keeps
+/// the player until the match ends, in the lobby it keeps the seat for a
+/// few minutes. It sends again a lock or "next" the room did not get. If
+/// the seat is gone it joins the room again with the same name.
 class TournamentSession {
   TournamentSession._(this._channel, this.room, this._reopen) {
     _listen(_channel);
@@ -92,10 +94,13 @@ class TournamentSession {
 
   DuelChannel _channel;
   final TournamentRoom room;
-  final Future<DuelChannel> Function(String rejoin) _reopen;
+  final Future<DuelChannel> Function(String? rejoin) _reopen;
   StreamSubscription<String>? _subscription;
   bool _closed = false;
   bool _reconnecting = false;
+
+  /// The room no longer knows this player's secret: join afresh.
+  bool _seatGone = false;
 
   ({int index, int? low, int? high})? _lastLock;
   int? _lastNext;
@@ -105,6 +110,18 @@ class TournamentSession {
       (text) {
         final event = TournamentEvent.parse(text);
         if (event == null) return;
+        if (event is TournamentError &&
+            event.code == 'rejoin_over' &&
+            room.reconnecting &&
+            !_seatGone) {
+          // The seat is gone (away too long, or a server from before
+          // lobby seats): the same name once more, as a new player.
+          _seatGone = true;
+          unawaited(channel.close());
+          _lost(channel);
+          return;
+        }
+        if (event is TournamentWelcome) _seatGone = false;
         room.handle(event);
         if (event is TournamentResume) _sendAgain();
         // Refused or removed: nothing more will come, and the room may take
@@ -130,8 +147,8 @@ class TournamentSession {
     _reconnecting = true;
     var waited = Duration.zero;
     for (var attempt = 0; !_closed && room.reconnecting; attempt++) {
-      final token = room.rejoin;
-      if (token == null) break;
+      final token = _seatGone ? null : room.rejoin;
+      if (token == null && !_seatGone) break;
       try {
         final channel = await _reopen(token);
         if (_closed) {

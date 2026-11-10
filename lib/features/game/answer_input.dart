@@ -236,7 +236,14 @@ class WidthStep extends StatelessWidget {
           alignment: Alignment.centerLeft,
           child: TextButton.icon(
             onPressed: game.editGuess,
-            icon: const Icon(Icons.edit_outlined, size: 18),
+            style: TextButton.styleFrom(
+              minimumSize: const Size(0, 52),
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+              textStyle: theme.textTheme.titleMedium?.copyWith(
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            icon: const Icon(Icons.edit_outlined, size: 24),
             label: Text(
               '${AppStrings.editGuess}: ${_formatGuess(game, game.guess!)}',
             ),

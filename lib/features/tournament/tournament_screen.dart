@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart';
 
 import '../../core/answer_scale.dart';
+import '../../core/match_share.dart';
 import '../../core/number_format.dart';
 import '../../core/question_timer.dart';
 import '../../core/scoring.dart';
@@ -25,6 +26,7 @@ import '../../widgets/share_origin.dart';
 import '../game/answer_input.dart';
 import '../game/game_controller.dart';
 import '../leaderboard/leaderboard_screen.dart' show Medal;
+import '../result/summary_screen.dart' show ShareSheet;
 
 /// A tournament room: the lobby (players, question count, start), then
 /// the questions, each revealed with everyone's interval, then the
@@ -661,6 +663,9 @@ class _LobbyView extends StatelessWidget {
                   color: p.id == room.you ? scheme.primaryContainer : null,
                   margin: const EdgeInsets.symmetric(vertical: 4),
                   child: ListTile(
+                    subtitle: room.isAway(p.id)
+                        ? const Text(AppStrings.tournamentAway)
+                        : null,
                     leading: CircleAvatar(
                       backgroundColor: p.id == room.you
                           ? Palette.duelMe
@@ -1095,12 +1100,52 @@ class _StandingsView extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 12),
+        if (room.myRank != null) ...[
+          OutlinedButton.icon(
+            onPressed: () => _openShare(context),
+            icon: const Icon(Icons.share_outlined),
+            label: const Text(AppStrings.share),
+          ),
+          const SizedBox(height: 8),
+        ],
         FilledButton.icon(
           onPressed: onBack,
           icon: const Icon(Icons.meeting_room_rounded),
           label: const Text(AppStrings.tournamentBackToRoom),
         ),
       ],
+    );
+  }
+
+  /// The standings as a story card or text, like the daily set's.
+  void _openShare(BuildContext context) {
+    final mine = [
+      for (var i = 0; i < room.results.length; i++) room.myResult(i),
+    ];
+    final share = MatchShare.tournament(
+      rows: [
+        for (final s in room.standings)
+          MatchShareRow(
+            name: s.id == room.you ? s.name : Moderation.instance.shown(s.name),
+            points: s.points,
+            hits: s.hits,
+            me: s.id == room.you,
+            left: s.left,
+            tiers: s.id == room.you
+                ? [
+                    for (final r in mine)
+                      if (r != null)
+                        ResultTier.of(points: r.points, hit: r.hit),
+                  ]
+                : const [],
+          ),
+      ],
+    );
+    showModalBottomSheet<void>(
+      context: context,
+      isScrollControlled: true,
+      showDragHandle: true,
+      builder: (_) => ShareSheet.match(match: share),
     );
   }
 }
