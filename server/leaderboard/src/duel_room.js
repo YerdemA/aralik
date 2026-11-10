@@ -13,6 +13,7 @@ import { loadContent } from './content.js';
 import { turkeyDayIndex } from './days.js';
 import * as duel from './duel.js';
 import { pickMathQuestions } from './math.js';
+import * as ranked from './ranked.js';
 import {
   CHECK_MS,
   IDLE_CHECK_MS,
@@ -54,7 +55,12 @@ export class DuelRoom extends DurableObject {
         const code = url.searchParams.get('code');
         await this.ctx.storage.deleteAll();
         await this.apply(
-          duel.createRoom(code, now, url.searchParams.get('mode') ?? 'bank'),
+          duel.createRoom(
+            code,
+            now,
+            url.searchParams.get('mode') ?? 'bank',
+            url.searchParams.get('ranked') === '1',
+          ),
         );
         return new Response(null, { status: 201 });
       });
@@ -106,9 +112,14 @@ export class DuelRoom extends DurableObject {
       return refuse('server_error');
     }
     const today = turkeyDayIndex(now);
+    // In a random opponent's room, the leaderboard account (if the app
+    // sent one and it checks out) for the monthly table.
+    const pid = state?.ranked
+      ? await ranked.accountOf(this.env.DB, params)
+      : null;
     const result = duel.join(
       state,
-      { name, bank, look, token: duel.secret(), rematch, math },
+      { name, bank, look, pid, token: duel.secret(), rematch, math },
       now,
       state?.mode === 'math'
         ? () => pickMathQuestions(duel.randomInt)
@@ -243,6 +254,23 @@ export class DuelRoom extends DurableObject {
     this.send(out);
     if (alarm !== undefined) await this.ctx.storage.put('due', alarm);
     await this.schedule(state ?? (await this.ctx.storage.get('state')));
+    if (ranked.counts(state)) await this.rate(state);
+  }
+
+  /**
+   * A ranked duel just ended: records it for the monthly table and tells
+   * both players their new rating ({t: 'rated', ratings: [{before,
+   * after}] by seat}; older apps ignore it). Marked first, so it is
+   * recorded once; a failed write is lost rather than counted twice.
+   */
+  async rate(state) {
+    await this.ctx.storage.put('state', { ...state, rated: true });
+    try {
+      const ratings = await ranked.record(this.env.DB, state, Date.now());
+      if (ratings) this.send([{ to: 'all', msg: { t: 'rated', ratings } }]);
+    } catch (e) {
+      console.error(e);
+    }
   }
 
   /** The alarm: the rules' time, or sooner for a liveness check. */

@@ -1,6 +1,7 @@
 package com.yerdema.kabaca
 
 import android.content.ActivityNotFoundException
+import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
 import android.media.AudioAttributes
@@ -8,6 +9,9 @@ import android.media.AudioManager
 import android.media.SoundPool
 import android.net.ConnectivityManager
 import android.net.Uri
+import android.os.Build
+import android.os.Environment
+import android.provider.MediaStore
 import android.provider.Settings
 import java.io.File
 import java.security.MessageDigest
@@ -77,6 +81,18 @@ class MainActivity : FlutterActivity() {
                     result.notImplemented()
                 }
             }
+        // Saves a card to the gallery (lib/data/gallery.dart): Pictures/Kabaca,
+        // through MediaStore, which needs no permission from Android 10 on.
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "com.yerdema.kabaca/gallery")
+            .setMethodCallHandler { call, result ->
+                if (call.method == "saveImage") {
+                    val bytes = call.argument<ByteArray>("bytes")
+                    val name = call.argument<String>("name")
+                    result.success(bytes != null && name != null && saveImage(bytes, name))
+                } else {
+                    result.notImplemented()
+                }
+            }
         // Android's HTTP proxy for the current network (lib/data/net.dart):
         // dart:io does not read it by itself.
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "com.yerdema.kabaca/net")
@@ -87,6 +103,33 @@ class MainActivity : FlutterActivity() {
                     result.notImplemented()
                 }
             }
+    }
+
+    /** False before Android 10 (it would need a storage permission). */
+    private fun saveImage(bytes: ByteArray, name: String): Boolean {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) return false
+        val resolver = contentResolver
+        return try {
+            val values = ContentValues().apply {
+                put(MediaStore.Images.Media.DISPLAY_NAME, name)
+                put(MediaStore.Images.Media.MIME_TYPE, "image/png")
+                put(MediaStore.Images.Media.RELATIVE_PATH, Environment.DIRECTORY_PICTURES + "/Kabaca")
+                put(MediaStore.Images.Media.IS_PENDING, 1)
+            }
+            val uri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values)
+                ?: return false
+            val written = resolver.openOutputStream(uri)?.use { it.write(bytes); true } ?: false
+            if (!written) {
+                resolver.delete(uri, null, null)
+                return false
+            }
+            values.clear()
+            values.put(MediaStore.Images.Media.IS_PENDING, 0)
+            resolver.update(uri, values, null, null)
+            true
+        } catch (_: Exception) {
+            false
+        }
     }
 
     override fun onNewIntent(intent: Intent) {

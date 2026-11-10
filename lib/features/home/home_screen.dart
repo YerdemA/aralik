@@ -20,6 +20,7 @@ import '../../core/app_update.dart';
 import '../../data/duel_client.dart';
 import '../../data/store_link.dart';
 import '../../data/leaderboard.dart';
+import '../../data/ranked_client.dart';
 import '../../data/pending_match.dart';
 import '../../data/question_repository.dart';
 import '../../data/settings_store.dart';
@@ -34,6 +35,7 @@ import '../duel/duel_screen.dart';
 import '../tournament/tournament_screen.dart';
 import '../tournament/tournament_entry_screen.dart';
 import '../leaderboard/leaderboard_screen.dart';
+import '../ranked/month_end_screen.dart';
 import '../result/summary_screen.dart';
 import '../settings/settings_screen.dart';
 import '../settings/user_name_sheet.dart';
@@ -49,6 +51,7 @@ class HomeScreen extends StatefulWidget {
     required this.stats,
     required this.settings,
     this.leaderboard,
+    this.ranked,
     this.pending,
     this.latestAppBuild,
     this.openStore = openStorePage,
@@ -73,6 +76,10 @@ class HomeScreen extends StatefulWidget {
 
   /// Null hides the leaderboard.
   final LeaderboardStore? leaderboard;
+
+  /// The monthly ranked duel tables (and the month-end recap); null in
+  /// tests.
+  final RankedService? ranked;
 
   /// A duel or tournament left mid-way (the app closed, or "Çık"): a card
   /// offers to go back to it while the room keeps the seat.
@@ -113,6 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
     _checkDevice();
     _checkPending();
     WidgetsBinding.instance.addPostFrameCallback((_) => _firstLaunchTour());
+    _monthEnd();
     widget.invites?.addListener(_openInvite);
     WidgetsBinding.instance.addPostFrameCallback((_) => _openInvite());
   }
@@ -216,6 +224,27 @@ class _HomeScreenState extends State<HomeScreen> {
         content: Text(
           AppStrings.leaderboardRestored(_leaderboard!.account!.nickname),
         ),
+      ),
+    );
+  }
+
+  /// A month just ended in which the player played ranked duels: their
+  /// card and the final table, once. Waits while something else is on
+  /// screen (the tour, an update notice) and tries again next launch.
+  Future<void> _monthEnd() async {
+    final ranked = widget.ranked;
+    if (ranked == null) return;
+    final tables = await ranked.monthEndRecap();
+    if (tables.isEmpty || !mounted) return;
+    // Not over the first-launch tour, a dialog or another screen.
+    final onTop = ModalRoute.of(context)?.isCurrent ?? false;
+    if (!onTop || !widget.settings.tourSeen(TourPart.home)) return;
+    await ranked.markRecapShown(tables.first.month);
+    if (!mounted) return;
+    await Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (_) =>
+            MonthEndScreen(tables: tables, look: widget.settings.mascot),
       ),
     );
   }
@@ -444,6 +473,11 @@ class _HomeScreenState extends State<HomeScreen> {
   late final _duels = DuelService(
     serviceUri: () => _leaderboard?.serviceUri,
     look: () => widget.settings.mascotCode,
+    // Random opponents' duels count for the monthly table when joined.
+    account: () => switch (_leaderboard?.account) {
+      final a? => (id: a.id, token: a.token),
+      null => null,
+    },
   );
   late final _tournaments = TournamentService(
     serviceUri: () => _leaderboard?.serviceUri,
@@ -476,6 +510,7 @@ class _HomeScreenState extends State<HomeScreen> {
             stats: _stats,
             settings: widget.settings,
             leaderboard: _leaderboard,
+            ranked: widget.ranked,
             pending: widget.pending,
             rule: _ruleOn(_today),
           ),

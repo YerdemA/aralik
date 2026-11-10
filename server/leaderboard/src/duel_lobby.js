@@ -68,7 +68,7 @@ export class DuelLobby extends DurableObject {
         this.drop(other, 'gone'); // no network any more: not a partner
         continue;
       }
-      const code = await openRoom(this.env, undefined, undefined, mode);
+      const code = await openRoom(this.env, undefined, undefined, mode, true);
       if (!code) break;
       const matched = JSON.stringify({ t: 'matched', code });
       try {

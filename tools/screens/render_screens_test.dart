@@ -20,6 +20,8 @@ import 'package:aralik/features/duel/duel_search_view.dart';
 import 'package:aralik/data/tournament_client.dart';
 import 'package:aralik/features/tournament/tournament_screen.dart';
 import 'package:aralik/features/leaderboard/leaderboard_screen.dart';
+import 'package:aralik/data/ranked_client.dart';
+import 'package:aralik/features/ranked/ranked_screen.dart';
 import 'package:aralik/features/settings/mascot_screen.dart';
 import 'package:aralik/features/settings/settings_screen.dart';
 import 'package:flutter/material.dart';
@@ -240,6 +242,66 @@ void main() {
     await tester.tap(find.text('Ayşe'));
     await tester.pumpAndSettle();
     await snap(tester, 'ayarlar-ad');
+  });
+
+  testWidgets('render ranked table', (tester) async {
+    phone(tester);
+    await tester.runAsync(_loadRoboto);
+    // ignore: invalid_use_of_visible_for_testing_member
+    SharedPreferences.setMockInitialValues({
+      'duel_name': 'Yusuf',
+      'mascot_look': '011100100',
+    });
+    final prefs = await SharedPreferences.getInstance();
+    const names = ['Deniz', 'Ayşe', 'Yusuf', 'Bora', 'Cem', 'Ece', 'Gül'];
+    const looks = [
+      '120131212',
+      '111002024',
+      '011100100',
+      '002240311',
+      '014312103',
+      '100003020',
+      '121110432',
+    ];
+    Map<String, Object?> row(int i) => {
+      'rank': i + 1,
+      'nickname': names[i],
+      'rating': 1186 - i * 23,
+      'played': 20 - i,
+      'won': 14 - i,
+      'drawn': 1,
+      'average': 290 - i * 9,
+      'hitRate': 81 - i * 2,
+      'look': looks[i],
+    };
+    final service = RankedService(
+      serviceUri: () => Uri.parse('https://lb.example/'),
+      account: () => (id: 'p3', token: 't', nickname: 'Yusuf'),
+      prefs: prefs,
+      request: (method, uri, [body]) async => (
+        status: 200,
+        body: <String, Object?>{
+          'month': 202611,
+          'current': 202611,
+          'mode': 'bank',
+          'players': 48,
+          'top': [for (var i = 0; i < names.length; i++) row(i)],
+          'me': row(2),
+        },
+      ),
+    );
+    await tester.pumpWidget(
+      RepaintBoundary(
+        key: boundary,
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: _withRoboto(AppTheme.light),
+          home: RankedScreen(service: service, settings: SettingsStore(prefs)),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+    await snap(tester, 'aylik-siralama');
   });
 
   testWidgets('render mascot editor', (tester) async {

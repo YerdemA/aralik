@@ -9,6 +9,7 @@ import '../../core/day_mood.dart';
 import '../../core/mascot_look.dart';
 import '../../core/match_share.dart';
 import '../../core/number_format.dart';
+import '../../core/ranked.dart';
 import '../../core/scoring.dart';
 import '../../core/share_text.dart';
 import '../../core/strings.dart';
@@ -18,6 +19,7 @@ import '../../widgets/philosopher.dart';
 import '../leaderboard/leaderboard_screen.dart' show Medal;
 
 part 'match_share_card.dart';
+part 'ranked_card.dart';
 
 /// What the daily share card shows.
 @immutable

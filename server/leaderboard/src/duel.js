@@ -252,11 +252,13 @@ function error(code) {
 }
 
 /** A new room waiting for its two players. */
-export function createRoom(code, now, mode = 'bank') {
+export function createRoom(code, now, mode = 'bank', ranked = false) {
   return step(
     {
       v: DUEL_VERSION,
       code,
+      // A random opponent's room: may count for the monthly table.
+      ranked,
       // 'bank': the question bank; 'math': generated math questions.
       mode: mode === 'math' ? 'math' : 'bank',
       phase: 'waiting',
@@ -291,7 +293,15 @@ export function createRoom(code, now, mode = 'bank') {
  */
 export function join(
   state,
-  { name, bank, look = null, token = null, rematch = false, math = false },
+  {
+    name,
+    bank,
+    look = null,
+    pid = null,
+    token = null,
+    rematch = false,
+    math = false,
+  },
   now,
   pick,
 ) {
@@ -300,7 +310,10 @@ export function join(
   if (state.phase !== 'waiting') return error('room_closed');
   if (state.players.length >= 2) return error('room_full');
   const seat = state.players.length;
-  const players = [...state.players, { name, bank, look, token, rematch }];
+  const players = [
+    ...state.players,
+    { name, bank, look, pid, token, rematch },
+  ];
   if (players.length < 2) {
     return {
       seat,
@@ -319,6 +332,16 @@ export function join(
   };
 }
 
+/**
+ * Whether this round counts for the monthly table: a random opponent's
+ * room, its first round, two different leaderboard accounts.
+ */
+export function isRanked(state) {
+  if (!state.ranked || (state.round ?? 1) !== 1) return false;
+  const [a, b] = state.players.map((p) => p.pid);
+  return Boolean(a && b && a !== b);
+}
+
 function startMessages(state) {
   return [0, 1].map((you) => {
     const msg = {
@@ -331,6 +354,7 @@ function startMessages(state) {
       rejoin: state.players[you].token,
     };
     if (state.round > 1) msg.round = state.round;
+    if (isRanked(state)) msg.ranked = true;
     return { to: you, msg };
   });
 }

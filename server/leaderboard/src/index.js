@@ -28,6 +28,10 @@
 //   POST /v1/duel/rooms                              → {code}
 //   GET  /v1/duel/rooms/{code}?v=1&name=…&bank=N     WebSocket to the room
 //   GET  /v1/duel/random?v=1&name=…&bank=N           WebSocket to the lobby
+//      A random opponent's room counts for the monthly table when both
+//      apps send their leaderboard account (?pid=…&ptok=…; ranked.js).
+//   GET  /v1/duel/ranked?mode=bank|math&month=YYYYMM&player=ID
+//                                                    → the monthly table
 //   POST /v1/tournament/rooms                        → {code}  (tournament.js)
 //   GET  /v1/tournament/rooms/{code}?v=1&name=…&bank=N  WebSocket to the room
 //
@@ -56,6 +60,7 @@ import { isHit, scoreFor, validBound } from './scoring.js';
 import { normalizeRoomCode } from './duel.js';
 import { openRoom, roomStub } from './rooms.js';
 import * as admin from './admin.js';
+import * as ranked from './ranked.js';
 
 const DEFAULTS = {
   CONTENT_BASE: 'https://yerdema.github.io/aralik/content/',
@@ -568,6 +573,9 @@ async function remove(request, env) {
   const player = await authenticate(env.DB, body);
   await env.DB.batch([
     env.DB.prepare('DELETE FROM scores WHERE player_id = ?').bind(player.id),
+    env.DB.prepare('DELETE FROM duel_ratings WHERE player_id = ?').bind(
+      player.id,
+    ),
     env.DB.prepare('DELETE FROM players WHERE id = ?').bind(player.id),
   ]);
   return json(200, { deleted: true });
@@ -648,6 +656,33 @@ function requireWebSocket(request, env) {
   if (request.headers.get('upgrade') !== 'websocket') {
     throw new HttpError(426, 'websocket_only');
   }
+}
+
+/**
+ * The monthly ranked duel table (ranked.js): ?mode=bank|math, ?month=YYYYMM
+ * (this month or the one before; default this one), ?player=ID for the
+ * viewer's own line.
+ */
+async function rankedTable(url, env, now) {
+  const params = url.searchParams;
+  const mode = params.get('mode') === 'math' ? 'math' : 'bank';
+  const current = ranked.monthOf(now);
+  const month = params.has('month')
+    ? ranked.parseMonth(params.get('month'))
+    : current;
+  if (month !== current && month !== ranked.previousMonth(current)) {
+    throw new HttpError(404, 'no_month');
+  }
+  const limit = Number(setting(env, 'FULL_BOARD'));
+  const viewer = params.get('player');
+  const body = await ranked.table(
+    env.DB,
+    month,
+    mode,
+    viewer && viewer.length <= 64 ? viewer : null,
+    limit,
+  );
+  return json(200, { ...body, current });
 }
 
 /** Random opponent: one lobby pairs up whoever is waiting. */
@@ -759,6 +794,7 @@ export async function handle(request, env, now = Date.now(), fetchFn = fetch) {
       const room = /^\/v1\/duel\/rooms\/([^/]+)$/.exec(path);
       if (room) return await connectRoom(request, env, room[1]);
       if (path === '/v1/duel/random') return await findOpponent(request, env);
+      if (path === '/v1/duel/ranked') return await rankedTable(url, env, now);
       const cup = /^\/v1\/tournament\/rooms\/([^/]+)$/.exec(path);
       if (cup) return await connectTournament(request, env, cup[1]);
       if (path === '' || path === '/v1') return json(200, { ok: true });
@@ -804,6 +840,7 @@ export async function cleanUp(env, now = Date.now()) {
   await env.DB.prepare('DELETE FROM reports WHERE at < ?')
     .bind(now - REPORT_DAYS * 24 * HOUR_MS)
     .run();
+  await ranked.cleanUp(env.DB, now);
   // Scores are accepted up to yesterday: older device days are not needed.
   await env.DB.prepare('DELETE FROM device_days WHERE day < ?')
     .bind(turkeyDayIndex(now) - 2)

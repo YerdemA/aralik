@@ -17,10 +17,14 @@ export async function openRoom(
   random = randomInt,
   rooms = env.DUEL_ROOMS,
   mode = 'bank',
+  ranked = false,
 ) {
   for (let attempt = 0; attempt < 5; attempt++) {
     const code = newRoomCode(random);
-    const query = mode === 'math' ? `code=${code}&mode=math` : `code=${code}`;
+    let query = mode === 'math' ? `code=${code}&mode=math` : `code=${code}`;
+    // A random opponent's room: its first round may count for the
+    // monthly table (ranked.js).
+    if (ranked) query += '&ranked=1';
     const response = await roomStub(env, code, rooms).fetch(
       `https://room/create?${query}`,
       { method: 'POST' },

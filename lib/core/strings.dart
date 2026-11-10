@@ -219,6 +219,60 @@ abstract final class AppStrings {
       'Liderlik tablosunda, düelloda ve turnuvada bu adla görünürsün. '
       'Adını 3 günde bir değiştirebilirsin.';
 
+  // Monthly ranked duels (core/ranked.dart).
+  static const rankedTitle = 'Aylık sıralama';
+  static const rankedRule =
+      'Rastgele rakiple oynanan düellolar aylık sıralamaya sayılır. '
+      'Herkes ayın başında 1000 puanla başlar. Güçlü rakibi yenmek ve '
+      'farkla kazanmak daha çok puan getirir. Rövanşlar sayılmaz.';
+  static const rankedJoinFirst =
+      'Sıralamaya girmek için günün liderleri tablosuna katıl. '
+      'Rakibin de katılmış olmalı.';
+  static const rankedJoin = 'Tabloya katıl';
+  static const rankedLobbyNote =
+      'Rastgele rakiple düellolar aylık sıralamaya sayılır';
+  static const rankedLobbyJoin = 'Aylık sıralamaya girmek için tabloya katıl';
+  static const rankedEmpty = 'Bu ay henüz sıralı düello oynanmadı.';
+  static const rankedNotYet =
+      'Bu ay henüz sıralı düello oynamadın. Rastgele bir rakip bul!';
+  static const rankedLoadError = 'Sıralama yüklenemedi.';
+  static const rankedPlayed = 'Düello';
+  static const rankedWon = 'Galibiyet';
+  static const rankedAverage = 'Ort. puan';
+  static const rankedHitRate = 'İsabet';
+  static const rankedRating = 'Puan';
+  static const rankedPlace = 'Sıra';
+  static String rankedPlayers(int n) => '$n oyuncu';
+  static String rankedRecord(int won, int drawn, int lost) =>
+      '$won G · $drawn B · $lost M';
+  static String rankedRatingChange(int after, int delta) =>
+      'Sıralama puanın: $after (${delta >= 0 ? '+' : ''}$delta)';
+  static const rankedMatch = 'Sıralı maç';
+  static String rankedPercent(int n) => '%$n';
+  static String monthEndTitle(String month) => '$month bitti!';
+  static String monthEndPlace(int rank, int players) =>
+      '$players oyuncu arasında $rank. oldun';
+  static String rankedModeTitle(bool math) =>
+      math ? 'Matematik düellosu' : 'Bilgi düellosu';
+  static const monthEndTop = "Ayın ilk 10'u";
+  static const monthEndDownload = 'İndir';
+  static const monthEndSaved = 'Görsel galeriye kaydedildi.';
+  static const monthEndClose = 'Kapat';
+  static String monthEndShareText(
+    String month,
+    bool math,
+    int rank,
+    int rating,
+    int played,
+    int won,
+  ) =>
+      'Kabaca · $month · ${rankedModeTitle(math)}\n'
+      '$rank. oldum · $rating puan\n'
+      '$played düello, $won galibiyet';
+  static String monthEndFileName(int month, bool math) =>
+      'kabaca-${month ~/ 100}-${(month % 100).toString().padLeft(2, '0')}'
+      '-${math ? 'matematik' : 'bilgi'}.png';
+
   // Mascot (Ayarlar → Maskotun).
   static const mascotSection = 'Maskotun';
   static const mascotTitle = 'Maskotun';
@@ -874,6 +928,9 @@ const _weekdays = [
   'Cumartesi',
   'Pazar',
 ];
+
+/// "Kasım" for [month] 1–12.
+String monthName(int month) => _months[month - 1];
 
 /// "4 Kasım": names a daily set in the share text, card and leaderboard.
 String dayLabel(DateTime date) => '${date.day} ${_months[date.month - 1]}';

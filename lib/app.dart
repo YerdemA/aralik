@@ -5,6 +5,7 @@ import 'core/strings.dart';
 import 'core/theme.dart';
 import 'data/invite_links.dart';
 import 'data/leaderboard.dart';
+import 'data/ranked_client.dart';
 import 'data/pending_match.dart';
 import 'data/question_repository.dart';
 import 'data/settings_store.dart';
@@ -21,6 +22,7 @@ class KabacaApp extends StatelessWidget {
     required this.stats,
     required this.settings,
     this.leaderboard,
+    this.ranked,
     this.pending,
     this.latestAppBuild,
     this.openStore,
@@ -47,6 +49,9 @@ class KabacaApp extends StatelessWidget {
 
   /// Null hides the leaderboard (tests).
   final LeaderboardStore? leaderboard;
+
+  /// The monthly ranked duel tables; null in tests.
+  final RankedService? ranked;
 
   /// The newest build in the store (content manifest), or null.
   final int? Function()? latestAppBuild;
@@ -86,6 +91,7 @@ class KabacaApp extends StatelessWidget {
             stats: stats,
             settings: settings,
             leaderboard: leaderboard,
+            ranked: ranked,
             pending: pending,
             latestAppBuild: latestAppBuild,
             openStore: openStore ?? openStorePage,

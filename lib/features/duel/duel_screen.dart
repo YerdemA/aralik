@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart';
 
+import '../../core/ranked.dart';
 import '../../core/mascot_look.dart';
 import '../../core/math/math_question.dart';
 import '../../core/math/math_problem.dart';
@@ -239,6 +240,8 @@ class _DuelScreenState extends State<DuelScreen> {
         bankSize: bank.length,
         match: _match,
         rejoin: widget.rejoin,
+        // Found in the lobby: may count for the monthly table.
+        ranked: widget.code == null,
       );
       if (!mounted) {
         await session.close();
@@ -1254,6 +1257,19 @@ class _ResultView extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
+              if (match.rating case final rating?)
+                _RatingChip(rating: rating)
+              else if (match.ranked)
+                Padding(
+                  padding: const EdgeInsets.only(top: 6),
+                  child: Text(
+                    AppStrings.rankedMatch,
+                    textAlign: TextAlign.center,
+                    style: theme.textTheme.labelLarge?.copyWith(
+                      color: theme.colorScheme.primary,
+                    ),
+                  ),
+                ),
               const Spacer(),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -1476,6 +1492,54 @@ class _RematchArea extends StatelessWidget {
       child: AnimatedSize(
         duration: const Duration(milliseconds: 200),
         child: child,
+      ),
+    );
+  }
+}
+
+/// The monthly rating after a ranked duel: "Sıralama puanın: 1018 (+18)",
+/// green for a gain, red for a loss.
+class _RatingChip extends StatelessWidget {
+  const _RatingChip({required this.rating});
+
+  final RatingChange rating;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final colors = theme.extension<GameColors>()!;
+    final up = rating.delta >= 0;
+    final colour = up ? colors.good : Palette.duelOpponent;
+    return Padding(
+      padding: const EdgeInsets.only(top: 8),
+      child: Center(
+        child: DecoratedBox(
+          decoration: BoxDecoration(
+            color: colour.withValues(alpha: 0.12),
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(
+                  up ? Icons.trending_up_rounded : Icons.trending_down_rounded,
+                  color: colour,
+                  size: 20,
+                ),
+                const SizedBox(width: 6),
+                Text(
+                  AppStrings.rankedRatingChange(rating.after, rating.delta),
+                  style: theme.textTheme.labelLarge?.copyWith(
+                    color: colour,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

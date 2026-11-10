@@ -5,7 +5,9 @@
 //   flutter test tools/share/render_share_cards_test.dart
 import 'dart:io';
 
+import 'package:aralik/core/mascot_look.dart';
 import 'package:aralik/core/match_share.dart';
+import 'package:aralik/core/ranked.dart';
 import 'package:aralik/core/scoring.dart';
 import 'package:aralik/features/result/share_card.dart';
 import 'package:flutter/services.dart';
@@ -132,6 +134,37 @@ void main() {
       };
       for (final MapEntry(key: name, value: share) in matches.entries) {
         final png = await renderMatchShareCard(share);
+        File('${out.path}/$name.png').writeAsBytesSync(png);
+      }
+      // The month-end cards of the ranked duels.
+      for (final (name, rank, players, look) in [
+        ('ay-sonu-1', 1, 48, MascotLook.philosopher),
+        (
+          'ay-sonu-7',
+          7,
+          48,
+          MascotLook.woman.copyWith(glasses: MascotGlasses.round),
+        ),
+        ('ay-sonu-40', 40, 48, const MascotLook(hat: MascotHat.fez)),
+      ]) {
+        final png = await renderRankedCard(
+          RankedCardData(
+            month: 202611,
+            math: rank == 7,
+            players: players,
+            look: look,
+            me: RankedRow(
+              rank: rank,
+              nickname: 'Yusuf',
+              rating: 1240 - rank * 9,
+              played: 23,
+              won: 15,
+              drawn: 2,
+              average: 284,
+              hitRate: 76,
+            ),
+          ),
+        );
         File('${out.path}/$name.png').writeAsBytesSync(png);
       }
     });

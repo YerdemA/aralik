@@ -3,7 +3,7 @@ layout: page
 title: Gizlilik Politikası
 lead: Kabaca hangi verileri nasıl kullanır? Kısa cevap, neredeyse hiçbirini.
 description: Kabaca kişisel veri toplamaz. Oyun verileri cihazda kalır; istisnalar isteğe bağlı liderlik tablosu, düello ve turnuvadır.
-updated: 9 Kasım 2026
+updated: 10 Kasım 2026
 ---
 
 Kabaca, Yusuf Erdem Aykaç tarafından geliştirilen bir tahmin oyunudur. Bu politika uygulamanın hangi verileri nasıl kullandığını açıklar.
@@ -11,7 +11,7 @@ Kabaca, Yusuf Erdem Aykaç tarafından geliştirilen bir tahmin oyunudur. Bu pol
 ## Kısaca
 - **Kişisel veri toplamayız.** Hesap, giriş, reklam, analiz ya da takip aracı yoktur.
 - **Oyun verilerin cihazında kalır.** Skorların, serin, kalibrasyonun ve cevapladığın soruların listesi yalnızca telefonunda saklanır.
-- **İstisnalar isteğe bağlı: liderlik tablosu, düello ve turnuva.** Yalnızca sen katılırsan, seçtiğin ad ve cevapların gönderilir. Katılmazsan hiçbir şey gönderilmez.
+- **İstisnalar isteğe bağlı: liderlik tablosu, aylık düello sıralaması, düello ve turnuva.** Yalnızca sen katılırsan, seçtiğin ad, maskotun ve cevapların gönderilir. Katılmazsan hiçbir şey gönderilmez.
 - **İnternet yalnızca gerektiğinde.** Uygulama yeni soruları indirmek ve (katıldıysan) liderlik tablosu, düello ya da turnuva için bağlanır.
 {: .summary}
 
@@ -46,11 +46,11 @@ Aynı cihazdan çok sayıda hesap açılmasını önlemek için, katılma isteğ
 
 Bu veriler yalnızca liderlik tablosu için kullanılır; satılmaz, reklam ya da analiz için kullanılmaz, başka kimseyle paylaşılmaz.
 
-**Tablodan ayrılmak ve verilerini silmek için:** Ayarlar → Liderlik tablosu → Tablodan ayrıl. Sunucudaki hesabın (takma adın ve cihaz özetinle bağı) ve gönderdiğin tüm puanlar hemen silinir. Kullanıcı adın telefonunda kalır; düello ve turnuvada kullanılmaya devam eder, yeniden katılırsan tabloya yine bu adla girersin (ad o arada başkası tarafından alınmadıysa). Yalnızca cihaz özetinin hangi günler için puan gönderdiği bilgisi, adınla bağlantısız olarak en fazla 3 gün kalır; böylece aynı gün yeniden katılıp puan gönderilemez. Uygulamayı kaldırmışsan yeniden kurup tabloya katıldığında hesabın geri gelir, oradan ayrılabilirsin; istersen silinmesini aşağıdaki iletişim adresinden de isteyebilirsin.
+**Tablodan ayrılmak ve verilerini silmek için:** Ayarlar → Liderlik tablosu → Tablodan ayrıl. Sunucudaki hesabın (takma adın ve cihaz özetinle bağı), gönderdiğin tüm puanlar ve aylık düello sıralamasındaki satırların hemen silinir. Kullanıcı adın telefonunda kalır; düello ve turnuvada kullanılmaya devam eder, yeniden katılırsan tabloya yine bu adla girersin (ad o arada başkası tarafından alınmadıysa). Yalnızca cihaz özetinin hangi günler için puan gönderdiği bilgisi, adınla bağlantısız olarak en fazla 3 gün kalır; böylece aynı gün yeniden katılıp puan gönderilemez. Uygulamayı kaldırmışsan yeniden kurup tabloya katıldığında hesabın geri gelir, oradan ayrılabilirsin; istersen silinmesini aşağıdaki iletişim adresinden de isteyebilirsin.
 {: .callout}
 
 ## Düello ve turnuva
-Düello (bilgi ya da matematik düellosu; arkadaşınla ya da rastgele bir rakiple) ya da turnuva (3–8 kişilik oda) oynadığında, aynı sunucudaki odaya şunlar gönderilir: Ayarlar'da seçtiğin **kullanıcı adın**, uygulamadaki soru sayısı ve kilitlediğin **aralıklar**. Hesap ya da kimlik gerekmez.
+Düello (bilgi ya da matematik düellosu; arkadaşınla ya da rastgele bir rakiple) ya da turnuva (3–8 kişilik oda) oynadığında, aynı sunucudaki odaya şunlar gönderilir: Ayarlar'da seçtiğin **kullanıcı adın**, tasarladıysan **maskotunun görünümü** (seçtiğin saç, gözlük, şapka gibi özellikleri anlatan 9 haneli bir kod), uygulamadaki soru sayısı ve kilitlediğin **aralıklar**. Hesap ya da kimlik gerekmez. Maskotun rakiplerine kendi tasarladığın hâliyle gösterilir.
 
 Rakip ararken de yalnızca kullanıcı adın ve soru sayısı gider. Adın ve aralıkların yalnızca o odadaki oyunculara gösterilir: düelloda rakibine, turnuvada odadaki herkese.
 
@@ -58,9 +58,16 @@ Bağlantın koparsa kaldığın yerden devam edebilmen için oda sana rastgele, 
 
 Düello bittiğinde ikiniz de isterseniz aynı odada **rövanş** oynanır; bunun için yeni bir şey gönderilmez, yalnızca "rövanş istiyorum" ya da "istemiyorum" bilgisi rakibine iletilir. Matematik düellosunun soruları cihazlarda ve sunucuda hesapla üretilir; aynı veriler (adın ve aralıkların) kullanılır.
 
-Oda bittikten (ya da boş kaldıktan) en geç birkaç dakika sonra sunucudan tamamen silinir; hiçbir düello ya da turnuva verisi saklanmaz. Oynamazsan hiçbir şey gönderilmez.
+Oda bittikten (ya da boş kaldıktan) en geç birkaç dakika sonra sunucudan tamamen silinir. Düello ya da turnuva verisi, aşağıdaki aylık sıralama dışında saklanmaz. Oynamazsan hiçbir şey gönderilmez.
 
 Odaların kötüye kullanılmasını (örneğin binlerce oda açılmasını) önlemek için oda açma ve odaya bağlanma istekleri IP adresi başına dakikalık bir sınırla sayılır. Bu sayımı Cloudflare kısa süreliğine yapar; IP adresini biz saklamayız.
+
+## Aylık düello sıralaması (isteğe bağlı)
+Günün liderleri tablosuna katıldıysan, **rastgele bir rakiple** oynadığın düellolar aylık sıralamaya sayılır (rakibin de katılmışsa). Bunun için uygulama, rakip bulunduğunda odaya tablodaki rastgele kimliğini ve gizli anahtarını da gönderir; sunucu anahtarı, saklı özetiyle karşılaştırıp hesabın senin olduğunu doğrular. Arkadaşınla oynadığın düellolar ve rövanşlar sayılmaz, onlarda bu bilgiler gönderilmez.
+
+Her ay ve düello türü (bilgi, matematik) için hesabına bağlı olarak şunlar saklanır: **sıralama puanın**, oynadığın, kazandığın ve berabere bitirdiğin düello sayısı, maç puanlarının toplamı (ortalama için), isabet ve cevap sayın, maskotunun görünümü ve son güncelleme zamanı. Tek tek maçlar, rakiplerin ve aralıkların saklanmaz.
+
+Kullanıcı adın, maskotun ve bu sayılar o ayın sıralamasında diğer oyunculara görünür. Ay bitince biten ayın tablosu ve sana ait özet kart bir kez gösterilir; kartı istersen telefonuna kaydeder ya da paylaşırsın (bu yalnızca telefonunda olur). Sunucu yalnızca içinde bulunulan ayı ve bir önceki ayı tutar; daha eski aylar her gün otomatik silinir. **Tablodan ayrıldığında** sıralama verilerin de hemen silinir.
 
 ## Bildirme ve engelleme
 Tabloda, düelloda ya da turnuvada gördüğün başka bir oyuncunun adına dokunarak onu **bildirebilir** ya da **engelleyebilirsin**.

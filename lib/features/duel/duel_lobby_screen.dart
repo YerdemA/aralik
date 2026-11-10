@@ -5,10 +5,12 @@ import '../../core/duel.dart';
 import '../../core/strings.dart';
 import '../../data/duel_client.dart';
 import '../../data/leaderboard.dart';
+import '../../data/ranked_client.dart';
 import '../../data/pending_match.dart';
 import '../../data/question_repository.dart';
 import '../../data/settings_store.dart';
 import '../../data/stats_store.dart';
+import '../ranked/ranked_screen.dart';
 import '../settings/user_name_sheet.dart';
 import '../settings/settings_screen.dart';
 import 'duel_screen.dart';
@@ -25,6 +27,7 @@ class DuelLobbyScreen extends StatefulWidget {
     required this.stats,
     required this.settings,
     this.leaderboard,
+    this.ranked,
     this.pending,
     this.rule = ScoreRule.refined,
     this.math = false,
@@ -51,6 +54,9 @@ class DuelLobbyScreen extends StatefulWidget {
 
   /// Keeps a match in progress for going back to it after leaving.
   final PendingMatchStore? pending;
+
+  /// The monthly ranked tables; null hides them.
+  final RankedService? ranked;
 
   @override
   State<DuelLobbyScreen> createState() => _DuelLobbyScreenState();
@@ -156,10 +162,34 @@ class _DuelLobbyScreenState extends State<DuelLobbyScreen> {
     builder: (context, _) => _build(context, _name),
   );
 
+  Future<void> _openRanked(RankedService ranked) async {
+    await Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (_) => RankedScreen(
+          service: ranked,
+          settings: widget.settings,
+          leaderboard: widget.leaderboard,
+          math: _math,
+        ),
+      ),
+    );
+    if (mounted) setState(() {});
+  }
+
   Widget _build(BuildContext context, String? name) {
     final theme = Theme.of(context);
     return Scaffold(
-      appBar: AppBar(title: const Text(AppStrings.duelTitle)),
+      appBar: AppBar(
+        title: const Text(AppStrings.duelTitle),
+        actions: [
+          if (widget.ranked case final ranked? when ranked.isAvailable)
+            IconButton(
+              tooltip: AppStrings.rankedTitle,
+              icon: const Icon(Icons.leaderboard_rounded),
+              onPressed: () => _openRanked(ranked),
+            ),
+        ],
+      ),
       body: SafeArea(
         child: ListView(
           padding: const EdgeInsets.fromLTRB(20, 8, 20, 24),
@@ -209,6 +239,18 @@ class _DuelLobbyScreenState extends State<DuelLobbyScreen> {
               icon: const Icon(Icons.person_search_rounded),
               label: const Text(AppStrings.duelFindOpponent),
             ),
+            if (widget.ranked case final ranked? when ranked.isAvailable)
+              Align(
+                child: TextButton.icon(
+                  onPressed: () => _openRanked(ranked),
+                  icon: const Icon(Icons.leaderboard_rounded, size: 18),
+                  label: Text(
+                    ranked.account() == null
+                        ? AppStrings.rankedLobbyJoin
+                        : AppStrings.rankedLobbyNote,
+                  ),
+                ),
+              ),
             const SizedBox(height: 32),
             Text(AppStrings.duelWithFriend, style: theme.textTheme.titleMedium),
             const SizedBox(height: 12),

@@ -22,3 +22,13 @@ export function acceptsDay(day, nowMs) {
 export function readableDay(day, nowMs) {
   return Number.isInteger(day) && day <= turkeyDayIndex(nowMs) + 1;
 }
+
+/** The calendar date in Turkey at [nowMs]: {year, month (1–12), day}. */
+export function turkeyDate(nowMs) {
+  const d = new Date(nowMs + TURKEY_OFFSET_MS);
+  return {
+    year: d.getUTCFullYear(),
+    month: d.getUTCMonth() + 1,
+    day: d.getUTCDate(),
+  };
+}

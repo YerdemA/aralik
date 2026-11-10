@@ -23,6 +23,7 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 
 import 'mascot_look.dart';
+import 'ranked.dart';
 
 /// Must match DUEL_VERSION in duel.js; the server refuses other versions.
 const int duelProtocolVersion = 1;
@@ -82,7 +83,12 @@ sealed class DuelEvent {
           questionTime: Duration(milliseconds: m['questionMs'] as int),
           rejoin: m['rejoin'] as String?,
           round: m['round'] as int? ?? 1,
+          ranked: m['ranked'] == true,
         ),
+        'rated' => DuelRated([
+          for (final r in (m['ratings'] as List).cast<Map<String, dynamic>>())
+            (before: r['before'] as int, after: r['after'] as int),
+        ]),
         'rematch' => DuelRematch(m['seat'] as int),
         'rematch_no' => DuelRematchNo(
           m['seat'] as int?,
@@ -224,6 +230,12 @@ class DuelResume extends DuelEvent {
   final Duration? budget;
 }
 
+/// A ranked duel was recorded: both ratings by seat.
+class DuelRated extends DuelEvent {
+  const DuelRated(this.ratings);
+  final List<RatingChange> ratings;
+}
+
 /// The room is open; the friend joins with [code].
 class DuelWaiting extends DuelEvent {
   const DuelWaiting(this.code);
@@ -240,8 +252,13 @@ class DuelStart extends DuelEvent {
     required this.questionTime,
     this.rejoin,
     this.round = 1,
+    this.ranked = false,
   });
   final int you;
+
+  /// The first round of a random opponent's room between two leaderboard
+  /// players: it counts for the monthly table.
+  final bool ranked;
   final List<String> names;
 
   /// Both players' mascot codes by seat; null where not sent.
@@ -415,6 +432,8 @@ class DuelMatch extends ChangeNotifier {
   int _you = 0;
   List<String> _names = const [];
   List<String?> _looks = const [null, null];
+  bool _ranked = false;
+  RatingChange? _rating;
   List<String> _questionIds = const [];
   Duration _questionTime = Duration.zero;
   int _index = -1;
@@ -506,6 +525,12 @@ class DuelMatch extends ChangeNotifier {
   String get myName => _names.isEmpty ? '' : _names[_you];
   String get opponentName => _names.length < 2 ? '' : _names[1 - _you];
 
+  /// This duel counts for the monthly table.
+  bool get ranked => _ranked;
+
+  /// This player's rating before and after, once the room recorded it.
+  RatingChange? get rating => _rating;
+
   /// This player's mascot as the room has it.
   MascotLook get myLook => MascotLook.parse(_looks[_you]);
 
@@ -578,9 +603,13 @@ class DuelMatch extends ChangeNotifier {
         _you = event.you;
         _names = event.names;
         _looks = event.looks;
+        _ranked = event.ranked;
+        _rating = null;
         _questionIds = event.questionIds;
         _questionTime = event.questionTime;
         _rejoin = event.rejoin;
+      case DuelRated(:final ratings):
+        if (ratings.length == 2) _rating = ratings[_you];
       case DuelQuestion(:final index, :final timeLeft):
         _index = index;
         _timeLeft = timeLeft;

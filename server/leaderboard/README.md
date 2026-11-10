@@ -94,6 +94,8 @@ başında, oda nesnesi `src/tournament_room.js`. `npm run deploy`, `wrangler.tom
 ```powershell
 npx wrangler d1 execute kabaca-leaderboard --remote --file=migrations/0002_device.sql
 npx wrangler d1 execute kabaca-leaderboard --remote --file=migrations/0003_moderation.sql
+npx wrangler d1 execute kabaca-leaderboard --remote --file=migrations/0004_reports.sql
+npx wrangler d1 execute kabaca-leaderboard --remote --file=migrations/0005_ranked.sql
 ```
 
 ## Kötüye kullanıma karşı

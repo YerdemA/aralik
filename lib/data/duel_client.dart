@@ -40,6 +40,7 @@ class DuelService {
   DuelService({
     required this.serviceUri,
     this.look,
+    this.account,
     JsonRequest? request,
     DuelConnector? connect,
   }) : _request = request ?? defaultJsonRequest,
@@ -49,6 +50,10 @@ class DuelService {
   /// The player's mascot code (Ayarlar → Maskotun), sent along so the
   /// others draw it; null while never chosen.
   final String? Function()? look;
+
+  /// The leaderboard account (id and token) for a random opponent's room,
+  /// so the duel can count for the monthly table; null when not joined.
+  final ({String id, String token})? Function()? account;
 
   final Uri? Function() serviceUri;
   final JsonRequest _request;
@@ -101,8 +106,10 @@ class DuelService {
     String? rejoin,
     bool resign = false,
     String? mode,
+    bool ranked = false,
   }) async {
     final base = serviceUri();
+    final who = ranked ? account?.call() : null;
     if (base == null) throw const DuelException(DuelFailure.offline);
     final http = base.resolve(path);
     final uri = http.replace(
@@ -122,6 +129,9 @@ class DuelService {
         // This app can play math duels.
         'math': '1',
         'mode': ?mode,
+        // A random opponent's room: the account, for the monthly table.
+        'pid': ?who?.id,
+        'ptok': ?who?.token,
       },
     );
     try {
@@ -148,10 +158,17 @@ class DuelService {
     required int bankSize,
     required DuelMatch match,
     String? rejoin,
+    bool ranked = false,
   }) async {
     final path = 'v1/duel/rooms/$code';
     if (rejoin != null) match.expectRejoin(code, rejoin);
-    final channel = await _open(path, name, bankSize, rejoin: rejoin);
+    final channel = await _open(
+      path,
+      name,
+      bankSize,
+      rejoin: rejoin,
+      ranked: ranked && rejoin == null,
+    );
     return DuelSession._(
       channel,
       match,

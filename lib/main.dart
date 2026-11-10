@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'app.dart';
+import 'data/ranked_client.dart';
 import 'data/content_sync.dart';
 import 'data/invite_links.dart';
 import 'data/leaderboard.dart';
@@ -25,6 +26,12 @@ Future<void> main() async {
   // Warm the bank cache. A failure is retried on play.
   repository.load().ignore();
   final settings = SettingsStore(prefs);
+  // The monthly ranked duel tables and the month-end recap.
+  final ranked = RankedService(
+    serviceUri: () => leaderboard.serviceUri,
+    account: () => leaderboard.account,
+    prefs: prefs,
+  );
   Sounds.enabled = settings.soundOn;
   settings.addListener(() => Sounds.enabled = settings.soundOn);
   Sounds.preload().ignore();
@@ -41,6 +48,7 @@ Future<void> main() async {
       stats: StatsStore(prefs),
       settings: settings,
       leaderboard: leaderboard,
+      ranked: ranked,
       pending: PendingMatchStore(prefs),
       latestAppBuild: () => content.latestAppBuild,
       openStore: () => openStorePage(appStoreId: content.appStoreId),
