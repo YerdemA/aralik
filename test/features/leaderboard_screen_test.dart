@@ -50,6 +50,21 @@ void main() {
             body: {'id': 'p1', 'token': 't', 'nickname': body!['nickname']},
           ),
           '/v1/day/3' => (status: 200, body: _board(withMe: withMe)),
+          '/v1/archive' => (
+            status: 200,
+            body: {
+              'days': [
+                {'day': 2, 'nickname': 'Kartal', 'points': 470},
+              ],
+              'month': 202610,
+              'duels': {
+                'bank': [
+                  {'rank': 1, 'nickname': 'Deniz', 'rating': 60},
+                ],
+                'math': <Object?>[],
+              },
+            },
+          ),
           _ => (status: 200, body: const <String, Object?>{}),
         };
       },
@@ -73,6 +88,23 @@ void main() {
     );
     await tester.pumpAndSettle();
   }
+
+  testWidgets('tabs: today, then the archive with day leaders and podiums', (
+    tester,
+  ) async {
+    await open(tester);
+    expect(find.text(AppStrings.leaderboardTabDay), findsOneWidget);
+    // No duel tables without their service.
+    expect(find.text(AppStrings.leaderboardTabDuel), findsNothing);
+    await tester.tap(find.text(AppStrings.leaderboardTabArchive));
+    await tester.pumpAndSettle();
+    expect(paths, contains('/v1/archive'));
+    expect(find.text('Kartal'), findsOneWidget);
+    expect(find.text('3 Kasım'), findsOneWidget);
+    expect(find.text('Deniz'), findsOneWidget);
+    expect(find.text('Ekim 2026 · Düello ilk 3'), findsOneWidget);
+    expect(find.text(AppStrings.archiveDuelEmpty), findsOneWidget);
+  });
 
   testWidgets('another player can be reported and blocked from the board', (
     tester,

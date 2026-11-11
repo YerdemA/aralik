@@ -14,9 +14,11 @@
 //
 //   POST /v1/register  {nickname, device}            → {id, token, nickname, restored}
 //   POST /v1/rename    {id, token, nickname}         → {nickname}
-//   POST /v1/submit    {id, token, day, answers[5], device}
+//   POST /v1/submit    {id, token, day, answers[5], device, look}
 //                                                    → {points, hits, rank, players}
 //   GET  /v1/day/{n}?player={id}                     → board of day n
+//   GET  /v1/archive                                 → last week's day
+//      leaders and last month's duel podiums (archive.js)
 //   POST /v1/delete    {id, token}                   → {deleted: true}
 //   POST /v1/device    {device}                      → {account, days}
 //      Asked on launch by an app without an account (e.g. its data was
@@ -61,6 +63,8 @@ import { normalizeRoomCode } from './duel.js';
 import { openRoom, roomStub } from './rooms.js';
 import * as admin from './admin.js';
 import * as ranked from './ranked.js';
+import { archive } from './archive.js';
+import { cleanLook } from './look.js';
 
 const DEFAULTS = {
   CONTENT_BASE: 'https://yerdema.github.io/aralik/content/',
@@ -89,6 +93,8 @@ const REPORT_DAYS = 7;
 const REPORT_PLACES = new Set(['board', 'duel', 'tournament']);
 
 const HOUR_MS = 60 * 60 * 1000;
+/** How long the archive is served from the edge cache. */
+const ARCHIVE_CACHE_SECONDS = 600;
 const MAX_BODY_BYTES = 4096;
 
 class HttpError extends Error {
@@ -406,7 +412,7 @@ async function submit(request, env, now, fetchFn) {
   await db.batch([
     db
       .prepare(
-        'INSERT OR IGNORE INTO scores (day, player_id, points, hits, submitted_at, suspect) VALUES (?, ?, ?, ?, ?, ?)',
+        'INSERT OR IGNORE INTO scores (day, player_id, points, hits, submitted_at, suspect, look) VALUES (?, ?, ?, ?, ?, ?, ?)',
       )
       .bind(
         day,
@@ -415,6 +421,7 @@ async function submit(request, env, now, fetchFn) {
         hits,
         now,
         points >= setting(env, 'SUSPECT_POINTS') ? 1 : 0,
+        cleanLook(body.look),
       ),
     ...(device
       ? [
@@ -659,6 +666,22 @@ function requireWebSocket(request, env) {
 }
 
 /**
+ * The archive (archive.js): it changes when a day or a month ends, so it
+ * is kept in the edge cache for ARCHIVE_CACHE_SECONDS under today's key.
+ */
+async function archiveOf(env, now) {
+  const today = turkeyDayIndex(now);
+  const cache = boardCache();
+  const key = new Request(`https://board.cache/v1/archive/${today}`);
+  const hit = await cache?.match(key);
+  if (hit) return hit;
+  const body = await archive(env.DB, today, ranked.monthOf(now));
+  const reply = json(200, body, `public, max-age=${ARCHIVE_CACHE_SECONDS}`);
+  await cache?.put(key, reply.clone());
+  return reply;
+}
+
+/**
  * The monthly ranked duel table (ranked.js): ?mode=bank|math, ?month=YYYYMM
  * (this month or the one before; default this one), ?player=ID for the
  * viewer's own line.
@@ -795,6 +818,7 @@ export async function handle(request, env, now = Date.now(), fetchFn = fetch) {
       if (room) return await connectRoom(request, env, room[1]);
       if (path === '/v1/duel/random') return await findOpponent(request, env);
       if (path === '/v1/duel/ranked') return await rankedTable(url, env, now);
+      if (path === '/v1/archive') return await archiveOf(env, now);
       const cup = /^\/v1\/tournament\/rooms\/([^/]+)$/.exec(path);
       if (cup) return await connectTournament(request, env, cup[1]);
       if (path === '' || path === '/v1') return json(200, { ok: true });

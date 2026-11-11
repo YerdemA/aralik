@@ -12,8 +12,9 @@ import 'package:flutter/foundation.dart';
 import 'mascot_look.dart';
 import 'strings.dart';
 
-/// The rating everyone starts each month with (ranked.js START).
-const rankedStart = 1000;
+/// The rating everyone starts each month with (ranked.js START; 1000
+/// until 2026-11-11). Ratings never go below it.
+const rankedStart = 0;
 
 /// Which duels a table is for; [query] is the server's `mode`.
 enum RankedMode {

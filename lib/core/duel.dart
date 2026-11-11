@@ -587,8 +587,10 @@ class DuelMatch extends ChangeNotifier {
 
   void handle(DuelEvent event) {
     if (_phase == DuelPhase.failed) return;
-    // After the end only the rematch goes on (and a new round's start).
+    // After the end only the rematch goes on (and a new round's start),
+    // and the monthly rating, which the room records after the end.
     if (_phase == DuelPhase.over &&
+        event is! DuelRated &&
         event is! DuelRematch &&
         event is! DuelRematchNo &&
         event is! DuelStart) {

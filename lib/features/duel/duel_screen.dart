@@ -206,6 +206,20 @@ class _DuelScreenState extends State<DuelScreen> {
     super.dispose();
   }
 
+  /// Why this duel does not count for the monthly table, told on the
+  /// result screen: the player or the opponent has not joined the
+  /// leaderboard, or it is a friend's room. Null when it counts, and when
+  /// back in a duel from the home screen (the kind of room is unknown).
+  String? get _rankNote {
+    if (_match.ranked || _match.rating != null) return null;
+    if (!widget.isRandom) {
+      return widget.rejoin == null ? AppStrings.rankedFriendRoom : null;
+    }
+    return widget.service.account?.call() == null
+        ? AppStrings.rankedNotJoined
+        : AppStrings.rankedOpponentNotJoined;
+  }
+
   Future<void> _connect() async {
     try {
       final bank = await widget.repository.load();
@@ -597,6 +611,7 @@ class _DuelScreenState extends State<DuelScreen> {
       body = _ResultView(
         match: _match,
         myName: widget.name,
+        rankNote: _rankNote,
         onRematch: () => _session?.rematch(),
         onDecline: () => _session?.declineRematch(),
       );
@@ -1175,11 +1190,16 @@ class _ResultView extends StatelessWidget {
   const _ResultView({
     required this.match,
     required this.myName,
+    this.rankNote,
     required this.onRematch,
     required this.onDecline,
   });
 
   final DuelMatch match;
+
+  /// Why this duel did not count for the monthly table; null when it did,
+  /// or when the app cannot tell.
+  final String? rankNote;
 
   /// This player's name, for the shared result.
   final String myName;
@@ -1221,8 +1241,16 @@ class _ResultView extends StatelessWidget {
           final figure = [
             box.maxWidth / 2 - 8,
             190.0,
-            box.maxHeight - (match.rematch == RematchState.offered ? 568 : 488),
-          ].reduce((a, b) => a < b ? a : b).clamp(80.0, 190.0);
+            box.maxHeight -
+                (match.rematch == RematchState.offered ? 568 : 488) -
+                // Room for the monthly rating.
+                (match.ranked ? 48 : 0) -
+                // The note's line, plus what the estimate above leaves
+                // out once the rematch buttons show.
+                (rankNote == null || match.rematch == RematchState.offered
+                    ? 0
+                    : 84),
+          ].reduce((a, b) => a < b ? a : b).clamp(56.0, 190.0);
           return Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -1257,17 +1285,40 @@ class _ResultView extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center,
               ),
-              if (match.rating case final rating?)
-                _RatingChip(rating: rating)
-              else if (match.ranked)
+              // The monthly rating arrives a moment after the end.
+              AnimatedSize(
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeOutCubic,
+                child: match.rating == null
+                    ? const SizedBox(width: double.infinity)
+                    : _RatingReveal(rating: match.rating!),
+              ),
+              // Hidden while the rematch offer takes the room.
+              if (rankNote case final note?
+                  when match.rematch != RematchState.offered)
                 Padding(
                   padding: const EdgeInsets.only(top: 6),
-                  child: Text(
-                    AppStrings.rankedMatch,
-                    textAlign: TextAlign.center,
-                    style: theme.textTheme.labelLarge?.copyWith(
-                      color: theme.colorScheme.primary,
-                    ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.info_outline_rounded,
+                        size: 16,
+                        color: theme.colorScheme.onSurfaceVariant,
+                      ),
+                      const SizedBox(width: 6),
+                      Flexible(
+                        child: Text(
+                          note,
+                          textAlign: TextAlign.center,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: theme.textTheme.bodySmall?.copyWith(
+                            color: theme.colorScheme.onSurfaceVariant,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               const Spacer(),
@@ -1497,49 +1548,134 @@ class _RematchArea extends StatelessWidget {
   }
 }
 
-/// The monthly rating after a ranked duel: "Sıralama puanın: 1018 (+18)",
-/// green for a gain, red for a loss.
-class _RatingChip extends StatelessWidget {
-  const _RatingChip({required this.rating});
+/// The monthly rating after a ranked duel: first the change, large ("+18"
+/// in green, "−12" in red), then after [_hold] it turns softly into the
+/// new rating, counting up or down to it.
+class _RatingReveal extends StatefulWidget {
+  const _RatingReveal({required this.rating});
 
   final RatingChange rating;
 
   @override
+  State<_RatingReveal> createState() => _RatingRevealState();
+}
+
+class _RatingRevealState extends State<_RatingReveal> {
+  static const _hold = Duration(seconds: 2);
+  static const _turn = Duration(milliseconds: 700);
+
+  late final Timer _timer;
+  bool _showTotal = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _timer = Timer(_hold, () {
+      if (mounted) setState(() => _showTotal = true);
+    });
+  }
+
+  @override
+  void dispose() {
+    _timer.cancel();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
     final colors = theme.extension<GameColors>()!;
-    final up = rating.delta >= 0;
-    final colour = up ? colors.good : Palette.duelOpponent;
+    final rating = widget.rating;
+    final delta = rating.delta;
+    final colour = delta > 0
+        ? colors.good
+        : delta < 0
+        ? Palette.duelOpponent
+        : scheme.onSurfaceVariant;
+    final number = theme.textTheme.displaySmall?.copyWith(
+      fontWeight: FontWeight.w900,
+      height: 1.1,
+    );
     return Padding(
       padding: const EdgeInsets.only(top: 8),
-      child: Center(
-        child: DecoratedBox(
-          decoration: BoxDecoration(
-            color: colour.withValues(alpha: 0.12),
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Icon(
-                  up ? Icons.trending_up_rounded : Icons.trending_down_rounded,
-                  color: colour,
-                  size: 20,
-                ),
-                const SizedBox(width: 6),
-                Text(
-                  AppStrings.rankedRatingChange(rating.after, rating.delta),
-                  style: theme.textTheme.labelLarge?.copyWith(
-                    color: colour,
-                    fontWeight: FontWeight.w800,
-                  ),
-                ),
-              ],
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          AnimatedSwitcher(
+            duration: _turn,
+            child: Text(
+              _showTotal
+                  ? AppStrings.rankedNowLabel
+                  : AppStrings.rankedDeltaLabel,
+              key: ValueKey(_showTotal),
+              style: theme.textTheme.labelLarge?.copyWith(
+                color: scheme.onSurfaceVariant,
+              ),
             ),
           ),
-        ),
+          AnimatedSwitcher(
+            duration: _turn,
+            switchInCurve: Curves.easeOutCubic,
+            switchOutCurve: Curves.easeInCubic,
+            transitionBuilder: (child, animation) => FadeTransition(
+              opacity: animation,
+              child: ScaleTransition(
+                scale: Tween(begin: .85, end: 1.0).animate(animation),
+                child: child,
+              ),
+            ),
+            child: _showTotal
+                ? TweenAnimationBuilder<double>(
+                    key: const ValueKey('total'),
+                    tween: Tween(
+                      begin: rating.before.toDouble(),
+                      end: rating.after.toDouble(),
+                    ),
+                    duration: const Duration(milliseconds: 900),
+                    curve: Curves.easeOutCubic,
+                    // The new rating, and the change beside it: "138 (+18)".
+                    builder: (context, value, _) => Row(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.baseline,
+                      textBaseline: TextBaseline.alphabetic,
+                      children: [
+                        Text(
+                          '${value.round()}',
+                          style: number?.copyWith(color: scheme.primary),
+                        ),
+                        const SizedBox(width: 8),
+                        Text(
+                          '(${AppStrings.rankedDelta(delta)})',
+                          style: theme.textTheme.titleLarge?.copyWith(
+                            color: colour,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                : Row(
+                    key: const ValueKey('delta'),
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      if (delta != 0)
+                        Icon(
+                          delta > 0
+                              ? Icons.trending_up_rounded
+                              : Icons.trending_down_rounded,
+                          color: colour,
+                          size: 36,
+                        ),
+                      const SizedBox(width: 6),
+                      Text(
+                        AppStrings.rankedDelta(delta),
+                        style: number?.copyWith(color: colour),
+                      ),
+                    ],
+                  ),
+          ),
+        ],
       ),
     );
   }

@@ -14,6 +14,7 @@ void main() {
   late List<Sent> sent;
   late JsonReply Function(Sent request) reply;
   Uri? service;
+  String? look;
 
   LeaderboardStore store() => LeaderboardStore(
     prefs,
@@ -24,6 +25,7 @@ void main() {
       return reply(request);
     },
     deviceKey: () async => _device,
+    look: () => look,
   );
 
   const registered = (
@@ -128,6 +130,15 @@ void main() {
     reply = (_) => throw const SocketException('offline');
     expect(await failure(), LeaderboardFailure.offline);
     expect(s.joined, isFalse);
+  });
+
+  test('the mascot goes with the day, for the archive', () async {
+    look = '111111111';
+    addTearDown(() => look = null);
+    final s = await joinedStore();
+    await finishDay(s, 3);
+    expect(await s.submit(3), isTrue);
+    expect((sent.single.body!)['look'], '111111111');
   });
 
   test('a finished day is sent once, with its intervals', () async {

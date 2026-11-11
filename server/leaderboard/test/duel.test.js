@@ -531,10 +531,10 @@ test('the worker creates rooms and refuses bad codes', async () => {
 });
 
 /** A duel played to the end; [rematch] whether each app knows rematches. */
-function finished(rematch = [true, true]) {
-  let r = duel.createRoom('ABCDE', T0);
-  r = duel.join(r.state, { name: 'Ayşe', bank: 99, token: 'tA', rematch: rematch[0] }, T0, pick);
-  r = duel.join(r.state, { name: 'Bora', bank: 99, token: 'tB', rematch: rematch[1] }, T0, pick);
+function finished(rematch = [true, true], pids = null) {
+  let r = duel.createRoom('ABCDE', T0, 'bank', Boolean(pids));
+  r = duel.join(r.state, { name: 'Ayşe', bank: 99, pid: pids?.[0], token: 'tA', rematch: rematch[0] }, T0, pick);
+  r = duel.join(r.state, { name: 'Bora', bank: 99, pid: pids?.[1], token: 'tB', rematch: rematch[1] }, T0, pick);
   for (let i = 0; i < 5; i++) {
     const exact = content.questions.get(r.state.questions[i]).answer;
     r = duel.lock(r.state, 0, { i, low: exact, high: exact }, T0, content);
@@ -587,6 +587,20 @@ test('one asks, the other is told; both want it and the room starts again', () =
   assert.deepEqual(r.state.results, []);
   assert.deepEqual(r.state.budget, [duel.AWAY_BUDGET_MS, duel.AWAY_BUDGET_MS]);
   assert.deepEqual(r.state.played, before);
+});
+
+test("a random opponent's rematch is ranked and rated again", () => {
+  let r = finished([true, true], ['a', 'b']);
+  assert.equal(r.state.phase, 'over');
+  assert.equal(duel.isRanked(r.state), true);
+  // The room marked the first round rated; the rematch is rated anew.
+  const rated = { ...r.state, rated: true };
+  r = duel.rematch(rated, 0, T0, pickAgain, newToken);
+  r = duel.rematch(r.state, 1, T0, pickAgain, newToken);
+  assert.equal(r.state.round, 2);
+  assert.equal(r.state.rated, false);
+  assert.equal(r.out.find((o) => o.msg.t === 'start').msg.ranked, true);
+  assert.equal(duel.isRanked(r.state), true);
 });
 
 test('saying no, leaving or running out of time ends the offer', () => {

@@ -8,7 +8,7 @@ import 'package:aralik/data/leaderboard.dart';
 import 'package:aralik/data/ranked_client.dart';
 import 'package:aralik/data/settings_store.dart';
 import 'package:aralik/features/ranked/month_end_screen.dart';
-import 'package:aralik/features/ranked/ranked_screen.dart';
+import 'package:aralik/features/ranked/ranked_view.dart';
 import 'package:aralik/features/result/share_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -94,7 +94,11 @@ void main() {
     final asked = <Uri>[];
     final (service, settings) = await _stores(joined: true, asked: asked);
     await tester.pumpWidget(
-      _app(RankedScreen(service: service, settings: settings)),
+      _app(
+        Scaffold(
+          body: RankedView(service: service, settings: settings),
+        ),
+      ),
     );
     await tester.pumpAndSettle();
     expect(find.text('Kasım 2026 · 2 oyuncu'), findsOneWidget);
@@ -117,7 +121,13 @@ void main() {
     );
     await tester.pumpWidget(
       _app(
-        RankedScreen(service: service, settings: settings, leaderboard: store),
+        Scaffold(
+          body: RankedView(
+            service: service,
+            settings: settings,
+            leaderboard: store,
+          ),
+        ),
       ),
     );
     await tester.pumpAndSettle();

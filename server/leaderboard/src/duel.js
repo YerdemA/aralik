@@ -334,10 +334,11 @@ export function join(
 
 /**
  * Whether this round counts for the monthly table: a random opponent's
- * room, its first round, two different leaderboard accounts.
+ * room (every round, rematches too since 2026-11-11), two different
+ * leaderboard accounts.
  */
 export function isRanked(state) {
-  if (!state.ranked || (state.round ?? 1) !== 1) return false;
+  if (!state.ranked) return false;
   const [a, b] = state.players.map((p) => p.pid);
   return Boolean(a && b && a !== b);
 }
@@ -555,6 +556,8 @@ export function rematch(state, seat, now, pick, newToken) {
     paused: null,
     rematch: null,
     wipeAt: null,
+    // The new round is rated on its own (ranked.counts).
+    rated: false,
   };
   const first = askQuestion(again, 0, now);
   return step(

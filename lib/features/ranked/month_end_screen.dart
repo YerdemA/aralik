@@ -9,7 +9,7 @@ import '../../core/strings.dart';
 import '../../data/gallery.dart';
 import '../../widgets/share_origin.dart';
 import '../result/share_card.dart';
-import 'ranked_screen.dart';
+import 'ranked_view.dart';
 
 /// Shown once when a month ends, to a player who played ranked duels in
 /// it: for each table (knowledge, math) their card (place, rating, duels,

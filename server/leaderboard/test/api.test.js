@@ -152,6 +152,19 @@ test('submit computes the score on the server', async () => {
   });
 });
 
+test('the mascot sent with a score is kept for the archive', async () => {
+  const p = await join('Kaplan');
+  const q = await join('Pars');
+  const base = { day: DAY, answers: answers(4) };
+  await call('POST', '/v1/submit', { ...base, id: p.id, token: p.token, look: '111111111' });
+  await call('POST', '/v1/submit', { ...base, id: q.id, token: q.token, look: '9x' });
+  const looks = env.DB.raw
+    .prepare('SELECT look FROM scores ORDER BY submitted_at, player_id')
+    .all()
+    .map((r) => r.look);
+  assert.deepEqual(looks.sort(), ['111111111', null].sort());
+});
+
 test('a second submission keeps the first score', async () => {
   const p = await join('Kaplan');
   const base = { id: p.id, token: p.token, day: DAY };

@@ -13,15 +13,15 @@ import '../../widgets/player_actions.dart';
 import '../leaderboard/join_sheet.dart';
 import '../leaderboard/leaderboard_screen.dart' show Medal;
 
-/// This month's ranked duel table: knowledge or math, the player's own
-/// line on top, then the leaders. One action: picking the table.
-class RankedScreen extends StatefulWidget {
-  const RankedScreen({
+/// This month's ranked duel table, a tab of the leaderboard: knowledge or
+/// math, the player's own line on top, then the leaders. One action:
+/// picking the table.
+class RankedView extends StatefulWidget {
+  const RankedView({
     super.key,
     required this.service,
     required this.settings,
     this.leaderboard,
-    this.math = false,
   });
 
   final RankedService service;
@@ -30,15 +30,17 @@ class RankedScreen extends StatefulWidget {
   /// To join the leaderboard from here; null hides the offer.
   final LeaderboardStore? leaderboard;
 
-  /// Opens on the math table.
-  final bool math;
-
   @override
-  State<RankedScreen> createState() => _RankedScreenState();
+  State<RankedView> createState() => _RankedViewState();
 }
 
-class _RankedScreenState extends State<RankedScreen> {
-  late RankedMode _mode = widget.math ? RankedMode.math : RankedMode.bank;
+class _RankedViewState extends State<RankedView>
+    with AutomaticKeepAliveClientMixin {
+  // Kept while the leaderboard is open: switching tabs does not reload.
+  @override
+  bool get wantKeepAlive => true;
+
+  RankedMode _mode = RankedMode.bank;
   late Future<RankedTable> _table = _load();
 
   Future<RankedTable> _load() => widget.service.table(_mode);
@@ -59,95 +61,91 @@ class _RankedScreenState extends State<RankedScreen> {
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     final theme = Theme.of(context);
     final joined = widget.service.account() != null;
-    return Scaffold(
-      appBar: AppBar(title: const Text(AppStrings.rankedTitle)),
-      body: SafeArea(
-        child: FutureBuilder<RankedTable>(
-          future: _table,
-          builder: (context, snapshot) {
-            final table = snapshot.data;
-            return ListView(
-              padding: const EdgeInsets.fromLTRB(20, 4, 20, 24),
-              children: [
-                SegmentedButton<RankedMode>(
-                  segments: const [
-                    ButtonSegment(
-                      value: RankedMode.bank,
-                      icon: Icon(Icons.lightbulb_rounded),
-                      label: Text(AppStrings.duelKindBank),
-                    ),
-                    ButtonSegment(
-                      value: RankedMode.math,
-                      icon: Icon(Icons.calculate_rounded),
-                      label: Text(AppStrings.duelKindMath),
-                    ),
-                  ],
-                  selected: {_mode},
-                  showSelectedIcon: false,
-                  onSelectionChanged: (choice) {
-                    _mode = choice.single;
-                    _reload();
-                  },
+    return FutureBuilder<RankedTable>(
+      future: _table,
+      builder: (context, snapshot) {
+        final table = snapshot.data;
+        return ListView(
+          padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
+          children: [
+            SegmentedButton<RankedMode>(
+              segments: const [
+                ButtonSegment(
+                  value: RankedMode.bank,
+                  icon: Icon(Icons.lightbulb_rounded),
+                  label: Text(AppStrings.duelKindBank),
                 ),
-                const SizedBox(height: 12),
-                if (table != null)
-                  Text(
-                    '${rankedMonthLabel(table.month)} · '
-                    '${AppStrings.rankedPlayers(table.players)}',
-                    style: theme.textTheme.titleMedium,
-                  ),
-                const SizedBox(height: 4),
-                Text(
-                  AppStrings.rankedRule,
-                  style: theme.textTheme.bodyMedium?.copyWith(
-                    color: theme.colorScheme.onSurfaceVariant,
-                  ),
+                ButtonSegment(
+                  value: RankedMode.math,
+                  icon: Icon(Icons.calculate_rounded),
+                  label: Text(AppStrings.duelKindMath),
                 ),
-                const SizedBox(height: 16),
-                if (!joined && widget.leaderboard != null) ...[
-                  _JoinCard(onJoin: _join),
-                  const SizedBox(height: 16),
-                ],
-                if (snapshot.connectionState != ConnectionState.done)
-                  const Padding(
-                    padding: EdgeInsets.all(32),
-                    child: Center(child: CircularProgressIndicator()),
-                  )
-                else if (table == null)
-                  _Failed(onRetry: _reload)
-                else ...[
-                  if (joined) ...[
-                    if (table.me case final me?)
-                      MyRankedCard(row: me, look: widget.settings.mascot)
-                    else
-                      Text(
-                        AppStrings.rankedNotYet,
-                        style: theme.textTheme.bodyLarge,
-                      ),
-                    const SizedBox(height: 16),
-                  ],
-                  if (table.top.isEmpty)
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 24),
-                      child: Text(
-                        AppStrings.rankedEmpty,
-                        textAlign: TextAlign.center,
-                        style: theme.textTheme.bodyLarge,
-                      ),
-                    ),
-                  for (final row in table.top)
-                    RankedRowTile(
-                      row: row,
-                      me: joined && row.rank == table.me?.rank,
-                    ),
-                ],
               ],
-            );
-          },
-        ),
-      ),
+              selected: {_mode},
+              showSelectedIcon: false,
+              onSelectionChanged: (choice) {
+                _mode = choice.single;
+                _reload();
+              },
+            ),
+            const SizedBox(height: 12),
+            if (table != null)
+              Text(
+                '${rankedMonthLabel(table.month)} · '
+                '${AppStrings.rankedPlayers(table.players)}',
+                style: theme.textTheme.titleMedium,
+              ),
+            const SizedBox(height: 4),
+            Text(
+              AppStrings.rankedRule,
+              style: theme.textTheme.bodyMedium?.copyWith(
+                color: theme.colorScheme.onSurfaceVariant,
+              ),
+            ),
+            const SizedBox(height: 16),
+            if (!joined && widget.leaderboard != null) ...[
+              _JoinCard(onJoin: _join),
+              const SizedBox(height: 16),
+            ],
+            if (snapshot.connectionState != ConnectionState.done)
+              const Padding(
+                padding: EdgeInsets.all(32),
+                child: Center(child: CircularProgressIndicator()),
+              )
+            else if (table == null)
+              _Failed(onRetry: _reload)
+            else ...[
+              if (joined) ...[
+                if (table.me case final me?)
+                  MyRankedCard(row: me, look: widget.settings.mascot)
+                else
+                  Text(
+                    AppStrings.rankedNotYet,
+                    style: theme.textTheme.bodyLarge,
+                  ),
+                const SizedBox(height: 16),
+              ],
+              if (table.top.isEmpty)
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 24),
+                  child: Text(
+                    AppStrings.rankedEmpty,
+                    textAlign: TextAlign.center,
+                    style: theme.textTheme.bodyLarge,
+                  ),
+                ),
+              for (final row in table.top)
+                RankedRowTile(
+                  row: row,
+                  me: joined && row.rank == table.me?.rank,
+                ),
+            ],
+          ],
+        );
+      },
     );
   }
 }
@@ -214,7 +212,7 @@ class MyRankedCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                _Face(look: look, background: Palette.duelMe, size: 56),
+                MascotFace(look: look, background: Palette.duelMe, size: 56),
                 const SizedBox(width: 12),
                 Expanded(
                   child: Column(
@@ -352,7 +350,7 @@ class RankedRowTile extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 8),
-              _Face(
+              MascotFace(
                 look: row.look,
                 background: me ? Palette.duelMe : scheme.surfaceContainerHigh,
                 size: 44,
@@ -393,8 +391,10 @@ class RankedRowTile extends StatelessWidget {
   }
 }
 
-class _Face extends StatelessWidget {
-  const _Face({
+/// A mascot's face in a circle of [background].
+class MascotFace extends StatelessWidget {
+  const MascotFace({
+    super.key,
     required this.look,
     required this.background,
     required this.size,

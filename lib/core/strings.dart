@@ -220,21 +220,17 @@ abstract final class AppStrings {
       'Adını 3 günde bir değiştirebilirsin.';
 
   // Monthly ranked duels (core/ranked.dart).
-  static const rankedTitle = 'Aylık sıralama';
   static const rankedRule =
       'Rastgele rakiple oynanan düellolar aylık sıralamaya sayılır. '
-      'Herkes ayın başında 1000 puanla başlar. Güçlü rakibi yenmek ve '
+      'Herkes ayın başında 0 puanla başlar. Güçlü rakibi yenmek ve '
       'farkla kazanmak daha çok puan getirir. Rövanşlar sayılmaz.';
   static const rankedJoinFirst =
       'Sıralamaya girmek için günün liderleri tablosuna katıl. '
       'Rakibin de katılmış olmalı.';
   static const rankedJoin = 'Tabloya katıl';
-  static const rankedLobbyNote =
-      'Rastgele rakiple düellolar aylık sıralamaya sayılır';
-  static const rankedLobbyJoin = 'Aylık sıralamaya girmek için tabloya katıl';
-  static const rankedEmpty = 'Bu ay henüz sıralı düello oynanmadı.';
+  static const rankedEmpty = 'Bu ay henüz rastgele rakiple düello oynanmadı.';
   static const rankedNotYet =
-      'Bu ay henüz sıralı düello oynamadın. Rastgele bir rakip bul!';
+      'Bu ay henüz rastgele rakiple düello oynamadın. Bir rakip bul!';
   static const rankedLoadError = 'Sıralama yüklenemedi.';
   static const rankedPlayed = 'Düello';
   static const rankedWon = 'Galibiyet';
@@ -245,9 +241,34 @@ abstract final class AppStrings {
   static String rankedPlayers(int n) => '$n oyuncu';
   static String rankedRecord(int won, int drawn, int lost) =>
       '$won G · $drawn B · $lost M';
-  static String rankedRatingChange(int after, int delta) =>
-      'Sıralama puanın: $after (${delta >= 0 ? '+' : ''}$delta)';
-  static const rankedMatch = 'Sıralı maç';
+
+  /// "+18", "−12", "±0": a duel's change of the monthly rating.
+  static String rankedDelta(int delta) => delta > 0
+      ? '+$delta'
+      : delta < 0
+      ? '−${-delta}'
+      : '±0';
+  static const rankedDeltaLabel = 'Sıralama puanı';
+  // Why a duel did not count for the monthly table (the result screen).
+  static const rankedNotJoined = 'Sıralamaya sayılmadı: tabloya katılmadın.';
+  static const rankedOpponentNotJoined =
+      'Sıralamaya sayılmadı: rakip tabloya katılmamış.';
+  static const rankedFriendRoom = 'Arkadaş maçları sıralamaya sayılmaz.';
+  static const rankedLobbyNotJoined =
+      'Tabloya katılmadığın için düellolar sıralamaya sayılmıyor.';
+  static const rankedNowLabel = 'Güncel sıralama puanın';
+
+  // The leaderboard's tabs: today's board, the month's duels, the archive.
+  static const leaderboardTitle = 'Liderlik tablosu';
+  static const leaderboardTabDay = 'Günün liderleri';
+  static const leaderboardTabDuel = 'Düello';
+  static const leaderboardTabArchive = 'Arşiv';
+  static const archiveDaysTitle = 'Son 7 günün liderleri';
+  static const archiveDaysEmpty = 'Son 7 günde tabloya giren olmadı.';
+  static String archiveDuelTitle(String month) => '$month · Düello ilk 3';
+  static const archiveDuelEmpty = 'Bu tabloda kimse yoktu.';
+  static const archiveLoadError = 'Arşiv yüklenemedi.';
+  static String archivePoints(int n) => '$n puan';
   static String rankedPercent(int n) => '%$n';
   static String monthEndTitle(String month) => '$month bitti!';
   static String monthEndPlace(int rank, int players) =>

@@ -368,6 +368,7 @@ class _HomeScreenState extends State<HomeScreen> {
     MaterialPageRoute<void>(
       builder: (_) => LeaderboardScreen(
         store: _leaderboard!,
+        ranked: widget.ranked,
         settings: widget.settings,
         day: day,
         dayDone: _stats.isDayComplete(day),
@@ -510,7 +511,6 @@ class _HomeScreenState extends State<HomeScreen> {
             stats: _stats,
             settings: widget.settings,
             leaderboard: _leaderboard,
-            ranked: widget.ranked,
             pending: widget.pending,
             rule: _ruleOn(_today),
           ),

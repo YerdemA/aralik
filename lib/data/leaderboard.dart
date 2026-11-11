@@ -5,6 +5,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../core/archive.dart';
 import '../core/daily.dart';
 import 'device_key.dart' as device;
 import 'net.dart';
@@ -149,7 +150,9 @@ class LeaderboardStore extends ChangeNotifier {
     required this._serviceUri,
     JsonRequest? request,
     Future<String?> Function()? deviceKey,
-  }) : _request = request ?? defaultJsonRequest,
+    String? Function()? look,
+  }) : _look = look ?? _noLook,
+       _request = request ?? defaultJsonRequest,
        _deviceKey = deviceKey ?? device.deviceKey;
 
   /// For development: `--dart-define=LEADERBOARD_URL=https://…/` when the
@@ -172,6 +175,11 @@ class LeaderboardStore extends ChangeNotifier {
   final Uri? Function() _serviceUri;
   final JsonRequest _request;
   final Future<String?> Function() _deviceKey;
+
+  /// The player's mascot code, sent with each day's score for the
+  /// archive (who led which day, with their mascot).
+  final String? Function() _look;
+  static String? _noLook() => null;
   final Set<int> _sending = {};
 
   /// The server, or null while the leaderboard is not available.
@@ -342,6 +350,7 @@ class LeaderboardStore extends ChangeNotifier {
       await _authed('v1/submit', {
         'device': await _deviceKey(),
         'day': day,
+        'look': ?_look(),
         'answers': [
           for (final i in intervals)
             {'q': i.questionId, 'low': i.low, 'high': i.high},
@@ -395,6 +404,18 @@ class LeaderboardStore extends ChangeNotifier {
     } on Object {
       throw const LeaderboardException(LeaderboardFailure.server);
     }
+  }
+
+  /// Last week's day leaders and last month's duel podiums. Throws
+  /// [LeaderboardException].
+  Future<LeaderboardArchive> fetchArchive() async {
+    final archive = LeaderboardArchive.fromJson(
+      await _call('GET', 'v1/archive'),
+    );
+    if (archive == null) {
+      throw const LeaderboardException(LeaderboardFailure.server);
+    }
+    return archive;
   }
 
   Future<Object?> _authed(String path, Map<String, Object?> body) async {

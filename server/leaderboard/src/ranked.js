@@ -2,11 +2,13 @@
 //
 // Only duels with a random opponent count, and only when both players
 // joined the leaderboard (their account is checked when they take their
-// seat: ?pid=…&ptok=…). Only a room's first round counts, not rematches,
-// so two friends who happen to meet cannot farm points off each other.
+// seat: ?pid=…&ptok=…). Rematches in such a room count too (2026-11-11;
+// until then only the first round did). Friends' rooms never count, so two
+// friends cannot farm points off each other by code.
 // Knowledge duels ('bank') and math duels ('math') have separate tables.
 //
-// Each month starts everyone at START. After a duel both ratings move by
+// Each month starts everyone at START (0 since 2026-11-11; it was 1000,
+// migrations/0006 reset the month). After a duel both ratings move by
 // Elo (the favourite gains less for a win and loses more for a loss),
 // scaled by the margin of the match: a crushing win moves them up to
 // MARGIN_MAX times, a razor-thin one MARGIN_MIN times. A forfeit
@@ -22,7 +24,7 @@
 import { turkeyDate } from './days.js';
 import { isRanked } from './duel.js';
 
-export const START = 1000;
+export const START = 0;
 export const FLOOR = 0;
 export const K = 32;
 export const MARGIN_MIN = 0.5;

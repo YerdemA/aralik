@@ -21,7 +21,6 @@ import 'package:aralik/data/tournament_client.dart';
 import 'package:aralik/features/tournament/tournament_screen.dart';
 import 'package:aralik/features/leaderboard/leaderboard_screen.dart';
 import 'package:aralik/data/ranked_client.dart';
-import 'package:aralik/features/ranked/ranked_screen.dart';
 import 'package:aralik/features/settings/mascot_screen.dart';
 import 'package:aralik/features/settings/settings_screen.dart';
 import 'package:flutter/material.dart';
@@ -121,9 +120,11 @@ void main() {
     phone(tester);
     await tester.runAsync(_loadRoboto);
     final day = dayIndexFor(DateTime.now());
-    for (final (name, theme) in [
-      ('liderlik', AppTheme.light),
-      ('liderlik-koyu', AppTheme.dark),
+    for (final (name, theme, tab) in [
+      ('liderlik', AppTheme.light, LeaderboardTab.day),
+      ('liderlik-koyu', AppTheme.dark, LeaderboardTab.day),
+      ('liderlik-arsiv', AppTheme.light, LeaderboardTab.archive),
+      ('liderlik-arsiv-koyu', AppTheme.dark, LeaderboardTab.archive),
     ]) {
       // ignore: invalid_use_of_visible_for_testing_member
       SharedPreferences.setMockInitialValues({});
@@ -134,20 +135,22 @@ void main() {
         deviceKey: () async => null,
         request: (method, uri, [body]) async => (
           status: 200,
-          body: {
-            'day': day,
-            'players': 64,
-            'limit': 10,
-            'top': [
-              _entry(1, 'Aslan', 482, 5),
-              _entry(2, 'Pars', 455, 5),
-              _entry(3, 'Kartal', 431, 5),
-              _entry(4, 'Tilki', 402, 4),
-              _entry(5, 'Ceylan', 377, 4),
-              _entry(6, 'Baykuş', 350, 4),
-            ],
-            'me': {'rank': 9, 'points': 311, 'hits': 4},
-          },
+          body: uri.path == '/v1/archive'
+              ? _archive(day)
+              : {
+                  'day': day,
+                  'players': 64,
+                  'limit': 10,
+                  'top': [
+                    _entry(1, 'Aslan', 482, 5),
+                    _entry(2, 'Pars', 455, 5),
+                    _entry(3, 'Kartal', 431, 5),
+                    _entry(4, 'Tilki', 402, 4),
+                    _entry(5, 'Ceylan', 377, 4),
+                    _entry(6, 'Baykuş', 350, 4),
+                  ],
+                  'me': {'rank': 9, 'points': 311, 'hits': 4},
+                },
         ),
       );
       await tester.pumpWidget(
@@ -162,6 +165,7 @@ void main() {
               settings: SettingsStore(prefs),
               day: day,
               dayDone: true,
+              initialTab: tab,
             ),
           ),
         ),
@@ -266,7 +270,7 @@ void main() {
     Map<String, Object?> row(int i) => {
       'rank': i + 1,
       'nickname': names[i],
-      'rating': 1186 - i * 23,
+      'rating': 386 - i * 23,
       'played': 20 - i,
       'won': 14 - i,
       'drawn': 1,
@@ -296,7 +300,18 @@ void main() {
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: _withRoboto(AppTheme.light),
-          home: RankedScreen(service: service, settings: SettingsStore(prefs)),
+          home: LeaderboardScreen(
+            store: LeaderboardStore(
+              prefs,
+              serviceUri: () => Uri.parse('https://lb.example/'),
+              deviceKey: () async => null,
+            ),
+            ranked: service,
+            settings: SettingsStore(prefs),
+            day: 10,
+            dayDone: true,
+            initialTab: LeaderboardTab.duel,
+          ),
         ),
       ),
     );
@@ -464,3 +479,31 @@ class _Channel implements DuelChannel {
   @override
   Future<void> close() async {}
 }
+
+/// The archive tab's sample: a week of day leaders, last month's podiums.
+Map<String, Object?> _archive(int today) => {
+  'days': [
+    for (final (i, name, look) in [
+      (1, 'Aslan', '120131212'),
+      (2, 'Ayşe', '111002024'),
+      (3, 'Pars', '002240311'),
+      (4, 'Ece', '100003020'),
+      (5, 'Kartal', '014312103'),
+      (6, 'Gül', '121110432'),
+      (7, 'Aslan', '120131212'),
+    ])
+      {'day': today - i, 'nickname': name, 'points': 470 - i * 9, 'look': look},
+  ],
+  'month': 202610,
+  'duels': {
+    'bank': [
+      {'rank': 1, 'nickname': 'Deniz', 'rating': 412, 'look': '120131212'},
+      {'rank': 2, 'nickname': 'Ayşe', 'rating': 377, 'look': '111002024'},
+      {'rank': 3, 'nickname': 'Bora', 'rating': 351, 'look': '002240311'},
+    ],
+    'math': [
+      {'rank': 1, 'nickname': 'Cem', 'rating': 298, 'look': '014312103'},
+      {'rank': 2, 'nickname': 'Gül', 'rating': 240, 'look': '121110432'},
+    ],
+  },
+};

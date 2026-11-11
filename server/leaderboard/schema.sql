@@ -21,6 +21,7 @@ CREATE TABLE IF NOT EXISTS scores (
   hits INTEGER NOT NULL,
   submitted_at INTEGER NOT NULL,
   suspect INTEGER NOT NULL DEFAULT 0,  -- 1: points at or above SUSPECT_POINTS
+  look TEXT,                     -- mascot code sent with the score (archive)
   PRIMARY KEY (day, player_id)
 );
 CREATE INDEX IF NOT EXISTS scores_rank

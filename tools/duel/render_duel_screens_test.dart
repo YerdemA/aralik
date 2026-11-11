@@ -170,6 +170,7 @@ void main() {
         'names': ['Ayşe', 'Bora'],
         'questions': [for (final q in questions) q.id],
         'questionMs': 15000,
+        'ranked': true,
       });
       var totals = [0, 0];
       for (var i = 0; i < 5; i++) {
@@ -209,9 +210,20 @@ void main() {
       });
       await tester.pump();
       await tester.pump(const Duration(milliseconds: 300));
+      // The monthly rating: the change first, then the new rating.
+      final change = winner == null ? 0 : (winner == 0 ? 18 : -14);
+      say({
+        't': 'rated',
+        'ratings': [
+          {'before': 120, 'after': 120 + change},
+          {'before': 140, 'after': 140 - change},
+        ],
+      });
       await tester.tap(find.text('Sonucu gör'));
       await tester.pump();
       await snap('$name-sonuc');
+      await tester.pump(const Duration(seconds: 2));
+      await snap('$name-sonuc-puan');
       // The opponent asks for a rematch.
       say({'t': 'rematch', 'seat': 1});
       await tester.pump();

@@ -4,12 +4,19 @@ import '../../core/daily.dart';
 import '../../core/strings.dart';
 import '../../data/leaderboard.dart';
 import '../../data/moderation.dart';
+import '../../data/ranked_client.dart';
 import '../../data/settings_store.dart';
 import '../../widgets/player_actions.dart';
+import '../ranked/ranked_view.dart';
+import 'archive_view.dart';
 import 'join_sheet.dart';
 
-/// Today's board: the best players, the player's own rank, and the one
-/// thing to do next (join, finish the set, or retry sending).
+/// The leaderboard's tabs.
+enum LeaderboardTab { day, duel, archive }
+
+/// The leaderboards, one tab each: today's board (the best players, the
+/// player's own rank, and the one thing to do next: join, finish the set,
+/// or retry sending), the month's duel tables, and the archive.
 class LeaderboardScreen extends StatefulWidget {
   const LeaderboardScreen({
     super.key,
@@ -17,9 +24,16 @@ class LeaderboardScreen extends StatefulWidget {
     required this.settings,
     required this.day,
     required this.dayDone,
+    this.ranked,
+    this.initialTab = LeaderboardTab.day,
   });
 
   final LeaderboardStore store;
+
+  /// The monthly duel tables; null leaves their tab out.
+  final RankedService? ranked;
+
+  final LeaderboardTab initialTab;
 
   /// Where the player's name comes from (it is chosen in Settings).
   final SettingsStore settings;
@@ -81,65 +95,113 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final board = _board;
-    return Scaffold(
-      appBar: AppBar(title: const Text(AppStrings.leaderboard)),
-      body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Expanded(
-              child: RefreshIndicator(
-                onRefresh: _load,
-                child: ListView(
-                  padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
-                  children: [
-                    _Header(day: widget.day, players: board?.players),
-                    const SizedBox(height: 12),
-                    if (board == null && _loading)
-                      const Padding(
-                        padding: EdgeInsets.all(48),
-                        child: Center(child: CircularProgressIndicator()),
-                      )
-                    else if (board == null)
-                      _Message(
-                        text: leaderboardFailureText(
-                          _failure ?? LeaderboardFailure.server,
-                        ),
-                        icon: Icons.cloud_off_rounded,
-                        action: OutlinedButton(
-                          onPressed: _loading ? null : _load,
-                          child: const Text(AppStrings.retry),
-                        ),
-                      )
-                    else if (board.top.isEmpty)
-                      const _Message(
-                        text: AppStrings.leaderboardEmpty,
-                        icon: Icons.emoji_events_outlined,
-                      )
-                    else
-                      ..._rows(board),
-                  ],
+    final ranked = widget.ranked;
+    final tabs = [
+      LeaderboardTab.day,
+      if (ranked != null) LeaderboardTab.duel,
+      LeaderboardTab.archive,
+    ];
+    final initial = tabs.indexOf(widget.initialTab);
+    return DefaultTabController(
+      length: tabs.length,
+      initialIndex: initial < 0 ? 0 : initial,
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text(AppStrings.leaderboardTitle),
+          bottom: TabBar(
+            labelPadding: const EdgeInsets.symmetric(horizontal: 6),
+            tabs: [
+              for (final tab in tabs)
+                Tab(
+                  // Three tabs on a narrow phone: a long name shrinks.
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(switch (tab) {
+                      LeaderboardTab.day => AppStrings.leaderboardTabDay,
+                      LeaderboardTab.duel => AppStrings.leaderboardTabDuel,
+                      LeaderboardTab.archive =>
+                        AppStrings.leaderboardTabArchive,
+                    }),
+                  ),
                 ),
-              ),
-            ),
-            ListenableBuilder(
-              listenable: widget.store,
-              builder: (context, _) => _Footer(
-                joined: widget.store.joined,
-                dayDone: widget.dayDone,
-                onBoard: board?.me != null,
-                loaded: board != null,
-                busy: _loading,
-                onJoin: _join,
-                onRetry: _load,
-                textStyle: theme.textTheme.bodyMedium,
-              ),
-            ),
-          ],
+            ],
+          ),
+        ),
+        body: SafeArea(
+          child: TabBarView(
+            children: [
+              for (final tab in tabs)
+                switch (tab) {
+                  LeaderboardTab.day => _dayBoard(context),
+                  LeaderboardTab.duel => RankedView(
+                    service: ranked!,
+                    settings: widget.settings,
+                    leaderboard: widget.store,
+                  ),
+                  LeaderboardTab.archive => ArchiveView(store: widget.store),
+                },
+            ],
+          ),
         ),
       ),
+    );
+  }
+
+  Widget _dayBoard(BuildContext context) {
+    final theme = Theme.of(context);
+    final board = _board;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Expanded(
+          child: RefreshIndicator(
+            onRefresh: _load,
+            child: ListView(
+              padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
+              children: [
+                _Header(day: widget.day, players: board?.players),
+                const SizedBox(height: 12),
+                if (board == null && _loading)
+                  const Padding(
+                    padding: EdgeInsets.all(48),
+                    child: Center(child: CircularProgressIndicator()),
+                  )
+                else if (board == null)
+                  _Message(
+                    text: leaderboardFailureText(
+                      _failure ?? LeaderboardFailure.server,
+                    ),
+                    icon: Icons.cloud_off_rounded,
+                    action: OutlinedButton(
+                      onPressed: _loading ? null : _load,
+                      child: const Text(AppStrings.retry),
+                    ),
+                  )
+                else if (board.top.isEmpty)
+                  const _Message(
+                    text: AppStrings.leaderboardEmpty,
+                    icon: Icons.emoji_events_outlined,
+                  )
+                else
+                  ..._rows(board),
+              ],
+            ),
+          ),
+        ),
+        ListenableBuilder(
+          listenable: widget.store,
+          builder: (context, _) => _Footer(
+            joined: widget.store.joined,
+            dayDone: widget.dayDone,
+            onBoard: board?.me != null,
+            loaded: board != null,
+            busy: _loading,
+            onJoin: _join,
+            onRetry: _load,
+            textStyle: theme.textTheme.bodyMedium,
+          ),
+        ),
+      ],
     );
   }
 

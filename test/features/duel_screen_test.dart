@@ -136,6 +136,8 @@ void main() {
     await tester.tap(find.text(AppStrings.duelSeeResult));
     await settle();
     expect(find.text(AppStrings.duelWin), findsOneWidget);
+    // A friend's room never counts for the monthly table: said so.
+    expect(find.text(AppStrings.rankedFriendRoom), findsOneWidget);
     // The result view has its own report button instead of the flag.
     expect(find.byTooltip(AppStrings.reportOrBlockOpponent), findsNothing);
     expect(find.text(AppStrings.reportOrBlockOpponent), findsOneWidget);
@@ -228,6 +230,78 @@ void main() {
     await tester.pump(const Duration(seconds: 21));
     expect(find.text(AppStrings.duelNoShow), findsOneWidget);
   });
+
+  for (final (joined, ranked, note) in [
+    (false, false, AppStrings.rankedNotJoined),
+    (true, false, AppStrings.rankedOpponentNotJoined),
+    (true, true, null),
+  ]) {
+    testWidgets('a random duel says why it did not count: '
+        'joined $joined, ranked $ranked', (tester) async {
+      SharedPreferences.setMockInitialValues({});
+      final stats = await StatsStore.open();
+      final lobby = FakeChannel();
+      final room = FakeChannel();
+      final repository = QuestionRepository();
+      final bank = (await tester.runAsync(repository.load))!;
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: AppTheme.light,
+          home: DuelScreen(
+            service: DuelService(
+              serviceUri: () => Uri.parse('https://lb.example/'),
+              account: () => joined ? (id: 'p1', token: 't') : null,
+              connect: (uri) async =>
+                  uri.path.endsWith('random') ? lobby : room,
+            ),
+            repository: repository,
+            stats: stats,
+            code: null,
+            name: 'Ayşe',
+          ),
+        ),
+      );
+      await tester.runAsync(() => Future<void>.delayed(Duration.zero));
+      await tester.pump();
+      lobby.incoming.add(jsonEncode({'t': 'matched', 'code': 'K7M2P'}));
+      await tester.pump();
+      await tester.pump();
+      room.incoming.add(
+        jsonEncode({
+          't': 'start',
+          'you': 0,
+          'names': ['Ayşe', 'Bora'],
+          'questions': [for (final q in bank.take(5)) q.id],
+          'questionMs': 15000,
+          'ranked': ranked,
+        }),
+      );
+      room.incoming.add(
+        jsonEncode({
+          't': 'end',
+          'totals': [0, 0],
+          'winner': 0,
+          'reason': 'left',
+        }),
+      );
+      for (var i = 0; i < 5; i++) {
+        await tester.pump(const Duration(milliseconds: 200));
+      }
+      if (find.text(AppStrings.duelSeeResult).evaluate().isNotEmpty) {
+        await tester.tap(find.text(AppStrings.duelSeeResult));
+        await tester.pump(const Duration(milliseconds: 500));
+      }
+      expect(find.text(AppStrings.duelWin), findsOneWidget);
+      for (final text in [
+        AppStrings.rankedNotJoined,
+        AppStrings.rankedOpponentNotJoined,
+        AppStrings.rankedFriendRoom,
+      ]) {
+        expect(find.text(text), text == note ? findsOneWidget : findsNothing);
+      }
+      await tester.pumpWidget(const SizedBox());
+    });
+  }
 
   testWidgets('a reveal counts down; going on waits for the other side', (
     tester,

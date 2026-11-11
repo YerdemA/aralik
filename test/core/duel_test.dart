@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:aralik/core/duel.dart';
+import 'package:aralik/core/ranked.dart';
 import 'package:aralik/core/mascot_look.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -162,6 +163,22 @@ void main() {
       expect(ended(0).outcome, DuelOutcome.loss);
       expect(ended(null).outcome, DuelOutcome.draw);
       expect(started().outcome, isNull);
+    });
+
+    test('the monthly rating arrives after the end and is kept', () {
+      final m = ended(1)
+        ..handle(
+          const DuelRated([
+            (before: 140, after: 126),
+            (before: 120, after: 138),
+          ]),
+        );
+      expect(m.phase, DuelPhase.over);
+      expect(m.rating, (before: 120, after: 138));
+      expect(m.rating!.delta, 18);
+      // Other messages after the end still do nothing.
+      m.handle(const DuelQuestion(1, Duration(seconds: 15)));
+      expect(m.phase, DuelPhase.over);
     });
 
     test('a failure is final', () {

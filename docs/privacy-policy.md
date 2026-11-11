@@ -3,7 +3,7 @@ layout: page
 title: Gizlilik Politikası
 lead: Kabaca hangi verileri nasıl kullanır? Kısa cevap, neredeyse hiçbirini.
 description: Kabaca kişisel veri toplamaz. Oyun verileri cihazda kalır; istisnalar isteğe bağlı liderlik tablosu, düello ve turnuvadır.
-updated: 10 Kasım 2026
+updated: 11 Kasım 2026
 ---
 
 Kabaca, Yusuf Erdem Aykaç tarafından geliştirilen bir tahmin oyunudur. Bu politika uygulamanın hangi verileri nasıl kullandığını açıklar.
@@ -32,13 +32,13 @@ Günün liderleri tablosuna katılmak tamamen isteğe bağlıdır. Katılmak iç
 Katıldığında şunlar Cloudflare üzerinde çalışan sunucumuza gönderilir ve saklanır:
 - **Kullanıcı adın** (tablodaki takma adın),
 - Uygulamanın ürettiği **rastgele bir kimlik** ve gizli bir anahtar (anahtarın yalnızca özeti saklanır), hesabın senin olduğunu kanıtlamak için,
-- Bitirdiğin her günlük set için **5 cevabın (aralıkların)**, bunlardan hesaplanan **puanın ve isabet sayın**, ve gönderim zamanı.
+- Bitirdiğin her günlük set için **5 cevabın (aralıkların)**, bunlardan hesaplanan **puanın ve isabet sayın**, gönderim zamanı ve tasarladıysan **maskotunun görünümü** (9 haneli kod).
 - Kullanıcı adını en son ne zaman değiştirdiğin. Ad 3 günde bir değiştirilebilir; bu, adların kötüye kullanılmasını önlemek içindir.
 - **Cihazının tek yönlü özeti.** Android'de, Android'in her uygulamaya ayrı verdiği cihaz kimliğinden; iPhone'da, uygulamanın ilk kez gerektiğinde ürettiği ve telefonun anahtar zincirinde (Keychain) yalnızca o cihazda sakladığı rastgele bir kimlikten telefonunda üretilen bir özet (hash). Kimliğin kendisi telefondan çıkmaz; sunucu bu özeti bir kez daha özetleyerek saklar. Amacı hileyi önlemek: her cihazda tek hesap olur ve aynı günün puanı ikinci kez gönderilemez. Uygulamayı silip yeniden kurduğunda ya da verilerini temizlediğinde hesabın bu sayede geri gelir.
 
 Bu yüzden uygulama, telefonunda tabloya katılmış bir hesap bulamadığında günde en fazla bir kez aynı özeti sunucuya sorar: "Bu cihazın hesabı var mı, bugünün setini gönderdi mi?" Cevaba göre hesabın geri gelir ve aynı günün seti yeniden oynanamaz. Tabloya hiç katılmamış bir cihaz için bu sorgudan sunucuda hiçbir şey saklanmaz.
 
-Takma adın ve günlük puanın, o günün tablosunda diğer oyunculara görünür. Cevapların (aralıkların) kimseye gösterilmez; yalnızca puanı hesaplamak için kullanılır.
+Takma adın ve günlük puanın, o günün tablosunda diğer oyunculara görünür. Bir günü birinci bitirirsen adın, maskotun ve o günün puanı 7 gün boyunca tablonun **Arşiv** sekmesinde de görünür. Cevapların (aralıkların) kimseye gösterilmez; yalnızca puanı hesaplamak için kullanılır.
 
 Hileyi ayıklamak için olağanüstü yüksek günlük puanlar (500 üzerinden 470 ve üstü) sunucuda "incelenecek" diye işaretlenir. Geliştirici bu puanlara bakabilir ve hile olduğu açık bir hesabı tablodan gizleyebilir; gizlenen hesap tabloyu kendisi görmeye devam eder, başka oyunculara görünmez. Bu işaret de puanla birlikte silinir.
 
@@ -67,7 +67,7 @@ Günün liderleri tablosuna katıldıysan, **rastgele bir rakiple** oynadığın
 
 Her ay ve düello türü (bilgi, matematik) için hesabına bağlı olarak şunlar saklanır: **sıralama puanın**, oynadığın, kazandığın ve berabere bitirdiğin düello sayısı, maç puanlarının toplamı (ortalama için), isabet ve cevap sayın, maskotunun görünümü ve son güncelleme zamanı. Tek tek maçlar, rakiplerin ve aralıkların saklanmaz.
 
-Kullanıcı adın, maskotun ve bu sayılar o ayın sıralamasında diğer oyunculara görünür. Ay bitince biten ayın tablosu ve sana ait özet kart bir kez gösterilir; kartı istersen telefonuna kaydeder ya da paylaşırsın (bu yalnızca telefonunda olur). Sunucu yalnızca içinde bulunulan ayı ve bir önceki ayı tutar; daha eski aylar her gün otomatik silinir. **Tablodan ayrıldığında** sıralama verilerin de hemen silinir.
+Kullanıcı adın, maskotun ve bu sayılar o ayın sıralamasında diğer oyunculara görünür. Ayı bir tabloda ilk üçte bitirirsen adın, maskotun ve sıralama puanın sonraki ay boyunca Arşiv sekmesinde de görünür. Ay bitince biten ayın tablosu ve sana ait özet kart bir kez gösterilir; kartı istersen telefonuna kaydeder ya da paylaşırsın (bu yalnızca telefonunda olur). Sunucu yalnızca içinde bulunulan ayı ve bir önceki ayı tutar; daha eski aylar her gün otomatik silinir. **Tablodan ayrıldığında** sıralama verilerin de hemen silinir.
 
 ## Bildirme ve engelleme
 Tabloda, düelloda ya da turnuvada gördüğün başka bir oyuncunun adına dokunarak onu **bildirebilir** ya da **engelleyebilirsin**.

@@ -71,10 +71,11 @@ function over(pids, { totals = [320, 180], winner = 0, reason = 'done', round = 
   };
 }
 
-test('what counts: ranked room, first round, two different accounts', () => {
+test('what counts: ranked room, any round, two different accounts', () => {
   assert.equal(ranked.counts(over(['a', 'b'])), true);
   assert.equal(ranked.counts({ ...over(['a', 'b']), ranked: false }), false);
-  assert.equal(ranked.counts(over(['a', 'b'], { round: 2 })), false);
+  // Rematches count too.
+  assert.equal(ranked.counts(over(['a', 'b'], { round: 2 })), true);
   assert.equal(ranked.counts(over(['a', null])), false);
   assert.equal(ranked.counts(over(['a', 'a'])), false);
   assert.equal(ranked.counts({ ...over(['a', 'b']), rated: true }), false);
@@ -112,18 +113,22 @@ async function withPlayers(...ids) {
 test('records both sides and builds the month table', async () => {
   const db = await withPlayers('a', 'b', 'c');
   const first = await ranked.record(db, over(['a', 'b']), NOW);
-  assert.equal(first[0].before, 1000);
-  assert.ok(first[0].after > 1000 && first[1].after < 1000);
+  // Everyone starts the month at 0 and never goes below it.
+  assert.equal(ranked.START, 0);
+  assert.equal(first[0].before, 0);
+  assert.ok(first[0].after > 0);
+  assert.equal(first[1].after, 0);
   await ranked.record(db, over(['c', 'b'], { winner: null, totals: [200, 200] }), NOW + 1);
   const t = await ranked.table(db, 202611, 'bank', 'b', 50);
   assert.equal(t.players, 3);
-  assert.deepEqual(t.top.map((r) => r.nickname), ['A', 'C', 'B']);
+  // B and C tie at 0, both last updated by the draw: by id.
+  assert.deepEqual(t.top.map((r) => r.nickname), ['A', 'B', 'C']);
   assert.equal(t.top[0].played, 1);
   assert.equal(t.top[0].won, 1);
   assert.equal(t.top[0].average, 320);
   assert.equal(t.top[0].hitRate, 100);
   assert.equal(t.top[0].look, '011100000');
-  assert.equal(t.me.rank, 3);
+  assert.equal(t.me.rank, 2);
   assert.equal(t.me.played, 2);
   assert.equal(t.me.drawn, 1);
   assert.equal(t.me.average, 190);

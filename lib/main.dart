@@ -19,13 +19,14 @@ Future<void> main() async {
   final prefs = await SharedPreferences.getInstance();
   final content = ContentSync(prefs);
   final repository = QuestionRepository(remote: content);
+  final settings = SettingsStore(prefs);
   final leaderboard = LeaderboardStore(
     prefs,
     serviceUri: () => content.leaderboardUri,
+    look: () => settings.mascotCode,
   );
   // Warm the bank cache. A failure is retried on play.
   repository.load().ignore();
-  final settings = SettingsStore(prefs);
   // The monthly ranked duel tables and the month-end recap.
   final ranked = RankedService(
     serviceUri: () => leaderboard.serviceUri,
