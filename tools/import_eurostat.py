@@ -121,6 +121,11 @@ INDICATORS = {
         "{year} yılında {loc} işsizlik oranı yüzde kaçtır?",
         "%", 1, "es_unemployment",
     ),
+    "hospital_beds": Indicator(
+        "hlth_rs_bds1", (("freq", "A"), ("facility", "HBEDT"), ("unit", "P_HTHAB"), ("hlthcare", "TOTAL")),
+        "{year} verilerine göre {loc} her 100.000 kişiye kaç hastane yatağı düşmektedir?",
+        "yatak", 0, "es_hospital_beds",
+    ),
     "home_owners": Indicator(
         "ilc_lvho02",
         (("freq", "A"), ("rskpovth", "TOTAL"), ("hhcomp", "TOTAL"), ("tenure", "OWN"), ("unit", "PC")),
@@ -167,6 +172,7 @@ QUESTIONS: list[tuple[str, str, int]] = [
     # 2026-11-16
     *(("renewables", c, 2) for c in "SE NO DE FR IT ES PL NL PT EL".split()),
     *(("employment", c, 2) for c in "TR DE IT EL NL ES SE".split()),
+    *(("hospital_beds", c, 2) for c in "TR DE FR IT ES EL SE PL NL".split()),
     # Not unemployment: rates of 3-10 % sit inside the fixed ±20-point
     # slider of percentages, a sure hit (2026-11-16).
     *(("first_marriage_f", c, d) for c, d in [

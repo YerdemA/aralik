@@ -1,7 +1,7 @@
 {
  "source": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
  "year": 2024,
- "fetched": "2026-11-06",
+ "fetched": "2026-11-16",
  "values": {
   "223/1016/5111": {
    "item": "Goats",
@@ -333,6 +333,12 @@
    "unit": "t",
    "flag": "A"
   },
+  "5000/156/5510": {
+   "item": "Sugar cane",
+   "value": 1939782021.25,
+   "unit": "t",
+   "flag": "A"
+  },
   "5000/157/5510": {
    "item": "Sugar beet",
    "value": 293624598.05,
@@ -378,6 +384,12 @@
   "5000/225/5510": {
    "item": "Hazelnuts, in shell",
    "value": 1212125.58,
+   "unit": "t",
+   "flag": "A"
+  },
+  "5000/236/5510": {
+   "item": "Soya beans",
+   "value": 397671688.56,
    "unit": "t",
    "flag": "A"
   },
@@ -536,6 +548,12 @@
    "value": 1578614149.0,
    "unit": "An",
    "flag": "E"
+  },
+  "5000/867/5510": {
+   "item": "Meat of cattle with the bone, fresh or chilled",
+   "value": 69749016.37,
+   "unit": "t",
+   "flag": "A"
   },
   "5000/882/5510": {
    "item": "Raw milk of cattle",

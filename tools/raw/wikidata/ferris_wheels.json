@@ -1,0 +1,86 @@
+{
+ "dataset": "ferris_wheels",
+ "description": "Dönme dolaplar, yükseklik (P2048)",
+ "property": "P2048",
+ "fetched_at": "2026-11-16T13:20:39+00:00",
+ "rows": [
+  {
+   "qid": "Q160659",
+   "label": "London Eye",
+   "links": 78,
+   "value": 135.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "London Eye",
+   "place": [
+    "Lambeth"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 3164
+  },
+  {
+   "qid": "Q752407",
+   "label": "Singapore Flyer",
+   "links": 36,
+   "value": 164.8971246,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Singapore Flyer",
+   "place": [],
+   "country": [
+    "Singapur"
+   ],
+   "tr_views": 102
+  },
+  {
+   "qid": "Q40132250",
+   "label": "Ayn Dubai",
+   "links": 22,
+   "value": 250.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ayn Dubai",
+   "place": [
+    "Dubai"
+   ],
+   "country": [
+    "Birleşik Arap Emirlikleri"
+   ],
+   "tr_views": 495
+  },
+  {
+   "qid": "Q843059",
+   "label": "Grande roue de Paris",
+   "links": 13,
+   "value": 96.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Grande Roue de Paris",
+   "place": [
+    "15. arrondissement"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 206
+  },
+  {
+   "qid": "Q7442108",
+   "label": "Seattle Great Wheel",
+   "links": 9,
+   "value": 53.340105,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Seattle Great Wheel",
+   "place": [
+    "Seattle"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 77
+  }
+ ]
+}

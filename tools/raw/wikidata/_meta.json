@@ -32,6 +32,10 @@
    "description": "Egemen devletlerin başkentleri, rakım (P2044)",
    "fetched_at": "2026-11-16T12:05:31+00:00"
   },
+  "cars_speed": {
+   "description": "Otomobil modelleri, hız (P2052, m/s'ye normalize)",
+   "fetched_at": "2026-11-16T13:22:08+00:00"
+  },
   "cities_tr_elevation": {
    "description": "İl merkezleri, rakım (P2044)",
    "fetched_at": "2026-11-16T12:05:00+00:00"
@@ -56,9 +60,17 @@
    "description": "Kimyasal elementler, erime noktası (P2101, kelvin)",
    "fetched_at": "2026-10-26T14:52:39+00:00"
   },
+  "ferris_wheels": {
+   "description": "Dönme dolaplar, yükseklik (P2048)",
+   "fetched_at": "2026-11-16T13:20:39+00:00"
+  },
   "films_duration": {
    "description": "Filmler, süre (P2047, saniyeye normalize)",
    "fetched_at": "2026-11-16T12:32:42+00:00"
+  },
+  "islands_population": {
+   "description": "Adalar, nüfus (P1082, yılı P585)",
+   "fetched_at": "2026-11-16T13:23:36+00:00"
   },
   "islands_world": {
    "description": "Adalar, yüzölçümü (P2046)",
@@ -115,6 +127,14 @@
   "tunnels": {
    "description": "Tüneller, uzunluk (P2043)",
    "fetched_at": "2026-11-16T12:19:48+00:00"
+  },
+  "universities_students": {
+   "description": "Türkiye'deki üniversiteler, öğrenci sayısı (P2196, yılı P585)",
+   "fetched_at": "2026-11-16T13:22:31+00:00"
+  },
+  "waterfalls_height": {
+   "description": "Şelaleler, yükseklik (P2048)",
+   "fetched_at": "2026-11-16T13:20:22+00:00"
   }
  }
 }

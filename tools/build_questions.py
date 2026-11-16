@@ -800,6 +800,11 @@ PLAN: list[Step] = [
     # article and a height, and their labels already say "roketi".
     Step("spacecraft_mass", magnitude("{label} kaç kilogramdır?", "kg", "uzay", minimum=100, fact=no_fact), 20, 1000),
     Step("lakes_depth", magnitude("{label} en derin yerinde kaç metredir?", "m", "coğrafya", minimum=10, suffix=("Gölü", ("Göl", "Gölü", "Denizi"))), 40, 900),
+    Step("waterfalls_height", magnitude("{label} kaç metre yüksekliğindedir?", "m", "coğrafya", minimum=5, fact=country_of), 30, 700),
+    Step("ferris_wheels", magnitude("{label} kaç metre yüksekliğindedir?", "m", "gündelik", minimum=30), 15, 500),
+    Step("cars_speed", magnitude("{label} otomobilinin en yüksek hızı saatte kaç kilometredir?", "km/h", "ulaşım", scale=3.6, minimum=100, fact=no_fact), 25, 1000),
+    Step("universities_students", magnitude("{year} verilerine göre {label} kaç öğrencisi vardır?", "öğrenci", "türkiye", latest_year=True, minimum=1000, min_data_year=2018, genitive_label=True), 40, 3000),
+    Step("islands_population", magnitude("{year} verilerine göre {label} nüfusu kaçtır?", "kişi", "coğrafya", latest_year=True, minimum=1000, genitive_label=True, min_data_year=2015, fact=country_of, suffix=("Adası", ("Ada", "Adası", "ada", "Adaları"))), 40, 1500),
     Step("tunnels", magnitude("{label} kaç metre uzunluğundadır?", "m", "ulaşım", minimum=500), 40, 1000),
 ]
 

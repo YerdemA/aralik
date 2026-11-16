@@ -1,0 +1,560 @@
+{
+ "dataset": "waterfalls_height",
+ "description": "Şelaleler, yükseklik (P2048)",
+ "property": "P2048",
+ "fetched_at": "2026-11-16T13:20:22+00:00",
+ "rows": [
+  {
+   "qid": "Q34221",
+   "label": "Niagara Şelalesi",
+   "links": 135,
+   "value": 51.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Niagara Şelaleleri",
+   "country": [
+    "Amerika Birleşik Devletleri",
+    "Kanada"
+   ],
+   "tr_views": 12953
+  },
+  {
+   "qid": "Q34221",
+   "label": "Niagara Şelalesi",
+   "links": 135,
+   "value": 57.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Niagara Şelaleleri",
+   "country": [
+    "Amerika Birleşik Devletleri",
+    "Kanada"
+   ],
+   "tr_views": 12953
+  },
+  {
+   "qid": "Q43278",
+   "label": "Victoria Şelalesi",
+   "links": 111,
+   "value": 108.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Victoria Şelalesi",
+   "country": [
+    "Zambiya",
+    "Zimbabve"
+   ],
+   "tr_views": 3966
+  },
+  {
+   "qid": "Q36332",
+   "label": "Iguazú Şelalesi",
+   "links": 99,
+   "value": 82.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Iguazú Şelaleleri",
+   "country": [
+    "Arjantin",
+    "Brezilya"
+   ],
+   "tr_views": 5324
+  },
+  {
+   "qid": "Q80299",
+   "label": "Angel Şelalesi",
+   "links": 93,
+   "value": 907.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Angel Şelalesi",
+   "country": [
+    "Venezuela"
+   ],
+   "tr_views": 8421
+  },
+  {
+   "qid": "Q80299",
+   "label": "Angel Şelalesi",
+   "links": 93,
+   "value": 979.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Angel Şelalesi",
+   "country": [
+    "Venezuela"
+   ],
+   "tr_views": 8421
+  },
+  {
+   "qid": "Q214924",
+   "label": "Rheinfall Şelalesi",
+   "links": 48,
+   "value": 23.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ren Şelalesi",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 2665
+  },
+  {
+   "qid": "Q210280",
+   "label": "Dettifoss",
+   "links": 47,
+   "value": 44.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dettifoss",
+   "country": [
+    "İzlanda"
+   ],
+   "tr_views": 105
+  },
+  {
+   "qid": "Q777882",
+   "label": "Seljalandsfoss",
+   "links": 41,
+   "value": 65.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Seljalandsfoss",
+   "country": [
+    "İzlanda"
+   ],
+   "tr_views": 132
+  },
+  {
+   "qid": "Q491677",
+   "label": "Yosemite Şelaleleri",
+   "links": 40,
+   "value": 436.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yosemite Şelaleleri",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 375
+  },
+  {
+   "qid": "Q491677",
+   "label": "Yosemite Şelaleleri",
+   "links": 40,
+   "value": 739.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yosemite Şelaleleri",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 375
+  },
+  {
+   "qid": "Q1137629",
+   "label": "Goðafoss",
+   "links": 38,
+   "value": 12.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Goðafoss",
+   "country": [
+    "İzlanda"
+   ],
+   "tr_views": 55
+  },
+  {
+   "qid": "Q38120",
+   "label": "Kaieteur Şelalesi",
+   "links": 38,
+   "value": 226.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kaieteur Şelalesi",
+   "country": [
+    "Guyana"
+   ],
+   "tr_views": 414
+  },
+  {
+   "qid": "Q1130718",
+   "label": "Skógafoss",
+   "links": 37,
+   "value": 62.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Skógafoss",
+   "country": [
+    "İzlanda"
+   ],
+   "tr_views": 216
+  },
+  {
+   "qid": "Q639731",
+   "label": "Krimmler şelalesi",
+   "links": 37,
+   "value": 380.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Krimml Şelalesi",
+   "country": [
+    "Avusturya"
+   ],
+   "tr_views": 120
+  },
+  {
+   "qid": "Q495475",
+   "label": "Murchison Şelaleleri",
+   "links": 35,
+   "value": 43.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Murchison Şelaleleri",
+   "country": [
+    "Uganda"
+   ],
+   "tr_views": 281
+  },
+  {
+   "qid": "Q37580",
+   "label": "Kegon Şelalesi",
+   "links": 34,
+   "value": 97.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kegon Şelalesi",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 129
+  },
+  {
+   "qid": "Q39544",
+   "label": "Augrabies Şelalesi",
+   "links": 34,
+   "value": 56.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Augrabies Şelalesi",
+   "country": [
+    "Güney Afrika"
+   ],
+   "tr_views": 162
+  },
+  {
+   "qid": "Q37401",
+   "label": "Jägala Şelalesi",
+   "links": 33,
+   "value": 8.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Jägala Şelalesi",
+   "country": [
+    "Estonya"
+   ],
+   "tr_views": 5
+  },
+  {
+   "qid": "Q38432",
+   "label": "Huangguoshu Şelalesi",
+   "links": 33,
+   "value": 67.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Huangguoshu Şelalesi",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 72
+  },
+  {
+   "qid": "Q38432",
+   "label": "Huangguoshu Şelalesi",
+   "links": 33,
+   "value": 77.8,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Huangguoshu Şelalesi",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 72
+  },
+  {
+   "qid": "Q38580",
+   "label": "Marmore Şelalesi",
+   "links": 33,
+   "value": 1.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Marmore Şelalesi",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 43
+  },
+  {
+   "qid": "Q512389",
+   "label": "Gocta Şelaleleri",
+   "links": 28,
+   "value": 540.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gocta Şelaleleri",
+   "country": [
+    "Peru"
+   ],
+   "tr_views": 262
+  },
+  {
+   "qid": "Q512389",
+   "label": "Gocta Şelaleleri",
+   "links": 28,
+   "value": 771.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gocta Şelaleleri",
+   "country": [
+    "Peru"
+   ],
+   "tr_views": 262
+  },
+  {
+   "qid": "Q983252",
+   "label": "Ban Gioc-Detian Şelalesi",
+   "links": 28,
+   "value": 30.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ban Gioc-Detian Şelalesi",
+   "country": [
+    "Vietnam",
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 126
+  },
+  {
+   "qid": "Q1365882",
+   "label": "Nachi Şelalesi",
+   "links": 24,
+   "value": 133.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nachi Şelalesi",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 61
+  },
+  {
+   "qid": "Q38408",
+   "label": "Sutherland Şelalesi",
+   "links": 24,
+   "value": 248.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sutherland Şelalesi",
+   "country": [
+    "Yeni Zelanda"
+   ],
+   "tr_views": 8
+  },
+  {
+   "qid": "Q38408",
+   "label": "Sutherland Şelalesi",
+   "links": 24,
+   "value": 581.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sutherland Şelalesi",
+   "country": [
+    "Yeni Zelanda"
+   ],
+   "tr_views": 8
+  },
+  {
+   "qid": "Q38411",
+   "label": "Shiraito Şelalesi",
+   "links": 20,
+   "value": 20.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şiraito Şelalesi",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 130
+  },
+  {
+   "qid": "Q2990535",
+   "label": "Uçan su",
+   "links": 19,
+   "value": 98.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uçan su (şelale)",
+   "country": [
+    "Rusya",
+    "Ukrayna"
+   ],
+   "tr_views": 41
+  },
+  {
+   "qid": "Q2994984",
+   "label": "Kivaç Şelalesi",
+   "links": 19,
+   "value": 10.7,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kivaç Şelalesi",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 20
+  },
+  {
+   "qid": "Q38477",
+   "label": "Huka Şelalesi",
+   "links": 19,
+   "value": 11.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Huka Şelalesi",
+   "country": [
+    "Yeni Zelanda"
+   ],
+   "tr_views": 4
+  },
+  {
+   "qid": "Q37305",
+   "label": "Browne Şelalesi",
+   "links": 17,
+   "value": 244.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Browne Şelalesi",
+   "country": [
+    "Yeni Zelanda"
+   ],
+   "tr_views": 5
+  },
+  {
+   "qid": "Q37305",
+   "label": "Browne Şelalesi",
+   "links": 17,
+   "value": 836.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Browne Şelalesi",
+   "country": [
+    "Yeni Zelanda"
+   ],
+   "tr_views": 5
+  },
+  {
+   "qid": "Q552906",
+   "label": "Powerscourt Şelalesi",
+   "links": 17,
+   "value": 121.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Powerscourt Şelalesi",
+   "country": [
+    "İrlanda"
+   ],
+   "tr_views": 72
+  },
+  {
+   "qid": "Q319104",
+   "label": "Röthbach Şelalesi",
+   "links": 15,
+   "value": 470.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Röthbach Şelalesi",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 71
+  },
+  {
+   "qid": "Q1337971",
+   "label": "Tortum Şelalesi",
+   "links": 13,
+   "value": 48.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tortum Şelalesi",
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 10603
+  },
+  {
+   "qid": "Q2746163",
+   "label": "Fulmer Şelalesi",
+   "links": 13,
+   "value": 16.8,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fulmer Şelalesi",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 45
+  },
+  {
+   "qid": "Q2574216",
+   "label": "Manavgat Şelalesi",
+   "links": 12,
+   "value": 4.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Manavgat Şelalesi",
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 11259
+  },
+  {
+   "qid": "Q8144149",
+   "label": "Cachoeira da Fumaça",
+   "links": 11,
+   "value": 340.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cachoeira da Fumaça",
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 154
+  },
+  {
+   "qid": "Q2390666",
+   "label": "Talnikovi Şelalesi",
+   "links": 9,
+   "value": 600.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Talnikovi Şelalesi",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 23
+  },
+  {
+   "qid": "Q118470942",
+   "label": "Hudger Şelalesi",
+   "links": 4,
+   "value": 14.8,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hudger Şelalesi",
+   "country": [
+    "Azerbaycan"
+   ],
+   "tr_views": 39
+  }
+ ]
+}

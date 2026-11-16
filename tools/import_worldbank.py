@@ -159,6 +159,18 @@ COUNTRIES = {
     "ARG": ("Arjantin'in", "Arjantin'de", "Arjantin'e"),
     "BGD": ("Bangladeş'in", "Bangladeş'te", "Bangladeş'e"),
     "SGP": ("Singapur'un", "Singapur'da", "Singapur'a"),
+    "POL": ("Polonya'nın", "Polonya'da", "Polonya'ya"),
+    "KEN": ("Kenya'nın", "Kenya'da", "Kenya'ya"),
+    "ZAF": ("Güney Afrika'nın", "Güney Afrika'da", "Güney Afrika'ya"),
+    "VNM": ("Vietnam'ın", "Vietnam'da", "Vietnam'a"),
+    "PHL": ("Filipinler'in", "Filipinler'de", "Filipinler'e"),
+    "UKR": ("Ukrayna'nın", "Ukrayna'da", "Ukrayna'ya"),
+    "SWE": ("İsveç'in", "İsveç'te", "İsveç'e"),
+    "PRT": ("Portekiz'in", "Portekiz'de", "Portekiz'e"),
+    "CHL": ("Şili'nin", "Şili'de", "Şili'ye"),
+    "COL": ("Kolombiya'nın", "Kolombiya'da", "Kolombiya'ya"),
+    "MAR": ("Fas'ın", "Fas'ta", "Fas'a"),
+    "DZA": ("Cezayir'in", "Cezayir'de", "Cezayir'e"),
 }
 
 # Overnight tourists, not same-day visitors (see the module docstring).
@@ -209,6 +221,19 @@ QUESTIONS = [
         "IT.CEL.SETS.P2": "TUR ARE RUS IND NGA ETH JPN USA",
         "SP.DYN.CBRT.IN": "TUR NGA JPN KOR EGY IND FRA PAK",
         "SP.POP.0014.TO.ZS": "TUR NER JPN NGA IND EGY ITA KOR",
+    }.items() for c in cs.split()),
+    # 2026-11-16, fourth batch: more countries, only indicators whose answers
+    # are spread widely (no small percentages: the ±20-point slider).
+    *((i, c, 2) for i, cs in {
+        "NY.GDP.PCAP.CD": "POL MEX ARG ZAF VNM PHL UKR SWE PRT CHL MAR IRN",
+        "SP.DYN.LE00.IN": "POL KEN ZAF VNM PHL UKR SWE ARG MAR AUS",
+        "SP.DYN.TFRT.IN": "POL KEN ZAF VNM PHL MEX ARG SWE MAR DZA",
+        "EN.POP.DNST": "POL KEN ZAF VNM PHL UKR SWE ARG MEX IRN",
+        "SH.DYN.MORT": "POL KEN ZAF VNM MEX SWE CHL",
+        "IT.CEL.SETS.P2": "POL KEN ZAF VNM PHL MEX BRA",
+        "SP.DYN.CBRT.IN": "POL KEN ZAF VNM PHL UKR MEX SWE",
+        "SP.URB.TOTL.IN.ZS": "POL KEN ZAF VNM ARG MEX CHL",
+        "SP.POP.0014.TO.ZS": "KEN ZAF PHL MEX ARG DZA PAK",
     }.items() for c in cs.split()),
 ]
 

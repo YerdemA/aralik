@@ -91,6 +91,16 @@ QUESTIONS = [
     Asked(WORLD, 486, PRODUCTION, "muz", 3), Asked(WORLD, 27, PRODUCTION, "çeltik (kabuklu pirinç)", 3),
     Asked(WORLD, 15, PRODUCTION, "buğday", 3), Asked(WORLD, 225, PRODUCTION, "fındık (kabuklu)", 3),
     Asked(WORLD, 1182, PRODUCTION, "bal", 3), Asked(WORLD, 260, PRODUCTION, "zeytin", 3),
+    # 2026-11-16: more world totals and world animal stocks.
+    *(Asked(WORLD, item, PRODUCTION, name, 2) for item, name in [
+        (388, "domates"), (116, "patates"), (56, "mısır"), (156, "şeker kamışı"), (515, "elma"),
+        (560, "üzüm"), (490, "portakal"), (236, "soya fasulyesi"), (667, "yaş çay yaprağı"),
+        (328, "kütlü pamuk"), (882, "inek sütü"), (1058, "tavuk eti"), (867, "sığır eti"),
+        (567, "karpuz"), (403, "kuru soğan"), (526, "kayısı"), (223, "Antep fıstığı (kabuklu)"),
+    ]),
+    Asked(WORLD, 866, STOCKS, "sığır", 2), Asked(WORLD, 976, STOCKS, "koyun", 2),
+    Asked(WORLD, 1016, STOCKS, "keçi", 2), Asked(WORLD, 1126, STOCKS, "deve", 3),
+    Asked(WORLD, 1096, STOCKS, "at", 3),
 ]
 
 
