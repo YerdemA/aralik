@@ -43,6 +43,26 @@
    "Sample size": "medium",
    "Data quality": "acceptable"
   },
+  "Aptenodytes forsteri": {
+   "HAGRID": "01666",
+   "Common name": "Emperor penguin",
+   "Gestation/Incubation (days)": "",
+   "Maximum longevity (yrs)": "",
+   "Birth weight (g)": "",
+   "Specimen origin": "unknown",
+   "Sample size": "small",
+   "Data quality": "low"
+  },
+  "Aquila chrysaetos": {
+   "HAGRID": "00224",
+   "Common name": "Golden eagle",
+   "Gestation/Incubation (days)": "40",
+   "Maximum longevity (yrs)": "48",
+   "Birth weight (g)": "110.6",
+   "Specimen origin": "captivity",
+   "Sample size": "medium",
+   "Data quality": "acceptable"
+  },
   "Arctica islandica": {
    "HAGRID": "04631",
    "Common name": "Ocean quahog clam",
@@ -73,15 +93,15 @@
    "Sample size": "medium",
    "Data quality": "acceptable"
   },
-  "Bos taurus": {
-   "HAGRID": "01910",
-   "Common name": "Domestic cattle",
-   "Gestation/Incubation (days)": "277",
-   "Maximum longevity (yrs)": "20",
-   "Birth weight (g)": "",
+  "Bison bison": {
+   "HAGRID": "01904",
+   "Common name": "American bison",
+   "Gestation/Incubation (days)": "274",
+   "Maximum longevity (yrs)": "33.5",
+   "Birth weight (g)": "20000",
    "Specimen origin": "captivity",
    "Sample size": "large",
-   "Data quality": "questionable"
+   "Data quality": "high"
   },
   "Bubo bubo": {
    "HAGRID": "01681",
@@ -102,6 +122,16 @@
    "Specimen origin": "captivity",
    "Sample size": "large",
    "Data quality": "acceptable"
+  },
+  "Camelus bactrianus": {
+   "HAGRID": "02005",
+   "Common name": "Bactrian camel",
+   "Gestation/Incubation (days)": "395",
+   "Maximum longevity (yrs)": "35.4",
+   "Birth weight (g)": "36000",
+   "Specimen origin": "captivity",
+   "Sample size": "large",
+   "Data quality": "high"
   },
   "Camelus dromedarius": {
    "HAGRID": "02006",
@@ -142,16 +172,6 @@
    "Specimen origin": "captivity",
    "Sample size": "large",
    "Data quality": "high"
-  },
-  "Carassius auratus": {
-   "HAGRID": "03897",
-   "Common name": "Goldfish",
-   "Gestation/Incubation (days)": "",
-   "Maximum longevity (yrs)": "41",
-   "Birth weight (g)": "",
-   "Specimen origin": "wild",
-   "Sample size": "medium",
-   "Data quality": "acceptable"
   },
   "Ceratotherium simum": {
    "HAGRID": "02643",
@@ -201,6 +221,26 @@
    "Birth weight (g)": "25",
    "Specimen origin": "captivity",
    "Sample size": "medium",
+   "Data quality": "acceptable"
+  },
+  "Crocodylus niloticus": {
+   "HAGRID": "03255",
+   "Common name": "Nile crocodile",
+   "Gestation/Incubation (days)": "",
+   "Maximum longevity (yrs)": "56",
+   "Birth weight (g)": "",
+   "Specimen origin": "captivity",
+   "Sample size": "medium",
+   "Data quality": "acceptable"
+  },
+  "Cygnus olor": {
+   "HAGRID": "00340",
+   "Common name": "Mute swan",
+   "Gestation/Incubation (days)": "36",
+   "Maximum longevity (yrs)": "40",
+   "Birth weight (g)": "225",
+   "Specimen origin": "wild",
+   "Sample size": "large",
    "Data quality": "acceptable"
   },
   "Cyprinus carpio": {
@@ -253,15 +293,15 @@
    "Sample size": "large",
    "Data quality": "high"
   },
-  "Felis catus": {
-   "HAGRID": "02109",
-   "Common name": "Domestic cat",
-   "Gestation/Incubation (days)": "65",
-   "Maximum longevity (yrs)": "30",
-   "Birth weight (g)": "97.5",
+  "Erinaceus europaeus": {
+   "HAGRID": "02585",
+   "Common name": "Western European hedgehog",
+   "Gestation/Incubation (days)": "30",
+   "Maximum longevity (yrs)": "11.7",
+   "Birth weight (g)": "14.7",
    "Specimen origin": "captivity",
-   "Sample size": "large",
-   "Data quality": "questionable"
+   "Sample size": "medium",
+   "Data quality": "acceptable"
   },
   "Gallus gallus": {
    "HAGRID": "00685",
@@ -323,12 +363,32 @@
    "Sample size": "medium",
    "Data quality": "acceptable"
   },
+  "Lama glama": {
+   "HAGRID": "02007",
+   "Common name": "Llama",
+   "Gestation/Incubation (days)": "330",
+   "Maximum longevity (yrs)": "28.9",
+   "Birth weight (g)": "11000",
+   "Specimen origin": "captivity",
+   "Sample size": "large",
+   "Data quality": "high"
+  },
   "Loxodonta africana": {
    "HAGRID": "02839",
    "Common name": "African bush elephant",
    "Gestation/Incubation (days)": "670",
    "Maximum longevity (yrs)": "65",
    "Birth weight (g)": "105000",
+   "Specimen origin": "captivity",
+   "Sample size": "large",
+   "Data quality": "acceptable"
+  },
+  "Lynx lynx": {
+   "HAGRID": "02123",
+   "Common name": "Eurasian lynx",
+   "Gestation/Incubation (days)": "66",
+   "Maximum longevity (yrs)": "26",
+   "Birth weight (g)": "246.5",
    "Specimen origin": "captivity",
    "Sample size": "large",
    "Data quality": "acceptable"
@@ -342,6 +402,16 @@
    "Specimen origin": "captivity",
    "Sample size": "large",
    "Data quality": "high"
+  },
+  "Megaptera novaeangliae": {
+   "HAGRID": "02283",
+   "Common name": "Humpback whale",
+   "Gestation/Incubation (days)": "342",
+   "Maximum longevity (yrs)": "95",
+   "Birth weight (g)": "1350000",
+   "Specimen origin": "wild",
+   "Sample size": "medium",
+   "Data quality": "acceptable"
   },
   "Mesocricetus auratus": {
    "HAGRID": "02885",
@@ -363,6 +433,16 @@
    "Sample size": "large",
    "Data quality": "high"
   },
+  "Odobenus rosmarus": {
+   "HAGRID": "02207",
+   "Common name": "Walrus",
+   "Gestation/Incubation (days)": "331",
+   "Maximum longevity (yrs)": "",
+   "Birth weight (g)": "60000",
+   "Specimen origin": "unknown",
+   "Sample size": "tiny",
+   "Data quality": "low"
+  },
   "Orcinus orca": {
    "HAGRID": "02295",
    "Common name": "Killer whale",
@@ -371,6 +451,16 @@
    "Birth weight (g)": "180000",
    "Specimen origin": "wild",
    "Sample size": "medium",
+   "Data quality": "acceptable"
+  },
+  "Ornithorhynchus anatinus": {
+   "HAGRID": "02622",
+   "Common name": "Duck-billed platypus",
+   "Gestation/Incubation (days)": "17",
+   "Maximum longevity (yrs)": "22.6",
+   "Birth weight (g)": "",
+   "Specimen origin": "captivity",
+   "Sample size": "small",
    "Data quality": "acceptable"
   },
   "Oryctolagus cuniculus": {
@@ -413,6 +503,26 @@
    "Sample size": "large",
    "Data quality": "acceptable"
   },
+  "Panthera onca": {
+   "HAGRID": "02128",
+   "Common name": "Jaguar",
+   "Gestation/Incubation (days)": "99",
+   "Maximum longevity (yrs)": "28",
+   "Birth weight (g)": "820",
+   "Specimen origin": "captivity",
+   "Sample size": "large",
+   "Data quality": "high"
+  },
+  "Panthera pardus": {
+   "HAGRID": "02129",
+   "Common name": "Leopard",
+   "Gestation/Incubation (days)": "97",
+   "Maximum longevity (yrs)": "27.3",
+   "Birth weight (g)": "550",
+   "Specimen origin": "captivity",
+   "Sample size": "large",
+   "Data quality": "high"
+  },
   "Panthera tigris": {
    "HAGRID": "02130",
    "Common name": "Tiger",
@@ -423,6 +533,16 @@
    "Sample size": "large",
    "Data quality": "high"
   },
+  "Pavo cristatus": {
+   "HAGRID": "00691",
+   "Common name": "Indian peafowl",
+   "Gestation/Incubation (days)": "29",
+   "Maximum longevity (yrs)": "23.2",
+   "Birth weight (g)": "120",
+   "Specimen origin": "captivity",
+   "Sample size": "large",
+   "Data quality": "acceptable"
+  },
   "Phascolarctos cinereus": {
    "HAGRID": "02564",
    "Common name": "Koala",
@@ -432,6 +552,16 @@
    "Specimen origin": "captivity",
    "Sample size": "large",
    "Data quality": "high"
+  },
+  "Physeter macrocephalus": {
+   "HAGRID": "02319",
+   "Common name": "Sperm whale",
+   "Gestation/Incubation (days)": "502",
+   "Maximum longevity (yrs)": "77",
+   "Birth weight (g)": "1000000",
+   "Specimen origin": "wild",
+   "Sample size": "medium",
+   "Data quality": "acceptable"
   },
   "Pongo pygmaeus": {
    "HAGRID": "02792",
@@ -463,6 +593,26 @@
    "Sample size": "large",
    "Data quality": "acceptable"
   },
+  "Rangifer tarandus": {
+   "HAGRID": "02039",
+   "Common name": "Caribou, or Reindeer",
+   "Gestation/Incubation (days)": "228",
+   "Maximum longevity (yrs)": "21.8",
+   "Birth weight (g)": "6500",
+   "Specimen origin": "captivity",
+   "Sample size": "large",
+   "Data quality": "high"
+  },
+  "Sciurus vulgaris": {
+   "HAGRID": "03171",
+   "Common name": "Eurasian red squirrel",
+   "Gestation/Incubation (days)": "38",
+   "Maximum longevity (yrs)": "14.8",
+   "Birth weight (g)": "9.25",
+   "Specimen origin": "captivity",
+   "Sample size": "medium",
+   "Data quality": "acceptable"
+  },
   "Somniosus microcephalus": {
    "HAGRID": "01853",
    "Common name": "Greenland shark",
@@ -471,16 +621,6 @@
    "Birth weight (g)": "",
    "Specimen origin": "wild",
    "Sample size": "small",
-   "Data quality": "acceptable"
-  },
-  "Struthio camelus": {
-   "HAGRID": "01703",
-   "Common name": "Ostrich",
-   "Gestation/Incubation (days)": "",
-   "Maximum longevity (yrs)": "50",
-   "Birth weight (g)": "",
-   "Specimen origin": "captivity",
-   "Sample size": "large",
    "Data quality": "acceptable"
   },
   "Sus scrofa": {
@@ -492,6 +632,16 @@
    "Specimen origin": "captivity",
    "Sample size": "large",
    "Data quality": "high"
+  },
+  "Trichechus manatus": {
+   "HAGRID": "03208",
+   "Common name": "West Indian manatee",
+   "Gestation/Incubation (days)": "335",
+   "Maximum longevity (yrs)": "69",
+   "Birth weight (g)": "32000",
+   "Specimen origin": "captivity",
+   "Sample size": "medium",
+   "Data quality": "acceptable"
   },
   "Tursiops truncatus": {
    "HAGRID": "02304",
@@ -511,6 +661,26 @@
    "Birth weight (g)": "510",
    "Specimen origin": "captivity",
    "Sample size": "large",
+   "Data quality": "acceptable"
+  },
+  "Ursus maritimus": {
+   "HAGRID": "02253",
+   "Common name": "Polar bear",
+   "Gestation/Incubation (days)": "65",
+   "Maximum longevity (yrs)": "43.8",
+   "Birth weight (g)": "665",
+   "Specimen origin": "captivity",
+   "Sample size": "medium",
+   "Data quality": "acceptable"
+  },
+  "Vulpes vulpes": {
+   "HAGRID": "02100",
+   "Common name": "Red fox",
+   "Gestation/Incubation (days)": "52",
+   "Maximum longevity (yrs)": "21.3",
+   "Birth weight (g)": "100",
+   "Specimen origin": "captivity",
+   "Sample size": "medium",
    "Data quality": "acceptable"
   }
  }

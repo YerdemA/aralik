@@ -21,7 +21,8 @@
     "places_tr", "places_world", "cities_tr_elevation", "capitals_elevation",
     "stadiums_world", "museums_visitors", "films_duration", "tunnels",
     "airports_passengers", "aircraft_wingspan", "aircraft_produced", "spacecraft_mass", "lakes_depth",
-    "waterfalls_height", "ferris_wheels", "cars_speed", "universities_students", "islands_population"
+    "waterfalls_height", "ferris_wheels", "cars_speed", "universities_students", "islands_population",
+    "metro_length", "metro_ridership", "worldcup_attendance", "highest_points"
    ]
   },
   {

@@ -32704,7 +32704,8 @@
   "dataset": "anage_gestation",
   "scale": {
    "factor": 3
-  }
+  },
+  "retired": true
  },
  {
   "id": "q2329",
@@ -48941,6 +48942,470 @@
   "dataset": "islands_population",
   "scale": {
    "factor": 5
+  }
+ },
+ {
+  "id": "q3359",
+  "text": "Bir ispermeçet balinasının gebelik süresi kaç gündür?",
+  "answer": 502,
+  "unit": "gün",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Physeter_macrocephalus",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3360",
+  "text": "Yeni doğmuş bir kutup ayısı yavrusu kaç gram gelir?",
+  "answer": 665,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Ursus_maritimus",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "anage_birth_weight",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3361",
+  "text": "Kirpi için kaydedilen en uzun ömür kaç yıldır?",
+  "answer": 11.7,
+  "unit": "yıl",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Erinaceus_europaeus",
+  "data_year": 2026,
+  "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
+  "difficulty": 3,
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3362",
+  "text": "Kutup ayısı için kaydedilen en uzun ömür kaç yıldır?",
+  "answer": 43.8,
+  "unit": "yıl",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Ursus_maritimus",
+  "data_year": 2026,
+  "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
+  "difficulty": 3,
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3363",
+  "text": "Tavus kuşu için kaydedilen en uzun ömür kaç yıldır?",
+  "answer": 23.2,
+  "unit": "yıl",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Pavo_cristatus",
+  "data_year": 2026,
+  "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
+  "difficulty": 3,
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3364",
+  "text": "Bir kirpinin gebelik süresi kaç gündür?",
+  "answer": 30,
+  "unit": "gün",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Erinaceus_europaeus",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3365",
+  "text": "Bir kuğu yumurtası kaç günde çatlar?",
+  "answer": 36,
+  "unit": "gün",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Cygnus_olor",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3366",
+  "text": "Bir ren geyiğinin gebelik süresi kaç gündür?",
+  "answer": 228,
+  "unit": "gün",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Rangifer_tarandus",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3367",
+  "text": "Çift hörgüçlü bir devenin gebelik süresi kaç gündür?",
+  "answer": 395,
+  "unit": "gün",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Camelus_bactrianus",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3368",
+  "text": "Ornitorenk için kaydedilen en uzun ömür kaç yıldır?",
+  "answer": 22.6,
+  "unit": "yıl",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Ornithorhynchus_anatinus",
+  "data_year": 2026,
+  "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
+  "difficulty": 3,
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3369",
+  "text": "Bir vaşağın gebelik süresi kaç gündür?",
+  "answer": 66,
+  "unit": "gün",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Lynx_lynx",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3370",
+  "text": "Bir kambur balinanın gebelik süresi kaç gündür?",
+  "answer": 342,
+  "unit": "gün",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Megaptera_novaeangliae",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3371",
+  "text": "Bir lamanın gebelik süresi kaç gündür?",
+  "answer": 330,
+  "unit": "gün",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Lama_glama",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3372",
+  "text": "Bir deniz ineğinin (manati) gebelik süresi kaç gündür?",
+  "answer": 335,
+  "unit": "gün",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Trichechus_manatus",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3373",
+  "text": "Bir kızıl sincabın gebelik süresi kaç gündür?",
+  "answer": 38,
+  "unit": "gün",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Sciurus_vulgaris",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3374",
+  "text": "Kaya kartalı için kaydedilen en uzun ömür kaç yıldır?",
+  "answer": 48,
+  "unit": "yıl",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Aquila_chrysaetos",
+  "data_year": 2026,
+  "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
+  "difficulty": 3,
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3375",
+  "text": "Bir tavus kuşu yumurtası kaç günde çatlar?",
+  "answer": 29,
+  "unit": "gün",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Pavo_cristatus",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3376",
+  "text": "Zürafa için kaydedilen en uzun ömür kaç yıldır?",
+  "answer": 39.5,
+  "unit": "yıl",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Giraffa_camelopardalis",
+  "data_year": 2026,
+  "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
+  "difficulty": 3,
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3377",
+  "text": "Nil timsahı için kaydedilen en uzun ömür kaç yıldır?",
+  "answer": 56,
+  "unit": "yıl",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Crocodylus_niloticus",
+  "data_year": 2026,
+  "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
+  "difficulty": 3,
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3378",
+  "text": "Dev panda için kaydedilen en uzun ömür kaç yıldır?",
+  "answer": 36.8,
+  "unit": "yıl",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Ailuropoda_melanoleuca",
+  "data_year": 2026,
+  "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
+  "difficulty": 2,
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3379",
+  "text": "Yeni doğmuş bir ispermeçet balinası yavrusu kaç kilogram gelir?",
+  "answer": 1000,
+  "unit": "kg",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Physeter_macrocephalus",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "anage_birth_weight",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3380",
+  "text": "Bir Amerikan bizonunun gebelik süresi kaç gündür?",
+  "answer": 274,
+  "unit": "gün",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Bison_bison",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3381",
+  "text": "Şişe burunlu yunus için kaydedilen en uzun ömür kaç yıldır?",
+  "answer": 51.6,
+  "unit": "yıl",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Tursiops_truncatus",
+  "data_year": 2026,
+  "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
+  "difficulty": 3,
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3382",
+  "text": "Yeni doğmuş bir kaplan yavrusu kaç kilogram gelir?",
+  "answer": 1.2,
+  "unit": "kg",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Panthera_tigris",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "anage_birth_weight",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3383",
+  "text": "Yeni doğmuş bir ren geyiği yavrusu kaç kilogram gelir?",
+  "answer": 6.5,
+  "unit": "kg",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Rangifer_tarandus",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "anage_birth_weight",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3384",
+  "text": "Bir jaguarın gebelik süresi kaç gündür?",
+  "answer": 99,
+  "unit": "gün",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Panthera_onca",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3385",
+  "text": "Bir kızıl tilkinin gebelik süresi kaç gündür?",
+  "answer": 52,
+  "unit": "gün",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Vulpes_vulpes",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3386",
+  "text": "Bir leoparın gebelik süresi kaç gündür?",
+  "answer": 97,
+  "unit": "gün",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Panthera_pardus",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3387",
+  "text": "Kaplan için kaydedilen en uzun ömür kaç yıldır?",
+  "answer": 26.3,
+  "unit": "yıl",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Panthera_tigris",
+  "data_year": 2026,
+  "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
+  "difficulty": 2,
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
   }
  }
 ]

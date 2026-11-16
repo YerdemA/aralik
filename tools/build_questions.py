@@ -805,6 +805,10 @@ PLAN: list[Step] = [
     Step("cars_speed", magnitude("{label} otomobilinin en yüksek hızı saatte kaç kilometredir?", "km/h", "ulaşım", scale=3.6, minimum=100, fact=no_fact), 25, 1000),
     Step("universities_students", magnitude("{year} verilerine göre {label} kaç öğrencisi vardır?", "öğrenci", "türkiye", latest_year=True, minimum=1000, min_data_year=2018, genitive_label=True), 40, 3000),
     Step("islands_population", magnitude("{year} verilerine göre {label} nüfusu kaçtır?", "kişi", "coğrafya", latest_year=True, minimum=1000, genitive_label=True, min_data_year=2015, fact=country_of, suffix=("Adası", ("Ada", "Adası", "ada", "Adaları"))), 40, 1500),
+    Step("metro_length", magnitude("{label} toplam kaç kilometre uzunluğundadır?", "km", "ulaşım", scale=1 / 1000, minimum=5, fact=country_of), 40, 1000),
+    Step("metro_ridership", outside_pandemic(magnitude("{year} yılında {label} kaç yolcu taşımıştır?", "kişi", "ulaşım", latest_year=True, minimum=1_000_000, min_data_year=2018, fact=country_of)), 40, 1000),
+    Step("worldcup_attendance", magnitude("{label} maçlarını stadyumlarda toplam kaç seyirci izlemiştir?", "seyirci", "spor", minimum=100_000, fact=no_fact), 25, 0),
+    Step("highest_points", magnitude("{label} kaç metre yüksekliktedir?", "m", "coğrafya", minimum=100, fact=no_fact), 60, 1500),
     Step("tunnels", magnitude("{label} kaç metre uzunluğundadır?", "m", "ulaşım", minimum=500), 40, 1000),
 ]
 
