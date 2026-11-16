@@ -16,6 +16,8 @@ import 'package:aralik/data/question_repository.dart';
 import 'package:aralik/data/settings_store.dart';
 import 'package:aralik/data/stats_store.dart';
 import 'package:aralik/features/duel/duel_lobby_screen.dart';
+import 'package:aralik/features/duel/duel_screen.dart';
+import 'package:aralik/core/strings.dart';
 import 'package:aralik/features/duel/duel_search_view.dart';
 import 'package:aralik/data/tournament_client.dart';
 import 'package:aralik/features/tournament/tournament_screen.dart';
@@ -371,6 +373,69 @@ void main() {
       await tester.pumpAndSettle();
       await snap(tester, name);
     }
+  });
+
+  testWidgets('render duel reactions', (tester) async {
+    phone(tester);
+    await tester.runAsync(_loadRoboto);
+    // ignore: invalid_use_of_visible_for_testing_member
+    SharedPreferences.setMockInitialValues({});
+    final stats = await StatsStore.open();
+    final repository = QuestionRepository();
+    final bank = await tester.runAsync(repository.load);
+    final channel = _Channel();
+    void say(Map<String, Object?> m) => channel.incoming.add(jsonEncode(m));
+    await tester.pumpWidget(
+      RepaintBoundary(
+        key: boundary,
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: _withRoboto(AppTheme.light),
+          home: DuelScreen(
+            service: DuelService(
+              serviceUri: () => Uri.parse('https://lb.example/'),
+              connect: (_) async => channel,
+            ),
+            repository: repository,
+            stats: stats,
+            code: 'K7M2P',
+            name: 'Ayşe',
+          ),
+        ),
+      ),
+    );
+    await tester.runAsync(() => Future<void>.delayed(Duration.zero));
+    await tester.pump();
+    say({
+      't': 'start',
+      'you': 0,
+      'names': ['Ayşe', 'Bora'],
+      'looks': ['111002024', '014312103'],
+      'questions': [bank!.first.id],
+      'questionMs': 15000,
+    });
+    say({'t': 'question', 'i': 0, 'ms': 15000});
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 400));
+    say({'t': 'react', 'seat': 1, 'r': 'laugh'});
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 400));
+    // Held down: the panel, the finger on "Kıl payı!".
+    final gesture = await tester.startGesture(
+      tester.getCenter(find.bySemanticsLabel(AppStrings.reactionButton)),
+    );
+    await tester.pump(const Duration(milliseconds: 600));
+    await tester.pump(const Duration(milliseconds: 300));
+    await gesture.moveTo(tester.getCenter(find.text(AppStrings.reactionClose)));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 300));
+    await snap(tester, 'duello-tepki-panel');
+    await gesture.up();
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 50));
+    await tester.pump(const Duration(milliseconds: 400));
+    await snap(tester, 'duello-tepki');
+    await tester.pump(const Duration(seconds: 5));
   });
 
   testWidgets('render tournament', (tester) async {

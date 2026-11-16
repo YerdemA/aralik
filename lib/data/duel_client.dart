@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import '../core/duel.dart';
+import '../core/reaction.dart';
 import 'leaderboard.dart';
 import 'net.dart';
 
@@ -286,6 +287,13 @@ class DuelSession {
   StreamSubscription<String>? _subscription;
   bool _closed = false;
   bool _reconnecting = false;
+  final _reactions = StreamController<ReceivedReaction>.broadcast();
+
+  /// Quick reactions from the other players (core/reaction.dart).
+  Stream<ReceivedReaction> get reactions => _reactions.stream;
+
+  /// Sends a quick reaction; the room passes it on.
+  void react(Reaction reaction) => _send(reaction.message);
 
   ({int index, int? low, int? high})? _lastLock;
   int? _lastNext;
@@ -293,6 +301,11 @@ class DuelSession {
   void _listen(DuelChannel channel) {
     _subscription = channel.messages.listen(
       (text) {
+        final reaction = parseReaction(text);
+        if (reaction != null) {
+          _reactions.add(reaction);
+          return;
+        }
         final event = DuelEvent.parse(text);
         if (event == null) return;
         // A rematch starts afresh: nothing of the last duel is sent again.
@@ -400,6 +413,7 @@ class DuelSession {
   Future<void> close() async {
     if (_closed) return;
     _closed = true;
+    unawaited(_reactions.close());
     await Future.wait([?_subscription?.cancel(), _channel.close()]);
   }
 }

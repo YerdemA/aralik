@@ -14,6 +14,7 @@ import '../../core/duel.dart';
 import '../../core/match_share.dart';
 import '../../core/number_format.dart';
 import '../../core/question_timer.dart';
+import '../../core/reaction.dart';
 import '../../core/scoring.dart';
 import '../../core/strings.dart';
 import '../../core/theme.dart';
@@ -25,6 +26,7 @@ import '../../data/question_repository.dart';
 import '../../data/sound.dart';
 import '../../data/stats_store.dart';
 import '../../widgets/player_actions.dart';
+import '../../widgets/reactions.dart';
 import '../../widgets/duelist.dart';
 import '../../widgets/interval_bar.dart';
 import '../../widgets/philosopher.dart';
@@ -89,6 +91,10 @@ class DuelScreen extends StatefulWidget {
 class _DuelScreenState extends State<DuelScreen> {
   final _match = DuelMatch();
   DuelSession? _session;
+
+  /// Quick reactions on screen (widgets/reactions.dart).
+  final _reactions = ReactionFeed(max: 4);
+  StreamSubscription<ReceivedReaction>? _reactionSub;
   Map<String, Question> _bank = const {};
   GameController? _game;
 
@@ -197,6 +203,8 @@ class _DuelScreenState extends State<DuelScreen> {
     _left.dispose();
     _match.removeListener(_onMatch);
     _search?.cancel();
+    _reactionSub?.cancel();
+    _reactions.dispose();
     _session?.close();
     _game?.dispose();
     for (final game in _oldGames) {
@@ -262,6 +270,7 @@ class _DuelScreenState extends State<DuelScreen> {
         return;
       }
       _session = session;
+      _reactionSub = session.reactions.listen(_received);
     } on DuelRefused catch (e) {
       if (mounted) _match.handle(DuelError(e.code));
     } on DuelException catch (e) {
@@ -541,6 +550,30 @@ class _DuelScreenState extends State<DuelScreen> {
     Navigator.of(context).pop();
   }
 
+  /// The opponent's reaction; nothing from a blocked player.
+  void _received(ReceivedReaction r) {
+    if (!mounted || Moderation.instance.isBlocked(_match.opponentName)) return;
+    _reactions.add(
+      ShownReaction(
+        reaction: r.reaction,
+        look: _match.opponentLook,
+        color: Palette.duelOpponent,
+      ),
+    );
+  }
+
+  void _react(Reaction reaction) {
+    _session?.react(reaction);
+    _reactions.add(
+      ShownReaction(
+        reaction: reaction,
+        look: _match.myLook,
+        color: Palette.duelMe,
+        mine: true,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final game = _game;
@@ -638,21 +671,29 @@ class _DuelScreenState extends State<DuelScreen> {
                     if (_match.index >= 0 &&
                         _resultShown == false &&
                         _match.phase != DuelPhase.over)
-                      Text(
-                        AppStrings.questionProgress(
-                          _match.index + 1,
-                          _match.questionIds.length,
+                      // Shrinks rather than cut when the actions are many.
+                      FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          AppStrings.questionProgress(
+                            _match.index + 1,
+                            _match.questionIds.length,
+                          ),
+                          style: Theme.of(context).textTheme.labelMedium
+                              ?.copyWith(
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .onSurfaceVariant,
+                              ),
                         ),
-                        style: Theme.of(context).textTheme.labelMedium
-                            ?.copyWith(
-                              color: Theme.of(context)
-                                  .colorScheme
-                                  .onSurfaceVariant,
-                            ),
                       ),
                   ],
                 ),
           actions: [
+            if (_session != null &&
+                _match.opponentName.isNotEmpty &&
+                error == null)
+              ReactionButton(look: _match.myLook, onSelected: _react),
             // Report or block the opponent at any time; the result view
             // has its own button.
             if (_match.opponentName.isNotEmpty &&
@@ -696,6 +737,12 @@ class _DuelScreenState extends State<DuelScreen> {
                     child: body,
                   ),
                 ),
+              ),
+              Positioned(
+                top: 4,
+                left: 12,
+                right: 12,
+                child: ReactionStrip(feed: _reactions),
               ),
               // The opponent dropped during a question: it goes on; a note
               // says so without covering it.

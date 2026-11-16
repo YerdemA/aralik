@@ -8,6 +8,7 @@
 // someone may be gone, a check for connections that went silent
 // (liveness.js); whichever comes first.
 
+import { allowReaction } from './reactions.js';
 import { DurableObject } from 'cloudflare:workers';
 import { loadContent } from './content.js';
 import { turkeyDayIndex } from './days.js';
@@ -172,7 +173,17 @@ export class DuelRoom extends DurableObject {
       await this.apply(duel.rematch(state, seat, now, pick, duel.secret));
     } else if (msg?.t === 'rematch_no') {
       await this.apply(duel.declineRematch(state, seat));
+    } else if (msg?.t === 'react') {
+      this.react(socket, seat, msg.r, now);
     }
+  }
+
+  /** Passes a quick reaction (src/reactions.js) on to the opponent. */
+  react(socket, seat, id, now) {
+    const attachment = socket.deserializeAttachment() ?? {};
+    const { ok, times } = allowReaction(attachment.rx, id, now);
+    socket.serializeAttachment({ ...attachment, rx: times });
+    if (ok) this.send([{ to: 1 - seat, msg: { t: 'react', seat, r: id } }]);
   }
 
   /** Closes an older connection of [seat] that has not noticed it is dead. */

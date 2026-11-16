@@ -4,6 +4,7 @@
 // the state in storage, each socket remembers its player id, the alarm
 // drives the clock. The rules are in tournament.js.
 
+import { allowReaction } from './reactions.js';
 import { DurableObject } from 'cloudflare:workers';
 import { loadContent } from './content.js';
 import { turkeyDayIndex } from './days.js';
@@ -127,6 +128,26 @@ export class TournamentRoom extends DurableObject {
         );
       case 'next':
         return this.apply(tournament.next(state, id, msg, now));
+      case 'react':
+        return this.react(socket, id, msg.r, now);
+    }
+  }
+
+  /** Passes a quick reaction (src/reactions.js) on to everyone else. */
+  react(socket, id, reaction, now) {
+    const attachment = socket.deserializeAttachment() ?? {};
+    const { ok, times } = allowReaction(attachment.rx, reaction, now);
+    socket.serializeAttachment({ ...attachment, rx: times });
+    if (!ok) return;
+    const text = JSON.stringify({ t: 'react', id, r: reaction });
+    for (const s of this.ctx.getWebSockets()) {
+      const other = s.deserializeAttachment()?.id;
+      if (!Number.isInteger(other) || other === id) continue;
+      try {
+        s.send(text);
+      } catch {
+        // closing; webSocketClose handles it
+      }
     }
   }
 

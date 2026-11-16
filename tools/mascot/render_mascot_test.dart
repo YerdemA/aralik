@@ -135,4 +135,39 @@ void main() {
         ],
     ]);
   });
+
+  test('render reaction faces', () async {
+    final looks = [
+      MascotLook.philosopher,
+      MascotLook.woman.copyWith(
+        skin: MascotSkin.dark,
+        hat: MascotHat.beret,
+        glasses: MascotGlasses.round,
+      ),
+      const MascotLook(
+        skin: MascotSkin.light,
+        beard: MascotBeard.goatee,
+        moustache: MascotMoustache.handlebar,
+        hair: MascotHair.curly,
+        hat: MascotHat.fez,
+        eyes: MascotEyes.round,
+        glasses: MascotGlasses.monocle,
+      ),
+      MascotLook.woman.copyWith(
+        hair: MascotHair.bun,
+        eyes: MascotEyes.sleepy,
+        glasses: MascotGlasses.sunglasses,
+      ),
+    ];
+    // As widgets/reactions.dart draws them: head centred low, close up.
+    await _save('reactions', [
+      for (final look in looks)
+        [
+          for (final f in MascotFace.values)
+            (c) =>
+                Philosopher(look: look)
+                    .paintPhilosopher(c, const Offset(0.5, 0.6), 1.75, face: f),
+        ],
+    ]);
+  });
 }

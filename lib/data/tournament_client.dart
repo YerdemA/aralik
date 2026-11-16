@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import '../core/duel.dart';
+import '../core/reaction.dart';
 import '../core/tournament.dart';
 import 'duel_client.dart';
 import 'leaderboard.dart';
@@ -104,6 +105,13 @@ class TournamentSession {
   StreamSubscription<String>? _subscription;
   bool _closed = false;
   bool _reconnecting = false;
+  final _reactions = StreamController<ReceivedReaction>.broadcast();
+
+  /// Quick reactions from the other players (core/reaction.dart).
+  Stream<ReceivedReaction> get reactions => _reactions.stream;
+
+  /// Sends a quick reaction; the room passes it on.
+  void react(Reaction reaction) => _send(reaction.message);
 
   /// The room no longer knows this player's secret: join afresh.
   bool _seatGone = false;
@@ -114,6 +122,11 @@ class TournamentSession {
   void _listen(DuelChannel channel) {
     _subscription = channel.messages.listen(
       (text) {
+        final reaction = parseReaction(text);
+        if (reaction != null) {
+          _reactions.add(reaction);
+          return;
+        }
         final event = TournamentEvent.parse(text);
         if (event == null) return;
         if (event is TournamentError &&
@@ -222,6 +235,7 @@ class TournamentSession {
   Future<void> close() async {
     if (_closed) return;
     _closed = true;
+    unawaited(_reactions.close());
     await Future.wait([?_subscription?.cancel(), _channel.close()]);
   }
 }

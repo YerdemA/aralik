@@ -10,6 +10,7 @@ import '../../core/answer_scale.dart';
 import '../../core/match_share.dart';
 import '../../core/number_format.dart';
 import '../../core/question_timer.dart';
+import '../../core/reaction.dart';
 import '../../core/scoring.dart';
 import '../../core/strings.dart';
 import '../../core/theme.dart';
@@ -24,6 +25,7 @@ import '../../data/stats_store.dart';
 import '../../data/tournament_client.dart';
 import '../../widgets/mascot_portrait.dart';
 import '../../widgets/player_actions.dart';
+import '../../widgets/reactions.dart';
 import '../../widgets/share_origin.dart';
 import '../game/answer_input.dart';
 import '../game/game_controller.dart';
@@ -73,6 +75,10 @@ class TournamentScreen extends StatefulWidget {
 class _TournamentScreenState extends State<TournamentScreen> {
   final _room = TournamentRoom();
   TournamentSession? _session;
+
+  /// Quick reactions on screen (widgets/reactions.dart).
+  final _reactions = ReactionFeed(max: 4);
+  StreamSubscription<ReceivedReaction>? _reactionSub;
   Map<String, Question> _bank = const {};
 
   /// The input of the current round, and the ids it was made for.
@@ -148,6 +154,8 @@ class _TournamentScreenState extends State<TournamentScreen> {
     _left.dispose();
     _nextIn.dispose();
     _room.removeListener(_onRoom);
+    _reactionSub?.cancel();
+    _reactions.dispose();
     _session?.close();
     _game?.dispose();
     _room.dispose();
@@ -170,6 +178,7 @@ class _TournamentScreenState extends State<TournamentScreen> {
         return;
       }
       _session = session;
+      _reactionSub = session.reactions.listen(_received);
     } on DuelException catch (e) {
       if (mounted) {
         _room.handle(
@@ -335,6 +344,36 @@ class _TournamentScreenState extends State<TournamentScreen> {
     _session?.next(_room.index);
   }
 
+  /// Another player's reaction; nothing from a blocked one.
+  void _received(ReceivedReaction r) {
+    final name = _room.nameOf(r.from);
+    if (!mounted || name == '?' || Moderation.instance.isBlocked(name)) {
+      return;
+    }
+    _reactions.add(
+      ShownReaction(
+        reaction: r.reaction,
+        look: _room.lookOf(r.from),
+        color: Palette.cupStart,
+        name: name,
+      ),
+    );
+  }
+
+  void _react(Reaction reaction) {
+    final you = _room.you;
+    if (you == null) return;
+    _session?.react(reaction);
+    _reactions.add(
+      ShownReaction(
+        reaction: reaction,
+        look: _room.lookOf(you),
+        color: Palette.duelMe,
+        mine: true,
+      ),
+    );
+  }
+
   Future<void> _kick(TournamentPlayer player) async {
     final sure = await showDialog<bool>(
       context: context,
@@ -491,6 +530,11 @@ class _TournamentScreenState extends State<TournamentScreen> {
                 : AppStrings.tournament,
           ),
           actions: [
+            if (_session != null &&
+                room.you != null &&
+                room.players.length > 1 &&
+                error == null)
+              ReactionButton(look: room.lookOf(room.you!), onSelected: _react),
             ValueListenableBuilder(
               valueListenable: _left,
               builder: (context, left, _) => left == null
@@ -512,6 +556,12 @@ class _TournamentScreenState extends State<TournamentScreen> {
                     child: body,
                   ),
                 ),
+              ),
+              Positioned(
+                top: 4,
+                left: 12,
+                right: 12,
+                child: ReactionStrip(feed: _reactions),
               ),
               if (room.reconnecting && error == null)
                 const Positioned.fill(child: _ReconnectingCover()),

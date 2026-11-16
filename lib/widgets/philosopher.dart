@@ -7,6 +7,9 @@ import '../core/mascot_look.dart';
 /// How the philosopher ends a duel: won, lost or drew.
 enum DuelPose { champion, defeated, even }
 
+/// A quick reaction's face in duels and tournaments (core/reaction.dart).
+enum MascotFace { angry, laugh, sad, wow }
+
 /// The Kabaca mascot: a thinking philosopher (bald, white beard, eyes
 /// closed, one brow raised) in a terracotta toga, with a thought bubble
 /// holding a question mark. Drawn with plain canvas calls so the app icon
@@ -190,8 +193,10 @@ class Philosopher {
     DuelPose? pose,
     Color? sash,
     bool awake = false,
+    MascotFace? face,
   }) {
     assert(mood == null || pose == null, 'a mood or a pose, not both');
+    assert(face == null || (mood == null && pose == null), 'a face alone');
     double s(double v) => v * k;
     final hx = h.dx;
 
@@ -375,7 +380,8 @@ class Philosopher {
 
     if (mood != null) _mouth(c, hx, hy, k, mood);
     if (pose != null) _duelMouth(c, hx, hy, k, pose);
-    if (mood == null && pose == null && awake) {
+    if (face != null) _faceMouth(c, hx, hy, k, face);
+    if (mood == null && pose == null && face == null && awake) {
       if (look.isWoman) {
         // Full rose lips in a small smile.
         final lip = Path()
@@ -425,6 +431,8 @@ class Philosopher {
       _eyes(c, hx, hy, k, mood);
     } else if (pose != null) {
       _duelEyes(c, hx, hy, k, pose);
+    } else if (face != null) {
+      _faceEyes(c, hx, hy, k, face);
     } else if (awake) {
       for (final side in [-1.0, 1.0]) {
         _openEye(c, Offset(hx + side * s(0.062), hy - s(0.005)), k, 0.02, side);
@@ -1814,6 +1822,103 @@ class Philosopher {
         for (final side in [-1.0, 1.0]) {
           openEye(p(side * 0.062, -0.005), 0.02);
           brow(p(side * 0.035, -0.08), p(side * 0.098, -0.075), 0.02);
+        }
+    }
+  }
+
+  /// A reaction's mouth, under the moustache.
+  void _faceMouth(Canvas c, double hx, double hy, double k, MascotFace face) {
+    double s(double v) => v * k;
+    Offset p(double x, double y) => Offset(hx + s(x), hy + s(y));
+    switch (face) {
+      case MascotFace.laugh:
+        _mouth(c, hx, hy, k, DayMood.legend);
+      case MascotFace.sad:
+        _mouth(c, hx, hy, k, DayMood.down);
+      case MascotFace.wow: // a round "O"
+        _outlined(
+          c,
+          Path()..addOval(
+            Rect.fromCenter(
+              center: p(0, 0.14),
+              width: s(0.05),
+              height: s(0.07),
+            ),
+          ),
+          mouth,
+        );
+      case MascotFace.angry: // clenched teeth
+        final teeth = Path()
+          ..addRRect(
+            RRect.fromRectAndRadius(
+              Rect.fromCenter(
+                center: p(0, 0.135),
+                width: s(0.11),
+                height: s(0.042),
+              ),
+              Radius.circular(s(0.012)),
+            ),
+          );
+        _outlined(c, teeth, white);
+        c.drawLine(p(-0.05, 0.135), p(0.05, 0.135), _line(ink, s(0.008)));
+        for (final x in [-0.025, 0.0, 0.025]) {
+          c.drawLine(p(x, 0.116), p(x, 0.154), _line(ink, s(0.006)));
+        }
+    }
+  }
+
+  /// A reaction's eyes and brows, and what goes with them.
+  void _faceEyes(Canvas c, double hx, double hy, double k, MascotFace face) {
+    double s(double v) => v * k;
+    Offset p(double x, double y) => Offset(hx + s(x), hy + s(y));
+    void brow(Offset a, Offset b, double lift) => c.drawPath(
+      Path()
+        ..moveTo(a.dx, a.dy)
+        ..quadraticBezierTo(
+          (a.dx + b.dx) / 2,
+          (a.dy + b.dy) / 2 - s(lift),
+          b.dx,
+          b.dy,
+        ),
+      _brow(k),
+    );
+    switch (face) {
+      case MascotFace.laugh:
+        _eyes(c, hx, hy, k, DayMood.legend);
+        if (!monochrome) {
+          // Tears of joy.
+          for (final side in [-1.0, 1.0]) {
+            c.drawCircle(p(side * 0.1, 0.03), s(0.014), _fill(drop));
+          }
+        }
+      case MascotFace.sad:
+        _duelEyes(c, hx, hy, k, DuelPose.defeated);
+      case MascotFace.wow:
+        for (final side in [-1.0, 1.0]) {
+          _openEye(c, p(side * 0.062, -0.01), k, 0.027, side);
+          brow(p(side * 0.032, -0.095), p(side * 0.1, -0.1), 0.035);
+        }
+      case MascotFace.angry:
+        for (final side in [-1.0, 1.0]) {
+          _openEye(c, p(side * 0.062, 0.0), k, 0.018, side);
+          // Down towards the nose.
+          brow(p(side * 0.105, -0.085), p(side * 0.03, -0.045), 0);
+        }
+        if (!monochrome) {
+          // The comic anger mark at the temple.
+          final at = p(0.13, -0.15);
+          final red = _line(const Color(0xFFE53935), s(0.014));
+          for (var i = 0; i < 4; i++) {
+            final a = i * math.pi / 2 + math.pi / 4;
+            final o = at + Offset(math.cos(a), math.sin(a)) * s(0.024);
+            c.drawArc(
+              Rect.fromCircle(center: o, radius: s(0.016)),
+              a + math.pi - 0.9,
+              1.8,
+              false,
+              red,
+            );
+          }
         }
     }
   }

@@ -731,6 +731,18 @@ abstract final class AppStrings {
   /// Short notes shown while looking for an opponent, one every
   /// [duelTipEvery] (core/duel.dart). Rules of the game and well-known
   /// findings about estimating; no numbers that need a source.
+  // Quick reactions (core/reaction.dart).
+  static const reactionAngry = 'Sinirli';
+  static const reactionLaugh = 'Kahkaha';
+  static const reactionSad = 'Üzgün';
+  static const reactionWow = 'Şaşkın';
+  static const reactionEasy = 'Basitti!';
+  static const reactionClose = 'Kıl payı!';
+  static const reactionLucky = 'Çalışmadığım yerden!';
+  static const reactionCongrats = 'Tebrikler!';
+  static const reactionButton = 'Tepki gönder';
+  static const reactionHint = 'Basılı tut, kaydır, bırak';
+
   static const duelTips = [
     "%90 emin olduğun aralıklar, 10 sorudan 9'unda cevabı içermeli. "
         'Kalibrasyonun bunu ölçer.',
