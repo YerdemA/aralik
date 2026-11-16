@@ -13,6 +13,7 @@ class NumberPad extends StatelessWidget {
     required this.onClear,
     this.showTripleZero = true,
     this.keyHeight = NumberPad.fullKeyHeight,
+    this.gap = 4,
   });
 
   final ValueChanged<String> onDigits;
@@ -23,6 +24,9 @@ class NumberPad extends StatelessWidget {
   /// Height of each key; smaller on short screens (see [keyHeightFor]).
   final double keyHeight;
 
+  /// Space around each key; the duel's tighter pad uses 3.
+  final double gap;
+
   static const double fullKeyHeight = 60;
 
   /// Never smaller than this: with its padding a key stays a 52 dp target.
@@ -30,9 +34,14 @@ class NumberPad extends StatelessWidget {
 
   /// The key height that fits the pad and [others] (the rest of the
   /// column, in dp) into [maxHeight]: the full height when there is room.
-  static double keyHeightFor(double maxHeight, {required double others}) {
-    if (!maxHeight.isFinite) return fullKeyHeight;
-    return ((maxHeight - others) / 4 - 8).clamp(minKeyHeight, fullKeyHeight);
+  static double keyHeightFor(
+    double maxHeight, {
+    required double others,
+    double max = fullKeyHeight,
+    double min = minKeyHeight,
+  }) {
+    if (!maxHeight.isFinite) return max;
+    return ((maxHeight - others) / 4 - 8).clamp(min, max);
   }
 
   @override
@@ -40,6 +49,7 @@ class NumberPad extends StatelessWidget {
     Widget digit(String label) => _PadKey(
       onTap: () => onDigits(label),
       height: keyHeight,
+      gap: gap,
       child: Text(label),
     );
 
@@ -57,12 +67,13 @@ class NumberPad extends StatelessWidget {
             Expanded(
               child: showTripleZero
                   ? digit('000')
-                  : SizedBox(height: keyHeight),
+                  : SizedBox(height: keyHeight + 2 * gap),
             ),
             Expanded(child: digit('0')),
             Expanded(
               child: _PadKey(
                 height: keyHeight,
+                gap: gap,
                 onTap: onBackspace,
                 onLongPress: onClear,
                 semanticLabel: AppStrings.delete,
@@ -81,6 +92,7 @@ class _PadKey extends StatelessWidget {
     required this.onTap,
     required this.child,
     required this.height,
+    this.gap = 4,
     this.onLongPress,
     this.semanticLabel,
   });
@@ -90,12 +102,13 @@ class _PadKey extends StatelessWidget {
   final String? semanticLabel;
   final Widget child;
   final double height;
+  final double gap;
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Padding(
-      padding: const EdgeInsets.all(4),
+      padding: EdgeInsets.all(gap),
       child: Material(
         color: theme.colorScheme.surfaceContainerHigh,
         borderRadius: BorderRadius.circular(14),

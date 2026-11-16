@@ -485,6 +485,7 @@ class _TournamentScreenState extends State<TournamentScreen> {
         game: game,
         room: room,
         onLock: () => _lock(timedOut: false),
+        reactions: ReactionStrip(feed: _reactions, others: 2),
       );
     } else {
       final i = room.results.length - 1;
@@ -549,19 +550,27 @@ class _TournamentScreenState extends State<TournamentScreen> {
             children: [
               Padding(
                 padding: const EdgeInsets.fromLTRB(20, 8, 20, 16),
-                child: AnimatedSwitcher(
-                  duration: const Duration(milliseconds: 200),
-                  child: KeyedSubtree(
-                    key: ValueKey((room.phase, room.index)),
-                    child: body,
-                  ),
+                child: Column(
+                  children: [
+                    // Outside a question (lobby, answers, standings): the
+                    // quick reactions' band above, never over the content.
+                    if (_session != null &&
+                        room.you != null &&
+                        room.players.length > 1 &&
+                        error == null &&
+                        body is! _QuestionView)
+                      ReactionStrip(feed: _reactions, others: 2),
+                    Expanded(
+                      child: AnimatedSwitcher(
+                        duration: const Duration(milliseconds: 200),
+                        child: KeyedSubtree(
+                          key: ValueKey((room.phase, room.index)),
+                          child: body,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ),
-              Positioned(
-                top: 4,
-                left: 12,
-                right: 12,
-                child: ReactionStrip(feed: _reactions),
               ),
               if (room.reconnecting && error == null)
                 const Positioned.fill(child: _ReconnectingCover()),
@@ -807,11 +816,15 @@ class _QuestionView extends StatelessWidget {
     required this.game,
     required this.room,
     required this.onLock,
+    required this.reactions,
   });
 
   final GameController game;
   final TournamentRoom room;
   final VoidCallback onLock;
+
+  /// The quick reactions' band, between the question and the input.
+  final Widget reactions;
 
   @override
   Widget build(BuildContext context) {
@@ -824,19 +837,30 @@ class _QuestionView extends StatelessWidget {
           QuestionCard(question: game.question),
           Expanded(
             child: game.isLocked
-                ? _Message(
-                    icon: Icons.lock_rounded,
-                    text:
-                        '${AppStrings.tournamentLocked}\n'
-                        '${AppStrings.tournamentLockedCount(room.locked.length, active)}',
-                    busy: true,
+                ? _withAbove(
+                    reactions,
+                    _Message(
+                      icon: Icons.lock_rounded,
+                      text:
+                          '${AppStrings.tournamentLocked}\n'
+                          '${AppStrings.tournamentLockedCount(room.locked.length, active)}',
+                      busy: true,
+                    ),
                   )
                 : game.phase == GamePhase.guess
-                ? GuessStep(key: const ValueKey('guess'), game: game)
+                ? GuessStep(
+                    key: const ValueKey('guess'),
+                    game: game,
+                    compact: true,
+                    above: reactions,
+                    aboveHeight: ReactionStrip.height,
+                  )
                 : WidthStep(
                     key: const ValueKey('width'),
                     game: game,
                     onLock: onLock,
+                    compact: true,
+                    above: reactions,
                   ),
           ),
         ],
@@ -1259,3 +1283,13 @@ class _Face extends StatelessWidget {
     child: MascotPortrait(look: look, size: 44),
   );
 }
+
+/// [child] with the quick reactions' band on top (while waiting after a
+/// lock).
+Widget _withAbove(Widget above, Widget child) => Column(
+  crossAxisAlignment: CrossAxisAlignment.stretch,
+  children: [
+    above,
+    Expanded(child: child),
+  ],
+);

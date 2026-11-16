@@ -125,41 +125,51 @@ class ReactionFeed extends ChangeNotifier {
   }
 }
 
-/// The feed as a row of bubbles: this player's on the left, the others'
-/// on the right. Lets touches through.
+/// The feed as a band of fixed height ([ReactionStrip.height]): this
+/// player's newest reaction on the left, the others' newest on the right.
+/// It never grows or covers anything, and lets touches through.
 class ReactionStrip extends StatelessWidget {
-  const ReactionStrip({super.key, required this.feed});
+  const ReactionStrip({super.key, required this.feed, this.others = 1});
 
   final ReactionFeed feed;
 
+  /// How many of the others' reactions show at once (2 in tournaments).
+  final int others;
+
+  static const double height = 52;
+
   @override
   Widget build(BuildContext context) => IgnorePointer(
-    child: ListenableBuilder(
-      listenable: feed,
-      builder: (context, _) {
-        final items = feed.items;
-        Widget side(bool mine) => Column(
-          crossAxisAlignment: mine
-              ? CrossAxisAlignment.start
-              : CrossAxisAlignment.end,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            for (final (key, shown) in items)
-              if (shown.mine == mine)
-                _Pop(
-                  key: ValueKey(key),
-                  child: _Bubble(shown: shown),
-                ),
-          ],
-        );
-        return Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(child: side(true)),
-            Expanded(child: side(false)),
-          ],
-        );
-      },
+    child: SizedBox(
+      height: height,
+      child: ListenableBuilder(
+        listenable: feed,
+        builder: (context, _) {
+          final items = feed.items;
+          final mine = [
+            for (final e in items)
+              if (e.$2.mine) e,
+          ];
+          final theirs = [
+            for (final e in items)
+              if (!e.$2.mine) e,
+          ];
+          Widget pop((int, ShownReaction) e) => _Pop(
+            key: ValueKey(e.$1),
+            child: _Bubble(shown: e.$2),
+          );
+          return Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              if (mine.isNotEmpty) pop(mine.last),
+              const Spacer(),
+              for (final e in theirs.skip(
+                theirs.length > others ? theirs.length - others : 0,
+              )) ...[const SizedBox(width: 6), pop(e)],
+            ],
+          );
+        },
+      ),
     ),
   );
 }
@@ -204,10 +214,7 @@ class _PopState extends State<_Pop> {
       scale: _in ? 1 : 0.6,
       duration: const Duration(milliseconds: 250),
       curve: Curves.easeOutBack,
-      child: Padding(
-        padding: const EdgeInsets.only(bottom: 6),
-        child: widget.child,
-      ),
+      child: widget.child,
     ),
   );
 }
@@ -226,29 +233,35 @@ class _Bubble extends StatelessWidget {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: scheme.surface,
-              border: Border.all(color: shown.color, width: 3),
+              border: Border.all(color: shown.color, width: 2.5),
               boxShadow: const [
-                BoxShadow(blurRadius: 8, color: Color(0x33000000)),
+                BoxShadow(blurRadius: 6, color: Color(0x26000000)),
               ],
             ),
             child: ClipOval(
-              child: ReactionFace(look: shown.look, reaction: r, size: 64),
+              child: ReactionFace(
+                look: shown.look,
+                reaction: r,
+                size: shown.name == null ? 44 : 34,
+              ),
             ),
           )
         : Container(
-            constraints: const BoxConstraints(maxWidth: 200),
-            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+            constraints: const BoxConstraints(maxWidth: 170),
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
             decoration: BoxDecoration(
               color: scheme.surface,
-              borderRadius: BorderRadius.circular(18),
-              border: Border.all(color: shown.color, width: 2.5),
+              borderRadius: BorderRadius.circular(16),
+              border: Border.all(color: shown.color, width: 2),
               boxShadow: const [
-                BoxShadow(blurRadius: 8, color: Color(0x33000000)),
+                BoxShadow(blurRadius: 6, color: Color(0x26000000)),
               ],
             ),
             child: Text(
               r.label,
-              style: Theme.of(context).textTheme.titleSmall?.copyWith(
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: Theme.of(context).textTheme.labelLarge?.copyWith(
                 fontWeight: FontWeight.w800,
                 color: scheme.onSurface,
               ),
@@ -267,9 +280,10 @@ class _Bubble extends StatelessWidget {
           children: [
             if (name != null)
               Padding(
-                padding: const EdgeInsets.only(bottom: 2, left: 4, right: 4),
+                padding: const EdgeInsets.only(bottom: 1, left: 4, right: 4),
                 child: Text(
                   name,
+                  maxLines: 1,
                   style: Theme.of(context).textTheme.labelSmall?.copyWith(
                     color: shown.color,
                     fontWeight: FontWeight.w800,
@@ -390,23 +404,25 @@ class _ReactionButtonState extends State<ReactionButton> {
           }
         },
         child: SizedBox(
-          width: 40,
+          width: 36,
           height: 48,
           child: Center(
             child: AnimatedOpacity(
-              opacity: _resting ? 0.35 : 1,
+              opacity: _resting ? 0.4 : 1,
               duration: const Duration(milliseconds: 200),
+              // Like the app bar's other small chips (the opponent's
+              // hourglass): a pale circle in the theme's colour.
               child: Container(
-                width: 34,
-                height: 34,
+                width: 30,
+                height: 30,
                 decoration: BoxDecoration(
-                  color: scheme.primaryContainer,
+                  color: scheme.primary.withValues(alpha: .12),
                   shape: BoxShape.circle,
                 ),
                 child: Icon(
                   Icons.add_reaction_outlined,
-                  size: 20,
-                  color: scheme.onPrimaryContainer,
+                  size: 17,
+                  color: scheme.primary,
                 ),
               ),
             ),
@@ -437,7 +453,7 @@ class _Panel extends StatelessWidget {
   final ValueChanged<Reaction> onPick;
   final VoidCallback onDismiss;
 
-  static const double width = 280;
+  static const double width = 248;
 
   @override
   Widget build(BuildContext context) {
@@ -493,7 +509,7 @@ class _Panel extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
             color: scheme.surface,
             child: Padding(
-              padding: const EdgeInsets.all(12),
+              padding: const EdgeInsets.all(10),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -511,7 +527,7 @@ class _Panel extends StatelessWidget {
                               child: ReactionFace(
                                 look: look,
                                 reaction: r,
-                                size: 52,
+                                size: 44,
                               ),
                             ),
                             round: true,
@@ -519,16 +535,16 @@ class _Panel extends StatelessWidget {
                         ),
                     ],
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 6),
                   for (final r in Reaction.values.where((r) => !r.isFace))
                     Padding(
-                      padding: const EdgeInsets.only(top: 6),
+                      padding: const EdgeInsets.only(top: 5),
                       child: item(
                         r,
                         (on) => Padding(
                           padding: const EdgeInsets.symmetric(
-                            horizontal: 14,
-                            vertical: 11,
+                            horizontal: 12,
+                            vertical: 8,
                           ),
                           child: Text(
                             r.label,

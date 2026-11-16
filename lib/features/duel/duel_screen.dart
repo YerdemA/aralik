@@ -619,7 +619,11 @@ class _DuelScreenState extends State<DuelScreen> {
         busy: true,
       );
     } else if (_match.phase == DuelPhase.question) {
-      body = _QuestionView(game: game, onLock: () => _lock(timedOut: false));
+      body = _QuestionView(
+        game: game,
+        onLock: () => _lock(timedOut: false),
+        reactions: ReactionStrip(feed: _reactions),
+      );
     } else if (_match.phase == DuelPhase.reveal || _showsLastReveal) {
       final over = _match.phase == DuelPhase.over;
       body = _RevealView(
@@ -647,6 +651,7 @@ class _DuelScreenState extends State<DuelScreen> {
         rankNote: _rankNote,
         onRematch: () => _session?.rematch(),
         onDecline: () => _session?.declineRematch(),
+        reactions: _session == null ? null : ReactionStrip(feed: _reactions),
       );
     }
 
@@ -725,24 +730,30 @@ class _DuelScreenState extends State<DuelScreen> {
             children: [
               Padding(
                 padding: const EdgeInsets.fromLTRB(20, 8, 20, 16),
-                child: AnimatedSwitcher(
-                  duration: const Duration(milliseconds: 200),
-                  child: KeyedSubtree(
-                    key: ValueKey((
-                      _match.round,
-                      _match.phase,
-                      _match.index,
-                      _resultShown,
-                    )),
-                    child: body,
-                  ),
+                child: Column(
+                  children: [
+                    // After a question: the quick reactions' band above,
+                    // never over the results or their buttons.
+                    if (_session != null &&
+                        error == null &&
+                        body is _RevealView)
+                      ReactionStrip(feed: _reactions),
+                    Expanded(
+                      child: AnimatedSwitcher(
+                        duration: const Duration(milliseconds: 200),
+                        child: KeyedSubtree(
+                          key: ValueKey((
+                            _match.round,
+                            _match.phase,
+                            _match.index,
+                            _resultShown,
+                          )),
+                          child: body,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ),
-              Positioned(
-                top: 4,
-                left: 12,
-                right: 12,
-                child: ReactionStrip(feed: _reactions),
               ),
               // The opponent dropped during a question: it goes on; a note
               // says so without covering it.
@@ -926,10 +937,18 @@ class _WaitingRoom extends StatelessWidget {
 }
 
 class _QuestionView extends StatelessWidget {
-  const _QuestionView({required this.game, required this.onLock});
+  const _QuestionView({
+    required this.game,
+    required this.onLock,
+    required this.reactions,
+  });
 
   final GameController game;
   final VoidCallback onLock;
+
+  /// The quick reactions' band, between the question and the input: it
+  /// covers neither.
+  final Widget reactions;
 
   @override
   Widget build(BuildContext context) {
@@ -941,17 +960,28 @@ class _QuestionView extends StatelessWidget {
           QuestionCard(question: game.question),
           Expanded(
             child: game.isLocked
-                ? const _Message(
-                    icon: Icons.lock_rounded,
-                    text: AppStrings.duelWaitingOpponent,
-                    busy: true,
+                ? _withAbove(
+                    reactions,
+                    const _Message(
+                      icon: Icons.lock_rounded,
+                      text: AppStrings.duelWaitingOpponent,
+                      busy: true,
+                    ),
                   )
                 : game.phase == GamePhase.guess
-                ? GuessStep(key: const ValueKey('guess'), game: game)
+                ? GuessStep(
+                    key: const ValueKey('guess'),
+                    game: game,
+                    compact: true,
+                    above: reactions,
+                    aboveHeight: ReactionStrip.height,
+                  )
                 : WidthStep(
                     key: const ValueKey('width'),
                     game: game,
                     onLock: onLock,
+                    compact: true,
+                    above: reactions,
                   ),
           ),
         ],
@@ -1240,9 +1270,13 @@ class _ResultView extends StatelessWidget {
     this.rankNote,
     required this.onRematch,
     required this.onDecline,
+    this.reactions,
   });
 
   final DuelMatch match;
+
+  /// The quick reactions' band, laid over the podium.
+  final Widget? reactions;
 
   /// Why this duel did not count for the monthly table; null when it did,
   /// or when the app cannot tell.
@@ -1369,30 +1403,38 @@ class _ResultView extends StatelessWidget {
                   ),
                 ),
               const Spacer(),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.end,
+              // The quick reactions over the duelists (decoration only):
+              // each player's on their own side, covering no text.
+              Stack(
                 children: [
-                  Expanded(
-                    child: _Podium(
-                      name: AppStrings.duelYou,
-                      total: match.myTotal,
-                      colour: Palette.duelMe,
-                      pose: mePose,
-                      figure: figure,
-                      look: match.myLook,
-                    ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Expanded(
+                        child: _Podium(
+                          name: AppStrings.duelYou,
+                          total: match.myTotal,
+                          colour: Palette.duelMe,
+                          pose: mePose,
+                          figure: figure,
+                          look: match.myLook,
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: _Podium(
+                          name: Moderation.instance.shown(match.opponentName),
+                          total: match.opponentTotal,
+                          colour: Palette.duelOpponent,
+                          pose: opponentPose,
+                          figure: figure,
+                          look: match.opponentLook,
+                        ),
+                      ),
+                    ],
                   ),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: _Podium(
-                      name: Moderation.instance.shown(match.opponentName),
-                      total: match.opponentTotal,
-                      colour: Palette.duelOpponent,
-                      pose: opponentPose,
-                      figure: figure,
-                      look: match.opponentLook,
-                    ),
-                  ),
+                  if (reactions != null)
+                    Positioned(top: 0, left: 0, right: 0, child: reactions!),
                 ],
               ),
               const SizedBox(height: 14),
@@ -1978,3 +2020,13 @@ class _PausedCoverState extends State<_PausedCover> {
     );
   }
 }
+
+/// [child] with the quick reactions' band on top (while waiting after a
+/// lock).
+Widget _withAbove(Widget above, Widget child) => Column(
+  crossAxisAlignment: CrossAxisAlignment.stretch,
+  children: [
+    above,
+    Expanded(child: child),
+  ],
+);

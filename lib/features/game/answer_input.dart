@@ -100,17 +100,22 @@ class QuestionCard extends StatelessWidget {
 
 /// Rounded frame for the big number; lights up once there is a value.
 class _Display extends StatelessWidget {
-  const _Display({required this.active, required this.child});
+  const _Display({
+    required this.active,
+    required this.child,
+    this.compact = false,
+  });
 
   final bool active;
   final Widget child;
+  final bool compact;
 
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
     return AnimatedContainer(
       duration: const Duration(milliseconds: 200),
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+      padding: EdgeInsets.symmetric(horizontal: 16, vertical: compact ? 8 : 14),
       decoration: BoxDecoration(
         color: active
             ? Theme.of(context).cardTheme.color
@@ -133,10 +138,33 @@ String _formatGuess(GameController game, int value) =>
 /// button), with a little to spare.
 const double _guessOthers = 196;
 
+/// The same in the compact form.
+const double _compactGuessOthers = 180;
+
+/// Keys of the compact pad are at most this tall, and at least 42: with
+/// the 3 dp gap on each side still a 48 dp target.
+const double _compactKeyHeight = 52;
+const double _compactMinKeyHeight = 42;
+
 class GuessStep extends StatelessWidget {
-  const GuessStep({super.key, required this.game, this.padKey});
+  const GuessStep({
+    super.key,
+    required this.game,
+    this.padKey,
+    this.compact = false,
+    this.above,
+    this.aboveHeight = 0,
+  });
 
   final GameController game;
+
+  /// Duels and tournaments (2026-11-16): a smaller display and a tighter
+  /// pad, close together, leaving room above for the quick reactions.
+  final bool compact;
+
+  /// Right above the input, [aboveHeight] tall (the quick reactions).
+  final Widget? above;
+  final double aboveHeight;
 
   /// Marks the number pad for the first-question tour.
   final GlobalKey? padKey;
@@ -153,14 +181,16 @@ class GuessStep extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           const Spacer(),
+          ?above,
           Text(
             AppStrings.yourGuess,
             style: theme.textTheme.labelLarge,
             textAlign: TextAlign.center,
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: compact ? 6 : 8),
           _Display(
             active: guess != null,
+            compact: compact,
             child: FittedBox(
               fit: BoxFit.scaleDown,
               child: Text(
@@ -171,27 +201,36 @@ class GuessStep extends StatelessWidget {
                         if (unit.isNotEmpty) unit,
                       ].join(' '),
                 style: guess == null
-                    ? theme.textTheme.headlineMedium?.copyWith(
-                        color: theme.colorScheme.outline,
-                        height: 1.6,
-                      )
+                    ? (compact
+                              ? theme.textTheme.headlineSmall
+                              : theme.textTheme.headlineMedium)
+                          ?.copyWith(
+                            color: theme.colorScheme.outline,
+                            height: 1.6,
+                          )
+                    : compact
+                    ? theme.textTheme.displaySmall
                     : theme.textTheme.displayMedium,
               ),
             ),
           ),
-          const Spacer(),
+          if (compact) const SizedBox(height: 10) else const Spacer(),
           NumberPad(
             key: padKey,
             showTripleZero: !game.isYear && !game.isPercent,
             onDigits: game.type,
             onBackspace: game.backspace,
             onClear: game.clear,
+            gap: compact ? 3 : 4,
             keyHeight: NumberPad.keyHeightFor(
               box.maxHeight,
-              others: _guessOthers,
+              others:
+                  (compact ? _compactGuessOthers : _guessOthers) + aboveHeight,
+              max: compact ? _compactKeyHeight : NumberPad.fullKeyHeight,
+              min: compact ? _compactMinKeyHeight : NumberPad.minKeyHeight,
             ),
           ),
-          const SizedBox(height: 12),
+          SizedBox(height: compact ? 10 : 12),
           FilledButton.icon(
             onPressed: game.canConfirmGuess ? game.confirmGuess : null,
             icon: const Icon(Icons.arrow_forward_rounded),
@@ -210,10 +249,18 @@ class WidthStep extends StatelessWidget {
     required this.onLock,
     this.rangeKey,
     this.lockKey,
+    this.compact = false,
+    this.above,
   });
+
+  /// Right above the interval (the quick reactions).
+  final Widget? above;
 
   final GameController game;
   final VoidCallback onLock;
+
+  /// Duels and tournaments: smaller gaps and display (see [GuessStep]).
+  final bool compact;
 
   /// Mark the interval and the lock button for the first-question tour.
   final GlobalKey? rangeKey;
@@ -250,20 +297,27 @@ class WidthStep extends StatelessWidget {
           ),
         ),
         const Spacer(),
+        ?above,
         Text(
           AppStrings.intervalLabel,
           style: theme.textTheme.labelLarge,
           textAlign: TextAlign.center,
         ),
-        const SizedBox(height: 8),
+        SizedBox(height: compact ? 6 : 8),
         _Display(
           active: true,
+          compact: compact,
           child: FittedBox(
             fit: BoxFit.scaleDown,
-            child: Text(range, style: theme.textTheme.displayMedium),
+            child: Text(
+              range,
+              style: compact
+                  ? theme.textTheme.displaySmall
+                  : theme.textTheme.displayMedium,
+            ),
           ),
         ),
-        const SizedBox(height: 14),
+        SizedBox(height: compact ? 8 : 14),
         Center(child: _PotentialPill(points: game.potentialPoints)),
         const Spacer(),
         Slider(
@@ -282,7 +336,7 @@ class WidthStep extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(height: 24),
+        SizedBox(height: compact ? 12 : 24),
         FilledButton.icon(
           key: lockKey,
           onPressed: onLock,
