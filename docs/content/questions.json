@@ -47168,5 +47168,1779 @@
   "scale": {
    "factor": 3
   }
+ },
+ {
+  "id": "q3244",
+  "text": "2024 yılında dünyada kaç ton elma üretilmiştir?",
+  "answer": 97880076,
+  "unit": "ton",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://www.fao.org/faostat/en/#data/QCL?area=5000&item=515&element=5510&year=2024",
+  "data_year": 2024,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "fao_world"
+ },
+ {
+  "id": "q3245",
+  "text": "2024 verilerine göre dünyada kaç baş sığır bulunmaktadır?",
+  "answer": 1578614149,
+  "unit": "baş",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://www.fao.org/faostat/en/#data/QCL?area=5000&item=866&element=5111&year=2024",
+  "data_year": 2024,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "fao_world"
+ },
+ {
+  "id": "q3246",
+  "text": "2024 yılında dünyada kaç ton karpuz üretilmiştir?",
+  "answer": 104959426,
+  "unit": "ton",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://www.fao.org/faostat/en/#data/QCL?area=5000&item=567&element=5510&year=2024",
+  "data_year": 2024,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "fao_world"
+ },
+ {
+  "id": "q3247",
+  "text": "2024 yılında dünyada kaç ton portakal üretilmiştir?",
+  "answer": 67244550,
+  "unit": "ton",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://www.fao.org/faostat/en/#data/QCL?area=5000&item=490&element=5510&year=2024",
+  "data_year": 2024,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "fao_world"
+ },
+ {
+  "id": "q3248",
+  "text": "2024 yılında dünyada kaç ton kayısı üretilmiştir?",
+  "answer": 4598079,
+  "unit": "ton",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://www.fao.org/faostat/en/#data/QCL?area=5000&item=526&element=5510&year=2024",
+  "data_year": 2024,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "fao_world"
+ },
+ {
+  "id": "q3249",
+  "text": "2024 yılında dünyada kaç ton üzüm üretilmiştir?",
+  "answer": 75904987,
+  "unit": "ton",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://www.fao.org/faostat/en/#data/QCL?area=5000&item=560&element=5510&year=2024",
+  "data_year": 2024,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "fao_world"
+ },
+ {
+  "id": "q3250",
+  "text": "2024 yılında dünyada kaç ton kuru soğan üretilmiştir?",
+  "answer": 108260011,
+  "unit": "ton",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://www.fao.org/faostat/en/#data/QCL?area=5000&item=403&element=5510&year=2024",
+  "data_year": 2024,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "fao_world"
+ },
+ {
+  "id": "q3251",
+  "text": "2024 yılında dünyada kaç ton domates üretilmiştir?",
+  "answer": 188498384,
+  "unit": "ton",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://www.fao.org/faostat/en/#data/QCL?area=5000&item=388&element=5510&year=2024",
+  "data_year": 2024,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "fao_world"
+ },
+ {
+  "id": "q3252",
+  "text": "2024 yılında dünyada kaç ton tavuk eti üretilmiştir?",
+  "answer": 128307229,
+  "unit": "ton",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://www.fao.org/faostat/en/#data/QCL?area=5000&item=1058&element=5510&year=2024",
+  "data_year": 2024,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "fao_world"
+ },
+ {
+  "id": "q3253",
+  "text": "2024 yılında dünyada kaç ton sığır eti üretilmiştir?",
+  "answer": 69749016,
+  "unit": "ton",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://www.fao.org/faostat/en/#data/QCL?area=5000&item=867&element=5510&year=2024",
+  "data_year": 2024,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "fao_world"
+ },
+ {
+  "id": "q3254",
+  "text": "2024 verilerine göre dünyada kaç baş at bulunmaktadır?",
+  "answer": 56211907,
+  "unit": "baş",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://www.fao.org/faostat/en/#data/QCL?area=5000&item=1096&element=5111&year=2024",
+  "data_year": 2024,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "fao_world"
+ },
+ {
+  "id": "q3255",
+  "text": "2024 yılında dünyada kaç ton mısır üretilmiştir?",
+  "answer": 1218205574,
+  "unit": "ton",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://www.fao.org/faostat/en/#data/QCL?area=5000&item=56&element=5510&year=2024",
+  "data_year": 2024,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "fao_world"
+ },
+ {
+  "id": "q3256",
+  "text": "2024 verilerine göre dünyada kaç baş keçi bulunmaktadır?",
+  "answer": 1187524236,
+  "unit": "baş",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://www.fao.org/faostat/en/#data/QCL?area=5000&item=1016&element=5111&year=2024",
+  "data_year": 2024,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "fao_world"
+ },
+ {
+  "id": "q3257",
+  "text": "2024 verilerine göre dünyada kaç baş koyun bulunmaktadır?",
+  "answer": 1362590940,
+  "unit": "baş",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://www.fao.org/faostat/en/#data/QCL?area=5000&item=976&element=5111&year=2024",
+  "data_year": 2024,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "fao_world"
+ },
+ {
+  "id": "q3258",
+  "text": "2024 yılında dünyada kaç ton Antep fıstığı (kabuklu) üretilmiştir?",
+  "answer": 1380321,
+  "unit": "ton",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://www.fao.org/faostat/en/#data/QCL?area=5000&item=223&element=5510&year=2024",
+  "data_year": 2024,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "fao_world"
+ },
+ {
+  "id": "q3259",
+  "text": "2024 yılında dünyada kaç ton inek sütü üretilmiştir?",
+  "answer": 797287454,
+  "unit": "ton",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://www.fao.org/faostat/en/#data/QCL?area=5000&item=882&element=5510&year=2024",
+  "data_year": 2024,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "fao_world"
+ },
+ {
+  "id": "q3260",
+  "text": "2024 verilerine göre dünyada kaç baş deve bulunmaktadır?",
+  "answer": 44336084,
+  "unit": "baş",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://www.fao.org/faostat/en/#data/QCL?area=5000&item=1126&element=5111&year=2024",
+  "data_year": 2024,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "fao_world"
+ },
+ {
+  "id": "q3261",
+  "text": "2024 yılında dünyada kaç ton yaş çay yaprağı üretilmiştir?",
+  "answer": 32728931,
+  "unit": "ton",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://www.fao.org/faostat/en/#data/QCL?area=5000&item=667&element=5510&year=2024",
+  "data_year": 2024,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "fao_world"
+ },
+ {
+  "id": "q3262",
+  "text": "2024 yılında dünyada kaç ton şeker kamışı üretilmiştir?",
+  "answer": 1939782021,
+  "unit": "ton",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://www.fao.org/faostat/en/#data/QCL?area=5000&item=156&element=5510&year=2024",
+  "data_year": 2024,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "fao_world"
+ },
+ {
+  "id": "q3263",
+  "text": "2024 yılında dünyada kaç ton soya fasulyesi üretilmiştir?",
+  "answer": 397671689,
+  "unit": "ton",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://www.fao.org/faostat/en/#data/QCL?area=5000&item=236&element=5510&year=2024",
+  "data_year": 2024,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "fao_world"
+ },
+ {
+  "id": "q3264",
+  "text": "2024 yılında dünyada kaç ton kütlü pamuk üretilmiştir?",
+  "answer": 72814038,
+  "unit": "ton",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://www.fao.org/faostat/en/#data/QCL?area=5000&item=328&element=5510&year=2024",
+  "data_year": 2024,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "fao_world"
+ },
+ {
+  "id": "q3265",
+  "text": "2024 yılında dünyada kaç ton patates üretilmiştir?",
+  "answer": 390428973,
+  "unit": "ton",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://www.fao.org/faostat/en/#data/QCL?area=5000&item=116&element=5510&year=2024",
+  "data_year": 2024,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "fao_world"
+ },
+ {
+  "id": "q3266",
+  "text": "2024 verilerine göre İtalya'da her 100.000 kişiye kaç hastane yatağı düşmektedir?",
+  "answer": 312,
+  "unit": "yatak",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/hlth_rs_bds1?freq=A&facility=HBEDT&unit=P_HTHAB&hlthcare=TOTAL&geo=IT&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl AB ortalaması: 507 yatak.",
+  "difficulty": 2,
+  "dataset": "es_hospital_beds",
+  "scale": {
+   "factor": 2.5
+  }
+ },
+ {
+  "id": "q3267",
+  "text": "2024 verilerine göre Yunanistan'da her 100.000 kişiye kaç hastane yatağı düşmektedir?",
+  "answer": 423,
+  "unit": "yatak",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/hlth_rs_bds1?freq=A&facility=HBEDT&unit=P_HTHAB&hlthcare=TOTAL&geo=EL&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl AB ortalaması: 507 yatak.",
+  "difficulty": 2,
+  "dataset": "es_hospital_beds",
+  "scale": {
+   "factor": 2.5
+  }
+ },
+ {
+  "id": "q3268",
+  "text": "2024 verilerine göre Polonya'da her 100.000 kişiye kaç hastane yatağı düşmektedir?",
+  "answer": 627,
+  "unit": "yatak",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/hlth_rs_bds1?freq=A&facility=HBEDT&unit=P_HTHAB&hlthcare=TOTAL&geo=PL&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl AB ortalaması: 507 yatak.",
+  "difficulty": 2,
+  "dataset": "es_hospital_beds",
+  "scale": {
+   "factor": 2.5
+  }
+ },
+ {
+  "id": "q3269",
+  "text": "2024 verilerine göre Fransa'da her 100.000 kişiye kaç hastane yatağı düşmektedir?",
+  "answer": 534,
+  "unit": "yatak",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/hlth_rs_bds1?freq=A&facility=HBEDT&unit=P_HTHAB&hlthcare=TOTAL&geo=FR&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl AB ortalaması: 507 yatak.",
+  "difficulty": 2,
+  "dataset": "es_hospital_beds",
+  "scale": {
+   "factor": 2.5
+  }
+ },
+ {
+  "id": "q3270",
+  "text": "2024 verilerine göre Hollanda'da her 100.000 kişiye kaç hastane yatağı düşmektedir?",
+  "answer": 221,
+  "unit": "yatak",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/hlth_rs_bds1?freq=A&facility=HBEDT&unit=P_HTHAB&hlthcare=TOTAL&geo=NL&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl AB ortalaması: 507 yatak.",
+  "difficulty": 2,
+  "dataset": "es_hospital_beds",
+  "scale": {
+   "factor": 2.5
+  }
+ },
+ {
+  "id": "q3271",
+  "text": "2024 verilerine göre Türkiye'de her 100.000 kişiye kaç hastane yatağı düşmektedir?",
+  "answer": 314,
+  "unit": "yatak",
+  "kind": "magnitude",
+  "category": "türkiye",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/hlth_rs_bds1?freq=A&facility=HBEDT&unit=P_HTHAB&hlthcare=TOTAL&geo=TR&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl AB ortalaması: 507 yatak.",
+  "difficulty": 2,
+  "dataset": "es_hospital_beds",
+  "scale": {
+   "factor": 2.5
+  }
+ },
+ {
+  "id": "q3272",
+  "text": "2024 verilerine göre İsveç'te her 100.000 kişiye kaç hastane yatağı düşmektedir?",
+  "answer": 187,
+  "unit": "yatak",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/hlth_rs_bds1?freq=A&facility=HBEDT&unit=P_HTHAB&hlthcare=TOTAL&geo=SE&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl AB ortalaması: 507 yatak.",
+  "difficulty": 2,
+  "dataset": "es_hospital_beds",
+  "scale": {
+   "factor": 2.5
+  }
+ },
+ {
+  "id": "q3273",
+  "text": "2024 verilerine göre Almanya'da her 100.000 kişiye kaç hastane yatağı düşmektedir?",
+  "answer": 759,
+  "unit": "yatak",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/hlth_rs_bds1?freq=A&facility=HBEDT&unit=P_HTHAB&hlthcare=TOTAL&geo=DE&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl AB ortalaması: 507 yatak.",
+  "difficulty": 2,
+  "dataset": "es_hospital_beds",
+  "scale": {
+   "factor": 2.5
+  }
+ },
+ {
+  "id": "q3274",
+  "text": "2024 verilerine göre İspanya'da her 100.000 kişiye kaç hastane yatağı düşmektedir?",
+  "answer": 283,
+  "unit": "yatak",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/hlth_rs_bds1?freq=A&facility=HBEDT&unit=P_HTHAB&hlthcare=TOTAL&geo=ES&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl AB ortalaması: 507 yatak.",
+  "difficulty": 2,
+  "dataset": "es_hospital_beds",
+  "scale": {
+   "factor": 2.5
+  }
+ },
+ {
+  "id": "q3275",
+  "text": "2021 verilerine göre Mindanao Adası'nın nüfusu kaçtır?",
+  "answer": 27021036,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q124873",
+  "data_year": 2021,
+  "fun_fact": "Ülke: Filipinler.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3276",
+  "text": "2020 verilerine göre Gotland Adası'nın nüfusu kaçtır?",
+  "answer": 60124,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q1027830",
+  "data_year": 2020,
+  "fun_fact": "Ülke: İsveç.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3277",
+  "text": "2021 verilerine göre Ankara Üniversitesi'nin kaç öğrencisi vardır?",
+  "answer": 48271,
+  "unit": "öğrenci",
+  "kind": "magnitude",
+  "category": "türkiye",
+  "source": "https://www.wikidata.org/wiki/Q1060621",
+  "data_year": 2021,
+  "fun_fact": "Konum: Ankara.",
+  "difficulty": 1,
+  "dataset": "universities_students",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3278",
+  "text": "Lotus Omega otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 285,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q377096",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3279",
+  "text": "Lamborghini Diablo otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 325,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q462223",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3280",
+  "text": "2020 verilerine göre Rodos Adası'nın nüfusu kaçtır?",
+  "answer": 127613,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q43048",
+  "data_year": 2020,
+  "fun_fact": "Ülke: Yunanistan.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3281",
+  "text": "2021 verilerine göre Sire Adası'nın nüfusu kaçtır?",
+  "answer": 21124,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q211230",
+  "data_year": 2021,
+  "fun_fact": "Ülke: Yunanistan.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3282",
+  "text": "Victoria Şelalesi kaç metre yüksekliğindedir?",
+  "answer": 108,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q43278",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "waterfalls_height",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3283",
+  "text": "Tortum Şelalesi kaç metre yüksekliğindedir?",
+  "answer": 48,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q1337971",
+  "data_year": 2026,
+  "fun_fact": "Ülke: Türkiye.",
+  "difficulty": 3,
+  "dataset": "waterfalls_height",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3284",
+  "text": "2023 verilerine göre Sint Eustatius Adası'nın nüfusu kaçtır?",
+  "answer": 3293,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q26180",
+  "data_year": 2023,
+  "fun_fact": "Ülke: Hollanda.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3285",
+  "text": "2021 verilerine göre Zanta Adası'nın nüfusu kaçtır?",
+  "answer": 41180,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q144880",
+  "data_year": 2021,
+  "fun_fact": "Ülke: Yunanistan.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3286",
+  "text": "Lamborghini Gallardo otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 320,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q152917",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3287",
+  "text": "2024 verilerine göre Süleyman Demirel Üniversitesi'nin kaç öğrencisi vardır?",
+  "answer": 36417,
+  "unit": "öğrenci",
+  "kind": "magnitude",
+  "category": "türkiye",
+  "source": "https://www.wikidata.org/wiki/Q1509957",
+  "data_year": 2024,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "universities_students",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3288",
+  "text": "2015 verilerine göre Mindoro Adası'nın nüfusu kaçtır?",
+  "answer": 1331473,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q211800",
+  "data_year": 2015,
+  "fun_fact": "Ülke: Filipinler.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3289",
+  "text": "London Eye kaç metre yüksekliğindedir?",
+  "answer": 135,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://www.wikidata.org/wiki/Q160659",
+  "data_year": 2026,
+  "fun_fact": "Konum: Lambeth, Birleşik Krallık.",
+  "difficulty": 3,
+  "dataset": "ferris_wheels",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3290",
+  "text": "2024 verilerine göre Paskalya Adası'nın nüfusu kaçtır?",
+  "answer": 4800,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q14452",
+  "data_year": 2024,
+  "fun_fact": "Ülke: Şili.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3291",
+  "text": "2024 verilerine göre Marmara Üniversitesi'nin kaç öğrencisi vardır?",
+  "answer": 61938,
+  "unit": "öğrenci",
+  "kind": "magnitude",
+  "category": "türkiye",
+  "source": "https://www.wikidata.org/wiki/Q1424081",
+  "data_year": 2024,
+  "fun_fact": "Konum: Eğitim.",
+  "difficulty": 1,
+  "dataset": "universities_students",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3292",
+  "text": "2022 verilerine göre Saint Helena Adası'nın nüfusu kaçtır?",
+  "answer": 3924,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q34497",
+  "data_year": 2022,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3293",
+  "text": "Porsche Carrera GT otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 330,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q748454",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3294",
+  "text": "Lamborghini Miura otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 276,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q850536",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3295",
+  "text": "2018 verilerine göre Gökçeada'nın nüfusu kaçtır?",
+  "answer": 9783,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q658437",
+  "data_year": 2018,
+  "fun_fact": "Ülke: Türkiye.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3296",
+  "text": "Hyundai i10 otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 163,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q494384",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3297",
+  "text": "Rolls-Royce Phantom VIII otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 250,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q33657874",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3298",
+  "text": "2021 verilerine göre Taşoz Adası'nın nüfusu kaçtır?",
+  "answer": 13100,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q204096",
+  "data_year": 2021,
+  "fun_fact": "Ülke: Yunanistan.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3299",
+  "text": "2020 verilerine göre Guam Adası'nın nüfusu kaçtır?",
+  "answer": 153836,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q16635",
+  "data_year": 2020,
+  "fun_fact": "Ülke: Amerika Birleşik Devletleri.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3300",
+  "text": "Lamborghini 350GT otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 254,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q569269",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3301",
+  "text": "Lamborghini Urus otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 305,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q3077088",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3302",
+  "text": "2022 verilerine göre Capri Adası'nın nüfusu kaçtır?",
+  "answer": 12903,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q173292",
+  "data_year": 2022,
+  "fun_fact": "Ülke: İtalya.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3303",
+  "text": "2021 verilerine göre Limni Adası'nın nüfusu kaçtır?",
+  "answer": 16700,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q192483",
+  "data_year": 2021,
+  "fun_fact": "Ülke: Yunanistan.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3304",
+  "text": "Mercedes-Benz SLR McLaren otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 336,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q207624",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3305",
+  "text": "2021 verilerine göre Çuha Adası'nın nüfusu kaçtır?",
+  "answer": 3605,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q207239",
+  "data_year": 2021,
+  "fun_fact": "Ülke: Yunanistan.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3306",
+  "text": "Iguazú Şelalesi kaç metre yüksekliğindedir?",
+  "answer": 82,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q36332",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "waterfalls_height",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3307",
+  "text": "Peugeot 208 otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 190,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q1164784",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3308",
+  "text": "2023 verilerine göre Timor Adası'nın nüfusu kaçtır?",
+  "answer": 3368735,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q83067",
+  "data_year": 2023,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3309",
+  "text": "2022 verilerine göre Kocaeli Üniversitesi'nin kaç öğrencisi vardır?",
+  "answer": 67250,
+  "unit": "öğrenci",
+  "kind": "magnitude",
+  "category": "türkiye",
+  "source": "https://www.wikidata.org/wiki/Q1550686",
+  "data_year": 2022,
+  "fun_fact": "Konum: İzmit.",
+  "difficulty": 2,
+  "dataset": "universities_students",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3310",
+  "text": "BMW M3 otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 250,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q796579",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3311",
+  "text": "2023 verilerine göre Hispanyola Adası'nın nüfusu kaçtır?",
+  "answer": 22261005,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q25277",
+  "data_year": 2023,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3312",
+  "text": "2021 verilerine göre Yüzüncü Yıl Üniversitesi'nin kaç öğrencisi vardır?",
+  "answer": 25655,
+  "unit": "öğrenci",
+  "kind": "magnitude",
+  "category": "türkiye",
+  "source": "https://www.wikidata.org/wiki/Q3671573",
+  "data_year": 2021,
+  "fun_fact": "Konum: Van.",
+  "difficulty": 2,
+  "dataset": "universities_students",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3313",
+  "text": "2018 verilerine göre Yaşar Üniversitesi'nin kaç öğrencisi vardır?",
+  "answer": 10423,
+  "unit": "öğrenci",
+  "kind": "magnitude",
+  "category": "türkiye",
+  "source": "https://www.wikidata.org/wiki/Q8050681",
+  "data_year": 2018,
+  "fun_fact": "Konum: İzmir.",
+  "difficulty": 2,
+  "dataset": "universities_students",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3314",
+  "text": "2021 verilerine göre Midilli Adası'nın nüfusu kaçtır?",
+  "answer": 83800,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q128087",
+  "data_year": 2021,
+  "fun_fact": "Ülke: Yunanistan.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3315",
+  "text": "2019 verilerine göre Bilkent Üniversitesi'nin kaç öğrencisi vardır?",
+  "answer": 11701,
+  "unit": "öğrenci",
+  "kind": "magnitude",
+  "category": "türkiye",
+  "source": "https://www.wikidata.org/wiki/Q861904",
+  "data_year": 2019,
+  "fun_fact": "Konum: Ankara.",
+  "difficulty": 1,
+  "dataset": "universities_students",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3316",
+  "text": "2015 verilerine göre Luzon Adası'nın nüfusu kaçtır?",
+  "answer": 53336134,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q125384",
+  "data_year": 2015,
+  "fun_fact": "Ülke: Filipinler.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3317",
+  "text": "Ferrari 599 GT otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 330,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q385268",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3318",
+  "text": "2022 verilerine göre İstanbul Bilgi Üniversitesi'nin kaç öğrencisi vardır?",
+  "answer": 20000,
+  "unit": "öğrenci",
+  "kind": "magnitude",
+  "category": "türkiye",
+  "source": "https://www.wikidata.org/wiki/Q344262",
+  "data_year": 2022,
+  "fun_fact": "Konum: İstanbul.",
+  "difficulty": 1,
+  "dataset": "universities_students",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3319",
+  "text": "2019 verilerine göre Anglesey Adası'nın nüfusu kaçtır?",
+  "answer": 70043,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q168159",
+  "data_year": 2019,
+  "fun_fact": "Ülke: Birleşik Krallık.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3320",
+  "text": "2024 verilerine göre Fuerteventura Adası'nın nüfusu kaçtır?",
+  "answer": 127043,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q192534",
+  "data_year": 2024,
+  "fun_fact": "Ülke: İspanya.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3321",
+  "text": "2024 verilerine göre İbiza Adası'nın nüfusu kaçtır?",
+  "answer": 161485,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q52631",
+  "data_year": 2024,
+  "fun_fact": "Ülke: İspanya.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3322",
+  "text": "2023 verilerine göre İrlanda Adası'nın nüfusu kaçtır?",
+  "answer": 7185600,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q22890",
+  "data_year": 2023,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3323",
+  "text": "2023 verilerine göre Montserrat Adası'nın nüfusu kaçtır?",
+  "answer": 5440,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q13353",
+  "data_year": 2023,
+  "fun_fact": "Ülke: Birleşik Krallık.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3324",
+  "text": "Lamborghini Countach otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 290,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q863812",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3325",
+  "text": "2024 verilerine göre Namık Kemal Üniversitesi'nin kaç öğrencisi vardır?",
+  "answer": 30958,
+  "unit": "öğrenci",
+  "kind": "magnitude",
+  "category": "türkiye",
+  "source": "https://www.wikidata.org/wiki/Q1964403",
+  "data_year": 2024,
+  "fun_fact": "Konum: Tekirdağ.",
+  "difficulty": 2,
+  "dataset": "universities_students",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3326",
+  "text": "2023 verilerine göre Réunion Adası'nın nüfusu kaçtır?",
+  "answer": 889679,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q17070",
+  "data_year": 2023,
+  "fun_fact": "Ülke: Fransa.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3327",
+  "text": "Ford Crown Victoria otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 208,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q842010",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3328",
+  "text": "2022 verilerine göre Tayvan Adası'nın nüfusu kaçtır?",
+  "answer": 23894394,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q22502",
+  "data_year": 2022,
+  "fun_fact": "Ülke: Tayvan.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3329",
+  "text": "Lamborghini Huracán otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 325,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q15396270",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3330",
+  "text": "Nissan GT-R otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 321,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q499109",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3331",
+  "text": "Lamborghini Aventador otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 351,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q318094",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3332",
+  "text": "Nissan Juke otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 180,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q1415815",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3333",
+  "text": "2024 verilerine göre Trakya Üniversitesi'nin kaç öğrencisi vardır?",
+  "answer": 40881,
+  "unit": "öğrenci",
+  "kind": "magnitude",
+  "category": "türkiye",
+  "source": "https://www.wikidata.org/wiki/Q845682",
+  "data_year": 2024,
+  "fun_fact": "Konum: Edirne.",
+  "difficulty": 2,
+  "dataset": "universities_students",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3334",
+  "text": "Bugatti Veyron otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 408,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q172610",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3335",
+  "text": "2021 verilerine göre Sumatra Adası'nın nüfusu kaçtır?",
+  "answer": 60000000,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q3492",
+  "data_year": 2021,
+  "fun_fact": "Ülke: Endonezya.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3336",
+  "text": "Rheinfall Şelalesi kaç metre yüksekliğindedir?",
+  "answer": 23,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q214924",
+  "data_year": 2026,
+  "fun_fact": "Ülke: İsviçre.",
+  "difficulty": 3,
+  "dataset": "waterfalls_height",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3337",
+  "text": "Maybach Exelero otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 351,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q843163",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3338",
+  "text": "2018 verilerine göre Cerbe Adası'nın nüfusu kaçtır?",
+  "answer": 175820,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q188938",
+  "data_year": 2018,
+  "fun_fact": "Ülke: Tunus.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3339",
+  "text": "2021 verilerine göre İkarya Adası'nın nüfusu kaçtır?",
+  "answer": 8843,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q209576",
+  "data_year": 2021,
+  "fun_fact": "Ülke: Yunanistan.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3340",
+  "text": "Porsche 918 otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 345,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q962317",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3341",
+  "text": "2016 verilerine göre Newfoundland Adası'nın nüfusu kaçtır?",
+  "answer": 479538,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q48335",
+  "data_year": 2016,
+  "fun_fact": "Ülke: Kanada.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3342",
+  "text": "Ferrari SF90 Stradale otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 340,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q64162421",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3343",
+  "text": "2016 verilerine göre Kiş Adası'nın nüfusu kaçtır?",
+  "answer": 39853,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q221883",
+  "data_year": 2016,
+  "fun_fact": "Ülke: İran.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3344",
+  "text": "2022 verilerine göre Kadir Has Üniversitesi'nin kaç öğrencisi vardır?",
+  "answer": 5122,
+  "unit": "öğrenci",
+  "kind": "magnitude",
+  "category": "türkiye",
+  "source": "https://www.wikidata.org/wiki/Q3242620",
+  "data_year": 2022,
+  "fun_fact": "Konum: Fatih.",
+  "difficulty": 2,
+  "dataset": "universities_students",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3345",
+  "text": "2018 verilerine göre İzmir Ekonomi Üniversitesi'nin kaç öğrencisi vardır?",
+  "answer": 9322,
+  "unit": "öğrenci",
+  "kind": "magnitude",
+  "category": "türkiye",
+  "source": "https://www.wikidata.org/wiki/Q4822444",
+  "data_year": 2018,
+  "fun_fact": "Konum: İzmir.",
+  "difficulty": 2,
+  "dataset": "universities_students",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3346",
+  "text": "2022 verilerine göre Wight Adası'nın nüfusu kaçtır?",
+  "answer": 140794,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q9679",
+  "data_year": 2022,
+  "fun_fact": "Ülke: Birleşik Krallık.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3347",
+  "text": "2015 verilerine göre Shikoku Adası'nın nüfusu kaçtır?",
+  "answer": 3845534,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q13991",
+  "data_year": 2015,
+  "fun_fact": "Ülke: Japonya.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3348",
+  "text": "2021 verilerine göre Sisam Adası'nın nüfusu kaçtır?",
+  "answer": 32642,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q156882",
+  "data_year": 2021,
+  "fun_fact": "Ülke: Yunanistan.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3349",
+  "text": "Tata Nano otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 105,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q152238",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3350",
+  "text": "2015 verilerine göre Cava Adası'nın nüfusu kaçtır?",
+  "answer": 160293748,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q3757",
+  "data_year": 2015,
+  "fun_fact": "Ülke: Endonezya.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3351",
+  "text": "2024 verilerine göre Gazi Üniversitesi'nin kaç öğrencisi vardır?",
+  "answer": 39234,
+  "unit": "öğrenci",
+  "kind": "magnitude",
+  "category": "türkiye",
+  "source": "https://www.wikidata.org/wiki/Q1496662",
+  "data_year": 2024,
+  "fun_fact": "Konum: Ankara.",
+  "difficulty": 1,
+  "dataset": "universities_students",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3352",
+  "text": "Ferrari 458 Italia otomobilinin en yüksek hızı saatte kaç kilometredir?",
+  "answer": 325,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q276396",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "cars_speed",
+  "scale": {
+   "factor": 1.6
+  }
+ },
+ {
+  "id": "q3353",
+  "text": "2021 verilerine göre Kefalonia Adası'nın nüfusu kaçtır?",
+  "answer": 36064,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q178488",
+  "data_year": 2021,
+  "fun_fact": "Ülke: Yunanistan.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3354",
+  "text": "2024 verilerine göre Lanzarote Adası'nın nüfusu kaçtır?",
+  "answer": 163467,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q182432",
+  "data_year": 2024,
+  "fun_fact": "Ülke: İspanya.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3355",
+  "text": "2016 verilerine göre Keşm Adası'nın nüfusu kaçtır?",
+  "answer": 148993,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q240719",
+  "data_year": 2016,
+  "fun_fact": "Ülke: İran.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3356",
+  "text": "2024 verilerine göre Mallorca Adası'nın nüfusu kaçtır?",
+  "answer": 949047,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q8828",
+  "data_year": 2024,
+  "fun_fact": "Ülke: İspanya.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3357",
+  "text": "2019 verilerine göre Bandırma Onyedi Eylül Üniversitesi'nin kaç öğrencisi vardır?",
+  "answer": 13500,
+  "unit": "öğrenci",
+  "kind": "magnitude",
+  "category": "türkiye",
+  "source": "https://www.wikidata.org/wiki/Q20757715",
+  "data_year": 2019,
+  "fun_fact": "Konum: Bandırma.",
+  "difficulty": 3,
+  "dataset": "universities_students",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3358",
+  "text": "2021 verilerine göre Semadirek Adası'nın nüfusu kaçtır?",
+  "answer": 2600,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q203175",
+  "data_year": 2021,
+  "fun_fact": "Ülke: Yunanistan.",
+  "difficulty": 3,
+  "dataset": "islands_population",
+  "scale": {
+   "factor": 5
+  }
  }
 ]
