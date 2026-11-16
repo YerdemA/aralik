@@ -88,7 +88,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Başakşehir.",
   "difficulty": 2,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0008",
@@ -101,7 +104,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Kadıköy.",
   "difficulty": 2,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0009",
@@ -128,7 +134,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Fatih.",
   "difficulty": 2,
-  "dataset": "structures_tr"
+  "dataset": "structures_tr",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0011",
@@ -277,7 +286,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Fırat.",
   "difficulty": 3,
-  "dataset": "rivers_tr"
+  "dataset": "rivers_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0022",
@@ -290,7 +302,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "elements_melting"
+  "dataset": "elements_melting",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0023",
@@ -329,7 +344,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Kuala Lumpur, Malezya.",
   "difficulty": 3,
-  "dataset": "structures_world"
+  "dataset": "structures_world",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0026",
@@ -342,7 +360,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Karadeniz.",
   "difficulty": 2,
-  "dataset": "rivers_tr"
+  "dataset": "rivers_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0027",
@@ -381,7 +402,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Dubai, Birleşik Arap Emirlikleri.",
   "difficulty": 1,
-  "dataset": "structures_world"
+  "dataset": "structures_world",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0030",
@@ -394,7 +418,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0031",
@@ -407,7 +434,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_lifespan"
+  "dataset": "animals_lifespan",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0032",
@@ -433,7 +463,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Bursa.",
   "difficulty": 2,
-  "dataset": "mountains_tr"
+  "dataset": "mountains_tr",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0034",
@@ -447,7 +480,10 @@
   "fun_fact": "Döküldüğü yer: Tuna.",
   "difficulty": 3,
   "dataset": "rivers_world",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0035",
@@ -460,7 +496,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "animals_lifespan"
+  "dataset": "animals_lifespan",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0036",
@@ -525,7 +564,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "animals_lifespan"
+  "dataset": "animals_lifespan",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0041",
@@ -538,7 +580,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Hazar Denizi.",
   "difficulty": 3,
-  "dataset": "rivers_tr"
+  "dataset": "rivers_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0042",
@@ -603,7 +648,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "animals_lifespan"
+  "dataset": "animals_lifespan",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0047",
@@ -616,7 +664,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Akdeniz.",
   "difficulty": 3,
-  "dataset": "rivers_tr"
+  "dataset": "rivers_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0048",
@@ -629,7 +680,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Üsküdar.",
   "difficulty": 1,
-  "dataset": "structures_tr"
+  "dataset": "structures_tr",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0049",
@@ -694,7 +748,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: İsrail.",
   "difficulty": 3,
-  "dataset": "mountains_world"
+  "dataset": "mountains_world",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0054",
@@ -708,7 +765,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "elements_boiling",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0055",
@@ -774,7 +834,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Amerika Birleşik Devletleri.",
   "difficulty": 3,
-  "dataset": "mountains_world"
+  "dataset": "mountains_world",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0060",
@@ -787,7 +850,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Trabzon.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0061",
@@ -800,7 +866,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0062",
@@ -826,7 +895,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_lifespan"
+  "dataset": "animals_lifespan",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0064",
@@ -878,7 +950,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Mekke, Suudi Arabistan.",
   "difficulty": 2,
-  "dataset": "structures_world"
+  "dataset": "structures_world",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0068",
@@ -904,7 +979,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Kuzey Denizi.",
   "difficulty": 2,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0070",
@@ -996,7 +1074,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Japonya.",
   "difficulty": 3,
-  "dataset": "mountains_world"
+  "dataset": "mountains_world",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0077",
@@ -1009,7 +1090,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Erzurum.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0078",
@@ -1022,7 +1106,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Manş Denizi.",
   "difficulty": 3,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0079",
@@ -1035,7 +1122,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_melting"
+  "dataset": "elements_melting",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0080",
@@ -1048,7 +1138,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_melting"
+  "dataset": "elements_melting",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0081",
@@ -1100,7 +1193,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Akdeniz.",
   "difficulty": 3,
-  "dataset": "rivers_tr"
+  "dataset": "rivers_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0085",
@@ -1139,7 +1235,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Japonya.",
   "difficulty": 3,
-  "dataset": "structures_world"
+  "dataset": "structures_world",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0088",
@@ -1220,7 +1319,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Buca.",
   "difficulty": 2,
-  "dataset": "structures_tr"
+  "dataset": "structures_tr",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0094",
@@ -1234,7 +1336,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "elements_boiling",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0095",
@@ -1273,7 +1378,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_melting"
+  "dataset": "elements_melting",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0098",
@@ -1286,7 +1394,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Akdeniz.",
   "difficulty": 3,
-  "dataset": "rivers_tr"
+  "dataset": "rivers_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0099",
@@ -1312,7 +1423,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Konak.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0101",
@@ -1429,7 +1543,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Manhattan, Amerika Birleşik Devletleri.",
   "difficulty": 3,
-  "dataset": "skyscrapers_world"
+  "dataset": "skyscrapers_world",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q0110",
@@ -1442,7 +1559,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Antalya.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0111",
@@ -1455,7 +1575,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "animals_lifespan"
+  "dataset": "animals_lifespan",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0112",
@@ -1520,7 +1643,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Şattülarap.",
   "difficulty": 1,
-  "dataset": "rivers_tr"
+  "dataset": "rivers_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0117",
@@ -1559,7 +1685,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Amerika Birleşik Devletleri.",
   "difficulty": 3,
-  "dataset": "mountains_world"
+  "dataset": "mountains_world",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0120",
@@ -1585,7 +1714,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Bitlis.",
   "difficulty": 2,
-  "dataset": "mountains_tr"
+  "dataset": "mountains_tr",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0122",
@@ -1650,7 +1782,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_boiling"
+  "dataset": "elements_boiling",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0127",
@@ -1663,7 +1798,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Sankt-Peterburg, Rusya.",
   "difficulty": 3,
-  "dataset": "skyscrapers_world"
+  "dataset": "skyscrapers_world",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q0128",
@@ -1796,7 +1934,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Adıyaman.",
   "difficulty": 1,
-  "dataset": "structures_tr"
+  "dataset": "structures_tr",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0138",
@@ -1907,7 +2048,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Beşiktaş.",
   "difficulty": 2,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0146",
@@ -1920,7 +2064,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "animals_lifespan"
+  "dataset": "animals_lifespan",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0147",
@@ -2025,7 +2172,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Trabzon.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0155",
@@ -2064,7 +2214,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Rize.",
   "difficulty": 3,
-  "dataset": "mountains_tr"
+  "dataset": "mountains_tr",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0158",
@@ -2116,7 +2269,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Bitlis.",
   "difficulty": 3,
-  "dataset": "mountains_tr"
+  "dataset": "mountains_tr",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0162",
@@ -2129,7 +2285,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Kayseri.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0163",
@@ -2155,7 +2314,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Manhattan, Amerika Birleşik Devletleri.",
   "difficulty": 2,
-  "dataset": "structures_world"
+  "dataset": "structures_world",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0165",
@@ -2272,7 +2434,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Gize, Mısır.",
   "difficulty": 3,
-  "dataset": "structures_world"
+  "dataset": "structures_world",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0174",
@@ -2285,7 +2450,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Güney Aral Gölü.",
   "difficulty": 3,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0175",
@@ -2363,7 +2531,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Adıyaman.",
   "difficulty": 2,
-  "dataset": "mountains_tr"
+  "dataset": "mountains_tr",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0181",
@@ -2415,7 +2586,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Fransa.",
   "difficulty": 3,
-  "dataset": "mountains_world"
+  "dataset": "mountains_world",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0185",
@@ -2493,7 +2667,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Akdeniz.",
   "difficulty": 2,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0191",
@@ -2535,7 +2712,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Basra Körfezi.",
   "difficulty": 3,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0194",
@@ -2548,7 +2728,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_melting"
+  "dataset": "elements_melting",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0195",
@@ -2587,7 +2770,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Lut Gölü.",
   "difficulty": 3,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0198",
@@ -2600,7 +2786,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Manhattan, Amerika Birleşik Devletleri.",
   "difficulty": 3,
-  "dataset": "skyscrapers_world"
+  "dataset": "skyscrapers_world",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q0199",
@@ -2627,7 +2816,10 @@
   "fun_fact": "Konum: Ümraniye.",
   "difficulty": 2,
   "dataset": "structures_tr",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0201",
@@ -2653,7 +2845,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Nepal.",
   "difficulty": 1,
-  "dataset": "mountains_world"
+  "dataset": "mountains_world",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0203",
@@ -2692,7 +2887,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Kayseri.",
   "difficulty": 2,
-  "dataset": "mountains_tr"
+  "dataset": "mountains_tr",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0206",
@@ -2757,7 +2955,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "animals_lifespan"
+  "dataset": "animals_lifespan",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0211",
@@ -2796,7 +2997,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Doğu Çin Denizi.",
   "difficulty": 3,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0214",
@@ -2822,7 +3026,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Atlas Okyanusu.",
   "difficulty": 3,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0216",
@@ -2874,7 +3081,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Kasımpaşa.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0220",
@@ -2887,7 +3097,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_melting"
+  "dataset": "elements_melting",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0221",
@@ -2900,7 +3113,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Hakkari.",
   "difficulty": 2,
-  "dataset": "mountains_tr"
+  "dataset": "mountains_tr",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0222",
@@ -2913,7 +3129,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Amerika Birleşik Devletleri.",
   "difficulty": 3,
-  "dataset": "mountains_world"
+  "dataset": "mountains_world",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0223",
@@ -2926,7 +3145,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: İsrail işgali altındaki topraklar.",
   "difficulty": 3,
-  "dataset": "mountains_world"
+  "dataset": "mountains_world",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0224",
@@ -2939,7 +3161,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: İstanbul.",
   "difficulty": 2,
-  "dataset": "structures_tr"
+  "dataset": "structures_tr",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0225",
@@ -2952,7 +3177,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Şehitkâmil.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0226",
@@ -3004,7 +3232,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Rusya.",
   "difficulty": 3,
-  "dataset": "mountains_world"
+  "dataset": "mountains_world",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0230",
@@ -3033,7 +3264,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Trakya Denizi.",
   "difficulty": 3,
-  "dataset": "rivers_tr"
+  "dataset": "rivers_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0232",
@@ -3047,7 +3281,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "elements_melting",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0233",
@@ -3125,7 +3362,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Karadeniz.",
   "difficulty": 3,
-  "dataset": "rivers_tr"
+  "dataset": "rivers_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0239",
@@ -3206,7 +3446,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Paris'in 7. bölgesi, Fransa.",
   "difficulty": 1,
-  "dataset": "structures_world"
+  "dataset": "structures_world",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0245",
@@ -3245,7 +3488,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Aksaray.",
   "difficulty": 2,
-  "dataset": "mountains_tr"
+  "dataset": "mountains_tr",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0248",
@@ -3440,7 +3686,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_melting"
+  "dataset": "elements_melting",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0263",
@@ -3466,7 +3715,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Manisa.",
   "difficulty": 3,
-  "dataset": "mountains_tr"
+  "dataset": "mountains_tr",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0265",
@@ -3479,7 +3731,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Bursa.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0266",
@@ -3492,7 +3747,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Meksika Körfezi.",
   "difficulty": 3,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0267",
@@ -3505,7 +3763,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: İtalya.",
   "difficulty": 3,
-  "dataset": "mountains_world"
+  "dataset": "mountains_world",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0268",
@@ -3570,7 +3831,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Karadeniz.",
   "difficulty": 1,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0273",
@@ -3610,7 +3874,10 @@
   "fun_fact": "Konum: Yunanistan.",
   "difficulty": 3,
   "dataset": "mountains_world",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0276",
@@ -3681,7 +3948,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Bengal Körfezi.",
   "difficulty": 3,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0281",
@@ -3733,7 +4003,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Ege Denizi.",
   "difficulty": 3,
-  "dataset": "rivers_tr"
+  "dataset": "rivers_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0285",
@@ -3759,7 +4032,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Londra, Birleşik Krallık.",
   "difficulty": 3,
-  "dataset": "skyscrapers_world"
+  "dataset": "skyscrapers_world",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q0287",
@@ -3866,7 +4142,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Altındağ.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0295",
@@ -3932,7 +4211,10 @@
   "fun_fact": "Konum: Çin Halk Cumhuriyeti.",
   "difficulty": 3,
   "dataset": "mountains_world",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0300",
@@ -4049,7 +4331,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Mısır.",
   "difficulty": 3,
-  "dataset": "mountains_world"
+  "dataset": "mountains_world",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0309",
@@ -4062,7 +4347,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Yunanistan.",
   "difficulty": 3,
-  "dataset": "mountains_world"
+  "dataset": "mountains_world",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0310",
@@ -4153,7 +4441,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Ağrı.",
   "difficulty": 2,
-  "dataset": "mountains_tr"
+  "dataset": "mountains_tr",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0317",
@@ -4179,7 +4470,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Ağrı.",
   "difficulty": 1,
-  "dataset": "mountains_tr"
+  "dataset": "mountains_tr",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0319",
@@ -4192,7 +4486,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Şanghay, Çin Halk Cumhuriyeti.",
   "difficulty": 3,
-  "dataset": "skyscrapers_world"
+  "dataset": "skyscrapers_world",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q0320",
@@ -4205,7 +4502,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Amerika Birleşik Devletleri.",
   "difficulty": 3,
-  "dataset": "mountains_world"
+  "dataset": "mountains_world",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0321",
@@ -4231,7 +4531,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Konak.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0323",
@@ -4296,7 +4599,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Adriyatik Denizi.",
   "difficulty": 3,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0328",
@@ -4429,7 +4735,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Sakarya Nehri.",
   "difficulty": 3,
-  "dataset": "rivers_tr"
+  "dataset": "rivers_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0338",
@@ -4481,7 +4790,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Kura Nehri.",
   "difficulty": 2,
-  "dataset": "rivers_tr"
+  "dataset": "rivers_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0342",
@@ -4507,7 +4819,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_boiling"
+  "dataset": "elements_boiling",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0344",
@@ -4534,7 +4849,10 @@
   "fun_fact": "Döküldüğü yer: Sava.",
   "difficulty": 3,
   "dataset": "rivers_world",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0346",
@@ -4573,7 +4891,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Şattülarap.",
   "difficulty": 1,
-  "dataset": "rivers_tr"
+  "dataset": "rivers_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0349",
@@ -4586,7 +4907,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Karadeniz.",
   "difficulty": 2,
-  "dataset": "rivers_tr"
+  "dataset": "rivers_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0350",
@@ -4742,7 +5066,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Şikago, Amerika Birleşik Devletleri.",
   "difficulty": 3,
-  "dataset": "skyscrapers_world"
+  "dataset": "skyscrapers_world",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q0362",
@@ -4768,7 +5095,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Tekkeköy.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0364",
@@ -4860,7 +5190,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Yüreğir.",
   "difficulty": 2,
-  "dataset": "structures_tr"
+  "dataset": "structures_tr",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0371",
@@ -4941,7 +5274,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Niğde.",
   "difficulty": 3,
-  "dataset": "mountains_tr"
+  "dataset": "mountains_tr",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0377",
@@ -4967,7 +5303,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_boiling"
+  "dataset": "elements_boiling",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0379",
@@ -4980,7 +5319,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Paraná Nehri.",
   "difficulty": 3,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0380",
@@ -4993,7 +5335,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "rivers_tr"
+  "dataset": "rivers_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0381",
@@ -5007,7 +5352,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "elements_boiling",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0382",
@@ -5020,7 +5368,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Şişli.",
   "difficulty": 2,
-  "dataset": "structures_tr"
+  "dataset": "structures_tr",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0383",
@@ -5034,7 +5385,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "elements_melting",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0384",
@@ -5047,7 +5401,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: İtalya.",
   "difficulty": 3,
-  "dataset": "mountains_world"
+  "dataset": "mountains_world",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0385",
@@ -5389,7 +5746,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0411",
@@ -5416,7 +5776,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "elements_boiling",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0413",
@@ -5521,7 +5884,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Sarıyer.",
   "difficulty": 2,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0421",
@@ -5547,7 +5913,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_boiling"
+  "dataset": "elements_boiling",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0423",
@@ -5587,7 +5956,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "mountains_tr"
+  "dataset": "mountains_tr",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0426",
@@ -5613,7 +5985,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Manhattan, Amerika Birleşik Devletleri.",
   "difficulty": 2,
-  "dataset": "skyscrapers_world"
+  "dataset": "skyscrapers_world",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q0428",
@@ -5626,7 +6001,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Beşiktaş.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0429",
@@ -5639,7 +6017,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Konak.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0430",
@@ -5821,7 +6202,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Konya.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0444",
@@ -5847,7 +6231,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_melting"
+  "dataset": "elements_melting",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0446",
@@ -5873,7 +6260,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Karadeniz.",
   "difficulty": 2,
-  "dataset": "rivers_tr"
+  "dataset": "rivers_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0448",
@@ -5899,7 +6289,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Van.",
   "difficulty": 3,
-  "dataset": "mountains_tr"
+  "dataset": "mountains_tr",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0450",
@@ -5964,7 +6357,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Kuzey Aral Gölü.",
   "difficulty": 3,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q0455",
@@ -5990,7 +6386,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Beyoğlu.",
   "difficulty": 1,
-  "dataset": "structures_tr"
+  "dataset": "structures_tr",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0457",
@@ -6069,7 +6468,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "architecture_sizes"
+  "dataset": "architecture_sizes",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0463",
@@ -6317,7 +6719,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "architecture_sizes"
+  "dataset": "architecture_sizes",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0482",
@@ -6907,7 +7312,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "architecture_sizes"
+  "dataset": "architecture_sizes",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0527",
@@ -7273,7 +7681,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "architecture_sizes"
+  "dataset": "architecture_sizes",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0555",
@@ -7494,7 +7905,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "architecture_sizes"
+  "dataset": "architecture_sizes",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0572",
@@ -8018,7 +8432,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "architecture_sizes"
+  "dataset": "architecture_sizes",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0612",
@@ -8891,7 +9308,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "architecture_sizes"
+  "dataset": "architecture_sizes",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0679",
@@ -8969,7 +9389,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "architecture_sizes"
+  "dataset": "architecture_sizes",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0685",
@@ -9439,7 +9862,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "architecture_sizes"
+  "dataset": "architecture_sizes",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0721",
@@ -10195,7 +10621,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "architecture_sizes"
+  "dataset": "architecture_sizes",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0779",
@@ -10860,7 +11289,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "architecture_sizes"
+  "dataset": "architecture_sizes",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0830",
@@ -10873,7 +11305,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "science_modern"
+  "dataset": "science_modern",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q0831",
@@ -11107,7 +11542,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "architecture_sizes"
+  "dataset": "architecture_sizes",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0849",
@@ -11146,7 +11584,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "architecture_sizes"
+  "dataset": "architecture_sizes",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0852",
@@ -12070,7 +12511,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "architecture_sizes"
+  "dataset": "architecture_sizes",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0923",
@@ -12227,7 +12671,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "turkey_republic"
+  "dataset": "turkey_republic",
+  "scale": {
+   "half": 5
+  }
  },
  {
   "id": "q0935",
@@ -12318,7 +12765,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "architecture_sizes"
+  "dataset": "architecture_sizes",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0942",
@@ -12579,7 +13029,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "architecture_sizes"
+  "dataset": "architecture_sizes",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0962",
@@ -12839,7 +13292,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "architecture_sizes"
+  "dataset": "architecture_sizes",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0982",
@@ -12904,7 +13360,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "architecture_sizes"
+  "dataset": "architecture_sizes",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0987",
@@ -12970,7 +13429,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "architecture_sizes"
+  "dataset": "architecture_sizes",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0992",
@@ -13048,7 +13510,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "architecture_sizes"
+  "dataset": "architecture_sizes",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q0998",
@@ -13157,7 +13622,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_lifespan"
+  "dataset": "animals_lifespan",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1006",
@@ -13185,7 +13653,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "animals_lifespan",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1008",
@@ -13212,7 +13683,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "elements_boiling",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1010",
@@ -13239,7 +13713,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "elements_melting",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1012",
@@ -13253,7 +13730,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "elements_boiling",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1013",
@@ -13419,7 +13899,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "elements_boiling",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1025",
@@ -13586,7 +14069,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Yeşilırmak.",
   "difficulty": 3,
-  "dataset": "rivers_tr"
+  "dataset": "rivers_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1037",
@@ -13678,7 +14164,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "elements_boiling",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1044",
@@ -13812,7 +14301,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Ankara.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1054",
@@ -13825,7 +14317,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: İstanbul.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1055",
@@ -13851,7 +14346,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Şehzadeler.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1057",
@@ -13877,7 +14375,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: İzmit.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1059",
@@ -13930,7 +14431,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "elements_boiling",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1063",
@@ -13996,7 +14500,10 @@
   "fun_fact": "Döküldüğü yer: Dicle Nehri.",
   "difficulty": 3,
   "dataset": "rivers_tr",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1068",
@@ -14009,7 +14516,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Rize.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1069",
@@ -14090,7 +14600,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: İzmir Körfezi.",
   "difficulty": 3,
-  "dataset": "rivers_tr"
+  "dataset": "rivers_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1075",
@@ -14117,7 +14630,10 @@
   "fun_fact": "Döküldüğü yer: Karadeniz.",
   "difficulty": 3,
   "dataset": "rivers_tr",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1077",
@@ -14169,7 +14685,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1081",
@@ -14225,7 +14744,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "elements_boiling",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1085",
@@ -14267,7 +14789,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Elazığ.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1088",
@@ -14319,7 +14844,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_lifespan"
+  "dataset": "animals_lifespan",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1092",
@@ -14345,7 +14873,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Iğdır.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1094",
@@ -14376,7 +14907,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "elements_boiling",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1096",
@@ -14389,7 +14923,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_lifespan"
+  "dataset": "animals_lifespan",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1097",
@@ -14402,7 +14939,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Karagümrük.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1098",
@@ -14458,7 +14998,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Ege Denizi.",
   "difficulty": 3,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1102",
@@ -14527,7 +15070,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "elements_boiling",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1107",
@@ -14541,7 +15087,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "elements_boiling",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1108",
@@ -14593,7 +15142,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Bohai Denizi.",
   "difficulty": 3,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1112",
@@ -14619,7 +15171,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Tiren Denizi.",
   "difficulty": 3,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1114",
@@ -14633,7 +15188,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "elements_boiling",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1115",
@@ -14647,7 +15205,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "animals_lifespan",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1116",
@@ -14674,7 +15235,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "elements_melting",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1118",
@@ -14713,7 +15277,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Bursa.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1121",
@@ -14727,7 +15294,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "elements_melting",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1122",
@@ -14740,7 +15310,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_lifespan"
+  "dataset": "animals_lifespan",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1123",
@@ -14770,7 +15343,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_lifespan"
+  "dataset": "animals_lifespan",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1125",
@@ -14862,7 +15438,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_melting"
+  "dataset": "elements_melting",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1132",
@@ -14914,7 +15493,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_lifespan"
+  "dataset": "animals_lifespan",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1136",
@@ -14966,7 +15548,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "elements_boiling"
+  "dataset": "elements_boiling",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1140",
@@ -14980,7 +15565,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "elements_boiling",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1141",
@@ -15045,7 +15633,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Kuzey Denizi.",
   "difficulty": 3,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1146",
@@ -15058,7 +15649,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Çorum.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1147",
@@ -15101,7 +15695,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Mersin.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1150",
@@ -15114,7 +15711,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Umman Denizi.",
   "difficulty": 3,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1151",
@@ -15141,7 +15741,10 @@
   "fun_fact": "Döküldüğü yer: Fırat.",
   "difficulty": 3,
   "dataset": "rivers_tr",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1153",
@@ -15155,7 +15758,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "elements_melting",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1154",
@@ -15181,7 +15787,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "animals_lifespan"
+  "dataset": "animals_lifespan",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1156",
@@ -15272,7 +15881,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Eskişehir.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1163",
@@ -15324,7 +15936,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Ankara.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1167",
@@ -15376,7 +15991,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: İzmir.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1171",
@@ -15432,7 +16050,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "elements_boiling",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1175",
@@ -15445,7 +16066,10 @@
   "data_year": 2026,
   "fun_fact": "Döküldüğü yer: Tuna.",
   "difficulty": 3,
-  "dataset": "rivers_world"
+  "dataset": "rivers_world",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1176",
@@ -15527,7 +16151,10 @@
   "fun_fact": "Döküldüğü yer: Peri Çayı.",
   "difficulty": 3,
   "dataset": "rivers_tr",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1182",
@@ -15540,7 +16167,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1183",
@@ -15566,7 +16196,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Şanlıurfa.",
   "difficulty": 3,
-  "dataset": "stadiums_tr"
+  "dataset": "stadiums_tr",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1185",
@@ -15619,7 +16252,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "animals_lifespan",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1189",
@@ -15746,7 +16382,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: İstanbul.",
   "difficulty": 2,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1198",
@@ -15785,7 +16424,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Aksaray.",
   "difficulty": 2,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1201",
@@ -15890,7 +16532,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Rize.",
   "difficulty": 3,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1209",
@@ -15903,7 +16548,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Adana.",
   "difficulty": 2,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1210",
@@ -15968,7 +16616,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Sivas.",
   "difficulty": 2,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1215",
@@ -16033,7 +16684,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Tunceli.",
   "difficulty": 2,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1220",
@@ -16046,7 +16700,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Tokat.",
   "difficulty": 2,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1221",
@@ -16072,7 +16729,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Antakya.",
   "difficulty": 2,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1223",
@@ -16206,7 +16866,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Kars.",
   "difficulty": 3,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1233",
@@ -16245,7 +16908,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Konya.",
   "difficulty": 2,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1236",
@@ -16258,7 +16924,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Elazığ.",
   "difficulty": 3,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1237",
@@ -16310,7 +16979,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Adapazarı.",
   "difficulty": 2,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1241",
@@ -16363,7 +17035,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Muğla.",
   "difficulty": 3,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1245",
@@ -16376,7 +17051,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Erzurum.",
   "difficulty": 3,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1246",
@@ -16415,7 +17093,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Bursa.",
   "difficulty": 2,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1249",
@@ -16480,7 +17161,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Ordu.",
   "difficulty": 2,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1254",
@@ -16559,7 +17243,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Batman.",
   "difficulty": 2,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1260",
@@ -16572,7 +17259,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Çorum.",
   "difficulty": 3,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1261",
@@ -16598,7 +17288,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Çanakkale.",
   "difficulty": 3,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1263",
@@ -16676,7 +17369,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: İzmit.",
   "difficulty": 2,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1269",
@@ -16702,7 +17398,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Yozgat.",
   "difficulty": 3,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1271",
@@ -16767,7 +17466,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Nevşehir.",
   "difficulty": 2,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1276",
@@ -16860,7 +17562,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Afyonkarahisar.",
   "difficulty": 2,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1283",
@@ -16925,7 +17630,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: İzmir.",
   "difficulty": 2,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1288",
@@ -17042,7 +17750,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Osmaniye.",
   "difficulty": 2,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1297",
@@ -17068,7 +17779,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Diyarbakır.",
   "difficulty": 3,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1299",
@@ -17081,7 +17795,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Ankara.",
   "difficulty": 2,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1300",
@@ -17107,7 +17824,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Antalya.",
   "difficulty": 2,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1302",
@@ -17120,7 +17840,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Balıkesir.",
   "difficulty": 2,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1303",
@@ -17172,7 +17895,10 @@
   "data_year": 2014,
   "fun_fact": "İl merkezi: Siirt.",
   "difficulty": 3,
-  "dataset": "provinces_area"
+  "dataset": "provinces_area",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1307",
@@ -17355,7 +18081,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "everyday_curated"
+  "dataset": "everyday_curated",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1321",
@@ -17368,7 +18097,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "everyday_curated"
+  "dataset": "everyday_curated",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1322",
@@ -17420,7 +18152,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "everyday_curated"
+  "dataset": "everyday_curated",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1326",
@@ -17433,7 +18168,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "everyday_curated"
+  "dataset": "everyday_curated",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1327",
@@ -17459,7 +18197,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "everyday_curated"
+  "dataset": "everyday_curated",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1329",
@@ -17472,7 +18213,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "everyday_curated"
+  "dataset": "everyday_curated",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1330",
@@ -17498,7 +18242,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "everyday_curated"
+  "dataset": "everyday_curated",
+  "scale": {
+   "half": 2
+  }
  },
  {
   "id": "q1332",
@@ -17511,7 +18258,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "turkey_curated"
+  "dataset": "turkey_curated",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1333",
@@ -17693,7 +18443,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "turkey_curated"
+  "dataset": "turkey_curated",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1347",
@@ -17706,7 +18459,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "everyday_curated"
+  "dataset": "everyday_curated",
+  "scale": {
+   "factor": 1.5
+  }
  },
  {
   "id": "q1348",
@@ -17758,7 +18514,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "everyday_curated"
+  "dataset": "everyday_curated",
+  "scale": {
+   "factor": 1.6
+  }
  },
  {
   "id": "q1352",
@@ -17771,7 +18530,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "science_curated"
+  "dataset": "science_curated",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1353",
@@ -17784,7 +18546,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "everyday_curated"
+  "dataset": "everyday_curated",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1354",
@@ -17810,7 +18575,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "science_curated"
+  "dataset": "science_curated",
+  "scale": {
+   "half": 10
+  }
  },
  {
   "id": "q1356",
@@ -17823,7 +18591,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "everyday_curated"
+  "dataset": "everyday_curated",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1357",
@@ -17836,7 +18607,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "turkey_curated"
+  "dataset": "turkey_curated",
+  "scale": {
+   "half": 3
+  }
  },
  {
   "id": "q1358",
@@ -17849,7 +18623,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "everyday_curated"
+  "dataset": "everyday_curated",
+  "scale": {
+   "factor": 1.5
+  }
  },
  {
   "id": "q1359",
@@ -17875,7 +18652,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "science_curated"
+  "dataset": "science_curated",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1361",
@@ -17901,7 +18681,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "everyday_curated"
+  "dataset": "everyday_curated",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1363",
@@ -17914,7 +18697,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "science_curated"
+  "dataset": "science_curated",
+  "scale": {
+   "factor": 1.5
+  }
  },
  {
   "id": "q1364",
@@ -17927,7 +18713,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "everyday_curated"
+  "dataset": "everyday_curated",
+  "scale": {
+   "factor": 1.5
+  }
  },
  {
   "id": "q1365",
@@ -17979,7 +18768,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "everyday_curated"
+  "dataset": "everyday_curated",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1369",
@@ -17992,7 +18784,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "turkey_curated"
+  "dataset": "turkey_curated",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1370",
@@ -18031,7 +18826,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "everyday_curated"
+  "dataset": "everyday_curated",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1373",
@@ -18083,7 +18881,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "everyday_curated"
+  "dataset": "everyday_curated",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1377",
@@ -18096,7 +18897,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "turkey_curated"
+  "dataset": "turkey_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1378",
@@ -18109,7 +18913,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "everyday_curated"
+  "dataset": "everyday_curated",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1379",
@@ -18135,7 +18942,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "everyday_curated"
+  "dataset": "everyday_curated",
+  "scale": {
+   "factor": 1.2
+  }
  },
  {
   "id": "q1381",
@@ -18148,7 +18958,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "everyday_curated"
+  "dataset": "everyday_curated",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1382",
@@ -18161,7 +18974,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "everyday_curated"
+  "dataset": "everyday_curated",
+  "scale": {
+   "half": 4
+  }
  },
  {
   "id": "q1383",
@@ -18187,7 +19003,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "everyday_curated"
+  "dataset": "everyday_curated",
+  "scale": {
+   "factor": 1.2
+  }
  },
  {
   "id": "q1385",
@@ -18214,7 +19033,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "science_curated"
+  "dataset": "science_curated",
+  "scale": {
+   "half": 25
+  }
  },
  {
   "id": "q1387",
@@ -18240,7 +19062,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "turkey_curated"
+  "dataset": "turkey_curated",
+  "scale": {
+   "half": 3
+  }
  },
  {
   "id": "q1389",
@@ -18564,7 +19389,7 @@
   "difficulty": 3,
   "dataset": "foods_protein",
   "scale": {
-   "half": 10
+   "half": 6
   }
  },
  {
@@ -18612,7 +19437,7 @@
   "difficulty": 2,
   "dataset": "foods_vitamin_c",
   "scale": {
-   "factor": 3
+   "factor": 2
   }
  },
  {
@@ -18628,7 +19453,7 @@
   "difficulty": 2,
   "dataset": "foods_protein",
   "scale": {
-   "half": 10
+   "half": 6
   }
  },
  {
@@ -18756,7 +19581,7 @@
   "difficulty": 1,
   "dataset": "foods_protein",
   "scale": {
-   "half": 10
+   "half": 6
   }
  },
  {
@@ -18804,7 +19629,7 @@
   "difficulty": 2,
   "dataset": "foods_protein",
   "scale": {
-   "half": 10
+   "half": 6
   }
  },
  {
@@ -19028,7 +19853,7 @@
   "difficulty": 3,
   "dataset": "foods_vitamin_c",
   "scale": {
-   "factor": 3
+   "factor": 2
   }
  },
  {
@@ -19044,7 +19869,7 @@
   "difficulty": 3,
   "dataset": "foods_protein",
   "scale": {
-   "half": 10
+   "half": 6
   }
  },
  {
@@ -19140,7 +19965,7 @@
   "difficulty": 2,
   "dataset": "foods_vitamin_c",
   "scale": {
-   "factor": 3
+   "factor": 2
   }
  },
  {
@@ -19156,7 +19981,7 @@
   "difficulty": 3,
   "dataset": "foods_vitamin_c",
   "scale": {
-   "factor": 3
+   "factor": 2
   }
  },
  {
@@ -19172,7 +19997,7 @@
   "difficulty": 3,
   "dataset": "foods_vitamin_c",
   "scale": {
-   "factor": 3
+   "factor": 2
   }
  },
  {
@@ -19204,7 +20029,7 @@
   "difficulty": 2,
   "dataset": "foods_protein",
   "scale": {
-   "half": 10
+   "half": 6
   }
  },
  {
@@ -19220,7 +20045,7 @@
   "difficulty": 2,
   "dataset": "foods_protein",
   "scale": {
-   "half": 10
+   "half": 6
   }
  },
  {
@@ -19236,7 +20061,7 @@
   "difficulty": 3,
   "dataset": "foods_protein",
   "scale": {
-   "half": 10
+   "half": 6
   }
  },
  {
@@ -19268,7 +20093,7 @@
   "difficulty": 3,
   "dataset": "foods_vitamin_c",
   "scale": {
-   "factor": 3
+   "factor": 2
   }
  },
  {
@@ -19332,7 +20157,7 @@
   "difficulty": 2,
   "dataset": "foods_protein",
   "scale": {
-   "half": 10
+   "half": 6
   }
  },
  {
@@ -19348,7 +20173,7 @@
   "difficulty": 3,
   "dataset": "foods_vitamin_c",
   "scale": {
-   "factor": 3
+   "factor": 2
   }
  },
  {
@@ -19412,7 +20237,7 @@
   "difficulty": 2,
   "dataset": "foods_vitamin_c",
   "scale": {
-   "factor": 3
+   "factor": 2
   }
  },
  {
@@ -19444,7 +20269,7 @@
   "difficulty": 2,
   "dataset": "foods_protein",
   "scale": {
-   "half": 10
+   "half": 6
   }
  },
  {
@@ -19476,7 +20301,7 @@
   "difficulty": 2,
   "dataset": "foods_protein",
   "scale": {
-   "half": 10
+   "half": 6
   }
  },
  {
@@ -19508,7 +20333,7 @@
   "difficulty": 3,
   "dataset": "foods_protein",
   "scale": {
-   "half": 10
+   "half": 6
   }
  },
  {
@@ -19668,7 +20493,7 @@
   "difficulty": 2,
   "dataset": "foods_protein",
   "scale": {
-   "half": 10
+   "half": 6
   }
  },
  {
@@ -19764,7 +20589,7 @@
   "difficulty": 3,
   "dataset": "foods_vitamin_c",
   "scale": {
-   "factor": 3
+   "factor": 2
   }
  },
  {
@@ -19860,7 +20685,7 @@
   "difficulty": 1,
   "dataset": "foods_protein",
   "scale": {
-   "half": 10
+   "half": 6
   }
  },
  {
@@ -20252,7 +21077,10 @@
   "fun_fact": "Konum: Katar.",
   "difficulty": 3,
   "dataset": "airports_runway",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 1.5
+  }
  },
  {
   "id": "q1522",
@@ -20265,7 +21093,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "airports_runway"
+  "dataset": "airports_runway",
+  "scale": {
+   "factor": 1.5
+  }
  },
  {
   "id": "q1523",
@@ -20437,7 +21268,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "airports_runway",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 1.5
+  }
  },
  {
   "id": "q1536",
@@ -20464,7 +21298,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "airports_runway",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 1.5
+  }
  },
  {
   "id": "q1538",
@@ -20477,7 +21314,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Birleşik Krallık.",
   "difficulty": 2,
-  "dataset": "airports_runway"
+  "dataset": "airports_runway",
+  "scale": {
+   "factor": 1.5
+  }
  },
  {
   "id": "q1539",
@@ -20504,7 +21344,10 @@
   "data_year": 2026,
   "fun_fact": "Konum: Colorado, ABD.",
   "difficulty": 3,
-  "dataset": "airports_runway"
+  "dataset": "airports_runway",
+  "scale": {
+   "factor": 1.5
+  }
  },
  {
   "id": "q1541",
@@ -20518,7 +21361,10 @@
   "fun_fact": "Konum: Fransa.",
   "difficulty": 3,
   "dataset": "airports_runway",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 1.5
+  }
  },
  {
   "id": "q1542",
@@ -20571,7 +21417,10 @@
   "fun_fact": null,
   "difficulty": 3,
   "dataset": "airports_runway",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 1.5
+  }
  },
  {
   "id": "q1546",
@@ -20598,7 +21447,10 @@
   "fun_fact": "Konum: Birleşik Arap Emirlikleri.",
   "difficulty": 3,
   "dataset": "airports_runway",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 1.5
+  }
  },
  {
   "id": "q1548",
@@ -20732,7 +21584,10 @@
   "data_year": 1930,
   "fun_fact": "18 maç oynandı, maç başına 3,89 gol.",
   "difficulty": 3,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1558",
@@ -20745,7 +21600,10 @@
   "data_year": 2023,
   "fun_fact": "Sezon boyunca 94 gol attı, ikinciyle arasında 5 puan vardı.",
   "difficulty": 2,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1559",
@@ -20758,7 +21616,10 @@
   "data_year": 2025,
   "fun_fact": "Sezon boyunca 99 gol attı, ikinciyle arasında 13 puan vardı.",
   "difficulty": 3,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1560",
@@ -20771,7 +21632,10 @@
   "data_year": 2021,
   "fun_fact": "Sezon boyunca 89 gol attı, ikinciyle arasında 12 puan vardı.",
   "difficulty": 3,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1561",
@@ -20784,7 +21648,10 @@
   "data_year": 2022,
   "fun_fact": "64 maç oynandı, maç başına 2,69 gol.",
   "difficulty": 2,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1562",
@@ -20797,7 +21664,10 @@
   "data_year": 1950,
   "fun_fact": "22 maç oynandı, maç başına 4 gol.",
   "difficulty": 3,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1563",
@@ -20810,7 +21680,10 @@
   "data_year": 2021,
   "fun_fact": "Sezon boyunca 67 gol attı, ikinciyle arasında 2 puan vardı.",
   "difficulty": 3,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1564",
@@ -20823,7 +21696,10 @@
   "data_year": 2013,
   "fun_fact": "Sezon boyunca 115 gol attı, ikinciyle arasında 15 puan vardı.",
   "difficulty": 3,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1565",
@@ -20836,7 +21712,10 @@
   "data_year": 2022,
   "fun_fact": "Sezon boyunca 69 gol attı, ikinciyle arasında 2 puan vardı.",
   "difficulty": 3,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1566",
@@ -20849,7 +21728,10 @@
   "data_year": 2024,
   "fun_fact": "51 maç oynandı, maç başına 2,29 gol.",
   "difficulty": 2,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1567",
@@ -20862,7 +21744,10 @@
   "data_year": 1994,
   "fun_fact": "52 maç oynandı, maç başına 2,71 gol.",
   "difficulty": 3,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1568",
@@ -20875,7 +21760,10 @@
   "data_year": 2021,
   "fun_fact": "Sezon boyunca 83 gol attı, ikinciyle arasında 12 puan vardı.",
   "difficulty": 2,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1569",
@@ -20888,7 +21776,10 @@
   "data_year": 2022,
   "fun_fact": "Sezon boyunca 99 gol attı, ikinciyle arasında 1 puan vardı.",
   "difficulty": 2,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1570",
@@ -20901,7 +21792,10 @@
   "data_year": 2017,
   "fun_fact": "Sezon boyunca 85 gol attı, ikinciyle arasında 7 puan vardı.",
   "difficulty": 2,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1571",
@@ -20914,7 +21808,10 @@
   "data_year": 2022,
   "fun_fact": "Sezon boyunca 80 gol attı, ikinciyle arasında 13 puan vardı.",
   "difficulty": 3,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1572",
@@ -20927,7 +21824,10 @@
   "data_year": 2024,
   "fun_fact": "Sezon boyunca 89 gol attı, ikinciyle arasında 19 puan vardı.",
   "difficulty": 3,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1573",
@@ -20940,7 +21840,10 @@
   "data_year": 1958,
   "fun_fact": "35 maç oynandı, maç başına 3,6 gol.",
   "difficulty": 3,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1574",
@@ -20953,7 +21856,10 @@
   "data_year": 2023,
   "fun_fact": "Sezon boyunca 77 gol attı, ikinciyle arasında 16 puan vardı.",
   "difficulty": 3,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1575",
@@ -20966,7 +21872,10 @@
   "data_year": 1954,
   "fun_fact": "26 maç oynandı, maç başına 5,38 gol.",
   "difficulty": 3,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1576",
@@ -20979,7 +21888,10 @@
   "data_year": 1962,
   "fun_fact": "32 maç oynandı, maç başına 2,78 gol.",
   "difficulty": 3,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1577",
@@ -20992,7 +21904,10 @@
   "data_year": 1986,
   "fun_fact": "52 maç oynandı, maç başına 2,54 gol.",
   "difficulty": 3,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1578",
@@ -21005,7 +21920,10 @@
   "data_year": 2024,
   "fun_fact": "Sezon boyunca 87 gol attı, ikinciyle arasında 10 puan vardı.",
   "difficulty": 3,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1579",
@@ -21018,7 +21936,10 @@
   "data_year": 1974,
   "fun_fact": "38 maç oynandı, maç başına 2,55 gol.",
   "difficulty": 3,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1580",
@@ -21031,7 +21952,10 @@
   "data_year": 2002,
   "fun_fact": "64 maç oynandı, maç başına 2,52 gol.",
   "difficulty": 3,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1581",
@@ -21044,7 +21968,10 @@
   "data_year": 1938,
   "fun_fact": "18 maç oynandı, maç başına 4,67 gol.",
   "difficulty": 3,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1582",
@@ -21057,7 +21984,10 @@
   "data_year": 2024,
   "fun_fact": "Sezon boyunca 96 gol attı, ikinciyle arasında 2 puan vardı.",
   "difficulty": 2,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1583",
@@ -21070,7 +22000,10 @@
   "data_year": 2021,
   "fun_fact": "Sezon boyunca 99 gol attı, ikinciyle arasında 13 puan vardı.",
   "difficulty": 3,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1584",
@@ -21083,7 +22016,10 @@
   "data_year": 2024,
   "fun_fact": "Sezon boyunca 89 gol attı, ikinciyle arasında 17 puan vardı.",
   "difficulty": 3,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1585",
@@ -21096,7 +22032,10 @@
   "data_year": 1990,
   "fun_fact": "52 maç oynandı, maç başına 2,21 gol.",
   "difficulty": 3,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1586",
@@ -21109,7 +22048,10 @@
   "data_year": 2014,
   "fun_fact": "64 maç oynandı, maç başına 2,67 gol.",
   "difficulty": 2,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1587",
@@ -21122,7 +22064,10 @@
   "data_year": 2023,
   "fun_fact": "Sezon boyunca 70 gol attı, ikinciyle arasında 10 puan vardı.",
   "difficulty": 3,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1588",
@@ -21135,7 +22080,10 @@
   "data_year": 2010,
   "fun_fact": "64 maç oynandı, maç başına 2,27 gol.",
   "difficulty": 3,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1589",
@@ -21148,7 +22096,10 @@
   "data_year": 2020,
   "fun_fact": "Sezon boyunca 85 gol attı, ikinciyle arasında 18 puan vardı.",
   "difficulty": 2,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1590",
@@ -21161,7 +22112,10 @@
   "data_year": 1966,
   "fun_fact": "32 maç oynandı, maç başına 2,78 gol.",
   "difficulty": 3,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1591",
@@ -21174,7 +22128,10 @@
   "data_year": 2013,
   "fun_fact": "Sezon boyunca 98 gol attı, ikinciyle arasında 25 puan vardı.",
   "difficulty": 3,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1592",
@@ -21187,7 +22144,10 @@
   "data_year": 2018,
   "fun_fact": "64 maç oynandı, maç başına 2,64 gol.",
   "difficulty": 2,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1593",
@@ -21200,7 +22160,10 @@
   "data_year": 1934,
   "fun_fact": "17 maç oynandı, maç başına 4,12 gol.",
   "difficulty": 3,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1594",
@@ -21213,7 +22176,10 @@
   "data_year": 2016,
   "fun_fact": "Sezon boyunca 68 gol attı, ikinciyle arasında 10 puan vardı.",
   "difficulty": 2,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1595",
@@ -21226,7 +22192,10 @@
   "data_year": 2019,
   "fun_fact": "Sezon boyunca 95 gol attı, ikinciyle arasında 1 puan vardı.",
   "difficulty": 2,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1596",
@@ -21239,7 +22208,10 @@
   "data_year": 2025,
   "fun_fact": "Sezon boyunca 86 gol attı, ikinciyle arasında 10 puan vardı.",
   "difficulty": 2,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1597",
@@ -21252,7 +22224,10 @@
   "data_year": 1978,
   "fun_fact": "38 maç oynandı, maç başına 2,68 gol.",
   "difficulty": 3,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1598",
@@ -21265,7 +22240,10 @@
   "data_year": 2014,
   "fun_fact": "Sezon boyunca 80 gol attı, ikinciyle arasında 17 puan vardı.",
   "difficulty": 3,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1599",
@@ -21278,7 +22256,10 @@
   "data_year": 2006,
   "fun_fact": "64 maç oynandı, maç başına 2,3 gol.",
   "difficulty": 3,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1600",
@@ -21291,7 +22272,10 @@
   "data_year": 1970,
   "fun_fact": "32 maç oynandı, maç başına 2,97 gol.",
   "difficulty": 3,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1601",
@@ -21304,7 +22288,10 @@
   "data_year": 1982,
   "fun_fact": "52 maç oynandı, maç başına 2,81 gol.",
   "difficulty": 3,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1602",
@@ -21317,7 +22304,10 @@
   "data_year": 2021,
   "fun_fact": "51 maç oynandı, maç başına 2,78 gol.",
   "difficulty": 3,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1603",
@@ -21330,7 +22320,10 @@
   "data_year": 2018,
   "fun_fact": "Sezon boyunca 106 gol attı, ikinciyle arasında 19 puan vardı.",
   "difficulty": 2,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1604",
@@ -21343,7 +22336,10 @@
   "data_year": 1998,
   "fun_fact": "64 maç oynandı, maç başına 2,67 gol.",
   "difficulty": 3,
-  "dataset": "football_tournaments"
+  "dataset": "football_tournaments",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1605",
@@ -21356,7 +22352,10 @@
   "data_year": 2022,
   "fun_fact": "Sezon boyunca 97 gol attı, ikinciyle arasında 8 puan vardı.",
   "difficulty": 3,
-  "dataset": "football_league_points"
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
  },
  {
   "id": "q1606",
@@ -21382,7 +22381,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
   "difficulty": 2,
-  "dataset": "wdi_gdp_per_capita"
+  "dataset": "wdi_gdp_per_capita",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1608",
@@ -21408,7 +22410,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
   "difficulty": 2,
-  "dataset": "wdi_gdp_per_capita"
+  "dataset": "wdi_gdp_per_capita",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1610",
@@ -21449,7 +22454,7 @@
   "difficulty": 2,
   "dataset": "wdi_fertility",
   "scale": {
-   "factor": 4
+   "factor": 2
   }
  },
  {
@@ -21489,7 +22494,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
   "difficulty": 2,
-  "dataset": "wdi_gdp_per_capita"
+  "dataset": "wdi_gdp_per_capita",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1616",
@@ -21504,7 +22512,7 @@
   "difficulty": 1,
   "dataset": "wdi_life_expectancy",
   "scale": {
-   "half": 8
+   "half": 5
   }
  },
  {
@@ -21533,7 +22541,7 @@
   "difficulty": 2,
   "dataset": "wdi_life_expectancy",
   "scale": {
-   "half": 8
+   "half": 5
   }
  },
  {
@@ -21547,7 +22555,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
   "difficulty": 2,
-  "dataset": "wdi_gdp_per_capita"
+  "dataset": "wdi_gdp_per_capita",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1620",
@@ -21573,7 +22584,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
   "difficulty": 2,
-  "dataset": "wdi_gdp_per_capita"
+  "dataset": "wdi_gdp_per_capita",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1622",
@@ -21586,7 +22600,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
   "difficulty": 2,
-  "dataset": "wdi_gdp_per_capita"
+  "dataset": "wdi_gdp_per_capita",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1623",
@@ -21601,7 +22618,7 @@
   "difficulty": 2,
   "dataset": "wdi_life_expectancy",
   "scale": {
-   "half": 8
+   "half": 5
   }
  },
  {
@@ -21615,7 +22632,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
   "difficulty": 2,
-  "dataset": "wdi_gdp_per_capita"
+  "dataset": "wdi_gdp_per_capita",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1625",
@@ -21630,7 +22650,7 @@
   "difficulty": 2,
   "dataset": "wdi_life_expectancy",
   "scale": {
-   "half": 8
+   "half": 5
   }
  },
  {
@@ -21646,7 +22666,7 @@
   "difficulty": 2,
   "dataset": "wdi_fertility",
   "scale": {
-   "factor": 4
+   "factor": 2
   }
  },
  {
@@ -21714,7 +22734,7 @@
   "difficulty": 2,
   "dataset": "wdi_fertility",
   "scale": {
-   "factor": 4
+   "factor": 2
   }
  },
  {
@@ -21730,7 +22750,7 @@
   "difficulty": 2,
   "dataset": "wdi_life_expectancy",
   "scale": {
-   "half": 8
+   "half": 5
   }
  },
  {
@@ -21746,7 +22766,7 @@
   "difficulty": 2,
   "dataset": "wdi_fertility",
   "scale": {
-   "factor": 4
+   "factor": 2
   }
  },
  {
@@ -21762,7 +22782,7 @@
   "difficulty": 2,
   "dataset": "wdi_life_expectancy",
   "scale": {
-   "half": 8
+   "half": 5
   }
  },
  {
@@ -21778,7 +22798,7 @@
   "difficulty": 2,
   "dataset": "wdi_life_expectancy",
   "scale": {
-   "half": 8
+   "half": 5
   }
  },
  {
@@ -21807,7 +22827,7 @@
   "difficulty": 2,
   "dataset": "wdi_life_expectancy",
   "scale": {
-   "half": 8
+   "half": 5
   }
  },
  {
@@ -21821,7 +22841,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
   "difficulty": 2,
-  "dataset": "wdi_gdp_per_capita"
+  "dataset": "wdi_gdp_per_capita",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1639",
@@ -21873,7 +22896,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
   "difficulty": 2,
-  "dataset": "wdi_gdp_per_capita"
+  "dataset": "wdi_gdp_per_capita",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1643",
@@ -21886,7 +22912,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
   "difficulty": 2,
-  "dataset": "wdi_gdp_per_capita"
+  "dataset": "wdi_gdp_per_capita",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1644",
@@ -21914,7 +22943,7 @@
   "difficulty": 2,
   "dataset": "wdi_fertility",
   "scale": {
-   "factor": 4
+   "factor": 2
   }
  },
  {
@@ -21928,7 +22957,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
   "difficulty": 2,
-  "dataset": "wdi_gdp_per_capita"
+  "dataset": "wdi_gdp_per_capita",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1647",
@@ -21941,7 +22973,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
   "difficulty": 2,
-  "dataset": "wdi_gdp_per_capita"
+  "dataset": "wdi_gdp_per_capita",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1648",
@@ -21969,7 +23004,7 @@
   "difficulty": 2,
   "dataset": "wdi_life_expectancy",
   "scale": {
-   "half": 8
+   "half": 5
   }
  },
  {
@@ -21983,7 +23018,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
   "difficulty": 2,
-  "dataset": "wdi_gdp_per_capita"
+  "dataset": "wdi_gdp_per_capita",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1651",
@@ -21996,7 +23034,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
   "difficulty": 1,
-  "dataset": "wdi_gdp_per_capita"
+  "dataset": "wdi_gdp_per_capita",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1652",
@@ -22011,7 +23052,7 @@
   "difficulty": 2,
   "dataset": "wdi_fertility",
   "scale": {
-   "factor": 4
+   "factor": 2
   }
  },
  {
@@ -22027,7 +23068,7 @@
   "difficulty": 2,
   "dataset": "wdi_fertility",
   "scale": {
-   "factor": 4
+   "factor": 2
   }
  },
  {
@@ -22043,7 +23084,7 @@
   "difficulty": 2,
   "dataset": "wdi_fertility",
   "scale": {
-   "factor": 4
+   "factor": 2
   }
  },
  {
@@ -22057,7 +23098,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
   "difficulty": 2,
-  "dataset": "wdi_gdp_per_capita"
+  "dataset": "wdi_gdp_per_capita",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1656",
@@ -22070,7 +23114,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl dünya ortalaması: 14.406 dolar.",
   "difficulty": 2,
-  "dataset": "wdi_gdp_per_capita"
+  "dataset": "wdi_gdp_per_capita",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1657",
@@ -22124,7 +23171,7 @@
   "difficulty": 2,
   "dataset": "wdi_life_expectancy",
   "scale": {
-   "half": 8
+   "half": 5
   }
  },
  {
@@ -22140,7 +23187,7 @@
   "difficulty": 1,
   "dataset": "wdi_fertility",
   "scale": {
-   "factor": 4
+   "factor": 2
   }
  },
  {
@@ -22156,7 +23203,7 @@
   "difficulty": 2,
   "dataset": "wdi_fertility",
   "scale": {
-   "factor": 4
+   "factor": 2
   }
  },
  {
@@ -22172,7 +23219,7 @@
   "difficulty": 2,
   "dataset": "wdi_life_expectancy",
   "scale": {
-   "half": 8
+   "half": 5
   }
  },
  {
@@ -22188,7 +23235,7 @@
   "difficulty": 2,
   "dataset": "wdi_life_expectancy",
   "scale": {
-   "half": 8
+   "half": 5
   }
  },
  {
@@ -22241,7 +23288,10 @@
   "data_year": 2019,
   "fun_fact": "Salgından önceki son yılın verisi.",
   "difficulty": 2,
-  "dataset": "wdi_tourism"
+  "dataset": "wdi_tourism",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1669",
@@ -22254,7 +23304,10 @@
   "data_year": 2020,
   "fun_fact": "COVID-19 salgını yüzünden çok düşük: 2019'da 31,9 milyon turist gelmişti.",
   "difficulty": 2,
-  "dataset": "wdi_tourism"
+  "dataset": "wdi_tourism",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1670",
@@ -22280,7 +23333,10 @@
   "data_year": 2020,
   "fun_fact": "COVID-19 salgını yüzünden çok düşük: 2019'da 24,4 milyon turist gelmişti.",
   "difficulty": 2,
-  "dataset": "wdi_tourism"
+  "dataset": "wdi_tourism",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1672",
@@ -22293,7 +23349,10 @@
   "data_year": 2020,
   "fun_fact": "COVID-19 salgını yüzünden çok düşük: 2019'da 25,3 milyon turist gelmişti.",
   "difficulty": 2,
-  "dataset": "wdi_tourism"
+  "dataset": "wdi_tourism",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1673",
@@ -22319,7 +23378,10 @@
   "data_year": 2020,
   "fun_fact": "COVID-19 salgını yüzünden çok düşük: 2019'da 51,7 milyon turist gelmişti. Yurt dışında yaşayan vatandaşlar da sayılır.",
   "difficulty": 1,
-  "dataset": "wdi_tourism"
+  "dataset": "wdi_tourism",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1675",
@@ -22332,7 +23394,10 @@
   "data_year": 2020,
   "fun_fact": "COVID-19 salgını yüzünden çok düşük: 2019'da 3,2 milyon turist gelmişti.",
   "difficulty": 2,
-  "dataset": "wdi_tourism"
+  "dataset": "wdi_tourism",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1676",
@@ -22358,7 +23423,10 @@
   "data_year": 2020,
   "fun_fact": "COVID-19 salgını yüzünden çok düşük: 2019'da 34,0 milyon turist gelmişti.",
   "difficulty": 2,
-  "dataset": "wdi_tourism"
+  "dataset": "wdi_tourism",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1678",
@@ -22384,7 +23452,10 @@
   "data_year": 2020,
   "fun_fact": "COVID-19 salgını yüzünden çok düşük: 2019'da 40,9 milyon turist gelmişti.",
   "difficulty": 2,
-  "dataset": "wdi_tourism"
+  "dataset": "wdi_tourism",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1680",
@@ -22397,7 +23468,10 @@
   "data_year": 2020,
   "fun_fact": "COVID-19 salgını yüzünden çok düşük: 2019'da 31,9 milyon turist gelmişti.",
   "difficulty": 2,
-  "dataset": "wdi_tourism"
+  "dataset": "wdi_tourism",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1681",
@@ -22436,7 +23510,10 @@
   "data_year": 2019,
   "fun_fact": "Salgından önceki son yılın verisi.",
   "difficulty": 2,
-  "dataset": "wdi_tourism"
+  "dataset": "wdi_tourism",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1684",
@@ -22462,7 +23539,10 @@
   "data_year": 2020,
   "fun_fact": "COVID-19 salgını yüzünden çok düşük: 2019'da 39,6 milyon turist gelmişti.",
   "difficulty": 2,
-  "dataset": "wdi_tourism"
+  "dataset": "wdi_tourism",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1686",
@@ -23164,7 +24244,10 @@
   "data_year": 2026,
   "fun_fact": "Kayıt doğada yaşayan bir bireye ait.",
   "difficulty": 3,
-  "dataset": "anage_longevity"
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1740",
@@ -23177,7 +24260,10 @@
   "data_year": 2026,
   "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
   "difficulty": 2,
-  "dataset": "anage_longevity"
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1741",
@@ -23206,7 +24292,10 @@
   "data_year": 2026,
   "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
   "difficulty": 3,
-  "dataset": "anage_longevity"
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1743",
@@ -23283,7 +24372,10 @@
   "data_year": 2026,
   "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
   "difficulty": 3,
-  "dataset": "anage_longevity"
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1748",
@@ -23392,7 +24484,10 @@
   "data_year": 2026,
   "fun_fact": "Kayıt doğada yaşayan bir bireye ait.",
   "difficulty": 3,
-  "dataset": "anage_longevity"
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1755",
@@ -23405,7 +24500,10 @@
   "data_year": 2026,
   "fun_fact": "Kayıt doğada yaşayan bir bireye ait.",
   "difficulty": 3,
-  "dataset": "anage_longevity"
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1756",
@@ -23450,7 +24548,10 @@
   "data_year": 2026,
   "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
   "difficulty": 3,
-  "dataset": "anage_longevity"
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1759",
@@ -23463,7 +24564,10 @@
   "data_year": 2026,
   "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
   "difficulty": 3,
-  "dataset": "anage_longevity"
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1760",
@@ -23524,7 +24628,10 @@
   "data_year": 2026,
   "fun_fact": "Kayıt doğada yaşayan bir bireye ait.",
   "difficulty": 3,
-  "dataset": "anage_longevity"
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1764",
@@ -23617,7 +24724,10 @@
   "data_year": 2026,
   "fun_fact": "Kayıt doğada yaşayan bir bireye ait.",
   "difficulty": 3,
-  "dataset": "anage_longevity"
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1770",
@@ -23646,7 +24756,10 @@
   "data_year": 2026,
   "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
   "difficulty": 2,
-  "dataset": "anage_longevity"
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1772",
@@ -23659,7 +24772,10 @@
   "data_year": 2026,
   "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
   "difficulty": 3,
-  "dataset": "anage_longevity"
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1773",
@@ -23720,7 +24836,10 @@
   "data_year": 2026,
   "fun_fact": "Kayıt doğada yaşayan bir bireye ait.",
   "difficulty": 3,
-  "dataset": "anage_longevity"
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1777",
@@ -23733,7 +24852,10 @@
   "data_year": 2026,
   "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
   "difficulty": 3,
-  "dataset": "anage_longevity"
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1778",
@@ -23762,7 +24884,10 @@
   "data_year": 2026,
   "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
   "difficulty": 3,
-  "dataset": "anage_longevity"
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1780",
@@ -23791,7 +24916,10 @@
   "data_year": 2026,
   "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
   "difficulty": 2,
-  "dataset": "anage_longevity"
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1782",
@@ -23852,7 +24980,10 @@
   "data_year": 2026,
   "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
   "difficulty": 3,
-  "dataset": "anage_longevity"
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1786",
@@ -23913,7 +25044,10 @@
   "data_year": 2026,
   "fun_fact": "Kayıt doğada yaşayan bir bireye ait.",
   "difficulty": 3,
-  "dataset": "anage_longevity"
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
  },
  {
   "id": "q1790",
@@ -24583,7 +25717,7 @@
   "difficulty": 2,
   "dataset": "es_first_marriage",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -24610,7 +25744,10 @@
   "data_year": 2023,
   "fun_fact": "Aynı yıl AB ortalaması: 510 kg.",
   "difficulty": 2,
-  "dataset": "es_municipal_waste"
+  "dataset": "es_municipal_waste",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1836",
@@ -24625,7 +25762,7 @@
   "difficulty": 2,
   "dataset": "es_leaving_home",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -24641,7 +25778,7 @@
   "difficulty": 2,
   "dataset": "es_first_child",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -24657,7 +25794,7 @@
   "difficulty": 2,
   "dataset": "es_median_age",
   "scale": {
-   "half": 6
+   "half": 4
   }
  },
  {
@@ -24697,7 +25834,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 584 otomobil.",
   "difficulty": 2,
-  "dataset": "es_cars"
+  "dataset": "es_cars",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1842",
@@ -24712,7 +25852,7 @@
   "difficulty": 2,
   "dataset": "es_leaving_home",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -24752,7 +25892,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 513 kg.",
   "difficulty": 2,
-  "dataset": "es_municipal_waste"
+  "dataset": "es_municipal_waste",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1846",
@@ -24767,7 +25910,7 @@
   "difficulty": 2,
   "dataset": "es_first_marriage",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -24783,7 +25926,7 @@
   "difficulty": 2,
   "dataset": "es_leaving_home",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -24799,7 +25942,7 @@
   "difficulty": 2,
   "dataset": "es_median_age",
   "scale": {
-   "half": 6
+   "half": 4
   }
  },
  {
@@ -24815,7 +25958,7 @@
   "difficulty": 2,
   "dataset": "es_leaving_home",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -24831,7 +25974,7 @@
   "difficulty": 2,
   "dataset": "es_first_marriage",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -24845,7 +25988,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 584 otomobil.",
   "difficulty": 2,
-  "dataset": "es_cars"
+  "dataset": "es_cars",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1852",
@@ -24860,7 +26006,7 @@
   "difficulty": 2,
   "dataset": "es_median_age",
   "scale": {
-   "half": 6
+   "half": 4
   }
  },
  {
@@ -24876,7 +26022,7 @@
   "difficulty": 2,
   "dataset": "es_leaving_home",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -24903,7 +26049,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 584 otomobil.",
   "difficulty": 2,
-  "dataset": "es_cars"
+  "dataset": "es_cars",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1856",
@@ -24918,7 +26067,7 @@
   "difficulty": 2,
   "dataset": "es_household_size",
   "scale": {
-   "half": 1
+   "factor": 1.2
   }
  },
  {
@@ -24971,7 +26120,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 584 otomobil.",
   "difficulty": 2,
-  "dataset": "es_cars"
+  "dataset": "es_cars",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1861",
@@ -24986,7 +26138,7 @@
   "difficulty": 1,
   "dataset": "es_household_size",
   "scale": {
-   "half": 1
+   "factor": 1.2
   }
  },
  {
@@ -25002,7 +26154,7 @@
   "difficulty": 2,
   "dataset": "es_first_marriage",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -25018,7 +26170,7 @@
   "difficulty": 1,
   "dataset": "es_first_marriage",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -25034,7 +26186,7 @@
   "difficulty": 2,
   "dataset": "es_first_child",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -25048,7 +26200,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 513 kg.",
   "difficulty": 2,
-  "dataset": "es_municipal_waste"
+  "dataset": "es_municipal_waste",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1866",
@@ -25063,7 +26218,7 @@
   "difficulty": 2,
   "dataset": "es_first_child",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -25092,7 +26247,7 @@
   "difficulty": 2,
   "dataset": "es_first_marriage",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -25108,7 +26263,7 @@
   "difficulty": 2,
   "dataset": "es_leaving_home",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -25122,7 +26277,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 513 kg.",
   "difficulty": 1,
-  "dataset": "es_municipal_waste"
+  "dataset": "es_municipal_waste",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1871",
@@ -25137,7 +26295,7 @@
   "difficulty": 2,
   "dataset": "es_household_size",
   "scale": {
-   "half": 1
+   "factor": 1.2
   }
  },
  {
@@ -25153,7 +26311,7 @@
   "difficulty": 1,
   "dataset": "es_leaving_home",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -25167,7 +26325,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 513 kg.",
   "difficulty": 2,
-  "dataset": "es_municipal_waste"
+  "dataset": "es_municipal_waste",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1874",
@@ -25180,7 +26341,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 513 kg.",
   "difficulty": 2,
-  "dataset": "es_municipal_waste"
+  "dataset": "es_municipal_waste",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1875",
@@ -25195,7 +26359,7 @@
   "difficulty": 2,
   "dataset": "es_first_child",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -25211,7 +26375,7 @@
   "difficulty": 1,
   "dataset": "es_median_age",
   "scale": {
-   "half": 6
+   "half": 4
   }
  },
  {
@@ -25225,7 +26389,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 577 otomobil.",
   "difficulty": 2,
-  "dataset": "es_cars"
+  "dataset": "es_cars",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1878",
@@ -25240,7 +26407,7 @@
   "difficulty": 2,
   "dataset": "es_first_marriage",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -25254,7 +26421,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 513 kg.",
   "difficulty": 2,
-  "dataset": "es_municipal_waste"
+  "dataset": "es_municipal_waste",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1880",
@@ -25269,7 +26439,7 @@
   "difficulty": 1,
   "dataset": "es_first_child",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -25285,7 +26455,7 @@
   "difficulty": 2,
   "dataset": "es_leaving_home",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -25312,7 +26482,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 513 kg.",
   "difficulty": 2,
-  "dataset": "es_municipal_waste"
+  "dataset": "es_municipal_waste",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1884",
@@ -25327,7 +26500,7 @@
   "difficulty": 2,
   "dataset": "es_first_child",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -25343,7 +26516,7 @@
   "difficulty": 2,
   "dataset": "es_median_age",
   "scale": {
-   "half": 6
+   "half": 4
   }
  },
  {
@@ -25372,7 +26545,7 @@
   "difficulty": 2,
   "dataset": "es_first_marriage",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -25401,7 +26574,7 @@
   "difficulty": 2,
   "dataset": "es_median_age",
   "scale": {
-   "half": 6
+   "half": 4
   }
  },
  {
@@ -25417,7 +26590,7 @@
   "difficulty": 1,
   "dataset": "es_first_marriage",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -25444,7 +26617,10 @@
   "data_year": 2024,
   "fun_fact": "Aynı yıl AB ortalaması: 513 kg.",
   "difficulty": 2,
-  "dataset": "es_municipal_waste"
+  "dataset": "es_municipal_waste",
+  "scale": {
+   "factor": 1.7
+  }
  },
  {
   "id": "q1893",
@@ -25470,7 +26646,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 584 otomobil.",
   "difficulty": 2,
-  "dataset": "es_cars"
+  "dataset": "es_cars",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1895",
@@ -25485,7 +26664,7 @@
   "difficulty": 2,
   "dataset": "es_first_marriage",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -25501,7 +26680,7 @@
   "difficulty": 2,
   "dataset": "es_first_child",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -25515,7 +26694,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 584 otomobil.",
   "difficulty": 1,
-  "dataset": "es_cars"
+  "dataset": "es_cars",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1898",
@@ -25543,7 +26725,7 @@
   "difficulty": 2,
   "dataset": "es_leaving_home",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -25557,7 +26739,10 @@
   "data_year": 2025,
   "fun_fact": "Aynı yıl AB ortalaması: 584 otomobil.",
   "difficulty": 2,
-  "dataset": "es_cars"
+  "dataset": "es_cars",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q1901",
@@ -25572,7 +26757,7 @@
   "difficulty": 2,
   "dataset": "es_median_age",
   "scale": {
-   "half": 6
+   "half": 4
   }
  },
  {
@@ -25601,7 +26786,7 @@
   "difficulty": 2,
   "dataset": "es_first_marriage",
   "scale": {
-   "half": 6
+   "half": 3
   }
  },
  {
@@ -25630,7 +26815,7 @@
   "difficulty": 3,
   "dataset": "owid_life_expectancy_history",
   "scale": {
-   "half": 8
+   "half": 5
   }
  },
  {
@@ -25657,7 +26842,10 @@
   "data_year": 2026,
   "fun_fact": "2000 yılında: 6,17 milyar.",
   "difficulty": 2,
-  "dataset": "owid_population_history"
+  "dataset": "owid_population_history",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1908",
@@ -25670,7 +26858,10 @@
   "data_year": 2026,
   "fun_fact": "1000 yılında: 323,5 milyon.",
   "difficulty": 3,
-  "dataset": "owid_population_history"
+  "dataset": "owid_population_history",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1909",
@@ -25698,7 +26889,7 @@
   "difficulty": 3,
   "dataset": "owid_life_expectancy_history",
   "scale": {
-   "half": 8
+   "half": 5
   }
  },
  {
@@ -25712,7 +26903,10 @@
   "data_year": 2026,
   "fun_fact": "1950 yılında: 21,0 milyon.",
   "difficulty": 3,
-  "dataset": "owid_population_history"
+  "dataset": "owid_population_history",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1912",
@@ -25738,7 +26932,10 @@
   "data_year": 2026,
   "fun_fact": "2023 yılında: 1,44 milyar.",
   "difficulty": 3,
-  "dataset": "owid_population_history"
+  "dataset": "owid_population_history",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1914",
@@ -25753,7 +26950,7 @@
   "difficulty": 3,
   "dataset": "owid_life_expectancy_history",
   "scale": {
-   "half": 8
+   "half": 5
   }
  },
  {
@@ -25769,7 +26966,7 @@
   "difficulty": 2,
   "dataset": "owid_life_expectancy_history",
   "scale": {
-   "half": 8
+   "half": 5
   }
  },
  {
@@ -25798,7 +26995,7 @@
   "difficulty": 3,
   "dataset": "owid_life_expectancy_history",
   "scale": {
-   "half": 8
+   "half": 5
   }
  },
  {
@@ -25825,7 +27022,10 @@
   "data_year": 2026,
   "fun_fact": "2023 yılında: 1,42 milyar.",
   "difficulty": 3,
-  "dataset": "owid_population_history"
+  "dataset": "owid_population_history",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1920",
@@ -25838,7 +27038,10 @@
   "data_year": 2026,
   "fun_fact": "2023 yılında: 8,09 milyar.",
   "difficulty": 3,
-  "dataset": "owid_population_history"
+  "dataset": "owid_population_history",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1921",
@@ -25851,7 +27054,10 @@
   "data_year": 2026,
   "fun_fact": "2023 yılında: 8,09 milyar.",
   "difficulty": 2,
-  "dataset": "owid_population_history"
+  "dataset": "owid_population_history",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1922",
@@ -25892,7 +27098,7 @@
   "difficulty": 2,
   "dataset": "owid_life_expectancy_history",
   "scale": {
-   "half": 8
+   "half": 5
   }
  },
  {
@@ -25919,7 +27125,10 @@
   "data_year": 2026,
   "fun_fact": "2023 yılında: 87,3 milyon. Yıl ortası tahmini, sayım sonucu değil.",
   "difficulty": 2,
-  "dataset": "owid_population_history"
+  "dataset": "owid_population_history",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1927",
@@ -25934,7 +27143,7 @@
   "difficulty": 3,
   "dataset": "owid_life_expectancy_history",
   "scale": {
-   "half": 8
+   "half": 5
   }
  },
  {
@@ -25974,7 +27183,10 @@
   "data_year": 2026,
   "fun_fact": "2023 yılında: 8,09 milyar.",
   "difficulty": 2,
-  "dataset": "owid_population_history"
+  "dataset": "owid_population_history",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q1931",
@@ -26484,7 +27696,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "chemistry_school"
+  "dataset": "chemistry_school",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1970",
@@ -26549,7 +27764,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "chemistry_school"
+  "dataset": "chemistry_school",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1975",
@@ -26640,7 +27858,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "chemistry_school"
+  "dataset": "chemistry_school",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1982",
@@ -26692,7 +27913,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "chemistry_school"
+  "dataset": "chemistry_school",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1986",
@@ -26731,7 +27955,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "chemistry_school"
+  "dataset": "chemistry_school",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1989",
@@ -26770,7 +27997,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "chemistry_school"
+  "dataset": "chemistry_school",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1992",
@@ -26809,7 +28039,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "chemistry_school"
+  "dataset": "chemistry_school",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1995",
@@ -26822,7 +28055,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "chemistry_school"
+  "dataset": "chemistry_school",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q1996",
@@ -26874,7 +28110,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "chemistry_school"
+  "dataset": "chemistry_school",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q2000",
@@ -26926,7 +28165,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "chemistry_school"
+  "dataset": "chemistry_school",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q2004",
@@ -26952,7 +28194,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "chemistry_school"
+  "dataset": "chemistry_school",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q2006",
@@ -26965,7 +28210,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "chemistry_school"
+  "dataset": "chemistry_school",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q2007",
@@ -27030,7 +28278,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "biology_school"
+  "dataset": "biology_school",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q2012",
@@ -27056,7 +28307,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "biology_school"
+  "dataset": "biology_school",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q2014",
@@ -27082,7 +28336,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "chemistry_school"
+  "dataset": "chemistry_school",
+  "scale": {
+   "factor": 2.5
+  }
  },
  {
   "id": "q2016",
@@ -29699,7 +30956,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "food_curated"
+  "dataset": "food_curated",
+  "scale": {
+   "factor": 1.5
+  }
  },
  {
   "id": "q2217",
@@ -29939,7 +31199,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "food_curated"
+  "dataset": "food_curated",
+  "scale": {
+   "factor": 1.5
+  }
  },
  {
   "id": "q2234",
@@ -29952,7 +31215,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "food_curated"
+  "dataset": "food_curated",
+  "scale": {
+   "factor": 2
+  }
  },
  {
   "id": "q2235",
