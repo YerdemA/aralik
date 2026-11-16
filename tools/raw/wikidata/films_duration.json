@@ -1,0 +1,5083 @@
+{
+ "dataset": "films_duration",
+ "description": "Filmler, süre (P2047, saniyeye normalize)",
+ "property": "P2047",
+ "fetched_at": "2026-11-16T12:32:42+00:00",
+ "rows": [
+  {
+   "qid": "Q44578",
+   "label": "Titanik",
+   "links": 138,
+   "value": 11640.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Titanik (film, 1997)",
+   "released": [
+    1997
+   ],
+   "tr_views": 53855
+  },
+  {
+   "qid": "Q47703",
+   "label": "Baba",
+   "links": 133,
+   "value": 10500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Baba (film)",
+   "released": [
+    1972
+   ],
+   "tr_views": 81821
+  },
+  {
+   "qid": "Q83495",
+   "label": "Matrix",
+   "links": 114,
+   "value": 8160.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Matrix (film)",
+   "released": [
+    1999
+   ],
+   "tr_views": 60165
+  },
+  {
+   "qid": "Q128518",
+   "label": "Gladyatör",
+   "links": 108,
+   "value": 9300.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gladyatör (film)",
+   "released": [
+    2000,
+    2023
+   ],
+   "tr_views": 37904
+  },
+  {
+   "qid": "Q104123",
+   "label": "Ucuz Roman",
+   "links": 107,
+   "value": 9240.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ucuz Roman",
+   "released": [
+    1994
+   ],
+   "tr_views": 20227
+  },
+  {
+   "qid": "Q132689",
+   "label": "Kazablanka",
+   "links": 107,
+   "value": 6120.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kazablanka (film)",
+   "released": [
+    1942,
+    1943,
+    1947
+   ],
+   "tr_views": 12828
+  },
+  {
+   "qid": "Q163872",
+   "label": "Kara Şövalye",
+   "links": 107,
+   "value": 9300.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara Şövalye",
+   "released": [
+    2008,
+    2022
+   ],
+   "tr_views": 38314
+  },
+  {
+   "qid": "Q172241",
+   "label": "Esaretin Bedeli",
+   "links": 107,
+   "value": 8520.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Esaretin Bedeli",
+   "released": [
+    1994,
+    1995
+   ],
+   "tr_views": 67555
+  },
+  {
+   "qid": "Q133654",
+   "label": "Kuzuların Sessizliği",
+   "links": 103,
+   "value": 7080.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kuzuların Sessizliği (film)",
+   "released": [
+    1991
+   ],
+   "tr_views": 38774
+  },
+  {
+   "qid": "Q91540",
+   "label": "Geleceğe Dönüş",
+   "links": 103,
+   "value": 6900.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Geleceğe Dönüş",
+   "released": [
+    1985
+   ],
+   "tr_views": 18443
+  },
+  {
+   "qid": "Q190050",
+   "label": "Dövüş Kulübü",
+   "links": 102,
+   "value": 8340.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dövüş Kulübü (film)",
+   "released": [
+    1999
+   ],
+   "tr_views": 28741
+  },
+  {
+   "qid": "Q483941",
+   "label": "Schindler'in Listesi",
+   "links": 102,
+   "value": 11700.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Schindler'in Listesi",
+   "released": [
+    1993,
+    1994
+   ],
+   "tr_views": 12463
+  },
+  {
+   "qid": "Q162255",
+   "label": "Terminatör",
+   "links": 100,
+   "value": 6420.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Terminatör",
+   "released": [
+    1984,
+    1985,
+    1987
+   ],
+   "tr_views": 32380
+  },
+  {
+   "qid": "Q102438",
+   "label": "Harry Potter ve Felsefe Taşı",
+   "links": 99,
+   "value": 9120.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Harry Potter ve Felsefe Taşı (film)",
+   "released": [
+    2001
+   ],
+   "tr_views": 36725
+  },
+  {
+   "qid": "Q13417189",
+   "label": "Yıldızlararası",
+   "links": 98,
+   "value": 10140.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yıldızlararası",
+   "released": [
+    2014,
+    2025
+   ],
+   "tr_views": 76266
+  },
+  {
+   "qid": "Q5890",
+   "label": "V for Vendetta",
+   "links": 98,
+   "value": 7920.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "V for Vendetta (film)",
+   "released": [
+    2005,
+    2006
+   ],
+   "tr_views": 33269
+  },
+  {
+   "qid": "Q127367",
+   "label": "Yüzüklerin Efendisi: Yüzük Kardeşliği",
+   "links": 97,
+   "value": 10680.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yüzüklerin Efendisi: Yüzük Kardeşliği",
+   "released": [
+    2001,
+    2002
+   ],
+   "tr_views": 51395
+  },
+  {
+   "qid": "Q127367",
+   "label": "Yüzüklerin Efendisi: Yüzük Kardeşliği",
+   "links": 97,
+   "value": 12480.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yüzüklerin Efendisi: Yüzük Kardeşliği",
+   "released": [
+    2001,
+    2002
+   ],
+   "tr_views": 51395
+  },
+  {
+   "qid": "Q127367",
+   "label": "Yüzüklerin Efendisi: Yüzük Kardeşliği",
+   "links": 97,
+   "value": 13680.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yüzüklerin Efendisi: Yüzük Kardeşliği",
+   "released": [
+    2001,
+    2002
+   ],
+   "tr_views": 51395
+  },
+  {
+   "qid": "Q25188",
+   "label": "Başlangıç",
+   "links": 97,
+   "value": 8880.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Başlangıç",
+   "released": [
+    2010
+   ],
+   "tr_views": 70462
+  },
+  {
+   "qid": "Q2875",
+   "label": "Rüzgâr Gibi Geçti",
+   "links": 97,
+   "value": 14280.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rüzgâr Gibi Geçti (film)",
+   "released": [
+    1939
+   ],
+   "tr_views": 13392
+  },
+  {
+   "qid": "Q17738",
+   "label": "Yıldız Savaşları: Bölüm IV - Yeni Bir Umut",
+   "links": 96,
+   "value": 7260.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yıldız Savaşları: Bölüm IV - Yeni Bir Umut",
+   "released": [
+    1977,
+    1978
+   ],
+   "tr_views": 11450
+  },
+  {
+   "qid": "Q182218",
+   "label": "Yenilmezler",
+   "links": 96,
+   "value": 8520.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yenilmezler (film, 2012)",
+   "released": [
+    2012
+   ],
+   "tr_views": 25933
+  },
+  {
+   "qid": "Q41483",
+   "label": "İyi, Kötü ve Çirkin",
+   "links": 95,
+   "value": 10440.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İyi, Kötü ve Çirkin",
+   "released": [
+    1966,
+    1967,
+    1968
+   ],
+   "tr_views": 32438
+  },
+  {
+   "qid": "Q102244",
+   "label": "Harry Potter ve Sırlar Odası",
+   "links": 94,
+   "value": 9660.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Harry Potter ve Sırlar Odası (film)",
+   "released": [
+    2002,
+    2003
+   ],
+   "tr_views": 15377
+  },
+  {
+   "qid": "Q131074",
+   "label": "Yüzüklerin Efendisi: Kralın Dönüşü",
+   "links": 93,
+   "value": 12060.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yüzüklerin Efendisi: Kralın Dönüşü",
+   "released": [
+    2003,
+    2004
+   ],
+   "tr_views": 23648
+  },
+  {
+   "qid": "Q131074",
+   "label": "Yüzüklerin Efendisi: Kralın Dönüşü",
+   "links": 93,
+   "value": 15000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yüzüklerin Efendisi: Kralın Dönüşü",
+   "released": [
+    2003,
+    2004
+   ],
+   "tr_views": 23648
+  },
+  {
+   "qid": "Q131074",
+   "label": "Yüzüklerin Efendisi: Kralın Dönüşü",
+   "links": 93,
+   "value": 15780.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yüzüklerin Efendisi: Kralın Dönüşü",
+   "released": [
+    2003,
+    2004
+   ],
+   "tr_views": 23648
+  },
+  {
+   "qid": "Q162729",
+   "label": "Cesur Yürek",
+   "links": 92,
+   "value": 10620.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cesur Yürek",
+   "released": [
+    1995
+   ],
+   "tr_views": 25654
+  },
+  {
+   "qid": "Q170564",
+   "label": "Terminatör 2: Kıyamet Günü",
+   "links": 92,
+   "value": 8220.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Terminatör 2: Kıyamet Günü",
+   "released": [
+    1991
+   ],
+   "tr_views": 26854
+  },
+  {
+   "qid": "Q165713",
+   "label": "Yıldız Savaşları: Bölüm I - Gizli Tehlike",
+   "links": 91,
+   "value": 7980.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yıldız Savaşları: Bölüm I - Gizli Tehlike",
+   "released": [
+    1999,
+    2000,
+    2001
+   ],
+   "tr_views": 11032
+  },
+  {
+   "qid": "Q102225",
+   "label": "Harry Potter ve Ateş Kadehi",
+   "links": 90,
+   "value": 9060.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Harry Potter ve Ateş Kadehi (film)",
+   "released": [
+    2005,
+    2022
+   ],
+   "tr_views": 32527
+  },
+  {
+   "qid": "Q102448",
+   "label": "Harry Potter ve Azkaban Tutsağı",
+   "links": 90,
+   "value": 8460.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Harry Potter ve Azkaban Tutsağı (film)",
+   "released": [
+    2004,
+    2022
+   ],
+   "tr_views": 17217
+  },
+  {
+   "qid": "Q103474",
+   "label": "2001: Bir Uzay Destanı",
+   "links": 90,
+   "value": 8580.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "2001: Bir Uzay Destanı",
+   "released": [
+    1968
+   ],
+   "tr_views": 9729
+  },
+  {
+   "qid": "Q125076",
+   "label": "Milyoner",
+   "links": 90,
+   "value": 7200.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Milyoner (film)",
+   "released": [
+    2008,
+    2009
+   ],
+   "tr_views": 13906
+  },
+  {
+   "qid": "Q23781155",
+   "label": "Avengers Endgame",
+   "links": 90,
+   "value": 10860.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avengers: Endgame",
+   "released": [
+    2019,
+    2026
+   ],
+   "tr_views": 41537
+  },
+  {
+   "qid": "Q46717",
+   "label": "Karayip Korsanları: Siyah İnci'nin Laneti",
+   "links": 90,
+   "value": 8220.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karayip Korsanları: Siyah İnci'nin Laneti",
+   "released": [
+    2003
+   ],
+   "tr_views": 17414
+  },
+  {
+   "qid": "Q161687",
+   "label": "Harry Potter ve Melez Prens",
+   "links": 89,
+   "value": 8820.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Harry Potter ve Melez Prens (film)",
+   "released": [
+    2009
+   ],
+   "tr_views": 13445
+  },
+  {
+   "qid": "Q102235",
+   "label": "Harry Potter ve Zümrüdüanka Yoldaşlığı",
+   "links": 88,
+   "value": 7980.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Harry Potter ve Zümrüdüanka Yoldaşlığı (film)",
+   "released": [
+    2007
+   ],
+   "tr_views": 14080
+  },
+  {
+   "qid": "Q164963",
+   "label": "Yüzüklerin Efendisi: İki Kule",
+   "links": 88,
+   "value": 10740.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yüzüklerin Efendisi: İki Kule",
+   "released": [
+    2002,
+    2003
+   ],
+   "tr_views": 18122
+  },
+  {
+   "qid": "Q164963",
+   "label": "Yüzüklerin Efendisi: İki Kule",
+   "links": 88,
+   "value": 13380.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yüzüklerin Efendisi: İki Kule",
+   "released": [
+    2002,
+    2003
+   ],
+   "tr_views": 18122
+  },
+  {
+   "qid": "Q164963",
+   "label": "Yüzüklerin Efendisi: İki Kule",
+   "links": 88,
+   "value": 14100.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yüzüklerin Efendisi: İki Kule",
+   "released": [
+    2002,
+    2003
+   ],
+   "tr_views": 18122
+  },
+  {
+   "qid": "Q164103",
+   "label": "Akıl Oyunları",
+   "links": 87,
+   "value": 8100.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Akıl Oyunları (film)",
+   "released": [
+    2001
+   ],
+   "tr_views": 42073
+  },
+  {
+   "qid": "Q165817",
+   "label": "Er Ryan'ı Kurtarmak",
+   "links": 87,
+   "value": 10140.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Er Ryan'ı Kurtarmak",
+   "released": [
+    1998
+   ],
+   "tr_views": 28926
+  },
+  {
+   "qid": "Q106316",
+   "label": "Ölü Ozanlar Derneği",
+   "links": 86,
+   "value": 7380.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ölü Ozanlar Derneği",
+   "released": [
+    1989,
+    1990
+   ],
+   "tr_views": 31250
+  },
+  {
+   "qid": "Q184768",
+   "label": "Baba II",
+   "links": 86,
+   "value": 9900.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Baba II",
+   "released": [
+    1974,
+    1975
+   ],
+   "tr_views": 23418
+  },
+  {
+   "qid": "Q184768",
+   "label": "Baba II",
+   "links": 86,
+   "value": 12120.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Baba II",
+   "released": [
+    1974,
+    1975
+   ],
+   "tr_views": 23418
+  },
+  {
+   "qid": "Q23780914",
+   "label": "Avengers: Sonsuzluk Savaşı",
+   "links": 86,
+   "value": 8940.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avengers: Sonsuzluk Savaşı",
+   "released": [
+    2018
+   ],
+   "tr_views": 19819
+  },
+  {
+   "qid": "Q42051",
+   "label": "Yıldız Savaşları: Bölüm III - Sith'in İntikamı",
+   "links": 86,
+   "value": 8400.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yıldız Savaşları: Bölüm III - Sith'in İntikamı",
+   "released": [
+    2005,
+    2025
+   ],
+   "tr_views": 6050
+  },
+  {
+   "qid": "Q160618",
+   "label": "Brokeback Dağı",
+   "links": 85,
+   "value": 8040.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Brokeback Dağı",
+   "released": [
+    2005,
+    2006
+   ],
+   "tr_views": 13198
+  },
+  {
+   "qid": "Q166262",
+   "label": "Batman Başlıyor",
+   "links": 85,
+   "value": 8400.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Batman Başlıyor",
+   "released": [
+    2005
+   ],
+   "tr_views": 16736
+  },
+  {
+   "qid": "Q54274",
+   "label": "Karayip Korsanları: Dünyanın Sonu",
+   "links": 85,
+   "value": 10080.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karayip Korsanları: Dünyanın Sonu",
+   "released": [
+    2007
+   ],
+   "tr_views": 14198
+  },
+  {
+   "qid": "Q161087",
+   "label": "Karayip Korsanları: Ölü Adamın Sandığı",
+   "links": 84,
+   "value": 8700.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karayip Korsanları: Ölü Adamın Sandığı",
+   "released": [
+    2006
+   ],
+   "tr_views": 12993
+  },
+  {
+   "qid": "Q181795",
+   "label": "Yıldız Savaşları: Bölüm V - İmparatorun Dönüşü",
+   "links": 84,
+   "value": 7320.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yıldız Savaşları: Bölüm V - İmparator",
+   "released": [
+    1980
+   ],
+   "tr_views": 5865
+  },
+  {
+   "qid": "Q181795",
+   "label": "Yıldız Savaşları: Bölüm V - İmparatorun Dönüşü",
+   "links": 84,
+   "value": 7440.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yıldız Savaşları: Bölüm V - İmparator",
+   "released": [
+    1980
+   ],
+   "tr_views": 5865
+  },
+  {
+   "qid": "Q182692",
+   "label": "Kıyamet",
+   "links": 84,
+   "value": 8820.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kıyamet (film)",
+   "released": [
+    1979,
+    2019
+   ],
+   "tr_views": 11830
+  },
+  {
+   "qid": "Q182692",
+   "label": "Kıyamet",
+   "links": 84,
+   "value": 10980.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kıyamet (film)",
+   "released": [
+    1979,
+    2019
+   ],
+   "tr_views": 11830
+  },
+  {
+   "qid": "Q182692",
+   "label": "Kıyamet",
+   "links": 84,
+   "value": 12120.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kıyamet (film)",
+   "released": [
+    1979,
+    2019
+   ],
+   "tr_views": 11830
+  },
+  {
+   "qid": "Q184843",
+   "label": "Bıçak Sırtı",
+   "links": 84,
+   "value": 6720.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bıçak Sırtı",
+   "released": [
+    1982
+   ],
+   "tr_views": 14447
+  },
+  {
+   "qid": "Q184843",
+   "label": "Bıçak Sırtı",
+   "links": 84,
+   "value": 6960.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bıçak Sırtı",
+   "released": [
+    1982
+   ],
+   "tr_views": 14447
+  },
+  {
+   "qid": "Q192724",
+   "label": "Iron Man",
+   "links": 84,
+   "value": 7560.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Iron Man (film, 2008)",
+   "released": [
+    2008
+   ],
+   "tr_views": 13922
+  },
+  {
+   "qid": "Q24815",
+   "label": "Yurttaş Kane",
+   "links": 84,
+   "value": 7140.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yurttaş Kane",
+   "released": [
+    1941,
+    1946
+   ],
+   "tr_views": 8932
+  },
+  {
+   "qid": "Q484442",
+   "label": "Örümcek Adam",
+   "links": 84,
+   "value": 7260.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Örümcek Adam (film, 2002)",
+   "released": [
+    2002
+   ],
+   "tr_views": 29097
+  },
+  {
+   "qid": "Q103569",
+   "label": "Yaratık",
+   "links": 83,
+   "value": 7020.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yaratık (film)",
+   "released": [
+    1979
+   ],
+   "tr_views": 10609
+  },
+  {
+   "qid": "Q131390",
+   "label": "300",
+   "links": 83,
+   "value": 6960.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "300 Spartalı",
+   "released": [
+    2006
+   ],
+   "tr_views": 23162
+  },
+  {
+   "qid": "Q161678",
+   "label": "Harry Potter ve Ölüm Yadigârları: Bölüm 1",
+   "links": 83,
+   "value": 8820.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Harry Potter ve Ölüm Yadigârları: Bölüm 1",
+   "released": [
+    2010
+   ],
+   "tr_views": 22102
+  },
+  {
+   "qid": "Q181803",
+   "label": "Yıldız Savaşları: Bölüm VI - Jedi'ın Dönüşü",
+   "links": 83,
+   "value": 7800.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yıldız Savaşları: Bölüm VI - Jedi'ın Dönüşü",
+   "released": [
+    1983
+   ],
+   "tr_views": 6446
+  },
+  {
+   "qid": "Q181803",
+   "label": "Yıldız Savaşları: Bölüm VI - Jedi'ın Dönüşü",
+   "links": 83,
+   "value": 8040.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yıldız Savaşları: Bölüm VI - Jedi'ın Dönüşü",
+   "released": [
+    1983
+   ],
+   "tr_views": 6446
+  },
+  {
+   "qid": "Q105031",
+   "label": "Evde Tek Başına",
+   "links": 82,
+   "value": 6180.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Evde Tek Başına",
+   "released": [
+    1990,
+    1991
+   ],
+   "tr_views": 31517
+  },
+  {
+   "qid": "Q181069",
+   "label": "Yıldız Savaşları: Bölüm II - Klonların Saldırısı",
+   "links": 82,
+   "value": 8520.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yıldız Savaşları: Bölüm II - Klonların Saldırısı",
+   "released": [
+    2002
+   ],
+   "tr_views": 5119
+  },
+  {
+   "qid": "Q109116",
+   "label": "Büyük Diktatör",
+   "links": 81,
+   "value": 7500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük Diktatör",
+   "released": [
+    1940,
+    1945,
+    1958,
+    1960
+   ],
+   "tr_views": 4580
+  },
+  {
+   "qid": "Q172975",
+   "label": "Köstebek",
+   "links": 81,
+   "value": 9060.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Köstebek (film, 2006)",
+   "released": [
+    2006
+   ],
+   "tr_views": 31130
+  },
+  {
+   "qid": "Q190086",
+   "label": "Bazıları Sıcak Sever",
+   "links": 81,
+   "value": 7200.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bazıları Sıcak Sever",
+   "released": [
+    1959
+   ],
+   "tr_views": 3189
+  },
+  {
+   "qid": "Q232009",
+   "label": "Harry Potter ve Ölüm Yadigârları: Bölüm 2",
+   "links": 81,
+   "value": 7800.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Harry Potter ve Ölüm Yadigârları: Bölüm 2",
+   "released": [
+    2011
+   ],
+   "tr_views": 16969
+  },
+  {
+   "qid": "Q61448040",
+   "label": "Parazit",
+   "links": 81,
+   "value": 7920.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Parazit (film, 2019)",
+   "released": [
+    2019
+   ],
+   "tr_views": 37556
+  },
+  {
+   "qid": "Q153723",
+   "label": "Soysuzlar Çetesi",
+   "links": 80,
+   "value": 9180.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Soysuzlar Çetesi",
+   "released": [
+    2009
+   ],
+   "tr_views": 48430
+  },
+  {
+   "qid": "Q174284",
+   "label": "Kutsal Hazine Avcıları",
+   "links": 80,
+   "value": 6900.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kutsal Hazine Avcıları",
+   "released": [
+    1981
+   ],
+   "tr_views": 7358
+  },
+  {
+   "qid": "Q19355",
+   "label": "Hayat Güzeldir",
+   "links": 80,
+   "value": 6960.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hayat Güzeldir",
+   "released": [
+    1997,
+    1998,
+    1999
+   ],
+   "tr_views": 24182
+  },
+  {
+   "qid": "Q160060",
+   "label": "Zoraki Kral",
+   "links": 79,
+   "value": 7080.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zoraki Kral",
+   "released": [
+    2010,
+    2011
+   ],
+   "tr_views": 6507
+  },
+  {
+   "qid": "Q183081",
+   "label": "İhtiyarlara Yer Yok",
+   "links": 79,
+   "value": 7320.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İhtiyarlara Yer Yok (film)",
+   "released": [
+    2007,
+    2008
+   ],
+   "tr_views": 33679
+  },
+  {
+   "qid": "Q25139",
+   "label": "Amerikan Güzeli",
+   "links": 79,
+   "value": 7260.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Amerikan Güzeli",
+   "released": [
+    1999,
+    2000
+   ],
+   "tr_views": 7576
+  },
+  {
+   "qid": "Q275120",
+   "label": "İlk Yenilmez: Kaptan Amerika",
+   "links": 79,
+   "value": 7440.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İlk Yenilmez: Kaptan Amerika",
+   "released": [
+    2011
+   ],
+   "tr_views": 8058
+  },
+  {
+   "qid": "Q47221",
+   "label": "Taksi Şoförü",
+   "links": 79,
+   "value": 6840.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Taksi Şoförü",
+   "released": [
+    1976,
+    1977
+   ],
+   "tr_views": 16309
+  },
+  {
+   "qid": "Q105598",
+   "label": "Zor Ölüm",
+   "links": 78,
+   "value": 7860.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zor Ölüm",
+   "released": [
+    1988
+   ],
+   "tr_views": 4341
+  },
+  {
+   "qid": "Q150804",
+   "label": "Piyanist",
+   "links": 78,
+   "value": 8940.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Piyanist (film, 2002)",
+   "released": [
+    2002
+   ],
+   "tr_views": 31769
+  },
+  {
+   "qid": "Q163038",
+   "label": "Sapık",
+   "links": 78,
+   "value": 6540.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sapık (film, 1960)",
+   "released": [
+    1960
+   ],
+   "tr_views": 36065
+  },
+  {
+   "qid": "Q171669",
+   "label": "Guguk Kuşu",
+   "links": 78,
+   "value": 7980.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Guguk Kuşu (film)",
+   "released": [
+    1975,
+    1976
+   ],
+   "tr_views": 23954
+  },
+  {
+   "qid": "Q171669",
+   "label": "Guguk Kuşu",
+   "links": 78,
+   "value": 8160.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Guguk Kuşu (film)",
+   "released": [
+    1975,
+    1976
+   ],
+   "tr_views": 23954
+  },
+  {
+   "qid": "Q208263",
+   "label": "Yeşil Yol",
+   "links": 78,
+   "value": 11340.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeşil Yol (film)",
+   "released": [
+    1999,
+    2000
+   ],
+   "tr_views": 34382
+  },
+  {
+   "qid": "Q228186",
+   "label": "Arabistanlı Lawrence",
+   "links": 78,
+   "value": 12960.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arabistanlı Lawrence (film)",
+   "released": [
+    1962,
+    1963
+   ],
+   "tr_views": 13318
+  },
+  {
+   "qid": "Q3023357",
+   "label": "12 Yıllık Esaret",
+   "links": 78,
+   "value": 7980.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "12 Yıllık Esaret (film)",
+   "released": [
+    2013,
+    2014
+   ],
+   "tr_views": 15475
+  },
+  {
+   "qid": "Q46551",
+   "label": "Prestij",
+   "links": 78,
+   "value": 7500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Prestij",
+   "released": [
+    2006,
+    2007
+   ],
+   "tr_views": 45223
+  },
+  {
+   "qid": "Q484048",
+   "label": "Amélie",
+   "links": 78,
+   "value": 7320.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Amélie",
+   "released": [
+    2001,
+    2002
+   ],
+   "tr_views": 19247
+  },
+  {
+   "qid": "Q42759035",
+   "label": "Joker",
+   "links": 77,
+   "value": 7320.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Joker (film, 2019)",
+   "released": [
+    2019
+   ],
+   "tr_views": 25916
+  },
+  {
+   "qid": "Q102754",
+   "label": "Dr. No",
+   "links": 76,
+   "value": 6300.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dr. No (film)",
+   "released": [
+    1962,
+    1963
+   ],
+   "tr_views": 4248
+  },
+  {
+   "qid": "Q202326",
+   "label": "Baba III",
+   "links": 76,
+   "value": 9720.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Baba III",
+   "released": [
+    1990,
+    1991
+   ],
+   "tr_views": 19945
+  },
+  {
+   "qid": "Q208108",
+   "label": "Sıkıysa Yakala",
+   "links": 76,
+   "value": 8400.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sıkıysa Yakala",
+   "released": [
+    2002,
+    2003
+   ],
+   "tr_views": 28122
+  },
+  {
+   "qid": "Q2345",
+   "label": "12 Öfkeli Adam",
+   "links": 76,
+   "value": 5700.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "12 Öfkeli Adam",
+   "released": [
+    1957,
+    1958
+   ],
+   "tr_views": 24205
+  },
+  {
+   "qid": "Q2579784",
+   "label": "Yerçekimi",
+   "links": 76,
+   "value": 5460.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yerçekimi (film)",
+   "released": [
+    2013
+   ],
+   "tr_views": 8173
+  },
+  {
+   "qid": "Q1392744",
+   "label": "Para Avcısı",
+   "links": 75,
+   "value": 10800.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Para Avcısı",
+   "released": [
+    2013,
+    2014
+   ],
+   "tr_views": 23338
+  },
+  {
+   "qid": "Q186341",
+   "label": "Cinnet",
+   "links": 75,
+   "value": 7140.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cinnet (film, 1980)",
+   "released": [
+    1980
+   ],
+   "tr_views": 25231
+  },
+  {
+   "qid": "Q186341",
+   "label": "Cinnet",
+   "links": 75,
+   "value": 8640.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cinnet (film, 1980)",
+   "released": [
+    1980
+   ],
+   "tr_views": 25231
+  },
+  {
+   "qid": "Q186587",
+   "label": "Truva",
+   "links": 75,
+   "value": 9300.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Truva (film)",
+   "released": [
+    2004
+   ],
+   "tr_views": 41978
+  },
+  {
+   "qid": "Q186587",
+   "label": "Truva",
+   "links": 75,
+   "value": 9780.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Truva (film)",
+   "released": [
+    2004
+   ],
+   "tr_views": 41978
+  },
+  {
+   "qid": "Q20856802",
+   "label": "Aşıklar Şehri",
+   "links": 75,
+   "value": 7680.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aşıklar Şehri",
+   "released": [
+    2016,
+    2017
+   ],
+   "tr_views": 18028
+  },
+  {
+   "qid": "Q23010088",
+   "label": "Örümcek Adam: Eve Dönüş",
+   "links": 75,
+   "value": 7980.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Örümcek-Adam: Eve Dönüş",
+   "released": [
+    2017
+   ],
+   "tr_views": 28512
+  },
+  {
+   "qid": "Q6074",
+   "label": "Star Wars: Güç Uyanıyor",
+   "links": 75,
+   "value": 8280.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Star Wars: Güç Uyanıyor",
+   "released": [
+    2015,
+    2016
+   ],
+   "tr_views": 8830
+  },
+  {
+   "qid": "Q80379",
+   "label": "Hobbit: Beklenmedik Yolculuk",
+   "links": 75,
+   "value": 10140.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hobbit: Beklenmedik Yolculuk",
+   "released": [
+    2012
+   ],
+   "tr_views": 19240
+  },
+  {
+   "qid": "Q80379",
+   "label": "Hobbit: Beklenmedik Yolculuk",
+   "links": 75,
+   "value": 10920.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hobbit: Beklenmedik Yolculuk",
+   "released": [
+    2012
+   ],
+   "tr_views": 19240
+  },
+  {
+   "qid": "Q160071",
+   "label": "Alacakaranlık",
+   "links": 74,
+   "value": 7260.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Alacakaranlık (film, 2008)",
+   "released": [
+    2008,
+    2009
+   ],
+   "tr_views": 37678
+  },
+  {
+   "qid": "Q180214",
+   "label": "Siyah Kuğu",
+   "links": 74,
+   "value": 6480.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Siyah Kuğu",
+   "released": [
+    2010,
+    2011
+   ],
+   "tr_views": 16349
+  },
+  {
+   "qid": "Q183555",
+   "label": "Karayip Korsanları: Gizemli Denizlerde",
+   "links": 74,
+   "value": 8160.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karayip Korsanları: Gizemli Denizlerde",
+   "released": [
+    2011
+   ],
+   "tr_views": 12249
+  },
+  {
+   "qid": "Q185888",
+   "label": "Sosyal Ağ",
+   "links": 74,
+   "value": 7260.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sosyal Ağ",
+   "released": [
+    2010
+   ],
+   "tr_views": 8697
+  },
+  {
+   "qid": "Q188845",
+   "label": "Yağmur Adam",
+   "links": 74,
+   "value": 7680.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yağmur Adam",
+   "released": [
+    1988,
+    1989
+   ],
+   "tr_views": 8500
+  },
+  {
+   "qid": "Q189540",
+   "label": "Yedi Samuray",
+   "links": 74,
+   "value": 12420.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yedi Samuray",
+   "released": [
+    1954,
+    1956,
+    1965
+   ],
+   "tr_views": 6520
+  },
+  {
+   "qid": "Q205028",
+   "label": "Iron Man 2",
+   "links": 74,
+   "value": 7440.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Iron Man 2",
+   "released": [
+    2010
+   ],
+   "tr_views": 9004
+  },
+  {
+   "qid": "Q571032",
+   "label": "Zincirsiz",
+   "links": 74,
+   "value": 9900.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zincirsiz",
+   "released": [
+    2012,
+    2013
+   ],
+   "tr_views": 22186
+  },
+  {
+   "qid": "Q842306",
+   "label": "Saludos Amigos",
+   "links": 74,
+   "value": 2580.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saludos Amigos",
+   "released": [
+    1942
+   ],
+   "tr_views": 211
+  },
+  {
+   "qid": "Q152780",
+   "label": "Pi'nin Yaşamı",
+   "links": 73,
+   "value": 7620.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pi'nin Yaşamı (film)",
+   "released": [
+    2012
+   ],
+   "tr_views": 19489
+  },
+  {
+   "qid": "Q171861",
+   "label": "Artist",
+   "links": 73,
+   "value": 6000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Artist (film)",
+   "released": [
+    2011,
+    2012,
+    2020
+   ],
+   "tr_views": 2525
+  },
+  {
+   "qid": "Q18002795",
+   "label": "Diriliş",
+   "links": 73,
+   "value": 9420.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Diriliş (film)",
+   "released": [
+    2015,
+    2016
+   ],
+   "tr_views": 44593
+  },
+  {
+   "qid": "Q18406872",
+   "label": "Doktor Strange",
+   "links": 73,
+   "value": 6900.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Doktor Strange (film, 2016)",
+   "released": [
+    2016
+   ],
+   "tr_views": 10109
+  },
+  {
+   "qid": "Q190908",
+   "label": "Yedi",
+   "links": 73,
+   "value": 7620.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yedi (film)",
+   "released": [
+    1995
+   ],
+   "tr_views": 39482
+  },
+  {
+   "qid": "Q212965",
+   "label": "Açlık Oyunları",
+   "links": 73,
+   "value": 8520.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Açlık Oyunları (film)",
+   "released": [
+    2012
+   ],
+   "tr_views": 22347
+  },
+  {
+   "qid": "Q214801",
+   "label": "Truman Show",
+   "links": 73,
+   "value": 5940.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "The Truman Show",
+   "released": [
+    1998
+   ],
+   "tr_views": 370
+  },
+  {
+   "qid": "Q42047",
+   "label": "Sıkı Dostlar",
+   "links": 73,
+   "value": 8700.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sıkı Dostlar (film)",
+   "released": [
+    1990
+   ],
+   "tr_views": 21002
+  },
+  {
+   "qid": "Q484675",
+   "label": "Leon: Sevginin Gücü",
+   "links": 73,
+   "value": 6600.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Leon: Sevginin Gücü",
+   "released": [
+    1994
+   ],
+   "tr_views": 28629
+  },
+  {
+   "qid": "Q105702",
+   "label": "Dr. Garipaşk",
+   "links": 72,
+   "value": 5580.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dr. Garipaşk",
+   "released": [
+    1964
+   ],
+   "tr_views": 5397
+  },
+  {
+   "qid": "Q105702",
+   "label": "Dr. Garipaşk",
+   "links": 72,
+   "value": 6120.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dr. Garipaşk",
+   "released": [
+    1964
+   ],
+   "tr_views": 5397
+  },
+  {
+   "qid": "Q109331",
+   "label": "Geleceğe Dönüş II",
+   "links": 72,
+   "value": 6480.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Geleceğe Dönüş II",
+   "released": [
+    1989
+   ],
+   "tr_views": 5277
+  },
+  {
+   "qid": "Q174385",
+   "label": "Alis Harikalar Diyarında",
+   "links": 72,
+   "value": 6540.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Alis Harikalar Diyarında (film, 2010)",
+   "released": [
+    2010
+   ],
+   "tr_views": 8970
+  },
+  {
+   "qid": "Q181086",
+   "label": "Otomatik Portakal",
+   "links": 72,
+   "value": 8160.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Otomatik Portakal (film)",
+   "released": [
+    1971,
+    1972
+   ],
+   "tr_views": 14714
+  },
+  {
+   "qid": "Q182944",
+   "label": "Aşık Shakespeare",
+   "links": 72,
+   "value": 7380.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aşık Shakespeare",
+   "released": [
+    1998,
+    1999
+   ],
+   "tr_views": 3229
+  },
+  {
+   "qid": "Q184255",
+   "label": "Milyonluk Bebek",
+   "links": 72,
+   "value": 7920.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Milyonluk Bebek",
+   "released": [
+    2004,
+    2005
+   ],
+   "tr_views": 7450
+  },
+  {
+   "qid": "Q18547944",
+   "label": "Marslı",
+   "links": 72,
+   "value": 8460.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Marslı (film)",
+   "released": [
+    2015
+   ],
+   "tr_views": 14765
+  },
+  {
+   "qid": "Q188718",
+   "label": "Kwai Köprüsü",
+   "links": 72,
+   "value": 9360.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kwai Köprüsü",
+   "released": [
+    1957,
+    1958
+   ],
+   "tr_views": 4305
+  },
+  {
+   "qid": "Q189505",
+   "label": "Denizin Dişleri",
+   "links": 72,
+   "value": 7440.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Denizin Dişleri",
+   "released": [
+    1975,
+    1976
+   ],
+   "tr_views": 5761
+  },
+  {
+   "qid": "Q190525",
+   "label": "Akıl Defteri",
+   "links": 72,
+   "value": 6780.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Akıl Defteri",
+   "released": [
+    2000,
+    2001
+   ],
+   "tr_views": 41199
+  },
+  {
+   "qid": "Q19347291",
+   "label": "Deadpool",
+   "links": 72,
+   "value": 6480.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Deadpool (film)",
+   "released": [
+    2016
+   ],
+   "tr_views": 16527
+  },
+  {
+   "qid": "Q47075",
+   "label": "Yaralı Yüz",
+   "links": 72,
+   "value": 10200.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yaralı Yüz (film, 1983)",
+   "released": [
+    1983,
+    1984
+   ],
+   "tr_views": 34748
+  },
+  {
+   "qid": "Q63026",
+   "label": "İngiliz Hasta",
+   "links": 72,
+   "value": 9720.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İngiliz Hasta",
+   "released": [
+    1996,
+    1997
+   ],
+   "tr_views": 6175
+  },
+  {
+   "qid": "Q105387",
+   "label": "Kurtuluş Günü",
+   "links": 71,
+   "value": 8640.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kurtuluş Günü (film)",
+   "released": [
+    1996
+   ],
+   "tr_views": 4085
+  },
+  {
+   "qid": "Q105387",
+   "label": "Kurtuluş Günü",
+   "links": 71,
+   "value": 8700.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kurtuluş Günü (film)",
+   "released": [
+    1996
+   ],
+   "tr_views": 4085
+  },
+  {
+   "qid": "Q151904",
+   "label": "Casino Royale",
+   "links": 71,
+   "value": 8640.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Casino Royale (film, 2006)",
+   "released": [
+    2006
+   ],
+   "tr_views": 13178
+  },
+  {
+   "qid": "Q152350",
+   "label": "Potemkin Zırhlısı",
+   "links": 71,
+   "value": 4440.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Potemkin Zırhlısı (film)",
+   "released": [
+    1925
+   ],
+   "tr_views": 7102
+  },
+  {
+   "qid": "Q1765358",
+   "label": "Kaptan Amerika: Kış Askeri",
+   "links": 71,
+   "value": 8160.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kaptan Amerika: Kış Askeri",
+   "released": [
+    2014
+   ],
+   "tr_views": 5931
+  },
+  {
+   "qid": "Q18407657",
+   "label": "Kaptan Amerika: İç Savaş",
+   "links": 71,
+   "value": 8820.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kaptan Amerika: Kahramanların Savaşı",
+   "released": [
+    2016
+   ],
+   "tr_views": 14589
+  },
+  {
+   "qid": "Q189330",
+   "label": "Kara Şövalye Yükseliyor",
+   "links": 71,
+   "value": 9840.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kara Şövalye Yükseliyor",
+   "released": [
+    2012,
+    2022
+   ],
+   "tr_views": 18553
+  },
+  {
+   "qid": "Q202508",
+   "label": "Mumya",
+   "links": 71,
+   "value": 7440.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mumya (film, 1999)",
+   "released": [
+    1999
+   ],
+   "tr_views": 14543
+  },
+  {
+   "qid": "Q209538",
+   "label": "Iron Man 3",
+   "links": 71,
+   "value": 7800.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Iron Man 3",
+   "released": [
+    2013
+   ],
+   "tr_views": 7211
+  },
+  {
+   "qid": "Q210364",
+   "label": "Zindan Adası",
+   "links": 71,
+   "value": 8280.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zindan Adası",
+   "released": [
+    2010
+   ],
+   "tr_views": 45788
+  },
+  {
+   "qid": "Q26698156",
+   "label": "Suyun Sesi",
+   "links": 71,
+   "value": 7380.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suyun Sesi",
+   "released": [
+    2017,
+    2018
+   ],
+   "tr_views": 7909
+  },
+  {
+   "qid": "Q3604746",
+   "label": "Avatar: Suyun Yolu",
+   "links": 71,
+   "value": 11400.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avatar: Suyun Yolu",
+   "released": [
+    2022,
+    2025
+   ],
+   "tr_views": 34750
+  },
+  {
+   "qid": "Q3604746",
+   "label": "Avatar: Suyun Yolu",
+   "links": 71,
+   "value": 11520.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Avatar: Suyun Yolu",
+   "released": [
+    2022,
+    2025
+   ],
+   "tr_views": 34750
+  },
+  {
+   "qid": "Q3604746",
+   "label": "Avatar: Suyun Yolu",
+   "links": 71,
+   "value": 11700.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avatar: Suyun Yolu",
+   "released": [
+    2022,
+    2025
+   ],
+   "tr_views": 34750
+  },
+  {
+   "qid": "Q48673898",
+   "label": "Yeşil Rehber",
+   "links": 71,
+   "value": 7800.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeşil Rehber",
+   "released": [
+    2018
+   ],
+   "tr_views": 11012
+  },
+  {
+   "qid": "Q55436290",
+   "label": "Barbie",
+   "links": 71,
+   "value": 6840.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Barbie (film)",
+   "released": [
+    2023
+   ],
+   "tr_views": 10165
+  },
+  {
+   "qid": "Q60072",
+   "label": "Neşeli Günler",
+   "links": 71,
+   "value": 10440.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Neşeli Günler (film, 1965)",
+   "released": [
+    1965
+   ],
+   "tr_views": 3390
+  },
+  {
+   "qid": "Q60834962",
+   "label": "Dune: Çöl Gezegeni",
+   "links": 71,
+   "value": 9300.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dune: Çöl Gezegeni (film, 2021)",
+   "released": [
+    2021
+   ],
+   "tr_views": 59615
+  },
+  {
+   "qid": "Q736731",
+   "label": "3 Kafadarlar",
+   "links": 71,
+   "value": 4200.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "3 Kafadarlar",
+   "released": [
+    1944
+   ],
+   "tr_views": 315
+  },
+  {
+   "qid": "Q160560",
+   "label": "Da Vinci Şifresi",
+   "links": 70,
+   "value": 8880.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Da Vinci Şifresi (film)",
+   "released": [
+    2006
+   ],
+   "tr_views": 9676
+  },
+  {
+   "qid": "Q179215",
+   "label": "Indiana Jones: Kamçılı Adam",
+   "links": 70,
+   "value": 6840.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Indiana Jones: Kamçılı Adam",
+   "released": [
+    1984
+   ],
+   "tr_views": 5211
+  },
+  {
+   "qid": "Q179215",
+   "label": "Indiana Jones: Kamçılı Adam",
+   "links": 70,
+   "value": 6960.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Indiana Jones: Kamçılı Adam",
+   "released": [
+    1984
+   ],
+   "tr_views": 5211
+  },
+  {
+   "qid": "Q18602670",
+   "label": "Spectre",
+   "links": 70,
+   "value": 8880.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Spectre (film, 2015)",
+   "released": [
+    2015
+   ],
+   "tr_views": 10741
+  },
+  {
+   "qid": "Q190145",
+   "label": "Örümcek Adam 2",
+   "links": 70,
+   "value": 7320.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Örümcek Adam 2",
+   "released": [
+    2004
+   ],
+   "tr_views": 17113
+  },
+  {
+   "qid": "Q193835",
+   "label": "Can Dostum",
+   "links": 70,
+   "value": 7560.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Can Dostum (film, 1997)",
+   "released": [
+    1997,
+    1998
+   ],
+   "tr_views": 42161
+  },
+  {
+   "qid": "Q201293",
+   "label": "Roma Tatili",
+   "links": 70,
+   "value": 7080.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Roma Tatili",
+   "released": [
+    1953
+   ],
+   "tr_views": 2441
+  },
+  {
+   "qid": "Q204191",
+   "label": "Şahane Hayat",
+   "links": 70,
+   "value": 7500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şahane Hayat",
+   "released": [
+    1946,
+    1947
+   ],
+   "tr_views": 5553
+  },
+  {
+   "qid": "Q20456",
+   "label": "Kurtlarla Dans",
+   "links": 70,
+   "value": 10860.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kurtlarla Dans",
+   "released": [
+    1990,
+    1991
+   ],
+   "tr_views": 8595
+  },
+  {
+   "qid": "Q20456",
+   "label": "Kurtlarla Dans",
+   "links": 70,
+   "value": 14160.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kurtlarla Dans",
+   "released": [
+    1990,
+    1991
+   ],
+   "tr_views": 8595
+  },
+  {
+   "qid": "Q27985819",
+   "label": "Örümcek-Adam: Evden Uzakta",
+   "links": 70,
+   "value": 7620.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Örümcek-Adam: Evden Uzakta",
+   "released": [
+    2019
+   ],
+   "tr_views": 22082
+  },
+  {
+   "qid": "Q27985819",
+   "label": "Örümcek-Adam: Evden Uzakta",
+   "links": 70,
+   "value": 7740.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Örümcek-Adam: Evden Uzakta",
+   "released": [
+    2019
+   ],
+   "tr_views": 22082
+  },
+  {
+   "qid": "Q27985819",
+   "label": "Örümcek-Adam: Evden Uzakta",
+   "links": 70,
+   "value": 7740.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Örümcek-Adam: Evden Uzakta",
+   "released": [
+    2019
+   ],
+   "tr_views": 22082
+  },
+  {
+   "qid": "Q27985819",
+   "label": "Örümcek-Adam: Evden Uzakta",
+   "links": 70,
+   "value": 7800.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Örümcek-Adam: Evden Uzakta",
+   "released": [
+    2019
+   ],
+   "tr_views": 22082
+  },
+  {
+   "qid": "Q68934496",
+   "label": "Örümcek-Adam: Eve Dönüş Yok",
+   "links": 70,
+   "value": 8880.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Örümcek-Adam: Eve Dönüş Yok",
+   "released": [
+    2021
+   ],
+   "tr_views": 48979
+  },
+  {
+   "qid": "Q719915",
+   "label": "Hobbit: Smaug'un Çorak Toprakları",
+   "links": 70,
+   "value": 9660.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hobbit: Smaug'un Çorak Toprakları",
+   "released": [
+    2013
+   ],
+   "tr_views": 12339
+  },
+  {
+   "qid": "Q72962",
+   "label": "Rezervuar Köpekleri",
+   "links": 70,
+   "value": 5940.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rezervuar Köpekleri",
+   "released": [
+    1992
+   ],
+   "tr_views": 13029
+  },
+  {
+   "qid": "Q104814",
+   "label": "Yaratık 2",
+   "links": 69,
+   "value": 8220.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yaratık 2",
+   "released": [
+    1986
+   ],
+   "tr_views": 6133
+  },
+  {
+   "qid": "Q107270",
+   "label": "Bir Konuşabilse",
+   "links": 69,
+   "value": 5820.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bir Konuşabilse",
+   "released": [
+    2003,
+    2004
+   ],
+   "tr_views": 8775
+  },
+  {
+   "qid": "Q13619743",
+   "label": "Minyonlar",
+   "links": 69,
+   "value": 5460.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Minyonlar",
+   "released": [
+    2015
+   ],
+   "tr_views": 10911
+  },
+  {
+   "qid": "Q181540",
+   "label": "Quantum of Solace",
+   "links": 69,
+   "value": 6360.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Quantum of Solace",
+   "released": [
+    2008
+   ],
+   "tr_views": 7647
+  },
+  {
+   "qid": "Q183066",
+   "label": "Ölümcül Tuzak",
+   "links": 69,
+   "value": 7860.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ölümcül Tuzak",
+   "released": [
+    2008,
+    2009,
+    2010
+   ],
+   "tr_views": 4466
+  },
+  {
+   "qid": "Q190588",
+   "label": "Aşk Her Yerde",
+   "links": 69,
+   "value": 8100.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aşk Her Yerde",
+   "released": [
+    2003
+   ],
+   "tr_views": 5765
+  },
+  {
+   "qid": "Q213411",
+   "label": "Yeni Hayat",
+   "links": 69,
+   "value": 8580.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeni Hayat (film)",
+   "released": [
+    2000,
+    2001
+   ],
+   "tr_views": 18345
+  },
+  {
+   "qid": "Q47300912",
+   "label": "Bir Zamanlar Hollywood'da",
+   "links": 69,
+   "value": 9660.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bir Zamanlar... Hollywood'da",
+   "released": [
+    2019
+   ],
+   "tr_views": 30003
+  },
+  {
+   "qid": "Q5901134",
+   "label": "Karınca Adam",
+   "links": 69,
+   "value": 7020.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ant-Man (film)",
+   "released": [
+    2015
+   ],
+   "tr_views": 3970
+  },
+  {
+   "qid": "Q622769",
+   "label": "Çelik Adam",
+   "links": 69,
+   "value": 8580.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Man of Steel",
+   "released": [
+    2013
+   ],
+   "tr_views": 9290
+  },
+  {
+   "qid": "Q1201853",
+   "label": "Thor: Karanlık Dünya",
+   "links": 68,
+   "value": 6720.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Thor: Karanlık Dünya",
+   "released": [
+    2013
+   ],
+   "tr_views": 7129
+  },
+  {
+   "qid": "Q132351",
+   "label": "Olağan Şüpheliler",
+   "links": 68,
+   "value": 6360.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Olağan Şüpheliler",
+   "released": [
+    1995,
+    1996
+   ],
+   "tr_views": 20268
+  },
+  {
+   "qid": "Q151599",
+   "label": "Metropolis",
+   "links": 68,
+   "value": 9180.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Metropolis (film)",
+   "released": [
+    1927,
+    1928,
+    1929,
+    1930
+   ],
+   "tr_views": 5816
+  },
+  {
+   "qid": "Q154581",
+   "label": "New York Çeteleri",
+   "links": 68,
+   "value": 10020.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "New York Çeteleri",
+   "released": [
+    2002,
+    2003
+   ],
+   "tr_views": 7656
+  },
+  {
+   "qid": "Q182212",
+   "label": "Örümcek Adam 3",
+   "links": 68,
+   "value": 8340.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Örümcek Adam 3",
+   "released": [
+    2007
+   ],
+   "tr_views": 18859
+  },
+  {
+   "qid": "Q183063",
+   "label": "Altıncı His",
+   "links": 68,
+   "value": 6420.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Altıncı His (film)",
+   "released": [
+    1999,
+    2000
+   ],
+   "tr_views": 28292
+  },
+  {
+   "qid": "Q185658",
+   "label": "Indiana Jones: Son Macera",
+   "links": 68,
+   "value": 7620.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Indiana Jones: Son Macera",
+   "released": [
+    1989
+   ],
+   "tr_views": 7145
+  },
+  {
+   "qid": "Q19089",
+   "label": "Altın Göz",
+   "links": 68,
+   "value": 7800.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Altın Göz (film)",
+   "released": [
+    1995
+   ],
+   "tr_views": 5863
+  },
+  {
+   "qid": "Q200299",
+   "label": "Perde Açılıyor",
+   "links": 68,
+   "value": 8280.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Perde Açılıyor",
+   "released": [
+    1950,
+    1951
+   ],
+   "tr_views": 1828
+  },
+  {
+   "qid": "Q220741",
+   "label": "Tanrı Kent",
+   "links": 68,
+   "value": 7680.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tanrı Kent",
+   "released": [
+    2002,
+    2003,
+    2024
+   ],
+   "tr_views": 9731
+  },
+  {
+   "qid": "Q108297",
+   "label": "Spartaküs",
+   "links": 67,
+   "value": 11820.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Spartaküs (film)",
+   "released": [
+    1960
+   ],
+   "tr_views": 9483
+  },
+  {
+   "qid": "Q108297",
+   "label": "Spartaküs",
+   "links": 67,
+   "value": 11880.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Spartaküs (film)",
+   "released": [
+    1960
+   ],
+   "tr_views": 9483
+  },
+  {
+   "qid": "Q155476",
+   "label": "Hızlı ve Öfkeli",
+   "links": 67,
+   "value": 6360.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hızlı ve Öfkeli (film)",
+   "released": [
+    2001
+   ],
+   "tr_views": 10159
+  },
+  {
+   "qid": "Q186323",
+   "label": "Borat: Şanlı Kazakistan Milletinin Çıkarlarını Arttırmak İçin Amerikan Kültürünün İncelenmesi",
+   "links": 67,
+   "value": 5040.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Borat",
+   "released": [
+    2006
+   ],
+   "tr_views": 16291
+  },
+  {
+   "qid": "Q193695",
+   "label": "Oz Büyücüsü",
+   "links": 67,
+   "value": 5880.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Oz Büyücüsü (film, 1939)",
+   "released": [
+    1939
+   ],
+   "tr_views": 7037
+  },
+  {
+   "qid": "Q20001199",
+   "label": "Galaksinin Koruyucuları 2",
+   "links": 67,
+   "value": 8160.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Galaksinin Koruyucuları 2",
+   "released": [
+    2017
+   ],
+   "tr_views": 5018
+  },
+  {
+   "qid": "Q207698",
+   "label": "Cennetin Krallığı",
+   "links": 67,
+   "value": 8640.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cennetin Krallığı (film)",
+   "released": [
+    2005
+   ],
+   "tr_views": 43183
+  },
+  {
+   "qid": "Q207698",
+   "label": "Cennetin Krallığı",
+   "links": 67,
+   "value": 11400.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cennetin Krallığı (film)",
+   "released": [
+    2005
+   ],
+   "tr_views": 43183
+  },
+  {
+   "qid": "Q208269",
+   "label": "Sil Baştan",
+   "links": 67,
+   "value": 6240.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sil Baştan (film, 2004)",
+   "released": [
+    2004
+   ],
+   "tr_views": 38147
+  },
+  {
+   "qid": "Q221202",
+   "label": "Evde Tek Başına 2",
+   "links": 67,
+   "value": 7200.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Evde Tek Başına 2",
+   "released": [
+    1992
+   ],
+   "tr_views": 12094
+  },
+  {
+   "qid": "Q229808",
+   "label": "İnanılmaz Örümcek Adam",
+   "links": 67,
+   "value": 8160.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İnanılmaz Örümcek Adam",
+   "released": [
+    2012,
+    2014
+   ],
+   "tr_views": 16411
+  },
+  {
+   "qid": "Q486239",
+   "label": "Testere",
+   "links": 67,
+   "value": 6180.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Testere (film)",
+   "released": [
+    2003,
+    2004,
+    2005
+   ],
+   "tr_views": 14351
+  },
+  {
+   "qid": "Q919649",
+   "label": "Hobbit: Beş Ordunun Savaşı",
+   "links": 67,
+   "value": 8640.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hobbit: Beş Ordunun Savaşı",
+   "released": [
+    2014
+   ],
+   "tr_views": 9754
+  },
+  {
+   "qid": "Q106440",
+   "label": "Altın Parmak",
+   "links": 66,
+   "value": 6540.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Altın Parmak (film)",
+   "released": [
+    1964,
+    1965
+   ],
+   "tr_views": 2245
+  },
+  {
+   "qid": "Q14320",
+   "label": "Yarından Sonra",
+   "links": 66,
+   "value": 7380.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yarından Sonra",
+   "released": [
+    2004
+   ],
+   "tr_views": 7298
+  },
+  {
+   "qid": "Q172837",
+   "label": "Bisiklet Hırsızları",
+   "links": 66,
+   "value": 5400.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bisiklet Hırsızları",
+   "released": [
+    1948,
+    1949
+   ],
+   "tr_views": 5865
+  },
+  {
+   "qid": "Q18199330",
+   "label": "Fantastik Canavarlar Nelerdir, Nerede Bulunurlar?",
+   "links": 66,
+   "value": 7980.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fantastik Canavarlar Nelerdir, Nerede Bulunurlar? (film)",
+   "released": [
+    2016
+   ],
+   "tr_views": 8574
+  },
+  {
+   "qid": "Q18604504",
+   "label": "İntihar Timi: Gerçek Kötüler",
+   "links": 66,
+   "value": 7380.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suicide Squad: Gerçek Kötüler",
+   "released": [
+    2016
+   ],
+   "tr_views": 12594
+  },
+  {
+   "qid": "Q188035",
+   "label": "Apocalypto",
+   "links": 66,
+   "value": 8340.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Apokalipto",
+   "released": [
+    2006
+   ],
+   "tr_views": 28684
+  },
+  {
+   "qid": "Q189600",
+   "label": "Matrix Reloaded",
+   "links": 66,
+   "value": 8280.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Matrix Reloaded",
+   "released": [
+    2003
+   ],
+   "tr_views": 12568
+  },
+  {
+   "qid": "Q190643",
+   "label": "Müfreze",
+   "links": 66,
+   "value": 6900.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Müfreze (film)",
+   "released": [
+    1986,
+    1987
+   ],
+   "tr_views": 7740
+  },
+  {
+   "qid": "Q190643",
+   "label": "Müfreze",
+   "links": 66,
+   "value": 7080.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Müfreze (film)",
+   "released": [
+    1986,
+    1987
+   ],
+   "tr_views": 7740
+  },
+  {
+   "qid": "Q200396",
+   "label": "Sherlock Holmes",
+   "links": 66,
+   "value": 7680.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sherlock Holmes (film, 2009)",
+   "released": [
+    2009,
+    2010
+   ],
+   "tr_views": 7765
+  },
+  {
+   "qid": "Q200804",
+   "label": "Av",
+   "links": 66,
+   "value": 6420.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Av (film)",
+   "released": [
+    1987
+   ],
+   "tr_views": 9006
+  },
+  {
+   "qid": "Q202548",
+   "label": "Ölüm Korkusu",
+   "links": 66,
+   "value": 7680.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ölüm Korkusu (film, 1958)",
+   "released": [
+    1958,
+    1959
+   ],
+   "tr_views": 5375
+  },
+  {
+   "qid": "Q20382729",
+   "label": "Arrival",
+   "links": 66,
+   "value": 6960.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Geliş",
+   "released": [
+    2016
+   ],
+   "tr_views": 25307
+  },
+  {
+   "qid": "Q212775",
+   "label": "Son İmparator",
+   "links": 66,
+   "value": 9900.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Son İmparator",
+   "released": [
+    1987
+   ],
+   "tr_views": 6851
+  },
+  {
+   "qid": "Q218235",
+   "label": "Charlie'nin Çikolata Fabrikası",
+   "links": 66,
+   "value": 6900.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Charlie'nin Çikolata Fabrikası (film)",
+   "released": [
+    2005
+   ],
+   "tr_views": 29106
+  },
+  {
+   "qid": "Q219421",
+   "label": "Maske",
+   "links": 66,
+   "value": 5820.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Maske (film, 1994)",
+   "released": [
+    1994
+   ],
+   "tr_views": 11409
+  },
+  {
+   "qid": "Q230552",
+   "label": "Geleceğe Dönüş III",
+   "links": 66,
+   "value": 7080.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Geleceğe Dönüş III",
+   "released": [
+    1990
+   ],
+   "tr_views": 3584
+  },
+  {
+   "qid": "Q273978",
+   "label": "Kaplan ve Ejderha",
+   "links": 66,
+   "value": 6900.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kaplan ve Ejderha",
+   "released": [
+    2000,
+    2001
+   ],
+   "tr_views": 2584
+  },
+  {
+   "qid": "Q29054009",
+   "label": "Terminatör 3: Makinelerin Yükselişi",
+   "links": 66,
+   "value": 6300.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Terminatör 3: Makinelerin Yükselişi",
+   "released": [
+    2003
+   ],
+   "tr_views": 12102
+  },
+  {
+   "qid": "Q4254026",
+   "label": "İnanılmaz Örümcek Adam 2",
+   "links": 66,
+   "value": 8520.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İnanılmaz Örümcek Adam 2",
+   "released": [
+    2014
+   ],
+   "tr_views": 11984
+  },
+  {
+   "qid": "Q853718",
+   "label": "Eğlenceli ve Özgür",
+   "links": 66,
+   "value": 4380.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eğlenceli ve Özgür",
+   "released": [
+    1947
+   ],
+   "tr_views": 200
+  },
+  {
+   "qid": "Q14772351",
+   "label": "Batman ve Superman: Adaletin Şafağı",
+   "links": 65,
+   "value": 9060.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Batman v Superman: Adaletin Şafağı",
+   "released": [
+    2016
+   ],
+   "tr_views": 11410
+  },
+  {
+   "qid": "Q14772351",
+   "label": "Batman ve Superman: Adaletin Şafağı",
+   "links": 65,
+   "value": 10920.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Batman v Superman: Adaletin Şafağı",
+   "released": [
+    2016
+   ],
+   "tr_views": 11410
+  },
+  {
+   "qid": "Q14918344",
+   "label": "Yapay Oyun",
+   "links": 65,
+   "value": 6840.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Enigma (film, 2014)",
+   "released": [
+    2014,
+    2015
+   ],
+   "tr_views": 13891
+  },
+  {
+   "qid": "Q15079318",
+   "label": "Her Şeyin Teorisi",
+   "links": 65,
+   "value": 7380.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Her Şeyin Teorisi (film)",
+   "released": [
+    2014,
+    2015
+   ],
+   "tr_views": 3853
+  },
+  {
+   "qid": "Q175038",
+   "label": "12 Maymun",
+   "links": 65,
+   "value": 7860.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "12 Maymun",
+   "released": [
+    1995,
+    1996
+   ],
+   "tr_views": 7888
+  },
+  {
+   "qid": "Q182373",
+   "label": "Indiana Jones ve Kristal Kafatası Krallığı",
+   "links": 65,
+   "value": 7380.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Indiana Jones ve Kristal Kafatası Krallığı",
+   "released": [
+    2008
+   ],
+   "tr_views": 5106
+  },
+  {
+   "qid": "Q201924",
+   "label": "Göklerin Hakimi",
+   "links": 65,
+   "value": 10200.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Göklerin Hakimi",
+   "released": [
+    2004,
+    2005
+   ],
+   "tr_views": 15683
+  },
+  {
+   "qid": "Q207130",
+   "label": "Son Samuray",
+   "links": 65,
+   "value": 9240.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Son Samuray",
+   "released": [
+    2003,
+    2004,
+    2007
+   ],
+   "tr_views": 10563
+  },
+  {
+   "qid": "Q207536",
+   "label": "Matrix Revolutions",
+   "links": 65,
+   "value": 7740.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Matrix Revolutions",
+   "released": [
+    2003
+   ],
+   "tr_views": 10010
+  },
+  {
+   "qid": "Q217189",
+   "label": "Yedinci Mühür",
+   "links": 65,
+   "value": 5760.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yedinci Mühür",
+   "released": [
+    1957,
+    1958,
+    1959,
+    1960,
+    1961,
+    1962,
+    1963
+   ],
+   "tr_views": 9604
+  },
+  {
+   "qid": "Q229633",
+   "label": "3 Aptal",
+   "links": 65,
+   "value": 9840.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "3 Aptal",
+   "released": [
+    2009,
+    2013
+   ],
+   "tr_views": 11995
+  },
+  {
+   "qid": "Q51416",
+   "label": "Siyah Giyen Adamlar",
+   "links": 65,
+   "value": 5640.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Siyah Giyen Adamlar (film)",
+   "released": [
+    1997
+   ],
+   "tr_views": 5806
+  },
+  {
+   "qid": "Q76479",
+   "label": "Bir Avuç Dolar",
+   "links": 65,
+   "value": 5940.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bir Avuç Dolar",
+   "released": [
+    1964,
+    1965,
+    1967
+   ],
+   "tr_views": 10119
+  },
+  {
+   "qid": "Q10350033",
+   "label": "Karayip Korsanları: Salazar'ın İntikamı",
+   "links": 64,
+   "value": 7740.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karayip Korsanları: Salazar'ın İntikamı",
+   "released": [
+    2017
+   ],
+   "tr_views": 11244
+  },
+  {
+   "qid": "Q104137",
+   "label": "Affedilmeyen",
+   "links": 64,
+   "value": 7800.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Affedilmeyen",
+   "released": [
+    1992
+   ],
+   "tr_views": 7337
+  },
+  {
+   "qid": "Q106506",
+   "label": "Beşinci Element",
+   "links": 64,
+   "value": 7560.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Beşinci Element",
+   "released": [
+    1997
+   ],
+   "tr_views": 8005
+  },
+  {
+   "qid": "Q106571",
+   "label": "Rusya'dan Sevgilerle",
+   "links": 64,
+   "value": 6900.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rusya'dan Sevgilerle",
+   "released": [
+    1963,
+    1964
+   ],
+   "tr_views": 5211
+  },
+  {
+   "qid": "Q153677",
+   "label": "Birkaç Dolar İçin",
+   "links": 64,
+   "value": 7920.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Birkaç Dolar İçin",
+   "released": [
+    1965,
+    1967
+   ],
+   "tr_views": 9116
+  },
+  {
+   "qid": "Q191040",
+   "label": "Bay ve Bayan Smith",
+   "links": 64,
+   "value": 7200.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bay ve Bayan Smith",
+   "released": [
+    2005
+   ],
+   "tr_views": 7420
+  },
+  {
+   "qid": "Q191040",
+   "label": "Bay ve Bayan Smith",
+   "links": 64,
+   "value": 7560.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bay ve Bayan Smith",
+   "released": [
+    2005
+   ],
+   "tr_views": 7420
+  },
+  {
+   "qid": "Q201674",
+   "label": "Avcı",
+   "links": 64,
+   "value": 10920.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avcı (film)",
+   "released": [
+    1978,
+    1979
+   ],
+   "tr_views": 6225
+  },
+  {
+   "qid": "Q201674",
+   "label": "Avcı",
+   "links": 64,
+   "value": 11100.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avcı (film)",
+   "released": [
+    1978,
+    1979
+   ],
+   "tr_views": 6225
+  },
+  {
+   "qid": "Q206124",
+   "label": "Paris'te Gece Yarısı",
+   "links": 64,
+   "value": 5640.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Paris'te Gece Yarısı",
+   "released": [
+    2011
+   ],
+   "tr_views": 6009
+  },
+  {
+   "qid": "Q208572",
+   "label": "Geçmişin Gölgesinde",
+   "links": 64,
+   "value": 6840.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Geçmişin Gölgesinde",
+   "released": [
+    1998,
+    1999
+   ],
+   "tr_views": 6824
+  },
+  {
+   "qid": "Q22957393",
+   "label": "Ant-Man ve Wasp",
+   "links": 64,
+   "value": 7080.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ant-Man ve Wasp",
+   "released": [
+    2018
+   ],
+   "tr_views": 2672
+  },
+  {
+   "qid": "Q22998395",
+   "label": "Aquaman",
+   "links": 64,
+   "value": 8580.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aquaman (film)",
+   "released": [
+    2018
+   ],
+   "tr_views": 8866
+  },
+  {
+   "qid": "Q23006268",
+   "label": "Venom: Zehirli Öfke",
+   "links": 64,
+   "value": 6720.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Venom: Zehirli Öfke",
+   "released": [
+    2018
+   ],
+   "tr_views": 14139
+  },
+  {
+   "qid": "Q318766",
+   "label": "Terminal",
+   "links": 64,
+   "value": 7680.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Terminal (film)",
+   "released": [
+    2004
+   ],
+   "tr_views": 24826
+  },
+  {
+   "qid": "Q74958",
+   "label": "Kanlı Elmas",
+   "links": 64,
+   "value": 8580.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kanlı Elmas",
+   "released": [
+    2006,
+    2007
+   ],
+   "tr_views": 8526
+  },
+  {
+   "qid": "Q135465",
+   "label": "Raşomon",
+   "links": 63,
+   "value": 5280.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Raşomon (film)",
+   "released": [
+    1950,
+    1951,
+    1952
+   ],
+   "tr_views": 5260
+  },
+  {
+   "qid": "Q152857",
+   "label": "Çöküş",
+   "links": 63,
+   "value": 9300.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çöküş (film)",
+   "released": [
+    2004,
+    2005
+   ],
+   "tr_views": 16909
+  },
+  {
+   "qid": "Q153882",
+   "label": "Başkalarının Hayatı",
+   "links": 63,
+   "value": 8220.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Başkalarının Hayatı",
+   "released": [
+    2006
+   ],
+   "tr_views": 15241
+  },
+  {
+   "qid": "Q15648198",
+   "label": "Whiplash",
+   "links": 63,
+   "value": 6360.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Whiplash (film, 2014)",
+   "released": [
+    2014,
+    2015
+   ],
+   "tr_views": 23694
+  },
+  {
+   "qid": "Q168154",
+   "label": "Batıda Kan Var",
+   "links": 63,
+   "value": 8400.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Batıda Kan Var",
+   "released": [
+    1968,
+    1969
+   ],
+   "tr_views": 2109
+  },
+  {
+   "qid": "Q168154",
+   "label": "Batıda Kan Var",
+   "links": 63,
+   "value": 9900.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Batıda Kan Var",
+   "released": [
+    1968,
+    1969
+   ],
+   "tr_views": 2109
+  },
+  {
+   "qid": "Q168154",
+   "label": "Batıda Kan Var",
+   "links": 63,
+   "value": 10260.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Batıda Kan Var",
+   "released": [
+    1968,
+    1969
+   ],
+   "tr_views": 2109
+  },
+  {
+   "qid": "Q16857406",
+   "label": "Orman Çocuğu",
+   "links": 63,
+   "value": 6420.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Orman Çocuğu (film, 2016)",
+   "released": [
+    2016
+   ],
+   "tr_views": 6353
+  },
+  {
+   "qid": "Q172271",
+   "label": "Malefiz",
+   "links": 63,
+   "value": 5820.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Malefiz",
+   "released": [
+    2014
+   ],
+   "tr_views": 15249
+  },
+  {
+   "qid": "Q183239",
+   "label": "Benjamin Button'ın Tuhaf Hikayesi",
+   "links": 63,
+   "value": 9960.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Benjamin Button'ın Tuhaf Hikayesi (film)",
+   "released": [
+    2008,
+    2009
+   ],
+   "tr_views": 18573
+  },
+  {
+   "qid": "Q188000",
+   "label": "Çarpışma",
+   "links": 63,
+   "value": 6720.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çarpışma (film, 2004)",
+   "released": [
+    2004,
+    2005
+   ],
+   "tr_views": 8704
+  },
+  {
+   "qid": "Q188000",
+   "label": "Çarpışma",
+   "links": 63,
+   "value": 6900.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çarpışma (film, 2004)",
+   "released": [
+    2004,
+    2005
+   ],
+   "tr_views": 8704
+  },
+  {
+   "qid": "Q192115",
+   "label": "Günah Şehri",
+   "links": 63,
+   "value": 7440.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Günah Şehri (film)",
+   "released": [
+    2005
+   ],
+   "tr_views": 6654
+  },
+  {
+   "qid": "Q193577",
+   "label": "Kramer Kramer'e Karşı",
+   "links": 63,
+   "value": 6000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kramer Kramer'e Karşı",
+   "released": [
+    1979
+   ],
+   "tr_views": 6672
+  },
+  {
+   "qid": "Q204212",
+   "label": "Rebecca",
+   "links": 63,
+   "value": 7560.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rebecca (film)",
+   "released": [
+    1940
+   ],
+   "tr_views": 2237
+  },
+  {
+   "qid": "Q206388",
+   "label": "Bir Zamanlar Amerika",
+   "links": 63,
+   "value": 13620.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bir Zamanlar Amerika",
+   "released": [
+    1984
+   ],
+   "tr_views": 16572
+  },
+  {
+   "qid": "Q206388",
+   "label": "Bir Zamanlar Amerika",
+   "links": 63,
+   "value": 13740.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bir Zamanlar Amerika",
+   "released": [
+    1984
+   ],
+   "tr_views": 16572
+  },
+  {
+   "qid": "Q209481",
+   "label": "Gözleri Tamamen Kapalı",
+   "links": 63,
+   "value": 9540.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gözleri Tamamen Kapalı",
+   "released": [
+    1999
+   ],
+   "tr_views": 64666
+  },
+  {
+   "qid": "Q211372",
+   "label": "Rıhtımlar Üzerinde",
+   "links": 63,
+   "value": 6480.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rıhtımlar Üzerinde",
+   "released": [
+    1954
+   ],
+   "tr_views": 5005
+  },
+  {
+   "qid": "Q25136757",
+   "label": "Beni Adınla Çağır",
+   "links": 63,
+   "value": 7920.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Beni Adınla Çağır",
+   "released": [
+    2017,
+    2018
+   ],
+   "tr_views": 13964
+  },
+  {
+   "qid": "Q271830",
+   "label": "Üçüncü Adam",
+   "links": 63,
+   "value": 5580.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Üçüncü Adam (film)",
+   "released": [
+    1949,
+    1950
+   ],
+   "tr_views": 1838
+  },
+  {
+   "qid": "Q271830",
+   "label": "Üçüncü Adam",
+   "links": 63,
+   "value": 6240.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Üçüncü Adam (film)",
+   "released": [
+    1949,
+    1950
+   ],
+   "tr_views": 1838
+  },
+  {
+   "qid": "Q27188178",
+   "label": "Aladdin",
+   "links": 63,
+   "value": 7680.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aladdin (film, 2019)",
+   "released": [
+    2019
+   ],
+   "tr_views": 6634
+  },
+  {
+   "qid": "Q27188178",
+   "label": "Aladdin",
+   "links": 63,
+   "value": 7740.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aladdin (film, 2019)",
+   "released": [
+    2019
+   ],
+   "tr_views": 6634
+  },
+  {
+   "qid": "Q274167",
+   "label": "Şeytan",
+   "links": 63,
+   "value": 7320.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şeytan (film, 1973)",
+   "released": [
+    1973,
+    1974
+   ],
+   "tr_views": 8457
+  },
+  {
+   "qid": "Q27894574",
+   "label": "Bohemian Rhapsody",
+   "links": 63,
+   "value": 8040.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bohemian Rhapsody (film)",
+   "released": [
+    2018
+   ],
+   "tr_views": 6777
+  },
+  {
+   "qid": "Q34414",
+   "label": "Arka Pencere",
+   "links": 63,
+   "value": 6720.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arka Pencere",
+   "released": [
+    1954,
+    1955,
+    1995
+   ],
+   "tr_views": 3436
+  },
+  {
+   "qid": "Q105624",
+   "label": "Geçmişi Olmayan Adam",
+   "links": 62,
+   "value": 7140.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Geçmişi Olmayan Adam (Amerikan filmi)",
+   "released": [
+    2002
+   ],
+   "tr_views": 8028
+  },
+  {
+   "qid": "Q107226",
+   "label": "Son Ültimatom",
+   "links": 62,
+   "value": 6900.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Son Ültimatom",
+   "released": [
+    2007
+   ],
+   "tr_views": 3479
+  },
+  {
+   "qid": "Q116928",
+   "label": "Yeni Ay",
+   "links": 62,
+   "value": 7800.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Alacakaranlık Efsanesi: Yeni Ay",
+   "released": [
+    2009
+   ],
+   "tr_views": 6255
+  },
+  {
+   "qid": "Q12018",
+   "label": "8½",
+   "links": 62,
+   "value": 8280.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "8½",
+   "released": [
+    1963
+   ],
+   "tr_views": 4303
+  },
+  {
+   "qid": "Q15624215",
+   "label": "Lucy",
+   "links": 62,
+   "value": 5340.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lucy (film, 2014)",
+   "released": [
+    2014
+   ],
+   "tr_views": 9821
+  },
+  {
+   "qid": "Q169082",
+   "label": "Senden Nefret Etmemin 10 Sebebi",
+   "links": 62,
+   "value": 5820.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Senden Nefret Etmemin 10 Sebebi",
+   "released": [
+    1999
+   ],
+   "tr_views": 11609
+  },
+  {
+   "qid": "Q1757288",
+   "label": "Mad Max: Fury Road",
+   "links": 62,
+   "value": 7200.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mad Max: Fury Road",
+   "released": [
+    2015
+   ],
+   "tr_views": 17550
+  },
+  {
+   "qid": "Q18407",
+   "label": "Tatlı Hayat",
+   "links": 62,
+   "value": 10440.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tatlı Hayat (film, 1960)",
+   "released": [
+    1960,
+    1961
+   ],
+   "tr_views": 3522
+  },
+  {
+   "qid": "Q18486021",
+   "label": "Yıldız Savaşları: Son Jedi",
+   "links": 62,
+   "value": 9120.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Star Wars: Son Jedi",
+   "released": [
+    2017,
+    2018
+   ],
+   "tr_views": 3696
+  },
+  {
+   "qid": "Q19069",
+   "label": "Yedi Silahşörler",
+   "links": 62,
+   "value": 7680.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yedi Silahşörler",
+   "released": [
+    1960,
+    1961
+   ],
+   "tr_views": 3182
+  },
+  {
+   "qid": "Q192934",
+   "label": "Melekler ve Şeytanlar",
+   "links": 62,
+   "value": 8760.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Melekler ve Şeytanlar (film)",
+   "released": [
+    2009
+   ],
+   "tr_views": 10225
+  },
+  {
+   "qid": "Q193066",
+   "label": "Çılgınlar Kraliçesi",
+   "links": 62,
+   "value": 6600.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çılgınlar Kraliçesi",
+   "released": [
+    1961,
+    1962
+   ],
+   "tr_views": 7232
+  },
+  {
+   "qid": "Q193570",
+   "label": "Sunset Bulvarı",
+   "links": 62,
+   "value": 6600.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sunset Bulvarı (film)",
+   "released": [
+    1950
+   ],
+   "tr_views": 1767
+  },
+  {
+   "qid": "Q201215",
+   "label": "Benim Güzel Meleğim",
+   "links": 62,
+   "value": 10260.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Benim Güzel Meleğim",
+   "released": [
+    1964
+   ],
+   "tr_views": 1721
+  },
+  {
+   "qid": "Q208266",
+   "label": "Benim Afrikam",
+   "links": 62,
+   "value": 9420.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Benim Afrikam",
+   "released": [
+    1985,
+    1986
+   ],
+   "tr_views": 2524
+  },
+  {
+   "qid": "Q208266",
+   "label": "Benim Afrikam",
+   "links": 62,
+   "value": 9600.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Benim Afrikam",
+   "released": [
+    1985,
+    1986
+   ],
+   "tr_views": 2524
+  },
+  {
+   "qid": "Q212145",
+   "label": "Dünya Yetmez",
+   "links": 62,
+   "value": 7680.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dünya Yetmez",
+   "released": [
+    1999
+   ],
+   "tr_views": 6590
+  },
+  {
+   "qid": "Q212689",
+   "label": "Ben Efsaneyim",
+   "links": 62,
+   "value": 6000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ben Efsaneyim",
+   "released": [
+    2007,
+    2008
+   ],
+   "tr_views": 9711
+  },
+  {
+   "qid": "Q213208",
+   "label": "Hızlı ve Öfkeli: Tokyo Yarışı",
+   "links": 62,
+   "value": 6240.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hızlı ve Öfkeli: Tokyo Yarışı",
+   "released": [
+    2006
+   ],
+   "tr_views": 17681
+  },
+  {
+   "qid": "Q232774",
+   "label": "Transformers: Ay'ın Karanlık Yüzü",
+   "links": 62,
+   "value": 9240.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Transformers: Ay'ın Karanlık Yüzü",
+   "released": [
+    2011
+   ],
+   "tr_views": 8681
+  },
+  {
+   "qid": "Q243643",
+   "label": "Sherlock Holmes: Gölge Oyunları",
+   "links": 62,
+   "value": 7680.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sherlock Holmes: Gölge Oyunları",
+   "released": [
+    2011
+   ],
+   "tr_views": 3344
+  },
+  {
+   "qid": "Q244963",
+   "label": "İlk Kan",
+   "links": 62,
+   "value": 5580.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İlk Kan",
+   "released": [
+    1982,
+    1983
+   ],
+   "tr_views": 14375
+  },
+  {
+   "qid": "Q272599",
+   "label": "Batı Cephesinde Yeni Bir Şey Yok",
+   "links": 62,
+   "value": 8160.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Batı Cephesinde Yeni Bir Şey Yok (film, 1930)",
+   "released": [
+    1930,
+    1931
+   ],
+   "tr_views": 3866
+  },
+  {
+   "qid": "Q272608",
+   "label": "Mulholland Çıkmazı",
+   "links": 62,
+   "value": 8820.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mulholland Çıkmazı",
+   "released": [
+    2001,
+    2002
+   ],
+   "tr_views": 19007
+  },
+  {
+   "qid": "Q30931",
+   "label": "Başka Gün Öl",
+   "links": 62,
+   "value": 7980.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Başka Gün Öl",
+   "released": [
+    2002
+   ],
+   "tr_views": 5917
+  },
+  {
+   "qid": "Q321561",
+   "label": "Kadın Kokusu",
+   "links": 62,
+   "value": 9000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kadın Kokusu (film, 1992)",
+   "released": [
+    1992,
+    1993
+   ],
+   "tr_views": 17169
+  },
+  {
+   "qid": "Q337078",
+   "label": "Büyük Lebowski",
+   "links": 62,
+   "value": 7020.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük Lebowski",
+   "released": [
+    1998
+   ],
+   "tr_views": 4378
+  },
+  {
+   "qid": "Q487181",
+   "label": "Bir Rüya İçin Ağıt",
+   "links": 62,
+   "value": 6120.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bir Rüya İçin Ağıt",
+   "released": [
+    2000,
+    2002
+   ],
+   "tr_views": 14788
+  },
+  {
+   "qid": "Q488655",
+   "label": "Bugün Aslında Dündü",
+   "links": 62,
+   "value": 6060.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bugün Aslında Dündü",
+   "released": [
+    1993
+   ],
+   "tr_views": 9685
+  },
+  {
+   "qid": "Q595",
+   "label": "Can Dostum",
+   "links": 62,
+   "value": 6720.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Can Dostum (film, 2011)",
+   "released": [
+    2011,
+    2012
+   ],
+   "tr_views": 90826
+  },
+  {
+   "qid": "Q869741",
+   "label": "Melodi Zamanı",
+   "links": 62,
+   "value": 4500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Melodi Zamanı",
+   "released": [
+    1948
+   ],
+   "tr_views": 153
+  },
+  {
+   "qid": "Q107761",
+   "label": "İnsan İki Kere Yaşar",
+   "links": 61,
+   "value": 7020.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İnsan İki Kere Yaşar (film)",
+   "released": [
+    1967
+   ],
+   "tr_views": 1683
+  },
+  {
+   "qid": "Q14650496",
+   "label": "Hızlı ve Öfkeli 7",
+   "links": 61,
+   "value": 8220.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hızlı ve Öfkeli 7",
+   "released": [
+    2015
+   ],
+   "tr_views": 19606
+  },
+  {
+   "qid": "Q146673",
+   "label": "Temel İçgüdü",
+   "links": 61,
+   "value": 7680.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Temel İçgüdü",
+   "released": [
+    1992
+   ],
+   "tr_views": 12113
+  },
+  {
+   "qid": "Q152456",
+   "label": "Münih",
+   "links": 61,
+   "value": 9780.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Münih (film)",
+   "released": [
+    2005,
+    2006
+   ],
+   "tr_views": 4902
+  },
+  {
+   "qid": "Q191074",
+   "label": "Babil",
+   "links": 61,
+   "value": 8520.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Babil (film)",
+   "released": [
+    2006
+   ],
+   "tr_views": 11185
+  },
+  {
+   "qid": "Q207588",
+   "label": "İnsanlar Yaşadıkça",
+   "links": 61,
+   "value": 7080.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İnsanlar Yaşadıkça (film, 1953)",
+   "released": [
+    1953
+   ],
+   "tr_views": 1994
+  },
+  {
+   "qid": "Q207916",
+   "label": "Yarın Asla Ölmez",
+   "links": 61,
+   "value": 7140.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yarın Asla Ölmez",
+   "released": [
+    1997
+   ],
+   "tr_views": 4806
+  },
+  {
+   "qid": "Q207921",
+   "label": "Ateş Arabaları",
+   "links": 61,
+   "value": 7080.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ateş Arabaları",
+   "released": [
+    1981,
+    1982
+   ],
+   "tr_views": 1672
+  },
+  {
+   "qid": "Q207921",
+   "label": "Ateş Arabaları",
+   "links": 61,
+   "value": 7320.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ateş Arabaları",
+   "released": [
+    1981,
+    1982
+   ],
+   "tr_views": 1672
+  },
+  {
+   "qid": "Q213081",
+   "label": "Star Trek",
+   "links": 61,
+   "value": 7200.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uzay Yolu (film, 2009)",
+   "released": [
+    2009
+   ],
+   "tr_views": 2700
+  },
+  {
+   "qid": "Q213081",
+   "label": "Star Trek",
+   "links": 61,
+   "value": 7620.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uzay Yolu (film, 2009)",
+   "released": [
+    2009
+   ],
+   "tr_views": 2700
+  },
+  {
+   "qid": "Q21500755",
+   "label": "Bıçak Sırtı 2049",
+   "links": 61,
+   "value": 9840.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Blade Runner 2049: Bıçak Sırtı",
+   "released": [
+    2017
+   ],
+   "tr_views": 21737
+  },
+  {
+   "qid": "Q21534241",
+   "label": "Ölmek İçin Zaman Yok",
+   "links": 61,
+   "value": 9780.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ölmek için Zaman Yok",
+   "released": [
+    2021
+   ],
+   "tr_views": 17635
+  },
+  {
+   "qid": "Q24953",
+   "label": "Brian'ın Hayatı",
+   "links": 61,
+   "value": 5580.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Brian'ın Hayatı",
+   "released": [
+    1979,
+    1980
+   ],
+   "tr_views": 2097
+  },
+  {
+   "qid": "Q24953",
+   "label": "Brian'ın Hayatı",
+   "links": 61,
+   "value": 5640.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Brian'ın Hayatı",
+   "released": [
+    1979,
+    1980
+   ],
+   "tr_views": 2097
+  },
+  {
+   "qid": "Q27044293",
+   "label": "Aslan Kral",
+   "links": 61,
+   "value": 7080.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aslan Kral (film, 2019)",
+   "released": [
+    2019,
+    2021
+   ],
+   "tr_views": 12419
+  },
+  {
+   "qid": "Q27411",
+   "label": "Çığlık",
+   "links": 61,
+   "value": 6660.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çığlık (film, 1996)",
+   "released": [
+    1996,
+    1997
+   ],
+   "tr_views": 14127
+  },
+  {
+   "qid": "Q323827",
+   "label": "Doktor Jivago",
+   "links": 61,
+   "value": 11820.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Doktor Jivago (film)",
+   "released": [
+    1965
+   ],
+   "tr_views": 8610
+  },
+  {
+   "qid": "Q3521099",
+   "label": "Büyük Budapeşte Oteli",
+   "links": 61,
+   "value": 5940.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Büyük Budapeşte Oteli",
+   "released": [
+    2014
+   ],
+   "tr_views": 23346
+  },
+  {
+   "qid": "Q379873",
+   "label": "Masum Sanık Roger Rabbit",
+   "links": 61,
+   "value": 6000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Masum Sanık Roger Rabbit",
+   "released": [
+    1988
+   ],
+   "tr_views": 1100
+  },
+  {
+   "qid": "Q401976",
+   "label": "Hızlı ve Öfkeli 5: Rio Soygunu",
+   "links": 61,
+   "value": 7860.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hızlı ve Öfkeli 5: Rio Soygunu",
+   "released": [
+    2011
+   ],
+   "tr_views": 12227
+  },
+  {
+   "qid": "Q45602",
+   "label": "Asri Zamanlar",
+   "links": 61,
+   "value": 5940.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Modern Zamanlar",
+   "released": [
+    1936
+   ],
+   "tr_views": 3898
+  },
+  {
+   "qid": "Q475693",
+   "label": "İhtiyar Delikanlı",
+   "links": 61,
+   "value": 6960.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İhtiyar Delikanlı (film)",
+   "released": [
+    2003,
+    2004,
+    2005
+   ],
+   "tr_views": 24375
+  },
+  {
+   "qid": "Q4985891",
+   "label": "X-Men: Geçmiş Günler Gelecek",
+   "links": 61,
+   "value": 7860.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "X-Men: Geçmiş Günler Gelecek",
+   "released": [
+    2014
+   ],
+   "tr_views": 8203
+  },
+  {
+   "qid": "Q50861",
+   "label": "Zor Ölüm 4",
+   "links": 61,
+   "value": 7680.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zor Ölüm 4",
+   "released": [
+    2007
+   ],
+   "tr_views": 1637
+  },
+  {
+   "qid": "Q62721520",
+   "label": "1917",
+   "links": 61,
+   "value": 7140.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1917 (film, 2019)",
+   "released": [
+    2019,
+    2020
+   ],
+   "tr_views": 12540
+  },
+  {
+   "qid": "Q644987",
+   "label": "Çin Mahallesi",
+   "links": 61,
+   "value": 7860.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çin Mahallesi (film)",
+   "released": [
+    1974
+   ],
+   "tr_views": 3804
+  },
+  {
+   "qid": "Q644987",
+   "label": "Çin Mahallesi",
+   "links": 61,
+   "value": 7980.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çin Mahallesi (film)",
+   "released": [
+    1974
+   ],
+   "tr_views": 3804
+  },
+  {
+   "qid": "Q788822",
+   "label": "Aşk",
+   "links": 61,
+   "value": 7560.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aşk (film, 2013)",
+   "released": [
+    2013,
+    2014
+   ],
+   "tr_views": 19020
+  },
+  {
+   "qid": "Q107724",
+   "label": "Yıldırım Harekatı",
+   "links": 60,
+   "value": 7800.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yıldırım Harekatı",
+   "released": [
+    1965,
+    1966
+   ],
+   "tr_views": 1479
+  },
+  {
+   "qid": "Q107914",
+   "label": "Ölümsüz Elmaslar",
+   "links": 60,
+   "value": 7200.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ölümsüz Elmaslar (film)",
+   "released": [
+    1971
+   ],
+   "tr_views": 2044
+  },
+  {
+   "qid": "Q108745",
+   "label": "Hayalet Avcıları",
+   "links": 60,
+   "value": 6300.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hayalet Avcıları",
+   "released": [
+    1984,
+    1985
+   ],
+   "tr_views": 5812
+  },
+  {
+   "qid": "Q110043",
+   "label": "Kuşlar",
+   "links": 60,
+   "value": 7140.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kuşlar (film)",
+   "released": [
+    1963
+   ],
+   "tr_views": 4160
+  },
+  {
+   "qid": "Q114819",
+   "label": "Dune",
+   "links": 60,
+   "value": 8220.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dune: Çöl Gezegeni (film, 1984)",
+   "released": [
+    1984
+   ],
+   "tr_views": 6027
+  },
+  {
+   "qid": "Q14920425",
+   "label": "Kayıp Kız",
+   "links": 60,
+   "value": 8940.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kayıp Kız (film)",
+   "released": [
+    2014
+   ],
+   "tr_views": 23292
+  },
+  {
+   "qid": "Q151895",
+   "label": "Nosferatu, Bir Dehşet Senfonisi",
+   "links": 60,
+   "value": 5640.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nosferatu, Bir Dehşet Senfonisi",
+   "released": [
+    1922
+   ],
+   "tr_views": 3492
+  },
+  {
+   "qid": "Q191543",
+   "label": "Terminatör 4: Kurtuluş",
+   "links": 60,
+   "value": 6900.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Terminatör 4: Kurtuluş",
+   "released": [
+    2009
+   ],
+   "tr_views": 9936
+  },
+  {
+   "qid": "Q193573",
+   "label": "Kırmızı Değirmen",
+   "links": 60,
+   "value": 7620.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kırmızı Değirmen",
+   "released": [
+    2001
+   ],
+   "tr_views": 3911
+  },
+  {
+   "qid": "Q19946102",
+   "label": "Güzel ve Çirkin",
+   "links": 60,
+   "value": 7740.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Güzel ve Çirkin (film, 2017)",
+   "released": [
+    2017
+   ],
+   "tr_views": 8512
+  },
+  {
+   "qid": "Q21010856",
+   "label": "Savaş Vadisi",
+   "links": 60,
+   "value": 7860.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Savaş Vadisi",
+   "released": [
+    2016,
+    2017
+   ],
+   "tr_views": 9386
+  },
+  {
+   "qid": "Q21527875",
+   "label": "Ay Işığı",
+   "links": 60,
+   "value": 6660.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ay Işığı (film)",
+   "released": [
+    2016,
+    2017
+   ],
+   "tr_views": 5688
+  },
+  {
+   "qid": "Q220780",
+   "label": "Kızgın Boğa",
+   "links": 60,
+   "value": 7740.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kızgın Boğa",
+   "released": [
+    1980,
+    1981
+   ],
+   "tr_views": 5233
+  },
+  {
+   "qid": "Q221103",
+   "label": "Yabancı",
+   "links": 60,
+   "value": 5520.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yabancı (film, 1978)",
+   "released": [
+    1978,
+    1979
+   ],
+   "tr_views": 6271
+  },
+  {
+   "qid": "Q221168",
+   "label": "X-Men: Son Direniş",
+   "links": 60,
+   "value": 6240.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "X-Men: Son Direniş",
+   "released": [
+    2006,
+    2009
+   ],
+   "tr_views": 6743
+  },
+  {
+   "qid": "Q221594",
+   "label": "Benden Bu Kadar",
+   "links": 60,
+   "value": 8280.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Benden Bu Kadar",
+   "released": [
+    1997,
+    1998
+   ],
+   "tr_views": 6601
+  },
+  {
+   "qid": "Q222867",
+   "label": "Daha Hızlı Daha Öfkeli",
+   "links": 60,
+   "value": 6420.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Daha Hızlı Daha Öfkeli",
+   "released": [
+    2003
+   ],
+   "tr_views": 10812
+  },
+  {
+   "qid": "Q223139",
+   "label": "Gizli Teşkilat",
+   "links": 60,
+   "value": 8160.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gizli Teşkilat",
+   "released": [
+    1959
+   ],
+   "tr_views": 2695
+  },
+  {
+   "qid": "Q238211",
+   "label": "Şehir Işıkları",
+   "links": 60,
+   "value": 5220.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şehir Işıkları",
+   "released": [
+    1931
+   ],
+   "tr_views": 2494
+  },
+  {
+   "qid": "Q23894626",
+   "label": "Kara Dul",
+   "links": 60,
+   "value": 7980.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Black Widow (film, 2021)",
+   "released": [
+    2021
+   ],
+   "tr_views": 8487
+  },
+  {
+   "qid": "Q244315",
+   "label": "Kan Dökülecek",
+   "links": 60,
+   "value": 9480.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kan Dökülecek",
+   "released": [
+    2007,
+    2008
+   ],
+   "tr_views": 18690
+  },
+  {
+   "qid": "Q269912",
+   "label": "Özgürlük Yolu",
+   "links": 60,
+   "value": 8880.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Into the Wild (film)",
+   "released": [
+    2007,
+    2008
+   ],
+   "tr_views": 15668
+  },
+  {
+   "qid": "Q29906232",
+   "label": "Kirpi Sonic",
+   "links": 60,
+   "value": 5940.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kirpi Sonic (film)",
+   "released": [
+    2020
+   ],
+   "tr_views": 7122
+  },
+  {
+   "qid": "Q380996",
+   "label": "Hızlı ve Öfkeli 4",
+   "links": 60,
+   "value": 6120.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hızlı ve Öfkeli 4",
+   "released": [
+    2009
+   ],
+   "tr_views": 14988
+  },
+  {
+   "qid": "Q471716",
+   "label": "Barry Lyndon",
+   "links": 60,
+   "value": 10860.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Barry Lyndon",
+   "released": [
+    1975,
+    1976,
+    1977
+   ],
+   "tr_views": 17235
+  },
+  {
+   "qid": "Q471716",
+   "label": "Barry Lyndon",
+   "links": 60,
+   "value": 11040.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Barry Lyndon",
+   "released": [
+    1975,
+    1976,
+    1977
+   ],
+   "tr_views": 17235
+  },
+  {
+   "qid": "Q51668",
+   "label": "Tutku - Hz. İsa'nın Çilesi",
+   "links": 60,
+   "value": 7560.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tutku - İsa Mesih'in Çilesi",
+   "released": [
+    2004
+   ],
+   "tr_views": 14222
+  },
+  {
+   "qid": "Q747570",
+   "label": "An American in Paris",
+   "links": 60,
+   "value": 6480.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Paris'te Bir Amerikalı",
+   "released": [
+    1951,
+    1952
+   ],
+   "tr_views": 597
+  },
+  {
+   "qid": "Q892735",
+   "label": "Muhteşem Gatsby",
+   "links": 60,
+   "value": 8520.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Muhteşem Gatsby (film, 2013)",
+   "released": [
+    2013
+   ],
+   "tr_views": 5639
+  }
+ ]
+}

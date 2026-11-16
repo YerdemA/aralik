@@ -1,0 +1,1171 @@
+{
+ "dataset": "cities_tr_elevation",
+ "description": "İl merkezleri, rakım (P2044)",
+ "property": "P2044",
+ "fetched_at": "2026-11-16T12:05:00+00:00",
+ "rows": [
+  {
+   "qid": "Q406",
+   "label": "İstanbul",
+   "links": 290,
+   "value": 100.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İstanbul",
+   "province": [
+    "Marmara Bölgesi",
+    "Osmanlı İmparatorluğu",
+    "İstanbul",
+    "İstanbul Vilayeti"
+   ],
+   "tr_views": 555465
+  },
+  {
+   "qid": "Q43387",
+   "label": "Edirne",
+   "links": 283,
+   "value": 42.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Edirne",
+   "province": [
+    "Edirne",
+    "Edirne Eyaleti",
+    "Edirne Vilayeti",
+    "Osmanlı İmparatorluğu",
+    "Rumeli Eyaleti",
+    "Çirmen Sancağı"
+   ],
+   "tr_views": 58649
+  },
+  {
+   "qid": "Q3640",
+   "label": "Ankara",
+   "links": 243,
+   "value": 938.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ankara",
+   "province": [
+    "Anadolu eyaleti",
+    "Ankara",
+    "Ankara Eyaleti",
+    "Ankara Vilayeti",
+    "Türkiye",
+    "Türkiye'de tek partili dönem"
+   ],
+   "tr_views": 247192
+  },
+  {
+   "qid": "Q35997",
+   "label": "İzmir",
+   "links": 165,
+   "value": 2.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İzmir",
+   "province": [
+    "Aydın Vilayeti",
+    "İzmir"
+   ],
+   "tr_views": 122071
+  },
+  {
+   "qid": "Q35997",
+   "label": "İzmir",
+   "links": 165,
+   "value": 9.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "İzmir",
+   "province": [
+    "Aydın Vilayeti",
+    "İzmir"
+   ],
+   "tr_views": 122071
+  },
+  {
+   "qid": "Q40738",
+   "label": "Bursa",
+   "links": 137,
+   "value": 100.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bursa",
+   "province": [
+    "Bursa",
+    "Hüdavendigar eyaleti",
+    "Hüdavendigâr Vilayeti",
+    "Osmanlı İmparatorluğu"
+   ],
+   "tr_views": 120516
+  },
+  {
+   "qid": "Q6487",
+   "label": "Antalya",
+   "links": 136,
+   "value": 30.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Antalya",
+   "province": [
+    "Antalya"
+   ],
+   "tr_views": 100368
+  },
+  {
+   "qid": "Q38545",
+   "label": "Adana",
+   "links": 130,
+   "value": 23.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Adana",
+   "province": [
+    "Adana",
+    "Adana Eyaleti",
+    "Adana Vilayeti",
+    "Que",
+    "Ramazanoğulları Beyliği"
+   ],
+   "tr_views": 93651
+  },
+  {
+   "qid": "Q45301",
+   "label": "Trabzon",
+   "links": 121,
+   "value": 0.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Trabzon",
+   "province": [
+    "Pontus Cumhuriyeti",
+    "Trabzon",
+    "Trabzon Eyaleti",
+    "Trabzon Vilayeti",
+    "Trabzon İmparatorluğu"
+   ],
+   "tr_views": 104167
+  },
+  {
+   "qid": "Q93338",
+   "label": "Gaziantep",
+   "links": 120,
+   "value": 850.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gaziantep",
+   "province": [
+    "Gaziantep"
+   ],
+   "tr_views": 351062
+  },
+  {
+   "qid": "Q48338",
+   "label": "Kayseri",
+   "links": 117,
+   "value": 1050.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kayseri",
+   "province": [
+    "Eretnaoğulları",
+    "Karaman Eyaleti",
+    "Kayseri"
+   ],
+   "tr_views": 64881
+  },
+  {
+   "qid": "Q79857",
+   "label": "Konya",
+   "links": 115,
+   "value": 1019.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Konya",
+   "province": [
+    "Anadolu Selçuklu Devleti",
+    "Karaman Eyaleti",
+    "Karamanoğulları Devleti",
+    "Konya",
+    "Konya Vilayeti"
+   ],
+   "tr_views": 97318
+  },
+  {
+   "qid": "Q80561",
+   "label": "Antakya",
+   "links": 114,
+   "value": 67.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Antakya",
+   "province": [
+    "Hatay",
+    "Hatay Devleti"
+   ],
+   "tr_views": 25063
+  },
+  {
+   "qid": "Q83387",
+   "label": "Diyarbakır",
+   "links": 101,
+   "value": 675.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Diyarbakır",
+   "province": [
+    "Akkoyunlular",
+    "Artuklular",
+    "Diyarbakır",
+    "Diyarbekir Vilayeti",
+    "Eğil Beyliği",
+    "Türkiye Kürdistanı",
+    "İnaloğulları"
+   ],
+   "tr_views": 111952
+  },
+  {
+   "qid": "Q133118",
+   "label": "Şanlıurfa",
+   "links": 100,
+   "value": 515.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şanlıurfa",
+   "province": [
+    "Rakka Eyaleti",
+    "Şanlıurfa"
+   ],
+   "tr_views": 78804
+  },
+  {
+   "qid": "Q134291",
+   "label": "Mersin",
+   "links": 96,
+   "value": 10.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mersin",
+   "province": [
+    "Mersin"
+   ],
+   "tr_views": 57581
+  },
+  {
+   "qid": "Q168866",
+   "label": "Eskişehir",
+   "links": 95,
+   "value": 788.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eskişehir",
+   "province": [
+    "Eskişehir"
+   ],
+   "tr_views": 96428
+  },
+  {
+   "qid": "Q170532",
+   "label": "Amasya",
+   "links": 95,
+   "value": 405.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Amasya",
+   "province": [
+    "Amasya",
+    "Pontus Krallığı",
+    "Rum eyaleti"
+   ],
+   "tr_views": 67053
+  },
+  {
+   "qid": "Q170532",
+   "label": "Amasya",
+   "links": 95,
+   "value": 411.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Amasya",
+   "province": [
+    "Amasya",
+    "Pontus Krallığı",
+    "Rum eyaleti"
+   ],
+   "tr_views": 67053
+  },
+  {
+   "qid": "Q122803",
+   "label": "Erzurum",
+   "links": 94,
+   "value": 1900.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Erzurum",
+   "province": [
+    "Afşar Beyliği",
+    "Erzurum",
+    "Erzurum Eyaleti",
+    "Erzurum Vilayeti",
+    "Saltuklular",
+    "İberya"
+   ],
+   "tr_views": 71170
+  },
+  {
+   "qid": "Q83061",
+   "label": "Van",
+   "links": 94,
+   "value": 1730.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Van",
+   "province": [
+    "Batı Ermenistan Yönetimi",
+    "Ermeni Krallığı",
+    "Van",
+    "Van Eyaleti",
+    "Van Vilayeti",
+    "Vaspurakan Krallığı"
+   ],
+   "tr_views": 55615
+  },
+  {
+   "qid": "Q199712",
+   "label": "Çanakkale",
+   "links": 93,
+   "value": 6.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çanakkale",
+   "province": [
+    "Çanakkale"
+   ],
+   "tr_views": 61796
+  },
+  {
+   "qid": "Q160450",
+   "label": "Samsun",
+   "links": 92,
+   "value": 20.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Samsun",
+   "province": [
+    "Samsun"
+   ],
+   "tr_views": 69298
+  },
+  {
+   "qid": "Q170967",
+   "label": "Denizli",
+   "links": 92,
+   "value": 324.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Denizli",
+   "province": [
+    "Denizli",
+    "İnançoğulları"
+   ],
+   "tr_views": 52307
+  },
+  {
+   "qid": "Q107401",
+   "label": "Sivas",
+   "links": 91,
+   "value": 1285.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sivas",
+   "province": [
+    "Danişmendliler",
+    "Eretnaoğulları",
+    "Kadı Burhaneddin Ahmed Devleti",
+    "Rum eyaleti",
+    "Sivas",
+    "Sivas Vilayeti"
+   ],
+   "tr_views": 72215
+  },
+  {
+   "qid": "Q127063",
+   "label": "Kars",
+   "links": 91,
+   "value": 1768.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kars",
+   "province": [
+    "Ermeni Bagratuni Krallığı",
+    "Güneybatı Kafkas Geçici Hükûmeti",
+    "Kars",
+    "Kars Eyaleti",
+    "Kars Oblastı"
+   ],
+   "tr_views": 67825
+  },
+  {
+   "qid": "Q134703",
+   "label": "Kahramanmaraş",
+   "links": 90,
+   "value": 67.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kahramanmaraş",
+   "province": [
+    "Dulkadir eyaleti",
+    "Dulkadiroğulları",
+    "Kahramanmaraş",
+    "Maraş Sancağı"
+   ],
+   "tr_views": 50161
+  },
+  {
+   "qid": "Q129649",
+   "label": "İzmit",
+   "links": 89,
+   "value": 100.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İzmit",
+   "province": [
+    "Kocaeli",
+    "İzmit Sancağı"
+   ],
+   "tr_views": 47695
+  },
+  {
+   "qid": "Q159835",
+   "label": "Batman",
+   "links": 89,
+   "value": 540.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Batman",
+   "province": [
+    "Batman"
+   ],
+   "tr_views": 47238
+  },
+  {
+   "qid": "Q147089",
+   "label": "Manisa",
+   "links": 88,
+   "value": 71.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Manisa",
+   "province": [
+    "Manisa",
+    "Saruhanoğulları Beyliği",
+    "Yunusemre",
+    "Şehzadeler"
+   ],
+   "tr_views": 72620
+  },
+  {
+   "qid": "Q188894",
+   "label": "Kütahya",
+   "links": 86,
+   "value": 970.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kütahya",
+   "province": [
+    "Anadolu eyaleti",
+    "Germiyanoğulları",
+    "Kütahya"
+   ],
+   "tr_views": 46214
+  },
+  {
+   "qid": "Q165995",
+   "label": "Malatya",
+   "links": 85,
+   "value": 954.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Malatya",
+   "province": [
+    "Malatya"
+   ],
+   "tr_views": 61980
+  },
+  {
+   "qid": "Q168197",
+   "label": "Adıyaman",
+   "links": 84,
+   "value": 683.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Adıyaman",
+   "province": [
+    "Adıyaman"
+   ],
+   "tr_views": 33140
+  },
+  {
+   "qid": "Q168197",
+   "label": "Adıyaman",
+   "links": 84,
+   "value": 764.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Adıyaman",
+   "province": [
+    "Adıyaman"
+   ],
+   "tr_views": 33140
+  },
+  {
+   "qid": "Q166824",
+   "label": "Afyonkarahisar",
+   "links": 83,
+   "value": 1021.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Afyonkarahisar",
+   "province": [
+    "Afyonkarahisar",
+    "Sahipataoğulları"
+   ],
+   "tr_views": 63727
+  },
+  {
+   "qid": "Q183651",
+   "label": "Tokat",
+   "links": 83,
+   "value": 623.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tokat (şehir)",
+   "province": [
+    "Rum eyaleti",
+    "Tokat"
+   ],
+   "tr_views": 42284
+  },
+  {
+   "qid": "Q136217",
+   "label": "Erzincan",
+   "links": 82,
+   "value": 1185.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Erzincan",
+   "province": [
+    "Erzincan",
+    "Erzincan Beyliği",
+    "Mengücüklüler"
+   ],
+   "tr_views": 52788
+  },
+  {
+   "qid": "Q170457",
+   "label": "Aydın",
+   "links": 82,
+   "value": 65.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aydın",
+   "province": [
+    "Aydın",
+    "Aydın Eyaleti"
+   ],
+   "tr_views": 37450
+  },
+  {
+   "qid": "Q174060",
+   "label": "Elazığ",
+   "links": 82,
+   "value": 1067.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Elazığ",
+   "province": [
+    "Elazığ",
+    "Mamuret-ul-Aziz Vilayeti",
+    "Çubukoğulları Beyliği"
+   ],
+   "tr_views": 43280
+  },
+  {
+   "qid": "Q175323",
+   "label": "Adapazarı",
+   "links": 82,
+   "value": 31.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Adapazarı",
+   "province": [
+    "Sakarya"
+   ],
+   "tr_views": 23632
+  },
+  {
+   "qid": "Q182025",
+   "label": "Aksaray",
+   "links": 81,
+   "value": 980.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aksaray",
+   "province": [
+    "Aksaray"
+   ],
+   "tr_views": 43630
+  },
+  {
+   "qid": "Q483331",
+   "label": "Iğdır",
+   "links": 81,
+   "value": 850.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Iğdır",
+   "province": [
+    "Aras Türk Cumhuriyeti",
+    "Iğdır",
+    "Sürmeli uyezdi"
+   ],
+   "tr_views": 50814
+  },
+  {
+   "qid": "Q206900",
+   "label": "Çorum",
+   "links": 80,
+   "value": 801.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çorum",
+   "province": [
+    "Çorum"
+   ],
+   "tr_views": 53260
+  },
+  {
+   "qid": "Q118995",
+   "label": "Muş",
+   "links": 79,
+   "value": 1400.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Muş",
+   "province": [
+    "Muş"
+   ],
+   "tr_views": 36507
+  },
+  {
+   "qid": "Q182009",
+   "label": "Tekirdağ",
+   "links": 78,
+   "value": 37.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tekirdağ",
+   "province": [
+    "Tekirdağ",
+    "Vize Sancağı"
+   ],
+   "tr_views": 40447
+  },
+  {
+   "qid": "Q188022",
+   "label": "Mardin",
+   "links": 78,
+   "value": 1083.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mardin",
+   "province": [
+    "Mardin"
+   ],
+   "tr_views": 65732
+  },
+  {
+   "qid": "Q262579",
+   "label": "Karaman",
+   "links": 78,
+   "value": 1039.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karaman",
+   "province": [
+    "Karaman",
+    "Karamanoğulları Devleti"
+   ],
+   "tr_views": 45294
+  },
+  {
+   "qid": "Q181379",
+   "label": "Osmaniye",
+   "links": 77,
+   "value": 125.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Osmaniye",
+   "province": [
+    "Osmaniye"
+   ],
+   "tr_views": 27737
+  },
+  {
+   "qid": "Q171031",
+   "label": "Isparta",
+   "links": 76,
+   "value": 1035.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Isparta",
+   "province": [
+    "Isparta"
+   ],
+   "tr_views": 39136
+  },
+  {
+   "qid": "Q185084",
+   "label": "Siirt",
+   "links": 76,
+   "value": 895.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Siirt",
+   "province": [
+    "Siirt"
+   ],
+   "tr_views": 24147
+  },
+  {
+   "qid": "Q200951",
+   "label": "Bolu",
+   "links": 76,
+   "value": 733.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bolu",
+   "province": [
+    "Bolu"
+   ],
+   "tr_views": 37386
+  },
+  {
+   "qid": "Q201101",
+   "label": "Rize",
+   "links": 76,
+   "value": 6.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rize",
+   "province": [
+    "Rize"
+   ],
+   "tr_views": 39462
+  },
+  {
+   "qid": "Q193445",
+   "label": "Artvin",
+   "links": 75,
+   "value": 345.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Artvin",
+   "province": [
+    "Artvin",
+    "Artvin Okrugu"
+   ],
+   "tr_views": 36218
+  },
+  {
+   "qid": "Q199723",
+   "label": "Balıkesir",
+   "links": 75,
+   "value": 70.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Balıkesir",
+   "province": [
+    "Balıkesir",
+    "Karesi Sancağı",
+    "Karesioğulları"
+   ],
+   "tr_views": 80793
+  },
+  {
+   "qid": "Q202188",
+   "label": "Ardahan",
+   "links": 75,
+   "value": 1811.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ardahan",
+   "province": [
+    "Ardahan"
+   ],
+   "tr_views": 44580
+  },
+  {
+   "qid": "Q205942",
+   "label": "Yalova",
+   "links": 75,
+   "value": 30.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yalova",
+   "province": [
+    "Yalova"
+   ],
+   "tr_views": 45242
+  },
+  {
+   "qid": "Q199575",
+   "label": "Ağrı",
+   "links": 74,
+   "value": 1640.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ağrı",
+   "province": [
+    "Ağrı"
+   ],
+   "tr_views": 32350
+  },
+  {
+   "qid": "Q201095",
+   "label": "Giresun",
+   "links": 74,
+   "value": 10.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Giresun",
+   "province": [
+    "Giresun"
+   ],
+   "tr_views": 100614
+  },
+  {
+   "qid": "Q206895",
+   "label": "Hakkâri",
+   "links": 74,
+   "value": 1720.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hakkâri",
+   "province": [
+    "Hakkari",
+    "Hakkâri"
+   ],
+   "tr_views": 32710
+  },
+  {
+   "qid": "Q83531",
+   "label": "Bitlis",
+   "links": 74,
+   "value": 1500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bitlis",
+   "province": [
+    "Bitlis",
+    "Bitlis Prensliği",
+    "Bitlis Vilayeti",
+    "Dilmaçoğulları"
+   ],
+   "tr_views": 31346
+  },
+  {
+   "qid": "Q184539",
+   "label": "Ordu",
+   "links": 73,
+   "value": 5.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ordu (şehir)",
+   "province": [
+    "Hacıemiroğulları Beyliği",
+    "Ordu"
+   ],
+   "tr_views": 20497
+  },
+  {
+   "qid": "Q187895",
+   "label": "Zonguldak",
+   "links": 73,
+   "value": 60.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zonguldak",
+   "province": [
+    "Zonguldak"
+   ],
+   "tr_views": 33407
+  },
+  {
+   "qid": "Q202195",
+   "label": "Tunceli",
+   "links": 73,
+   "value": 940.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tunceli",
+   "province": [
+    "Tunceli"
+   ],
+   "tr_views": 37011
+  },
+  {
+   "qid": "Q202195",
+   "label": "Tunceli",
+   "links": 73,
+   "value": 958.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tunceli",
+   "province": [
+    "Tunceli"
+   ],
+   "tr_views": 37011
+  },
+  {
+   "qid": "Q206879",
+   "label": "Nevşehir",
+   "links": 73,
+   "value": 1224.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nevşehir",
+   "province": [
+    "Nevşehir"
+   ],
+   "tr_views": 36616
+  },
+  {
+   "qid": "Q211828",
+   "label": "Bayburt",
+   "links": 73,
+   "value": 1555.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bayburt",
+   "province": [
+    "Bayburt"
+   ],
+   "tr_views": 49080
+  },
+  {
+   "qid": "Q189134",
+   "label": "Uşak",
+   "links": 72,
+   "value": 890.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uşak",
+   "province": [
+    "Uşak"
+   ],
+   "tr_views": 24332
+  },
+  {
+   "qid": "Q208005",
+   "label": "Kırşehir",
+   "links": 72,
+   "value": 1027.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kırşehir",
+   "province": [
+    "Kırşehir"
+   ],
+   "tr_views": 32929
+  },
+  {
+   "qid": "Q189697",
+   "label": "Karabük",
+   "links": 71,
+   "value": 354.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karabük",
+   "province": [
+    "Karabük"
+   ],
+   "tr_views": 30989
+  },
+  {
+   "qid": "Q206881",
+   "label": "Kilis Merkez",
+   "links": 71,
+   "value": 632.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Kilis",
+   "province": [
+    "Kilis"
+   ],
+   "tr_views": 44333
+  },
+  {
+   "qid": "Q206881",
+   "label": "Kilis Merkez",
+   "links": 71,
+   "value": 660.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kilis",
+   "province": [
+    "Kilis"
+   ],
+   "tr_views": 44333
+  },
+  {
+   "qid": "Q206885",
+   "label": "Düzce",
+   "links": 71,
+   "value": 160.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Düzce",
+   "province": [
+    "Düzce"
+   ],
+   "tr_views": 32244
+  },
+  {
+   "qid": "Q155915",
+   "label": "Kastamonu",
+   "links": 70,
+   "value": 774.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kastamonu",
+   "province": [
+    "Candaroğulları Beyliği",
+    "Kastamonu",
+    "Kastamonu Eyaleti",
+    "Kastamonu Vilayeti",
+    "Çobanoğulları"
+   ],
+   "tr_views": 57777
+  },
+  {
+   "qid": "Q206903",
+   "label": "Kırklareli",
+   "links": 70,
+   "value": 203.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kırklareli",
+   "province": [
+    "Kırklareli"
+   ],
+   "tr_views": 41195
+  },
+  {
+   "qid": "Q194146",
+   "label": "Niğde",
+   "links": 69,
+   "value": 1229.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Niğde",
+   "province": [
+    "Niğde"
+   ],
+   "tr_views": 33850
+  },
+  {
+   "qid": "Q208006",
+   "label": "Bilecik",
+   "links": 69,
+   "value": 850.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bilecik",
+   "province": [
+    "Bilecik"
+   ],
+   "tr_views": 47647
+  },
+  {
+   "qid": "Q210292",
+   "label": "Yozgat",
+   "links": 68,
+   "value": 1406.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yozgat",
+   "province": [
+    "Ankara Eyaleti",
+    "Yozgat"
+   ],
+   "tr_views": 39383
+  },
+  {
+   "qid": "Q206891",
+   "label": "Kırıkkale",
+   "links": 67,
+   "value": 713.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kırıkkale",
+   "province": [
+    "Kırıkkale"
+   ],
+   "tr_views": 31551
+  },
+  {
+   "qid": "Q131495",
+   "label": "Şırnak",
+   "links": 66,
+   "value": 1650.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şırnak",
+   "province": [
+    "Şırnak"
+   ],
+   "tr_views": 26933
+  },
+  {
+   "qid": "Q216912",
+   "label": "Muğla",
+   "links": 66,
+   "value": 660.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Muğla",
+   "province": [
+    "Muğla"
+   ],
+   "tr_views": 42946
+  },
+  {
+   "qid": "Q209925",
+   "label": "Çankırı",
+   "links": 65,
+   "value": 730.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Çankırı",
+   "province": [
+    "Çankırı"
+   ],
+   "tr_views": 36556
+  },
+  {
+   "qid": "Q214303",
+   "label": "Gümüşhane",
+   "links": 62,
+   "value": 1227.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gümüşhane",
+   "province": [
+    "Gümüşhane"
+   ],
+   "tr_views": 29777
+  }
+ ]
+}

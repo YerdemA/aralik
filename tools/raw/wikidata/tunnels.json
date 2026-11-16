@@ -1,0 +1,679 @@
+{
+ "dataset": "tunnels",
+ "description": "Tüneller, uzunluk (P2043)",
+ "property": "P2043",
+ "fetched_at": "2026-11-16T12:19:48+00:00",
+ "rows": [
+  {
+   "qid": "Q10257",
+   "label": "Manş Tüneli",
+   "links": 89,
+   "value": 50450.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Manş Tüneli",
+   "place": [
+    "Pas-de-Calais"
+   ],
+   "country": [
+    "Birleşik Krallık",
+    "Fransa"
+   ],
+   "tr_views": 26737
+  },
+  {
+   "qid": "Q99250",
+   "label": "Seikan Tüneli",
+   "links": 59,
+   "value": 53850.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Seikan Tüneli",
+   "place": [
+    "Imabetsu",
+    "Shiriuchi"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 1509
+  },
+  {
+   "qid": "Q323310",
+   "label": "Mont Blanc Tüneli",
+   "links": 41,
+   "value": 11611.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mont Blanc Tüneli",
+   "place": [
+    "Aosta Vadisi",
+    "Haute-Savoie"
+   ],
+   "country": [
+    "Fransa",
+    "İtalya"
+   ],
+   "tr_views": 643
+  },
+  {
+   "qid": "Q18541",
+   "label": "Fehmarn Kemeri Tüneli",
+   "links": 35,
+   "value": 18000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fehmarn Kemeri Tüneli",
+   "place": [
+    "Fehmarn",
+    "Lolland"
+   ],
+   "country": [
+    "Almanya",
+    "Danimarka"
+   ],
+   "tr_views": 212
+  },
+  {
+   "qid": "Q688618",
+   "label": "Gotthard Tüneli",
+   "links": 35,
+   "value": 15003.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gotthard Tüneli",
+   "place": [
+    "Airolo",
+    "Göschenen",
+    "Ticino",
+    "Uri"
+   ],
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 816
+  },
+  {
+   "qid": "Q1917594",
+   "label": "Sâlânk tüneli",
+   "links": 32,
+   "value": 2600.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sâlânk Tüneli",
+   "place": [
+    "Parvan Vilayeti"
+   ],
+   "country": [
+    "Afganistan"
+   ],
+   "tr_views": 323
+  },
+  {
+   "qid": "Q5411040",
+   "label": "Avrasya Tüneli",
+   "links": 32,
+   "value": 5400.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avrasya Tüneli",
+   "place": [
+    "İstanbul"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 42249
+  },
+  {
+   "qid": "Q684927",
+   "label": "Gotthard Karayolu Tüneli",
+   "links": 32,
+   "value": 16900.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gotthard Karayolu Tüneli",
+   "place": [
+    "Ticino",
+    "Uri"
+   ],
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 2027
+  },
+  {
+   "qid": "Q932910",
+   "label": "Roki Tüneli",
+   "links": 32,
+   "value": 3730.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Roki Tüneli",
+   "place": [
+    "Güney Osetya",
+    "Kuzey Osetya-Alanya"
+   ],
+   "country": [
+    "Güney Osetya",
+    "Gürcistan",
+    "Rusya"
+   ],
+   "tr_views": 187
+  },
+  {
+   "qid": "Q125805",
+   "label": "Lincoln Tüneli",
+   "links": 29,
+   "value": 2504.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lincoln Tüneli",
+   "place": [
+    "New Jersey",
+    "New York"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 404
+  },
+  {
+   "qid": "Q697347",
+   "label": "Brenner Tüneli",
+   "links": 25,
+   "value": 64000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Brenner Tüneli",
+   "place": [
+    "Tirol"
+   ],
+   "country": [
+    "Avusturya",
+    "İtalya"
+   ],
+   "tr_views": 592
+  },
+  {
+   "qid": "Q537800",
+   "label": "Fréjus Demiryolu Tüneli",
+   "links": 23,
+   "value": 13657.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fréjus Demiryolu Tüneli",
+   "place": [
+    "Bardonecchia",
+    "Modane"
+   ],
+   "country": [
+    "Fransa",
+    "İtalya"
+   ],
+   "tr_views": 390
+  },
+  {
+   "qid": "Q1520900",
+   "label": "Severomuysk Tüneli",
+   "links": 22,
+   "value": 15343.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Severomuysk Tüneli",
+   "place": [],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 21
+  },
+  {
+   "qid": "Q803216",
+   "label": "Sahalin Tüneli",
+   "links": 20,
+   "value": 10000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sahalin Tüneli",
+   "place": [],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 145
+  },
+  {
+   "qid": "Q483151",
+   "label": "Japonya-Kore Denizaltı Tüneli",
+   "links": 19,
+   "value": 150000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Japonya-Kore Denizaltı Tüneli",
+   "place": [
+    "Busan",
+    "Nagasaki",
+    "Saga"
+   ],
+   "country": [
+    "Güney Kore",
+    "Japonya"
+   ],
+   "tr_views": 405
+  },
+  {
+   "qid": "Q1389309",
+   "label": "Eiksund Tüneli",
+   "links": 18,
+   "value": 7765.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eiksund Tüneli",
+   "place": [
+    "Ulstein",
+    "Volda",
+    "Ørsta"
+   ],
+   "country": [
+    "Norveç"
+   ],
+   "tr_views": 556
+  },
+  {
+   "qid": "Q28220942",
+   "label": "Fırat Tüneli",
+   "links": 16,
+   "value": 929.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fırat Tüneli",
+   "place": [
+    "Babil"
+   ],
+   "country": [
+    "Irak",
+    "Mezopotamya"
+   ],
+   "tr_views": 429
+  },
+  {
+   "qid": "Q1031867",
+   "label": "Şehir Tüneli (Malmö)",
+   "links": 15,
+   "value": 17000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şehir Tüneli",
+   "place": [
+    "Malmö Belediyesi"
+   ],
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 35
+  },
+  {
+   "qid": "Q609324",
+   "label": "Ahmed Hamdi Tüneli",
+   "links": 15,
+   "value": 1640.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ahmed Hamdi Tüneli",
+   "place": [
+    "Güney Sina"
+   ],
+   "country": [
+    "Mısır"
+   ],
+   "tr_views": 466
+  },
+  {
+   "qid": "Q828688",
+   "label": "Tromsøysund Tüneli",
+   "links": 13,
+   "value": 3500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tromsøysund Tüneli",
+   "place": [
+    "Tromsø"
+   ],
+   "country": [
+    "Norveç"
+   ],
+   "tr_views": 113
+  },
+  {
+   "qid": "Q48768542",
+   "label": "Marmaray Tüneli",
+   "links": 10,
+   "value": 13500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Marmaray Tüneli",
+   "place": [
+    "Fatih",
+    "Üsküdar"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 18493
+  },
+  {
+   "qid": "Q724687",
+   "label": "Kvalsund Tüneli",
+   "links": 10,
+   "value": 1650.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kvalsund Tüneli",
+   "place": [
+    "Tromsø"
+   ],
+   "country": [
+    "Norveç"
+   ],
+   "tr_views": 32
+  },
+  {
+   "qid": "Q1020216",
+   "label": "Bømlafjordtunnel",
+   "links": 9,
+   "value": 7888.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bømlafjordtunnel",
+   "place": [
+    "Bømlo",
+    "Stord",
+    "Sveio"
+   ],
+   "country": [
+    "Norveç"
+   ],
+   "tr_views": 74
+  },
+  {
+   "qid": "Q28220601",
+   "label": "Zigana Tüneli",
+   "links": 7,
+   "value": 14481.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zigana Tüneli",
+   "place": [
+    "Maçka (ilçe)",
+    "Torul"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 22542
+  },
+  {
+   "qid": "Q6922627",
+   "label": "Ovit Tüneli",
+   "links": 6,
+   "value": 14346.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ovit Tüneli",
+   "place": [
+    "İkizdere"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 14171
+  },
+  {
+   "qid": "Q16736164",
+   "label": "Cankurtaran Tüneli",
+   "links": 4,
+   "value": 5228.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cankurtaran Tüneli",
+   "place": [
+    "Artvin"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 3236
+  },
+  {
+   "qid": "Q16827016",
+   "label": "Belkahve Tüneli",
+   "links": 4,
+   "value": 1653.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Belkahve Tüneli",
+   "place": [
+    "Bornova",
+    "Kemalpaşa"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 983
+  },
+  {
+   "qid": "Q4643443",
+   "label": "75. Yıl Selatin Tüneli",
+   "links": 4,
+   "value": 3043.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "75. Yıl Selatin Tüneli",
+   "place": [
+    "Germencik",
+    "Tire"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 6120
+  },
+  {
+   "qid": "Q7383782",
+   "label": "Rya Tüneli",
+   "links": 4,
+   "value": 2675.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rya Tüneli",
+   "place": [
+    "Tromsø"
+   ],
+   "country": [
+    "Norveç"
+   ],
+   "tr_views": 61
+  },
+  {
+   "qid": "Q16377694",
+   "label": "Orhangazi Tüneli",
+   "links": 3,
+   "value": 3591.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Orhangazi Tüneli",
+   "place": [
+    "Orhangazi",
+    "Çiftlikköy"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 2664
+  },
+  {
+   "qid": "Q56277854",
+   "label": "Buca Onat Tüneli",
+   "links": 3,
+   "value": 2543.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Buca Onat Tüneli",
+   "place": [
+    "Bornova",
+    "Buca",
+    "Konak"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 9489
+  },
+  {
+   "qid": "Q6036826",
+   "label": "Konak Tüneli",
+   "links": 3,
+   "value": 1674.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Konak Tüneli",
+   "place": [
+    "İzmir"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 1956
+  },
+  {
+   "qid": "Q6057220",
+   "label": "Sabuncubeli Tüneli",
+   "links": 2,
+   "value": 4085.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sabuncubeli Tüneli",
+   "place": [
+    "Bornova",
+    "Yunusemre"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 4732
+  },
+  {
+   "qid": "Q61071035",
+   "label": "Honaz Tüneli",
+   "links": 2,
+   "value": 2640.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Honaz Tüneli",
+   "place": [
+    "Honaz",
+    "Pamukkale"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 1552
+  },
+  {
+   "qid": "Q8082544",
+   "label": "Şirinyer Tüneli",
+   "links": 2,
+   "value": 2000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şirinyer Tüneli",
+   "place": [
+    "Buca"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 423
+  },
+  {
+   "qid": "Q123333801",
+   "label": "Sarıyer-Kilyos Tüneli",
+   "links": 1,
+   "value": 6875.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sarıyer-Kilyos Tüneli",
+   "place": [
+    "Sarıyer"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 4579
+  },
+  {
+   "qid": "Q123737041",
+   "label": "Yağdonduran Tüneli",
+   "links": 1,
+   "value": 1600.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yağdonduran Tüneli",
+   "place": [
+    "Kangal",
+    "Ulaş"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 1308
+  },
+  {
+   "qid": "Q125205804",
+   "label": "Aşık Şenlik Tüneli",
+   "links": 1,
+   "value": 2300.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aşık Şenlik Tüneli",
+   "place": [
+    "Çıldır"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 517
+  },
+  {
+   "qid": "Q136130141",
+   "label": "Doğancı Tüneli",
+   "links": 1,
+   "value": 2344.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Doğancı Tüneli",
+   "place": [
+    "Bursa"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 629
+  },
+  {
+   "qid": "Q6068265",
+   "label": "Karşıyaka Tüneli",
+   "links": 1,
+   "value": 3260.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karşıyaka Tüneli",
+   "place": [
+    "Karşıyaka"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 429
+  }
+ ]
+}

@@ -456,6 +456,79 @@ DATASETS += [
         extras={"place": ("wdt:P131", "label"), "country": ("wdt:P17", "label")},
         per_type_scan=False,
     ),
+    # Third batch (2026-11-16); ids checked on wikidata.org that day: P1376
+    # capital of, P36 capital, P1101 floors above ground, P1174 visitors per
+    # year, P2047 duration, Q48336 province of Turkey, Q3624078 sovereign
+    # state, Q11424 film, Q33506 museum, Q207694 art museum, Q44377 tunnel.
+    Dataset(
+        name="cities_tr_elevation",
+        description="İl merkezleri, rakım (P2044)",
+        types=(),
+        prop="P2044",
+        limit=90,
+        extras={"province": ("^wdt:P36", "label")},
+        candidates="?prov wdt:P31 wd:Q48336 ; wdt:P36 ?item .",
+    ),
+    Dataset(
+        name="capitals_elevation",
+        description="Egemen devletlerin başkentleri, rakım (P2044)",
+        types=(),
+        prop="P2044",
+        limit=200,
+        extras={"country": ("wdt:P17", "label")},
+        candidates="?state wdt:P31 wd:Q3624078 ; wdt:P36 ?item .",
+    ),
+    Dataset(
+        name="stadiums_world",
+        description="Dünyadaki stadyumlar, kapasite (P1083)",
+        types=STADIUM_TYPES,
+        prop="P1083",
+        limit=250,
+        normalized=False,
+        extras={"place": ("wdt:P131", "label"), "country": ("wdt:P17", "label")},
+        per_type_scan=False,
+    ),
+    Dataset(
+        name="skyscrapers_floors",
+        description="Gökdelenler, yer üstü kat sayısı (P1101)",
+        types=("Q11303",),
+        prop="P1101",
+        limit=250,
+        normalized=False,
+        extras={"place": ("wdt:P131", "label"), "country": ("wdt:P17", "label")},
+        per_type_scan=False,
+    ),
+    Dataset(
+        name="museums_visitors",
+        description="Müzeler, yıllık ziyaretçi (P1174, yılı P585)",
+        types=("Q33506", "Q207694"),
+        prop="P1174",
+        limit=250,
+        normalized=False,
+        extras={"place": ("wdt:P131", "label"), "country": ("wdt:P17", "label")},
+        per_type_scan=False,
+    ),
+    Dataset(
+        name="films_duration",
+        description="Filmler, süre (P2047, saniyeye normalize)",
+        types=("Q11424",),
+        prop="P2047",
+        limit=400,
+        extras={"released": ("wdt:P577", "year")},
+        # The type scan and the Turkish-article join time out (2026-11-16);
+        # films in 60+ Wikipedias (427 with a duration) answer in ~40 s.
+        candidates="?item wdt:P31 wd:Q11424 ; wikibase:sitelinks ?sl . FILTER(?sl >= 60)",
+    ),
+    Dataset(
+        name="tunnels",
+        description="Tüneller, uzunluk (P2043)",
+        # tunnel, railway tunnel, road tunnel
+        types=("Q44377", "Q1311958", "Q2354973"),
+        prop="P2043",
+        limit=200,
+        extras={"place": ("wdt:P131", "label"), "country": ("wdt:P17", "label")},
+        per_type_scan=False,
+    ),
     Dataset(
         name="solar_radius",
         description="Güneş, gezegenler, cüce gezegenler ve büyük uydular, ortalama yarıçap (P2120)",
@@ -608,9 +681,13 @@ def fetch_candidates(ds: Dataset) -> dict[str, int]:
     return dict(top)
 
 
-def simplify(ds: Dataset, binding: dict, links: int) -> dict:
+def simplify(ds: Dataset, binding: dict, links: int) -> dict | None:
     def get(key: str) -> str | None:
         return binding[key]["value"] if key in binding else None
+
+    # "unknown value" statements come as a blank node, not a number.
+    if binding.get("value", {}).get("type") != "literal":
+        return None
 
     row = {
         "qid": qid_of(binding),
@@ -640,7 +717,9 @@ def fetch(ds: Dataset) -> Path:
     for start in range(0, len(qids), DETAIL_CHUNK):
         chunk = qids[start : start + DETAIL_CHUNK]
         for b in run_query(details_query(ds, chunk)):
-            rows.append(simplify(ds, b, candidates[qid_of(b)]))
+            row = simplify(ds, b, candidates[qid_of(b)])
+            if row is not None:
+                rows.append(row)
         time.sleep(PAUSE_SECONDS)
     add_page_views(rows, "tr_title", "tr_views")
     rows.sort(key=lambda r: (-r["links"], r["qid"], r["value"]))

@@ -46,7 +46,17 @@
   "owid_population_history": {"factor": 3},
   "rivers_tr": {"factor": 3},
   "rivers_world": {"factor": 4},
-  "architecture_sizes": {"factor": 3}
+  "architecture_sizes": {"factor": 3},
+  "cities_tr_elevation": {"factor": 3},
+  "capitals_elevation": {"factor": 4},
+  "stadiums_world": {"factor": 2},
+  "museums_visitors": {"factor": 4},
+  "films_duration": {"half": 40},
+  "tunnels": {"factor": 4},
+  "wdi_density": {"factor": 4},
+  "wdi_child_mortality": {"factor": 3},
+  "wdi_mobile": {"factor": 1.5},
+  "wdi_birth_rate": {"factor": 2}
  },
  "questions": {
   "q1390": {"half": 4},

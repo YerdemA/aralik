@@ -1,0 +1,3830 @@
+{
+ "dataset": "skyscrapers_floors",
+ "description": "Gökdelenler, yer üstü kat sayısı (P1101)",
+ "property": "P1101",
+ "fetched_at": "2026-11-16T12:10:14+00:00",
+ "rows": [
+  {
+   "qid": "Q12495",
+   "label": "Burç Halife",
+   "links": 140,
+   "value": 163.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Burc Halife",
+   "place": [
+    "Dubai"
+   ],
+   "country": [
+    "Birleşik Arap Emirlikleri"
+   ],
+   "tr_views": 32111
+  },
+  {
+   "qid": "Q29294",
+   "label": "Willis Kulesi",
+   "links": 97,
+   "value": 108.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Willis Kulesi",
+   "place": [
+    "Şikago"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 3213
+  },
+  {
+   "qid": "Q29294",
+   "label": "Willis Kulesi",
+   "links": 97,
+   "value": 110.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Willis Kulesi",
+   "place": [
+    "Şikago"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 3213
+  },
+  {
+   "qid": "Q83063",
+   "label": "Petronas İkiz Kuleleri",
+   "links": 90,
+   "value": 88.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Petronas İkiz Kuleleri",
+   "place": [
+    "Kuala Lumpur"
+   ],
+   "country": [
+    "Malezya"
+   ],
+   "tr_views": 7786
+  },
+  {
+   "qid": "Q83101",
+   "label": "Taipei 101",
+   "links": 85,
+   "value": 101.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Taipei 101",
+   "place": [],
+   "country": [
+    "Tayvan"
+   ],
+   "tr_views": 8345
+  },
+  {
+   "qid": "Q1030463",
+   "label": "Mode Gakuen Cocoon Tower",
+   "links": 83,
+   "value": 50.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mode Gakuen Cocoon Tower",
+   "place": [
+    "Nishi-Shinjuku"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 149
+  },
+  {
+   "qid": "Q11274",
+   "label": "Chrysler Binası",
+   "links": 75,
+   "value": 77.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Chrysler Binası",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 5494
+  },
+  {
+   "qid": "Q16318627",
+   "label": "Abeno Harukas",
+   "links": 67,
+   "value": 60.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Abeno Harukas",
+   "place": [
+    "Abenosuji"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 139
+  },
+  {
+   "qid": "Q80852",
+   "label": "Şanghay Dünya Finans Merkezi",
+   "links": 61,
+   "value": 101.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şanghay Dünya Finans Merkezi",
+   "place": [
+    "Pudong"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 513
+  },
+  {
+   "qid": "Q189476",
+   "label": "Ebrac el-Beyt",
+   "links": 60,
+   "value": 120.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ebrac el-Beyt",
+   "place": [
+    "Mekke"
+   ],
+   "country": [
+    "Suudi Arabistan"
+   ],
+   "tr_views": 14560
+  },
+  {
+   "qid": "Q18547",
+   "label": "Şanghay Kulesi",
+   "links": 58,
+   "value": 128.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şanghay Kulesi",
+   "place": [
+    "Şanghay"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 2020
+  },
+  {
+   "qid": "Q29272",
+   "label": "Ryugyong Oteli",
+   "links": 58,
+   "value": 105.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ryugyong Oteli",
+   "place": [
+    "Pyongyang"
+   ],
+   "country": [
+    "Kuzey Kore"
+   ],
+   "tr_views": 1412
+  },
+  {
+   "qid": "Q737945",
+   "label": "Kraliyet Kulesi",
+   "links": 54,
+   "value": 168.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cidde Kulesi",
+   "place": [
+    "Cidde"
+   ],
+   "country": [
+    "Suudi Arabistan"
+   ],
+   "tr_views": 7047
+  },
+  {
+   "qid": "Q80813",
+   "label": "Jin Mao Kulesi",
+   "links": 52,
+   "value": 88.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Jin Mao Kulesi",
+   "place": [
+    "Şanghay"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 481
+  },
+  {
+   "qid": "Q167566",
+   "label": "Kültür ve Bilim Sarayı",
+   "links": 51,
+   "value": 42.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kültür ve Bilim Sarayı",
+   "place": [
+    "Varşova",
+    "Śródmieście"
+   ],
+   "country": [
+    "Polonya"
+   ],
+   "tr_views": 1718
+  },
+  {
+   "qid": "Q191161",
+   "label": "30 St Mary Axe",
+   "links": 49,
+   "value": 41.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "30 St Mary Axe",
+   "place": [
+    "Londra Şehri"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 848
+  },
+  {
+   "qid": "Q323767",
+   "label": "Tour Montparnasse",
+   "links": 48,
+   "value": 59.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Montparnasse Kulesi",
+   "place": [
+    "15. arrondissement",
+    "Quartier Necker"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 836
+  },
+  {
+   "qid": "Q317034",
+   "label": "Uluslararası Ticaret Merkezi",
+   "links": 47,
+   "value": 108.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uluslararası Ticaret Merkezi",
+   "place": [
+    "Yau Tsim Mong"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 783
+  },
+  {
+   "qid": "Q270066",
+   "label": "7 Dünya Ticaret Merkezi",
+   "links": 46,
+   "value": 52.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "7 Dünya Ticaret Merkezi",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2180
+  },
+  {
+   "qid": "Q214855",
+   "label": "Çin Bankası Kulesi",
+   "links": 45,
+   "value": 70.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bank of China Kulesi",
+   "place": [
+    "Hong Kong",
+    "Orta ve Batı"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 232
+  },
+  {
+   "qid": "Q214855",
+   "label": "Çin Bankası Kulesi",
+   "links": 45,
+   "value": 72.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bank of China Kulesi",
+   "place": [
+    "Hong Kong",
+    "Orta ve Batı"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 232
+  },
+  {
+   "qid": "Q217652",
+   "label": "Woolworth Building",
+   "links": 45,
+   "value": 58.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Woolworth Building",
+   "place": [
+    "Tribeca"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 804
+  },
+  {
+   "qid": "Q206435",
+   "label": "Turning Torso",
+   "links": 44,
+   "value": 54.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Turning Torso",
+   "place": [
+    "Malmö Belediyesi"
+   ],
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 1078
+  },
+  {
+   "qid": "Q151765",
+   "label": "Commerzbank Kulesi",
+   "links": 43,
+   "value": 56.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Commerzbank Kulesi",
+   "place": [],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 155
+  },
+  {
+   "qid": "Q4255374",
+   "label": "Lakhta Center",
+   "links": 43,
+   "value": 87.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lahta Center",
+   "place": [
+    "Sankt-Peterburg"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 3605
+  },
+  {
+   "qid": "Q745016",
+   "label": "Menara Kuala Lumpur",
+   "links": 43,
+   "value": 15.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Menara Kuala Lumpur",
+   "place": [
+    "Kuala Lumpur"
+   ],
+   "country": [
+    "Malezya"
+   ],
+   "tr_views": 379
+  },
+  {
+   "qid": "Q125846",
+   "label": "Q1",
+   "links": 42,
+   "value": 78.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Q1 Tower",
+   "place": [
+    "Queensland"
+   ],
+   "country": [
+    "Avustralya"
+   ],
+   "tr_views": 23506
+  },
+  {
+   "qid": "Q18640924",
+   "label": "Landmark 81",
+   "links": 42,
+   "value": 81.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Landmark 81",
+   "place": [
+    "Ho Chi Minh Kenti"
+   ],
+   "country": [
+    "Vietnam"
+   ],
+   "tr_views": 492
+  },
+  {
+   "qid": "Q245246",
+   "label": "CITIC Plaza",
+   "links": 42,
+   "value": 80.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "CITIC Plaza",
+   "place": [
+    "Guangzhou"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 298
+  },
+  {
+   "qid": "Q328505",
+   "label": "Bank of America Kulesi",
+   "links": 42,
+   "value": 54.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bank of America Kulesi (New York)",
+   "place": [
+    "Manhattan",
+    "New York"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 706
+  },
+  {
+   "qid": "Q656743",
+   "label": "Kingdom Centre",
+   "links": 42,
+   "value": 41.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kingdom Centre",
+   "place": [
+    "Riyad"
+   ],
+   "country": [
+    "Suudi Arabistan"
+   ],
+   "tr_views": 575
+  },
+  {
+   "qid": "Q236201",
+   "label": "Shun Hing Square",
+   "links": 41,
+   "value": 69.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Shun Hing Square",
+   "place": [],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 198
+  },
+  {
+   "qid": "Q382121",
+   "label": "Nanjing Greenland Finans Merkezi",
+   "links": 41,
+   "value": 66.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nanjing Greenland Finans Merkezi",
+   "place": [
+    "Nankin"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 293
+  },
+  {
+   "qid": "Q59483",
+   "label": "Mercury City Tower",
+   "links": 41,
+   "value": 75.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mercury City Tower",
+   "place": [
+    "Moskova"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 387
+  },
+  {
+   "qid": "Q156198",
+   "label": "Messeturm",
+   "links": 40,
+   "value": 63.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Messeturm",
+   "place": [],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 460
+  },
+  {
+   "qid": "Q271695",
+   "label": "Aon Merkezi",
+   "links": 40,
+   "value": 83.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aon Merkezi",
+   "place": [
+    "Şikago"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 273
+  },
+  {
+   "qid": "Q336246",
+   "label": "Torre Glòries",
+   "links": 40,
+   "value": 34.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Torre Agbar",
+   "place": [
+    "El Parc i la Llacuna del Poblenou"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 812
+  },
+  {
+   "qid": "Q546221",
+   "label": "Trump International Hotel and Tower",
+   "links": 40,
+   "value": 98.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Trump International Hotel & Tower (Chicago)",
+   "place": [
+    "Şikago"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 492
+  },
+  {
+   "qid": "Q57900",
+   "label": "U.S. Bank Kulesi",
+   "links": 40,
+   "value": 73.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "U.S. Bank Kulesi",
+   "place": [
+    "Los Angeles"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 340
+  },
+  {
+   "qid": "Q7969454",
+   "label": "Merdeka 118",
+   "links": 40,
+   "value": 118.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Merdeka 118",
+   "place": [
+    "Kuala Lumpur"
+   ],
+   "country": [
+    "Malezya"
+   ],
+   "tr_views": 1302
+  },
+  {
+   "qid": "Q838780",
+   "label": "Almas Kulesi",
+   "links": 40,
+   "value": 68.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Almas Kulesi",
+   "place": [
+    "Dubai"
+   ],
+   "country": [
+    "Birleşik Arap Emirlikleri"
+   ],
+   "tr_views": 313
+  },
+  {
+   "qid": "Q218305",
+   "label": "40 Wall Street",
+   "links": 39,
+   "value": 70.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "40 Wall Street",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 598
+  },
+  {
+   "qid": "Q337631",
+   "label": "Tuntex Sky Kulesi",
+   "links": 38,
+   "value": 85.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tuntex Sky Kulesi",
+   "place": [],
+   "country": [
+    "Tayvan"
+   ],
+   "tr_views": 185
+  },
+  {
+   "qid": "Q557933",
+   "label": "Al Hamra Kulesi",
+   "links": 38,
+   "value": 80.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Al Hamra Kulesi",
+   "place": [
+    "Kuveyt"
+   ],
+   "country": [
+    "Kuveyt"
+   ],
+   "tr_views": 257
+  },
+  {
+   "qid": "Q112640",
+   "label": "Central Plaza",
+   "links": 37,
+   "value": 78.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Central Plaza",
+   "place": [
+    "Wan Chai"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 202
+  },
+  {
+   "qid": "Q494895",
+   "label": "Lotte World Tower",
+   "links": 37,
+   "value": 123.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lotte World Tower",
+   "place": [
+    "Songpa-gu"
+   ],
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 538
+  },
+  {
+   "qid": "Q648338",
+   "label": "Rose Kulesi",
+   "links": 37,
+   "value": 72.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rose Kulesi",
+   "place": [
+    "Dubai Emirliği"
+   ],
+   "country": [
+    "Birleşik Arap Emirlikleri"
+   ],
+   "tr_views": 380
+  },
+  {
+   "qid": "Q754321",
+   "label": "CCTV Genel Merkezi",
+   "links": 37,
+   "value": 44.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "CCTV Genel Merkezi",
+   "place": [],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 466
+  },
+  {
+   "qid": "Q1043438",
+   "label": "Guangzhou Uluslararası Finans Merkezi",
+   "links": 36,
+   "value": 103.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Guangzhou Uluslararası Finans Merkezi",
+   "place": [
+    "Guangzhou"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 145
+  },
+  {
+   "qid": "Q1077308",
+   "label": "Ping An Finance Centre",
+   "links": 36,
+   "value": 115.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ping An International Finance Centre",
+   "place": [],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 774
+  },
+  {
+   "qid": "Q262041",
+   "label": "70 Pine Street",
+   "links": 36,
+   "value": 67.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "70 Pine Street",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 213
+  },
+  {
+   "qid": "Q587108",
+   "label": "Yokohama Landmark Tower",
+   "links": 36,
+   "value": 70.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yokohama Landmark Tower",
+   "place": [
+    "Minatomirai"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 199
+  },
+  {
+   "qid": "Q680614",
+   "label": "Comcast Building",
+   "links": 36,
+   "value": 70.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Comcast Building",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 403
+  },
+  {
+   "qid": "Q652452",
+   "label": "Metropolitan Life Insurance Company Tower",
+   "links": 35,
+   "value": 50.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "MetLife Tower",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 173
+  },
+  {
+   "qid": "Q845182",
+   "label": "Emirlik Ofis Kulesi",
+   "links": 35,
+   "value": 54.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Emirlik Ofis Kulesi",
+   "place": [
+    "Dubai",
+    "Dubai Emirliği"
+   ],
+   "country": [
+    "Birleşik Arap Emirlikleri"
+   ],
+   "tr_views": 227
+  },
+  {
+   "qid": "Q941908",
+   "label": "3 Dünya Ticaret Merkezi",
+   "links": 35,
+   "value": 69.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "3 Dünya Ticaret Merkezi",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 471
+  },
+  {
+   "qid": "Q233940",
+   "label": "432 Park Avenue",
+   "links": 34,
+   "value": 85.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "432 Park Avenue",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 463
+  },
+  {
+   "qid": "Q1049027",
+   "label": "Jumeirah Emirates Towers Hotel",
+   "links": 33,
+   "value": 56.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Jumeirah Emirates Towers Hotel",
+   "place": [
+    "Dubai Emirliği"
+   ],
+   "country": [
+    "Birleşik Arap Emirlikleri"
+   ],
+   "tr_views": 88
+  },
+  {
+   "qid": "Q1165269",
+   "label": "Marina 101",
+   "links": 33,
+   "value": 101.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Marina 101",
+   "place": [
+    "Dubai"
+   ],
+   "country": [
+    "Birleşik Arap Emirlikleri"
+   ],
+   "tr_views": 165
+  },
+  {
+   "qid": "Q118214",
+   "label": "Menara Telekom",
+   "links": 33,
+   "value": 77.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Menara Telekom",
+   "place": [
+    "Kuala Lumpur"
+   ],
+   "country": [
+    "Malezya"
+   ],
+   "tr_views": 137
+  },
+  {
+   "qid": "Q391648",
+   "label": "Cayan Kulesi",
+   "links": 33,
+   "value": 73.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cayan Kulesi",
+   "place": [
+    "Dubai Emirliği"
+   ],
+   "country": [
+    "Birleşik Arap Emirlikleri"
+   ],
+   "tr_views": 188
+  },
+  {
+   "qid": "Q519568",
+   "label": "Torre Moeve",
+   "links": 33,
+   "value": 45.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Torre Cepsa",
+   "place": [
+    "Madrid"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 117
+  },
+  {
+   "qid": "Q130478",
+   "label": "The Center",
+   "links": 32,
+   "value": 73.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "The Center",
+   "place": [
+    "Hong Kong"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 193
+  },
+  {
+   "qid": "Q1470046",
+   "label": "KK100",
+   "links": 32,
+   "value": 100.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "KK100",
+   "place": [],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 139
+  },
+  {
+   "qid": "Q499486",
+   "label": "Bank of America Plaza",
+   "links": 32,
+   "value": 55.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bank of America Plaza, Atlanta",
+   "place": [
+    "Atlanta"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 145
+  },
+  {
+   "qid": "Q638512",
+   "label": "Bitexco Financial Tower",
+   "links": 32,
+   "value": 68.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bitexco Financial Tower",
+   "place": [
+    "Ho Chi Minh Kenti"
+   ],
+   "country": [
+    "Vietnam"
+   ],
+   "tr_views": 133
+  },
+  {
+   "qid": "Q80367",
+   "label": "Zafer Sarayı",
+   "links": 32,
+   "value": 57.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zafer Sarayı",
+   "place": [
+    "Moskova"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 108
+  },
+  {
+   "qid": "Q844324",
+   "label": "Trump World Tower",
+   "links": 32,
+   "value": 72.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Trump World Tower",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 413
+  },
+  {
+   "qid": "Q1127212",
+   "label": "2 Dünya Ticaret Merkezi",
+   "links": 31,
+   "value": 55.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "2 Dünya Ticaret Merkezi",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 1295
+  },
+  {
+   "qid": "Q1161278",
+   "label": "Shimao International Plaza",
+   "links": 31,
+   "value": 60.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Shimao International Plaza",
+   "place": [
+    "Şanghay"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 91
+  },
+  {
+   "qid": "Q1351208",
+   "label": "4 Dünya Ticaret Merkezi",
+   "links": 31,
+   "value": 72.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "4 Dünya Ticaret Merkezi",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 641
+  },
+  {
+   "qid": "Q1509747",
+   "label": "Tour First",
+   "links": 31,
+   "value": 56.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tour First",
+   "place": [
+    "Courbevoie"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 248
+  },
+  {
+   "qid": "Q3142395",
+   "label": "Hyatt Regency Paris Etoile",
+   "links": 31,
+   "value": 34.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hôtel Hyatt Regency Paris Étoile",
+   "place": [
+    "17. arrondissement"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 112
+  },
+  {
+   "qid": "Q503477",
+   "label": "One Canada Square",
+   "links": 31,
+   "value": 50.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "One Canada Square",
+   "place": [
+    "Isle of Dogs"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 225
+  },
+  {
+   "qid": "Q632566",
+   "label": "Copan Apartman Kompleksi",
+   "links": 31,
+   "value": 35.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Copan Apartman Kompleksi",
+   "place": [
+    "São Paulo",
+    "São Paulo Merkez"
+   ],
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 135
+  },
+  {
+   "qid": "Q687413",
+   "label": "Condé Nast Binası",
+   "links": 31,
+   "value": 48.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Condé Nast Binası",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 225
+  },
+  {
+   "qid": "Q790278",
+   "label": "Avaz Twist Tower",
+   "links": 31,
+   "value": 39.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avaz Twist Tower",
+   "place": [
+    "Centar belediyesi"
+   ],
+   "country": [
+    "Bosna Hersek"
+   ],
+   "tr_views": 527
+  },
+  {
+   "qid": "Q1052475",
+   "label": "First Canadian Place",
+   "links": 30,
+   "value": 72.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "First Canadian Place",
+   "place": [
+    "Toronto"
+   ],
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 110
+  },
+  {
+   "qid": "Q1121971",
+   "label": "Two Prudential Plaza",
+   "links": 30,
+   "value": 64.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Two Prudential Plaza",
+   "place": [
+    "Illinois",
+    "Şikago"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 99
+  },
+  {
+   "qid": "Q166882",
+   "label": "Istanbul Sapphire",
+   "links": 30,
+   "value": 54.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Istanbul Sapphire",
+   "place": [
+    "İstanbul"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 16470
+  },
+  {
+   "qid": "Q520839",
+   "label": "Nina Tower",
+   "links": 30,
+   "value": 80.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nina Tower",
+   "place": [
+    "Tsuen Wan"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 80
+  },
+  {
+   "qid": "Q908703",
+   "label": "Columbia Center",
+   "links": 30,
+   "value": 76.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Columbia Center",
+   "place": [
+    "Seattle"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 105
+  },
+  {
+   "qid": "Q1138183",
+   "label": "Philadelphia City Hall",
+   "links": 29,
+   "value": 9.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Philadelphia City Hall",
+   "place": [
+    "Philadelphia"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 273
+  },
+  {
+   "qid": "Q1364354",
+   "label": "Torre Espacio",
+   "links": 29,
+   "value": 57.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Torre Espacio",
+   "place": [
+    "Madrid"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 124
+  },
+  {
+   "qid": "Q1542408",
+   "label": "Gran Torre Santiago",
+   "links": 29,
+   "value": 62.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gran Torre Santiago",
+   "place": [
+    "Santiago"
+   ],
+   "country": [
+    "Şili"
+   ],
+   "tr_views": 183
+  },
+  {
+   "qid": "Q2006129",
+   "label": "China World Trade Center Tower III",
+   "links": 29,
+   "value": 80.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "China World Trade Center Tower III",
+   "place": [
+    "Pekin"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 540
+  },
+  {
+   "qid": "Q571763",
+   "label": "Palacio Barolo",
+   "links": 29,
+   "value": 22.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Barolo Sarayı",
+   "place": [
+    "Buenos Aires"
+   ],
+   "country": [
+    "Arjantin"
+   ],
+   "tr_views": 157
+  },
+  {
+   "qid": "Q80495",
+   "label": "Millennium Tower",
+   "links": 29,
+   "value": 50.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Millennium Tower (Viyana)",
+   "place": [
+    "Viyana"
+   ],
+   "country": [
+    "Avusturya"
+   ],
+   "tr_views": 153
+  },
+  {
+   "qid": "Q875078",
+   "label": "Bloomberg Tower",
+   "links": 29,
+   "value": 55.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bloomberg Tower",
+   "place": [
+    "Midtown Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 136
+  },
+  {
+   "qid": "Q953610",
+   "label": "Torre de Cristal",
+   "links": 29,
+   "value": 52.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Torre de Cristal",
+   "place": [
+    "Madrid"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 73
+  },
+  {
+   "qid": "Q134124",
+   "label": "Ocean Heights",
+   "links": 28,
+   "value": 82.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ocean Heights",
+   "place": [
+    "Dubai Emirliği"
+   ],
+   "country": [
+    "Birleşik Arap Emirlikleri"
+   ],
+   "tr_views": 92
+  },
+  {
+   "qid": "Q1357656",
+   "label": "Minsheng Bank Building",
+   "links": 28,
+   "value": 68.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Minsheng Bank Building",
+   "place": [
+    "Vuhan"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 78
+  },
+  {
+   "qid": "Q168575",
+   "label": "CTF Finance Centre",
+   "links": 28,
+   "value": 111.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "CTF Finance Centre",
+   "place": [
+    "Guangzhou"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 146
+  },
+  {
+   "qid": "Q737602",
+   "label": "Aspire Tower",
+   "links": 28,
+   "value": 36.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aspire Tower",
+   "place": [
+    "Doha"
+   ],
+   "country": [
+    "Katar"
+   ],
+   "tr_views": 136
+  },
+  {
+   "qid": "Q910101",
+   "label": "CitySpire Center",
+   "links": 28,
+   "value": 75.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "CitySpire Center",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 83
+  },
+  {
+   "qid": "Q935919",
+   "label": "JPMorgan Chase Tower",
+   "links": 28,
+   "value": 75.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "JPMorgan Chase Tower (Houston)",
+   "place": [
+    "Houston"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 183
+  },
+  {
+   "qid": "Q1050074",
+   "label": "28 Liberty Street",
+   "links": 27,
+   "value": 60.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "28 Liberty Street",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q1331574",
+   "label": "Tower 42",
+   "links": 27,
+   "value": 43.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tower 42",
+   "place": [
+    "Londra Şehri"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 149
+  },
+  {
+   "qid": "Q1368798",
+   "label": "SEG Plaza",
+   "links": 27,
+   "value": 71.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "SEG Plaza",
+   "place": [],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 70
+  },
+  {
+   "qid": "Q1374287",
+   "label": "Eurasia",
+   "links": 27,
+   "value": 72.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avrasya (gökdelen)",
+   "place": [
+    "Moskova"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 262
+  },
+  {
+   "qid": "Q1470076",
+   "label": "HHHR Tower",
+   "links": 27,
+   "value": 72.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "HHHR Tower",
+   "place": [
+    "Dubai",
+    "Dubai Emirliği"
+   ],
+   "country": [
+    "Birleşik Arap Emirlikleri"
+   ],
+   "tr_views": 158
+  },
+  {
+   "qid": "Q167195",
+   "label": "Posta Kulesi",
+   "links": 27,
+   "value": 41.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Posta Kulesi",
+   "place": [],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 192
+  },
+  {
+   "qid": "Q2023928",
+   "label": "One57",
+   "links": 27,
+   "value": 75.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "One57",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 112
+  },
+  {
+   "qid": "Q572887",
+   "label": "8 Canada Square",
+   "links": 27,
+   "value": 45.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "8 Canada Square",
+   "place": [
+    "Tower Hamlets"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 144
+  },
+  {
+   "qid": "Q1364394",
+   "label": "Torre Picasso",
+   "links": 26,
+   "value": 43.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Torre Picasso",
+   "place": [
+    "Cuatro Caminos",
+    "Tetuan"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 235
+  },
+  {
+   "qid": "Q274916",
+   "label": "8 Spruce Street",
+   "links": 26,
+   "value": 76.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "8 Spruce Street",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 127
+  },
+  {
+   "qid": "Q333305",
+   "label": "One Raffles Place",
+   "links": 26,
+   "value": 63.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "One Raffles Place",
+   "place": [],
+   "country": [
+    "Singapur"
+   ],
+   "tr_views": 77
+  },
+  {
+   "qid": "Q511612",
+   "label": "Bahreyn Dünya Ticaret Merkezi",
+   "links": 26,
+   "value": 50.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bahreyn Dünya Ticaret Merkezi",
+   "place": [
+    "Mename"
+   ],
+   "country": [
+    "Bahreyn"
+   ],
+   "tr_views": 756
+  },
+  {
+   "qid": "Q57767",
+   "label": "Wells Fargo Plaza",
+   "links": 26,
+   "value": 71.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Wells Fargo Plaza (Houston)",
+   "place": [
+    "Houston"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 126
+  },
+  {
+   "qid": "Q609140",
+   "label": "Keangnam Hanoi Landmark Tower",
+   "links": 26,
+   "value": 72.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Keangnam Hanoi Landmark Tower",
+   "place": [],
+   "country": [
+    "Vietnam"
+   ],
+   "tr_views": 153
+  },
+  {
+   "qid": "Q751824",
+   "label": "Eldorado Business Tower",
+   "links": 26,
+   "value": 36.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eldorado Business Tower",
+   "place": [
+    "São Paulo"
+   ],
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 58
+  },
+  {
+   "qid": "Q920809",
+   "label": "Pirelli Kulesi",
+   "links": 26,
+   "value": 32.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pirelli Kulesi",
+   "place": [
+    "Milano"
+   ],
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 226
+  },
+  {
+   "qid": "Q1113808",
+   "label": "Comcast Center",
+   "links": 25,
+   "value": 57.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Comcast Center",
+   "place": [
+    "Pensilvanya",
+    "Philadelphia"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 262
+  },
+  {
+   "qid": "Q1985903",
+   "label": "Evolution Tower",
+   "links": 25,
+   "value": 54.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Evolution Tower",
+   "place": [
+    "Moskova"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 259
+  },
+  {
+   "qid": "Q212831",
+   "label": "20 Exchange Place",
+   "links": 25,
+   "value": 57.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "20 Exchange Place",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 94
+  },
+  {
+   "qid": "Q2319878",
+   "label": "Barbican Estate",
+   "links": 25,
+   "value": 42.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Barbican Estate",
+   "place": [
+    "Londra Şehri"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 210
+  },
+  {
+   "qid": "Q651643",
+   "label": "Torre PwC",
+   "links": 25,
+   "value": 52.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Torre PwC",
+   "place": [
+    "Madrid"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 140
+  },
+  {
+   "qid": "Q702322",
+   "label": "Koryo Oteli",
+   "links": 25,
+   "value": 40.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Koryo Oteli",
+   "place": [
+    "Chung-guyok"
+   ],
+   "country": [
+    "Kuzey Kore"
+   ],
+   "tr_views": 99
+  },
+  {
+   "qid": "Q1043966",
+   "label": "Carnegie Hall Tower",
+   "links": 24,
+   "value": 60.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Carnegie Hall Tower",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 65
+  },
+  {
+   "qid": "Q1093913",
+   "label": "Moşe Aviv Kulesi",
+   "links": 24,
+   "value": 68.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Moşe Aviv Kulesi",
+   "place": [
+    "Ramat Gan"
+   ],
+   "country": [
+    "İsrail"
+   ],
+   "tr_views": 590
+  },
+  {
+   "qid": "Q1151808",
+   "label": "Umeda Sky Building",
+   "links": 24,
+   "value": 40.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Umeda Sky Building",
+   "place": [
+    "Ōyodo-Naka"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 213
+  },
+  {
+   "qid": "Q1357650",
+   "label": "Williams Tower",
+   "links": 24,
+   "value": 64.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Williams Tower",
+   "place": [
+    "Houston"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 112
+  },
+  {
+   "qid": "Q1541365",
+   "label": "Renaissance Center",
+   "links": 24,
+   "value": 73.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Renaissance Center",
+   "place": [],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 243
+  },
+  {
+   "qid": "Q2303314",
+   "label": "Faysaliye Kulesi",
+   "links": 24,
+   "value": 30.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Faysaliye Kulesi",
+   "place": [
+    "Riyad"
+   ],
+   "country": [
+    "Suudi Arabistan"
+   ],
+   "tr_views": 822
+  },
+  {
+   "qid": "Q2493262",
+   "label": "Empire",
+   "links": 24,
+   "value": 60.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Empire (gökdelen)",
+   "place": [
+    "Moskova"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 115
+  },
+  {
+   "qid": "Q368489",
+   "label": "Los Angeles Belediye Binası",
+   "links": 24,
+   "value": 32.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Los Angeles Belediye Binası",
+   "place": [
+    "Los Angeles"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 308
+  },
+  {
+   "qid": "Q374662",
+   "label": "Pentominium",
+   "links": 24,
+   "value": 125.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pentominium",
+   "place": [
+    "Dubai Emirliği"
+   ],
+   "country": [
+    "Birleşik Arap Emirlikleri"
+   ],
+   "tr_views": 112
+  },
+  {
+   "qid": "Q622895",
+   "label": "Aqua",
+   "links": 24,
+   "value": 82.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aqua (gökdelen)",
+   "place": [
+    "Cook ilçesi",
+    "Illinois",
+    "Şikago"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 119
+  },
+  {
+   "qid": "Q708060",
+   "label": "Tower 185",
+   "links": 24,
+   "value": 55.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tower 185",
+   "place": [],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 128
+  },
+  {
+   "qid": "Q844813",
+   "label": "Torre Mayor",
+   "links": 24,
+   "value": 55.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Torre Mayor",
+   "place": [
+    "Meksiko"
+   ],
+   "country": [
+    "Meksika"
+   ],
+   "tr_views": 74
+  },
+  {
+   "qid": "Q948178",
+   "label": "Torre Ejecutiva Pemex",
+   "links": 24,
+   "value": 52.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Torre Ejecutiva Pemex",
+   "place": [
+    "Meksiko"
+   ],
+   "country": [
+    "Meksika"
+   ],
+   "tr_views": 72
+  },
+  {
+   "qid": "Q948178",
+   "label": "Torre Ejecutiva Pemex",
+   "links": 24,
+   "value": 54.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Torre Ejecutiva Pemex",
+   "place": [
+    "Meksiko"
+   ],
+   "country": [
+    "Meksika"
+   ],
+   "tr_views": 72
+  },
+  {
+   "qid": "Q966225",
+   "label": "Goldin Finance 117",
+   "links": 24,
+   "value": 128.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Goldin Finance 117",
+   "place": [],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 258
+  },
+  {
+   "qid": "Q1138648",
+   "label": "One Penn Plaza",
+   "links": 23,
+   "value": 57.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "One Penn Plaza",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 74
+  },
+  {
+   "qid": "Q1144187",
+   "label": "One Liberty Plaza",
+   "links": 23,
+   "value": 54.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "One Liberty Plaza",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 107
+  },
+  {
+   "qid": "Q1262622",
+   "label": "Ušće Kulesi",
+   "links": 23,
+   "value": 25.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ušće Kulesi",
+   "place": [
+    "Yeni Belgrad"
+   ],
+   "country": [
+    "Sırbistan"
+   ],
+   "tr_views": 379
+  },
+  {
+   "qid": "Q1342690",
+   "label": "One Worlwide Plaza",
+   "links": 23,
+   "value": 50.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "One Worldwide Plaza",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 108
+  },
+  {
+   "qid": "Q212834",
+   "label": "20 Fenchurch Street",
+   "links": 23,
+   "value": 36.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "20 Fenchurch Street",
+   "place": [
+    "Londra Şehri"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 135
+  },
+  {
+   "qid": "Q228242",
+   "label": "383 Madison Avenue",
+   "links": 23,
+   "value": 47.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "383 Madison Avenue",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 100
+  },
+  {
+   "qid": "Q2484373",
+   "label": "Wuhan Center",
+   "links": 23,
+   "value": 88.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Wuhan Center",
+   "place": [
+    "Vuhan"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 80
+  },
+  {
+   "qid": "Q684027",
+   "label": "Key Tower",
+   "links": 23,
+   "value": 57.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Key Tower",
+   "place": [
+    "Cleveland",
+    "Ohio"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 118
+  },
+  {
+   "qid": "Q743683",
+   "label": "Tour Total",
+   "links": 23,
+   "value": 44.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tour Total",
+   "place": [
+    "Courbevoie"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 458
+  },
+  {
+   "qid": "Q806675",
+   "label": "Bank of America Plaza",
+   "links": 23,
+   "value": 74.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bank of America Plaza (Dallas)",
+   "place": [
+    "Dallas"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 85
+  },
+  {
+   "qid": "Q1613853",
+   "label": "Heron Tower",
+   "links": 22,
+   "value": 46.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Salesforce Tower",
+   "place": [
+    "Londra Şehri"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 125
+  },
+  {
+   "qid": "Q173498",
+   "label": "1251 Avenue of the Americas",
+   "links": 22,
+   "value": 54.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "1251 Avenue of the Americas",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 200
+  },
+  {
+   "qid": "Q1756313",
+   "label": "Vasco da Gama Kulesi",
+   "links": 22,
+   "value": 22.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vasco da Gama Kulesi",
+   "place": [
+    "Parque das Nações"
+   ],
+   "country": [
+    "Portekiz"
+   ],
+   "tr_views": 136
+  },
+  {
+   "qid": "Q18602",
+   "label": "22 Bishopsgate",
+   "links": 22,
+   "value": 62.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "22 Bishopsgate",
+   "place": [
+    "Londra Şehri"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 123
+  },
+  {
+   "qid": "Q243921",
+   "label": "555 California Street",
+   "links": 22,
+   "value": 52.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "555 California Street",
+   "place": [
+    "San Francisco"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 103
+  },
+  {
+   "qid": "Q2673535",
+   "label": "Rinku Gate Tower Building",
+   "links": 22,
+   "value": 56.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rinku Gate Tower Building",
+   "place": [
+    "Izumisano"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 64
+  },
+  {
+   "qid": "Q607743",
+   "label": "Aon Center",
+   "links": 22,
+   "value": 62.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aon Center (Los Angeles)",
+   "place": [
+    "Los Angeles"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 109
+  },
+  {
+   "qid": "Q615950",
+   "label": "Abu Dabi Dünya Ticaret Merkezi",
+   "links": 22,
+   "value": 88.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Abu Dabi Dünya Ticaret Merkezi",
+   "place": [
+    "Abu Dabi"
+   ],
+   "country": [
+    "Birleşik Arap Emirlikleri"
+   ],
+   "tr_views": 94
+  },
+  {
+   "qid": "Q615950",
+   "label": "Abu Dabi Dünya Ticaret Merkezi",
+   "links": 22,
+   "value": 92.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Abu Dabi Dünya Ticaret Merkezi",
+   "place": [
+    "Abu Dabi"
+   ],
+   "country": [
+    "Birleşik Arap Emirlikleri"
+   ],
+   "tr_views": 94
+  },
+  {
+   "qid": "Q623517",
+   "label": "Millennium Tower",
+   "links": 22,
+   "value": 60.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Millennium Tower (Dubai)",
+   "place": [
+    "Dubai",
+    "Dubai Emirliği"
+   ],
+   "country": [
+    "Birleşik Arap Emirlikleri"
+   ],
+   "tr_views": 100
+  },
+  {
+   "qid": "Q659652",
+   "label": "One Astor Plaza",
+   "links": 22,
+   "value": 54.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "One Astor Plaza",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 268
+  },
+  {
+   "qid": "Q659652",
+   "label": "One Astor Plaza",
+   "links": 22,
+   "value": 200.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "One Astor Plaza",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 268
+  },
+  {
+   "qid": "Q738685",
+   "label": "Burç El Alem",
+   "links": 22,
+   "value": 108.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Burç El Alem",
+   "place": [
+    "Dubai Emirliği"
+   ],
+   "country": [
+    "Birleşik Arap Emirlikleri"
+   ],
+   "tr_views": 207
+  },
+  {
+   "qid": "Q947870",
+   "label": "Torre Latinoamericana",
+   "links": 22,
+   "value": 44.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Torre Latinoamericana",
+   "place": [
+    "Cuauhtémoc, Meksiko"
+   ],
+   "country": [
+    "Meksika"
+   ],
+   "tr_views": 192
+  },
+  {
+   "qid": "Q976172",
+   "label": "Carlton Centre",
+   "links": 22,
+   "value": 50.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Carlton Centre",
+   "place": [
+    "Johannesburg"
+   ],
+   "country": [
+    "Güney Afrika"
+   ],
+   "tr_views": 112
+  },
+  {
+   "qid": "Q1201344",
+   "label": "Cosmo Kulesi",
+   "links": 21,
+   "value": 55.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cosmo Kulesi",
+   "place": [],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 65
+  },
+  {
+   "qid": "Q224563",
+   "label": "311 South Wacker Drive",
+   "links": 21,
+   "value": 65.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "311 South Wacker Drive",
+   "place": [
+    "Şikago"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 122
+  },
+  {
+   "qid": "Q602942",
+   "label": "Sunshine 60",
+   "links": 21,
+   "value": 60.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sunshine 60",
+   "place": [
+    "Higashi-Ikebukuro"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 153
+  },
+  {
+   "qid": "Q798416",
+   "label": "John Hancock Tower",
+   "links": 21,
+   "value": 60.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "John Hancock Tower",
+   "place": [
+    "Boston"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 133
+  },
+  {
+   "qid": "Q850547",
+   "label": "Gate Tower Building",
+   "links": 21,
+   "value": 16.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gate Tower Building",
+   "place": [
+    "Fukushima"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 78
+  },
+  {
+   "qid": "Q900353",
+   "label": "E-Tower",
+   "links": 21,
+   "value": 37.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "E-Tower",
+   "place": [
+    "São Paulo"
+   ],
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 50
+  },
+  {
+   "qid": "Q1357866",
+   "label": "Warsaw Spire",
+   "links": 20,
+   "value": 49.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Warsaw Spire",
+   "place": [
+    "Varşova"
+   ],
+   "country": [
+    "Polonya"
+   ],
+   "tr_views": 61
+  },
+  {
+   "qid": "Q2275601",
+   "label": "Goldman Sachs Tower",
+   "links": 20,
+   "value": 42.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Goldman Sachs Tower",
+   "place": [
+    "Jersey City"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 90
+  },
+  {
+   "qid": "Q22968",
+   "label": "63 Building",
+   "links": 20,
+   "value": 60.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "63 Building",
+   "place": [],
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 167
+  },
+  {
+   "qid": "Q2915137",
+   "label": "Shalom Meir Kulesi",
+   "links": 20,
+   "value": 34.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Shalom Meir Kulesi",
+   "place": [
+    "Tel Aviv"
+   ],
+   "country": [
+    "İsrail"
+   ],
+   "tr_views": 202
+  },
+  {
+   "qid": "Q300254",
+   "label": "AXA Equitable Center",
+   "links": 20,
+   "value": 54.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "AXA Equitable Center",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 65
+  },
+  {
+   "qid": "Q649218",
+   "label": "India Tower",
+   "links": 20,
+   "value": 126.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "India Tower",
+   "place": [
+    "Mumbai"
+   ],
+   "country": [
+    "Hindistan"
+   ],
+   "tr_views": 128
+  },
+  {
+   "qid": "Q10939987",
+   "label": "Tianjin CTF Finance Centre",
+   "links": 19,
+   "value": 98.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tianjin CTF Finance Centre",
+   "place": [
+    "Binhai",
+    "Tientsin"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 82
+  },
+  {
+   "qid": "Q1139633",
+   "label": "One Times Square",
+   "links": 19,
+   "value": 25.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "One Times Square",
+   "place": [],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2
+  },
+  {
+   "qid": "Q133599",
+   "label": "500 Fifth Avenue",
+   "links": 19,
+   "value": 60.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "500 Fifth Avenue",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 204
+  },
+  {
+   "qid": "Q138768",
+   "label": "One Churchill Place",
+   "links": 19,
+   "value": 32.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "One Churchill Place",
+   "place": [
+    "Tower Hamlets"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 41
+  },
+  {
+   "qid": "Q496218",
+   "label": "Busan Lotte Town Tower",
+   "links": 19,
+   "value": 30.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Busan Lotte Town Tower",
+   "place": [
+    "Busan"
+   ],
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 109
+  },
+  {
+   "qid": "Q827638",
+   "label": "Bertelsmann Building",
+   "links": 19,
+   "value": 44.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bertelsmann Building",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 79
+  },
+  {
+   "qid": "Q1372014",
+   "label": "HSBC Merkez Binası",
+   "links": 18,
+   "value": 4.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "HSBC Merkez Binası (Hong Kong)",
+   "place": [
+    "Hong Kong",
+    "Orta ve Batı"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 223
+  },
+  {
+   "qid": "Q1372014",
+   "label": "HSBC Merkez Binası",
+   "links": 18,
+   "value": 47.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "HSBC Merkez Binası (Hong Kong)",
+   "place": [
+    "Hong Kong",
+    "Orta ve Batı"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 223
+  },
+  {
+   "qid": "Q21026850",
+   "label": "Neva Towers",
+   "links": 18,
+   "value": 79.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Neva Towers",
+   "place": [
+    "Moskova Uluslararası İş Merkezi"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 282
+  },
+  {
+   "qid": "Q2878337",
+   "label": "Mode Gakuen Spiral Towers",
+   "links": 18,
+   "value": 36.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mode Gakuen Spiral Towers",
+   "place": [
+    "Nagoya"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 53
+  },
+  {
+   "qid": "Q369338",
+   "label": "Dubai Dünya Ticaret Merkezi",
+   "links": 18,
+   "value": 39.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dubai Dünya Ticaret Merkezi",
+   "place": [
+    "Dubai Emirliği"
+   ],
+   "country": [
+    "Birleşik Arap Emirlikleri"
+   ],
+   "tr_views": 209
+  },
+  {
+   "qid": "Q643536",
+   "label": "Bahntower",
+   "links": 18,
+   "value": 26.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bahntower",
+   "place": [
+    "Berlin-Mitte"
+   ],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 91
+  },
+  {
+   "qid": "Q818589",
+   "label": "Beograđanka",
+   "links": 18,
+   "value": 24.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Beograđanka",
+   "place": [
+    "Vračar"
+   ],
+   "country": [
+    "Sırbistan"
+   ],
+   "tr_views": 181
+  },
+  {
+   "qid": "Q922589",
+   "label": "Broadgate Tower",
+   "links": 18,
+   "value": 35.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Broadgate Tower",
+   "place": [
+    "Londra Şehri"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 70
+  },
+  {
+   "qid": "Q1201889",
+   "label": "Tokyo Opera City Kulesi",
+   "links": 17,
+   "value": 54.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tokyo Opera Şehir Kulesi",
+   "place": [
+    "Nishi-Shinjuku"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 204
+  },
+  {
+   "qid": "Q1348023",
+   "label": "Shinjuku Park Kulesi",
+   "links": 17,
+   "value": 52.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Shinjuku Park Tower",
+   "place": [
+    "Nishi-Shinjuku"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 54
+  },
+  {
+   "qid": "Q2339039",
+   "label": "Centre Point",
+   "links": 17,
+   "value": 33.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Centre Point",
+   "place": [
+    "Camden, Londra"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 132
+  },
+  {
+   "qid": "Q2389056",
+   "label": "Euston Tower",
+   "links": 17,
+   "value": 36.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Euston Tower",
+   "place": [
+    "Camden, Londra"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 62
+  },
+  {
+   "qid": "Q2742547",
+   "label": "122 Leadenhall Street",
+   "links": 17,
+   "value": 48.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "122 Leadenhall Street",
+   "place": [
+    "Londra Şehri"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 122
+  },
+  {
+   "qid": "Q375910",
+   "label": "Kavanagh binası",
+   "links": 17,
+   "value": 31.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Edificio Kavanagh",
+   "place": [
+    "Buenos Aires"
+   ],
+   "country": [
+    "Arjantin"
+   ],
+   "tr_views": 51
+  },
+  {
+   "qid": "Q701571",
+   "label": "Park Inn Berlin",
+   "links": 17,
+   "value": 41.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Park Inn Berlin",
+   "place": [
+    "Berlin-Mitte"
+   ],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 122
+  },
+  {
+   "qid": "Q806669",
+   "label": "Bank of America Center",
+   "links": 17,
+   "value": 56.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bank of America Center (Houston)",
+   "place": [
+    "Houston"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 102
+  },
+  {
+   "qid": "Q814128",
+   "label": "Beetham Tower, Manchester",
+   "links": 17,
+   "value": 47.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Beetham Tower, Manchester",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 69
+  },
+  {
+   "qid": "Q1510199",
+   "label": "Heritage Plaza",
+   "links": 16,
+   "value": 53.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Heritage Plaza",
+   "place": [
+    "Houston"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 60
+  },
+  {
+   "qid": "Q1096141",
+   "label": "Act Tower",
+   "links": 15,
+   "value": 45.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Act Tower",
+   "place": [
+    "Hamamatsu"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 49
+  },
+  {
+   "qid": "Q1155401",
+   "label": "Midland Square",
+   "links": 15,
+   "value": 47.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Midland Square",
+   "place": [
+    "Meieki 4-chōme"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 56
+  },
+  {
+   "qid": "Q1281206",
+   "label": "First Hawaiian Center",
+   "links": 15,
+   "value": 30.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "First Hawaiian Center",
+   "place": [
+    "Honolulu"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 45
+  },
+  {
+   "qid": "Q1344723",
+   "label": "Enterprise Plaza",
+   "links": 15,
+   "value": 55.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Enterprise Plaza",
+   "place": [
+    "Houston"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 50
+  },
+  {
+   "qid": "Q15120372",
+   "label": "Yyldyz Hotel",
+   "links": 15,
+   "value": 24.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yıldız Otel",
+   "place": [
+    "Aşkabat"
+   ],
+   "country": [
+    "Türkmenistan"
+   ],
+   "tr_views": 242
+  },
+  {
+   "qid": "Q28221132",
+   "label": "Skyland İstanbul",
+   "links": 15,
+   "value": 65.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Skyland İstanbul",
+   "place": [
+    "Sarıyer"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 9734
+  },
+  {
+   "qid": "Q531752",
+   "label": "CenterPoint Energy Plaza",
+   "links": 15,
+   "value": 47.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "CenterPoint Energy Plaza",
+   "place": [
+    "Teksas"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 38
+  },
+  {
+   "qid": "Q2603784",
+   "label": "Calyon Binası",
+   "links": 13,
+   "value": 45.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Calyon Binası",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 114
+  },
+  {
+   "qid": "Q15464762",
+   "label": "Busan Uluslararası Finans Merkezi",
+   "links": 12,
+   "value": 63.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Busan Uluslararası Finans Merkezi",
+   "place": [
+    "Busan"
+   ],
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 48
+  },
+  {
+   "qid": "Q2736562",
+   "label": "Saint Luke's Tower",
+   "links": 12,
+   "value": 51.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saint Luke's Tower",
+   "place": [
+    "Akashi-chō"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 33
+  },
+  {
+   "qid": "Q2743773",
+   "label": "The Arch",
+   "links": 12,
+   "value": 65.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "The Arch",
+   "place": [
+    "Hong Kong"
+   ],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 41
+  },
+  {
+   "qid": "Q3433389",
+   "label": "Torre Reforma",
+   "links": 12,
+   "value": 57.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Torre Reforma",
+   "place": [
+    "Meksiko"
+   ],
+   "country": [
+    "Meksika"
+   ],
+   "tr_views": 80
+  },
+  {
+   "qid": "Q888058",
+   "label": "Millenia Gökdeleni",
+   "links": 11,
+   "value": 41.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Millenia Tower",
+   "place": [],
+   "country": [
+    "Singapur"
+   ],
+   "tr_views": 5
+  },
+  {
+   "qid": "Q2037099",
+   "label": "Tahran Uluslararası Kulesi",
+   "links": 10,
+   "value": 56.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tahran Uluslararası Kulesi",
+   "place": [],
+   "country": [
+    "İran"
+   ],
+   "tr_views": 206
+  },
+  {
+   "qid": "Q4047261",
+   "label": "Port Baku Towers",
+   "links": 9,
+   "value": 32.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Port Baku Towers",
+   "place": [
+    "Bakü"
+   ],
+   "country": [
+    "Azerbaycan"
+   ],
+   "tr_views": 455
+  },
+  {
+   "qid": "Q6150039",
+   "label": "Torre BBVA Mexico",
+   "links": 9,
+   "value": 157.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Torre BBVA Bancomer",
+   "place": [
+    "Cuauhtémoc, Meksiko"
+   ],
+   "country": [
+    "Meksika"
+   ],
+   "tr_views": 232
+  },
+  {
+   "qid": "Q138778",
+   "label": "10 Holloway Circus",
+   "links": 8,
+   "value": 39.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "10 Holloway Circus",
+   "place": [
+    "Birmingham"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 73
+  },
+  {
+   "qid": "Q328507",
+   "label": "Uptown Münih",
+   "links": 8,
+   "value": 38.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uptown Münih",
+   "place": [],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 106
+  },
+  {
+   "qid": "Q3485327",
+   "label": "Şişli Plaza",
+   "links": 8,
+   "value": 46.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şişli Plaza",
+   "place": [
+    "İstanbul"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 1205
+  },
+  {
+   "qid": "Q4842551",
+   "label": "Bahia Center",
+   "links": 8,
+   "value": 31.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bahia Center",
+   "place": [
+    "Vehran"
+   ],
+   "country": [
+    "Cezayir"
+   ],
+   "tr_views": 43
+  },
+  {
+   "qid": "Q7414007",
+   "label": "San Francisco Federal Binası",
+   "links": 8,
+   "value": 18.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "San Francisco Federal Binası",
+   "place": [
+    "San Francisco"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 55
+  },
+  {
+   "qid": "Q7826945",
+   "label": "Torre Aqualina",
+   "links": 8,
+   "value": 40.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Torre Aqualina",
+   "place": [
+    "Rosario"
+   ],
+   "country": [
+    "Arjantin"
+   ],
+   "tr_views": 48
+  },
+  {
+   "qid": "Q1208733",
+   "label": "Diamond of İstanbul",
+   "links": 7,
+   "value": 53.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rams Beyond",
+   "place": [
+    "İstanbul"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 1179
+  },
+  {
+   "qid": "Q3517944",
+   "label": "Ten Museum Park",
+   "links": 7,
+   "value": 50.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ten Museum Park",
+   "place": [
+    "Miami"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 34
+  },
+  {
+   "qid": "Q5065744",
+   "label": "Cevahir Sky City",
+   "links": 7,
+   "value": 40.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cevahir Sky City",
+   "place": [],
+   "country": [
+    "Kuzey Makedonya"
+   ],
+   "tr_views": 870
+  },
+  {
+   "qid": "Q6422443",
+   "label": "Knights of Columbus Binası",
+   "links": 7,
+   "value": 23.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Knights of Columbus Binası",
+   "place": [
+    "New Haven"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 115
+  },
+  {
+   "qid": "Q856319",
+   "label": "CIS Kulesi, Manchester",
+   "links": 7,
+   "value": 26.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "CIS Kulesi, Manchester",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 68
+  },
+  {
+   "qid": "Q2902481",
+   "label": "Neve Tzedek Kulesi",
+   "links": 6,
+   "value": 44.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Neve Tzedek Kulesi",
+   "place": [
+    "Tel Aviv"
+   ],
+   "country": [
+    "İsrail"
+   ],
+   "tr_views": 90
+  },
+  {
+   "qid": "Q30752740",
+   "label": "Mistral Ofis Kulesi",
+   "links": 6,
+   "value": 48.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mistral Ofis Kulesi",
+   "place": [
+    "Konak"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 4051
+  },
+  {
+   "qid": "Q3481901",
+   "label": "Ankara Sheraton Oteli",
+   "links": 6,
+   "value": 29.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ankara Sheraton Oteli",
+   "place": [
+    "Ankara"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 2004
+  },
+  {
+   "qid": "Q4822225",
+   "label": "Hilton İzmir",
+   "links": 6,
+   "value": 33.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hilton İzmir",
+   "place": [
+    "Konak"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 5003
+  },
+  {
+   "qid": "Q6063129",
+   "label": "Türkevi",
+   "links": 6,
+   "value": 35.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Türkevi",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 12479
+  },
+  {
+   "qid": "Q7232412",
+   "label": "Portside Kulesi",
+   "links": 6,
+   "value": 32.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Portside Kulesi",
+   "place": [
+    "City of Cape Town"
+   ],
+   "country": [
+    "Güney Afrika"
+   ],
+   "tr_views": 84
+  },
+  {
+   "qid": "Q1104353",
+   "label": "Coast Edmonton House",
+   "links": 5,
+   "value": 45.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Coast Edmonton House",
+   "place": [
+    "Alberta"
+   ],
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 31
+  },
+  {
+   "qid": "Q131388493",
+   "label": "TCMB Kulesi",
+   "links": 5,
+   "value": 62.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "TCMB Kule",
+   "place": [
+    "Ümraniye"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 23624
+  },
+  {
+   "qid": "Q5013234",
+   "label": "CN Kulesi (Edmonton)",
+   "links": 5,
+   "value": 26.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "CN Kulesi (Edmonton)",
+   "place": [
+    "Edmonton"
+   ],
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 48
+  },
+  {
+   "qid": "Q672984",
+   "label": "80 South Street",
+   "links": 5,
+   "value": 113.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "80 South Street",
+   "place": [
+    "Manhattan"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 95
+  },
+  {
+   "qid": "Q7854993",
+   "label": "Turk's Head Building",
+   "links": 5,
+   "value": 16.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Turk's Head Building",
+   "place": [
+    "Providence"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 174
+  },
+  {
+   "qid": "Q4735137",
+   "label": "Alpha Kulesi",
+   "links": 4,
+   "value": 28.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Alpha Kulesi",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 92
+  },
+  {
+   "qid": "Q6077513",
+   "label": "Tekfen Tower",
+   "links": 4,
+   "value": 28.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tekfen Tower",
+   "place": [
+    "İstanbul"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 3850
+  },
+  {
+   "qid": "Q21600732",
+   "label": "Spine Tower",
+   "links": 3,
+   "value": 48.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Spine Tower",
+   "place": [
+    "İstanbul"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 1923
+  },
+  {
+   "qid": "Q3511624",
+   "label": "Süzer Plaza Ritz-Carlton",
+   "links": 3,
+   "value": 34.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Süzer Plaza",
+   "place": [
+    "Şişli"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 14519
+  },
+  {
+   "qid": "Q463759",
+   "label": "American Commerce Center",
+   "links": 3,
+   "value": 63.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Amerikan Ticaret Merkezi",
+   "place": [
+    "Philadelphia"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 140
+  },
+  {
+   "qid": "Q7859171",
+   "label": "Red Hat Kulesi",
+   "links": 3,
+   "value": 19.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Red Hat Kulesi",
+   "place": [
+    "Kuzey Karolina"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 74
+  },
+  {
+   "qid": "Q112865625",
+   "label": "Torun Tower",
+   "links": 2,
+   "value": 34.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Torun Tower",
+   "place": [
+    "Şişli"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 1162
+  },
+  {
+   "qid": "Q21600725",
+   "label": "Point Bornova",
+   "links": 2,
+   "value": 50.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Point Bornova",
+   "place": [
+    "İzmir"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 4256
+  },
+  {
+   "qid": "Q7119821",
+   "label": "PNC Center (Fort Lauderdale)",
+   "links": 2,
+   "value": 22.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "PNC Center (Fort Lauderdale)",
+   "place": [],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 28
+  }
+ ]
+}

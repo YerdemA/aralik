@@ -26,6 +26,7 @@ prints the chosen and the next skipped items per dataset with their views.
 from __future__ import annotations
 
 import argparse
+import dataclasses
 import json
 import math
 import random
@@ -50,6 +51,13 @@ MIN_DATA_YEAR = 2020  # population / capacity figures must be this recent
 
 # Entities whose data is fine on Wikidata but makes a misleading question.
 EXCLUDED = {
+    "Q1218": "Kudüs'ün başkentliği tartışmalı.",
+    "Q212938": "Doğu Kudüs'ün başkentliği tartışmalı.",
+    "Q158119": "Ramallah fiilî yönetim merkezi; başkent olarak sorulmaz.",
+    "Q31487": "Kraków bugün bir başkent değil.",
+    "Q206881": "Etiketi 'Kilis Merkez' (ilçe adı).",
+    "Q5411040": "Avrasya Tüneli q1337'de soruluyor (deniz altındaki bölüm).",
+    "Q48768542": "Marmaray Tüneli q1344'te soruluyor.",
     "Q737945": "Cidde Kulesi henüz tamamlanmadı; 1008 m planlanan yükseklik.",
     "Q41553": "Rodos Heykeli artık yok; şimdiki zamanla sorulamaz.",
     "Q4180162": "Karapınar Düzlüğü bir dağ değil.",
@@ -341,6 +349,73 @@ def province_capital(e: Entity) -> str | None:
 
 def no_fact(_: Entity) -> None:
     return None
+
+
+NOT_PROVINCES = ("Bölgesi", "İmparatorluğu", "Vilayeti", "Sancağı", "Eyaleti", "Türkiye")
+
+
+def province_of(e: Entity) -> str | None:
+    """The province a city is the capital of, when it is not the same name."""
+    p = [x for x in e.extra("province") if not x.endswith(NOT_PROVINCES) and x != e.label]
+    return f"{p[0]} ilinin merkezi." if len(p) == 1 else None
+
+
+ELEVATION_CHECK = RAW_DIR / "elevation_check.json"
+# Wikidata and the Turkish article must agree this closely (check_elevations.py).
+ELEVATION_TOLERANCE = 0.10
+
+
+PANDEMIC_YEARS = (2020, 2021)
+
+
+def outside_pandemic(template: Template) -> Template:
+    """Drops 2020-2021 statements first: museums had a fraction of their
+    usual visitors then (Louvre 2021: 2.8 million)."""
+
+    def build(e: Entity, fetched_year: int) -> dict | None:
+        rows = [r for r in e.rows if r["value_year"] not in PANDEMIC_YEARS]
+        return template(dataclasses.replace(e, rows=rows), fetched_year) if rows else None
+
+    build.__qualname__ = template.__qualname__
+    return build
+
+
+def checked_elevation(template: Template) -> Template:
+    """Only elevations the Turkish Wikipedia infobox confirms (Bilecik was
+    850 m on Wikidata, 513 m in its article)."""
+    check = json.loads(ELEVATION_CHECK.read_text(encoding="utf-8")) if ELEVATION_CHECK.exists() else {}
+
+    def build(e: Entity, fetched_year: int) -> dict | None:
+        q = template(e, fetched_year)
+        other = check.get(e.qid)
+        if q is None or not other:
+            return None
+        return q if abs(q["answer"] - other) <= ELEVATION_TOLERANCE * other else None
+
+    build.__qualname__ = template.__qualname__
+    return build
+
+
+def country_of(e: Entity) -> str | None:
+    c = e.extra("country")
+    return f"Ülke: {c[0]}." if len(c) == 1 else None
+
+
+def film_duration(e: Entity, fetched_year: int) -> dict | None:
+    """The release year goes into the text: remakes share a title (Aslan
+    Kral 1994: 88 minutes, 2019: 118)."""
+    years = sorted(int(y) for y in e.extra("released") if str(y).isdigit())
+    if not years:
+        return None
+    q = magnitude("{label} filmi kaç dakika sürer?", "dakika", "sanat", scale=1 / 60, minimum=60, fact=no_fact)(e, fetched_year)
+    if q is None:
+        return None
+    label = e.question_label()
+    q["text"] = f"{label} ({years[0]}) filmi kaç dakika sürer?"
+    return q
+
+
+film_duration.__qualname__ = "film_duration"
 
 
 def abroad(template: Template) -> Template:
@@ -679,6 +754,15 @@ PLAN: list[Step] = [
     Step("bridges_world", abroad(magnitude("{label} kaç metre uzunluğundadır?", "m", "mimari", minimum=20)), 12, 1000),
     Step("solar_radius", solar_radius, 16, 2000),
     Step("planets_orbit", planet_orbit, 8, 5000),
+    # Third batch (2026-11-16): things one can reason about without knowing.
+    Step("cities_tr_elevation", checked_elevation(magnitude("{label} şehir merkezi deniz seviyesinden kaç metre yüksektedir?", "m", "türkiye", minimum=150, fact=province_of)), 70, 1000),
+    Step("capitals_elevation", checked_elevation(magnitude("{label} deniz seviyesinden kaç metre yüksektedir?", "m", "coğrafya", minimum=150, fact=country_of)), 60, 3000),
+    Step("stadiums_world", abroad(magnitude("{label} kaç kişiliktir?", "kişi", "spor", minimum=10000)), 60, 2000),
+    # skyscrapers_floors: fetched, not used: mostly little-known Turkish
+    # office towers, and the famous ones are in architecture_sizes already.
+    Step("museums_visitors", outside_pandemic(magnitude("{year} yılında {label} kaç ziyaretçi ağırlamıştır?", "kişi", "sanat", latest_year=True, minimum=100000, min_data_year=2018)), 40, 1000),
+    Step("films_duration", film_duration, 120, 5000),
+    Step("tunnels", magnitude("{label} kaç metre uzunluğundadır?", "m", "ulaşım", minimum=500), 40, 1000),
 ]
 
 
@@ -794,7 +878,13 @@ def main(argv: list[str]) -> int:
     for q in bank:
         if q["id"] in overrides:
             q["difficulty"] = overrides[q["id"]]
-    bank = [{key: q[key] for key in FIELD_ORDER if key in q} for q in bank]
+    # Known fields first; any other (retired, scale, anchor) is kept after
+    # them. Until 2026-11-16 they were dropped, which would have brought the
+    # retired questions back.
+    bank = [
+        {**{key: q[key] for key in FIELD_ORDER if key in q}, **{k: v for k, v in q.items() if k not in FIELD_ORDER and not k.startswith("_")}}
+        for q in bank
+    ]
 
     print(f"{len(existing)} mevcut + {len(new)} yeni = {len(bank)} soru.")
     print_difficulty_table(bank)

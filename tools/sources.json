@@ -18,7 +18,8 @@
     "elements_melting", "elements_boiling", "elements_discovered", "nobel",
     "animals_mass", "animals_lifespan", "provinces_area", "islands_world",
     "lakes_world", "bridges_world", "solar_radius", "planets_orbit",
-    "places_tr", "places_world"
+    "places_tr", "places_world", "cities_tr_elevation", "capitals_elevation",
+    "stadiums_world", "museums_visitors", "films_duration", "tunnels"
    ]
   },
   {
@@ -118,7 +119,8 @@
    "attribution": "The World Bank, World Development Indicators, CC BY 4.0. Göstergelerin kaynakları: BM Nüfus Bölümü (World Population Prospects), FAO, ITU, BM Dünya Turizm Örgütü, ulusal hesaplar.",
    "status": "in_use",
    "raw_dir": "worldbank",
-   "datasets": ["wdi_gdp_per_capita", "wdi_life_expectancy", "wdi_fertility", "wdi_forest", "wdi_age_65", "wdi_internet", "wdi_tourism"]
+   "datasets": ["wdi_gdp_per_capita", "wdi_life_expectancy", "wdi_fertility", "wdi_forest", "wdi_age_65", "wdi_internet", "wdi_tourism",
+    "wdi_density", "wdi_urban", "wdi_child_mortality", "wdi_mobile", "wdi_birth_rate", "wdi_age_0_14"]
   },
   {
    "id": "faostat",

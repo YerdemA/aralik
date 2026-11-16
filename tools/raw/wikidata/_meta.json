@@ -16,6 +16,14 @@
    "description": "Dünyadaki köprüler, uzunluk (P2043)",
    "fetched_at": "2026-11-06T11:24:08+00:00"
   },
+  "capitals_elevation": {
+   "description": "Egemen devletlerin başkentleri, rakım (P2044)",
+   "fetched_at": "2026-11-16T12:05:31+00:00"
+  },
+  "cities_tr_elevation": {
+   "description": "İl merkezleri, rakım (P2044)",
+   "fetched_at": "2026-11-16T12:05:00+00:00"
+  },
   "companies_employees": {
    "description": "Şirketler, çalışan sayısı (P1128, yılı P585)",
    "fetched_at": "2026-10-26T14:51:51+00:00"
@@ -36,6 +44,10 @@
    "description": "Kimyasal elementler, erime noktası (P2101, kelvin)",
    "fetched_at": "2026-10-26T14:52:39+00:00"
   },
+  "films_duration": {
+   "description": "Filmler, süre (P2047, saniyeye normalize)",
+   "fetched_at": "2026-11-16T12:32:42+00:00"
+  },
   "islands_world": {
    "description": "Adalar, yüzölçümü (P2046)",
    "fetched_at": "2026-11-06T11:18:41+00:00"
@@ -43,6 +55,10 @@
   "lakes_world": {
    "description": "Dünyadaki göller, yüzölçümü (P2046)",
    "fetched_at": "2026-11-06T11:21:38+00:00"
+  },
+  "museums_visitors": {
+   "description": "Müzeler, yıllık ziyaretçi (P1174, yılı P585)",
+   "fetched_at": "2026-11-16T12:19:19+00:00"
   },
   "nobel": {
    "description": "Nobel ödülü sahipleri, ödül yılı (P166 + P585)",
@@ -56,6 +72,10 @@
    "description": "Türkiye illeri, yüzölçümü (P2046)",
    "fetched_at": "2026-11-06T11:15:45+00:00"
   },
+  "skyscrapers_floors": {
+   "description": "Gökdelenler, yer üstü kat sayısı (P1101)",
+   "fetched_at": "2026-11-16T12:10:14+00:00"
+  },
   "skyscrapers_world": {
    "description": "Gökdelenler ve kuleler, yükseklik (P2048)",
    "fetched_at": "2026-10-26T14:43:49+00:00"
@@ -63,6 +83,14 @@
   "solar_radius": {
    "description": "Güneş, gezegenler, cüce gezegenler ve büyük uydular, ortalama yarıçap (P2120)",
    "fetched_at": "2026-11-06T11:23:22+00:00"
+  },
+  "stadiums_world": {
+   "description": "Dünyadaki stadyumlar, kapasite (P1083)",
+   "fetched_at": "2026-11-16T12:27:43+00:00"
+  },
+  "tunnels": {
+   "description": "Tüneller, uzunluk (P2043)",
+   "fetched_at": "2026-11-16T12:19:48+00:00"
   }
  }
 }

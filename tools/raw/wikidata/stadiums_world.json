@@ -1,0 +1,4623 @@
+{
+ "dataset": "stadiums_world",
+ "description": "Dünyadaki stadyumlar, kapasite (P1083)",
+ "property": "P1083",
+ "fetched_at": "2026-11-16T12:27:43+00:00",
+ "rows": [
+  {
+   "qid": "Q10285",
+   "label": "Kolezyum",
+   "links": 148,
+   "value": 65000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kolezyum",
+   "place": [],
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 40332
+  },
+  {
+   "qid": "Q155174",
+   "label": "Maracanã Stadyumu",
+   "links": 89,
+   "value": 78838.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Maracanã Stadyumu",
+   "place": [
+    "Maracanã District"
+   ],
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 16209
+  },
+  {
+   "qid": "Q159848",
+   "label": "Camp Nou",
+   "links": 89,
+   "value": 99000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Camp Nou",
+   "place": [
+    "La Maternitat i Sant Ramon"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 24084
+  },
+  {
+   "qid": "Q159848",
+   "label": "Camp Nou",
+   "links": 89,
+   "value": 105000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Camp Nou",
+   "place": [
+    "La Maternitat i Sant Ramon"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 24084
+  },
+  {
+   "qid": "Q83457",
+   "label": "Old Trafford",
+   "links": 85,
+   "value": 75731.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Old Trafford",
+   "place": [
+    "Manchester",
+    "Trafford",
+    "İngiltere"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 7170
+  },
+  {
+   "qid": "Q133566",
+   "label": "San Siro",
+   "links": 81,
+   "value": 75817.0,
+   "rank": "normal",
+   "value_year": 2022,
+   "tr_title": "Giuseppe Meazza Stadyumu",
+   "place": [
+    "Milano"
+   ],
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 15806
+  },
+  {
+   "qid": "Q164027",
+   "label": "Santiago Bernabéu Stadyumu",
+   "links": 81,
+   "value": 83186.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bernabéu Stadyumu",
+   "place": [
+    "Chamartin",
+    "Madrid"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 15026
+  },
+  {
+   "qid": "Q127429",
+   "label": "Allianz Arena",
+   "links": 80,
+   "value": 66000.0,
+   "rank": "normal",
+   "value_year": 2005,
+   "tr_title": "Allianz Arena",
+   "place": [],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 10611
+  },
+  {
+   "qid": "Q127429",
+   "label": "Allianz Arena",
+   "links": 80,
+   "value": 75024.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Allianz Arena",
+   "place": [],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 10611
+  },
+  {
+   "qid": "Q128468",
+   "label": "Wembley Stadyumu",
+   "links": 78,
+   "value": 90000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Wembley Stadyumu",
+   "place": [
+    "Brent, Londra",
+    "Wembley"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 20119
+  },
+  {
+   "qid": "Q45671",
+   "label": "Anfield",
+   "links": 78,
+   "value": 61276.0,
+   "rank": "normal",
+   "value_year": 2024,
+   "tr_title": "Anfield",
+   "place": [
+    "Anfield"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 11354
+  },
+  {
+   "qid": "Q163995",
+   "label": "Emirates Stadyumu",
+   "links": 76,
+   "value": 60338.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Emirates Stadyumu",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 7636
+  },
+  {
+   "qid": "Q171458",
+   "label": "Stamford Bridge",
+   "links": 76,
+   "value": 41875.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Stamford Bridge",
+   "place": [
+    "Fulham"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 4441
+  },
+  {
+   "qid": "Q159884",
+   "label": "Stadio Olimpico",
+   "links": 73,
+   "value": 70634.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Olimpiyat Stadyumu (Roma)",
+   "place": [
+    "Roma"
+   ],
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 4371
+  },
+  {
+   "qid": "Q13205",
+   "label": "Fransa Stadyumu",
+   "links": 72,
+   "value": 75000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fransa Stadyumu",
+   "place": [
+    "Saint-Denis"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 5468
+  },
+  {
+   "qid": "Q13205",
+   "label": "Fransa Stadyumu",
+   "links": 72,
+   "value": 81338.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Fransa Stadyumu",
+   "place": [
+    "Saint-Denis"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 5468
+  },
+  {
+   "qid": "Q13205",
+   "label": "Fransa Stadyumu",
+   "links": 72,
+   "value": 96000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fransa Stadyumu",
+   "place": [
+    "Saint-Denis"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 5468
+  },
+  {
+   "qid": "Q81492",
+   "label": "Rams Park",
+   "links": 71,
+   "value": 52652.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ali Sami Yen Spor Kompleksi",
+   "place": [
+    "Sarıyer"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 101530
+  },
+  {
+   "qid": "Q172190",
+   "label": "Londra Stadyumu",
+   "links": 70,
+   "value": 62500.0,
+   "rank": "normal",
+   "value_year": 2025,
+   "tr_title": "Londra Stadyumu",
+   "place": [
+    "Stratford"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 2890
+  },
+  {
+   "qid": "Q193431",
+   "label": "Parc des Princes",
+   "links": 70,
+   "value": 47930.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Prensler Parkı",
+   "place": [
+    "16. arrondissement"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 5688
+  },
+  {
+   "qid": "Q48159",
+   "label": "Manchester Şehir Stadyumu",
+   "links": 68,
+   "value": 52900.0,
+   "rank": "preferred",
+   "value_year": 2025,
+   "tr_title": "Manchester Şehir Stadyumu",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 7945
+  },
+  {
+   "qid": "Q48159",
+   "label": "Manchester Şehir Stadyumu",
+   "links": 68,
+   "value": 55017.0,
+   "rank": "normal",
+   "value_year": 2020,
+   "tr_title": "Manchester Şehir Stadyumu",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 7945
+  },
+  {
+   "qid": "Q202163",
+   "label": "Lujniki Stadyumu",
+   "links": 67,
+   "value": 78360.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lujniki Stadyumu",
+   "place": [],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 3071
+  },
+  {
+   "qid": "Q133525",
+   "label": "Pekin Ulusal Stadyumu",
+   "links": 64,
+   "value": 80000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pekin Ulusal Stadyumu",
+   "place": [],
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 980
+  },
+  {
+   "qid": "Q175339",
+   "label": "Villa Park",
+   "links": 62,
+   "value": 42640.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "tr_title": "Villa Park",
+   "place": [
+    "Birmingham"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 4727
+  },
+  {
+   "qid": "Q722970",
+   "label": "Yeni Zenit Stadyumu",
+   "links": 62,
+   "value": 67800.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sankt-Peterburg Stadyumu",
+   "place": [
+    "Sankt-Peterburg"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 1604
+  },
+  {
+   "qid": "Q722970",
+   "label": "Yeni Zenit Stadyumu",
+   "links": 62,
+   "value": 68134.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sankt-Peterburg Stadyumu",
+   "place": [
+    "Sankt-Peterburg"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 1604
+  },
+  {
+   "qid": "Q722970",
+   "label": "Yeni Zenit Stadyumu",
+   "links": 62,
+   "value": 80000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sankt-Peterburg Stadyumu",
+   "place": [
+    "Sankt-Peterburg"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 1604
+  },
+  {
+   "qid": "Q1190634",
+   "label": "Otkrytie Arena",
+   "links": 61,
+   "value": 45360.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Otkrıtiye Arena",
+   "place": [],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 964
+  },
+  {
+   "qid": "Q150928",
+   "label": "Signal Iduna Park",
+   "links": 61,
+   "value": 81359.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Signal Iduna Park",
+   "place": [
+    "Dortmund"
+   ],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 5887
+  },
+  {
+   "qid": "Q163521",
+   "label": "Soccer City",
+   "links": 61,
+   "value": 94736.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Soccer City",
+   "place": [
+    "Johannesburg"
+   ],
+   "country": [
+    "Güney Afrika"
+   ],
+   "tr_views": 1691
+  },
+  {
+   "qid": "Q191774",
+   "label": "St James' Park",
+   "links": 60,
+   "value": 52305.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "St James' Park",
+   "place": [
+    "Newcastle upon Tyne"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 3566
+  },
+  {
+   "qid": "Q968420",
+   "label": "Goodison Park",
+   "links": 60,
+   "value": 40157.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Goodison Park",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 3092
+  },
+  {
+   "qid": "Q320454",
+   "label": "Estadio Azteca",
+   "links": 59,
+   "value": 115000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aztek Stadyumu",
+   "place": [
+    "Coyoacán"
+   ],
+   "country": [
+    "Meksika"
+   ],
+   "tr_views": 18984
+  },
+  {
+   "qid": "Q33993",
+   "label": "Kazan Arena",
+   "links": 59,
+   "value": 45105.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kazan Arena",
+   "place": [
+    "Kazan"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 682
+  },
+  {
+   "qid": "Q150961",
+   "label": "Veltins-Arena",
+   "links": 58,
+   "value": 62271.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Veltins-Arena",
+   "place": [],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 3346
+  },
+  {
+   "qid": "Q186425",
+   "label": "White Hart Lane",
+   "links": 57,
+   "value": 36284.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "White Hart Lane",
+   "place": [
+    "Tottenham"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 1595
+  },
+  {
+   "qid": "Q193651",
+   "label": "Hampden Park",
+   "links": 57,
+   "value": 51866.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hampden Park",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 1719
+  },
+  {
+   "qid": "Q910370",
+   "label": "Mineirão",
+   "links": 57,
+   "value": 66658.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mineirão Stadyumu",
+   "place": [
+    "Belo Horizonte"
+   ],
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 1100
+  },
+  {
+   "qid": "Q1186333",
+   "label": "Luseyl Stadyumu",
+   "links": 56,
+   "value": 88966.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Luseyl Stadyumu",
+   "place": [
+    "Luseyl"
+   ],
+   "country": [
+    "Katar"
+   ],
+   "tr_views": 3273
+  },
+  {
+   "qid": "Q131610",
+   "label": "Münih Olimpiyat Stadyumu",
+   "links": 56,
+   "value": 63118.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Olimpiyat Stadyumu (Münih)",
+   "place": [
+    "Münih"
+   ],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 2631
+  },
+  {
+   "qid": "Q202150",
+   "label": "Stade Vélodrome",
+   "links": 56,
+   "value": 67394.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vélodrome Stadyumu",
+   "place": [],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 3365
+  },
+  {
+   "qid": "Q4439101",
+   "label": "Rostov Arena",
+   "links": 56,
+   "value": 45000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rostov Arena",
+   "place": [
+    "Rostov-na-Donu"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 233
+  },
+  {
+   "qid": "Q620031",
+   "label": "Leicester City Stadium",
+   "links": 56,
+   "value": 32261.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "tr_title": "King Power Stadyumu",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 1021
+  },
+  {
+   "qid": "Q4533552",
+   "label": "Mordovya Arena",
+   "links": 55,
+   "value": 45015.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mordovya Arena",
+   "place": [
+    "Saransk"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 155
+  },
+  {
+   "qid": "Q1362236",
+   "label": "Arena Corinthians",
+   "links": 54,
+   "value": 47252.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arena Corinthians",
+   "place": [
+    "Itaquera"
+   ],
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 470
+  },
+  {
+   "qid": "Q150933",
+   "label": "Volksparkstadion",
+   "links": 54,
+   "value": 51500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Imtech Arena",
+   "place": [
+    "Altona"
+   ],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 1055
+  },
+  {
+   "qid": "Q150933",
+   "label": "Volksparkstadion",
+   "links": 54,
+   "value": 57000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Imtech Arena",
+   "place": [
+    "Altona"
+   ],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 1055
+  },
+  {
+   "qid": "Q152349",
+   "label": "MHPArena",
+   "links": 54,
+   "value": 60058.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "MHPArena",
+   "place": [],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 3691
+  },
+  {
+   "qid": "Q157273",
+   "label": "Commerzbank-Arena",
+   "links": 54,
+   "value": 51500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Frankfurt Stadyumu",
+   "place": [],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 2450
+  },
+  {
+   "qid": "Q173559",
+   "label": "Cape Town Stadyumu",
+   "links": 54,
+   "value": 58309.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cape Town Stadyumu",
+   "place": [
+    "City of Cape Town"
+   ],
+   "country": [
+    "Güney Afrika"
+   ],
+   "tr_views": 522
+  },
+  {
+   "qid": "Q183529",
+   "label": "Millî Olimpiyat Spor Kompleksi",
+   "links": 54,
+   "value": 14000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Millî Olimpiyat Spor Kompleksi",
+   "place": [
+    "Kiev"
+   ],
+   "country": [
+    "Ukrayna"
+   ],
+   "tr_views": 1248
+  },
+  {
+   "qid": "Q183529",
+   "label": "Millî Olimpiyat Spor Kompleksi",
+   "links": 54,
+   "value": 47756.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Millî Olimpiyat Spor Kompleksi",
+   "place": [
+    "Kiev"
+   ],
+   "country": [
+    "Ukrayna"
+   ],
+   "tr_views": 1248
+  },
+  {
+   "qid": "Q183529",
+   "label": "Millî Olimpiyat Spor Kompleksi",
+   "links": 54,
+   "value": 50000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Millî Olimpiyat Spor Kompleksi",
+   "place": [
+    "Kiev"
+   ],
+   "country": [
+    "Ukrayna"
+   ],
+   "tr_views": 1248
+  },
+  {
+   "qid": "Q183529",
+   "label": "Millî Olimpiyat Spor Kompleksi",
+   "links": 54,
+   "value": 70050.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Millî Olimpiyat Spor Kompleksi",
+   "place": [
+    "Kiev"
+   ],
+   "country": [
+    "Ukrayna"
+   ],
+   "tr_views": 1248
+  },
+  {
+   "qid": "Q183529",
+   "label": "Millî Olimpiyat Spor Kompleksi",
+   "links": 54,
+   "value": 83450.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Millî Olimpiyat Spor Kompleksi",
+   "place": [
+    "Kiev"
+   ],
+   "country": [
+    "Ukrayna"
+   ],
+   "tr_views": 1248
+  },
+  {
+   "qid": "Q183529",
+   "label": "Millî Olimpiyat Spor Kompleksi",
+   "links": 54,
+   "value": 100062.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Millî Olimpiyat Spor Kompleksi",
+   "place": [
+    "Kiev"
+   ],
+   "country": [
+    "Ukrayna"
+   ],
+   "tr_views": 1248
+  },
+  {
+   "qid": "Q190779",
+   "label": "Merkez Yekaterinburg Stadı",
+   "links": 54,
+   "value": 42500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Merkez Stadyumu (Yekaterinburg)",
+   "place": [
+    "Yekaterinburg"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 317
+  },
+  {
+   "qid": "Q207109",
+   "label": "Amsterdam ArenA",
+   "links": 54,
+   "value": 54990.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Johan Cruyff Arena",
+   "place": [],
+   "country": [
+    "Hollanda"
+   ],
+   "tr_views": 6834
+  },
+  {
+   "qid": "Q4439098",
+   "label": "Kaliningrad Stadyumu",
+   "links": 54,
+   "value": 45015.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kaliningrad Stadyumu",
+   "place": [
+    "Kaliningrad"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 443
+  },
+  {
+   "qid": "Q4439099",
+   "label": "Samara Stadı",
+   "links": 54,
+   "value": 44918.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Samara Arena",
+   "place": [
+    "Samara"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 221
+  },
+  {
+   "qid": "Q62149",
+   "label": "Juventus Stadium",
+   "links": 54,
+   "value": 41700.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Juventus Stadyumu",
+   "place": [
+    "Torino"
+   ],
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 12339
+  },
+  {
+   "qid": "Q1066373",
+   "label": "Selhurst Park",
+   "links": 53,
+   "value": 26255.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Selhurst Park",
+   "place": [
+    "South Norwood"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 2640
+  },
+  {
+   "qid": "Q1327235",
+   "label": "Estádio Couto Pereira",
+   "links": 53,
+   "value": 34872.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Couto Pereira Stadyumu",
+   "place": [
+    "Curitiba"
+   ],
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 91
+  },
+  {
+   "qid": "Q151893",
+   "label": "RheinEnergieStadion",
+   "links": 53,
+   "value": 46195.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "RheinEnergie Stadyumu",
+   "place": [],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 1193
+  },
+  {
+   "qid": "Q175289",
+   "label": "Moses Mabhida Stadyumu",
+   "links": 53,
+   "value": 62760.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Moses Mabhida Stadyumu",
+   "place": [
+    "Durban"
+   ],
+   "country": [
+    "Güney Afrika"
+   ],
+   "tr_views": 287
+  },
+  {
+   "qid": "Q179693",
+   "label": "Ulusal Stadyum",
+   "links": 53,
+   "value": 58274.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Kazimierz Górski Ulusal Stadyumu",
+   "place": [],
+   "country": [
+    "Polonya"
+   ],
+   "tr_views": 548
+  },
+  {
+   "qid": "Q179693",
+   "label": "Ulusal Stadyum",
+   "links": 53,
+   "value": 72900.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kazimierz Górski Ulusal Stadyumu",
+   "place": [],
+   "country": [
+    "Polonya"
+   ],
+   "tr_views": 548
+  },
+  {
+   "qid": "Q211618",
+   "label": "Rungrado 1 Mayıs Stadyumu",
+   "links": 53,
+   "value": 114000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rungrado 1 Mayıs Stadyumu",
+   "place": [
+    "Chung-guyok",
+    "Pyongyang"
+   ],
+   "country": [
+    "Kuzey Kore"
+   ],
+   "tr_views": 9361
+  },
+  {
+   "qid": "Q33003",
+   "label": "Parken Stadyumu",
+   "links": 53,
+   "value": 38065.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Parken Stadyumu",
+   "place": [],
+   "country": [
+    "Danimarka"
+   ],
+   "tr_views": 2343
+  },
+  {
+   "qid": "Q336088",
+   "label": "Mané Garrincha Brezilya Ulusal Stadyumu",
+   "links": 53,
+   "value": 69910.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mané Garrincha Brezilya Ulusal Stadyumu",
+   "place": [
+    "Brasília"
+   ],
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 548
+  },
+  {
+   "qid": "Q4366184",
+   "label": "Volgograd Arena",
+   "links": 53,
+   "value": 45568.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Volgograd Arena",
+   "place": [
+    "Volgograd"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 200
+  },
+  {
+   "qid": "Q612227",
+   "label": "BC Place Stadyumu",
+   "links": 53,
+   "value": 54500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "BC Place",
+   "place": [
+    "Vancouver"
+   ],
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 7629
+  },
+  {
+   "qid": "Q772988",
+   "label": "Halife Stadyumu",
+   "links": 53,
+   "value": 50500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Uluslararası Halife Stadyumu",
+   "place": [],
+   "country": [
+    "Katar"
+   ],
+   "tr_views": 598
+  },
+  {
+   "qid": "Q10862290",
+   "label": "MetLife Stadyumu",
+   "links": 52,
+   "value": 82500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "MetLife Stadyumu",
+   "place": [
+    "East Rutherford"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 29870
+  },
+  {
+   "qid": "Q182081",
+   "label": "Ellis Park Stadyumu",
+   "links": 52,
+   "value": 62567.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ellis Park Stadyumu",
+   "place": [],
+   "country": [
+    "Güney Afrika"
+   ],
+   "tr_views": 477
+  },
+  {
+   "qid": "Q185741",
+   "label": "Ernst Happel Stadyumu",
+   "links": 52,
+   "value": 50000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ernst Happel Stadyumu",
+   "place": [
+    "Leopoldstadt"
+   ],
+   "country": [
+    "Avusturya"
+   ],
+   "tr_views": 2014
+  },
+  {
+   "qid": "Q19520501",
+   "label": "SoFi Stadyumu",
+   "links": 52,
+   "value": 70240.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "SoFi Stadyumu",
+   "place": [
+    "Inglewood"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 20888
+  },
+  {
+   "qid": "Q204496",
+   "label": "Millennium Stadyumu",
+   "links": 52,
+   "value": 73931.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Milenyum Stadyumu",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 1921
+  },
+  {
+   "qid": "Q82709",
+   "label": "Diego Armando Maradona Stadyumu",
+   "links": 52,
+   "value": 54726.0,
+   "rank": "preferred",
+   "value_year": 2019,
+   "tr_title": "Diego Armando Maradona Stadyumu",
+   "place": [
+    "Napoli"
+   ],
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 3342
+  },
+  {
+   "qid": "Q82709",
+   "label": "Diego Armando Maradona Stadyumu",
+   "links": 52,
+   "value": 60240.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Diego Armando Maradona Stadyumu",
+   "place": [
+    "Napoli"
+   ],
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 3342
+  },
+  {
+   "qid": "Q82709",
+   "label": "Diego Armando Maradona Stadyumu",
+   "links": 52,
+   "value": 76000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Diego Armando Maradona Stadyumu",
+   "place": [
+    "Napoli"
+   ],
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 3342
+  },
+  {
+   "qid": "Q1369687",
+   "label": "Estadio Metropolitano",
+   "links": 51,
+   "value": 70813.0,
+   "rank": "normal",
+   "value_year": 2026,
+   "tr_title": "Metropol Stadyumu",
+   "place": [
+    "Madrid"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 15943
+  },
+  {
+   "qid": "Q181439",
+   "label": "Free State Stadyumu",
+   "links": 51,
+   "value": 45158.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Free State Stadyumu",
+   "place": [
+    "Bloemfontein"
+   ],
+   "country": [
+    "Güney Afrika"
+   ],
+   "tr_views": 337
+  },
+  {
+   "qid": "Q958185",
+   "label": "Castelão (Ceará)",
+   "links": 51,
+   "value": 57876.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arena Castelão",
+   "place": [
+    "Fortaleza"
+   ],
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 357
+  },
+  {
+   "qid": "Q181398",
+   "label": "Loftus Versfeld Stadyumu",
+   "links": 50,
+   "value": 51762.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Loftus Versfeld Stadyumu",
+   "place": [
+    "Pretoria"
+   ],
+   "country": [
+    "Güney Afrika"
+   ],
+   "tr_views": 346
+  },
+  {
+   "qid": "Q182385",
+   "label": "PGE Arena Gdańsk",
+   "links": 50,
+   "value": 41620.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "PGE Arena Gdańsk",
+   "place": [
+    "Gdańsk"
+   ],
+   "country": [
+    "Polonya"
+   ],
+   "tr_views": 378
+  },
+  {
+   "qid": "Q187042",
+   "label": "Peter Mokaba Stadyumu",
+   "links": 50,
+   "value": 41733.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Peter Mokaba Stadyumu",
+   "place": [
+    "Polokwane"
+   ],
+   "country": [
+    "Güney Afrika"
+   ],
+   "tr_views": 164
+  },
+  {
+   "qid": "Q275429",
+   "label": "Estadio Ramón Sánchez Pizjuán",
+   "links": 50,
+   "value": 43751.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ramón Sánchez Pizjuán Stadyumu",
+   "place": [
+    "Sevilla"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 2650
+  },
+  {
+   "qid": "Q31969",
+   "label": "Stadium of Light",
+   "links": 50,
+   "value": 48339.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Işık Stadyumu (Sunderland)",
+   "place": [
+    "Sunderland"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 1820
+  },
+  {
+   "qid": "Q567339",
+   "label": "St Mary's Stadyumu",
+   "links": 50,
+   "value": 32589.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "St Mary's Stadyumu",
+   "place": [
+    "Southampton"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 310
+  },
+  {
+   "qid": "Q1134439",
+   "label": "Stadyum 974",
+   "links": 49,
+   "value": 45000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Stadyum 974",
+   "place": [
+    "Doha"
+   ],
+   "country": [
+    "Katar"
+   ],
+   "tr_views": 1000
+  },
+  {
+   "qid": "Q181445",
+   "label": "Nelson Mandela Bay Stadyumu",
+   "links": 49,
+   "value": 42486.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nelson Mandela Körfezi Stadyumu",
+   "place": [
+    "Port Elizabeth"
+   ],
+   "country": [
+    "Güney Afrika"
+   ],
+   "tr_views": 203
+  },
+  {
+   "qid": "Q190010",
+   "label": "St. Jakob-Park",
+   "links": 49,
+   "value": 38512.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "St. Jakob-Park",
+   "place": [
+    "Basel"
+   ],
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 984
+  },
+  {
+   "qid": "Q202762",
+   "label": "Estadio Mestalla",
+   "links": 49,
+   "value": 49430.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mestalla Stadyumu",
+   "place": [],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 2588
+  },
+  {
+   "qid": "Q210466",
+   "label": "Zentralstadion",
+   "links": 49,
+   "value": 42000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Red Bull Arena (Leipzig)",
+   "place": [
+    "Leipzig"
+   ],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 2849
+  },
+  {
+   "qid": "Q4439075",
+   "label": "Nijniy Novgorod Stadı",
+   "links": 49,
+   "value": 44899.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nijniy Novgorod Stadyumu",
+   "place": [
+    "Nijni Novgorod"
+   ],
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 225
+  },
+  {
+   "qid": "Q7875112",
+   "label": "Estádio da Luz",
+   "links": 49,
+   "value": 68100.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Işık Stadyumu",
+   "place": [
+    "São Domingos de Benfica"
+   ],
+   "country": [
+    "Portekiz"
+   ],
+   "tr_views": 4238
+  },
+  {
+   "qid": "Q8507",
+   "label": "OL Arena",
+   "links": 49,
+   "value": 59286.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Park Olympique Lyonnais",
+   "place": [
+    "Décines-Charpieu"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 3874
+  },
+  {
+   "qid": "Q861000",
+   "label": "Stade Geoffroy-Guichard",
+   "links": 49,
+   "value": 41965.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Geoffroy Guichard Stadyumu",
+   "place": [
+    "Saint-Étienne"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 889
+  },
+  {
+   "qid": "Q1048774",
+   "label": "Eğitim Şehri Stadyumu",
+   "links": 48,
+   "value": 90000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eğitim Şehri Stadyumu",
+   "place": [
+    "Er Reyyan"
+   ],
+   "country": [
+    "Katar"
+   ],
+   "tr_views": 402
+  },
+  {
+   "qid": "Q1050220",
+   "label": "El-Beyt Stadyumu",
+   "links": 48,
+   "value": 68895.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "El-Beyt Stadyumu",
+   "place": [
+    "Al Khor"
+   ],
+   "country": [
+    "Katar"
+   ],
+   "tr_views": 587
+  },
+  {
+   "qid": "Q187087",
+   "label": "Mbombela Stadyumu",
+   "links": 48,
+   "value": 43500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mbombela Stadyumu",
+   "place": [],
+   "country": [
+    "Güney Afrika"
+   ],
+   "tr_views": 193
+  },
+  {
+   "qid": "Q189337",
+   "label": "Royal Bafokeng Stadyumu",
+   "links": 48,
+   "value": 42000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Royal Bafokeng Stadyumu",
+   "place": [],
+   "country": [
+    "Güney Afrika"
+   ],
+   "tr_views": 162
+  },
+  {
+   "qid": "Q216037",
+   "label": "Celtic Park",
+   "links": 48,
+   "value": 60355.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Celtic Park",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 1660
+  },
+  {
+   "qid": "Q295886",
+   "label": "Avustralya Stadyumu",
+   "links": 48,
+   "value": 83500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avustralya Stadyumu",
+   "place": [
+    "Sidney"
+   ],
+   "country": [
+    "Avustralya"
+   ],
+   "tr_views": 118
+  },
+  {
+   "qid": "Q330136",
+   "label": "Melbourne Cricket Ground",
+   "links": 48,
+   "value": 100024.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Melbourne Kriket Sahası",
+   "place": [],
+   "country": [
+    "Avustralya"
+   ],
+   "tr_views": 514
+  },
+  {
+   "qid": "Q373355",
+   "label": "Gillette Stadyumu",
+   "links": 48,
+   "value": 68756.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gillette Stadyumu",
+   "place": [
+    "Foxborough"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 5832
+  },
+  {
+   "qid": "Q380823",
+   "label": "Molineux Stadium",
+   "links": 48,
+   "value": 30852.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Molineux Stadyumu",
+   "place": [
+    "Wolverhampton"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 714
+  },
+  {
+   "qid": "Q401643",
+   "label": "Ahmed bin Ali Stadyumu",
+   "links": 48,
+   "value": 44740.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ahmed bin Ali Stadyumu",
+   "place": [
+    "Er Reyyan"
+   ],
+   "country": [
+    "Katar"
+   ],
+   "tr_views": 867
+  },
+  {
+   "qid": "Q641527",
+   "label": "Arena Amazônia",
+   "links": 48,
+   "value": 42924.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arena Amazônia",
+   "place": [
+    "Amazonas",
+    "Manaus"
+   ],
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 319
+  },
+  {
+   "qid": "Q1410402",
+   "label": "Grand Stade Lille Métropole",
+   "links": 47,
+   "value": 50000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pierre Mauroy Stadyumu",
+   "place": [
+    "Villeneuve-d'Ascq"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 1387
+  },
+  {
+   "qid": "Q155351",
+   "label": "Merkur Spielarena",
+   "links": 47,
+   "value": 9917.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Merkur Spiel-Arena",
+   "place": [],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 943
+  },
+  {
+   "qid": "Q155351",
+   "label": "Merkur Spielarena",
+   "links": 47,
+   "value": 51500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Merkur Spiel-Arena",
+   "place": [],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 943
+  },
+  {
+   "qid": "Q155351",
+   "label": "Merkur Spielarena",
+   "links": 47,
+   "value": 54600.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Merkur Spiel-Arena",
+   "place": [],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 943
+  },
+  {
+   "qid": "Q155351",
+   "label": "Merkur Spielarena",
+   "links": 47,
+   "value": 66500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Merkur Spiel-Arena",
+   "place": [],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 943
+  },
+  {
+   "qid": "Q180479",
+   "label": "Donbas Arena",
+   "links": 47,
+   "value": 52518.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Donbas Arena",
+   "place": [
+    "Donetsk"
+   ],
+   "country": [
+    "Ukrayna"
+   ],
+   "tr_views": 4009
+  },
+  {
+   "qid": "Q188699",
+   "label": "Poznań Şehir Stadyumu",
+   "links": 47,
+   "value": 42873.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Poznań Şehir Stadyumu",
+   "place": [],
+   "country": [
+    "Polonya"
+   ],
+   "tr_views": 422
+  },
+  {
+   "qid": "Q208811",
+   "label": "Panathinaiko Stadyumu",
+   "links": 47,
+   "value": 45000.0,
+   "rank": "normal",
+   "value_year": 2004,
+   "tr_title": "Panathinaiko Stadyumu",
+   "place": [
+    "Atina belediyesi"
+   ],
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 2442
+  },
+  {
+   "qid": "Q208811",
+   "label": "Panathinaiko Stadyumu",
+   "links": 47,
+   "value": 50000.0,
+   "rank": "normal",
+   "value_year": 144,
+   "tr_title": "Panathinaiko Stadyumu",
+   "place": [
+    "Atina belediyesi"
+   ],
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 2442
+  },
+  {
+   "qid": "Q208811",
+   "label": "Panathinaiko Stadyumu",
+   "links": 47,
+   "value": 68000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Panathinaiko Stadyumu",
+   "place": [
+    "Atina belediyesi"
+   ],
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 2442
+  },
+  {
+   "qid": "Q208811",
+   "label": "Panathinaiko Stadyumu",
+   "links": 47,
+   "value": 80000.0,
+   "rank": "normal",
+   "value_year": 1896,
+   "tr_title": "Panathinaiko Stadyumu",
+   "place": [
+    "Atina belediyesi"
+   ],
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 2442
+  },
+  {
+   "qid": "Q214629",
+   "label": "Torino Olimpiyat Stadyumu",
+   "links": 47,
+   "value": 27958.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Torino Olimpiyat Stadyumu",
+   "place": [
+    "Torino"
+   ],
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 1234
+  },
+  {
+   "qid": "Q214629",
+   "label": "Torino Olimpiyat Stadyumu",
+   "links": 47,
+   "value": 28177.0,
+   "rank": "preferred",
+   "value_year": 2024,
+   "tr_title": "Torino Olimpiyat Stadyumu",
+   "place": [
+    "Torino"
+   ],
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 1234
+  },
+  {
+   "qid": "Q31678",
+   "label": "The Hawthorns",
+   "links": 47,
+   "value": 26445.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "The Hawthorns",
+   "place": [
+    "West Bromwich"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 286
+  },
+  {
+   "qid": "Q55074091",
+   "label": "Tottenham Hotspur Stadyumu",
+   "links": 47,
+   "value": 62850.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tottenham Hotspur Stadyumu",
+   "place": [
+    "Tottenham"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 5233
+  },
+  {
+   "qid": "Q194479",
+   "label": "Stadion Wankdorf",
+   "links": 46,
+   "value": 32000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İsviçre Stadyumu",
+   "place": [
+    "Bern"
+   ],
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 552
+  },
+  {
+   "qid": "Q222865",
+   "label": "Şükrü Saracoğlu Stadyumu",
+   "links": 46,
+   "value": 50530.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fenerbahçe Şükrü Saracoğlu Stadyumu",
+   "place": [
+    "Kadıköy"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 124896
+  },
+  {
+   "qid": "Q244402",
+   "label": "Aviva Stadyumu",
+   "links": 46,
+   "value": 51700.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aviva Stadyumu",
+   "place": [
+    "Dublin"
+   ],
+   "country": [
+    "İrlanda"
+   ],
+   "tr_views": 1191
+  },
+  {
+   "qid": "Q2612138",
+   "label": "Bakü Olimpiyat Stadyumu",
+   "links": 46,
+   "value": 69870.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bakü Olimpiyat Stadyumu",
+   "place": [
+    "Bakü"
+   ],
+   "country": [
+    "Azerbaycan"
+   ],
+   "tr_views": 3257
+  },
+  {
+   "qid": "Q330298",
+   "label": "Stadion Feĳenoord",
+   "links": 46,
+   "value": 51577.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Feijenoord Stadyumu",
+   "place": [
+    "Rotterdam"
+   ],
+   "country": [
+    "Hollanda"
+   ],
+   "tr_views": 1418
+  },
+  {
+   "qid": "Q478000",
+   "label": "Kızılyıldız Stadı",
+   "links": 46,
+   "value": 55538.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rajko Mitić Stadyumu",
+   "place": [
+    "Belgrad"
+   ],
+   "country": [
+    "Sırbistan"
+   ],
+   "tr_views": 2155
+  },
+  {
+   "qid": "Q498245",
+   "label": "Estadio Centenario",
+   "links": 46,
+   "value": 60235.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yüzüncü Yıl Stadyumu",
+   "place": [
+    "Montevideo"
+   ],
+   "country": [
+    "Uruguay"
+   ],
+   "tr_views": 1911
+  },
+  {
+   "qid": "Q500922",
+   "label": "Britannia Stadium",
+   "links": 46,
+   "value": 27740.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Stoke Stadyumu",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 486
+  },
+  {
+   "qid": "Q544553",
+   "label": "Arrowhead Stadyumu",
+   "links": 46,
+   "value": 76416.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Arrowhead Stadyumu",
+   "place": [
+    "Kansas City"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2136
+  },
+  {
+   "qid": "Q544553",
+   "label": "Arrowhead Stadyumu",
+   "links": 46,
+   "value": 78097.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arrowhead Stadyumu",
+   "place": [
+    "Kansas City"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2136
+  },
+  {
+   "qid": "Q544553",
+   "label": "Arrowhead Stadyumu",
+   "links": 46,
+   "value": 79101.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arrowhead Stadyumu",
+   "place": [
+    "Kansas City"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2136
+  },
+  {
+   "qid": "Q544553",
+   "label": "Arrowhead Stadyumu",
+   "links": 46,
+   "value": 79451.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arrowhead Stadyumu",
+   "place": [
+    "Kansas City"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 2136
+  },
+  {
+   "qid": "Q612736",
+   "label": "Lumen Field",
+   "links": 46,
+   "value": 67000.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Lumen Field",
+   "place": [
+    "Seattle"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 3252
+  },
+  {
+   "qid": "Q612736",
+   "label": "Lumen Field",
+   "links": 46,
+   "value": 72000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lumen Field",
+   "place": [
+    "Seattle"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 3252
+  },
+  {
+   "qid": "Q6499360",
+   "label": "Itaipava Arena Fonte Nova",
+   "links": 46,
+   "value": 47915.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Itaipava Arena",
+   "place": [
+    "Salvador"
+   ],
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 301
+  },
+  {
+   "qid": "Q796351",
+   "label": "BMO Field",
+   "links": 46,
+   "value": 21566.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "BMO Field",
+   "place": [
+    "Toronto"
+   ],
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 1815
+  },
+  {
+   "qid": "Q864339",
+   "label": "Hard Rock Stadyumu",
+   "links": 46,
+   "value": 64767.0,
+   "rank": "normal",
+   "value_year": 1987,
+   "tr_title": "Hard Rock Stadyumu",
+   "place": [
+    "Miami Gardens"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 3745
+  },
+  {
+   "qid": "Q864339",
+   "label": "Hard Rock Stadyumu",
+   "links": 46,
+   "value": 64767.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Hard Rock Stadyumu",
+   "place": [
+    "Miami Gardens"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 3745
+  },
+  {
+   "qid": "Q864339",
+   "label": "Hard Rock Stadyumu",
+   "links": 46,
+   "value": 65326.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Hard Rock Stadyumu",
+   "place": [
+    "Miami Gardens"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 3745
+  },
+  {
+   "qid": "Q864339",
+   "label": "Hard Rock Stadyumu",
+   "links": 46,
+   "value": 80120.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hard Rock Stadyumu",
+   "place": [
+    "Miami Gardens"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 3745
+  },
+  {
+   "qid": "Q1058864",
+   "label": "NRG Stadyumu",
+   "links": 45,
+   "value": 71054.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "NRG Stadyumu",
+   "place": [
+    "Teksas"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 4045
+  },
+  {
+   "qid": "Q188706",
+   "label": "Wrocław Şehir Stadyumu",
+   "links": 45,
+   "value": 42673.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Wrocław Şehir Stadyumu",
+   "place": [
+    "Wrocław"
+   ],
+   "country": [
+    "Polonya"
+   ],
+   "tr_views": 726
+  },
+  {
+   "qid": "Q188706",
+   "label": "Wrocław Şehir Stadyumu",
+   "links": 45,
+   "value": 42771.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Wrocław Şehir Stadyumu",
+   "place": [
+    "Wrocław"
+   ],
+   "country": [
+    "Polonya"
+   ],
+   "tr_views": 726
+  },
+  {
+   "qid": "Q205309",
+   "label": "Arsenal Stadyumu",
+   "links": 45,
+   "value": 38419.0,
+   "rank": "normal",
+   "value_year": 2006,
+   "tr_title": "Arsenal Stadyumu",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 3726
+  },
+  {
+   "qid": "Q252481",
+   "label": "Yeni Bordeaux Stadyumu",
+   "links": 45,
+   "value": 42566.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yeni Bordeaux Stadyumu",
+   "place": [
+    "Bordeaux"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 345
+  },
+  {
+   "qid": "Q318043",
+   "label": "Craven Cottage",
+   "links": 45,
+   "value": 25700.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Craven Cottage",
+   "place": [
+    "Fulham"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 1977
+  },
+  {
+   "qid": "Q338602",
+   "label": "Stadionul Naţional",
+   "links": 45,
+   "value": 55634.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Ulusal Arena",
+   "place": [
+    "Bükreş"
+   ],
+   "country": [
+    "Romanya"
+   ],
+   "tr_views": 3141
+  },
+  {
+   "qid": "Q39049425",
+   "label": "Es-Sümame Stadyumu",
+   "links": 45,
+   "value": 40000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Es-Sümame Stadyumu",
+   "place": [
+    "Doha"
+   ],
+   "country": [
+    "Katar"
+   ],
+   "tr_views": 387
+  },
+  {
+   "qid": "Q641448",
+   "label": "Arena Pantanal",
+   "links": 45,
+   "value": 42968.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arena Pantanal",
+   "place": [
+    "Cuiabá"
+   ],
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 169
+  },
+  {
+   "qid": "Q7007552",
+   "label": "Mercedes-Benz Stadyumu",
+   "links": 45,
+   "value": 71000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mercedes-Benz Stadyumu",
+   "place": [
+    "Atlanta"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 7720
+  },
+  {
+   "qid": "Q746559",
+   "label": "Astana Arena",
+   "links": 45,
+   "value": 30000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Astana Arena",
+   "place": [
+    "Astana"
+   ],
+   "country": [
+    "Kazakistan"
+   ],
+   "tr_views": 887
+  },
+  {
+   "qid": "Q854122",
+   "label": "Stade Félix-Bollaert",
+   "links": 45,
+   "value": 38058.0,
+   "rank": "normal",
+   "value_year": 2020,
+   "tr_title": "Bollaert-Delelis Stadyumu",
+   "place": [
+    "Lens"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 785
+  },
+  {
+   "qid": "Q854122",
+   "label": "Stade Félix-Bollaert",
+   "links": 45,
+   "value": 38223.0,
+   "rank": "preferred",
+   "value_year": 2025,
+   "tr_title": "Bollaert-Delelis Stadyumu",
+   "place": [
+    "Lens"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 785
+  },
+  {
+   "qid": "Q867902",
+   "label": "Cardiff City Stadium",
+   "links": 45,
+   "value": 33260.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cardiff Şehir Stadyumu",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 601
+  },
+  {
+   "qid": "Q127372",
+   "label": "Allianz Riviera",
+   "links": 44,
+   "value": 36178.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Allianz Riviera",
+   "place": [
+    "Nice"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 630
+  },
+  {
+   "qid": "Q1343986",
+   "label": "Arena das Dunas",
+   "links": 44,
+   "value": 45000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arena das Dunas",
+   "place": [
+    "Natal"
+   ],
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 159
+  },
+  {
+   "qid": "Q152633",
+   "label": "HDI-Arena",
+   "links": 44,
+   "value": 49000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Heinz-von-Heiden-Arena",
+   "place": [],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 635
+  },
+  {
+   "qid": "Q207623",
+   "label": "Letzigrund Stadion",
+   "links": 44,
+   "value": 25000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Letzigrund Stadyumu",
+   "place": [
+    "Zürih"
+   ],
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 458
+  },
+  {
+   "qid": "Q213508",
+   "label": "Karaiskakis Stadyumu",
+   "links": 44,
+   "value": 33334.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karaiskakis Stadyumu",
+   "place": [
+    "Pire belediyesi"
+   ],
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 1622
+  },
+  {
+   "qid": "Q215399",
+   "label": "Arena Lviv",
+   "links": 44,
+   "value": 34915.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arena Lviv",
+   "place": [
+    "Lviv"
+   ],
+   "country": [
+    "Ukrayna"
+   ],
+   "tr_views": 1601
+  },
+  {
+   "qid": "Q221122",
+   "label": "Atatürk Olimpiyat Stadyumu",
+   "links": 44,
+   "value": 80597.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Atatürk Olimpiyat Stadyumu",
+   "place": [
+    "Başakşehir"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 132320
+  },
+  {
+   "qid": "Q271454",
+   "label": "Estádio do Dragão",
+   "links": 44,
+   "value": 50033.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ejder Stadyumu",
+   "place": [
+    "Campanhã"
+   ],
+   "country": [
+    "Portekiz"
+   ],
+   "tr_views": 2374
+  },
+  {
+   "qid": "Q271568",
+   "label": "Stadio Luigi Ferraris",
+   "links": 44,
+   "value": 33205.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Luigi Ferraris Stadyumu",
+   "place": [
+    "Cenova"
+   ],
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 1758
+  },
+  {
+   "qid": "Q276354",
+   "label": "Estadio Antonio Vespucio Liberti",
+   "links": 44,
+   "value": 84567.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Antonio Vespucio Liberti Stadyumu",
+   "place": [
+    "Buenos Aires"
+   ],
+   "country": [
+    "Arjantin"
+   ],
+   "tr_views": 2077
+  },
+  {
+   "qid": "Q28500",
+   "label": "Renzo Barbera Stadyumu",
+   "links": 44,
+   "value": 36365.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Renzo Barbera Stadyumu",
+   "place": [
+    "Palermo"
+   ],
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 480
+  },
+  {
+   "qid": "Q619505",
+   "label": "Elland Road",
+   "links": 44,
+   "value": 37792.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "tr_title": "Elland Road",
+   "place": [
+    "Leeds Şehri"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 1432
+  },
+  {
+   "qid": "Q619505",
+   "label": "Elland Road",
+   "links": 44,
+   "value": 37890.0,
+   "rank": "normal",
+   "value_year": 2020,
+   "tr_title": "Elland Road",
+   "place": [
+    "Leeds Şehri"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 1432
+  },
+  {
+   "qid": "Q683112",
+   "label": "Turf Moor",
+   "links": 44,
+   "value": 22546.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Turf Moor",
+   "place": [
+    "Burnley"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 522
+  },
+  {
+   "qid": "Q116601",
+   "label": "Nissan Stadyumu",
+   "links": 43,
+   "value": 72327.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yokohama Uluslararası Stadyumu",
+   "place": [
+    "Kozukue-chō"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 408
+  },
+  {
+   "qid": "Q152599",
+   "label": "Stadion Nürnberg",
+   "links": 43,
+   "value": 50000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Franken Stadyumu",
+   "place": [
+    "Nürnberg"
+   ],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 515
+  },
+  {
+   "qid": "Q270474",
+   "label": "Stadio Artemio Franchi",
+   "links": 43,
+   "value": 43325.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Artemio Franchi Stadyumu (Floransa)",
+   "place": [
+    "Firenze"
+   ],
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 1623
+  },
+  {
+   "qid": "Q318851",
+   "label": "II. Louis Stadı",
+   "links": 43,
+   "value": 18523.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "II. Louis Stadyumu",
+   "place": [
+    "Fontvieille"
+   ],
+   "country": [
+    "Monako"
+   ],
+   "tr_views": 16150
+  },
+  {
+   "qid": "Q332219",
+   "label": "Helsinki Olimpiyat Stadyumu",
+   "links": 43,
+   "value": 42062.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Helsinki Olimpiyat Stadyumu",
+   "place": [
+    "Helsinki"
+   ],
+   "country": [
+    "Finlandiya"
+   ],
+   "tr_views": 352
+  },
+  {
+   "qid": "Q3585",
+   "label": "Metalist Oblast Spor Kompleksi",
+   "links": 43,
+   "value": 40003.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Metalist Oblast Spor Kompleksi",
+   "place": [
+    "Harkiv"
+   ],
+   "country": [
+    "Ukrayna"
+   ],
+   "tr_views": 602
+  },
+  {
+   "qid": "Q580480",
+   "label": "Liberty Stadium, Swansea",
+   "links": 43,
+   "value": 20750.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Swansea.com Stadyumu",
+   "place": [
+    "Galler"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 375
+  },
+  {
+   "qid": "Q738044",
+   "label": "Stadium Municipal",
+   "links": 43,
+   "value": 33150.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Toulouse Stadyumu",
+   "place": [
+    "Toulouse"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 27
+  },
+  {
+   "qid": "Q7419343",
+   "label": "Levi's Stadyumu",
+   "links": 43,
+   "value": 68500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Levi's Stadyumu",
+   "place": [
+    "Santa Clara"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 10948
+  },
+  {
+   "qid": "Q123017",
+   "label": "Carrow Road",
+   "links": 42,
+   "value": 27244.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Carrow Road",
+   "place": [
+    "Norwich"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 339
+  },
+  {
+   "qid": "Q155603",
+   "label": "Volkswagen Arena",
+   "links": 42,
+   "value": 30000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Volkswagen Arena",
+   "place": [
+    "Wolfsburg"
+   ],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 1234
+  },
+  {
+   "qid": "Q182864",
+   "label": "San Mamés Stadyumu",
+   "links": 42,
+   "value": 53289.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "San Mamés Stadyumu (2013)",
+   "place": [
+    "Bilbao"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 2156
+  },
+  {
+   "qid": "Q278923",
+   "label": "A. Le Coq Arena",
+   "links": 42,
+   "value": 14336.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lilleküla Stadyumu",
+   "place": [
+    "Tallinn"
+   ],
+   "country": [
+    "Estonya"
+   ],
+   "tr_views": 538
+  },
+  {
+   "qid": "Q368737",
+   "label": "Sevilla Olimpiyat Stadyumu",
+   "links": 42,
+   "value": 71374.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sevilla Olimpiyat Stadyumu",
+   "place": [
+    "Sevilla"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 4738
+  },
+  {
+   "qid": "Q619409",
+   "label": "Falmer Stadium",
+   "links": 42,
+   "value": 31800.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Falmer Stadyumu",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 1014
+  },
+  {
+   "qid": "Q642557",
+   "label": "Hillsborough Stadyumu",
+   "links": 42,
+   "value": 39732.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hillsborough Stadyumu",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 1458
+  },
+  {
+   "qid": "Q653535",
+   "label": "Azadi Stadyumu",
+   "links": 42,
+   "value": 84000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Âzâdî Stadyumu",
+   "place": [],
+   "country": [
+    "İran"
+   ],
+   "tr_views": 4109
+  },
+  {
+   "qid": "Q653535",
+   "label": "Azadi Stadyumu",
+   "links": 42,
+   "value": 84412.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Âzâdî Stadyumu",
+   "place": [],
+   "country": [
+    "İran"
+   ],
+   "tr_views": 4109
+  },
+  {
+   "qid": "Q666183",
+   "label": "Chivas Stadyumu",
+   "links": 42,
+   "value": 50850.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Akron Stadyumu",
+   "place": [
+    "Zapopan"
+   ],
+   "country": [
+    "Meksika"
+   ],
+   "tr_views": 1293
+  },
+  {
+   "qid": "Q741157",
+   "label": "Seramik Stadyumu",
+   "links": 42,
+   "value": 24891.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Seramik Stadyumu",
+   "place": [
+    "Vila-real"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 2331
+  },
+  {
+   "qid": "Q754502",
+   "label": "Stade Olympique Yves-du-Manoir",
+   "links": 42,
+   "value": 14000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yves du Manoir Olimpiyat Stadyumu",
+   "place": [
+    "Colombes"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 363
+  },
+  {
+   "qid": "Q1138684",
+   "label": "Friends Arena",
+   "links": 41,
+   "value": 54329.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Friends Arena",
+   "place": [
+    "Solna Belediyesi"
+   ],
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 725
+  },
+  {
+   "qid": "Q14862239",
+   "label": "Yeni Ulusal Stadyum (Tokyo)",
+   "links": 41,
+   "value": 68000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Japonya Ulusal Stadyumu",
+   "place": [],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 281
+  },
+  {
+   "qid": "Q154475",
+   "label": "Weserstadion",
+   "links": 41,
+   "value": 42500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Weser Stadyumu",
+   "place": [
+    "Östliche Vorstadt"
+   ],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 796
+  },
+  {
+   "qid": "Q156630",
+   "label": "BayArena",
+   "links": 41,
+   "value": 30210.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "BayArena",
+   "place": [
+    "Leverkusen"
+   ],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 1197
+  },
+  {
+   "qid": "Q206135",
+   "label": "Red Bull Arena",
+   "links": 41,
+   "value": 31895.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Red Bull Arena (Salzburg)",
+   "place": [],
+   "country": [
+    "Avusturya"
+   ],
+   "tr_views": 1010
+  },
+  {
+   "qid": "Q208709",
+   "label": "Ibrox Stadyumu",
+   "links": 41,
+   "value": 51700.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ibrox Stadyumu",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 1186
+  },
+  {
+   "qid": "Q285531",
+   "label": "El-Vakrah Stadyumu",
+   "links": 41,
+   "value": 20000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Güney Stadyumu (Vekre)",
+   "place": [
+    "El Vakra"
+   ],
+   "country": [
+    "Katar"
+   ],
+   "tr_views": 281
+  },
+  {
+   "qid": "Q285531",
+   "label": "El-Vakrah Stadyumu",
+   "links": 41,
+   "value": 40000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Güney Stadyumu (Vekre)",
+   "place": [
+    "El Vakra"
+   ],
+   "country": [
+    "Katar"
+   ],
+   "tr_views": 281
+  },
+  {
+   "qid": "Q3058827",
+   "label": "BBVA Stadyumu",
+   "links": 41,
+   "value": 53500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "BBVA Stadyumu",
+   "place": [],
+   "country": [
+    "Meksika"
+   ],
+   "tr_views": 2166
+  },
+  {
+   "qid": "Q593446",
+   "label": "City Ground",
+   "links": 41,
+   "value": 30404.0,
+   "rank": "normal",
+   "value_year": 2023,
+   "tr_title": "City Ground",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 5198
+  },
+  {
+   "qid": "Q619094",
+   "label": "Dean Court",
+   "links": 41,
+   "value": 12000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dean Court",
+   "place": [
+    "Bournemouth"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 856
+  },
+  {
+   "qid": "Q622671",
+   "label": "Kral Baudouin Stadyumu",
+   "links": 41,
+   "value": 50024.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kral Baudouin Stadyumu",
+   "place": [
+    "Brüksel Şehri"
+   ],
+   "country": [
+    "Belçika"
+   ],
+   "tr_views": 2501
+  },
+  {
+   "qid": "Q727078",
+   "label": "Stockholm Olimpiyat Stadyumu",
+   "links": 41,
+   "value": 14500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Stockholm Olimpiyat Stadyumu",
+   "place": [
+    "Stockholm belediyesi"
+   ],
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 186
+  },
+  {
+   "qid": "Q897533",
+   "label": "Bramall Lane",
+   "links": 41,
+   "value": 32702.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bramall Lane",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 612
+  },
+  {
+   "qid": "Q1164804",
+   "label": "Toše Proeski Arena",
+   "links": 40,
+   "value": 33460.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Toşe Proeski Ulusal Arena",
+   "place": [
+    "Centar"
+   ],
+   "country": [
+    "Kuzey Makedonya"
+   ],
+   "tr_views": 594
+  },
+  {
+   "qid": "Q209725",
+   "label": "Twickenham Stadyumu",
+   "links": 40,
+   "value": 82000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Twickenham Stadyumu",
+   "place": [
+    "Richmond upon Thames"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 1153
+  },
+  {
+   "qid": "Q215295",
+   "label": "Stade de Genève",
+   "links": 40,
+   "value": 30084.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cenevre Stadyumu",
+   "place": [
+    "Cenevre"
+   ],
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 458
+  },
+  {
+   "qid": "Q619558",
+   "label": "Portman Road",
+   "links": 40,
+   "value": 30311.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Portman Road",
+   "place": [
+    "Ipswich"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 490
+  },
+  {
+   "qid": "Q639975",
+   "label": "United Center",
+   "links": 40,
+   "value": 23500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "United Center",
+   "place": [
+    "Illinois"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 864
+  },
+  {
+   "qid": "Q841384",
+   "label": "Stadion Poljud",
+   "links": 40,
+   "value": 35000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Poljud Stadyumu",
+   "place": [
+    "İspelet"
+   ],
+   "country": [
+    "Hırvatistan"
+   ],
+   "tr_views": 204
+  },
+  {
+   "qid": "Q1053455",
+   "label": "Stade de la Beaujoire",
+   "links": 39,
+   "value": 35318.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Beaujoire Stadyumu",
+   "place": [
+    "Nantes"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 265
+  },
+  {
+   "qid": "Q10626",
+   "label": "Vicarage Road",
+   "links": 39,
+   "value": 22000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vicarage Road",
+   "place": [
+    "Watford"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 274
+  },
+  {
+   "qid": "Q1132413",
+   "label": "Soldier Field",
+   "links": 39,
+   "value": 61500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Soldier Field",
+   "place": [
+    "Şikago"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 555
+  },
+  {
+   "qid": "Q1132413",
+   "label": "Soldier Field",
+   "links": 39,
+   "value": 63500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Soldier Field",
+   "place": [
+    "Şikago"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 555
+  },
+  {
+   "qid": "Q126844",
+   "label": "Estadio Benito Villamarín",
+   "links": 39,
+   "value": 60721.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Benito Villamarín Stadyumu",
+   "place": [
+    "Sevilla"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 2238
+  },
+  {
+   "qid": "Q1980",
+   "label": "Stade de Gerland",
+   "links": 39,
+   "value": 35029.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gerland Stadyumu",
+   "place": [],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 899
+  },
+  {
+   "qid": "Q216167",
+   "label": "Hypo-Arena",
+   "links": 39,
+   "value": 32000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Wörthersee Stadyumu",
+   "place": [
+    "Klagenfurt"
+   ],
+   "country": [
+    "Avusturya"
+   ],
+   "tr_views": 215
+  },
+  {
+   "qid": "Q245085",
+   "label": "Ewood Park",
+   "links": 39,
+   "value": 31367.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ewood Park",
+   "place": [
+    "Blackburn"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 1278
+  },
+  {
+   "qid": "Q287359",
+   "label": "José Alvalade Stadyumu",
+   "links": 39,
+   "value": 52095.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "José Alvalade Stadyumu",
+   "place": [
+    "Lumiar"
+   ],
+   "country": [
+    "Portekiz"
+   ],
+   "tr_views": 4348
+  },
+  {
+   "qid": "Q328698",
+   "label": "Stadio San Nicola",
+   "links": 39,
+   "value": 58270.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "San Nicola Stadyumu",
+   "place": [
+    "Bari"
+   ],
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 928
+  },
+  {
+   "qid": "Q330731",
+   "label": "Boleyn Ground",
+   "links": 39,
+   "value": 35016.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boleyn Ground",
+   "place": [
+    "Upton Park"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 1447
+  },
+  {
+   "qid": "Q330731",
+   "label": "Boleyn Ground",
+   "links": 39,
+   "value": 35333.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boleyn Ground",
+   "place": [
+    "Upton Park"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 1447
+  },
+  {
+   "qid": "Q39069592",
+   "label": "Puskás Arena",
+   "links": 39,
+   "value": 67215.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Puskás Arena",
+   "place": [
+    "Zugló"
+   ],
+   "country": [
+    "Macaristan"
+   ],
+   "tr_views": 37448
+  },
+  {
+   "qid": "Q499855",
+   "label": "La Bombonera",
+   "links": 39,
+   "value": 58840.0,
+   "rank": "normal",
+   "value_year": 2026,
+   "tr_title": "La Bombonera",
+   "place": [
+    "Buenos Aires"
+   ],
+   "country": [
+    "Arjantin"
+   ],
+   "tr_views": 5018
+  },
+  {
+   "qid": "Q582280",
+   "label": "Rose Bowl",
+   "links": 39,
+   "value": 92542.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rose Bowl",
+   "place": [
+    "Pasadena"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 1447
+  },
+  {
+   "qid": "Q757182",
+   "label": "Stadio Renato Dall'Ara",
+   "links": 39,
+   "value": 36462.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Renato Dall'Ara Stadyumu",
+   "place": [
+    "Bologna"
+   ],
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 1604
+  },
+  {
+   "qid": "Q780526",
+   "label": "Stadio Atleti Azzurri d'Italia",
+   "links": 39,
+   "value": 24950.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Stadio Atleti Azzurri d'Italia",
+   "place": [
+    "Bergamo"
+   ],
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 1093
+  },
+  {
+   "qid": "Q822886",
+   "label": "Riverside Stadium",
+   "links": 39,
+   "value": 34742.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Riverside Stadyumu",
+   "place": [
+    "Middlesbrough"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 580
+  },
+  {
+   "qid": "Q1070150",
+   "label": "Jan Breydel Stadyumu",
+   "links": 38,
+   "value": 29062.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Jan Breydel Stadyumu",
+   "place": [
+    "Brugge"
+   ],
+   "country": [
+    "Belçika"
+   ],
+   "tr_views": 822
+  },
+  {
+   "qid": "Q1138958",
+   "label": "Tevfik Behramov Stadyumu",
+   "links": 38,
+   "value": 31200.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tevfik Behramov Stadyumu",
+   "place": [
+    "Nerimanov"
+   ],
+   "country": [
+    "Azerbaycan"
+   ],
+   "tr_views": 4411
+  },
+  {
+   "qid": "Q14914703",
+   "label": "Beşiktaş Stadyumu",
+   "links": 38,
+   "value": 41903.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Beşiktaş Park",
+   "place": [
+    "Beşiktaş"
+   ],
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 72914
+  },
+  {
+   "qid": "Q154298",
+   "label": "Fritz Walter Stadyumu",
+   "links": 38,
+   "value": 49780.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fritz Walter Stadyumu",
+   "place": [
+    "Kaiserslautern"
+   ],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 545
+  },
+  {
+   "qid": "Q204484",
+   "label": "Tivoli-Neu",
+   "links": 38,
+   "value": 17400.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tirol Tivoli Stadyumu",
+   "place": [
+    "Innsbruck"
+   ],
+   "country": [
+    "Avusturya"
+   ],
+   "tr_views": 112
+  },
+  {
+   "qid": "Q242772",
+   "label": "Reebok Stadium",
+   "links": 38,
+   "value": 28723.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Macron Stadyumu",
+   "place": [
+    "Horwich"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 594
+  },
+  {
+   "qid": "Q290801",
+   "label": "Boris Paiçadze Dinamo Arena",
+   "links": 38,
+   "value": 54549.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boris Paiçadze Dinamo Arena",
+   "place": [
+    "Tiflis"
+   ],
+   "country": [
+    "Gürcistan"
+   ],
+   "tr_views": 948
+  },
+  {
+   "qid": "Q478225",
+   "label": "Croke Park",
+   "links": 38,
+   "value": 76534.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Croke Park",
+   "place": [
+    "Dublin"
+   ],
+   "country": [
+    "İrlanda"
+   ],
+   "tr_views": 1078
+  },
+  {
+   "qid": "Q478225",
+   "label": "Croke Park",
+   "links": 38,
+   "value": 82300.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Croke Park",
+   "place": [
+    "Dublin"
+   ],
+   "country": [
+    "İrlanda"
+   ],
+   "tr_views": 1078
+  },
+  {
+   "qid": "Q500972",
+   "label": "Philips Stadion",
+   "links": 38,
+   "value": 36500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Philips Stadyumu",
+   "place": [
+    "Eindhoven"
+   ],
+   "country": [
+    "Hollanda"
+   ],
+   "tr_views": 918
+  },
+  {
+   "qid": "Q5364202",
+   "label": "The O2 Arena",
+   "links": 38,
+   "value": 20000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "The O2 Arena",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 552
+  },
+  {
+   "qid": "Q630160",
+   "label": "KCOM Stadyumu",
+   "links": 38,
+   "value": 25400.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "KCOM Stadyumu",
+   "place": [
+    "Kingston upon Hull"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 8146
+  },
+  {
+   "qid": "Q640031",
+   "label": "Stadio Friuli",
+   "links": 38,
+   "value": 25312.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Friuli Stadyumu",
+   "place": [
+    "Udine"
+   ],
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 992
+  },
+  {
+   "qid": "Q154074",
+   "label": "Borussia-Park",
+   "links": 37,
+   "value": 59749.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Borussia-Park",
+   "place": [
+    "Mönchengladbach"
+   ],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 879
+  },
+  {
+   "qid": "Q17489",
+   "label": "João Havelange Stadyumu",
+   "links": 37,
+   "value": 46931.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Estádio Olímpico Nilton Santos",
+   "place": [
+    "Rio de Janeiro"
+   ],
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 130
+  },
+  {
+   "qid": "Q262326",
+   "label": "Lotto Park",
+   "links": 37,
+   "value": 21500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lotto Park",
+   "place": [
+    "Anderlecht"
+   ],
+   "country": [
+    "Belçika"
+   ],
+   "tr_views": 621
+  },
+  {
+   "qid": "Q31670",
+   "label": "Loftus Road",
+   "links": 37,
+   "value": 18439.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Loftus Road",
+   "place": [
+    "Londra"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 642
+  },
+  {
+   "qid": "Q473223",
+   "label": "Stage Front Stadium",
+   "links": 37,
+   "value": 40500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "RCDE Stadyumu",
+   "place": [
+    "Cornellà de Llobregat",
+    "El Prat de Llobregat"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 1466
+  },
+  {
+   "qid": "Q482446",
+   "label": "Saitama Stadyumu 2002",
+   "links": 37,
+   "value": 63700.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saitama Stadyumu 2002",
+   "place": [
+    "Misono"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 793
+  },
+  {
+   "qid": "Q494860",
+   "label": "Sapporo Dome",
+   "links": 37,
+   "value": 38794.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "tr_title": "Sapporo Dome",
+   "place": [
+    "Sapporo"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 249
+  },
+  {
+   "qid": "Q494860",
+   "label": "Sapporo Dome",
+   "links": 37,
+   "value": 40178.0,
+   "rank": "preferred",
+   "value_year": 2021,
+   "tr_title": "Sapporo Dome",
+   "place": [
+    "Sapporo"
+   ],
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 249
+  },
+  {
+   "qid": "Q503319",
+   "label": "Amsterdam Olimpiyat Stadyumu",
+   "links": 37,
+   "value": 22288.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Amsterdam Olimpiyat Stadyumu",
+   "place": [],
+   "country": [
+    "Hollanda"
+   ],
+   "tr_views": 354
+  },
+  {
+   "qid": "Q594994",
+   "label": "Şili Ulusal Stadyumu",
+   "links": 37,
+   "value": 46190.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şili Ulusal Stadyumu",
+   "place": [
+    "Ñuñoa"
+   ],
+   "country": [
+    "Şili"
+   ],
+   "tr_views": 623
+  },
+  {
+   "qid": "Q683493",
+   "label": "Hrazdan Stadyumu",
+   "links": 37,
+   "value": 54208.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hrazdan Stadyumu",
+   "place": [
+    "Erivan"
+   ],
+   "country": [
+    "Ermenistan"
+   ],
+   "tr_views": 311
+  },
+  {
+   "qid": "Q815833",
+   "label": "Stade de la Mosson",
+   "links": 37,
+   "value": 32900.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mosson Stadyumu",
+   "place": [
+    "Montpellier"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 191
+  },
+  {
+   "qid": "Q842077",
+   "label": "Ricoh Arena",
+   "links": 37,
+   "value": 32609.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ricoh Arena",
+   "place": [
+    "Coventry"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 1162
+  },
+  {
+   "qid": "Q849784",
+   "label": "Los Angeles Memorial Coliseum",
+   "links": 37,
+   "value": 77500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Los Angeles Memorial Coliseum",
+   "place": [
+    "Los Angeles"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 972
+  },
+  {
+   "qid": "Q917845",
+   "label": "Estadio Anoeta",
+   "links": 37,
+   "value": 40000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Anoeta Stadyumu",
+   "place": [
+    "San Sebastián"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 1323
+  },
+  {
+   "qid": "Q1049601",
+   "label": "Windsor Park",
+   "links": 36,
+   "value": 18500.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Windsor Park",
+   "place": [
+    "Belfast"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 304
+  },
+  {
+   "qid": "Q129870",
+   "label": "Rhein-Neckar-Arena",
+   "links": 36,
+   "value": 30150.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rhein-Neckar-Arena",
+   "place": [
+    "Sinsheim"
+   ],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 1098
+  },
+  {
+   "qid": "Q167418",
+   "label": "WWK Arena",
+   "links": 36,
+   "value": 30660.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "WWK Arena",
+   "place": [
+    "Augsburg"
+   ],
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 659
+  },
+  {
+   "qid": "Q22130",
+   "label": "Estadio Riazor",
+   "links": 36,
+   "value": 32490.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Riazor Stadyumu",
+   "place": [
+    "A Coruña"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 1440
+  },
+  {
+   "qid": "Q244592",
+   "label": "San Mamés Stadyumu",
+   "links": 36,
+   "value": 40000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "San Mamés Stadyumu (1913)",
+   "place": [
+    "Bilbao"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 585
+  },
+  {
+   "qid": "Q29347805",
+   "label": "Everton Stadium",
+   "links": 36,
+   "value": 52769.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Everton Stadyumu",
+   "place": [],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 3027
+  },
+  {
+   "qid": "Q312411",
+   "label": "Eden Park",
+   "links": 36,
+   "value": 50000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eden Park",
+   "place": [
+    "Auckland Bölgesi"
+   ],
+   "country": [
+    "Yeni Zelanda"
+   ],
+   "tr_views": 161
+  },
+  {
+   "qid": "Q76318",
+   "label": "Rogers Centre",
+   "links": 36,
+   "value": 39150.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rogers Centre",
+   "place": [
+    "Toronto"
+   ],
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 371
+  },
+  {
+   "qid": "Q1130487",
+   "label": "Dinamo Stadyumu",
+   "links": 35,
+   "value": 22000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dinamo Stadyumu (Minsk)",
+   "place": [
+    "Minsk"
+   ],
+   "country": [
+    "Belarus"
+   ],
+   "tr_views": 96
+  },
+  {
+   "qid": "Q1166175",
+   "label": "Podgorica Şehir Stadyumu",
+   "links": 35,
+   "value": 12000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Podgorica Şehir Stadyumu",
+   "place": [
+    "Podgorica"
+   ],
+   "country": [
+    "Karadağ"
+   ],
+   "tr_views": 165
+  },
+  {
+   "qid": "Q1326578",
+   "label": "Balaidos Stadı",
+   "links": 35,
+   "value": 24870.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Balaídos Stadyumu",
+   "place": [
+    "Vigo"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 865
+  },
+  {
+   "qid": "Q151212",
+   "label": "Laugardalsvöllur",
+   "links": 35,
+   "value": 15427.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Laugardalur Stadyumu",
+   "place": [
+    "Laugardalur"
+   ],
+   "country": [
+    "İzlanda"
+   ],
+   "tr_views": 816
+  },
+  {
+   "qid": "Q201612",
+   "label": "Pride Park Stadyumu",
+   "links": 35,
+   "value": 33597.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pride Park Stadyumu",
+   "place": [
+    "Derby"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 137
+  },
+  {
+   "qid": "Q482441",
+   "label": "Daegu Stadyumu",
+   "links": 35,
+   "value": 66422.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Daegu Stadyumu",
+   "place": [
+    "Daegu"
+   ],
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 484
+  },
+  {
+   "qid": "Q482441",
+   "label": "Daegu Stadyumu",
+   "links": 35,
+   "value": 68014.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Daegu Stadyumu",
+   "place": [
+    "Daegu"
+   ],
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 484
+  },
+  {
+   "qid": "Q494388",
+   "label": "DW Stadium",
+   "links": 35,
+   "value": 25133.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "DW Stadyumu",
+   "place": [
+    "Wigan"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 327
+  },
+  {
+   "qid": "Q597004",
+   "label": "Rheinpark Stadion",
+   "links": 35,
+   "value": 7584.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rheinpark Stadyumu",
+   "place": [
+    "Vaduz"
+   ],
+   "country": [
+    "Lihtenştayn"
+   ],
+   "tr_views": 223
+  },
+  {
+   "qid": "Q695879",
+   "label": "Estadio La Rosaleda",
+   "links": 35,
+   "value": 30778.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "La Rosaleda Stadyumu",
+   "place": [],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 393
+  },
+  {
+   "qid": "Q735783",
+   "label": "Estadio Reyno de Navarra",
+   "links": 35,
+   "value": 23576.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "El Sadar Stadyumu",
+   "place": [
+    "Pamplona"
+   ],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 555
+  },
+  {
+   "qid": "Q787124",
+   "label": "Yuva Bharati Krirangan",
+   "links": 35,
+   "value": 68000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tuz Gölü Stadyumu",
+   "place": [],
+   "country": [
+    "Hindistan"
+   ],
+   "tr_views": 3892
+  },
+  {
+   "qid": "Q824352",
+   "label": "Ullevi Stadyumu",
+   "links": 35,
+   "value": 43000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ullevi Stadyumu",
+   "place": [
+    "Göteborg"
+   ],
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 626
+  },
+  {
+   "qid": "Q84019",
+   "label": "Estadio Multiusos de San Lázaro",
+   "links": 35,
+   "value": 16666.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Estadio Multiusos de San Lázaro",
+   "place": [],
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 25
+  },
+  {
+   "qid": "Q3531421",
+   "label": "Narendra Modi Stadyumu",
+   "links": 34,
+   "value": 132000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Narendra Modi Stadyumu",
+   "place": [],
+   "country": [
+    "Hindistan"
+   ],
+   "tr_views": 1662
+  },
+  {
+   "qid": "Q375365",
+   "label": "Giants Stadyumu",
+   "links": 34,
+   "value": 80242.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Giants Stadyumu",
+   "place": [
+    "East Rutherford"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 599
+  },
+  {
+   "qid": "Q386547",
+   "label": "Stade Chaban-Delmas",
+   "links": 34,
+   "value": 33290.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Chaban-Delmas Stadyumu",
+   "place": [
+    "Bordeaux"
+   ],
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 181
+  },
+  {
+   "qid": "Q737093",
+   "label": "Stadio Marcantonio Bentegodi",
+   "links": 34,
+   "value": 31045.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Marc'Antonio Bentegodi Stadyumu",
+   "place": [
+    "Verona"
+   ],
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 660
+  },
+  {
+   "qid": "Q756452",
+   "label": "Caesars Superdome",
+   "links": 34,
+   "value": 55675.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Caesars Superdome",
+   "place": [
+    "New Orleans"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 409
+  },
+  {
+   "qid": "Q756452",
+   "label": "Caesars Superdome",
+   "links": 34,
+   "value": 63525.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Caesars Superdome",
+   "place": [
+    "New Orleans"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 409
+  },
+  {
+   "qid": "Q756452",
+   "label": "Caesars Superdome",
+   "links": 34,
+   "value": 73208.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Caesars Superdome",
+   "place": [
+    "New Orleans"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 409
+  },
+  {
+   "qid": "Q756452",
+   "label": "Caesars Superdome",
+   "links": 34,
+   "value": 73373.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Caesars Superdome",
+   "place": [
+    "New Orleans"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 409
+  },
+  {
+   "qid": "Q756452",
+   "label": "Caesars Superdome",
+   "links": 34,
+   "value": 75167.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Caesars Superdome",
+   "place": [
+    "New Orleans"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 409
+  },
+  {
+   "qid": "Q756452",
+   "label": "Caesars Superdome",
+   "links": 34,
+   "value": 78133.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Caesars Superdome",
+   "place": [
+    "New Orleans"
+   ],
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 409
+  },
+  {
+   "qid": "Q819179",
+   "label": "St Andrew's",
+   "links": 34,
+   "value": 30016.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "St Andrew's",
+   "place": [
+    "Birmingham"
+   ],
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 479
+  },
+  {
+   "qid": "Q849239",
+   "label": "Estádio Municipal de Braga",
+   "links": 34,
+   "value": 30286.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Braga Belediye Stadyumu",
+   "place": [
+    "Real, Dume e Semelhe"
+   ],
+   "country": [
+    "Portekiz"
+   ],
+   "tr_views": 1401
+  }
+ ]
+}

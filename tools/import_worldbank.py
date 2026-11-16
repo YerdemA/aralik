@@ -85,6 +85,31 @@ INDICATORS = {
         "{year} verilerine göre {name} nüfusunun yüzde kaçı internet kullanmaktadır?",
         "%", 1, "wdi_internet",
     ),
+    # Third batch (2026-11-16): ratios one can reason about.
+    "EN.POP.DNST": Indicator(
+        "{year} verilerine göre {loc} kilometrekareye kaç kişi düşmektedir?",
+        "kişi/km²", 0, "wdi_density",
+    ),
+    "SP.URB.TOTL.IN.ZS": Indicator(
+        "{year} verilerine göre {name} nüfusunun yüzde kaçı kentlerde yaşamaktadır?",
+        "%", 1, "wdi_urban",
+    ),
+    "SH.DYN.MORT": Indicator(
+        "{year} verilerine göre {loc} doğan her 1.000 çocuktan kaçı beş yaşına gelmeden ölmektedir?",
+        "çocuk", 1, "wdi_child_mortality",
+    ),
+    "IT.CEL.SETS.P2": Indicator(
+        "{year} verilerine göre {loc} her 100 kişiye kaç cep telefonu aboneliği düşmektedir?",
+        "abonelik", 0, "wdi_mobile",
+    ),
+    "SP.DYN.CBRT.IN": Indicator(
+        "{year} verilerine göre {loc} her 1.000 kişiye yılda kaç doğum düşmektedir?",
+        "doğum", 1, "wdi_birth_rate",
+    ),
+    "SP.POP.0014.TO.ZS": Indicator(
+        "{year} verilerine göre {name} nüfusunun yüzde kaçı 15 yaşın altındadır?",
+        "%", 1, "wdi_age_0_14",
+    ),
     TOURISM: Indicator(
         "{year} yılında {dat} kaç uluslararası turist gelmiştir?",
         "kişi", 0, "wdi_tourism", min_year=2019,
@@ -125,6 +150,15 @@ COUNTRIES = {
     "THA": ("Tayland'ın", "Tayland'da", "Tayland'a"),
     "PAK": ("Pakistan'ın", "Pakistan'da", "Pakistan'a"),
     "IDN": ("Endonezya'nın", "Endonezya'da", "Endonezya'ya"),
+    # 2026-11-16
+    "ESP": ("İspanya'nın", "İspanya'da", "İspanya'ya"),
+    "MEX": ("Meksika'nın", "Meksika'da", "Meksika'ya"),
+    "AUS": ("Avustralya'nın", "Avustralya'da", "Avustralya'ya"),
+    "IRN": ("İran'ın", "İran'da", "İran'a"),
+    "NLD": ("Hollanda'nın", "Hollanda'da", "Hollanda'ya"),
+    "ARG": ("Arjantin'in", "Arjantin'de", "Arjantin'e"),
+    "BGD": ("Bangladeş'in", "Bangladeş'te", "Bangladeş'e"),
+    "SGP": ("Singapur'un", "Singapur'da", "Singapur'a"),
 }
 
 # Overnight tourists, not same-day visitors (see the module docstring).
@@ -162,6 +196,20 @@ QUESTIONS = [
         ("NER", 3), ("JPN", 3), ("BRA", 3),
     ]),
     *((TOURISM, c, d) for c, d in TOURISM_COUNTRIES),
+    # 2026-11-16: well-known countries, medium.
+    *((i, c, 2) for i, cs in {
+        "NY.GDP.PCAP.CD": "FRA GBR ITA BRA CAN SAU ARE ESP AUS",
+        "SP.DYN.LE00.IN": "FRA DEU GBR BRA EGY SAU GRC ETH ESP MEX",
+        "SP.DYN.TFRT.IN": "DEU GBR ITA BRA EGY PAK SAU IRN",
+        "AG.LND.FRST.ZS": "FRA ITA IND IDN GRC AUT ESP AUS",
+        "SP.POP.65UP.TO.ZS": "FRA GBR USA BRA RUS EGY GRC FIN ESP",
+        "EN.POP.DNST": "TUR NLD BGD SGP JPN DEU AUS RUS IND USA EGY CAN",
+        "SP.URB.TOTL.IN.ZS": "TUR IND NGA JPN BRA CHN EGY ETH DEU",
+        "SH.DYN.MORT": "TUR NGA IND PAK JPN USA BRA EGY",
+        "IT.CEL.SETS.P2": "TUR ARE RUS IND NGA ETH JPN USA",
+        "SP.DYN.CBRT.IN": "TUR NGA JPN KOR EGY IND FRA PAK",
+        "SP.POP.0014.TO.ZS": "TUR NER JPN NGA IND EGY ITA KOR",
+    }.items() for c in cs.split()),
 ]
 
 
@@ -252,6 +300,9 @@ def build(payload: dict, bank: list[dict]) -> tuple[list[dict], list[str]]:
         found = values.get(country)
         if found is None or found["value"] <= 0:
             dropped.append(f"DEĞER YOK: {label}")
+            continue
+        if rounded(found["value"], ind.decimals) <= 0:
+            dropped.append(f"SIFIRA YUVARLANIYOR: {label}")
             continue
         if found["year"] < ind.min_year:
             dropped.append(f"ESKİ VERİ ({found['year']}): {label}")

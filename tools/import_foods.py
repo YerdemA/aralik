@@ -50,6 +50,9 @@ ARCHIVE_URL = "https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_
 SOURCE_URL = "https://fdc.nal.usda.gov/food-details/{fdc_id}/nutrients"
 DATA_YEAR = 2018
 CATEGORY = "gündelik"
+# Nutrients added on 2026-11-16 go to "mutfak"; the first four stay where
+# they were published.
+MUTFAK = {"sugars", "fat", "fiber", "sodium", "calcium"}
 SEED = 20261106
 
 # SR Legacy nutrient ids (nutrient.csv).
@@ -181,7 +184,7 @@ def build(rows: list[dict], foods: dict, bank: list[dict]) -> tuple[list[dict], 
                 "answer": rounded(value, decimals_below),
                 "unit": unit,
                 "kind": "magnitude",
-                "category": CATEGORY,
+                "category": "mutfak" if row["nutrient"] in MUTFAK else CATEGORY,
                 "source": source,
                 "data_year": DATA_YEAR,
                 "fun_fact": fun_fact(row["nutrient"], food["per_100g"]),
