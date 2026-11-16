@@ -1,6 +1,6 @@
 # USDA FoodData Central (SR Legacy) yiyecekleri, Türkçe adlarıyla. Okuyan: tools/import_foods.py
 # Sütunlar: fdc_id;besin;zorluk;USDA açıklamasının başı (yanlış id'yi yakalar);"100 gram ..." ardından gelen yer adı (bulunma hâli)
-# besin: energy (kcal), protein (g), caffeine (mg), vitamin_c (mg). Aynı yiyecek aynı birimle iki kez sorulamaz.
+# besin: energy (kcal), protein, sugars, fat, fiber (g), caffeine, vitamin_c, sodium, calcium (mg). Aynı yiyecek aynı besinle iki kez sorulamaz.
 # Satır silinmez: bankadaki sorular sabittir. Yeni satır sona eklenir.
 
 # --- Enerji (kcal) ---
@@ -156,3 +156,173 @@
 167762;vitamin_c;2;Strawberries, raw;çilekte
 169986;vitamin_c;3;Cauliflower, raw;çiğ karnabaharda
 169124;vitamin_c;3;Pineapple, raw, all varieties;ananasta
+# --- 2026-11-16 ikinci parti: şeker, yağ, lif, sodyum, kalsiyum ---
+167575;sugars;2;Ice creams, vanilla;vanilyalı dondurmada
+167587;sugars;2;Candies, milk chocolate;sütlü çikolatada
+167762;sugars;2;Strawberries, raw;çilekte
+167765;sugars;2;Watermelon, raw;karpuzda
+168153;sugars;2;Kiwifruit, green, raw;kivide
+168162;sugars;2;Plums, dried (prunes), uncooked;kuru erikte
+168165;sugars;2;Raisins, dark, seedless;kuru üzümde
+168000;sugars;2;Chocolate-flavored hazelnut spread;kakaolu fındık kremasında
+168556;sugars;2;Catsup;ketçapta
+169092;sugars;2;Melons, cantaloupe, raw;kavunda
+169097;sugars;2;Oranges, raw, all commercial varieties;portakalda
+169098;sugars;2;Orange juice, raw;taze sıkılmış portakal suyunda
+169105;sugars;2;Tangerines, (mandarin oranges), raw;mandalinada
+169118;sugars;2;Pears, raw;armutta
+169124;sugars;2;Pineapple, raw, all varieties;ananasta
+169134;sugars;2;Pomegranates, raw;narda
+169145;sugars;2;Beets, raw;çiğ pancarda
+169640;sugars;2;Honey;balda
+169641;sugars;2;Jams and preserves;reçelde
+169910;sugars;2;Mangos, raw;mangoda
+169913;sugars;2;Mulberries, raw;dutta
+169928;sugars;2;Peaches, yellow, raw;şeftalide
+169949;sugars;2;Plums, raw;erikte
+170190;sugars;2;Nuts, chestnuts, european, roasted;kestane kebapta
+170273;sugars;2;Chocolate, dark, 70-85% cacao solids;bitter çikolatada (%70–85 kakao)
+170393;sugars;2;Carrots, raw;havuçta
+171688;sugars;2;Apples, raw, with skin;kabuklu elmada
+171697;sugars;2;Apricots, raw;taze kayısıda
+171719;sugars;2;Cherries, sweet, raw;kirazda
+171726;sugars;2;Dates, deglet noor;hurmada
+172716;sugars;2;Cookies, chocolate chip, commercially prepared, regular, higher fat, enriched;hazır çikolata parçalı kurabiyede
+173021;sugars;2;Figs, raw;taze incirde
+173941;sugars;2;Apricots, dried, sulfured, uncooked;kuru kayısıda
+173944;sugars;2;Bananas, raw;muzda
+174683;sugars;2;Grapes, red or green;üzümde
+174852;sugars;2;Beverages, carbonated, cola, regular;şekerli kolada
+174987;sugars;2;Croissants, butter;tereyağlı kruvasanda
+171265;sugars;2;Milk, whole, 3.25% milkfat, with added vitamin D;tam yağlı sütte
+170457;sugars;2;Tomatoes, red, ripe, raw;domateste
+172470;sugars;2;Peanut butter, smooth style, without salt;tuzsuz fıstık ezmesinde
+174665;sugars;2;Figs, dried, uncooked;kuru incirde
+168482;sugars;2;Sweet potato, raw;çiğ tatlı patateste
+169998;sugars;2;Corn, sweet, yellow, raw;çiğ tatlı mısırda
+167575;fat;2;Ice creams, vanilla;vanilyalı dondurmada
+167587;fat;2;Candies, milk chocolate;sütlü çikolatada
+167959;fat;2;Snacks, popcorn, air-popped;yağsız patlamış mısırda
+167996;fat;2;Candies, halavah, plain;sade tahin helvasında
+168000;fat;2;Chocolate-flavored hazelnut spread;kakaolu fındık kremasında
+169096;fat;2;Olives, pickled, canned or bottled, green;yeşil zeytinde
+170162;fat;2;Nuts, cashew nuts, raw;çiğ kajuda
+170169;fat;2;Nuts, coconut meat, raw;taze hindistancevizinde
+170184;fat;2;Nuts, pistachio nuts, raw;çiğ Antep fıstığında
+170187;fat;2;Nuts, walnuts, english;cevizde
+170189;fat;2;Seeds, sesame butter, tahini, from roasted and toasted kernels;tahinde
+170273;fat;2;Chocolate, dark, 70-85% cacao solids;bitter çikolatada (%70–85 kakao)
+170556;fat;2;Seeds, pumpkin and squash seed kernels, dried;iç kabak çekirdeğinde
+170562;fat;2;Seeds, sunflower seed kernels, dried;iç ay çekirdeğinde
+170567;fat;2;Nuts, almonds;bademde
+170581;fat;2;Nuts, hazelnuts or filberts;fındıkta
+170693;fat;2;Fast foods, hamburger;sade hamburgerde
+170698;fat;2;Fast foods, potato, french fried in vegetable oil;patates kızartmasında
+170845;fat;2;Cheese, mozzarella, whole milk;mozzarella peynirinde
+170848;fat;2;Cheese, parmesan, hard;parmesan peynirinde
+171009;fat;2;Salad dressing, mayonnaise, regular;mayonezde
+171265;fat;2;Milk, whole, 3.25% milkfat, with added vitamin D;tam yağlı sütte
+171287;fat;2;Egg, whole, raw, fresh;çiğ yumurtada
+171304;fat;2;Yogurt, Greek, plain, whole milk;tam yağlı süzme yoğurtta
+171477;fat;2;Chicken, broilers or fryers, breast, meat only, cooked, roasted;fırında pişmiş tavuk göğsünde
+171705;fat;2;Avocados, raw, all commercial varieties;avokadoda
+172179;fat;2;Cheese, cottage, creamed, large or small curd;lor tipi taze peynirde
+172430;fat;2;Peanuts, all types, raw;çiğ yer fıstığında
+172716;fat;2;Cookies, chocolate chip, commercially prepared, regular, higher fat, enriched;hazır çikolata parçalı kurabiyede
+173414;fat;2;Cheese, cheddar;çedar peynirinde
+173420;fat;2;Cheese, feta;feta peynirinde
+173430;fat;2;Butter, without salt;tuzsuz tereyağında
+174036;fat;2;Beef, ground, 80% lean meat / 20% fat, raw;çiğ dana kıymada (%20 yağlı)
+174182;fat;2;Fish, anchovy, european, raw;çiğ hamside
+174370;fat;2;Lamb, ground, raw;çiğ kuzu kıymasında
+174289;fat;2;Hummus, commercial;humusta
+174987;fat;2;Croissants, butter;tereyağlı kruvasanda
+175119;fat;2;Fish, mackerel, Atlantic, raw;çiğ uskumruda
+175139;fat;2;Fish, sardine, Atlantic, canned in oil, drained solids with bone;yağı süzülmüş sardalya konservesinde
+175167;fat;2;Fish, salmon, Atlantic, farmed, raw;çiğ çiftlik somonunda
+169677;fat;2;Snacks, potato chips, plain, salted;tuzlu patates cipsinde
+169593;fat;2;Cocoa, dry powder, unsweetened;şekersiz kakao tozunda
+173904;fat;2;Cereals, oats, regular and quick, not fortified, dry;yulaf ezmesinde
+174924;fat;2;Bread, white, commercially prepared (includes;beyaz ekmekte
+167959;fiber;3;Snacks, popcorn, air-popped;yağsız patlamış mısırda
+169593;fiber;3;Cocoa, dry powder, unsweetened;şekersiz kakao tozunda
+168162;fiber;3;Plums, dried (prunes), uncooked;kuru erikte
+171726;fiber;3;Dates, deglet noor;hurmada
+174665;fiber;3;Figs, dried, uncooked;kuru incirde
+170567;fiber;3;Nuts, almonds;bademde
+170184;fiber;3;Nuts, pistachio nuts, raw;çiğ Antep fıstığında
+170273;fiber;3;Chocolate, dark, 70-85% cacao solids;bitter çikolatada (%70–85 kakao)
+175193;fiber;3;Beans, kidney, all types, mature seeds, raw;kuru kırmızı fasulyede
+172420;fiber;3;Lentils, raw;kuru mercimekte
+173756;fiber;3;Chickpeas (garbanzo beans, bengal gram), mature seeds, raw;kuru nohutta
+173904;fiber;3;Cereals, oats, regular and quick, not fortified, dry;yulaf ezmesinde
+170688;fiber;3;Bulgur, dry;kuru bulgurda
+172688;fiber;3;Bread, whole-wheat, commercially prepared;tam buğday ekmeğinde
+174924;fiber;3;Bread, white, commercially prepared (includes;beyaz ekmekte
+171705;fiber;3;Avocados, raw, all commercial varieties;avokadoda
+169118;fiber;3;Pears, raw;armutta
+171688;fiber;3;Apples, raw, with skin;kabuklu elmada
+173944;fiber;3;Bananas, raw;muzda
+169134;fiber;3;Pomegranates, raw;narda
+170419;fiber;3;Peas, green, raw;çiğ bezelyede
+168462;fiber;3;Spinach, raw;çiğ ıspanakta
+170379;fiber;3;Broccoli, raw;çiğ brokolide
+170393;fiber;3;Carrots, raw;havuçta
+173941;fiber;3;Apricots, dried, sulfured, uncooked;kuru kayısıda
+172421;fiber;3;Lentils, mature seeds, cooked, boiled, without salt;haşlanmış mercimekte
+170169;fiber;3;Nuts, coconut meat, raw;taze hindistancevizinde
+170581;fiber;3;Nuts, hazelnuts or filberts;fındıkta
+168556;sodium;3;Catsup;ketçapta
+169096;sodium;3;Olives, pickled, canned or bottled, green;yeşil zeytinde
+169677;sodium;3;Snacks, potato chips, plain, salted;tuzlu patates cipsinde
+170693;sodium;3;Fast foods, hamburger;sade hamburgerde
+170698;sodium;3;Fast foods, potato, french fried in vegetable oil;patates kızartmasında
+170845;sodium;3;Cheese, mozzarella, whole milk;mozzarella peynirinde
+170848;sodium;3;Cheese, parmesan, hard;parmesan peynirinde
+171009;sodium;3;Salad dressing, mayonnaise, regular;mayonezde
+171287;sodium;3;Egg, whole, raw, fresh;çiğ yumurtada
+172179;sodium;3;Cheese, cottage, creamed, large or small curd;lor tipi taze peynirde
+172688;sodium;3;Bread, whole-wheat, commercially prepared;tam buğday ekmeğinde
+172716;sodium;3;Cookies, chocolate chip, commercially prepared, regular, higher fat, enriched;hazır çikolata parçalı kurabiyede
+173709;sodium;3;Fish, tuna, light, canned in water, drained solids;suyu süzülmüş ton balığı konservesinde
+173414;sodium;3;Cheese, cheddar;çedar peynirinde
+173420;sodium;3;Cheese, feta;feta peynirinde
+174216;sodium;3;Mollusks, mussel, blue, raw;çiğ midyede
+174289;sodium;3;Hummus, commercial;humusta
+174924;sodium;3;Bread, white, commercially prepared (includes;beyaz ekmekte
+174987;sodium;3;Croissants, butter;tereyağlı kruvasanda
+175139;sodium;3;Fish, sardine, Atlantic, canned in oil, drained solids with bone;yağı süzülmüş sardalya konservesinde
+167996;sodium;3;Candies, halavah, plain;sade tahin helvasında
+170189;sodium;3;Seeds, sesame butter, tahini, from roasted and toasted kernels;tahinde
+168462;sodium;3;Spinach, raw;çiğ ıspanakta
+170393;sodium;3;Carrots, raw;havuçta
+171265;sodium;3;Milk, whole, 3.25% milkfat, with added vitamin D;tam yağlı sütte
+175179;sodium;3;Crustaceans, shrimp, raw;çiğ karideste
+174182;sodium;3;Fish, anchovy, european, raw;çiğ hamside
+171265;calcium;3;Milk, whole, 3.25% milkfat, with added vitamin D;tam yağlı sütte
+171284;calcium;3;Yogurt, plain, whole milk;tam yağlı yoğurtta
+171304;calcium;3;Yogurt, Greek, plain, whole milk;tam yağlı süzme yoğurtta
+170845;calcium;3;Cheese, mozzarella, whole milk;mozzarella peynirinde
+170848;calcium;3;Cheese, parmesan, hard;parmesan peynirinde
+173414;calcium;3;Cheese, cheddar;çedar peynirinde
+173420;calcium;3;Cheese, feta;feta peynirinde
+172179;calcium;3;Cheese, cottage, creamed, large or small curd;lor tipi taze peynirde
+170189;calcium;3;Seeds, sesame butter, tahini, from roasted and toasted kernels;tahinde
+170567;calcium;3;Nuts, almonds;bademde
+168462;calcium;3;Spinach, raw;çiğ ıspanakta
+170416;calcium;3;Parsley, fresh;taze maydanozda
+167587;calcium;3;Candies, milk chocolate;sütlü çikolatada
+175139;calcium;3;Fish, sardine, Atlantic, canned in oil, drained solids with bone;yağı süzülmüş sardalya konservesinde
+174665;calcium;3;Figs, dried, uncooked;kuru incirde
+167575;calcium;3;Ice creams, vanilla;vanilyalı dondurmada
+174924;calcium;3;Bread, white, commercially prepared (includes;beyaz ekmekte
+172688;calcium;3;Bread, whole-wheat, commercially prepared;tam buğday ekmeğinde
+170379;calcium;3;Broccoli, raw;çiğ brokolide
+175193;calcium;3;Beans, kidney, all types, mature seeds, raw;kuru kırmızı fasulyede
+174182;calcium;3;Fish, anchovy, european, raw;çiğ hamside
+169593;calcium;3;Cocoa, dry powder, unsweetened;şekersiz kakao tozunda
+170581;calcium;3;Nuts, hazelnuts or filberts;fındıkta
+170184;calcium;3;Nuts, pistachio nuts, raw;çiğ Antep fıstığında
+173756;calcium;3;Chickpeas (garbanzo beans, bengal gram), mature seeds, raw;kuru nohutta
+169097;calcium;3;Oranges, raw, all commercial varieties;portakalda
+169230;calcium;3;Garlic, raw;sarımsakta

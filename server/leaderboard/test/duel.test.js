@@ -121,6 +121,36 @@ test('at most one history and two year questions in five', () => {
   assert.equal(duel.pickDuelQuestions(thin, 999, 0, first).length, 5);
 });
 
+test('at most one question of a data set family in five', () => {
+  assert.equal(duel.datasetFamily('foods_sugars'), 'foods');
+  assert.equal(duel.datasetFamily('chemistry'), 'chemistry');
+  assert.equal(duel.datasetFamily(undefined), null);
+  const questions = new Map();
+  const order = [];
+  for (const level of [1, 2, 3]) {
+    for (let i = 0; i < 6; i++) {
+      for (const dataset of ['foods_sugars', 'foods_fat']) {
+        const id = `${dataset}${level}${i}`;
+        questions.set(id, { answer: 10, kind: 'magnitude', category: 'gündelik', difficulty: level, dataset });
+        order.push(id);
+      }
+    }
+    for (let i = 0; i < 2; i++) {
+      questions.set(`g${level}${i}`, { answer: 10, kind: 'magnitude', category: 'coğrafya', difficulty: level, dataset: null });
+      order.push(`g${level}${i}`);
+    }
+  }
+  const pool = { questions, order, days: [] };
+  for (let seed = 0; seed < 20; seed++) {
+    let n = seed;
+    const random = (k) => (n = (n * 31 + 7) % 101) % k;
+    const ids = duel.pickDuelQuestions(pool, 999, 0, random);
+    assert.equal(ids.length, 5);
+    const foods = ids.filter((id) => duel.datasetFamily(questions.get(id).dataset) === 'foods');
+    assert.equal(foods.length, 1);
+  }
+});
+
 test('never picks a retired question', () => {
   const withRetired = makeContent();
   withRetired.questions.get('e1').retired = true;

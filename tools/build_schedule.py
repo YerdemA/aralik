@@ -52,6 +52,13 @@ MAX_HISTORY_PER_DAY = 1
 ATTEMPTS_PER_DAY = 200
 
 
+def family(q: dict) -> str:
+    """The data set family (name up to the first underscore; 2026-11-16):
+    a day has at most one of each, like a free play round
+    (lib/core/free_play.dart datasetFamily)."""
+    return q["dataset"].split("_", 1)[0]
+
+
 def make_day(pool: dict[int, list[dict]], rng: random.Random, easy_magnitude: bool) -> list[dict] | None:
     """One day from [pool] (by difficulty), or None if the rules can't be met.
 
@@ -67,7 +74,7 @@ def make_day(pool: dict[int, list[dict]], rng: random.Random, easy_magnitude: bo
         sources: set[str] = set()
         for difficulty, count in DAY_SHAPE.items():
             candidates = [
-                q for q in pool[difficulty] if q["dataset"] not in datasets and q["source"] not in sources
+                q for q in pool[difficulty] if family(q) not in datasets and q["source"] not in sources
             ]
             rng.shuffle(candidates)
             candidates.sort(key=lambda q: -remaining[q["dataset"]] * rng.uniform(0.5, 1.0))
@@ -82,7 +89,7 @@ def make_day(pool: dict[int, list[dict]], rng: random.Random, easy_magnitude: bo
             for q in candidates:
                 if len([d for d in day if d.get("difficulty") == difficulty]) == count:
                     break
-                if q["dataset"] in datasets or q["source"] in sources:
+                if family(q) in datasets or q["source"] in sources:
                     continue
                 if q["category"] in HISTORY_CATEGORIES and sum(
                     d["category"] in HISTORY_CATEGORIES for d in day
@@ -93,7 +100,7 @@ def make_day(pool: dict[int, list[dict]], rng: random.Random, easy_magnitude: bo
                 ):
                     continue  # at most one easy magnitude a day
                 day.append(q)
-                datasets.add(q["dataset"])
+                datasets.add(family(q))
                 sources.add(q["source"])
         complete = len(day) == sum(DAY_SHAPE.values())
         magnitudes = sum(q["kind"] == "magnitude" for q in day)

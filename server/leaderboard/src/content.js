@@ -47,6 +47,7 @@ export async function loadContent(base, fetchFn, nowMs) {
           unit: q.unit ?? '',
           difficulty: q.difficulty ?? 2,
           retired: q.retired === true,
+          dataset: typeof q.dataset === 'string' ? q.dataset : null,
           scale: questionScale(q.kind, q.scale),
         },
       ]),

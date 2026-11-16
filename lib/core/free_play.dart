@@ -73,20 +73,35 @@ const Set<QuestionCategory> historyCategories = {
 /// At most this many history and year questions in a round (2026-11-09):
 /// one history and two year questions in every five. Players without the
 /// knowledge cannot reason towards a year, and long runs of them bored
-/// testers. The server picks duels and tournaments with the same rule
-/// (server/leaderboard/src/duel.js, `roundLimits`), and
+/// testers. Since 2026-11-16 also at most one question of a data set
+/// family ([datasetFamily]) in every five, so a round is not three
+/// "100 gramda kaç …" questions. The server picks duels and tournaments
+/// with the same rule (server/leaderboard/src/duel.js, `roundLimits`), and
 /// tools/build_schedule.py builds new days with it.
 @immutable
 class RoundLimits {
-  const RoundLimits({required this.history, required this.years});
+  const RoundLimits({
+    required this.history,
+    required this.years,
+    required this.perFamily,
+  });
 
   factory RoundLimits.of(int size) {
     final fives = math.max(1, (size / 5).ceil());
-    return RoundLimits(history: fives, years: 2 * fives);
+    return RoundLimits(history: fives, years: 2 * fives, perFamily: fives);
   }
 
   final int history;
   final int years;
+  final int perFamily;
+}
+
+/// The family of a data set: its name up to the first underscore
+/// (`foods_sugars` → `foods`, `es_cars` → `es`), or null without one.
+String? datasetFamily(String? dataset) {
+  if (dataset == null || dataset.isEmpty) return null;
+  final cut = dataset.indexOf('_');
+  return cut <= 0 ? dataset : dataset.substring(0, cut);
 }
 
 /// The first [count] of [candidates] (already in random order) that keep
@@ -105,18 +120,26 @@ List<Question> pickVaried(
       .where((q) => historyCategories.contains(q.category))
       .length;
   var yearCount = already.where((q) => q.kind == QuestionKind.year).length;
+  final families = <String, int>{};
+  for (final q in already) {
+    final family = datasetFamily(q.dataset);
+    if (family != null) families[family] = (families[family] ?? 0) + 1;
+  }
   for (final q in candidates) {
     if (picked.length >= count) break;
     final isHistory = historyCategories.contains(q.category);
     final isYear = q.kind == QuestionKind.year;
+    final family = datasetFamily(q.dataset);
     if ((isHistory && historyCount >= limits.history) ||
-        (isYear && yearCount >= limits.years)) {
+        (isYear && yearCount >= limits.years) ||
+        (family != null && (families[family] ?? 0) >= limits.perFamily)) {
       skipped.add(q);
       continue;
     }
     picked.add(q);
     if (isHistory) historyCount++;
     if (isYear) yearCount++;
+    if (family != null) families[family] = (families[family] ?? 0) + 1;
   }
   for (final q in skipped) {
     if (picked.length >= count) break;

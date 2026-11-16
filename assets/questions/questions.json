@@ -33206,5 +33206,2709 @@
   "scale": {
    "factor": 1.7
   }
+ },
+ {
+  "id": "q2365",
+  "text": "100 gram iç kabak çekirdeğinde kaç gram yağ var?",
+  "answer": 49,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170556/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 559 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2366",
+  "text": "100 gram kabuklu elmada kaç gram şeker var?",
+  "answer": 10,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171688/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 52 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2367",
+  "text": "100 gram çiğ ıspanakta kaç miligram sodyum var?",
+  "answer": 79,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168462/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 23 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2368",
+  "text": "100 gram tahinde kaç miligram kalsiyum var?",
+  "answer": 426,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170189/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 595 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2369",
+  "text": "100 gram çiğ midyede kaç miligram sodyum var?",
+  "answer": 286,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174216/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 86 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2370",
+  "text": "100 gram bademde kaç miligram kalsiyum var?",
+  "answer": 269,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170567/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 579 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2371",
+  "text": "100 gram lor tipi taze peynirde kaç miligram sodyum var?",
+  "answer": 315,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/172179/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 98 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2372",
+  "text": "100 gram çedar peynirinde kaç miligram sodyum var?",
+  "answer": 653,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173414/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 403 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2373",
+  "text": "100 gram armutta kaç gram lif var?",
+  "answer": 3.1,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169118/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 57 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2374",
+  "text": "100 gram yağı süzülmüş sardalya konservesinde kaç miligram kalsiyum var?",
+  "answer": 382,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/175139/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 208 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2375",
+  "text": "100 gram şekersiz kakao tozunda kaç gram yağ var?",
+  "answer": 14,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169593/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 228 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2376",
+  "text": "100 gram parmesan peynirinde kaç gram yağ var?",
+  "answer": 25,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170848/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 392 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2377",
+  "text": "100 gram taze hindistancevizinde kaç gram lif var?",
+  "answer": 9.0,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170169/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 354 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2378",
+  "text": "100 gram çiğ pancarda kaç gram şeker var?",
+  "answer": 6.8,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169145/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 43 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2379",
+  "text": "100 gram yağsız patlamış mısırda kaç gram lif var?",
+  "answer": 15,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/167959/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 387 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2380",
+  "text": "100 gram balda kaç gram şeker var?",
+  "answer": 82,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169640/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 304 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2381",
+  "text": "100 gram havuçta kaç gram şeker var?",
+  "answer": 4.7,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170393/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 41 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2382",
+  "text": "100 gram bitter çikolatada (%70–85 kakao) kaç gram yağ var?",
+  "answer": 43,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170273/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 598 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2383",
+  "text": "100 gram yeşil zeytinde kaç miligram sodyum var?",
+  "answer": 1556,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169096/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 145 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2384",
+  "text": "100 gram çiğ karideste kaç miligram sodyum var?",
+  "answer": 119,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/175179/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 85 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2385",
+  "text": "100 gram tam yağlı sütte kaç miligram kalsiyum var?",
+  "answer": 113,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171265/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 61 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2386",
+  "text": "100 gram hazır çikolata parçalı kurabiyede kaç gram yağ var?",
+  "answer": 25,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/172716/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 492 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2387",
+  "text": "100 gram yağı süzülmüş sardalya konservesinde kaç gram yağ var?",
+  "answer": 11,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/175139/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 208 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2388",
+  "text": "100 gram tuzsuz tereyağında kaç gram yağ var?",
+  "answer": 81,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173430/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 717 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2389",
+  "text": "100 gram tam yağlı sütte kaç gram yağ var?",
+  "answer": 3.3,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171265/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 61 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2390",
+  "text": "100 gram çiğ Antep fıstığında kaç gram lif var?",
+  "answer": 11,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170184/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 560 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2391",
+  "text": "100 gram ketçapta kaç gram şeker var?",
+  "answer": 21,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168556/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 101 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2392",
+  "text": "100 gram dutta kaç gram şeker var?",
+  "answer": 8.1,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169913/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 43 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2393",
+  "text": "100 gram kuru incirde kaç gram lif var?",
+  "answer": 9.8,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174665/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 249 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2394",
+  "text": "100 gram mozzarella peynirinde kaç gram yağ var?",
+  "answer": 22,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170845/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 299 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2395",
+  "text": "100 gram çiğ ıspanakta kaç miligram kalsiyum var?",
+  "answer": 99,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168462/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 23 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2396",
+  "text": "100 gram suyu süzülmüş ton balığı konservesinde kaç miligram sodyum var?",
+  "answer": 247,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173709/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 86 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2397",
+  "text": "100 gram kuru üzümde kaç gram şeker var?",
+  "answer": 65,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168165/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 299 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2398",
+  "text": "100 gram üzümde kaç gram şeker var?",
+  "answer": 15,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174683/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 69 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2399",
+  "text": "100 gram vanilyalı dondurmada kaç miligram kalsiyum var?",
+  "answer": 128,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/167575/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 207 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2400",
+  "text": "100 gram çiğ brokolide kaç miligram kalsiyum var?",
+  "answer": 47,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170379/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 34 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2401",
+  "text": "100 gram sade hamburgerde kaç miligram sodyum var?",
+  "answer": 331,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170693/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 297 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2402",
+  "text": "100 gram patates kızartmasında kaç gram yağ var?",
+  "answer": 15,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170698/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 312 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2403",
+  "text": "100 gram taze hindistancevizinde kaç gram yağ var?",
+  "answer": 33,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170169/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 354 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2404",
+  "text": "100 gram hazır çikolata parçalı kurabiyede kaç gram şeker var?",
+  "answer": 33,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/172716/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 492 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2405",
+  "text": "100 gram kuru erikte kaç gram lif var?",
+  "answer": 7.1,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168162/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 240 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2406",
+  "text": "100 gram reçelde kaç gram şeker var?",
+  "answer": 49,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169641/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 278 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2407",
+  "text": "100 gram erikte kaç gram şeker var?",
+  "answer": 9.9,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169949/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 46 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2408",
+  "text": "100 gram beyaz ekmekte kaç gram yağ var?",
+  "answer": 3.3,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174924/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 266 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2409",
+  "text": "100 gram vanilyalı dondurmada kaç gram şeker var?",
+  "answer": 21,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/167575/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 207 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2410",
+  "text": "100 gram parmesan peynirinde kaç miligram sodyum var?",
+  "answer": 1175,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170848/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 392 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2411",
+  "text": "100 gram bitter çikolatada (%70–85 kakao) kaç gram lif var?",
+  "answer": 11,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170273/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 598 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2412",
+  "text": "100 gram muzda kaç gram lif var?",
+  "answer": 2.6,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173944/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 89 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2413",
+  "text": "100 gram kakaolu fındık kremasında kaç gram yağ var?",
+  "answer": 30,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168000/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 539 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2414",
+  "text": "100 gram tahinde kaç miligram sodyum var?",
+  "answer": 115,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170189/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 595 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2415",
+  "text": "100 gram domateste kaç gram şeker var?",
+  "answer": 2.6,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170457/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 18 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2416",
+  "text": "100 gram mayonezde kaç miligram sodyum var?",
+  "answer": 635,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171009/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 680 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2417",
+  "text": "100 gram lor tipi taze peynirde kaç miligram kalsiyum var?",
+  "answer": 83,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/172179/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 98 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2418",
+  "text": "100 gram kuru kırmızı fasulyede kaç gram lif var?",
+  "answer": 25,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/175193/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 333 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2419",
+  "text": "100 gram kavunda kaç gram şeker var?",
+  "answer": 7.9,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169092/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 34 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2420",
+  "text": "100 gram avokadoda kaç gram lif var?",
+  "answer": 6.7,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171705/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 160 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2421",
+  "text": "100 gram yeşil zeytinde kaç gram yağ var?",
+  "answer": 15,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169096/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 145 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2422",
+  "text": "100 gram kivide kaç gram şeker var?",
+  "answer": 9.0,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168153/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 61 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2423",
+  "text": "100 gram çilekte kaç gram şeker var?",
+  "answer": 4.9,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/167762/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 32 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2424",
+  "text": "100 gram çiğ tatlı patateste kaç gram şeker var?",
+  "answer": 4.2,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168482/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 86 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2425",
+  "text": "100 gram tam yağlı yoğurtta kaç miligram kalsiyum var?",
+  "answer": 121,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171284/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 61 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2426",
+  "text": "100 gram taze kayısıda kaç gram şeker var?",
+  "answer": 9.2,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171697/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 48 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2427",
+  "text": "100 gram yulaf ezmesinde kaç gram lif var?",
+  "answer": 10,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173904/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 379 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2428",
+  "text": "100 gram kuru kırmızı fasulyede kaç miligram kalsiyum var?",
+  "answer": 143,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/175193/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 333 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2429",
+  "text": "100 gram tereyağlı kruvasanda kaç gram yağ var?",
+  "answer": 21,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174987/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 406 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2430",
+  "text": "100 gram mozzarella peynirinde kaç miligram kalsiyum var?",
+  "answer": 505,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170845/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 299 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2431",
+  "text": "100 gram narda kaç gram lif var?",
+  "answer": 4.0,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169134/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 83 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2432",
+  "text": "100 gram taze sıkılmış portakal suyunda kaç gram şeker var?",
+  "answer": 8.4,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169098/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 45 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2433",
+  "text": "100 gram çiğ ıspanakta kaç gram lif var?",
+  "answer": 2.2,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168462/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 23 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2434",
+  "text": "100 gram mayonezde kaç gram yağ var?",
+  "answer": 75,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171009/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 680 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2435",
+  "text": "100 gram tereyağlı kruvasanda kaç gram şeker var?",
+  "answer": 11,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174987/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 406 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2436",
+  "text": "100 gram sade tahin helvasında kaç gram yağ var?",
+  "answer": 22,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/167996/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 469 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2437",
+  "text": "100 gram beyaz ekmekte kaç gram lif var?",
+  "answer": 2.7,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174924/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 266 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2438",
+  "text": "100 gram armutta kaç gram şeker var?",
+  "answer": 9.8,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169118/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 57 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2439",
+  "text": "100 gram çiğ yumurtada kaç miligram sodyum var?",
+  "answer": 142,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171287/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 143 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2440",
+  "text": "100 gram tam buğday ekmeğinde kaç gram lif var?",
+  "answer": 6.0,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/172688/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 252 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2441",
+  "text": "100 gram patates kızartmasında kaç miligram sodyum var?",
+  "answer": 210,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170698/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 312 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2442",
+  "text": "100 gram feta peynirinde kaç gram yağ var?",
+  "answer": 21,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173420/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 265 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2443",
+  "text": "100 gram humusta kaç miligram sodyum var?",
+  "answer": 426,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174289/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 237 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2444",
+  "text": "100 gram kuru incirde kaç miligram kalsiyum var?",
+  "answer": 162,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174665/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 249 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2445",
+  "text": "100 gram tuzlu patates cipsinde kaç gram yağ var?",
+  "answer": 34,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169677/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 532 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2446",
+  "text": "100 gram cevizde kaç gram yağ var?",
+  "answer": 65,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170187/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 654 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2447",
+  "text": "100 gram tam yağlı sütte kaç miligram sodyum var?",
+  "answer": 43,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171265/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 61 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2448",
+  "text": "100 gram yulaf ezmesinde kaç gram yağ var?",
+  "answer": 6.5,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173904/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 379 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2449",
+  "text": "100 gram havuçta kaç gram lif var?",
+  "answer": 2.8,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170393/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 41 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2450",
+  "text": "100 gram humusta kaç gram yağ var?",
+  "answer": 18,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174289/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 237 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2451",
+  "text": "100 gram çedar peynirinde kaç miligram kalsiyum var?",
+  "answer": 710,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173414/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 403 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2452",
+  "text": "100 gram çiğ hamside kaç gram yağ var?",
+  "answer": 4.8,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174182/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 131 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2453",
+  "text": "100 gram kuru kayısıda kaç gram lif var?",
+  "answer": 7.3,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173941/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 241 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2454",
+  "text": "100 gram feta peynirinde kaç miligram sodyum var?",
+  "answer": 1139,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173420/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 265 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2455",
+  "text": "100 gram sade hamburgerde kaç gram yağ var?",
+  "answer": 12,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170693/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 297 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2456",
+  "text": "100 gram feta peynirinde kaç miligram kalsiyum var?",
+  "answer": 493,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173420/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 265 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2457",
+  "text": "100 gram bademde kaç gram yağ var?",
+  "answer": 50,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170567/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 579 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2458",
+  "text": "100 gram tahinde kaç gram yağ var?",
+  "answer": 54,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170189/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 595 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2459",
+  "text": "100 gram sütlü çikolatada kaç gram yağ var?",
+  "answer": 30,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/167587/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 535 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2460",
+  "text": "100 gram sütlü çikolatada kaç miligram kalsiyum var?",
+  "answer": 189,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/167587/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 535 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2461",
+  "text": "100 gram tam buğday ekmeğinde kaç miligram sodyum var?",
+  "answer": 455,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/172688/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 252 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2462",
+  "text": "100 gram mangoda kaç gram şeker var?",
+  "answer": 14,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169910/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 60 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2463",
+  "text": "100 gram mandalinada kaç gram şeker var?",
+  "answer": 11,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169105/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 53 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2464",
+  "text": "100 gram tam yağlı sütte kaç gram şeker var?",
+  "answer": 5.1,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171265/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 61 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2465",
+  "text": "100 gram çiğ hamside kaç miligram sodyum var?",
+  "answer": 104,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174182/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 131 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2466",
+  "text": "100 gram narda kaç gram şeker var?",
+  "answer": 14,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169134/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 83 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2467",
+  "text": "100 gram kestane kebapta kaç gram şeker var?",
+  "answer": 11,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170190/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 245 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2468",
+  "text": "100 gram hurmada kaç gram lif var?",
+  "answer": 8.0,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171726/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 282 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2469",
+  "text": "100 gram tam yağlı süzme yoğurtta kaç miligram kalsiyum var?",
+  "answer": 100,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171304/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 97 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2470",
+  "text": "100 gram şekerli kolada kaç gram şeker var?",
+  "answer": 9.9,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174852/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 42 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2471",
+  "text": "100 gram bademde kaç gram lif var?",
+  "answer": 13,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170567/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 579 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2472",
+  "text": "100 gram çiğ hamside kaç miligram kalsiyum var?",
+  "answer": 147,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174182/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 131 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2473",
+  "text": "100 gram tam buğday ekmeğinde kaç miligram kalsiyum var?",
+  "answer": 161,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/172688/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 252 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2474",
+  "text": "100 gram haşlanmış mercimekte kaç gram lif var?",
+  "answer": 7.9,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/172421/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 116 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2475",
+  "text": "100 gram sütlü çikolatada kaç gram şeker var?",
+  "answer": 52,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/167587/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 535 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2476",
+  "text": "100 gram çiğ kuzu kıymasında kaç gram yağ var?",
+  "answer": 23,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174370/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 282 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2477",
+  "text": "100 gram vanilyalı dondurmada kaç gram yağ var?",
+  "answer": 11,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/167575/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 207 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2478",
+  "text": "100 gram fındıkta kaç gram lif var?",
+  "answer": 9.7,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170581/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 628 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2479",
+  "text": "100 gram iç ay çekirdeğinde kaç gram yağ var?",
+  "answer": 51,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170562/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 584 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2480",
+  "text": "100 gram sade tahin helvasında kaç miligram sodyum var?",
+  "answer": 195,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/167996/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 469 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2481",
+  "text": "100 gram kuru erikte kaç gram şeker var?",
+  "answer": 38,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168162/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 240 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2482",
+  "text": "100 gram çedar peynirinde kaç gram yağ var?",
+  "answer": 33,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173414/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 403 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2483",
+  "text": "100 gram sarımsakta kaç miligram kalsiyum var?",
+  "answer": 181,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169230/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 149 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2484",
+  "text": "100 gram kuru incirde kaç gram şeker var?",
+  "answer": 48,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174665/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 249 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2485",
+  "text": "100 gram beyaz ekmekte kaç miligram sodyum var?",
+  "answer": 490,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174924/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 266 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2486",
+  "text": "100 gram beyaz ekmekte kaç miligram kalsiyum var?",
+  "answer": 144,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174924/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 266 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2487",
+  "text": "100 gram tuzlu patates cipsinde kaç miligram sodyum var?",
+  "answer": 527,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169677/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 532 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2488",
+  "text": "100 gram portakalda kaç gram şeker var?",
+  "answer": 9.4,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169097/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 47 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2489",
+  "text": "100 gram yağı süzülmüş sardalya konservesinde kaç miligram sodyum var?",
+  "answer": 307,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/175139/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 208 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2490",
+  "text": "100 gram portakalda kaç miligram kalsiyum var?",
+  "answer": 40,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169097/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 47 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2491",
+  "text": "100 gram kuru nohutta kaç miligram kalsiyum var?",
+  "answer": 57,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173756/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 378 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2492",
+  "text": "100 gram çiğ kajuda kaç gram yağ var?",
+  "answer": 44,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170162/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 553 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2493",
+  "text": "100 gram kuru kayısıda kaç gram şeker var?",
+  "answer": 53,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173941/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 241 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2494",
+  "text": "100 gram muzda kaç gram şeker var?",
+  "answer": 12,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173944/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 89 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2495",
+  "text": "100 gram ketçapta kaç miligram sodyum var?",
+  "answer": 907,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168556/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 101 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2496",
+  "text": "100 gram hurmada kaç gram şeker var?",
+  "answer": 63,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171726/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 282 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2497",
+  "text": "100 gram taze incirde kaç gram şeker var?",
+  "answer": 16,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173021/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 74 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2498",
+  "text": "100 gram karpuzda kaç gram şeker var?",
+  "answer": 6.2,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/167765/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 30 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2499",
+  "text": "100 gram kakaolu fındık kremasında kaç gram şeker var?",
+  "answer": 54,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168000/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 539 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2500",
+  "text": "100 gram avokadoda kaç gram yağ var?",
+  "answer": 15,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171705/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 160 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2501",
+  "text": "100 gram lor tipi taze peynirde kaç gram yağ var?",
+  "answer": 4.3,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/172179/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 98 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2502",
+  "text": "100 gram şekersiz kakao tozunda kaç miligram kalsiyum var?",
+  "answer": 128,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169593/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 228 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2503",
+  "text": "100 gram çiğ brokolide kaç gram lif var?",
+  "answer": 2.6,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170379/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 34 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2504",
+  "text": "100 gram çiğ uskumruda kaç gram yağ var?",
+  "answer": 14,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/175119/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 205 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2505",
+  "text": "100 gram çiğ çiftlik somonunda kaç gram yağ var?",
+  "answer": 13,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/175167/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 208 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2506",
+  "text": "100 gram fındıkta kaç miligram kalsiyum var?",
+  "answer": 114,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170581/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 628 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2507",
+  "text": "100 gram tuzsuz fıstık ezmesinde kaç gram şeker var?",
+  "answer": 10,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/172470/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 598 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2508",
+  "text": "100 gram çiğ yer fıstığında kaç gram yağ var?",
+  "answer": 49,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/172430/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 567 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2509",
+  "text": "100 gram hazır çikolata parçalı kurabiyede kaç miligram sodyum var?",
+  "answer": 311,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/172716/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 492 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2510",
+  "text": "100 gram çiğ dana kıymada (%20 yağlı) kaç gram yağ var?",
+  "answer": 20,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174036/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 254 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2511",
+  "text": "100 gram şekersiz kakao tozunda kaç gram lif var?",
+  "answer": 37,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169593/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 228 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2512",
+  "text": "100 gram çiğ yumurtada kaç gram yağ var?",
+  "answer": 9.5,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171287/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 143 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2513",
+  "text": "100 gram çiğ tatlı mısırda kaç gram şeker var?",
+  "answer": 6.3,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169998/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 86 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2514",
+  "text": "100 gram havuçta kaç miligram sodyum var?",
+  "answer": 69,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170393/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 41 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2515",
+  "text": "100 gram kirazda kaç gram şeker var?",
+  "answer": 13,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171719/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 63 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2516",
+  "text": "100 gram çiğ bezelyede kaç gram lif var?",
+  "answer": 5.7,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170419/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 81 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2517",
+  "text": "100 gram mozzarella peynirinde kaç miligram sodyum var?",
+  "answer": 486,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170845/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 299 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2518",
+  "text": "100 gram yağsız patlamış mısırda kaç gram yağ var?",
+  "answer": 4.5,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/167959/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 387 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2519",
+  "text": "100 gram kuru bulgurda kaç gram lif var?",
+  "answer": 13,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170688/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 342 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2520",
+  "text": "100 gram parmesan peynirinde kaç miligram kalsiyum var?",
+  "answer": 1184,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170848/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 392 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2521",
+  "text": "100 gram taze maydanozda kaç miligram kalsiyum var?",
+  "answer": 138,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170416/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 36 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2522",
+  "text": "100 gram tereyağlı kruvasanda kaç miligram sodyum var?",
+  "answer": 384,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174987/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 406 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2523",
+  "text": "100 gram tam yağlı süzme yoğurtta kaç gram yağ var?",
+  "answer": 5.0,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171304/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 97 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2524",
+  "text": "100 gram bitter çikolatada (%70–85 kakao) kaç gram şeker var?",
+  "answer": 24,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170273/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 598 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2525",
+  "text": "100 gram kuru nohutta kaç gram lif var?",
+  "answer": 12,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173756/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 378 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2526",
+  "text": "100 gram kabuklu elmada kaç gram lif var?",
+  "answer": 2.4,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171688/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 52 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2527",
+  "text": "100 gram çiğ Antep fıstığında kaç miligram kalsiyum var?",
+  "answer": 105,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170184/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 560 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2528",
+  "text": "100 gram ananasta kaç gram şeker var?",
+  "answer": 9.9,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169124/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 50 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2529",
+  "text": "100 gram çiğ Antep fıstığında kaç gram yağ var?",
+  "answer": 45,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170184/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 560 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2530",
+  "text": "100 gram kuru mercimekte kaç gram lif var?",
+  "answer": 11,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/172420/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 352 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2531",
+  "text": "100 gram şeftalide kaç gram şeker var?",
+  "answer": 8.4,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169928/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 39 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2532",
+  "text": "100 gram fırında pişmiş tavuk göğsünde kaç gram yağ var?",
+  "answer": 3.6,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171477/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 165 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2533",
+  "text": "100 gram fındıkta kaç gram yağ var?",
+  "answer": 61,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170581/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 628 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
  }
 ]

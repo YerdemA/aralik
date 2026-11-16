@@ -178,8 +178,53 @@ void main() {
     test('limits scale with the round', () {
       expect(RoundLimits.of(5).history, 1);
       expect(RoundLimits.of(5).years, 2);
+      expect(RoundLimits.of(5).perFamily, 1);
       expect(RoundLimits.of(10).history, 2);
       expect(RoundLimits.of(10).years, 4);
+      expect(RoundLimits.of(10).perFamily, 2);
+    });
+
+    test('a data set family is its name up to the first underscore', () {
+      expect(datasetFamily('foods_sugars'), 'foods');
+      expect(datasetFamily('es_cars'), 'es');
+      expect(datasetFamily('chemistry'), 'chemistry');
+      expect(datasetFamily(null), isNull);
+      expect(datasetFamily(''), isNull);
+    });
+
+    test('at most one question of a data set family in five', () {
+      Question food(String id, String dataset) => Question(
+        id: id,
+        text: '$id?',
+        answer: 10,
+        unit: 'g',
+        kind: QuestionKind.magnitude,
+        category: QuestionCategory.everyday,
+        source: 'https://example.org/$id',
+        dataYear: 2018,
+        dataset: dataset,
+      );
+      final foods = [
+        for (var i = 0; i < 20; i++) ...[
+          food('s$i', 'foods_sugars'),
+          food('f$i', 'foods_fat'),
+        ],
+        for (var i = 0; i < 4; i++) food('c$i', 'es_cars'),
+        for (var i = 0; i < 4; i++) question('g$i'),
+      ];
+      for (var seed = 0; seed < 50; seed++) {
+        final round = buildFreeRound(
+          bankPool: foods,
+          generators: const [],
+          seen: const {},
+          rng: math.Random(seed),
+        );
+        expect(round, hasLength(5));
+        expect(
+          round.where((q) => datasetFamily(q.dataset) == 'foods').length,
+          1,
+        );
+      }
     });
   });
 }

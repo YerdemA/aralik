@@ -168,12 +168,20 @@ export const HISTORY_CATEGORIES = new Set(['tarih', 'osmanlı']);
 
 /**
  * At most this many history and year questions in a match of [size]: one
- * history and two year questions in every five (lib/core/free_play.dart and
- * tools/build_schedule.py use the same rule).
+ * history and two year questions in every five, and (2026-11-16) one
+ * question of a data set family ([datasetFamily]) in every five
+ * (lib/core/free_play.dart and tools/build_schedule.py use the same rule).
  */
 export function roundLimits(size) {
   const fives = Math.max(1, Math.ceil(size / 5));
-  return { history: fives, years: 2 * fives };
+  return { history: fives, years: 2 * fives, perFamily: fives };
+}
+
+/** A data set's name up to the first underscore, or null without one. */
+export function datasetFamily(dataset) {
+  if (typeof dataset !== 'string' || dataset === '') return null;
+  const cut = dataset.indexOf('_');
+  return cut <= 0 ? dataset : dataset.slice(0, cut);
 }
 
 /** A duel's difficulty mix: two easy, two medium, one hard. */
@@ -221,7 +229,9 @@ export function pickDuelQuestions(
     if (HISTORY_CATEGORIES.has(q.category) && count((p) => HISTORY_CATEGORIES.has(p.category)) >= limits.history) {
       return false;
     }
-    return !(q.kind === 'year' && count((p) => p.kind === 'year') >= limits.years);
+    if (q.kind === 'year' && count((p) => p.kind === 'year') >= limits.years) return false;
+    const family = datasetFamily(q.dataset);
+    return !(family && count((p) => datasetFamily(p.dataset) === family) >= limits.perFamily);
   };
   const take = (list, strict = true) => {
     const candidates = strict

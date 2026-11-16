@@ -63,7 +63,7 @@
    "attribution": "U.S. Department of Agriculture, FoodData Central (SR Legacy, 2018). CC0 ile kamu malına bırakılmıştır.",
    "status": "in_use",
    "raw_dir": "usda",
-   "datasets": ["foods_energy", "foods_protein", "foods_caffeine", "foods_vitamin_c"]
+   "datasets": ["foods_energy", "foods_protein", "foods_caffeine", "foods_vitamin_c", "foods_sugars", "foods_fat", "foods_fiber", "foods_sodium", "foods_calcium"]
   },
   {
    "id": "nasa_nssdc",

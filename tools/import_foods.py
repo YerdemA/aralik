@@ -10,6 +10,8 @@ Every answer is the value per 100 g in SR Legacy, only rounded:
   protein    g, whole number from 10   "... kaç gram protein var?"
   caffeine   mg, whole number          "... kaç miligram kafein var?"
   vitamin_c  mg, whole number from 10  "... kaç miligram C vitamini var?"
+  sugars, fat, fiber  g, whole number from 10, dropped below 1
+  sodium, calcium     mg, whole number, dropped below 10
 
 --fetch downloads the SR Legacy CSV archive (about 6 MB, git-ignored) and
 writes the values of the listed foods to tools/raw/usda/sr_legacy_foods.json
@@ -18,7 +20,7 @@ writes the values of the listed foods to tools/raw/usda/sr_legacy_foods.json
 
 A row is dropped when USDA's description does not start with the given text
 (a mistyped id), the value is missing or zero, or the bank already asks about
-the same food with the same unit. The bank stays append-only.
+the same food about the same nutrient. The bank stays append-only.
 SR Legacy is USDA's final release of April 2018 (data_year 2018); CC0.
 """
 
@@ -51,7 +53,10 @@ CATEGORY = "gündelik"
 SEED = 20261106
 
 # SR Legacy nutrient ids (nutrient.csv).
-NUTRIENT_IDS = {"1008": "energy", "1003": "protein", "2000": "sugars", "1057": "caffeine", "1162": "vitamin_c"}
+NUTRIENT_IDS = {
+    "1008": "energy", "1003": "protein", "2000": "sugars", "1057": "caffeine", "1162": "vitamin_c",
+    "1004": "fat", "1079": "fiber", "1093": "sodium", "1087": "calcium",
+}
 
 # nutrient → (question ending, unit, data set, value below which one decimal is kept)
 ASKED = {
@@ -59,7 +64,16 @@ ASKED = {
     "protein": ("kaç gram protein var?", "g", "foods_protein", 10),
     "caffeine": ("kaç miligram kafein var?", "mg", "foods_caffeine", 0),
     "vitamin_c": ("kaç miligram C vitamini var?", "mg", "foods_vitamin_c", 10),
+    # 2026-11-16
+    "sugars": ("kaç gram şeker var?", "g", "foods_sugars", 10),
+    "fat": ("kaç gram yağ var?", "g", "foods_fat", 10),
+    "fiber": ("kaç gram lif var?", "g", "foods_fiber", 10),
+    "sodium": ("kaç miligram sodyum var?", "mg", "foods_sodium", 0),
+    "calcium": ("kaç miligram kalsiyum var?", "mg", "foods_calcium", 0),
 }
+
+# Below this a question is pointless ("0,3 g yağ"); the row is dropped.
+MINIMUM = {"sugars": 1, "fat": 1, "fiber": 1, "sodium": 10, "calcium": 10}
 
 
 def read_rows(path: Path = FOODS) -> list[dict]:
@@ -137,7 +151,7 @@ def fun_fact(nutrient: str, values: dict) -> str | None:
 
 
 def build(rows: list[dict], foods: dict, bank: list[dict]) -> tuple[list[dict], list[str]]:
-    asked = {(q["source"], q["kind"], q["unit"]) for q in bank}
+    asked = {(q["source"], q.get("dataset")) for q in bank}
     texts = {q["text"].casefold() for q in bank}
     new, dropped = [], []
     for row in rows:
@@ -151,12 +165,12 @@ def build(rows: list[dict], foods: dict, bank: list[dict]) -> tuple[list[dict], 
             dropped.append(f"AÇIKLAMA TUTMUYOR: {label}: USDA '{food['description']}'")
             continue
         value = food["per_100g"].get(row["nutrient"])
-        if not value:
+        if not value or value < MINIMUM.get(row["nutrient"], 0):
             dropped.append(f"DEĞER YOK: {label}")
             continue
         source = SOURCE_URL.format(fdc_id=row["fdc_id"])
         text = f"100 gram {row['place']} {ending}"
-        key = (source, "magnitude", unit)
+        key = (source, dataset)
         if key in asked or text.casefold() in texts:
             continue  # imported earlier
         asked.add(key)
