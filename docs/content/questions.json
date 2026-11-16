@@ -49407,5 +49407,1111 @@
   "scale": {
    "factor": 4
   }
+ },
+ {
+  "id": "q3388",
+  "text": "2025 verilerine göre İspanya'da 25-64 yaş arasındakilerin yüzde kaçı üniversite (yükseköğretim) mezunudur?",
+  "answer": 42.4,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/edat_lfse_03?freq=A&sex=T&age=Y25-64&isced11=ED5-8&unit=PC&geo=ES&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %36,9.",
+  "difficulty": 2,
+  "dataset": "es_tertiary"
+ },
+ {
+  "id": "q3389",
+  "text": "2025 verilerine göre Hollanda'da çalışanlar ana işlerinde haftada ortalama kaç saat çalışmaktadır?",
+  "answer": 31.5,
+  "unit": "saat",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsa_ewhuis?freq=A&sex=T&age=Y15-64&isco08=TOTAL&worktime=TOTAL&wstatus=EMP&unit=HR&geo=NL&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 37,0 saat.",
+  "difficulty": 2,
+  "dataset": "es_weekly_hours",
+  "scale": {
+   "half": 4
+  }
+ },
+ {
+  "id": "q3390",
+  "text": "2025 verilerine göre Almanya'da çalışanlar ana işlerinde haftada ortalama kaç saat çalışmaktadır?",
+  "answer": 34.8,
+  "unit": "saat",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsa_ewhuis?freq=A&sex=T&age=Y15-64&isco08=TOTAL&worktime=TOTAL&wstatus=EMP&unit=HR&geo=DE&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 37,0 saat.",
+  "difficulty": 2,
+  "dataset": "es_weekly_hours",
+  "scale": {
+   "half": 4
+  }
+ },
+ {
+  "id": "q3391",
+  "text": "2025 verilerine göre İrlanda'da 25-64 yaş arasındakilerin yüzde kaçı üniversite (yükseköğretim) mezunudur?",
+  "answer": 58.7,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/edat_lfse_03?freq=A&sex=T&age=Y25-64&isced11=ED5-8&unit=PC&geo=IE&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %36,9.",
+  "difficulty": 2,
+  "dataset": "es_tertiary"
+ },
+ {
+  "id": "q3392",
+  "text": "2025 verilerine göre Almanya'da 25-64 yaş arasındakilerin yüzde kaçı üniversite (yükseköğretim) mezunudur?",
+  "answer": 35.4,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/edat_lfse_03?freq=A&sex=T&age=Y25-64&isced11=ED5-8&unit=PC&geo=DE&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %36,9.",
+  "difficulty": 2,
+  "dataset": "es_tertiary"
+ },
+ {
+  "id": "q3393",
+  "text": "2025 verilerine göre İspanya'da çalışanlar ana işlerinde haftada ortalama kaç saat çalışmaktadır?",
+  "answer": 37.5,
+  "unit": "saat",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsa_ewhuis?freq=A&sex=T&age=Y15-64&isco08=TOTAL&worktime=TOTAL&wstatus=EMP&unit=HR&geo=ES&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 37,0 saat.",
+  "difficulty": 2,
+  "dataset": "es_weekly_hours",
+  "scale": {
+   "half": 4
+  }
+ },
+ {
+  "id": "q3394",
+  "text": "2025 verilerine göre Polonya'da 25-64 yaş arasındakilerin yüzde kaçı üniversite (yükseköğretim) mezunudur?",
+  "answer": 40.0,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/edat_lfse_03?freq=A&sex=T&age=Y25-64&isced11=ED5-8&unit=PC&geo=PL&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %36,9.",
+  "difficulty": 2,
+  "dataset": "es_tertiary"
+ },
+ {
+  "id": "q3395",
+  "text": "2025 verilerine göre Romanya'da 25-64 yaş arasındakilerin yüzde kaçı üniversite (yükseköğretim) mezunudur?",
+  "answer": 19.5,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/edat_lfse_03?freq=A&sex=T&age=Y25-64&isced11=ED5-8&unit=PC&geo=RO&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %36,9.",
+  "difficulty": 2,
+  "dataset": "es_tertiary"
+ },
+ {
+  "id": "q3396",
+  "text": "2025 verilerine göre Türkiye'de 25-64 yaş arasındakilerin yüzde kaçı üniversite (yükseköğretim) mezunudur?",
+  "answer": 26.8,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "türkiye",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/edat_lfse_03?freq=A&sex=T&age=Y25-64&isced11=ED5-8&unit=PC&geo=TR&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %36,9.",
+  "difficulty": 2,
+  "dataset": "es_tertiary"
+ },
+ {
+  "id": "q3397",
+  "text": "2025 verilerine göre İtalya'da çalışanlar ana işlerinde haftada ortalama kaç saat çalışmaktadır?",
+  "answer": 37.2,
+  "unit": "saat",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsa_ewhuis?freq=A&sex=T&age=Y15-64&isco08=TOTAL&worktime=TOTAL&wstatus=EMP&unit=HR&geo=IT&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 37,0 saat.",
+  "difficulty": 2,
+  "dataset": "es_weekly_hours",
+  "scale": {
+   "half": 4
+  }
+ },
+ {
+  "id": "q3398",
+  "text": "2025 verilerine göre Yunanistan'da çalışanlar ana işlerinde haftada ortalama kaç saat çalışmaktadır?",
+  "answer": 41.0,
+  "unit": "saat",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsa_ewhuis?freq=A&sex=T&age=Y15-64&isco08=TOTAL&worktime=TOTAL&wstatus=EMP&unit=HR&geo=EL&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 37,0 saat.",
+  "difficulty": 2,
+  "dataset": "es_weekly_hours",
+  "scale": {
+   "half": 4
+  }
+ },
+ {
+  "id": "q3399",
+  "text": "2025 verilerine göre Fransa'da 25-64 yaş arasındakilerin yüzde kaçı üniversite (yükseköğretim) mezunudur?",
+  "answer": 44.8,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/edat_lfse_03?freq=A&sex=T&age=Y25-64&isced11=ED5-8&unit=PC&geo=FR&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %36,9.",
+  "difficulty": 2,
+  "dataset": "es_tertiary"
+ },
+ {
+  "id": "q3400",
+  "text": "2025 verilerine göre İsveç'te 25-64 yaş arasındakilerin yüzde kaçı üniversite (yükseköğretim) mezunudur?",
+  "answer": 50.8,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/edat_lfse_03?freq=A&sex=T&age=Y25-64&isced11=ED5-8&unit=PC&geo=SE&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %36,9.",
+  "difficulty": 2,
+  "dataset": "es_tertiary"
+ },
+ {
+  "id": "q3401",
+  "text": "2025 verilerine göre Hollanda'da 25-64 yaş arasındakilerin yüzde kaçı üniversite (yükseköğretim) mezunudur?",
+  "answer": 46.1,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/edat_lfse_03?freq=A&sex=T&age=Y25-64&isced11=ED5-8&unit=PC&geo=NL&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %36,9.",
+  "difficulty": 2,
+  "dataset": "es_tertiary"
+ },
+ {
+  "id": "q3402",
+  "text": "2025 verilerine göre İsveç'te çalışanlar ana işlerinde haftada ortalama kaç saat çalışmaktadır?",
+  "answer": 38.1,
+  "unit": "saat",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsa_ewhuis?freq=A&sex=T&age=Y15-64&isco08=TOTAL&worktime=TOTAL&wstatus=EMP&unit=HR&geo=SE&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 37,0 saat.",
+  "difficulty": 2,
+  "dataset": "es_weekly_hours",
+  "scale": {
+   "half": 4
+  }
+ },
+ {
+  "id": "q3403",
+  "text": "2025 verilerine göre Türkiye'de çalışanlar ana işlerinde haftada ortalama kaç saat çalışmaktadır?",
+  "answer": 44.0,
+  "unit": "saat",
+  "kind": "magnitude",
+  "category": "türkiye",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsa_ewhuis?freq=A&sex=T&age=Y15-64&isco08=TOTAL&worktime=TOTAL&wstatus=EMP&unit=HR&geo=TR&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 37,0 saat.",
+  "difficulty": 2,
+  "dataset": "es_weekly_hours",
+  "scale": {
+   "half": 4
+  }
+ },
+ {
+  "id": "q3404",
+  "text": "2025 verilerine göre Fransa'da çalışanlar ana işlerinde haftada ortalama kaç saat çalışmaktadır?",
+  "answer": 37.0,
+  "unit": "saat",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsa_ewhuis?freq=A&sex=T&age=Y15-64&isco08=TOTAL&worktime=TOTAL&wstatus=EMP&unit=HR&geo=FR&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 37,0 saat.",
+  "difficulty": 2,
+  "dataset": "es_weekly_hours",
+  "scale": {
+   "half": 4
+  }
+ },
+ {
+  "id": "q3405",
+  "text": "2025 verilerine göre İtalya'da 25-64 yaş arasındakilerin yüzde kaçı üniversite (yükseköğretim) mezunudur?",
+  "answer": 22.3,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/edat_lfse_03?freq=A&sex=T&age=Y25-64&isced11=ED5-8&unit=PC&geo=IT&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %36,9.",
+  "difficulty": 2,
+  "dataset": "es_tertiary"
+ },
+ {
+  "id": "q3406",
+  "text": "2025 verilerine göre Polonya'da çalışanlar ana işlerinde haftada ortalama kaç saat çalışmaktadır?",
+  "answer": 40.0,
+  "unit": "saat",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsa_ewhuis?freq=A&sex=T&age=Y15-64&isco08=TOTAL&worktime=TOTAL&wstatus=EMP&unit=HR&geo=PL&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 37,0 saat.",
+  "difficulty": 2,
+  "dataset": "es_weekly_hours",
+  "scale": {
+   "half": 4
+  }
+ },
+ {
+  "id": "q3407",
+  "text": "Moskova metrosu toplam kaç kilometre uzunluğundadır?",
+  "answer": 360,
+  "unit": "km",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q5499",
+  "data_year": 2026,
+  "fun_fact": "Ülke: Rusya.",
+  "difficulty": 3,
+  "dataset": "metro_length",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3408",
+  "text": "1962 FIFA Dünya Kupası maçlarını stadyumlarda toplam kaç seyirci izlemiştir?",
+  "answer": 893172,
+  "unit": "seyirci",
+  "kind": "magnitude",
+  "category": "spor",
+  "source": "https://www.wikidata.org/wiki/Q160813",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "worldcup_attendance",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3409",
+  "text": "1966 FIFA Dünya Kupası maçlarını stadyumlarda toplam kaç seyirci izlemiştir?",
+  "answer": 1563135,
+  "unit": "seyirci",
+  "kind": "magnitude",
+  "category": "spor",
+  "source": "https://www.wikidata.org/wiki/Q134202",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "worldcup_attendance",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3410",
+  "text": "Chimborazo kaç metre yüksekliktedir?",
+  "answer": 6263,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q14081",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "highest_points",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3411",
+  "text": "2002 FIFA Dünya Kupası maçlarını stadyumlarda toplam kaç seyirci izlemiştir?",
+  "answer": 2705197,
+  "unit": "seyirci",
+  "kind": "magnitude",
+  "category": "spor",
+  "source": "https://www.wikidata.org/wiki/Q47735",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "worldcup_attendance",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3412",
+  "text": "2018 yılında Tahran metrosu kaç yolcu taşımıştır?",
+  "answer": 820000000,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q714823",
+  "data_year": 2018,
+  "fun_fact": "Ülke: İran.",
+  "difficulty": 3,
+  "dataset": "metro_ridership",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3413",
+  "text": "Tokyo metrosu toplam kaç kilometre uzunluğundadır?",
+  "answer": 304,
+  "unit": "km",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q962135",
+  "data_year": 2026,
+  "fun_fact": "Ülke: Japonya.",
+  "difficulty": 3,
+  "dataset": "metro_length",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3414",
+  "text": "1934 FIFA Dünya Kupası maçlarını stadyumlarda toplam kaç seyirci izlemiştir?",
+  "answer": 358000,
+  "unit": "seyirci",
+  "kind": "magnitude",
+  "category": "spor",
+  "source": "https://www.wikidata.org/wiki/Q1477177",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "worldcup_attendance",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3415",
+  "text": "Konya metrosu toplam kaç kilometre uzunluğundadır?",
+  "answer": 29,
+  "unit": "km",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q85774877",
+  "data_year": 2026,
+  "fun_fact": "Ülke: Türkiye.",
+  "difficulty": 3,
+  "dataset": "metro_length",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3416",
+  "text": "Musala kaç metre yüksekliktedir?",
+  "answer": 2925,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q209341",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "highest_points",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3417",
+  "text": "2014 FIFA Dünya Kupası maçlarını stadyumlarda toplam kaç seyirci izlemiştir?",
+  "answer": 3429873,
+  "unit": "seyirci",
+  "kind": "magnitude",
+  "category": "spor",
+  "source": "https://www.wikidata.org/wiki/Q79859",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "worldcup_attendance",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3418",
+  "text": "1950 FIFA Dünya Kupası maçlarını stadyumlarda toplam kaç seyirci izlemiştir?",
+  "answer": 1043500,
+  "unit": "seyirci",
+  "kind": "magnitude",
+  "category": "spor",
+  "source": "https://www.wikidata.org/wiki/Q132515",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "worldcup_attendance",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3419",
+  "text": "1970 FIFA Dünya Kupası maçlarını stadyumlarda toplam kaç seyirci izlemiştir?",
+  "answer": 1603975,
+  "unit": "seyirci",
+  "kind": "magnitude",
+  "category": "spor",
+  "source": "https://www.wikidata.org/wiki/Q132664",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "worldcup_attendance",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3420",
+  "text": "2019 yılında Berlin U-Bahn kaç yolcu taşımıştır?",
+  "answer": 596000000,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q68646",
+  "data_year": 2019,
+  "fun_fact": "Ülke: Almanya.",
+  "difficulty": 3,
+  "dataset": "metro_ridership",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3421",
+  "text": "2025 yılında İzmir Metrosu kaç yolcu taşımıştır?",
+  "answer": 94313261,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q1503686",
+  "data_year": 2025,
+  "fun_fact": "Ülke: Türkiye.",
+  "difficulty": 3,
+  "dataset": "metro_ridership",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3422",
+  "text": "K2 kaç metre yüksekliktedir?",
+  "answer": 8611,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q43512",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "highest_points",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3423",
+  "text": "2006 FIFA Dünya Kupası maçlarını stadyumlarda toplam kaç seyirci izlemiştir?",
+  "answer": 3359439,
+  "unit": "seyirci",
+  "kind": "magnitude",
+  "category": "spor",
+  "source": "https://www.wikidata.org/wiki/Q37285",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "worldcup_attendance",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3424",
+  "text": "1958 FIFA Dünya Kupası maçlarını stadyumlarda toplam kaç seyirci izlemiştir?",
+  "answer": 919580,
+  "unit": "seyirci",
+  "kind": "magnitude",
+  "category": "spor",
+  "source": "https://www.wikidata.org/wiki/Q132533",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "worldcup_attendance",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3425",
+  "text": "Tiflis metrosu toplam kaç kilometre uzunluğundadır?",
+  "answer": 27.3,
+  "unit": "km",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q37006",
+  "data_year": 2026,
+  "fun_fact": "Ülke: Gürcistan.",
+  "difficulty": 3,
+  "dataset": "metro_length",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3426",
+  "text": "1930 FIFA Dünya Kupası maçlarını stadyumlarda toplam kaç seyirci izlemiştir?",
+  "answer": 590549,
+  "unit": "seyirci",
+  "kind": "magnitude",
+  "category": "spor",
+  "source": "https://www.wikidata.org/wiki/Q48432",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "worldcup_attendance",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3427",
+  "text": "1986 FIFA Dünya Kupası maçlarını stadyumlarda toplam kaç seyirci izlemiştir?",
+  "answer": 2393031,
+  "unit": "seyirci",
+  "kind": "magnitude",
+  "category": "spor",
+  "source": "https://www.wikidata.org/wiki/Q46938",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "worldcup_attendance",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3428",
+  "text": "1938 FIFA Dünya Kupası maçlarını stadyumlarda toplam kaç seyirci izlemiştir?",
+  "answer": 369720,
+  "unit": "seyirci",
+  "kind": "magnitude",
+  "category": "spor",
+  "source": "https://www.wikidata.org/wiki/Q131591",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "worldcup_attendance",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3429",
+  "text": "1978 FIFA Dünya Kupası maçlarını stadyumlarda toplam kaç seyirci izlemiştir?",
+  "answer": 1546151,
+  "unit": "seyirci",
+  "kind": "magnitude",
+  "category": "spor",
+  "source": "https://www.wikidata.org/wiki/Q46943",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "worldcup_attendance",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3430",
+  "text": "İstanbul Metrosu toplam kaç kilometre uzunluğundadır?",
+  "answer": 144,
+  "unit": "km",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q498172",
+  "data_year": 2026,
+  "fun_fact": "Ülke: Türkiye.",
+  "difficulty": 2,
+  "dataset": "metro_length",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3431",
+  "text": "2019 yılında Bakü metrosu kaç yolcu taşımıştır?",
+  "answer": 229700000,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q213271",
+  "data_year": 2019,
+  "fun_fact": "Ülke: Azerbaycan.",
+  "difficulty": 3,
+  "dataset": "metro_ridership",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3432",
+  "text": "Dufourspitze kaç metre yüksekliktedir?",
+  "answer": 4634,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q3403",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "highest_points",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3433",
+  "text": "1982 FIFA Dünya Kupası maçlarını stadyumlarda toplam kaç seyirci izlemiştir?",
+  "answer": 2109723,
+  "unit": "seyirci",
+  "kind": "magnitude",
+  "category": "spor",
+  "source": "https://www.wikidata.org/wiki/Q46934",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "worldcup_attendance",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3434",
+  "text": "Demavend Dağı kaç metre yüksekliktedir?",
+  "answer": 5610,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q40758",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "highest_points",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3435",
+  "text": "Berlin U-Bahn toplam kaç kilometre uzunluğundadır?",
+  "answer": 156,
+  "unit": "km",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q68646",
+  "data_year": 2026,
+  "fun_fact": "Ülke: Almanya.",
+  "difficulty": 3,
+  "dataset": "metro_length",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3436",
+  "text": "Zugspitze Dağı kaç metre yüksekliktedir?",
+  "answer": 2962,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q3375",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "highest_points",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3437",
+  "text": "Paris metrosu toplam kaç kilometre uzunluğundadır?",
+  "answer": 220,
+  "unit": "km",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q50716",
+  "data_year": 2026,
+  "fun_fact": "Ülke: Fransa.",
+  "difficulty": 3,
+  "dataset": "metro_length",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3438",
+  "text": "2023 yılında Moskova metrosu kaç yolcu taşımıştır?",
+  "answer": 2169434842,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q5499",
+  "data_year": 2023,
+  "fun_fact": "Ülke: Rusya.",
+  "difficulty": 3,
+  "dataset": "metro_ridership",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3439",
+  "text": "1990 FIFA Dünya Kupası maçlarını stadyumlarda toplam kaç seyirci izlemiştir?",
+  "answer": 2516348,
+  "unit": "seyirci",
+  "kind": "magnitude",
+  "category": "spor",
+  "source": "https://www.wikidata.org/wiki/Q132529",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "worldcup_attendance",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3440",
+  "text": "Alagöz Dağı kaç metre yüksekliktedir?",
+  "answer": 4090,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q203568",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "highest_points",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3441",
+  "text": "Taşkent metrosu toplam kaç kilometre uzunluğundadır?",
+  "answer": 59.5,
+  "unit": "km",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q491886",
+  "data_year": 2026,
+  "fun_fact": "Ülke: Özbekistan.",
+  "difficulty": 3,
+  "dataset": "metro_length",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3442",
+  "text": "1998 FIFA Dünya Kupası maçlarını stadyumlarda toplam kaç seyirci izlemiştir?",
+  "answer": 2785100,
+  "unit": "seyirci",
+  "kind": "magnitude",
+  "category": "spor",
+  "source": "https://www.wikidata.org/wiki/Q101730",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "worldcup_attendance",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3443",
+  "text": "2018 FIFA Dünya Kupası maçlarını stadyumlarda toplam kaç seyirci izlemiştir?",
+  "answer": 3031768,
+  "unit": "seyirci",
+  "kind": "magnitude",
+  "category": "spor",
+  "source": "https://www.wikidata.org/wiki/Q170645",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "worldcup_attendance",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3444",
+  "text": "2022 FIFA Dünya Kupası maçlarını stadyumlarda toplam kaç seyirci izlemiştir?",
+  "answer": 3404252,
+  "unit": "seyirci",
+  "kind": "magnitude",
+  "category": "spor",
+  "source": "https://www.wikidata.org/wiki/Q284163",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "worldcup_attendance",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3445",
+  "text": "1994 FIFA Dünya Kupası maçlarını stadyumlarda toplam kaç seyirci izlemiştir?",
+  "answer": 3587538,
+  "unit": "seyirci",
+  "kind": "magnitude",
+  "category": "spor",
+  "source": "https://www.wikidata.org/wiki/Q101751",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "worldcup_attendance",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3446",
+  "text": "2018 yılında Paris metrosu kaç yolcu taşımıştır?",
+  "answer": 1559500000,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q50716",
+  "data_year": 2018,
+  "fun_fact": "Ülke: Fransa.",
+  "difficulty": 3,
+  "dataset": "metro_ridership",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3447",
+  "text": "Baekdu Dağı kaç metre yüksekliktedir?",
+  "answer": 2744,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q107635",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "highest_points",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3448",
+  "text": "2019 yılında Londra metrosu kaç yolcu taşımıştır?",
+  "answer": 1337000000,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q20075",
+  "data_year": 2019,
+  "fun_fact": "Ülke: Birleşik Krallık.",
+  "difficulty": 3,
+  "dataset": "metro_ridership",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3449",
+  "text": "Han Tengri Dağı kaç metre yüksekliktedir?",
+  "answer": 7010,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q211529",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "highest_points",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3450",
+  "text": "2022 yılında New York metrosu kaç yolcu taşımıştır?",
+  "answer": 1793073000,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q7733",
+  "data_year": 2022,
+  "fun_fact": "Ülke: Amerika Birleşik Devletleri.",
+  "difficulty": 3,
+  "dataset": "metro_ridership",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3451",
+  "text": "1974 FIFA Dünya Kupası maçlarını stadyumlarda toplam kaç seyirci izlemiştir?",
+  "answer": 1774022,
+  "unit": "seyirci",
+  "kind": "magnitude",
+  "category": "spor",
+  "source": "https://www.wikidata.org/wiki/Q166121",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "worldcup_attendance",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3452",
+  "text": "2010 FIFA Dünya Kupası maçlarını stadyumlarda toplam kaç seyirci izlemiştir?",
+  "answer": 3178856,
+  "unit": "seyirci",
+  "kind": "magnitude",
+  "category": "spor",
+  "source": "https://www.wikidata.org/wiki/Q176883",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "worldcup_attendance",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3453",
+  "text": "2024 yılında Taşkent metrosu kaç yolcu taşımıştır?",
+  "answer": 270300000,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q491886",
+  "data_year": 2024,
+  "fun_fact": "Ülke: Özbekistan.",
+  "difficulty": 3,
+  "dataset": "metro_ridership",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3454",
+  "text": "1954 FIFA Dünya Kupası maçlarını stadyumlarda toplam kaç seyirci izlemiştir?",
+  "answer": 889500,
+  "unit": "seyirci",
+  "kind": "magnitude",
+  "category": "spor",
+  "source": "https://www.wikidata.org/wiki/Q131075",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "worldcup_attendance",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3455",
+  "text": "2019 yılında İstanbul Metrosu kaç yolcu taşımıştır?",
+  "answer": 495400000,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q498172",
+  "data_year": 2019,
+  "fun_fact": "Ülke: Türkiye.",
+  "difficulty": 3,
+  "dataset": "metro_ridership",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3456",
+  "text": "2018 yılında Ankara Metrosu kaç yolcu taşımıştır?",
+  "answer": 135700000,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q748402",
+  "data_year": 2018,
+  "fun_fact": "Ülke: Türkiye.",
+  "difficulty": 3,
+  "dataset": "metro_ridership",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3457",
+  "text": "2019 yılında Tiflis metrosu kaç yolcu taşımıştır?",
+  "answer": 137700000,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q37006",
+  "data_year": 2019,
+  "fun_fact": "Ülke: Gürcistan.",
+  "difficulty": 3,
+  "dataset": "metro_ridership",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3458",
+  "text": "Gangkhar Puensum kaç metre yüksekliktedir?",
+  "answer": 7570,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q219986",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "highest_points",
+  "scale": {
+   "factor": 3
+  }
  }
 ]
