@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 import '../core/question_timer.dart';
+import '../core/reaction.dart';
 import '../core/scoring.dart';
 
 /// The app's sound effects (assets/sounds/, Ogg Vorbis made by
@@ -42,7 +43,17 @@ enum Sfx {
   duelStart('duel_start'),
   duelWin('duel_win'),
   duelLoss('duel_loss'),
-  duelDraw('duel_draw');
+  duelDraw('duel_draw'),
+
+  /// The quick reactions' fan opens (widgets/reactions.dart).
+  reactOpen('react_open'),
+
+  /// A reaction shows: a message's "bloop", or the face's own voice.
+  reactMessage('react_message'),
+  reactAngry('react_angry'),
+  reactLaugh('react_laugh'),
+  reactSad('react_sad'),
+  reactWow('react_wow');
 
   const Sfx(this.file);
 
@@ -61,6 +72,15 @@ enum Sfx {
     ResultTier.good => good,
     ResultTier.partial => partial,
     ResultTier.miss => miss,
+  };
+
+  /// The sound of a quick reaction.
+  static Sfx ofReaction(Reaction reaction) => switch (reaction) {
+    Reaction.angry => reactAngry,
+    Reaction.laugh => reactLaugh,
+    Reaction.sad => reactSad,
+    Reaction.wow => reactWow,
+    _ => reactMessage,
   };
 }
 

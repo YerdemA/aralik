@@ -1,3 +1,4 @@
+import 'package:aralik/core/reaction.dart';
 import 'package:aralik/core/scoring.dart';
 import 'package:aralik/data/sound.dart';
 import 'package:flutter/services.dart';
@@ -29,6 +30,16 @@ void main() {
     expect(Sfx.of(ResultTier.good), Sfx.good);
     expect(Sfx.of(ResultTier.partial), Sfx.partial);
     expect(Sfx.of(ResultTier.miss), Sfx.miss);
+  });
+
+  test('each face has its own voice; the messages share a bloop', () {
+    expect(Sfx.ofReaction(Reaction.angry), Sfx.reactAngry);
+    expect(Sfx.ofReaction(Reaction.laugh), Sfx.reactLaugh);
+    expect(Sfx.ofReaction(Reaction.sad), Sfx.reactSad);
+    expect(Sfx.ofReaction(Reaction.wow), Sfx.reactWow);
+    for (final r in Reaction.values.where((r) => !r.isFace)) {
+      expect(Sfx.ofReaction(r), Sfx.reactMessage);
+    }
   });
 
   test('the clock ticks once per second in its last five', () {

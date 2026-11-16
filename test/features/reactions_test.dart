@@ -53,11 +53,13 @@ void main() {
         MaterialApp(
           theme: AppTheme.light,
           home: Scaffold(
-            appBar: AppBar(
-              actions: [
-                ReactionButton(
-                  look: MascotLook.philosopher,
-                  onSelected: picked.add,
+            body: Stack(
+              children: [
+                ReactionDock(
+                  child: ReactionButton(
+                    look: MascotLook.philosopher,
+                    onSelected: picked.add,
+                  ),
                 ),
               ],
             ),
@@ -104,6 +106,34 @@ void main() {
     await tester.pumpAndSettle();
     expect(picked, [Reaction.close]);
     expect(find.text(AppStrings.reactionClose), findsNothing);
+  });
+
+  testWidgets('a face moves for a while, then rests', (tester) async {
+    for (final r in Reaction.values.where((r) => r.isFace)) {
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Center(
+            child: ReactionMotion(
+              key: ValueKey(r),
+              reaction: r,
+              child: const SizedBox.square(dimension: 40),
+            ),
+          ),
+        ),
+      );
+      final start = tester.getRect(find.byType(SizedBox).last);
+      await tester.pump();
+      await tester.pump(ReactionMotion.periodOf(r) * 0.3);
+      final moved = find.descendant(
+        of: find.byType(ReactionMotion),
+        matching: find.byType(Transform),
+      );
+      expect(moved, findsWidgets, reason: r.id);
+      // Not a loop: it settles, back where it began.
+      await tester.pumpAndSettle();
+      expect(moved, findsNothing, reason: r.id);
+      expect(tester.getRect(find.byType(SizedBox).last), start);
+    }
   });
 
   testWidgets('letting go outside the panel sends nothing', (tester) async {

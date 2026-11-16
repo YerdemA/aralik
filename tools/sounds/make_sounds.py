@@ -1,7 +1,7 @@
 """Synthesizes the app's sound effects into assets/sounds/ (Ogg Vorbis, mono)
 and assets/sounds/ios/ (IMA4 in CAF, for iOS).
 
-Usage:  python tools/sounds/make_sounds.py
+Usage:  python tools/sounds/make_sounds.py [name ...]
 
 Needs ffmpeg on PATH (winget install Gyan.FFmpeg): each sound is rendered
 to a 16-bit WAV in a temporary folder and encoded to Ogg Vorbis, about a
@@ -10,8 +10,9 @@ play Ogg, so each sound is also encoded to IMA4 ADPCM in a CAF file (a
 quarter of the WAV, no encoder delay, so a tap sounds at once; AVAudioPlayer
 plays it natively).
 
-No samples, no licences: every sound is a few sine partials with an envelope,
-so the files are small and reproducible. Each sound is short and soft; they
+Most sounds are synthesized (a few sine partials with an envelope), so the
+files are small and reproducible. The quick reactions' voices are recorded,
+CC0 from Freesound (SAMPLES). Each sound is short and soft; they
 are mixed at about -6 dBFS and the app plays them at 70 % volume.
 
 lib/data/sound.dart (enum Sfx) names the files; a test checks they exist.
@@ -25,6 +26,7 @@ import struct
 import subprocess
 import sys
 import tempfile
+import urllib.request
 import wave
 from pathlib import Path
 
@@ -93,7 +95,11 @@ WOOD = ((1, 1.0), (3, 0.08))
 
 # Loudness of each sound relative to the others (1 = PEAK). The sounds
 # that come with every tap or page stay well below the game's own.
-GAIN = {"tap": 0.35, "page": 0.3, "back": 0.28, "intro": 0.8}
+GAIN = {
+    "tap": 0.35, "page": 0.3, "back": 0.28, "intro": 0.8,
+    "react_open": 0.4, "react_message": 0.5,
+    "react_angry": 0.75, "react_laugh": 0.7, "react_sad": 0.65, "react_wow": 0.65,
+}
 
 
 def sounds() -> dict[str, list[float]]:
@@ -165,6 +171,11 @@ def sounds() -> dict[str, list[float]]:
             (0.00, tone(note("C5"), 0.35, decay=7, partials=BELL)),
             (0.18, tone(note("C5"), 0.50, decay=6, partials=BELL)),
         ),
+        # The quick reactions' fan opens: a soft rising "fwip".
+        "react_open": mix(
+            (0.00, tone(note("E5"), 0.09, attack=0.006, decay=30, partials=WOOD, glide=0.35)),
+            (0.05, tone(note("B5"), 0.12, attack=0.006, decay=28, partials=WOOD, glide=0.25)),
+        ),
     }
 
 
@@ -198,8 +209,53 @@ def encode_ios(wav: Path, caf: Path, ffmpeg: str) -> None:
     )
 
 
+# Recorded sounds (2026-11-16: the synthesized reaction voices sounded
+# mechanical). All from Freesound under CC0, so no attribution is needed; the
+# source is kept here anyway. The preview is downloaded once into
+# tools/raw/freesound/ (committed, so the build does not depend on the site),
+# then trimmed of its leading silence, cut to [seconds] with a short fade and
+# peak-normalized like the synthesized ones.
+SAMPLES = {
+    "react_message": ("221091", "AlaskaRobotics", "cartoon pop or drip",
+                      "https://cdn.freesound.org/previews/221/221091_1282865-hq.mp3", 0.4),
+    "react_angry": ("445120", "Breviceps", "Cartoon - Chihuahua Snarl",
+                    "https://cdn.freesound.org/previews/445/445120_9159316-hq.mp3", 1.2),
+    "react_sad": ("727358", "kanyonwyvern", "disappointed aww",
+                  "https://cdn.freesound.org/previews/727/727358_15125504-hq.mp3", 2.0),
+    "react_laugh": ("267159", "contramundum", "ha ha ha ha ha ha ha ha",
+                    "https://cdn.freesound.org/previews/267/267159_5028876-hq.mp3", 1.4),
+    "react_wow": ("436108", "DrFortyseven", "Oh! (Male)",
+                  "https://cdn.freesound.org/previews/436/436108_729251-hq.mp3", 1.2),
+}
+SAMPLE_DIR = ROOT / "tools" / "raw" / "freesound"
+
+
+def sample(name: str, tmp: Path, ffmpeg: str) -> list[float]:
+    sid, _user, _title, url, seconds = SAMPLES[name]
+    raw = SAMPLE_DIR / f"{sid}.mp3"
+    if not raw.exists():
+        SAMPLE_DIR.mkdir(parents=True, exist_ok=True)
+        req = urllib.request.Request(url, headers={"User-Agent": "kabaca-tools"})
+        raw.write_bytes(urllib.request.urlopen(req, timeout=30).read())
+    wav = tmp / f"{name}.src.wav"
+    subprocess.run(
+        [ffmpeg, "-y", "-loglevel", "error", "-i", str(raw), "-ac", "1", "-ar", str(RATE),
+         "-af", f"silenceremove=start_periods=1:start_threshold=-45dB,atrim=0:{seconds},"
+                f"afade=t=out:st={seconds - 0.08}:d=0.08",
+         "-c:a", "pcm_s16le", str(wav)],
+        check=True,
+    )
+    with wave.open(str(wav), "rb") as f:
+        frames = f.readframes(f.getnframes())
+    return [v / 32768 for (v,) in struct.iter_unpack("<h", frames)]
+
+
 def main() -> int:
+    """Makes every sound, or only those named on the command line (Vorbis
+    files differ byte for byte on each run, so untouched sounds are best
+    left alone)."""
     sys.stdout.reconfigure(encoding="utf-8")
+    only = set(sys.argv[1:])
     ffmpeg = shutil.which("ffmpeg")
     if not ffmpeg:
         print("ffmpeg bulunamadı: winget install Gyan.FFmpeg")
@@ -210,7 +266,12 @@ def main() -> int:
         old.unlink()
     total = 0
     with tempfile.TemporaryDirectory() as tmp:
-        for name, samples in sounds().items():
+        made = {**sounds(), **{name: None for name in SAMPLES}}
+        for name, samples in made.items():
+            if only and name not in only:
+                continue
+            if name in SAMPLES:
+                samples = sample(name, Path(tmp), ffmpeg)
             wav = Path(tmp) / f"{name}.wav"
             write(wav, samples, GAIN.get(name, 1.0))
             path = OUT / f"{name}.ogg"

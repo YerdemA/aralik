@@ -695,10 +695,6 @@ class _DuelScreenState extends State<DuelScreen> {
                   ],
                 ),
           actions: [
-            if (_session != null &&
-                _match.opponentName.isNotEmpty &&
-                error == null)
-              ReactionButton(look: _match.myLook, onSelected: _react),
             // Report or block the opponent at any time; the result view
             // has its own button.
             if (_match.opponentName.isNotEmpty &&
@@ -755,6 +751,15 @@ class _DuelScreenState extends State<DuelScreen> {
                   ],
                 ),
               ),
+              if (_session != null &&
+                  _match.opponentName.isNotEmpty &&
+                  error == null)
+                ReactionDock(
+                  child: ReactionButton(
+                    look: _match.myLook,
+                    onSelected: _react,
+                  ),
+                ),
               // The opponent dropped during a question: it goes on; a note
               // says so without covering it.
               if (_match.opponentAway &&

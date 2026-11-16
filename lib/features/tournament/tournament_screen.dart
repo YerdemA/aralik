@@ -531,11 +531,6 @@ class _TournamentScreenState extends State<TournamentScreen> {
                 : AppStrings.tournament,
           ),
           actions: [
-            if (_session != null &&
-                room.you != null &&
-                room.players.length > 1 &&
-                error == null)
-              ReactionButton(look: room.lookOf(room.you!), onSelected: _react),
             ValueListenableBuilder(
               valueListenable: _left,
               builder: (context, left, _) => left == null
@@ -572,6 +567,16 @@ class _TournamentScreenState extends State<TournamentScreen> {
                   ],
                 ),
               ),
+              if (_session != null &&
+                  room.you != null &&
+                  room.players.length > 1 &&
+                  error == null)
+                ReactionDock(
+                  child: ReactionButton(
+                    look: room.lookOf(room.you!),
+                    onSelected: _react,
+                  ),
+                ),
               if (room.reconnecting && error == null)
                 const Positioned.fill(child: _ReconnectingCover()),
             ],
