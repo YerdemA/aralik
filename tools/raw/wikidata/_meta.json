@@ -4,6 +4,18 @@
  "license": "CC0 1.0",
  "license_url": "https://www.wikidata.org/wiki/Wikidata:Licensing",
  "datasets": {
+  "aircraft_produced": {
+   "description": "Uçak modelleri, üretilen adet (P1092)",
+   "fetched_at": "2026-11-16T12:59:52+00:00"
+  },
+  "aircraft_wingspan": {
+   "description": "Uçak modelleri, kanat açıklığı (P2050)",
+   "fetched_at": "2026-11-16T12:58:58+00:00"
+  },
+  "airports_passengers": {
+   "description": "Havalimanları, yıllık yolcu (P3872, yılı P585)",
+   "fetched_at": "2026-11-16T12:57:00+00:00"
+  },
   "animals_lifespan": {
    "description": "Hayvan türleri, beklenen yaşam süresi (P2250)",
    "fetched_at": "2026-10-26T15:23:34+00:00"
@@ -52,6 +64,10 @@
    "description": "Adalar, yüzölçümü (P2046)",
    "fetched_at": "2026-11-06T11:18:41+00:00"
   },
+  "lakes_depth": {
+   "description": "Göller, en derin nokta (P4511)",
+   "fetched_at": "2026-11-16T13:01:17+00:00"
+  },
   "lakes_world": {
    "description": "Dünyadaki göller, yüzölçümü (P2046)",
    "fetched_at": "2026-11-06T11:21:38+00:00"
@@ -72,6 +88,10 @@
    "description": "Türkiye illeri, yüzölçümü (P2046)",
    "fetched_at": "2026-11-06T11:15:45+00:00"
   },
+  "rockets_height": {
+   "description": "Roketler ve fırlatma araçları, yükseklik (P2048)",
+   "fetched_at": "2026-11-16T13:02:35+00:00"
+  },
   "skyscrapers_floors": {
    "description": "Gökdelenler, yer üstü kat sayısı (P1101)",
    "fetched_at": "2026-11-16T12:10:14+00:00"
@@ -83,6 +103,10 @@
   "solar_radius": {
    "description": "Güneş, gezegenler, cüce gezegenler ve büyük uydular, ortalama yarıçap (P2120)",
    "fetched_at": "2026-11-06T11:23:22+00:00"
+  },
+  "spacecraft_mass": {
+   "description": "Uzay teleskopları ve istasyonları, kütle (P2067)",
+   "fetched_at": "2026-11-16T13:00:25+00:00"
   },
   "stadiums_world": {
    "description": "Dünyadaki stadyumlar, kapasite (P1083)",

@@ -1,0 +1,478 @@
+{
+ "dataset": "spacecraft_mass",
+ "description": "Uzay teleskopları ve istasyonları, kütle (P2067)",
+ "property": "P2067",
+ "fetched_at": "2026-11-16T13:00:25+00:00",
+ "rows": [
+  {
+   "qid": "Q2513",
+   "label": "Hubble Uzay Teleskobu",
+   "links": 115,
+   "value": 11110.0,
+   "rank": "normal",
+   "value_year": 1990,
+   "tr_title": "Hubble Uzay Teleskobu",
+   "tr_views": 15888
+  },
+  {
+   "qid": "Q2513",
+   "label": "Hubble Uzay Teleskobu",
+   "links": 115,
+   "value": 12247.0,
+   "rank": "preferred",
+   "value_year": 2009,
+   "tr_title": "Hubble Uzay Teleskobu",
+   "tr_views": 15888
+  },
+  {
+   "qid": "Q186447",
+   "label": "James Webb Uzay Teleskopu",
+   "links": 105,
+   "value": 6161.42,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "James Webb Uzay Teleskobu",
+   "tr_views": 15118
+  },
+  {
+   "qid": "Q48604",
+   "label": "Mir",
+   "links": 87,
+   "value": 129700.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mir",
+   "tr_views": 7215
+  },
+  {
+   "qid": "Q47272",
+   "label": "Kepler",
+   "links": 77,
+   "value": 11.7,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kepler uzay teleskobu",
+   "tr_views": 1956
+  },
+  {
+   "qid": "Q47272",
+   "label": "Kepler",
+   "links": 77,
+   "value": 478.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kepler uzay teleskobu",
+   "tr_views": 1956
+  },
+  {
+   "qid": "Q47272",
+   "label": "Kepler",
+   "links": 77,
+   "value": 1040.7,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kepler uzay teleskobu",
+   "tr_views": 1956
+  },
+  {
+   "qid": "Q47272",
+   "label": "Kepler",
+   "links": 77,
+   "value": 1052.4,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Kepler uzay teleskobu",
+   "tr_views": 1956
+  },
+  {
+   "qid": "Q190776",
+   "label": "Skylab",
+   "links": 70,
+   "value": 76295.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Skylab",
+   "tr_views": 1906
+  },
+  {
+   "qid": "Q201953",
+   "label": "Spitzer Uzay Teleskobu",
+   "links": 63,
+   "value": 15.6,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Spitzer Uzay Teleskobu",
+   "tr_views": 999
+  },
+  {
+   "qid": "Q201953",
+   "label": "Spitzer Uzay Teleskobu",
+   "links": 63,
+   "value": 851.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Spitzer Uzay Teleskobu",
+   "tr_views": 999
+  },
+  {
+   "qid": "Q201953",
+   "label": "Spitzer Uzay Teleskobu",
+   "links": 63,
+   "value": 884.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Spitzer Uzay Teleskobu",
+   "tr_views": 999
+  },
+  {
+   "qid": "Q201953",
+   "label": "Spitzer Uzay Teleskobu",
+   "links": 63,
+   "value": 950.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Spitzer Uzay Teleskobu",
+   "tr_views": 999
+  },
+  {
+   "qid": "Q49002",
+   "label": "Chandra X-ışını Gözlemevi",
+   "links": 55,
+   "value": 976.6,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Chandra X ışını Gözlemevi",
+   "tr_views": 472
+  },
+  {
+   "qid": "Q49002",
+   "label": "Chandra X-ışını Gözlemevi",
+   "links": 55,
+   "value": 4789.9,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Chandra X ışını Gözlemevi",
+   "tr_views": 472
+  },
+  {
+   "qid": "Q49002",
+   "label": "Chandra X-ışını Gözlemevi",
+   "links": 55,
+   "value": 5864.9,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Chandra X ışını Gözlemevi",
+   "tr_views": 472
+  },
+  {
+   "qid": "Q209630",
+   "label": "Herschel Uzay Gözlemevi",
+   "links": 52,
+   "value": 3400.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Herschel Uzay Gözlemevi",
+   "tr_views": 306
+  },
+  {
+   "qid": "Q5100935",
+   "label": "Tiangong uzay istasyonu",
+   "links": 51,
+   "value": 100000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tiangong uzay istasyonu",
+   "tr_views": 2759
+  },
+  {
+   "qid": "Q131500",
+   "label": "Tiangong 1",
+   "links": 49,
+   "value": 8506.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tiangong 1",
+   "tr_views": 319
+  },
+  {
+   "qid": "Q7998593",
+   "label": "Nancy Grace Roman Uzay Teleskobu",
+   "links": 44,
+   "value": 107.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nancy Grace Roman Uzay Teleskobu",
+   "tr_views": 1474
+  },
+  {
+   "qid": "Q7998593",
+   "label": "Nancy Grace Roman Uzay Teleskobu",
+   "links": 44,
+   "value": 4059.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nancy Grace Roman Uzay Teleskobu",
+   "tr_views": 1474
+  },
+  {
+   "qid": "Q7998593",
+   "label": "Nancy Grace Roman Uzay Teleskobu",
+   "links": 44,
+   "value": 4166.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Nancy Grace Roman Uzay Teleskobu",
+   "tr_views": 1474
+  },
+  {
+   "qid": "Q211761",
+   "label": "Salyut 1",
+   "links": 43,
+   "value": 18200.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Salyut 1",
+   "tr_views": 1244
+  },
+  {
+   "qid": "Q274106",
+   "label": "Wilkinson Microwave Anisotropy Probe",
+   "links": 42,
+   "value": 763.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Wilkinson Microwave Anisotropy Probe",
+   "tr_views": 473
+  },
+  {
+   "qid": "Q274106",
+   "label": "Wilkinson Microwave Anisotropy Probe",
+   "links": 42,
+   "value": 835.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Wilkinson Microwave Anisotropy Probe",
+   "tr_views": 473
+  },
+  {
+   "qid": "Q555846",
+   "label": "Hipparcos",
+   "links": 42,
+   "value": 635.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hipparcos",
+   "tr_views": 3065
+  },
+  {
+   "qid": "Q555846",
+   "label": "Hipparcos",
+   "links": 42,
+   "value": 1140.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hipparcos",
+   "tr_views": 3065
+  },
+  {
+   "qid": "Q320638",
+   "label": "Solar and Heliospheric Observatory",
+   "links": 40,
+   "value": 1850.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Solar and Heliospheric Observatory",
+   "tr_views": 217
+  },
+  {
+   "qid": "Q724913",
+   "label": "IRAS",
+   "links": 40,
+   "value": 1073.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "IRAS",
+   "tr_views": 144
+  },
+  {
+   "qid": "Q725309",
+   "label": "Planck (uzay aracı)",
+   "links": 38,
+   "value": 1950.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Planck (uzay aracı)",
+   "tr_views": 142
+  },
+  {
+   "qid": "Q693552",
+   "label": "WISE Teleskopu - Wide-field Infrared Survey Explorer",
+   "links": 37,
+   "value": 661.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "WISE Teleskobu - Geniş Alan Kızılötesi Araştırma Gezgini",
+   "tr_views": 237
+  },
+  {
+   "qid": "Q29098442",
+   "label": "Ay Geçidi",
+   "links": 36,
+   "value": 63000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ay Geçidi",
+   "tr_views": 777
+  },
+  {
+   "qid": "Q3122598",
+   "label": "Tiangong-2",
+   "links": 35,
+   "value": 8600.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tiangong-2",
+   "tr_views": 222
+  },
+  {
+   "qid": "Q41519",
+   "label": "Compton Gama Işını Gözlemevi",
+   "links": 35,
+   "value": 15620.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Compton Gama Işını Gözlemevi",
+   "tr_views": 128
+  },
+  {
+   "qid": "Q578497",
+   "label": "Euclid",
+   "links": 32,
+   "value": 1988.1,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Euclid (uzay aracı)",
+   "tr_views": 300
+  },
+  {
+   "qid": "Q841586",
+   "label": "Salyut 4",
+   "links": 30,
+   "value": 18500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Salyut 4",
+   "tr_views": 141
+  },
+  {
+   "qid": "Q613601",
+   "label": "Salyut 6",
+   "links": 28,
+   "value": 19824.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Salyut 6",
+   "tr_views": 394
+  },
+  {
+   "qid": "Q842637",
+   "label": "Salyut 3",
+   "links": 28,
+   "value": 18500.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Salyut 3",
+   "tr_views": 203
+  },
+  {
+   "qid": "Q904503",
+   "label": "Salyut 7",
+   "links": 28,
+   "value": 19824.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Salyut 7",
+   "tr_views": 2903
+  },
+  {
+   "qid": "Q2463",
+   "label": "Advanced Composition Explorer",
+   "links": 26,
+   "value": 596.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Advanced Composition Explorer",
+   "tr_views": 111
+  },
+  {
+   "qid": "Q838179",
+   "label": "Salyut 2",
+   "links": 26,
+   "value": 18600.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Salyut 2",
+   "tr_views": 156
+  },
+  {
+   "qid": "Q586893",
+   "label": "Yohkoh",
+   "links": 24,
+   "value": 390.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yohkoh",
+   "tr_views": 42
+  },
+  {
+   "qid": "Q23770",
+   "label": "BeppoSAX",
+   "links": 23,
+   "value": 480.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "BeppoSAX",
+   "tr_views": 53
+  },
+  {
+   "qid": "Q23770",
+   "label": "BeppoSAX",
+   "links": 23,
+   "value": 1400.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "BeppoSAX",
+   "tr_views": 53
+  },
+  {
+   "qid": "Q1420942",
+   "label": "Cosmos 557",
+   "links": 22,
+   "value": 19400.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cosmos 557",
+   "tr_views": 120
+  },
+  {
+   "qid": "Q54375",
+   "label": "Suzaku",
+   "links": 22,
+   "value": 1680.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suzaku (teleskop)",
+   "tr_views": 62
+  },
+  {
+   "qid": "Q1043322",
+   "label": "Salyut 5",
+   "links": 20,
+   "value": 19000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Salyut 5",
+   "tr_views": 209
+  }
+ ]
+}

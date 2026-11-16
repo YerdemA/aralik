@@ -19,7 +19,8 @@
     "animals_mass", "animals_lifespan", "provinces_area", "islands_world",
     "lakes_world", "bridges_world", "solar_radius", "planets_orbit",
     "places_tr", "places_world", "cities_tr_elevation", "capitals_elevation",
-    "stadiums_world", "museums_visitors", "films_duration", "tunnels"
+    "stadiums_world", "museums_visitors", "films_duration", "tunnels",
+    "airports_passengers", "aircraft_wingspan", "aircraft_produced", "spacecraft_mass", "lakes_depth"
    ]
   },
   {
@@ -164,7 +165,7 @@
    "attribution": "Kaynak: Eurostat (demo_nind, demo_find, demo_pjanind, road_eqs_carhab, env_wasmun, yth_demo_030, ilc_lvph01, ilc_lvho02), erişim 2026-11-06",
    "status": "in_use",
    "raw_dir": "eurostat",
-   "datasets": ["es_first_marriage", "es_first_child", "es_births_outside_marriage", "es_median_age", "es_cars", "es_municipal_waste", "es_leaving_home", "es_household_size", "es_home_owners"]
+   "datasets": ["es_first_marriage", "es_first_child", "es_births_outside_marriage", "es_median_age", "es_cars", "es_municipal_waste", "es_leaving_home", "es_household_size", "es_home_owners", "es_renewables", "es_employment"]
   },
   {
    "id": "tuik",

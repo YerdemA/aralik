@@ -1087,3 +1087,22 @@
 2|135|uçuş|en:Space Shuttle|missions|Uzay mekiği programında toplam kaç uçuş yapılmıştır?
 3|781|kişi|en:Astronaut|100 km|Mayıs 2026 itibarıyla kaç kişi 100 kilometrenin üzerine çıkarak uzaya gitmiştir?
 2|25.8|milyar km|en:Voyager 1|october 2026|Ekim 2026 itibarıyla Voyager 1 kaç milyar kilometre uzaktadır?
+# --- 2026-11-16, üçüncü parti ---
+# body_curated|vücut
+2|120|gün|en:Red blood cell|days|Bir kırmızı kan hücresi en fazla kaç gün dolaşımda kalır?
+2|1.5|kg|en:Liver|weighs|Yetişkin bir insanın karaciğeri yaklaşık kaç kilogramdır?
+2|600|kas|en:Skeletal muscle|600|İnsan vücudunda yaklaşık kaç iskelet kası vardır?
+
+# transport_curated|ulaşım
+2|193.3|km|en:Suez Canal|193.30|Süveyş Kanalı kaç kilometre uzunluğundadır?
+2|9289|km|en:Trans-Siberian Railway|9,289|Trans-Sibirya Demiryolu kaç kilometre uzunluğundadır?
+2|57.09|km|en:Gotthard Base Tunnel|km|Dünyanın en uzun demiryolu tüneli Gotthard Ana Tüneli kaç kilometredir?
+2|603|km/h|en:SCMaglev|603|Manyetik raylı (maglev) trenlerin hız rekoru saatte kaç kilometredir?
+1|1435|mm|en:Standard-gauge railway|1,435|Standart demiryolu hattında iki ray arası kaç milimetredir?
+
+# space_curated|uzay
+2|4.6|milyar yıl|en:Sun|4.6 billion|Güneş yaklaşık kaç milyar yaşındadır?
+2|108|dakika|en:Vostok 1|108 minutes|Yuri Gagarin'in ilk uzay uçuşu kaç dakika sürmüştür?
+2|2.5|milyon ışık yılı|en:Andromeda Galaxy|million light-years|Andromeda Galaksisi bize kaç milyon ışık yılı uzaklıktadır?
+1|88|takımyıldız|en:Constellation|88|Gökyüzü resmî olarak kaç takımyıldıza bölünmüştür?
+2|6.5|m|en:James Webb Space Telescope|mirror|James Webb Uzay Teleskobu'nun ana aynasının çapı kaç metredir?

@@ -1,0 +1,148 @@
+{
+ "dataset": "rockets_height",
+ "description": "Roketler ve fırlatma araçları, yükseklik (P2048)",
+ "property": "P2048",
+ "fetched_at": "2026-11-16T13:02:35+00:00",
+ "rows": [
+  {
+   "qid": "Q48806",
+   "label": "Uzay mekiği",
+   "links": 103,
+   "value": 56.1,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Space Shuttle",
+   "tr_views": 5012
+  },
+  {
+   "qid": "Q48806",
+   "label": "Uzay mekiği",
+   "links": 103,
+   "value": 56.1086,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Space Shuttle",
+   "tr_views": 5012
+  },
+  {
+   "qid": "Q54363",
+   "label": "Saturn V",
+   "links": 62,
+   "value": 104.86,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saturn V",
+   "tr_views": 4675
+  },
+  {
+   "qid": "Q54363",
+   "label": "Saturn V",
+   "links": 62,
+   "value": 110.65,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Saturn V",
+   "tr_views": 4675
+  },
+  {
+   "qid": "Q262629",
+   "label": "Vega",
+   "links": 39,
+   "value": 30.1,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vega (roket)",
+   "tr_views": 421
+  },
+  {
+   "qid": "Q622762",
+   "label": "N1 roketi",
+   "links": 39,
+   "value": 105.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "N1 roketi",
+   "tr_views": 934
+  },
+  {
+   "qid": "Q1360911",
+   "label": "GSLV Mk III",
+   "links": 31,
+   "value": 43.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "GSLV Mk III",
+   "tr_views": 272
+  },
+  {
+   "qid": "Q18375",
+   "label": "Ariane 1",
+   "links": 31,
+   "value": 47.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ariane 1",
+   "tr_views": 119
+  },
+  {
+   "qid": "Q3339012",
+   "label": "New Shepard",
+   "links": 31,
+   "value": 18.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "New Shepard",
+   "tr_views": 157
+  },
+  {
+   "qid": "Q18379",
+   "label": "Ariane 2",
+   "links": 27,
+   "value": 49.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ariane 2",
+   "tr_views": 73
+  },
+  {
+   "qid": "Q18381",
+   "label": "Ariane 3",
+   "links": 27,
+   "value": 49.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ariane 3",
+   "tr_views": 70
+  },
+  {
+   "qid": "Q60580",
+   "label": "H-IIB",
+   "links": 23,
+   "value": 56.6,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "H-IIB",
+   "tr_views": 204
+  },
+  {
+   "qid": "Q1662192",
+   "label": "Atalet üst kademesi",
+   "links": 16,
+   "value": 5.17,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Atalet üst kademesi",
+   "tr_views": 81
+  },
+  {
+   "qid": "Q593091",
+   "label": "Transtage (roket üst kademesi)",
+   "links": 12,
+   "value": 4.57,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Transtage (roket üst kademesi)",
+   "tr_views": 36
+  }
+ ]
+}

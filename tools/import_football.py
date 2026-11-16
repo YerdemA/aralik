@@ -52,7 +52,10 @@ TOURNAMENTS = [
     ("euro2024", "euro.json", "2024/euro.json", "Euro 2024'te toplam kaç gol atıldı?", 2024, 2),
 ]
 
-LEAGUES = {"en.1": ("Premier Lig", 2), "es.1": ("La Liga", 3), "de.1": ("Bundesliga", 3), "it.1": ("Serie A", 3)}
+LEAGUES = {
+    "en.1": ("Premier Lig", 2), "es.1": ("La Liga", 3), "de.1": ("Bundesliga", 3), "it.1": ("Serie A", 3),
+    "tr.1": ("Süper Lig", 1),
+}
 
 
 def seasons(first: int, last: int = 2024) -> list[str]:
@@ -67,6 +70,9 @@ SEASONS = {
     "es.1": ["2012-13", *seasons(2020)],
     "de.1": ["2012-13", *seasons(2020)],
     "it.1": ["2013-14", *seasons(2020)],
+    # Only these Süper Lig seasons are in openfootball (2026-11-16); 2020-21
+    # ends level on points and is skipped.
+    "tr.1": ["2018-19", "2019-20", "2020-21", "2024-25"],
 }
 
 TEAM_NAMES = {
@@ -78,6 +84,8 @@ TEAM_NAMES = {
     "Bayer 04 Leverkusen": "Bayer Leverkusen", "Borussia Dortmund": "Borussia Dortmund",
     "Juventus": "Juventus", "FC Internazionale Milano": "Inter", "Inter": "Inter",
     "AC Milan": "Milan", "SSC Napoli": "Napoli",
+    "Galatasaray": "Galatasaray", "İstanbul Başakşehir": "Başakşehir", "Beşiktaş": "Beşiktaş",
+    "Fenerbahçe": "Fenerbahçe",
 }
 
 # Official totals, only to catch a broken file (the answer is computed).

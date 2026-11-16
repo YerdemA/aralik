@@ -58,6 +58,12 @@ EXCLUDED = {
     "Q206881": "Etiketi 'Kilis Merkez' (ilçe adı).",
     "Q5411040": "Avrasya Tüneli q1337'de soruluyor (deniz altındaki bölüm).",
     "Q48768542": "Marmaray Tüneli q1344'te soruluyor.",
+    "Q126307": "Van Gölü'nün derinliği Wikidata'da 171 m; doğrusu 451 m (q2017'de soruluyor).",
+    "Q1334148": "Eğirdir Gölü'nün derinliği Wikidata'da 10 m, kaynaklarda 13-16 m.",
+    "Q2513": "Hubble'ın kütlesi Wikidata'da 12.247 kg, Vikipedi'de 11.110 kg.",
+    "Q29098442": "Ay Geçidi henüz yapılmadı.",
+    "Q180285": "B-2'den 21 adet üretildi; Wikidata 33 diyor.",
+    "Q3661908": "İstanbul Havalimanı'nın 2025 yolcusu q2239'da soruluyor.",
     "Q737945": "Cidde Kulesi henüz tamamlanmadı; 1008 m planlanan yükseklik.",
     "Q41553": "Rodos Heykeli artık yok; şimdiki zamanla sorulamaz.",
     "Q4180162": "Karapınar Düzlüğü bir dağ değil.",
@@ -418,6 +424,31 @@ def film_duration(e: Entity, fetched_year: int) -> dict | None:
 film_duration.__qualname__ = "film_duration"
 
 
+ENDED_PRODUCTION = {
+    "McDonnell Douglas F-4 Phantom II", "F-14 Tomcat", "Fairchild-Republic A-10 Thunderbolt II",
+    "B-52 Stratofortress", "Boeing 747", "F-117 Nighthawk", "Lockheed U-2", "Messerschmitt Me 262",
+    "Su-27", "Lockheed F-104 Starfighter", "Panavia Tornado", "Boeing E-3 Sentry", "Bell UH-1 Iroquois",
+    "B-1 Lancer", "F-22 Raptor", "Boeing C-17 Globemaster III", "Concorde",
+}
+
+
+def aircraft_produced(e: Entity, fetched_year: int) -> dict | None:
+    """A dated count gets its year in the text (production may go on);
+    an undated one is asked only when every statement agrees."""
+    dated = magnitude("{year} yılına kadar {label} uçağından kaç adet üretilmiştir?", "adet", "ulaşım", latest_year=True, minimum=10, min_data_year=2015, fact=no_fact)
+    q = dated(e, fetched_year)
+    if q is not None or any(r["value_year"] is not None for r in e.rows):
+        return q
+    # Undated counts only for programmes that have ended (checked by hand
+    # 2026-11-16); for the others the count is stale (737 MAX: 370).
+    if e.label not in ENDED_PRODUCTION:
+        return None
+    return magnitude("{label} uçağından toplam kaç adet üretilmiştir?", "adet", "ulaşım", minimum=10, fact=no_fact)(e, fetched_year)
+
+
+aircraft_produced.__qualname__ = "aircraft_produced"
+
+
 def abroad(template: Template) -> Template:
     """Skip items in Turkey: structures_tr asks them under "türkiye"."""
 
@@ -762,6 +793,13 @@ PLAN: list[Step] = [
     # office towers, and the famous ones are in architecture_sizes already.
     Step("museums_visitors", outside_pandemic(magnitude("{year} yılında {label} kaç ziyaretçi ağırlamıştır?", "kişi", "sanat", latest_year=True, minimum=100000, min_data_year=2018)), 40, 1000),
     Step("films_duration", film_duration, 120, 5000),
+    Step("airports_passengers", outside_pandemic(magnitude("{year} yılında {label} kaç yolcuya hizmet vermiştir?", "kişi", "ulaşım", latest_year=True, minimum=1_000_000, min_data_year=2018)), 60, 1000),
+    Step("aircraft_wingspan", magnitude("{label} uçağının kanat açıklığı kaç metredir?", "m", "ulaşım", minimum=10, fact=no_fact), 40, 500),
+    Step("aircraft_produced", aircraft_produced, 40, 500),
+    # rockets_height: fetched, not used: only 4 rockets with a Turkish
+    # article and a height, and their labels already say "roketi".
+    Step("spacecraft_mass", magnitude("{label} kaç kilogramdır?", "kg", "uzay", minimum=100, fact=no_fact), 20, 1000),
+    Step("lakes_depth", magnitude("{label} en derin yerinde kaç metredir?", "m", "coğrafya", minimum=10, suffix=("Gölü", ("Göl", "Gölü", "Denizi"))), 40, 900),
     Step("tunnels", magnitude("{label} kaç metre uzunluğundadır?", "m", "ulaşım", minimum=500), 40, 1000),
 ]
 

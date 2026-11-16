@@ -529,6 +529,63 @@ DATASETS += [
         extras={"place": ("wdt:P131", "label"), "country": ("wdt:P17", "label")},
         per_type_scan=False,
     ),
+    # Fourth batch (2026-11-16): transport and space; ids checked that day:
+    # P3872 patronage, P2050 wingspan, P1092 total produced, P4511 vertical
+    # depth, Q1248784 airport, Q644371 international airport, Q15056995
+    # aircraft model, Q15056993 aircraft family, Q41291 rocket, Q697175
+    # launch vehicle, Q148578 space telescope, Q25956 space station.
+    Dataset(
+        name="airports_passengers",
+        description="Havalimanları, yıllık yolcu (P3872, yılı P585)",
+        types=("Q1248784", "Q644371"),
+        prop="P3872",
+        limit=200,
+        normalized=False,
+        extras={"place": ("wdt:P131", "label"), "country": ("wdt:P17", "label")},
+        per_type_scan=False,
+    ),
+    Dataset(
+        name="aircraft_wingspan",
+        description="Uçak modelleri, kanat açıklığı (P2050)",
+        types=("Q15056995", "Q15056993"),
+        prop="P2050",
+        limit=200,
+        per_type_scan=False,
+    ),
+    Dataset(
+        name="aircraft_produced",
+        description="Uçak modelleri, üretilen adet (P1092)",
+        types=("Q15056995", "Q15056993"),
+        prop="P1092",
+        limit=200,
+        normalized=False,
+        per_type_scan=False,
+    ),
+    Dataset(
+        name="rockets_height",
+        description="Roketler ve fırlatma araçları, yükseklik (P2048)",
+        types=("Q41291", "Q697175", "Q110055303"),  # + rocket model (Saturn V)
+        prop="P2048",
+        limit=150,
+        per_type_scan=False,
+    ),
+    Dataset(
+        name="spacecraft_mass",
+        description="Uzay teleskopları ve istasyonları, kütle (P2067)",
+        types=("Q148578", "Q25956"),
+        prop="P2067",
+        limit=80,
+        per_type_scan=False,
+    ),
+    Dataset(
+        name="lakes_depth",
+        description="Göller, en derin nokta (P4511)",
+        types=("Q23397", "Q188025"),
+        prop="P4511",
+        limit=200,
+        extras={"country": ("wdt:P17", "label")},
+        per_type_scan=False,
+    ),
     Dataset(
         name="solar_radius",
         description="Güneş, gezegenler, cüce gezegenler ve büyük uydular, ortalama yarıçap (P2120)",

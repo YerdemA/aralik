@@ -326,3 +326,130 @@
 173756;calcium;3;Chickpeas (garbanzo beans, bengal gram), mature seeds, raw;kuru nohutta
 169097;calcium;3;Oranges, raw, all commercial varieties;portakalda
 169230;calcium;3;Garlic, raw;sarımsakta
+# --- 2026-11-16 üçüncü parti: yeni yiyecekler (besinler değerlere göre seçildi) ---
+173418;energy;2;Cheese, cream;krem peynirde
+171098;energy;2;Turkey, whole, breast, meat only, raw;çiğ hindi göğsünde
+169451;energy;2;Beef, variety meats and by-products, liver, raw;çiğ dana ciğerinde
+172390;energy;2;Chicken, broilers or fryers, wing, meat and skin, raw;derili çiğ tavuk kanadında
+173717;energy;2;Fish, trout, rainbow, farmed, raw;çiğ çiftlik alabalığında
+174223;energy;3;Mollusks, squid, mixed species, raw;çiğ kalamarda
+174218;energy;3;Mollusks, octopus, common, raw;çiğ ahtapotta
+174915;energy;2;Bread, pita, white, enriched;beyaz pide ekmeğinde (pita)
+169704;energy;2;Rice, brown, long-grain, cooked;haşlanmış esmer pirinçte
+169700;energy;2;Couscous, cooked;haşlanmış kuskusta
+174990;energy;2;Doughnuts, cake-type, plain;sade donatta
+174648;energy;2;Cereals ready-to-eat, RALSTON Corn Flakes;mısır gevreğinde
+170591;energy;2;Nuts, pine nuts, dried;dolmalık fıstıkta (çam fıstığı)
+170554;energy;3;Seeds, chia seeds, dried;chia tohumunda
+169414;energy;3;Seeds, flaxseed;keten tohumunda
+170150;energy;2;Seeds, sesame seeds, whole, dried;susamda
+167755;energy;2;Raspberries, raw;ahudududa
+171711;energy;2;Blueberries, raw;yaban mersininde
+173946;energy;2;Blackberries, raw;böğürtlende
+173954;energy;2;Cherries, sour, red, raw;vişnede
+167747;energy;2;Lemon juice, raw;taze limon suyunda
+173933;energy;2;Apple juice, canned or bottled, unsweetened;şekersiz elma suyunda
+170859;energy;2;Cream, fluid, heavy whipping;çırpma kremasında
+168558;energy;2;Pickles, cucumber, dill or kosher dill;salatalık turşusunda
+170459;energy;2;Tomato products, canned, paste, without salt;tuzsuz domates salçasında
+172234;energy;2;Mustard, prepared, yellow;hardalda
+174277;energy;3;Soy sauce made from soy and wheat (shoyu);soya sosunda
+169988;energy;2;Celery, raw;çiğ sap kerevizde
+169276;energy;2;Radishes, raw;kırmızı turpta
+169205;energy;3;Artichokes, (globe or french), raw;çiğ enginarda
+169260;energy;2;Okra, raw;çiğ bamyada
+168389;energy;3;Asparagus, raw;çiğ kuşkonmazda
+169387;energy;2;Arugula, raw;rokada
+172233;energy;3;Dill weed, fresh;taze dereotunda
+173475;energy;3;Spearmint, fresh;taze nanede
+169231;energy;3;Ginger root, raw;taze zencefilde
+169991;energy;3;Chard, swiss, raw;çiğ pazıda
+168421;energy;3;Kale, raw;çiğ karalahanada
+167995;energy;2;Candies, marshmallows;marshmallowda
+167989;energy;2;Candies, gumdrops, starch jelly pieces;jelibonda
+169661;energy;2;Syrups, maple;akçaağaç şurubunda
+174831;energy;2;Beverages, Coconut water, ready-to-drink, unsweetened;şekersiz hindistancevizi suyunda
+168778;energy;2;Puddings, chocolate, ready-to-eat;hazır çikolatalı pudingde
+168576;energy;2;Peppers, jalapeno, raw;çiğ jalapeno biberinde
+175202;energy;2;Beans, white, mature seeds, raw;kuru beyaz fasulyede
+171955;energy;3;Fish, cod, Atlantic, raw;çiğ morinada
+173706;energy;3;Fish, tuna, fresh, bluefin, raw;çiğ taze orkinosta
+173862;energy;2;Frankfurter, beef, unheated;dana sosiste
+170317;energy;2;Pizza, cheese topping, regular crust, frozen, cooked;pişmiş dondurulmuş peynirli pizzada
+173418;fat;2;Cheese, cream;krem peynirde
+173418;sodium;3;Cheese, cream;krem peynirde
+171098;protein;2;Turkey, whole, breast, meat only, raw;çiğ hindi göğsünde
+169451;protein;2;Beef, variety meats and by-products, liver, raw;çiğ dana ciğerinde
+172390;fat;2;Chicken, broilers or fryers, wing, meat and skin, raw;derili çiğ tavuk kanadında
+172390;protein;2;Chicken, broilers or fryers, wing, meat and skin, raw;derili çiğ tavuk kanadında
+173717;fat;2;Fish, trout, rainbow, farmed, raw;çiğ çiftlik alabalığında
+173717;protein;2;Fish, trout, rainbow, farmed, raw;çiğ çiftlik alabalığında
+174223;protein;2;Mollusks, squid, mixed species, raw;çiğ kalamarda
+174218;protein;2;Mollusks, octopus, common, raw;çiğ ahtapotta
+174915;sodium;3;Bread, pita, white, enriched;beyaz pide ekmeğinde (pita)
+174990;sugars;2;Doughnuts, cake-type, plain;sade donatta
+174990;fat;2;Doughnuts, cake-type, plain;sade donatta
+174990;sodium;3;Doughnuts, cake-type, plain;sade donatta
+174648;sugars;2;Cereals ready-to-eat, RALSTON Corn Flakes;mısır gevreğinde
+174648;sodium;3;Cereals ready-to-eat, RALSTON Corn Flakes;mısır gevreğinde
+170591;fat;2;Nuts, pine nuts, dried;dolmalık fıstıkta (çam fıstığı)
+170591;protein;2;Nuts, pine nuts, dried;dolmalık fıstıkta (çam fıstığı)
+170591;fiber;3;Nuts, pine nuts, dried;dolmalık fıstıkta (çam fıstığı)
+170554;fat;2;Seeds, chia seeds, dried;chia tohumunda
+170554;protein;2;Seeds, chia seeds, dried;chia tohumunda
+170554;fiber;3;Seeds, chia seeds, dried;chia tohumunda
+170554;calcium;3;Seeds, chia seeds, dried;chia tohumunda
+169414;fat;2;Seeds, flaxseed;keten tohumunda
+169414;protein;2;Seeds, flaxseed;keten tohumunda
+169414;fiber;3;Seeds, flaxseed;keten tohumunda
+169414;calcium;3;Seeds, flaxseed;keten tohumunda
+170150;fat;2;Seeds, sesame seeds, whole, dried;susamda
+170150;protein;2;Seeds, sesame seeds, whole, dried;susamda
+170150;fiber;3;Seeds, sesame seeds, whole, dried;susamda
+170150;calcium;3;Seeds, sesame seeds, whole, dried;susamda
+167755;fiber;3;Raspberries, raw;ahudududa
+167755;vitamin_c;3;Raspberries, raw;ahudududa
+171711;sugars;2;Blueberries, raw;yaban mersininde
+173946;fiber;3;Blackberries, raw;böğürtlende
+173946;vitamin_c;3;Blackberries, raw;böğürtlende
+173954;sugars;2;Cherries, sour, red, raw;vişnede
+167747;vitamin_c;3;Lemon juice, raw;taze limon suyunda
+173933;sugars;2;Apple juice, canned or bottled, unsweetened;şekersiz elma suyunda
+170859;fat;2;Cream, fluid, heavy whipping;çırpma kremasında
+168558;sodium;3;Pickles, cucumber, dill or kosher dill;salatalık turşusunda
+170459;sugars;2;Tomato products, canned, paste, without salt;tuzsuz domates salçasında
+170459;fiber;3;Tomato products, canned, paste, without salt;tuzsuz domates salçasında
+170459;vitamin_c;3;Tomato products, canned, paste, without salt;tuzsuz domates salçasında
+172234;fiber;3;Mustard, prepared, yellow;hardalda
+172234;sodium;3;Mustard, prepared, yellow;hardalda
+174277;sodium;3;Soy sauce made from soy and wheat (shoyu);soya sosunda
+169205;fiber;3;Artichokes, (globe or french), raw;çiğ enginarda
+169260;fiber;3;Okra, raw;çiğ bamyada
+169260;vitamin_c;3;Okra, raw;çiğ bamyada
+169387;calcium;3;Arugula, raw;rokada
+172233;calcium;3;Dill weed, fresh;taze dereotunda
+172233;vitamin_c;3;Dill weed, fresh;taze dereotunda
+173475;fiber;3;Spearmint, fresh;taze nanede
+173475;calcium;3;Spearmint, fresh;taze nanede
+169991;vitamin_c;3;Chard, swiss, raw;çiğ pazıda
+168421;fiber;3;Kale, raw;çiğ karalahanada
+168421;calcium;3;Kale, raw;çiğ karalahanada
+168421;vitamin_c;3;Kale, raw;çiğ karalahanada
+167995;sugars;2;Candies, marshmallows;marshmallowda
+167989;sugars;2;Candies, gumdrops, starch jelly pieces;jelibonda
+169661;sugars;2;Syrups, maple;akçaağaç şurubunda
+169661;calcium;3;Syrups, maple;akçaağaç şurubunda
+168778;sugars;2;Puddings, chocolate, ready-to-eat;hazır çikolatalı pudingde
+168576;vitamin_c;3;Peppers, jalapeno, raw;çiğ jalapeno biberinde
+175202;protein;2;Beans, white, mature seeds, raw;kuru beyaz fasulyede
+175202;fiber;3;Beans, white, mature seeds, raw;kuru beyaz fasulyede
+175202;calcium;3;Beans, white, mature seeds, raw;kuru beyaz fasulyede
+171955;protein;2;Fish, cod, Atlantic, raw;çiğ morinada
+173706;protein;2;Fish, tuna, fresh, bluefin, raw;çiğ taze orkinosta
+173862;fat;2;Frankfurter, beef, unheated;dana sosiste
+173862;protein;2;Frankfurter, beef, unheated;dana sosiste
+173862;sodium;3;Frankfurter, beef, unheated;dana sosiste
+170317;fat;2;Pizza, cheese topping, regular crust, frozen, cooked;pişmiş dondurulmuş peynirli pizzada
+170317;protein;2;Pizza, cheese topping, regular crust, frozen, cooked;pişmiş dondurulmuş peynirli pizzada
+170317;sodium;3;Pizza, cheese topping, regular crust, frozen, cooked;pişmiş dondurulmuş peynirli pizzada
+170317;calcium;3;Pizza, cheese topping, regular crust, frozen, cooked;pişmiş dondurulmuş peynirli pizzada

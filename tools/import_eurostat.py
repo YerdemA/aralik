@@ -105,6 +105,22 @@ INDICATORS = {
         "{year} verilerine göre {loc} bir hanede ortalama kaç kişi yaşamaktadır?",
         "kişi", 1, "es_household_size",
     ),
+    # 2026-11-16
+    "renewables": Indicator(
+        "nrg_ind_ren", (("freq", "A"), ("nrg_bal", "REN"), ("unit", "PC")),
+        "{year} yılında {loc} tüketilen enerjinin yüzde kaçı yenilenebilir kaynaklardan gelmiştir?",
+        "%", 1, "es_renewables",
+    ),
+    "employment": Indicator(
+        "lfsi_emp_a", (("freq", "A"), ("indic_em", "EMP_LFS"), ("sex", "T"), ("age", "Y20-64"), ("unit", "PC_POP")),
+        "{year} verilerine göre {loc} 20-64 yaş arasındakilerin yüzde kaçı çalışmaktadır?",
+        "%", 1, "es_employment",
+    ),
+    "unemployment": Indicator(
+        "une_rt_a", (("freq", "A"), ("age", "Y15-74"), ("unit", "PC_ACT"), ("sex", "T")),
+        "{year} yılında {loc} işsizlik oranı yüzde kaçtır?",
+        "%", 1, "es_unemployment",
+    ),
     "home_owners": Indicator(
         "ilc_lvho02",
         (("freq", "A"), ("rskpovth", "TOTAL"), ("hhcomp", "TOTAL"), ("tenure", "OWN"), ("unit", "PC")),
@@ -148,6 +164,11 @@ COUNTRIES = {
 # (indicator, country, difficulty). Values flagged provisional (p) or with a
 # different definition (d) are avoided where another country will do.
 QUESTIONS: list[tuple[str, str, int]] = [
+    # 2026-11-16
+    *(("renewables", c, 2) for c in "SE NO DE FR IT ES PL NL PT EL".split()),
+    *(("employment", c, 2) for c in "TR DE IT EL NL ES SE".split()),
+    # Not unemployment: rates of 3-10 % sit inside the fixed ±20-point
+    # slider of percentages, a sure hit (2026-11-16).
     *(("first_marriage_f", c, d) for c, d in [
         ("TR", 2), ("IT", 3), ("ES", 3), ("SE", 3), ("EL", 3), ("HU", 3), ("NL", 3),
         # 2026-11-16

@@ -1,0 +1,2248 @@
+{
+ "dataset": "aircraft_wingspan",
+ "description": "Uçak modelleri, kanat açıklığı (P2050)",
+ "property": "P2050",
+ "fetched_at": "2026-11-16T12:58:58+00:00",
+ "rows": [
+  {
+   "qid": "Q5830",
+   "label": "Airbus A380",
+   "links": 102,
+   "value": 79.8,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Airbus A380",
+   "tr_views": 48678
+  },
+  {
+   "qid": "Q6387",
+   "label": "Boeing 737",
+   "links": 89,
+   "value": 34.3,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boeing 737",
+   "tr_views": 35980
+  },
+  {
+   "qid": "Q179",
+   "label": "Boeing 747",
+   "links": 88,
+   "value": 59.64,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boeing 747",
+   "tr_views": 26075
+  },
+  {
+   "qid": "Q6505",
+   "label": "Concorde",
+   "links": 87,
+   "value": 25.56,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Concorde",
+   "tr_views": 32382
+  },
+  {
+   "qid": "Q100026",
+   "label": "General Dynamics F-16 Fighting Falcon",
+   "links": 85,
+   "value": 9.45,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "General Dynamics F-16 Fighting Falcon",
+   "tr_views": 123580
+  },
+  {
+   "qid": "Q100026",
+   "label": "General Dynamics F-16 Fighting Falcon",
+   "links": 85,
+   "value": 9.96,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "General Dynamics F-16 Fighting Falcon",
+   "tr_views": 123580
+  },
+  {
+   "qid": "Q133324",
+   "label": "F-22 Raptor",
+   "links": 83,
+   "value": 13.56,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Lockheed Martin F-22 Raptor",
+   "tr_views": 68410
+  },
+  {
+   "qid": "Q133324",
+   "label": "F-22 Raptor",
+   "links": 83,
+   "value": 13.5636267,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lockheed Martin F-22 Raptor",
+   "tr_views": 68410
+  },
+  {
+   "qid": "Q6428",
+   "label": "Boeing 787",
+   "links": 76,
+   "value": 52.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boeing 787",
+   "tr_views": 17052
+  },
+  {
+   "qid": "Q180285",
+   "label": "B-2 Spirit",
+   "links": 75,
+   "value": 52.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Northrop Grumman B-2 Spirit",
+   "tr_views": 99003
+  },
+  {
+   "qid": "Q130681",
+   "label": "MiG-29",
+   "links": 73,
+   "value": 11.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mikoyan MiG-29",
+   "tr_views": 27611
+  },
+  {
+   "qid": "Q130681",
+   "label": "MiG-29",
+   "links": 73,
+   "value": 11.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mikoyan MiG-29",
+   "tr_views": 27611
+  },
+  {
+   "qid": "Q6394",
+   "label": "Boeing 707",
+   "links": 72,
+   "value": 44.2,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boeing 707",
+   "tr_views": 8837
+  },
+  {
+   "qid": "Q150609",
+   "label": "MiG-21",
+   "links": 71,
+   "value": 7.15,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mikoyan-Gureviç MiG-21",
+   "tr_views": 7959
+  },
+  {
+   "qid": "Q178351",
+   "label": "Antonov An-225",
+   "links": 71,
+   "value": 88.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Antonov An-225 Mriya",
+   "tr_views": 25982
+  },
+  {
+   "qid": "Q6475",
+   "label": "Airbus A320",
+   "links": 71,
+   "value": 34.1,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Airbus A320 ailesi",
+   "tr_views": 24313
+  },
+  {
+   "qid": "Q174534",
+   "label": "B-52 Stratofortress",
+   "links": 70,
+   "value": 56.42,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boeing B-52 Stratofortress",
+   "tr_views": 31970
+  },
+  {
+   "qid": "Q182027",
+   "label": "Lockheed C-130 Hercules",
+   "links": 70,
+   "value": 40.41,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lockheed C-130 Hercules",
+   "tr_views": 122665
+  },
+  {
+   "qid": "Q190973",
+   "label": "Dassault Rafale",
+   "links": 70,
+   "value": 10.86,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dassault Rafale",
+   "tr_views": 29537
+  },
+  {
+   "qid": "Q172957",
+   "label": "Tupolev Tu-154",
+   "links": 69,
+   "value": 37.55,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tupolev Tu-154",
+   "tr_views": 6329
+  },
+  {
+   "qid": "Q173680",
+   "label": "Su-27",
+   "links": 69,
+   "value": 14.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suhoy Su-27",
+   "tr_views": 15866
+  },
+  {
+   "qid": "Q173680",
+   "label": "Su-27",
+   "links": 69,
+   "value": 14.7,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suhoy Su-27",
+   "tr_views": 15866
+  },
+  {
+   "qid": "Q6409",
+   "label": "Boeing 727",
+   "links": 69,
+   "value": 32.9,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boeing 727",
+   "tr_views": 6631
+  },
+  {
+   "qid": "Q29251",
+   "label": "McDonnell Douglas F-15 Eagle",
+   "links": 68,
+   "value": 13.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "McDonnell Douglas F-15 Eagle",
+   "tr_views": 50638
+  },
+  {
+   "qid": "Q29251",
+   "label": "McDonnell Douglas F-15 Eagle",
+   "links": 68,
+   "value": 13.04,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "McDonnell Douglas F-15 Eagle",
+   "tr_views": 50638
+  },
+  {
+   "qid": "Q151384",
+   "label": "Eurofighter Typhoon",
+   "links": 67,
+   "value": 10.95,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Eurofighter Typhoon",
+   "tr_views": 100217
+  },
+  {
+   "qid": "Q204331",
+   "label": "Su-30",
+   "links": 67,
+   "value": 14.7,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suhoy Su-30",
+   "tr_views": 14196
+  },
+  {
+   "qid": "Q6478",
+   "label": "Airbus A330",
+   "links": 66,
+   "value": 60.3,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Airbus A330",
+   "tr_views": 19967
+  },
+  {
+   "qid": "Q185000",
+   "label": "Boeing B-17 Flying Fortress",
+   "links": 65,
+   "value": 31.6,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boeing B-17 Flying Fortress",
+   "tr_views": 4147
+  },
+  {
+   "qid": "Q6423",
+   "label": "Boeing 767",
+   "links": 65,
+   "value": 47.57,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boeing 767",
+   "tr_views": 8112
+  },
+  {
+   "qid": "Q200038",
+   "label": "Dassault Mirage 2000",
+   "links": 64,
+   "value": 9.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dassault Mirage 2000",
+   "tr_views": 12538
+  },
+  {
+   "qid": "Q184491",
+   "label": "F-117 Nighthawk",
+   "links": 63,
+   "value": 13.21,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lockheed F-117 Nighthawk",
+   "tr_views": 14480
+  },
+  {
+   "qid": "Q34945",
+   "label": "F-14 Tomcat",
+   "links": 63,
+   "value": 19.55,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Grumman F-14 Tomcat",
+   "tr_views": 24314
+  },
+  {
+   "qid": "Q6481",
+   "label": "Airbus A340",
+   "links": 63,
+   "value": 60.3,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Airbus A340",
+   "tr_views": 8899
+  },
+  {
+   "qid": "Q6481",
+   "label": "Airbus A340",
+   "links": 63,
+   "value": 63.45,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Airbus A340",
+   "tr_views": 8899
+  },
+  {
+   "qid": "Q181815",
+   "label": "Tupolev Tu-95",
+   "links": 62,
+   "value": 48.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tupolev Tu-95",
+   "tr_views": 8656
+  },
+  {
+   "qid": "Q181815",
+   "label": "Tupolev Tu-95",
+   "links": 62,
+   "value": 50.1,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tupolev Tu-95",
+   "tr_views": 8656
+  },
+  {
+   "qid": "Q6418",
+   "label": "Boeing 757",
+   "links": 62,
+   "value": 37.95,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boeing 757",
+   "tr_views": 5913
+  },
+  {
+   "qid": "Q6484",
+   "label": "Airbus A350",
+   "links": 62,
+   "value": 64.75,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Airbus A350",
+   "tr_views": 16453
+  },
+  {
+   "qid": "Q150088",
+   "label": "Saab JAS-39 Gripen",
+   "links": 61,
+   "value": 8.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saab JAS 39 Gripen",
+   "tr_views": 24958
+  },
+  {
+   "qid": "Q151432",
+   "label": "McDonnell Douglas F-4 Phantom II",
+   "links": 61,
+   "value": 11.68,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "McDonnell Douglas F-4 Phantom II",
+   "tr_views": 64532
+  },
+  {
+   "qid": "Q151432",
+   "label": "McDonnell Douglas F-4 Phantom II",
+   "links": 61,
+   "value": 11.76,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "McDonnell Douglas F-4 Phantom II",
+   "tr_views": 64532
+  },
+  {
+   "qid": "Q184870",
+   "label": "Boeing B-29 Superfortress",
+   "links": 61,
+   "value": 43.06,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boeing B-29 Superfortress",
+   "tr_views": 7192
+  },
+  {
+   "qid": "Q187377",
+   "label": "Mikoyan-Gurevich MiG-15",
+   "links": 61,
+   "value": 10.08,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mikoyan-Gureviç MiG-15",
+   "tr_views": 6112
+  },
+  {
+   "qid": "Q245275",
+   "label": "Su-35",
+   "links": 61,
+   "value": 15.3,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suhoy Su-35",
+   "tr_views": 24476
+  },
+  {
+   "qid": "Q6437",
+   "label": "Airbus A300",
+   "links": 61,
+   "value": 44.84,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Airbus A300",
+   "tr_views": 6305
+  },
+  {
+   "qid": "Q155639",
+   "label": "Messerschmitt Bf 109",
+   "links": 60,
+   "value": 9.925,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Messerschmitt Bf 109",
+   "tr_views": 8486
+  },
+  {
+   "qid": "Q210413",
+   "label": "Sukhoi Su-24",
+   "links": 60,
+   "value": 17.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suhoy Su-24",
+   "tr_views": 15505
+  },
+  {
+   "qid": "Q150050",
+   "label": "MiG-31",
+   "links": 59,
+   "value": 13.46,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mikoyan MiG-31",
+   "tr_views": 10542
+  },
+  {
+   "qid": "Q150050",
+   "label": "MiG-31",
+   "links": 59,
+   "value": 14.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mikoyan MiG-31",
+   "tr_views": 10542
+  },
+  {
+   "qid": "Q191111",
+   "label": "Tupolev Tu-160",
+   "links": 59,
+   "value": 55.7,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tupolev Tu-160",
+   "tr_views": 9648
+  },
+  {
+   "qid": "Q199570",
+   "label": "MiG-25",
+   "links": 59,
+   "value": 12.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mikoyan-Gureviç MiG-25",
+   "tr_views": 8252
+  },
+  {
+   "qid": "Q199570",
+   "label": "MiG-25",
+   "links": 59,
+   "value": 14.01,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mikoyan-Gureviç MiG-25",
+   "tr_views": 8252
+  },
+  {
+   "qid": "Q155679",
+   "label": "Mikoyan-Gurevich MiG-23",
+   "links": 58,
+   "value": 13.97,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mikoyan-Gureviç MiG-23",
+   "tr_views": 6747
+  },
+  {
+   "qid": "Q192075",
+   "label": "North American P-51 Mustang",
+   "links": 58,
+   "value": 11.28,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "North American P-51 Mustang",
+   "tr_views": 4492
+  },
+  {
+   "qid": "Q194455",
+   "label": "PAK FA",
+   "links": 58,
+   "value": 14.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suhoy Su-57",
+   "tr_views": 37988
+  },
+  {
+   "qid": "Q142549",
+   "label": "İlyuşin İl-76",
+   "links": 57,
+   "value": 50.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İlyuşin İl-76",
+   "tr_views": 10934
+  },
+  {
+   "qid": "Q190211",
+   "label": "Douglas DC-3",
+   "links": 57,
+   "value": 28.956,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Douglas DC-3",
+   "tr_views": 8308
+  },
+  {
+   "qid": "Q190211",
+   "label": "Douglas DC-3",
+   "links": 57,
+   "value": 28.96,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Douglas DC-3",
+   "tr_views": 8308
+  },
+  {
+   "qid": "Q190114",
+   "label": "Lockheed SR-71 Blackbird",
+   "links": 56,
+   "value": 16.942,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lockheed SR-71 Blackbird",
+   "tr_views": 27365
+  },
+  {
+   "qid": "Q192137",
+   "label": "Sukhoi Su-25",
+   "links": 56,
+   "value": 14.3,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suhoy Su-25",
+   "tr_views": 12533
+  },
+  {
+   "qid": "Q152976",
+   "label": "MiG-17",
+   "links": 55,
+   "value": 9.63,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mikoyan-Gureviç MiG-17",
+   "tr_views": 3295
+  },
+  {
+   "qid": "Q192443",
+   "label": "Fairchild-Republic A-10 Thunderbolt II",
+   "links": 55,
+   "value": 17.53,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fairchild Republic A-10 Thunderbolt II",
+   "tr_views": 27879
+  },
+  {
+   "qid": "Q193487",
+   "label": "Antonov An-124 Ruslan",
+   "links": 55,
+   "value": 73.3,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Antonov An-124 Ruslan",
+   "tr_views": 8310
+  },
+  {
+   "qid": "Q153826",
+   "label": "F-86 Sabre",
+   "links": 54,
+   "value": 11.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "North American F-86 Sabre",
+   "tr_views": 5840
+  },
+  {
+   "qid": "Q309177",
+   "label": "Sukhoi Su-34",
+   "links": 54,
+   "value": 14.7,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suhoy Su-34",
+   "tr_views": 9661
+  },
+  {
+   "qid": "Q6401",
+   "label": "Boeing 717",
+   "links": 54,
+   "value": 28.47,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boeing 717",
+   "tr_views": 4031
+  },
+  {
+   "qid": "Q6471",
+   "label": "Airbus A310",
+   "links": 54,
+   "value": 43.9,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Airbus A310",
+   "tr_views": 5725
+  },
+  {
+   "qid": "Q140254",
+   "label": "Messerschmitt Me 262",
+   "links": 53,
+   "value": 12.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Messerschmitt Me 262",
+   "tr_views": 13935
+  },
+  {
+   "qid": "Q207089",
+   "label": "Republic P-47",
+   "links": 53,
+   "value": 12.42,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Republic P-47 Thunderbolt",
+   "tr_views": 4354
+  },
+  {
+   "qid": "Q207700",
+   "label": "Antonov An-2 uçağı",
+   "links": 53,
+   "value": 18.18,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Antonov An-2",
+   "tr_views": 2738
+  },
+  {
+   "qid": "Q26795",
+   "label": "Junkers Ju 87",
+   "links": 53,
+   "value": 13.805,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Junkers Ju 87",
+   "tr_views": 6774
+  },
+  {
+   "qid": "Q172913",
+   "label": "Lockheed P-38 Lightning",
+   "links": 52,
+   "value": 15.85,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lockheed P-38 Lightning",
+   "tr_views": 2857
+  },
+  {
+   "qid": "Q153307",
+   "label": "MiG-19",
+   "links": 51,
+   "value": 9.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mikoyan-Gureviç MiG-19",
+   "tr_views": 1775
+  },
+  {
+   "qid": "Q155661",
+   "label": "Junkers Ju 88",
+   "links": 51,
+   "value": 20.08,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Junkers Ju 88",
+   "tr_views": 1671
+  },
+  {
+   "qid": "Q211369",
+   "label": "Boeing C-17 Globemaster III",
+   "links": 51,
+   "value": 52.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boeing C-17 Globemaster III",
+   "tr_views": 18217
+  },
+  {
+   "qid": "Q6486",
+   "label": "Airbus A300-600ST Beluga",
+   "links": 51,
+   "value": 44.84,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Airbus Beluga",
+   "tr_views": 5220
+  },
+  {
+   "qid": "Q154532",
+   "label": "Heinkel He 111",
+   "links": 50,
+   "value": 22.6,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Heinkel He 111",
+   "tr_views": 3901
+  },
+  {
+   "qid": "Q159067",
+   "label": "Tupolev Tu-134",
+   "links": 50,
+   "value": 29.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tupolev Tu-134",
+   "tr_views": 1846
+  },
+  {
+   "qid": "Q17501733",
+   "label": "Bayraktar TB2",
+   "links": 50,
+   "value": 12.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Baykar Bayraktar TB2",
+   "tr_views": 62580
+  },
+  {
+   "qid": "Q220529",
+   "label": "MiG-35",
+   "links": 50,
+   "value": 15.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mikoyan MiG-35",
+   "tr_views": 10943
+  },
+  {
+   "qid": "Q244479",
+   "label": "Cessna 172",
+   "links": 50,
+   "value": 10.92,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cessna 172",
+   "tr_views": 4828
+  },
+  {
+   "qid": "Q271446",
+   "label": "MiG-3",
+   "links": 50,
+   "value": 10.2,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mikoyan-Gureviç MiG-3",
+   "tr_views": 1409
+  },
+  {
+   "qid": "Q816695",
+   "label": "MQ-9 Reaper",
+   "links": 50,
+   "value": 20.1,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "General Atomics MQ-9 Reaper",
+   "tr_views": 13835
+  },
+  {
+   "qid": "Q182012",
+   "label": "Lockheed C-5 Galaxy",
+   "links": 49,
+   "value": 67.88,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lockheed C-5 Galaxy",
+   "tr_views": 10606
+  },
+  {
+   "qid": "Q182012",
+   "label": "Lockheed C-5 Galaxy",
+   "links": 49,
+   "value": 67.89,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lockheed C-5 Galaxy",
+   "tr_views": 10606
+  },
+  {
+   "qid": "Q203622",
+   "label": "Avro Lancaster",
+   "links": 49,
+   "value": 31.0896612,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avro Lancaster",
+   "tr_views": 1005
+  },
+  {
+   "qid": "Q206409",
+   "label": "Curtiss P-40 Warhawk",
+   "links": 49,
+   "value": 11.38,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Curtiss P-40 Warhawk",
+   "tr_views": 1340
+  },
+  {
+   "qid": "Q221344",
+   "label": "De Havilland DH-98",
+   "links": 49,
+   "value": 16.52,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "De Havilland DH-98",
+   "tr_views": 750
+  },
+  {
+   "qid": "Q208075",
+   "label": "McDonnell Douglas DC-10",
+   "links": 48,
+   "value": 50.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "McDonnell Douglas DC-10",
+   "tr_views": 10905
+  },
+  {
+   "qid": "Q208075",
+   "label": "McDonnell Douglas DC-10",
+   "links": 48,
+   "value": 50.41,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "McDonnell Douglas DC-10",
+   "tr_views": 10905
+  },
+  {
+   "qid": "Q218637",
+   "label": "ATR 42",
+   "links": 48,
+   "value": 24.57,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "ATR 42",
+   "tr_views": 2148
+  },
+  {
+   "qid": "Q6496",
+   "label": "Airbus A400M",
+   "links": 48,
+   "value": 42.36,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Airbus A400M Atlas",
+   "tr_views": 43255
+  },
+  {
+   "qid": "Q217935",
+   "label": "V-22 Osprey",
+   "links": 47,
+   "value": 14.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bell Boeing V-22 Osprey",
+   "tr_views": 5734
+  },
+  {
+   "qid": "Q223315",
+   "label": "Douglas DC-8",
+   "links": 47,
+   "value": 43.41,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Douglas DC-8",
+   "tr_views": 1809
+  },
+  {
+   "qid": "Q223315",
+   "label": "Douglas DC-8",
+   "links": 47,
+   "value": 45.24,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Douglas DC-8",
+   "tr_views": 1809
+  },
+  {
+   "qid": "Q234069",
+   "label": "MiG-27",
+   "links": 47,
+   "value": 14.25,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mikoyan MiG-27",
+   "tr_views": 2928
+  },
+  {
+   "qid": "Q465806",
+   "label": "F4U Corsair",
+   "links": 47,
+   "value": 12.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vought F4U Corsair",
+   "tr_views": 1995
+  },
+  {
+   "qid": "Q159881",
+   "label": "Lockheed F-104 Starfighter",
+   "links": 46,
+   "value": 6.36,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lockheed F-104 Starfighter",
+   "tr_views": 14396
+  },
+  {
+   "qid": "Q159881",
+   "label": "Lockheed F-104 Starfighter",
+   "links": 46,
+   "value": 6.68,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lockheed F-104 Starfighter",
+   "tr_views": 14396
+  },
+  {
+   "qid": "Q182575",
+   "label": "İlyuşin İl-62",
+   "links": 46,
+   "value": 43.2,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İlyuşin İl-62",
+   "tr_views": 1481
+  },
+  {
+   "qid": "Q198024",
+   "label": "MQ-1 Predator",
+   "links": 46,
+   "value": 14.8,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "General Atomics MQ-1 Predator",
+   "tr_views": 3482
+  },
+  {
+   "qid": "Q271559",
+   "label": "Antonov An-12",
+   "links": 46,
+   "value": 37.9984,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Antonov An-12",
+   "tr_views": 3595
+  },
+  {
+   "qid": "Q271559",
+   "label": "Antonov An-12",
+   "links": 46,
+   "value": 38.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Antonov An-12",
+   "tr_views": 3595
+  },
+  {
+   "qid": "Q465903",
+   "label": "Grumman F6F Hellcat",
+   "links": 46,
+   "value": 13.06,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Grumman F6F Hellcat",
+   "tr_views": 874
+  },
+  {
+   "qid": "Q62156",
+   "label": "Antonov An-26",
+   "links": 46,
+   "value": 29.1973,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Antonov An-26",
+   "tr_views": 3669
+  },
+  {
+   "qid": "Q192779",
+   "label": "Tupolev Tu-16",
+   "links": 45,
+   "value": 32.93,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tupolev Tu-16",
+   "tr_views": 2328
+  },
+  {
+   "qid": "Q192779",
+   "label": "Tupolev Tu-16",
+   "links": 45,
+   "value": 33.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tupolev Tu-16",
+   "tr_views": 2328
+  },
+  {
+   "qid": "Q204944",
+   "label": "Tupolev Tu-22M",
+   "links": 45,
+   "value": 34.3,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tupolev Tu-22M",
+   "tr_views": 4848
+  },
+  {
+   "qid": "Q220759",
+   "label": "Consolidated B-24 Liberator",
+   "links": 45,
+   "value": 34.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Consolidated B-24 Liberator",
+   "tr_views": 1704
+  },
+  {
+   "qid": "Q34775",
+   "label": "Focke-Wulf Fw 190",
+   "links": 45,
+   "value": 10.2,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Focke-Wulf Fw 190",
+   "tr_views": 5856
+  },
+  {
+   "qid": "Q183146",
+   "label": "Suhoy Su-17",
+   "links": 44,
+   "value": 13.7,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suhoy Su-17",
+   "tr_views": 4095
+  },
+  {
+   "qid": "Q26066",
+   "label": "Junkers Ju 52",
+   "links": 44,
+   "value": 29.25,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Junkers Ju 52",
+   "tr_views": 1206
+  },
+  {
+   "qid": "Q261384",
+   "label": "Boeing E-3 Sentry",
+   "links": 44,
+   "value": 44.42,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boeing E-3 Sentry",
+   "tr_views": 12816
+  },
+  {
+   "qid": "Q272571",
+   "label": "İlyuşin İl-96",
+   "links": 44,
+   "value": 60.11,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İlyuşin İl-96",
+   "tr_views": 3876
+  },
+  {
+   "qid": "Q431231",
+   "label": "AC-130",
+   "links": 44,
+   "value": 40.41,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lockheed AC-130",
+   "tr_views": 13695
+  },
+  {
+   "qid": "Q464247",
+   "label": "MiG-1",
+   "links": 44,
+   "value": 10.2,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mikoyan-Gureviç MiG-1",
+   "tr_views": 945
+  },
+  {
+   "qid": "Q502117",
+   "label": "North American B-25 Mitchell",
+   "links": 44,
+   "value": 20.6,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "North American B-25 Mitchell",
+   "tr_views": 2792
+  },
+  {
+   "qid": "Q560319",
+   "label": "Chengdu J-20",
+   "links": 44,
+   "value": 15.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Chengdu J-20",
+   "tr_views": 22648
+  },
+  {
+   "qid": "Q579939",
+   "label": "Antonov An-32",
+   "links": 44,
+   "value": 29.2,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Antonov An-32",
+   "tr_views": 2203
+  },
+  {
+   "qid": "Q62161",
+   "label": "McDonnell Douglas MD-11",
+   "links": 44,
+   "value": 51.66,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "McDonnell Douglas MD-11",
+   "tr_views": 6425
+  },
+  {
+   "qid": "Q62167",
+   "label": "İlyuşin İl-86",
+   "links": 44,
+   "value": 48.06,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İlyuşin İl-86",
+   "tr_views": 1780
+  },
+  {
+   "qid": "Q170199",
+   "label": "Suhoy Su-7",
+   "links": 43,
+   "value": 8.9,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suhoy Su-7",
+   "tr_views": 2685
+  },
+  {
+   "qid": "Q170199",
+   "label": "Suhoy Su-7",
+   "links": 43,
+   "value": 8.93,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suhoy Su-7",
+   "tr_views": 2685
+  },
+  {
+   "qid": "Q223365",
+   "label": "Bell X-1",
+   "links": 43,
+   "value": 8.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bell X-1",
+   "tr_views": 3378
+  },
+  {
+   "qid": "Q234371",
+   "label": "Dassault Mirage III",
+   "links": 43,
+   "value": 8.22,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dassault Mirage III",
+   "tr_views": 6524
+  },
+  {
+   "qid": "Q505663",
+   "label": "Yakovlev Yak-40",
+   "links": 43,
+   "value": 25.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yakovlev Yak-40",
+   "tr_views": 1131
+  },
+  {
+   "qid": "Q607444",
+   "label": "Antonov An-22",
+   "links": 43,
+   "value": 64.4,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Antonov An-22",
+   "tr_views": 2654
+  },
+  {
+   "qid": "Q607444",
+   "label": "Antonov An-22",
+   "links": 43,
+   "value": 64.4144,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Antonov An-22",
+   "tr_views": 2654
+  },
+  {
+   "qid": "Q852",
+   "label": "Lockheed L-1011 Tristar",
+   "links": 43,
+   "value": 47.34,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lockheed L-1011 Tristar",
+   "tr_views": 2745
+  },
+  {
+   "qid": "Q155360",
+   "label": "Messerschmitt Me 163",
+   "links": 42,
+   "value": 9.3,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Messerschmitt Me 163",
+   "tr_views": 3241
+  },
+  {
+   "qid": "Q155490",
+   "label": "Lockheed P-3 Orion",
+   "links": 42,
+   "value": 30.37,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lockheed P-3 Orion",
+   "tr_views": 4421
+  },
+  {
+   "qid": "Q207400",
+   "label": "McDonnell Douglas MD-80/MD-90",
+   "links": 42,
+   "value": 32.85,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "McDonnell Douglas MD-80/MD-90",
+   "tr_views": 6198
+  },
+  {
+   "qid": "Q218931",
+   "label": "Avro Vulcan",
+   "links": 42,
+   "value": 30.3,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Avro Vulcan",
+   "tr_views": 1814
+  },
+  {
+   "qid": "Q221414",
+   "label": "Douglas DC-9",
+   "links": 42,
+   "value": 27.2,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "McDonnell Douglas DC-9",
+   "tr_views": 4159
+  },
+  {
+   "qid": "Q221414",
+   "label": "Douglas DC-9",
+   "links": 42,
+   "value": 28.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "McDonnell Douglas DC-9",
+   "tr_views": 4159
+  },
+  {
+   "qid": "Q26159",
+   "label": "De Havilland Comet",
+   "links": 42,
+   "value": 35.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "De Havilland Comet",
+   "tr_views": 2896
+  },
+  {
+   "qid": "Q270990",
+   "label": "General Dynamics F-111 Aardvark",
+   "links": 42,
+   "value": 19.2,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "General Dynamics F-111 Aardvark",
+   "tr_views": 10064
+  },
+  {
+   "qid": "Q308940",
+   "label": "Northrop F-5",
+   "links": 42,
+   "value": 8.13,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Northrop F-5",
+   "tr_views": 27209
+  },
+  {
+   "qid": "Q334612",
+   "label": "Grumman F4F Wildcat",
+   "links": 42,
+   "value": 11.6,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Grumman F4F Wildcat",
+   "tr_views": 638
+  },
+  {
+   "qid": "Q337467",
+   "label": "Antonov AN-24",
+   "links": 42,
+   "value": 29.2,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Antonov An-24",
+   "tr_views": 2743
+  },
+  {
+   "qid": "Q461651",
+   "label": "Suhoy Su-15",
+   "links": 42,
+   "value": 9.15,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suhoy Su-15",
+   "tr_views": 2049
+  },
+  {
+   "qid": "Q562475",
+   "label": "Yakovlev Yak-9",
+   "links": 42,
+   "value": 9.74,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yakovlev Yak-9",
+   "tr_views": 1066
+  },
+  {
+   "qid": "Q118070",
+   "label": "Douglas SBD Dauntless",
+   "links": 41,
+   "value": 12.66,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Douglas SBD Dauntless",
+   "tr_views": 530
+  },
+  {
+   "qid": "Q139289",
+   "label": "Boeing 737 MAX",
+   "links": 41,
+   "value": 35.9,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boeing 737 MAX",
+   "tr_views": 19065
+  },
+  {
+   "qid": "Q213342",
+   "label": "Tupolev Tu-22",
+   "links": 41,
+   "value": 27.74,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Tupolev Tu-22",
+   "tr_views": 4722
+  },
+  {
+   "qid": "Q330417",
+   "label": "Bristol Blenheim",
+   "links": 41,
+   "value": 17.17,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bristol Blenheim",
+   "tr_views": 267
+  },
+  {
+   "qid": "Q505649",
+   "label": "Yakovlev Yak-42",
+   "links": 41,
+   "value": 34.9,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yakovlev Yak-42",
+   "tr_views": 1908
+  },
+  {
+   "qid": "Q506736",
+   "label": "Fokker F27",
+   "links": 41,
+   "value": 29.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fokker F27 Friendship",
+   "tr_views": 2256
+  },
+  {
+   "qid": "Q641977",
+   "label": "Polikarpov İ-16",
+   "links": 41,
+   "value": 9.0043,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Polikarpov İ-16",
+   "tr_views": 446
+  },
+  {
+   "qid": "Q714326",
+   "label": "Douglas C-47 Skytrain",
+   "links": 41,
+   "value": 28.95,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Douglas C-47 Skytrain",
+   "tr_views": 5445
+  },
+  {
+   "qid": "Q736765",
+   "label": "de Havilland Canada DHC-8",
+   "links": 41,
+   "value": 25.89,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "De Havilland Canada Dash 8",
+   "tr_views": 157
+  },
+  {
+   "qid": "Q8791",
+   "label": "Boeing 747-8",
+   "links": 41,
+   "value": 68.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boeing 747-8",
+   "tr_views": 4266
+  },
+  {
+   "qid": "Q140318",
+   "label": "Gloster Meteor",
+   "links": 40,
+   "value": 13.1,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gloster Meteor",
+   "tr_views": 1266
+  },
+  {
+   "qid": "Q157335",
+   "label": "Arado Ar 234",
+   "links": 40,
+   "value": 14.41,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Arado Ar 234",
+   "tr_views": 1359
+  },
+  {
+   "qid": "Q223237",
+   "label": "SEPECAT Jaguar",
+   "links": 40,
+   "value": 8.49,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "SEPECAT Jaguar",
+   "tr_views": 4536
+  },
+  {
+   "qid": "Q275031",
+   "label": "İlyuşin İl-14",
+   "links": 40,
+   "value": 31.69,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İlyuşin İl-14",
+   "tr_views": 433
+  },
+  {
+   "qid": "Q275031",
+   "label": "İlyuşin İl-14",
+   "links": 40,
+   "value": 31.7,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İlyuşin İl-14",
+   "tr_views": 433
+  },
+  {
+   "qid": "Q334759",
+   "label": "Douglas A-4 Skyhawk",
+   "links": 40,
+   "value": 8.38,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Douglas A-4 Skyhawk",
+   "tr_views": 3152
+  },
+  {
+   "qid": "Q334759",
+   "label": "Douglas A-4 Skyhawk",
+   "links": 40,
+   "value": 8.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Douglas A-4 Skyhawk",
+   "tr_views": 3152
+  },
+  {
+   "qid": "Q385778",
+   "label": "Bell P-39 Airacobra",
+   "links": 40,
+   "value": 10.36,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bell P-39 Airacobra",
+   "tr_views": 420
+  },
+  {
+   "qid": "Q499185",
+   "label": "Beriev A-50",
+   "links": 40,
+   "value": 50.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Beriev A-50",
+   "tr_views": 3155
+  },
+  {
+   "qid": "Q505673",
+   "label": "Yakovlev Yak-1",
+   "links": 40,
+   "value": 10.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yakovlev Yak-1",
+   "tr_views": 922
+  },
+  {
+   "qid": "Q611401",
+   "label": "Boeing P-8 Poseidon",
+   "links": 40,
+   "value": 37.64,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boeing P-8 Poseidon",
+   "tr_views": 7700
+  },
+  {
+   "qid": "Q725319",
+   "label": "Fokker F-28",
+   "links": 40,
+   "value": 23.58,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fokker F28",
+   "tr_views": 5735
+  },
+  {
+   "qid": "Q746313",
+   "label": "Suhoy Su-9",
+   "links": 40,
+   "value": 8.43,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suhoy Su-9",
+   "tr_views": 1374
+  },
+  {
+   "qid": "Q257298",
+   "label": "Fokker 100",
+   "links": 39,
+   "value": 28.08,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fokker 100",
+   "tr_views": 2284
+  },
+  {
+   "qid": "Q429894",
+   "label": "Comac C919",
+   "links": 39,
+   "value": 33.6,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Comac C919",
+   "tr_views": 5034
+  },
+  {
+   "qid": "Q461475",
+   "label": "Saab 35 Draken",
+   "links": 39,
+   "value": 9.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saab 35 Draken",
+   "tr_views": 3645
+  },
+  {
+   "qid": "Q467649",
+   "label": "B-47 Stratojet",
+   "links": 39,
+   "value": 35.37,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boeing B-47 Stratojet",
+   "tr_views": 1433
+  },
+  {
+   "qid": "Q607609",
+   "label": "Antonov An-30",
+   "links": 39,
+   "value": 29.2,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Antonov An-30",
+   "tr_views": 964
+  },
+  {
+   "qid": "Q850244",
+   "label": "Vickers Wellington",
+   "links": 39,
+   "value": 26.27,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Vickers Wellington",
+   "tr_views": 364
+  },
+  {
+   "qid": "Q1784324",
+   "label": "Airbus A318",
+   "links": 38,
+   "value": 34.1,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Airbus A318",
+   "tr_views": 2598
+  },
+  {
+   "qid": "Q248348",
+   "label": "Yakovlev Yak-3",
+   "links": 38,
+   "value": 9.2,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yakovlev Yak-3",
+   "tr_views": 901
+  },
+  {
+   "qid": "Q263786",
+   "label": "Saab 37 Viggen",
+   "links": 38,
+   "value": 10.6,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saab 37 Viggen",
+   "tr_views": 3781
+  },
+  {
+   "qid": "Q332809",
+   "label": "Grumman A-6 Intruder",
+   "links": 38,
+   "value": 16.15,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Grumman A-6 Intruder",
+   "tr_views": 2002
+  },
+  {
+   "qid": "Q332809",
+   "label": "Grumman A-6 Intruder",
+   "links": 38,
+   "value": 16.2,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Grumman A-6 Intruder",
+   "tr_views": 2002
+  },
+  {
+   "qid": "Q403668",
+   "label": "Aichi D3A",
+   "links": 38,
+   "value": 14.37,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aichi D3A",
+   "tr_views": 667
+  },
+  {
+   "qid": "Q459133",
+   "label": "Sukhoi Su-37",
+   "links": 38,
+   "value": 14.698,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suhoy Su-37",
+   "tr_views": 4276
+  },
+  {
+   "qid": "Q641943",
+   "label": "Hawker Hunter",
+   "links": 38,
+   "value": 10.26,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hawker Hunter",
+   "tr_views": 1223
+  },
+  {
+   "qid": "Q6503",
+   "label": "Sud Aviation Caravelle",
+   "links": 38,
+   "value": 34.3,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sud Aviation Caravelle",
+   "tr_views": 1038
+  },
+  {
+   "qid": "Q754180",
+   "label": "Dassault Mirage IV",
+   "links": 38,
+   "value": 11.85,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dassault Mirage IV",
+   "tr_views": 877
+  },
+  {
+   "qid": "Q155899",
+   "label": "Aero L-39 Albatros",
+   "links": 37,
+   "value": 9.11,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aero L-39 Albatros",
+   "tr_views": 8037
+  },
+  {
+   "qid": "Q155899",
+   "label": "Aero L-39 Albatros",
+   "links": 37,
+   "value": 9.11225,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aero L-39 Albatros",
+   "tr_views": 8037
+  },
+  {
+   "qid": "Q157925",
+   "label": "Let L-410 Turbolet",
+   "links": 37,
+   "value": 17.48,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Let L-410 Turbolet",
+   "tr_views": 1121
+  },
+  {
+   "qid": "Q223372",
+   "label": "Grumman E-2 Hawkeye",
+   "links": 37,
+   "value": 24.56,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Northrop Grumman E-2 Hawkeye",
+   "tr_views": 3271
+  },
+  {
+   "qid": "Q266066",
+   "label": "A-1 Skyraider",
+   "links": 37,
+   "value": 15.25,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Douglas A-1 Skyraider",
+   "tr_views": 1099
+  },
+  {
+   "qid": "Q277491",
+   "label": "Saab 340",
+   "links": 37,
+   "value": 21.44,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Saab 340",
+   "tr_views": 1640
+  },
+  {
+   "qid": "Q482600",
+   "label": "KAI T-50 Golden Eagle",
+   "links": 37,
+   "value": 9.45,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "KAI T-50 Golden Eagle",
+   "tr_views": 7819
+  },
+  {
+   "qid": "Q635687",
+   "label": "McDonnell Douglas AV-8B Harrier II",
+   "links": 37,
+   "value": 9.25,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "McDonnell Douglas AV-8B Harrier II",
+   "tr_views": 7395
+  },
+  {
+   "qid": "Q687743",
+   "label": "BAE Systems Hawk",
+   "links": 37,
+   "value": 9.94,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "BAE Systems Hawk",
+   "tr_views": 2522
+  },
+  {
+   "qid": "Q696128",
+   "label": "Nakajima B5N",
+   "links": 37,
+   "value": 15.52,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nakajima B5N",
+   "tr_views": 829
+  },
+  {
+   "qid": "Q829092",
+   "label": "KC-135 Stratotanker",
+   "links": 37,
+   "value": 39.88,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boeing KC-135 Stratotanker",
+   "tr_views": 19044
+  },
+  {
+   "qid": "Q875139",
+   "label": "Short Stirling",
+   "links": 37,
+   "value": 13.16,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Short Stirling",
+   "tr_views": 256
+  },
+  {
+   "qid": "Q929769",
+   "label": "Irkut MS-21",
+   "links": 37,
+   "value": 35.9,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İrkut MS-21",
+   "tr_views": 4277
+  },
+  {
+   "qid": "Q163838",
+   "label": "İlyuşin İl-38",
+   "links": 36,
+   "value": 37.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "İlyuşin İl-38",
+   "tr_views": 797
+  },
+  {
+   "qid": "Q531053",
+   "label": "North American F-100 Super Sabre",
+   "links": 36,
+   "value": 11.81,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "North American F-100 Super Sabre",
+   "tr_views": 10507
+  },
+  {
+   "qid": "Q599891",
+   "label": "Convair B-58 Hustler",
+   "links": 36,
+   "value": 17.31,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Convair B-58 Hustler",
+   "tr_views": 1836
+  },
+  {
+   "qid": "Q622673",
+   "label": "Douglas DC-4",
+   "links": 36,
+   "value": 35.8,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Douglas DC-4",
+   "tr_views": 494
+  },
+  {
+   "qid": "Q723612",
+   "label": "Hawker Tempest",
+   "links": 36,
+   "value": 12.5,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hawker Tempest",
+   "tr_views": 345
+  },
+  {
+   "qid": "Q724763",
+   "label": "Republic F-105 Thunderchief",
+   "links": 36,
+   "value": 10.65,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Republic F-105 Thunderchief",
+   "tr_views": 1844
+  },
+  {
+   "qid": "Q729056",
+   "label": "North American XB-70 Valkyrie",
+   "links": 36,
+   "value": 32.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "North American XB-70 Valkyrie",
+   "tr_views": 2408
+  },
+  {
+   "qid": "Q751759",
+   "label": "Lockheed P-80 Shooting Star",
+   "links": 36,
+   "value": 11.81,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Lockheed P-80 Shooting Star",
+   "tr_views": 3968
+  },
+  {
+   "qid": "Q44848",
+   "label": "IAI Kfir",
+   "links": 35,
+   "value": 8.22,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "IAI Kfir",
+   "tr_views": 2888
+  },
+  {
+   "qid": "Q505643",
+   "label": "Yak-38",
+   "links": 35,
+   "value": 7.32,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yakovlev Yak-38",
+   "tr_views": 1633
+  },
+  {
+   "qid": "Q589498",
+   "label": "BAe 146",
+   "links": 35,
+   "value": 26.34,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "BAe 146",
+   "tr_views": 4930
+  },
+  {
+   "qid": "Q607651",
+   "label": "Sopwith Camel",
+   "links": 35,
+   "value": 8.5344168,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sopwith Camel",
+   "tr_views": 566
+  },
+  {
+   "qid": "Q608997",
+   "label": "Mil Mi-2",
+   "links": 35,
+   "value": 14.49705,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mil Mi-2",
+   "tr_views": 2024
+  },
+  {
+   "qid": "Q696089",
+   "label": "Polikarpov İ-15",
+   "links": 35,
+   "value": 9.74725,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Polikarpov İ-15",
+   "tr_views": 292
+  },
+  {
+   "qid": "Q723397",
+   "label": "Fokker 70",
+   "links": 35,
+   "value": 28.08,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fokker 70",
+   "tr_views": 1040
+  },
+  {
+   "qid": "Q725313",
+   "label": "Hawker Siddeley Harrier",
+   "links": 35,
+   "value": 7.7,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hawker Siddeley Harrier",
+   "tr_views": 2180
+  },
+  {
+   "qid": "Q939344",
+   "label": "Douglas A-20 Havoc",
+   "links": 35,
+   "value": 18.6,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Douglas A-20 Havoc",
+   "tr_views": 545
+  },
+  {
+   "qid": "Q142591",
+   "label": "Douglas DC-2",
+   "links": 34,
+   "value": 25.9,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Douglas DC-2",
+   "tr_views": 1477
+  },
+  {
+   "qid": "Q1428728",
+   "label": "Suhoy Su-2",
+   "links": 34,
+   "value": 14.3,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suhoy Su-2",
+   "tr_views": 958
+  },
+  {
+   "qid": "Q312541",
+   "label": "Dornier 228",
+   "links": 34,
+   "value": 16.95,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dornier Do 228",
+   "tr_views": 693
+  },
+  {
+   "qid": "Q499197",
+   "label": "Handley Page Victor",
+   "links": 34,
+   "value": 36.58,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Handley Page Victor",
+   "tr_views": 343
+  },
+  {
+   "qid": "Q503761",
+   "label": "Douglas DC-6",
+   "links": 34,
+   "value": 13.58,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Douglas DC-6",
+   "tr_views": 1013
+  },
+  {
+   "qid": "Q503761",
+   "label": "Douglas DC-6",
+   "links": 34,
+   "value": 35.81,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Douglas DC-6",
+   "tr_views": 1013
+  },
+  {
+   "qid": "Q697583",
+   "label": "Mitsubishi G4M",
+   "links": 34,
+   "value": 24.89,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mitsubishi G4M",
+   "tr_views": 903
+  },
+  {
+   "qid": "Q943315",
+   "label": "Petlyakov Pe-2",
+   "links": 34,
+   "value": 17.16,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Petlyakov Pe-2",
+   "tr_views": 554
+  },
+  {
+   "qid": "Q17452796",
+   "label": "Boeing 777X",
+   "links": 33,
+   "value": 64.8,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boeing 777X",
+   "tr_views": 5776
+  },
+  {
+   "qid": "Q17452796",
+   "label": "Boeing 777X",
+   "links": 33,
+   "value": 71.8,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Boeing 777X",
+   "tr_views": 5776
+  },
+  {
+   "qid": "Q6492",
+   "label": "Airbus A330 MRTT",
+   "links": 33,
+   "value": 60.3,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Airbus A330 MRTT",
+   "tr_views": 5998
+  },
+  {
+   "qid": "Q657597",
+   "label": "Convair F-102 Delta Dagger",
+   "links": 33,
+   "value": 11.61,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Convair F-102 Delta Dagger",
+   "tr_views": 1712
+  }
+ ]
+}
