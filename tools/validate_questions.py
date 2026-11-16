@@ -149,7 +149,8 @@ def validate(questions: object) -> tuple[list[str], list[str]]:
 
         if not SOURCE_PATTERN.match(q["source"]):
             errors.append(f"{where}: kaynak bir https bağlantısı olmalı.")
-        key = (q["source"], q["kind"], q["unit"])
+        # The data set too (2026-11-16): one USDA page gives sugar and fat, both in g.
+        key = (q["source"], q["kind"], q["unit"], q.get("dataset"))
         if key in seen_sources:
             errors.append(f"{where}: aynı kaynak/tür {seen_sources[key]} ile yineleniyor.")
         seen_sources[key] = q["id"]
