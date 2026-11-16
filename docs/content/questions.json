@@ -30943,7 +30943,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "transport_curated"
+  "dataset": "transport_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2216",
@@ -31059,7 +31062,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "space_curated"
+  "dataset": "space_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2224",
@@ -31072,7 +31078,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "space_curated"
+  "dataset": "space_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2225",
@@ -31115,7 +31124,10 @@
   "fun_fact": null,
   "difficulty": 2,
   "dataset": "space_curated",
-  "retired": true
+  "retired": true,
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2228",
@@ -31141,7 +31153,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "transport_curated"
+  "dataset": "transport_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2230",
@@ -31289,7 +31304,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "transport_curated"
+  "dataset": "transport_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2240",
@@ -31318,7 +31336,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "space_curated"
+  "dataset": "space_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2242",
@@ -31331,7 +31352,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "space_curated"
+  "dataset": "space_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2243",
@@ -31344,7 +31368,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 1,
-  "dataset": "transport_curated"
+  "dataset": "transport_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2244",
@@ -31370,7 +31397,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "space_curated"
+  "dataset": "space_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2246",
@@ -31435,7 +31465,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "transport_curated"
+  "dataset": "transport_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2251",
@@ -31474,7 +31507,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "transport_curated"
+  "dataset": "transport_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2254",
@@ -31503,7 +31539,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 3,
-  "dataset": "space_curated"
+  "dataset": "space_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2256",
@@ -31532,7 +31571,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "transport_curated"
+  "dataset": "transport_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2258",
@@ -31558,7 +31600,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "transport_curated"
+  "dataset": "transport_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2260",
@@ -31571,7 +31616,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "space_curated"
+  "dataset": "space_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2261",
@@ -31597,7 +31645,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "space_curated"
+  "dataset": "space_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2263",
@@ -31610,7 +31661,10 @@
   "data_year": 2026,
   "fun_fact": null,
   "difficulty": 2,
-  "dataset": "transport_curated"
+  "dataset": "transport_curated",
+  "scale": {
+   "factor": 3
+  }
  },
  {
   "id": "q2264",
@@ -42189,6 +42243,4928 @@
   "fun_fact": null,
   "difficulty": 1,
   "dataset": "cities_tr_elevation",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2933",
+  "text": "Gökyüzü resmî olarak kaç takımyıldıza bölünmüştür?",
+  "answer": 88,
+  "unit": "takımyıldız",
+  "kind": "magnitude",
+  "category": "uzay",
+  "source": "https://en.wikipedia.org/wiki/Constellation",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "space_curated",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2934",
+  "text": "James Webb Uzay Teleskobu'nun ana aynasının çapı kaç metredir?",
+  "answer": 6.5,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "uzay",
+  "source": "https://en.wikipedia.org/wiki/James_Webb_Space_Telescope",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "space_curated",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2935",
+  "text": "İnsan vücudunda yaklaşık kaç iskelet kası vardır?",
+  "answer": 600,
+  "unit": "kas",
+  "kind": "magnitude",
+  "category": "vücut",
+  "source": "https://en.wikipedia.org/wiki/Skeletal_muscle",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "body_curated",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2936",
+  "text": "Yetişkin bir insanın karaciğeri yaklaşık kaç kilogramdır?",
+  "answer": 1.5,
+  "unit": "kg",
+  "kind": "magnitude",
+  "category": "vücut",
+  "source": "https://en.wikipedia.org/wiki/Liver",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "body_curated",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2937",
+  "text": "Yuri Gagarin'in ilk uzay uçuşu kaç dakika sürmüştür?",
+  "answer": 108,
+  "unit": "dakika",
+  "kind": "magnitude",
+  "category": "uzay",
+  "source": "https://en.wikipedia.org/wiki/Vostok_1",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "space_curated",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2938",
+  "text": "Bir kırmızı kan hücresi en fazla kaç gün dolaşımda kalır?",
+  "answer": 120,
+  "unit": "gün",
+  "kind": "magnitude",
+  "category": "vücut",
+  "source": "https://en.wikipedia.org/wiki/Red_blood_cell",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "body_curated",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2939",
+  "text": "Trans-Sibirya Demiryolu kaç kilometre uzunluğundadır?",
+  "answer": 9289,
+  "unit": "km",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://en.wikipedia.org/wiki/Trans-Siberian_Railway",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "transport_curated",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2940",
+  "text": "Standart demiryolu hattında iki ray arası kaç milimetredir?",
+  "answer": 1435,
+  "unit": "mm",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://en.wikipedia.org/wiki/Standard-gauge_railway",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "transport_curated",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2941",
+  "text": "Manyetik raylı (maglev) trenlerin hız rekoru saatte kaç kilometredir?",
+  "answer": 603,
+  "unit": "km/h",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://en.wikipedia.org/wiki/SCMaglev",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "transport_curated",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2942",
+  "text": "Süveyş Kanalı kaç kilometre uzunluğundadır?",
+  "answer": 193.3,
+  "unit": "km",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://en.wikipedia.org/wiki/Suez_Canal",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "transport_curated",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2943",
+  "text": "Dünyanın en uzun demiryolu tüneli Gotthard Ana Tüneli kaç kilometredir?",
+  "answer": 57.09,
+  "unit": "km",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://en.wikipedia.org/wiki/Gotthard_Base_Tunnel",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "transport_curated",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2944",
+  "text": "Andromeda Galaksisi bize kaç milyon ışık yılı uzaklıktadır?",
+  "answer": 2.5,
+  "unit": "milyon ışık yılı",
+  "kind": "magnitude",
+  "category": "uzay",
+  "source": "https://en.wikipedia.org/wiki/Andromeda_Galaxy",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "space_curated",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2945",
+  "text": "Güneş yaklaşık kaç milyar yaşındadır?",
+  "answer": 4.6,
+  "unit": "milyar yıl",
+  "kind": "magnitude",
+  "category": "uzay",
+  "source": "https://en.wikipedia.org/wiki/Sun",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "space_curated",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2946",
+  "text": "Galatasaray, 2018-19 Süper Lig sezonunu kaç puanla şampiyon olarak tamamlamıştır?",
+  "answer": 69,
+  "unit": "puan",
+  "kind": "magnitude",
+  "category": "spor",
+  "source": "https://github.com/openfootball/football.json/blob/master/2018-19/tr.1.json",
+  "data_year": 2019,
+  "fun_fact": "Sezon boyunca 72 gol attı, ikinciyle arasında 2 puan vardı.",
+  "difficulty": 1,
+  "dataset": "football_league_points",
+  "scale": {
+   "half": 8
+  }
+ },
+ {
+  "id": "q2947",
+  "text": "100 gram ahudududa kaç gram lif var?",
+  "answer": 6.5,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/167755/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 52 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2948",
+  "text": "100 gram dana sosiste kaç kalori var?",
+  "answer": 315,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173862/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 11,7 g protein ve 1,2 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2949",
+  "text": "100 gram dana sosiste kaç gram protein var?",
+  "answer": 12,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173862/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 315 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q2950",
+  "text": "100 gram çiğ kalamarda kaç gram protein var?",
+  "answer": 16,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174223/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 92 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q2951",
+  "text": "100 gram tuzsuz domates salçasında kaç kalori var?",
+  "answer": 82,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170459/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 4,3 g protein ve 12,2 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2952",
+  "text": "100 gram çiğ karalahanada kaç kalori var?",
+  "answer": 35,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168421/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 2,9 g protein ve 1 g şeker var.",
+  "difficulty": 3,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2953",
+  "text": "100 gram derili çiğ tavuk kanadında kaç gram yağ var?",
+  "answer": 13,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/172390/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 191 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2954",
+  "text": "100 gram tuzsuz domates salçasında kaç miligram C vitamini var?",
+  "answer": 22,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170459/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 82 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q2955",
+  "text": "100 gram derili çiğ tavuk kanadında kaç kalori var?",
+  "answer": 191,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/172390/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 17,5 g protein ve 0 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2956",
+  "text": "100 gram marshmallowda kaç gram şeker var?",
+  "answer": 58,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/167995/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 318 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2957",
+  "text": "100 gram dolmalık fıstıkta (çam fıstığı) kaç kalori var?",
+  "answer": 673,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170591/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 13,7 g protein ve 3,6 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2958",
+  "text": "100 gram çiğ çiftlik alabalığında kaç gram protein var?",
+  "answer": 20,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173717/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 141 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q2959",
+  "text": "100 gram rokada kaç kalori var?",
+  "answer": 25,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169387/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 2,6 g protein ve 2,1 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2960",
+  "text": "100 gram dolmalık fıstıkta (çam fıstığı) kaç gram yağ var?",
+  "answer": 68,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/170591/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 673 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2961",
+  "text": "100 gram haşlanmış esmer pirinçte kaç kalori var?",
+  "answer": 123,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169704/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 2,7 g protein ve 0,2 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2962",
+  "text": "100 gram pişmiş dondurulmuş peynirli pizzada kaç miligram kalsiyum var?",
+  "answer": 179,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/170317/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 268 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2963",
+  "text": "100 gram mısır gevreğinde kaç gram şeker var?",
+  "answer": 7.8,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/174648/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 384 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2964",
+  "text": "100 gram kuru beyaz fasulyede kaç gram protein var?",
+  "answer": 23,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/175202/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 333 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q2965",
+  "text": "100 gram çiğ taze orkinosta kaç kalori var?",
+  "answer": 144,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173706/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 23,3 g protein ve 0 g şeker var.",
+  "difficulty": 3,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2966",
+  "text": "100 gram sade donatta kaç gram şeker var?",
+  "answer": 18,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/174990/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 434 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2967",
+  "text": "100 gram tuzsuz domates salçasında kaç gram lif var?",
+  "answer": 4.1,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/170459/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 82 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2968",
+  "text": "100 gram derili çiğ tavuk kanadında kaç gram protein var?",
+  "answer": 18,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/172390/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 191 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q2969",
+  "text": "100 gram çiğ bamyada kaç kalori var?",
+  "answer": 33,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169260/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 1,9 g protein ve 1,5 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2970",
+  "text": "100 gram krem peynirde kaç miligram sodyum var?",
+  "answer": 314,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/173418/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 350 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2971",
+  "text": "100 gram kuru beyaz fasulyede kaç gram lif var?",
+  "answer": 15,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/175202/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 333 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2972",
+  "text": "100 gram susamda kaç gram yağ var?",
+  "answer": 50,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/170150/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 573 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2973",
+  "text": "100 gram kırmızı turpta kaç kalori var?",
+  "answer": 16,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169276/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 0,7 g protein ve 1,9 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2974",
+  "text": "100 gram çiğ hindi göğsünde kaç gram protein var?",
+  "answer": 24,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171098/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 114 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q2975",
+  "text": "100 gram çiğ kalamarda kaç kalori var?",
+  "answer": 92,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174223/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 15,6 g protein ve 0 g şeker var.",
+  "difficulty": 3,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2976",
+  "text": "100 gram haşlanmış kuskusta kaç kalori var?",
+  "answer": 112,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169700/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 3,8 g protein ve 0,1 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2977",
+  "text": "100 gram çırpma kremasında kaç gram yağ var?",
+  "answer": 36,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/170859/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 340 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2978",
+  "text": "100 gram taze nanede kaç kalori var?",
+  "answer": 44,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173475/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 3,3 g protein var.",
+  "difficulty": 3,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2979",
+  "text": "100 gram krem peynirde kaç kalori var?",
+  "answer": 350,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173418/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 6,2 g protein ve 3,8 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2980",
+  "text": "100 gram sade donatta kaç miligram sodyum var?",
+  "answer": 477,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/174990/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 434 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2981",
+  "text": "100 gram çiğ bamyada kaç miligram C vitamini var?",
+  "answer": 23,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169260/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 33 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q2982",
+  "text": "100 gram mısır gevreğinde kaç miligram sodyum var?",
+  "answer": 571,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/174648/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 384 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2983",
+  "text": "100 gram çiğ taze orkinosta kaç gram protein var?",
+  "answer": 23,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173706/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 144 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q2984",
+  "text": "100 gram vişnede kaç gram şeker var?",
+  "answer": 8.5,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/173954/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 50 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2985",
+  "text": "100 gram çiğ jalapeno biberinde kaç miligram C vitamini var?",
+  "answer": 119,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168576/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 29 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q2986",
+  "text": "100 gram taze nanede kaç gram lif var?",
+  "answer": 6.8,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/173475/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 44 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2987",
+  "text": "100 gram taze limon suyunda kaç miligram C vitamini var?",
+  "answer": 39,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/167747/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 22 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q2988",
+  "text": "100 gram chia tohumunda kaç kalori var?",
+  "answer": 486,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170554/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 16,5 g protein var.",
+  "difficulty": 3,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2989",
+  "text": "100 gram şekersiz hindistancevizi suyunda kaç kalori var?",
+  "answer": 18,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174831/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 0,2 g protein ve 3,9 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2990",
+  "text": "100 gram mısır gevreğinde kaç kalori var?",
+  "answer": 384,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174648/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 5,9 g protein ve 7,8 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2991",
+  "text": "100 gram susamda kaç gram lif var?",
+  "answer": 12,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/170150/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 573 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2992",
+  "text": "100 gram chia tohumunda kaç miligram kalsiyum var?",
+  "answer": 631,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/170554/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 486 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2993",
+  "text": "100 gram taze nanede kaç miligram kalsiyum var?",
+  "answer": 199,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/173475/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 44 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2994",
+  "text": "100 gram kuru beyaz fasulyede kaç miligram kalsiyum var?",
+  "answer": 240,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/175202/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 333 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2995",
+  "text": "100 gram dolmalık fıstıkta (çam fıstığı) kaç gram protein var?",
+  "answer": 14,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170591/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 673 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q2996",
+  "text": "100 gram hardalda kaç gram lif var?",
+  "answer": 4.0,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/172234/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 60 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2997",
+  "text": "100 gram pişmiş dondurulmuş peynirli pizzada kaç miligram sodyum var?",
+  "answer": 447,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/170317/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 268 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2998",
+  "text": "100 gram taze dereotunda kaç miligram C vitamini var?",
+  "answer": 85,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/172233/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 43 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q2999",
+  "text": "100 gram chia tohumunda kaç gram yağ var?",
+  "answer": 31,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/170554/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 486 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3000",
+  "text": "100 gram hazır çikolatalı pudingde kaç kalori var?",
+  "answer": 142,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168778/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 2,1 g protein ve 17,2 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3001",
+  "text": "100 gram jelibonda kaç gram şeker var?",
+  "answer": 59,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/167989/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 396 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3002",
+  "text": "100 gram çiğ ahtapotta kaç kalori var?",
+  "answer": 82,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174218/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 14,9 g protein ve 0 g şeker var.",
+  "difficulty": 3,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3003",
+  "text": "100 gram hardalda kaç kalori var?",
+  "answer": 60,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/172234/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 3,7 g protein ve 0,9 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3004",
+  "text": "100 gram çiğ pazıda kaç miligram C vitamini var?",
+  "answer": 30,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169991/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 19 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3005",
+  "text": "100 gram sade donatta kaç gram yağ var?",
+  "answer": 25,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/174990/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 434 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3006",
+  "text": "100 gram pişmiş dondurulmuş peynirli pizzada kaç gram yağ var?",
+  "answer": 12,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/170317/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 268 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3007",
+  "text": "100 gram jelibonda kaç kalori var?",
+  "answer": 396,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/167989/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 0 g protein ve 59 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3008",
+  "text": "100 gram rokada kaç miligram kalsiyum var?",
+  "answer": 160,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/169387/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 25 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3009",
+  "text": "100 gram vişnede kaç kalori var?",
+  "answer": 50,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173954/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 1 g protein ve 8,5 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3010",
+  "text": "100 gram susamda kaç kalori var?",
+  "answer": 573,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170150/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 17,7 g protein ve 0,3 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3011",
+  "text": "100 gram sade donatta kaç kalori var?",
+  "answer": 434,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174990/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 5,3 g protein ve 18,2 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3012",
+  "text": "100 gram taze dereotunda kaç miligram kalsiyum var?",
+  "answer": 208,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/172233/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 43 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3013",
+  "text": "100 gram ahudududa kaç kalori var?",
+  "answer": 52,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/167755/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 1,2 g protein ve 4,4 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3014",
+  "text": "100 gram dana sosiste kaç gram yağ var?",
+  "answer": 28,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/173862/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 315 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3015",
+  "text": "100 gram yaban mersininde kaç kalori var?",
+  "answer": 57,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171711/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 0,7 g protein ve 10 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3016",
+  "text": "100 gram krem peynirde kaç gram yağ var?",
+  "answer": 34,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/173418/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 350 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3017",
+  "text": "100 gram hardalda kaç miligram sodyum var?",
+  "answer": 1104,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/172234/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 60 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3018",
+  "text": "100 gram keten tohumunda kaç miligram kalsiyum var?",
+  "answer": 255,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/169414/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 534 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3019",
+  "text": "100 gram şekersiz elma suyunda kaç kalori var?",
+  "answer": 46,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173933/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 0,1 g protein ve 9,6 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3020",
+  "text": "100 gram keten tohumunda kaç kalori var?",
+  "answer": 534,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169414/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 18,3 g protein ve 1,6 g şeker var.",
+  "difficulty": 3,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3021",
+  "text": "100 gram taze dereotunda kaç kalori var?",
+  "answer": 43,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/172233/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 3,5 g protein var.",
+  "difficulty": 3,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3022",
+  "text": "100 gram çiğ morinada kaç kalori var?",
+  "answer": 82,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171955/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 17,8 g protein ve 0 g şeker var.",
+  "difficulty": 3,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3023",
+  "text": "100 gram keten tohumunda kaç gram protein var?",
+  "answer": 18,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169414/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 534 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q3024",
+  "text": "100 gram çiğ çiftlik alabalığında kaç gram yağ var?",
+  "answer": 6.2,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/173717/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 141 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3025",
+  "text": "100 gram akçaağaç şurubunda kaç gram şeker var?",
+  "answer": 60,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/169661/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 260 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3026",
+  "text": "100 gram böğürtlende kaç gram lif var?",
+  "answer": 5.3,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/173946/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 43 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3027",
+  "text": "100 gram akçaağaç şurubunda kaç miligram kalsiyum var?",
+  "answer": 102,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/169661/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 260 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3028",
+  "text": "100 gram böğürtlende kaç miligram C vitamini var?",
+  "answer": 21,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173946/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 43 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3029",
+  "text": "100 gram hazır çikolatalı pudingde kaç gram şeker var?",
+  "answer": 17,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/168778/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 142 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3030",
+  "text": "100 gram şekersiz elma suyunda kaç gram şeker var?",
+  "answer": 9.6,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/173933/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 46 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3031",
+  "text": "100 gram salatalık turşusunda kaç kalori var?",
+  "answer": 12,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168558/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 0,5 g protein ve 1,1 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3032",
+  "text": "100 gram akçaağaç şurubunda kaç kalori var?",
+  "answer": 260,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169661/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 0 g protein ve 60,5 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3033",
+  "text": "100 gram dolmalık fıstıkta (çam fıstığı) kaç gram lif var?",
+  "answer": 3.7,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/170591/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 673 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3034",
+  "text": "100 gram keten tohumunda kaç gram lif var?",
+  "answer": 27,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/169414/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 534 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3035",
+  "text": "100 gram çiğ kuşkonmazda kaç kalori var?",
+  "answer": 20,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168389/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 2,2 g protein ve 1,9 g şeker var.",
+  "difficulty": 3,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3036",
+  "text": "100 gram pişmiş dondurulmuş peynirli pizzada kaç gram protein var?",
+  "answer": 10,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170317/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 268 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q3037",
+  "text": "100 gram çiğ karalahanada kaç gram lif var?",
+  "answer": 4.1,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/168421/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 35 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3038",
+  "text": "100 gram yaban mersininde kaç gram şeker var?",
+  "answer": 10.0,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/171711/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 57 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3039",
+  "text": "100 gram susamda kaç gram protein var?",
+  "answer": 18,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170150/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 573 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q3040",
+  "text": "100 gram ahudududa kaç miligram C vitamini var?",
+  "answer": 26,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/167755/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 52 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3041",
+  "text": "100 gram çiğ dana ciğerinde kaç kalori var?",
+  "answer": 135,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169451/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 20,4 g protein ve 0 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3042",
+  "text": "100 gram tuzsuz domates salçasında kaç gram şeker var?",
+  "answer": 12,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/170459/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 82 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_sugars",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3043",
+  "text": "100 gram böğürtlende kaç kalori var?",
+  "answer": 43,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173946/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 1,4 g protein ve 4,9 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3044",
+  "text": "100 gram çiğ jalapeno biberinde kaç kalori var?",
+  "answer": 29,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168576/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 0,9 g protein ve 4,1 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3045",
+  "text": "100 gram çiğ çiftlik alabalığında kaç kalori var?",
+  "answer": 141,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173717/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 19,9 g protein ve 0 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3046",
+  "text": "100 gram çiğ dana ciğerinde kaç gram protein var?",
+  "answer": 20,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169451/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 135 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q3047",
+  "text": "100 gram chia tohumunda kaç gram lif var?",
+  "answer": 34,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/170554/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 486 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3048",
+  "text": "100 gram soya sosunda kaç miligram sodyum var?",
+  "answer": 5493,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/174277/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 53 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3049",
+  "text": "100 gram pişmiş dondurulmuş peynirli pizzada kaç kalori var?",
+  "answer": 268,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170317/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 10,4 g protein ve 3,6 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3050",
+  "text": "100 gram çiğ bamyada kaç gram lif var?",
+  "answer": 3.2,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/169260/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 33 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3051",
+  "text": "100 gram taze zencefilde kaç kalori var?",
+  "answer": 80,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169231/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 1,8 g protein ve 1,7 g şeker var.",
+  "difficulty": 3,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3052",
+  "text": "100 gram çırpma kremasında kaç kalori var?",
+  "answer": 340,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170859/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 2,8 g protein ve 2,9 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3053",
+  "text": "100 gram soya sosunda kaç kalori var?",
+  "answer": 53,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174277/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 8,1 g protein ve 0,4 g şeker var.",
+  "difficulty": 3,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3054",
+  "text": "100 gram salatalık turşusunda kaç miligram sodyum var?",
+  "answer": 809,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/168558/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 12 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3055",
+  "text": "100 gram keten tohumunda kaç gram yağ var?",
+  "answer": 42,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/169414/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 534 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_fat",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3056",
+  "text": "100 gram çiğ karalahanada kaç miligram kalsiyum var?",
+  "answer": 254,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/168421/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 35 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3057",
+  "text": "100 gram çiğ ahtapotta kaç gram protein var?",
+  "answer": 15,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174218/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 82 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q3058",
+  "text": "100 gram çiğ morinada kaç gram protein var?",
+  "answer": 18,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171955/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 82 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q3059",
+  "text": "100 gram kuru beyaz fasulyede kaç kalori var?",
+  "answer": 333,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/175202/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 23,4 g protein ve 2,1 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3060",
+  "text": "100 gram çiğ karalahanada kaç miligram C vitamini var?",
+  "answer": 93,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168421/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 35 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3061",
+  "text": "100 gram taze limon suyunda kaç kalori var?",
+  "answer": 22,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/167747/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 0,4 g protein ve 2,5 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3062",
+  "text": "100 gram çiğ enginarda kaç kalori var?",
+  "answer": 47,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169205/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 3,3 g protein ve 1 g şeker var.",
+  "difficulty": 3,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3063",
+  "text": "100 gram beyaz pide ekmeğinde (pita) kaç kalori var?",
+  "answer": 275,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174915/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 9,1 g protein ve 1,3 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3064",
+  "text": "100 gram chia tohumunda kaç gram protein var?",
+  "answer": 17,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170554/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 486 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q3065",
+  "text": "100 gram dana sosiste kaç miligram sodyum var?",
+  "answer": 865,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/173862/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 315 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3066",
+  "text": "100 gram çiğ enginarda kaç gram lif var?",
+  "answer": 5.4,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/169205/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 47 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_fiber",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3067",
+  "text": "100 gram marshmallowda kaç kalori var?",
+  "answer": 318,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/167995/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 1,8 g protein ve 57,6 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3068",
+  "text": "100 gram çiğ sap kerevizde kaç kalori var?",
+  "answer": 14,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169988/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 0,7 g protein ve 1,3 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3069",
+  "text": "100 gram beyaz pide ekmeğinde (pita) kaç miligram sodyum var?",
+  "answer": 536,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/174915/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 275 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_sodium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3070",
+  "text": "100 gram çiğ pazıda kaç kalori var?",
+  "answer": 19,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169991/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 1,8 g protein ve 1,1 g şeker var.",
+  "difficulty": 3,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3071",
+  "text": "100 gram susamda kaç miligram kalsiyum var?",
+  "answer": 975,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "mutfak",
+  "source": "https://fdc.nal.usda.gov/food-details/170150/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 573 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_calcium",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3072",
+  "text": "100 gram çiğ hindi göğsünde kaç kalori var?",
+  "answer": 114,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171098/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 23,7 g protein ve 0,1 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3073",
+  "text": "2025 yılında Norveç'te tüketilen enerjinin yüzde kaçı yenilenebilir kaynaklardan gelmiştir?",
+  "answer": 82.4,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?freq=A&nrg_bal=REN&unit=PC&geo=NO&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %26,2.",
+  "difficulty": 2,
+  "dataset": "es_renewables"
+ },
+ {
+  "id": "q3074",
+  "text": "2025 yılında Almanya'da tüketilen enerjinin yüzde kaçı yenilenebilir kaynaklardan gelmiştir?",
+  "answer": 23.9,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?freq=A&nrg_bal=REN&unit=PC&geo=DE&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %26,2.",
+  "difficulty": 2,
+  "dataset": "es_renewables"
+ },
+ {
+  "id": "q3075",
+  "text": "2025 verilerine göre Türkiye'de 20-64 yaş arasındakilerin yüzde kaçı çalışmaktadır?",
+  "answer": 58.1,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "türkiye",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsi_emp_a?freq=A&indic_em=EMP_LFS&sex=T&age=Y20-64&unit=PC_POP&geo=TR&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %76,1.",
+  "difficulty": 2,
+  "dataset": "es_employment"
+ },
+ {
+  "id": "q3076",
+  "text": "2025 verilerine göre Yunanistan'da 20-64 yaş arasındakilerin yüzde kaçı çalışmaktadır?",
+  "answer": 71.0,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsi_emp_a?freq=A&indic_em=EMP_LFS&sex=T&age=Y20-64&unit=PC_POP&geo=EL&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %76,1.",
+  "difficulty": 2,
+  "dataset": "es_employment"
+ },
+ {
+  "id": "q3077",
+  "text": "2025 yılında Hollanda'da tüketilen enerjinin yüzde kaçı yenilenebilir kaynaklardan gelmiştir?",
+  "answer": 22.7,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?freq=A&nrg_bal=REN&unit=PC&geo=NL&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %26,2.",
+  "difficulty": 2,
+  "dataset": "es_renewables"
+ },
+ {
+  "id": "q3078",
+  "text": "2025 yılında İtalya'da tüketilen enerjinin yüzde kaçı yenilenebilir kaynaklardan gelmiştir?",
+  "answer": 20.5,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?freq=A&nrg_bal=REN&unit=PC&geo=IT&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %26,2.",
+  "difficulty": 2,
+  "dataset": "es_renewables"
+ },
+ {
+  "id": "q3079",
+  "text": "2025 yılında İsveç'te tüketilen enerjinin yüzde kaçı yenilenebilir kaynaklardan gelmiştir?",
+  "answer": 65.4,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?freq=A&nrg_bal=REN&unit=PC&geo=SE&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %26,2.",
+  "difficulty": 2,
+  "dataset": "es_renewables"
+ },
+ {
+  "id": "q3080",
+  "text": "2025 yılında Yunanistan'da tüketilen enerjinin yüzde kaçı yenilenebilir kaynaklardan gelmiştir?",
+  "answer": 26.9,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?freq=A&nrg_bal=REN&unit=PC&geo=EL&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %26,2.",
+  "difficulty": 2,
+  "dataset": "es_renewables"
+ },
+ {
+  "id": "q3081",
+  "text": "2025 verilerine göre Almanya'da 20-64 yaş arasındakilerin yüzde kaçı çalışmaktadır?",
+  "answer": 81.1,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsi_emp_a?freq=A&indic_em=EMP_LFS&sex=T&age=Y20-64&unit=PC_POP&geo=DE&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %76,1.",
+  "difficulty": 2,
+  "dataset": "es_employment"
+ },
+ {
+  "id": "q3082",
+  "text": "2025 yılında Fransa'da tüketilen enerjinin yüzde kaçı yenilenebilir kaynaklardan gelmiştir?",
+  "answer": 23.9,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?freq=A&nrg_bal=REN&unit=PC&geo=FR&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %26,2.",
+  "difficulty": 2,
+  "dataset": "es_renewables"
+ },
+ {
+  "id": "q3083",
+  "text": "2025 yılında İspanya'da tüketilen enerjinin yüzde kaçı yenilenebilir kaynaklardan gelmiştir?",
+  "answer": 26.0,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?freq=A&nrg_bal=REN&unit=PC&geo=ES&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %26,2.",
+  "difficulty": 2,
+  "dataset": "es_renewables"
+ },
+ {
+  "id": "q3084",
+  "text": "2025 yılında Polonya'da tüketilen enerjinin yüzde kaçı yenilenebilir kaynaklardan gelmiştir?",
+  "answer": 18.7,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?freq=A&nrg_bal=REN&unit=PC&geo=PL&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %26,2.",
+  "difficulty": 2,
+  "dataset": "es_renewables"
+ },
+ {
+  "id": "q3085",
+  "text": "2025 yılında Portekiz'de tüketilen enerjinin yüzde kaçı yenilenebilir kaynaklardan gelmiştir?",
+  "answer": 36.7,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_ind_ren?freq=A&nrg_bal=REN&unit=PC&geo=PT&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %26,2.",
+  "difficulty": 2,
+  "dataset": "es_renewables"
+ },
+ {
+  "id": "q3086",
+  "text": "2025 verilerine göre İspanya'da 20-64 yaş arasındakilerin yüzde kaçı çalışmaktadır?",
+  "answer": 72.4,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsi_emp_a?freq=A&indic_em=EMP_LFS&sex=T&age=Y20-64&unit=PC_POP&geo=ES&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %76,1.",
+  "difficulty": 2,
+  "dataset": "es_employment"
+ },
+ {
+  "id": "q3087",
+  "text": "2025 verilerine göre İtalya'da 20-64 yaş arasındakilerin yüzde kaçı çalışmaktadır?",
+  "answer": 67.6,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsi_emp_a?freq=A&indic_em=EMP_LFS&sex=T&age=Y20-64&unit=PC_POP&geo=IT&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %76,1.",
+  "difficulty": 2,
+  "dataset": "es_employment"
+ },
+ {
+  "id": "q3088",
+  "text": "2025 verilerine göre Hollanda'da 20-64 yaş arasındakilerin yüzde kaçı çalışmaktadır?",
+  "answer": 83.4,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsi_emp_a?freq=A&indic_em=EMP_LFS&sex=T&age=Y20-64&unit=PC_POP&geo=NL&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %76,1.",
+  "difficulty": 2,
+  "dataset": "es_employment"
+ },
+ {
+  "id": "q3089",
+  "text": "2025 verilerine göre İsveç'te 20-64 yaş arasındakilerin yüzde kaçı çalışmaktadır?",
+  "answer": 81.8,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsi_emp_a?freq=A&indic_em=EMP_LFS&sex=T&age=Y20-64&unit=PC_POP&geo=SE&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %76,1.",
+  "difficulty": 2,
+  "dataset": "es_employment"
+ },
+ {
+  "id": "q3090",
+  "text": "Boeing 747 uçağının kanat açıklığı kaç metredir?",
+  "answer": 59.6,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q179",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3091",
+  "text": "2025 yılında Şeremetyevo Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 43130000,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q192733",
+  "data_year": 2025,
+  "fun_fact": "Konum: Moskova Oblastı, Rusya.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3092",
+  "text": "2025 yılında Atlanta Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 106302208,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q214861",
+  "data_year": 2025,
+  "fun_fact": "Konum: Atlanta, Amerika Birleşik Devletleri.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3093",
+  "text": "Doyran Gölü en derin yerinde kaç metredir?",
+  "answer": 10,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q158077",
+  "data_year": 2026,
+  "fun_fact": "Konum: Kuzey Makedonya.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3094",
+  "text": "MQ-9 Reaper uçağının kanat açıklığı kaç metredir?",
+  "answer": 20.1,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q816695",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3095",
+  "text": "2025 yılında Şam Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 1392699,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q570873",
+  "data_year": 2025,
+  "fun_fact": "Konum: Şam, Suriye.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3096",
+  "text": "2024 yılında Frankfurt Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 61564957,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q46033",
+  "data_year": 2024,
+  "fun_fact": "Konum: Kelsterbach, Almanya.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3097",
+  "text": "2025 yılında Vnukovo Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 16400000,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q273462",
+  "data_year": 2025,
+  "fun_fact": "Konum: Rusya.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3098",
+  "text": "Fairchild-Republic A-10 Thunderbolt II uçağının kanat açıklığı kaç metredir?",
+  "answer": 17.5,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q192443",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3099",
+  "text": "2019 yılında Mehrabad Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 14931798,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q513684",
+  "data_year": 2019,
+  "fun_fact": "Konum: İran.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3100",
+  "text": "2024 yılında Narita Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 39807651,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q36454",
+  "data_year": 2024,
+  "fun_fact": "Konum: Narita, Japonya.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3101",
+  "text": "Skylab kaç kilogramdır?",
+  "answer": 76295,
+  "unit": "kg",
+  "kind": "magnitude",
+  "category": "uzay",
+  "source": "https://www.wikidata.org/wiki/Q190776",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "spacecraft_mass",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3102",
+  "text": "2025 yılında Fiumicino – Leonardo da Vinci Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 51306744,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q19101",
+  "data_year": 2025,
+  "fun_fact": "Konum: Fiumicino, İtalya.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3103",
+  "text": "Titikaka Gölü en derin yerinde kaç metredir?",
+  "answer": 489,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q35342",
+  "data_year": 2026,
+  "fun_fact": "Konum: Bolivya.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3104",
+  "text": "Messerschmitt Me 262 uçağının kanat açıklığı kaç metredir?",
+  "answer": 12.5,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q140254",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3105",
+  "text": "2022 yılında Hamad Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 35700000,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q1198791",
+  "data_year": 2022,
+  "fun_fact": "Konum: Doha, Katar.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3106",
+  "text": "2025 yılında Kopenhag Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 32433694,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q206277",
+  "data_year": 2025,
+  "fun_fact": "Konum: Tårnby, Danimarka.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3107",
+  "text": "Salyut 1 kaç kilogramdır?",
+  "answer": 18200,
+  "unit": "kg",
+  "kind": "magnitude",
+  "category": "uzay",
+  "source": "https://www.wikidata.org/wiki/Q211761",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "spacecraft_mass",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3108",
+  "text": "2022 yılında Düsseldorf Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 16071936,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q58226",
+  "data_year": 2022,
+  "fun_fact": "Konum: Almanya.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3109",
+  "text": "Lockheed C-130 Hercules uçağının kanat açıklığı kaç metredir?",
+  "answer": 40.4,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q182027",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3110",
+  "text": "2025 yılına kadar Boeing 767 uçağından kaç adet üretilmiştir?",
+  "answer": 1326,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q6423",
+  "data_year": 2025,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3111",
+  "text": "MiG-29 uçağının kanat açıklığı kaç metredir?",
+  "answer": 11.4,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q130681",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3112",
+  "text": "Lockheed U-2 uçağından toplam kaç adet üretilmiştir?",
+  "answer": 104,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q189064",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3113",
+  "text": "2023 yılında Londra Gatwick Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 40899000,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q8703",
+  "data_year": 2023,
+  "fun_fact": "Konum: Birleşik Krallık.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3114",
+  "text": "2025 yılında Viyana Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 32559115,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q32999",
+  "data_year": 2025,
+  "fun_fact": "Konum: Schwechat, Avusturya.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3115",
+  "text": "2023 yılında Tiran Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 7257634,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q217226",
+  "data_year": 2023,
+  "fun_fact": "Konum: Dıraç ili, Arnavutluk.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3116",
+  "text": "2019 yılında Haydar Aliyev Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 4730000,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q386864",
+  "data_year": 2019,
+  "fun_fact": "Konum: Bakü, Azerbaycan.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3117",
+  "text": "2025 yılında Zürih Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 32593966,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q15114",
+  "data_year": 2025,
+  "fun_fact": "Konum: Zürih, İsviçre.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3118",
+  "text": "Zürih Gölü en derin yerinde kaç metredir?",
+  "answer": 136,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q14407",
+  "data_year": 2026,
+  "fun_fact": "Konum: İsviçre.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3119",
+  "text": "2019 yılında Kral Abdülaziz Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 37540861,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q153592",
+  "data_year": 2019,
+  "fun_fact": "Konum: Cidde, Suudi Arabistan.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3120",
+  "text": "2025 yılında Pulkovo Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 20700000,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q690122",
+  "data_year": 2025,
+  "fun_fact": "Konum: Sankt-Peterburg, Rusya.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3121",
+  "text": "2024 yılında Heathrow Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 83884572,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q8691",
+  "data_year": 2024,
+  "fun_fact": "Konum: Hillingdon, Birleşik Krallık.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3122",
+  "text": "2023 yılında Üsküp Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 2883378,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q1142389",
+  "data_year": 2023,
+  "fun_fact": "Konum: Üsküp Bölgesi, Kuzey Makedonya.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3123",
+  "text": "2022 yılında Saraybosna Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 1377348,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q740392",
+  "data_year": 2022,
+  "fun_fact": "Konum: Ilıca belediyesi, Bosna Hersek.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3124",
+  "text": "Concorde uçağının kanat açıklığı kaç metredir?",
+  "answer": 25.6,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q6505",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3125",
+  "text": "Huron Gölü en derin yerinde kaç metredir?",
+  "answer": 230,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q1383",
+  "data_year": 2026,
+  "fun_fact": "Konum: Amerika Birleşik Devletleri.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3126",
+  "text": "2017 yılına kadar Airbus A330 uçağından kaç adet üretilmiştir?",
+  "answer": 1378,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q6478",
+  "data_year": 2017,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3127",
+  "text": "2022 yılında Kuala Lumpur Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 25377000,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q500253",
+  "data_year": 2022,
+  "fun_fact": "Konum: Sepang, Malezya.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3128",
+  "text": "2025 yılında Antalya Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 39000177,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q827480",
+  "data_year": 2025,
+  "fun_fact": "Konum: Antalya, Türkiye.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3129",
+  "text": "2022 yılında Larnaka Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 6037053,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q654636",
+  "data_year": 2022,
+  "fun_fact": "Konum: Larnaka, Kıbrıs.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3130",
+  "text": "Baykal Gölü en derin yerinde kaç metredir?",
+  "answer": 1642,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q5513",
+  "data_year": 2026,
+  "fun_fact": "Konum: Rusya.",
+  "difficulty": 2,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3131",
+  "text": "Boeing E-3 Sentry uçağından toplam kaç adet üretilmiştir?",
+  "answer": 68,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q261384",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3132",
+  "text": "Büyük Tuz Gölü en derin yerinde kaç metredir?",
+  "answer": 10.7,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q178741",
+  "data_year": 2026,
+  "fun_fact": "Konum: Amerika Birleşik Devletleri.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3133",
+  "text": "Loch Ness Gölü kaç kilometrekaredir?",
+  "answer": 56.4,
+  "unit": "km²",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q49650",
+  "data_year": 2026,
+  "fun_fact": "Konum: Birleşik Krallık.",
+  "difficulty": 3,
+  "dataset": "lakes_world"
+ },
+ {
+  "id": "q3134",
+  "text": "MiG-35 uçağının kanat açıklığı kaç metredir?",
+  "answer": 15,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q220529",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3135",
+  "text": "Boeing C-17 Globemaster III uçağından toplam kaç adet üretilmiştir?",
+  "answer": 279,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q211369",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3136",
+  "text": "2023 yılında Podgorica Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 1657522,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q844825",
+  "data_year": 2023,
+  "fun_fact": "Konum: Golubovci, Karadağ.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3137",
+  "text": "2025 yılına kadar Dassault Rafale uçağından kaç adet üretilmiştir?",
+  "answer": 313,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q190973",
+  "data_year": 2025,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3138",
+  "text": "Salton Denizi en derin yerinde kaç metredir?",
+  "answer": 15,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q503301",
+  "data_year": 2026,
+  "fun_fact": "Konum: Amerika Birleşik Devletleri.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3139",
+  "text": "Malavi Gölü en derin yerinde kaç metredir?",
+  "answer": 704,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q5532",
+  "data_year": 2026,
+  "fun_fact": "Konum: Malavi.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3140",
+  "text": "2025 yılında Domodedovo Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 13860000,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q186614",
+  "data_year": 2025,
+  "fun_fact": "Konum: Rusya.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3141",
+  "text": "Beyşehir Gölü en derin yerinde kaç metredir?",
+  "answer": 10,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q369923",
+  "data_year": 2026,
+  "fun_fact": "Konum: Türkiye.",
+  "difficulty": 2,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3142",
+  "text": "Su-30 uçağının kanat açıklığı kaç metredir?",
+  "answer": 14.7,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q204331",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3143",
+  "text": "2023 yılında John F. Kennedy Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 62440306,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q8685",
+  "data_year": 2023,
+  "fun_fact": "Konum: Queens, Amerika Birleşik Devletleri.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3144",
+  "text": "F-22 Raptor uçağından toplam kaç adet üretilmiştir?",
+  "answer": 195,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q133324",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3145",
+  "text": "Lockheed F-104 Starfighter uçağından toplam kaç adet üretilmiştir?",
+  "answer": 2578,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q159881",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3146",
+  "text": "2024 yılında Tokyo Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 85900617,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q204853",
+  "data_year": 2024,
+  "fun_fact": "Konum: Ōta, Japonya.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3147",
+  "text": "Airbus A330 uçağının kanat açıklığı kaç metredir?",
+  "answer": 60.3,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q6478",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3148",
+  "text": "2024 yılında Kansai Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 30598651,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q193682",
+  "data_year": 2024,
+  "fun_fact": "Konum: Izumisano, Japonya.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3149",
+  "text": "Bled Gölü en derin yerinde kaç metredir?",
+  "answer": 30.6,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q648902",
+  "data_year": 2026,
+  "fun_fact": "Konum: Slovenya.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3150",
+  "text": "Maggiore Gölü en derin yerinde kaç metredir?",
+  "answer": 372,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q14379",
+  "data_year": 2026,
+  "fun_fact": "Konum: İsviçre.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3151",
+  "text": "Ohri Gölü en derin yerinde kaç metredir?",
+  "answer": 289,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q156258",
+  "data_year": 2026,
+  "fun_fact": "Konum: Arnavutluk.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3152",
+  "text": "2025 yılında Paris-Charles de Gaulle Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 72029407,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q46280",
+  "data_year": 2025,
+  "fun_fact": "Konum: Le Mesnil-Amelot, Fransa.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3153",
+  "text": "Sevan Gölü en derin yerinde kaç metredir?",
+  "answer": 81,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q181932",
+  "data_year": 2026,
+  "fun_fact": "Konum: Ermenistan.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3154",
+  "text": "Bayraktar TB2 uçağının kanat açıklığı kaç metredir?",
+  "answer": 12,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q17501733",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3155",
+  "text": "2024 yılında Münih Franz Josef Strauss Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 41568000,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q131402",
+  "data_year": 2024,
+  "fun_fact": "Konum: Freising, Almanya.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3156",
+  "text": "Boeing 747 uçağından toplam kaç adet üretilmiştir?",
+  "answer": 1574,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q179",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3157",
+  "text": "İznik Gölü en derin yerinde kaç metredir?",
+  "answer": 80,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q192369",
+  "data_year": 2026,
+  "fun_fact": "Konum: Türkiye.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3158",
+  "text": "Superior Gölü en derin yerinde kaç metredir?",
+  "answer": 406,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q1066",
+  "data_year": 2026,
+  "fun_fact": "Konum: Amerika Birleşik Devletleri.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3159",
+  "text": "Sukhoi Su-24 uçağının kanat açıklığı kaç metredir?",
+  "answer": 17.5,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q210413",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3160",
+  "text": "Bell UH-1 Iroquois uçağından toplam kaç adet üretilmiştir?",
+  "answer": 16000,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q154106",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3161",
+  "text": "Lockheed C-5 Galaxy uçağının kanat açıklığı kaç metredir?",
+  "answer": 67.9,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q182012",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3162",
+  "text": "2025 yılında Pekin Daxing Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 53618400,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q1139574",
+  "data_year": 2025,
+  "fun_fact": "Konum: Çin Halk Cumhuriyeti.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3163",
+  "text": "Fairchild-Republic A-10 Thunderbolt II uçağından toplam kaç adet üretilmiştir?",
+  "answer": 716,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q192443",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3164",
+  "text": "B-1 Lancer uçağından toplam kaç adet üretilmiştir?",
+  "answer": 100,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q218636",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3165",
+  "text": "Loch Ness Gölü en derin yerinde kaç metredir?",
+  "answer": 272,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q49650",
+  "data_year": 2026,
+  "fun_fact": "Konum: Birleşik Krallık.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3166",
+  "text": "2019 yılına kadar Airbus A350 uçağından kaç adet üretilmiştir?",
+  "answer": 295,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q6484",
+  "data_year": 2019,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3167",
+  "text": "Prespa Gölü en derin yerinde kaç metredir?",
+  "answer": 54,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q204392",
+  "data_year": 2026,
+  "fun_fact": "Konum: Arnavutluk.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3168",
+  "text": "McDonnell Douglas F-4 Phantom II uçağının kanat açıklığı kaç metredir?",
+  "answer": 11.7,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q151432",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3169",
+  "text": "Airbus A380 uçağının kanat açıklığı kaç metredir?",
+  "answer": 79.8,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q5830",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3170",
+  "text": "Messerschmitt Me 262 uçağından toplam kaç adet üretilmiştir?",
+  "answer": 1433,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q140254",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3171",
+  "text": "2025 yılında Esenboğa Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 13926680,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q430490",
+  "data_year": 2025,
+  "fun_fact": "Konum: Ankara, Türkiye.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3172",
+  "text": "2024 yılında Budapeşte Ferenc Liszt Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 17574413,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q500945",
+  "data_year": 2024,
+  "fun_fact": "Konum: Budapeşte, Macaristan.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3173",
+  "text": "Mir kaç kilogramdır?",
+  "answer": 129700,
+  "unit": "kg",
+  "kind": "magnitude",
+  "category": "uzay",
+  "source": "https://www.wikidata.org/wiki/Q48604",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "spacecraft_mass",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3174",
+  "text": "Airbus A350 uçağının kanat açıklığı kaç metredir?",
+  "answer": 64.8,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q6484",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3175",
+  "text": "2024 yılında Madrid Barajas Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 66197066,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q166276",
+  "data_year": 2024,
+  "fun_fact": "Konum: Barajas, İspanya.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3176",
+  "text": "F-22 Raptor uçağının kanat açıklığı kaç metredir?",
+  "answer": 13.6,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q133324",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3177",
+  "text": "Nancy Grace Roman Uzay Teleskobu kaç kilogramdır?",
+  "answer": 4166,
+  "unit": "kg",
+  "kind": "magnitude",
+  "category": "uzay",
+  "source": "https://www.wikidata.org/wiki/Q7998593",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "spacecraft_mass",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3178",
+  "text": "McDonnell Douglas F-4 Phantom II uçağından toplam kaç adet üretilmiştir?",
+  "answer": 5195,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q151432",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3179",
+  "text": "2020 yılına kadar Airbus A320 uçağından kaç adet üretilmiştir?",
+  "answer": 9693,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q6475",
+  "data_year": 2020,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3180",
+  "text": "Boeing C-17 Globemaster III uçağının kanat açıklığı kaç metredir?",
+  "answer": 52,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q211369",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3181",
+  "text": "2023 yılında Singapur Changi Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 58900000,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q32159",
+  "data_year": 2023,
+  "fun_fact": "Konum: Singapur.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3182",
+  "text": "PAK FA uçağının kanat açıklığı kaç metredir?",
+  "answer": 14,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q194455",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3183",
+  "text": "2019 yılına kadar Boeing 787 uçağından kaç adet üretilmiştir?",
+  "answer": 972,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q6428",
+  "data_year": 2019,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3184",
+  "text": "Sukhoi Su-25 uçağının kanat açıklığı kaç metredir?",
+  "answer": 14.3,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q192137",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3185",
+  "text": "James Webb Uzay Teleskopu kaç kilogramdır?",
+  "answer": 6161,
+  "unit": "kg",
+  "kind": "magnitude",
+  "category": "uzay",
+  "source": "https://www.wikidata.org/wiki/Q186447",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "spacecraft_mass",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3186",
+  "text": "McDonnell Douglas DC-10 uçağının kanat açıklığı kaç metredir?",
+  "answer": 50.4,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q208075",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3187",
+  "text": "2019 yılında Kişinev Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 2995530,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q844951",
+  "data_year": 2019,
+  "fun_fact": "Konum: Kişinev, Moldova.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3188",
+  "text": "Airbus A320 uçağının kanat açıklığı kaç metredir?",
+  "answer": 34.1,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q6475",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3189",
+  "text": "İlyuşin İl-76 uçağının kanat açıklığı kaç metredir?",
+  "answer": 50.5,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q142549",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3190",
+  "text": "Lockheed SR-71 Blackbird uçağının kanat açıklığı kaç metredir?",
+  "answer": 16.9,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q190114",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3191",
+  "text": "KC-135 Stratotanker uçağının kanat açıklığı kaç metredir?",
+  "answer": 39.9,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q829092",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3192",
+  "text": "2022 yılında EuroAirport Basel-Mulhouse-Freiburg kaç yolcuya hizmet vermiştir?",
+  "answer": 7050765,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q156971",
+  "data_year": 2022,
+  "fun_fact": "Konum: Saint-Louis, Almanya.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3193",
+  "text": "Königssee Gölü en derin yerinde kaç metredir?",
+  "answer": 190,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q156715",
+  "data_year": 2026,
+  "fun_fact": "Konum: Almanya.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3194",
+  "text": "Michigan Gölü en derin yerinde kaç metredir?",
+  "answer": 281,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q1169",
+  "data_year": 2026,
+  "fun_fact": "Konum: Amerika Birleşik Devletleri.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3195",
+  "text": "Ontario Gölü en derin yerinde kaç metredir?",
+  "answer": 244,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q1062",
+  "data_year": 2026,
+  "fun_fact": "Konum: Amerika Birleşik Devletleri.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3196",
+  "text": "McDonnell Douglas F-15 Eagle uçağının kanat açıklığı kaç metredir?",
+  "answer": 13,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q29251",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3197",
+  "text": "Boeing 737 uçağının kanat açıklığı kaç metredir?",
+  "answer": 34.3,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q6387",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3198",
+  "text": "F-117 Nighthawk uçağının kanat açıklığı kaç metredir?",
+  "answer": 13.2,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q184491",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3199",
+  "text": "2025 yılında Incheon Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 74071475,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q20932",
+  "data_year": 2025,
+  "fun_fact": "Konum: İncheon, Güney Kore.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3200",
+  "text": "2025 yılında Dubai Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 95200000,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q193439",
+  "data_year": 2025,
+  "fun_fact": "Konum: Birleşik Arap Emirlikleri.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3201",
+  "text": "Tiangong uzay istasyonu kaç kilogramdır?",
+  "answer": 100000,
+  "unit": "kg",
+  "kind": "magnitude",
+  "category": "uzay",
+  "source": "https://www.wikidata.org/wiki/Q5100935",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "spacecraft_mass",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3202",
+  "text": "Turkana Gölü en derin yerinde kaç metredir?",
+  "answer": 109,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q182719",
+  "data_year": 2026,
+  "fun_fact": "Konum: Etiyopya.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3203",
+  "text": "AC-130 uçağının kanat açıklığı kaç metredir?",
+  "answer": 40.4,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q431231",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3204",
+  "text": "F-14 Tomcat uçağının kanat açıklığı kaç metredir?",
+  "answer": 19.6,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q34945",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3205",
+  "text": "B-52 Stratofortress uçağının kanat açıklığı kaç metredir?",
+  "answer": 56.4,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q174534",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3206",
+  "text": "Panavia Tornado uçağından toplam kaç adet üretilmiştir?",
+  "answer": 992,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q152200",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3207",
+  "text": "Antonov An-225 uçağının kanat açıklığı kaç metredir?",
+  "answer": 88.4,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q178351",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3208",
+  "text": "2024 yılında Priştine Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 4082481,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q643783",
+  "data_year": 2024,
+  "fun_fact": "Konum: Kosova Ovası Belediyesi, Kosova.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3209",
+  "text": "F-117 Nighthawk uçağından toplam kaç adet üretilmiştir?",
+  "answer": 64,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q184491",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3210",
+  "text": "2021 yılına kadar Airbus A380 uçağından kaç adet üretilmiştir?",
+  "answer": 251,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q5830",
+  "data_year": 2021,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3211",
+  "text": "2022 yılında Ben Gurion Uluslararası Havaalanı kaç yolcuya hizmet vermiştir?",
+  "answer": 20008532,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q181479",
+  "data_year": 2022,
+  "fun_fact": "Konum: Merkez Bölge, İsrail.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3212",
+  "text": "Airbus A400M uçağının kanat açıklığı kaç metredir?",
+  "answer": 42.4,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q6496",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3213",
+  "text": "Kepler kaç kilogramdır?",
+  "answer": 1052,
+  "unit": "kg",
+  "kind": "magnitude",
+  "category": "uzay",
+  "source": "https://www.wikidata.org/wiki/Q47272",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "spacecraft_mass",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3214",
+  "text": "2019 yılında Kuveyt Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 15448909,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q527157",
+  "data_year": 2019,
+  "fun_fact": "Konum: El Fervaniye Valiliği, Kuveyt.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3215",
+  "text": "2023 yılında Paris-Orly Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 32294167,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q223416",
+  "data_year": 2023,
+  "fun_fact": "Konum: Orly, Fransa.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3216",
+  "text": "Issık Göl en derin yerinde kaç metredir?",
+  "answer": 668,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q42191",
+  "data_year": 2026,
+  "fun_fact": "Konum: Kırgızistan.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3217",
+  "text": "Balaton Gölü en derin yerinde kaç metredir?",
+  "answer": 12.5,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q6383",
+  "data_year": 2026,
+  "fun_fact": "Konum: Macaristan.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3218",
+  "text": "Salyut 7 kaç kilogramdır?",
+  "answer": 19824,
+  "unit": "kg",
+  "kind": "magnitude",
+  "category": "uzay",
+  "source": "https://www.wikidata.org/wiki/Q904503",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "spacecraft_mass",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3219",
+  "text": "Garda Gölü en derin yerinde kaç metredir?",
+  "answer": 346,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q6414",
+  "data_year": 2026,
+  "fun_fact": "Konum: İtalya.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3220",
+  "text": "F-14 Tomcat uçağından toplam kaç adet üretilmiştir?",
+  "answer": 712,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q34945",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3221",
+  "text": "Dassault Rafale uçağının kanat açıklığı kaç metredir?",
+  "answer": 10.9,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q190973",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3222",
+  "text": "2022 yılında Londra Stansted Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 23319523,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q8709",
+  "data_year": 2022,
+  "fun_fact": "Konum: Stansted Mountfitchet, Birleşik Krallık.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3223",
+  "text": "Boeing 787 uçağının kanat açıklığı kaç metredir?",
+  "answer": 52,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q6428",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3224",
+  "text": "Mälaren Gölü en derin yerinde kaç metredir?",
+  "answer": 64,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q184492",
+  "data_year": 2026,
+  "fun_fact": "Konum: İsveç.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3225",
+  "text": "Su-35 uçağının kanat açıklığı kaç metredir?",
+  "answer": 15.3,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q245275",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3226",
+  "text": "Chengdu J-20 uçağının kanat açıklığı kaç metredir?",
+  "answer": 15,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q560319",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3227",
+  "text": "Maracaibo Gölü en derin yerinde kaç metredir?",
+  "answer": 60,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q182137",
+  "data_year": 2026,
+  "fun_fact": "Konum: Venezuela.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3228",
+  "text": "2024 yılında Uluslararası İmam Humeyni Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 7672152,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q734729",
+  "data_year": 2024,
+  "fun_fact": "Konum: Tahran Eyaleti, İran.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3229",
+  "text": "2025 yılında Sabiha Gökçen Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 48407318,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q723622",
+  "data_year": 2025,
+  "fun_fact": "Konum: Pendik, Türkiye.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3230",
+  "text": "Eurofighter Typhoon uçağının kanat açıklığı kaç metredir?",
+  "answer": 11,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q151384",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3231",
+  "text": "2022 yılında Tiflis Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 2998785,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q778213",
+  "data_year": 2022,
+  "fun_fact": "Konum: Tiflis, Gürcistan.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3232",
+  "text": "Boeing E-3 Sentry uçağının kanat açıklığı kaç metredir?",
+  "answer": 44.4,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q261384",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3233",
+  "text": "Lugano Gölü en derin yerinde kaç metredir?",
+  "answer": 288,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q14418",
+  "data_year": 2026,
+  "fun_fact": "Konum: İsviçre.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3234",
+  "text": "2024 yılında Amsterdam Schiphol Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 66828453,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q9694",
+  "data_year": 2024,
+  "fun_fact": "Konum: Haarlemmermeer, Hollanda.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3235",
+  "text": "Boeing 737 MAX uçağının kanat açıklığı kaç metredir?",
+  "answer": 35.9,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q139289",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_wingspan",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q3236",
+  "text": "2025 yılında Suvarnabhumi Uluslararası Havaalanı kaç yolcuya hizmet vermiştir?",
+  "answer": 62902183,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q194316",
+  "data_year": 2025,
+  "fun_fact": "Konum: Tayland.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3237",
+  "text": "Ladoga Gölü en derin yerinde kaç metredir?",
+  "answer": 230,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q15288",
+  "data_year": 2026,
+  "fun_fact": "Konum: Rusya.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3238",
+  "text": "2024 yılında Belgrad Nikola Tesla Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 8367931,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q127955",
+  "data_year": 2024,
+  "fun_fact": "Konum: Belgrad, Sırbistan.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q3239",
+  "text": "Victoria Gölü en derin yerinde kaç metredir?",
+  "answer": 83,
+  "unit": "m",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://www.wikidata.org/wiki/Q5505",
+  "data_year": 2026,
+  "fun_fact": "Konum: Kenya.",
+  "difficulty": 3,
+  "dataset": "lakes_depth",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q3240",
+  "text": "Su-27 uçağından toplam kaç adet üretilmiştir?",
+  "answer": 809,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q173680",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3241",
+  "text": "B-52 Stratofortress uçağından toplam kaç adet üretilmiştir?",
+  "answer": 744,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q174534",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3242",
+  "text": "2018 yılına kadar General Dynamics F-16 Fighting Falcon uçağından kaç adet üretilmiştir?",
+  "answer": 4604,
+  "unit": "adet",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q100026",
+  "data_year": 2018,
+  "fun_fact": null,
+  "difficulty": 1,
+  "dataset": "aircraft_produced",
+  "scale": {
+   "factor": 5
+  }
+ },
+ {
+  "id": "q3243",
+  "text": "2025 yılında Kahire Uluslararası Havalimanı kaç yolcuya hizmet vermiştir?",
+  "answer": 31137557,
+  "unit": "kişi",
+  "kind": "magnitude",
+  "category": "ulaşım",
+  "source": "https://www.wikidata.org/wiki/Q461793",
+  "data_year": 2025,
+  "fun_fact": "Konum: Kahire, Mısır.",
+  "difficulty": 3,
+  "dataset": "airports_passengers",
   "scale": {
    "factor": 3
   }
