@@ -49407,5 +49407,279 @@
   "scale": {
    "factor": 4
   }
+ },
+ {
+  "id": "q3388",
+  "text": "2025 verilerine göre İspanya'da 25-64 yaş arasındakilerin yüzde kaçı üniversite (yükseköğretim) mezunudur?",
+  "answer": 42.4,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/edat_lfse_03?freq=A&sex=T&age=Y25-64&isced11=ED5-8&unit=PC&geo=ES&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %36,9.",
+  "difficulty": 2,
+  "dataset": "es_tertiary"
+ },
+ {
+  "id": "q3389",
+  "text": "2025 verilerine göre Hollanda'da çalışanlar ana işlerinde haftada ortalama kaç saat çalışmaktadır?",
+  "answer": 31.5,
+  "unit": "saat",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsa_ewhuis?freq=A&sex=T&age=Y15-64&isco08=TOTAL&worktime=TOTAL&wstatus=EMP&unit=HR&geo=NL&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 37,0 saat.",
+  "difficulty": 2,
+  "dataset": "es_weekly_hours",
+  "scale": {
+   "half": 4
+  }
+ },
+ {
+  "id": "q3390",
+  "text": "2025 verilerine göre Almanya'da çalışanlar ana işlerinde haftada ortalama kaç saat çalışmaktadır?",
+  "answer": 34.8,
+  "unit": "saat",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsa_ewhuis?freq=A&sex=T&age=Y15-64&isco08=TOTAL&worktime=TOTAL&wstatus=EMP&unit=HR&geo=DE&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 37,0 saat.",
+  "difficulty": 2,
+  "dataset": "es_weekly_hours",
+  "scale": {
+   "half": 4
+  }
+ },
+ {
+  "id": "q3391",
+  "text": "2025 verilerine göre İrlanda'da 25-64 yaş arasındakilerin yüzde kaçı üniversite (yükseköğretim) mezunudur?",
+  "answer": 58.7,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/edat_lfse_03?freq=A&sex=T&age=Y25-64&isced11=ED5-8&unit=PC&geo=IE&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %36,9.",
+  "difficulty": 2,
+  "dataset": "es_tertiary"
+ },
+ {
+  "id": "q3392",
+  "text": "2025 verilerine göre Almanya'da 25-64 yaş arasındakilerin yüzde kaçı üniversite (yükseköğretim) mezunudur?",
+  "answer": 35.4,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/edat_lfse_03?freq=A&sex=T&age=Y25-64&isced11=ED5-8&unit=PC&geo=DE&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %36,9.",
+  "difficulty": 2,
+  "dataset": "es_tertiary"
+ },
+ {
+  "id": "q3393",
+  "text": "2025 verilerine göre İspanya'da çalışanlar ana işlerinde haftada ortalama kaç saat çalışmaktadır?",
+  "answer": 37.5,
+  "unit": "saat",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsa_ewhuis?freq=A&sex=T&age=Y15-64&isco08=TOTAL&worktime=TOTAL&wstatus=EMP&unit=HR&geo=ES&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 37,0 saat.",
+  "difficulty": 2,
+  "dataset": "es_weekly_hours",
+  "scale": {
+   "half": 4
+  }
+ },
+ {
+  "id": "q3394",
+  "text": "2025 verilerine göre Polonya'da 25-64 yaş arasındakilerin yüzde kaçı üniversite (yükseköğretim) mezunudur?",
+  "answer": 40.0,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/edat_lfse_03?freq=A&sex=T&age=Y25-64&isced11=ED5-8&unit=PC&geo=PL&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %36,9.",
+  "difficulty": 2,
+  "dataset": "es_tertiary"
+ },
+ {
+  "id": "q3395",
+  "text": "2025 verilerine göre Romanya'da 25-64 yaş arasındakilerin yüzde kaçı üniversite (yükseköğretim) mezunudur?",
+  "answer": 19.5,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/edat_lfse_03?freq=A&sex=T&age=Y25-64&isced11=ED5-8&unit=PC&geo=RO&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %36,9.",
+  "difficulty": 2,
+  "dataset": "es_tertiary"
+ },
+ {
+  "id": "q3396",
+  "text": "2025 verilerine göre Türkiye'de 25-64 yaş arasındakilerin yüzde kaçı üniversite (yükseköğretim) mezunudur?",
+  "answer": 26.8,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "türkiye",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/edat_lfse_03?freq=A&sex=T&age=Y25-64&isced11=ED5-8&unit=PC&geo=TR&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %36,9.",
+  "difficulty": 2,
+  "dataset": "es_tertiary"
+ },
+ {
+  "id": "q3397",
+  "text": "2025 verilerine göre İtalya'da çalışanlar ana işlerinde haftada ortalama kaç saat çalışmaktadır?",
+  "answer": 37.2,
+  "unit": "saat",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsa_ewhuis?freq=A&sex=T&age=Y15-64&isco08=TOTAL&worktime=TOTAL&wstatus=EMP&unit=HR&geo=IT&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 37,0 saat.",
+  "difficulty": 2,
+  "dataset": "es_weekly_hours",
+  "scale": {
+   "half": 4
+  }
+ },
+ {
+  "id": "q3398",
+  "text": "2025 verilerine göre Yunanistan'da çalışanlar ana işlerinde haftada ortalama kaç saat çalışmaktadır?",
+  "answer": 41.0,
+  "unit": "saat",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsa_ewhuis?freq=A&sex=T&age=Y15-64&isco08=TOTAL&worktime=TOTAL&wstatus=EMP&unit=HR&geo=EL&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 37,0 saat.",
+  "difficulty": 2,
+  "dataset": "es_weekly_hours",
+  "scale": {
+   "half": 4
+  }
+ },
+ {
+  "id": "q3399",
+  "text": "2025 verilerine göre Fransa'da 25-64 yaş arasındakilerin yüzde kaçı üniversite (yükseköğretim) mezunudur?",
+  "answer": 44.8,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/edat_lfse_03?freq=A&sex=T&age=Y25-64&isced11=ED5-8&unit=PC&geo=FR&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %36,9.",
+  "difficulty": 2,
+  "dataset": "es_tertiary"
+ },
+ {
+  "id": "q3400",
+  "text": "2025 verilerine göre İsveç'te 25-64 yaş arasındakilerin yüzde kaçı üniversite (yükseköğretim) mezunudur?",
+  "answer": 50.8,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/edat_lfse_03?freq=A&sex=T&age=Y25-64&isced11=ED5-8&unit=PC&geo=SE&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %36,9.",
+  "difficulty": 2,
+  "dataset": "es_tertiary"
+ },
+ {
+  "id": "q3401",
+  "text": "2025 verilerine göre Hollanda'da 25-64 yaş arasındakilerin yüzde kaçı üniversite (yükseköğretim) mezunudur?",
+  "answer": 46.1,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/edat_lfse_03?freq=A&sex=T&age=Y25-64&isced11=ED5-8&unit=PC&geo=NL&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %36,9.",
+  "difficulty": 2,
+  "dataset": "es_tertiary"
+ },
+ {
+  "id": "q3402",
+  "text": "2025 verilerine göre İsveç'te çalışanlar ana işlerinde haftada ortalama kaç saat çalışmaktadır?",
+  "answer": 38.1,
+  "unit": "saat",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsa_ewhuis?freq=A&sex=T&age=Y15-64&isco08=TOTAL&worktime=TOTAL&wstatus=EMP&unit=HR&geo=SE&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 37,0 saat.",
+  "difficulty": 2,
+  "dataset": "es_weekly_hours",
+  "scale": {
+   "half": 4
+  }
+ },
+ {
+  "id": "q3403",
+  "text": "2025 verilerine göre Türkiye'de çalışanlar ana işlerinde haftada ortalama kaç saat çalışmaktadır?",
+  "answer": 44.0,
+  "unit": "saat",
+  "kind": "magnitude",
+  "category": "türkiye",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsa_ewhuis?freq=A&sex=T&age=Y15-64&isco08=TOTAL&worktime=TOTAL&wstatus=EMP&unit=HR&geo=TR&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 37,0 saat.",
+  "difficulty": 2,
+  "dataset": "es_weekly_hours",
+  "scale": {
+   "half": 4
+  }
+ },
+ {
+  "id": "q3404",
+  "text": "2025 verilerine göre Fransa'da çalışanlar ana işlerinde haftada ortalama kaç saat çalışmaktadır?",
+  "answer": 37.0,
+  "unit": "saat",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsa_ewhuis?freq=A&sex=T&age=Y15-64&isco08=TOTAL&worktime=TOTAL&wstatus=EMP&unit=HR&geo=FR&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 37,0 saat.",
+  "difficulty": 2,
+  "dataset": "es_weekly_hours",
+  "scale": {
+   "half": 4
+  }
+ },
+ {
+  "id": "q3405",
+  "text": "2025 verilerine göre İtalya'da 25-64 yaş arasındakilerin yüzde kaçı üniversite (yükseköğretim) mezunudur?",
+  "answer": 22.3,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/edat_lfse_03?freq=A&sex=T&age=Y25-64&isced11=ED5-8&unit=PC&geo=IT&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %36,9.",
+  "difficulty": 2,
+  "dataset": "es_tertiary"
+ },
+ {
+  "id": "q3406",
+  "text": "2025 verilerine göre Polonya'da çalışanlar ana işlerinde haftada ortalama kaç saat çalışmaktadır?",
+  "answer": 40.0,
+  "unit": "saat",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsa_ewhuis?freq=A&sex=T&age=Y15-64&isco08=TOTAL&worktime=TOTAL&wstatus=EMP&unit=HR&geo=PL&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 37,0 saat.",
+  "difficulty": 2,
+  "dataset": "es_weekly_hours",
+  "scale": {
+   "half": 4
+  }
  }
 ]

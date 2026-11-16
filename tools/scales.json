@@ -67,6 +67,7 @@
   "worldcup_attendance": {"factor": 2},
   "highest_points": {"factor": 3},
   "es_hospital_beds": {"factor": 2.5},
+  "es_weekly_hours": {"half": 4},
   "cars_speed": {"factor": 1.6},
   "universities_students": {"factor": 4},
   "islands_population": {"factor": 5},

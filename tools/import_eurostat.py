@@ -126,6 +126,17 @@ INDICATORS = {
         "{year} verilerine göre {loc} her 100.000 kişiye kaç hastane yatağı düşmektedir?",
         "yatak", 0, "es_hospital_beds",
     ),
+    "tertiary": Indicator(
+        "edat_lfse_03", (("freq", "A"), ("sex", "T"), ("age", "Y25-64"), ("isced11", "ED5-8"), ("unit", "PC")),
+        "{year} verilerine göre {loc} 25-64 yaş arasındakilerin yüzde kaçı üniversite (yükseköğretim) mezunudur?",
+        "%", 1, "es_tertiary",
+    ),
+    "weekly_hours": Indicator(
+        "lfsa_ewhuis", (("freq", "A"), ("sex", "T"), ("age", "Y15-64"), ("isco08", "TOTAL"), ("worktime", "TOTAL"),
+                        ("wstatus", "EMP"), ("unit", "HR")),
+        "{year} verilerine göre {loc} çalışanlar ana işlerinde haftada ortalama kaç saat çalışmaktadır?",
+        "saat", 1, "es_weekly_hours",
+    ),
     "home_owners": Indicator(
         "ilc_lvho02",
         (("freq", "A"), ("rskpovth", "TOTAL"), ("hhcomp", "TOTAL"), ("tenure", "OWN"), ("unit", "PC")),
@@ -173,6 +184,8 @@ QUESTIONS: list[tuple[str, str, int]] = [
     *(("renewables", c, 2) for c in "SE NO DE FR IT ES PL NL PT EL".split()),
     *(("employment", c, 2) for c in "TR DE IT EL NL ES SE".split()),
     *(("hospital_beds", c, 2) for c in "TR DE FR IT ES EL SE PL NL".split()),
+    *(("tertiary", c, 2) for c in "TR DE FR IT ES IE NL PL SE RO".split()),
+    *(("weekly_hours", c, 2) for c in "TR DE FR IT ES EL NL PL SE".split()),
     # Not unemployment: rates of 3-10 % sit inside the fixed ±20-point
     # slider of percentages, a sure hit (2026-11-16).
     *(("first_marriage_f", c, d) for c, d in [

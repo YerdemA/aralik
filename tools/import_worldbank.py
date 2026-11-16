@@ -238,7 +238,7 @@ QUESTIONS = [
 ]
 
 
-def get_json(url: str, attempts: int = 4):
+def get_json(url: str, attempts: int = 8):
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     for attempt in range(1, attempts + 1):
         try:
