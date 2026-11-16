@@ -2,7 +2,7 @@
 layout: page
 title: Veri kaynakları ve lisanslar
 lead: Kabaca'daki soruların cevapları bu açık kaynaklara dayanır.
-updated: 2026-11-09
+updated: 2026-11-16
 ---
 
 Kabaca'daki sorular ve cevapları aşağıdaki kaynaklara dayanır. Her soruda, cevabın
