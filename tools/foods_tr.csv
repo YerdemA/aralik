@@ -453,3 +453,110 @@
 170317;protein;2;Pizza, cheese topping, regular crust, frozen, cooked;pişmiş dondurulmuş peynirli pizzada
 170317;sodium;3;Pizza, cheese topping, regular crust, frozen, cooked;pişmiş dondurulmuş peynirli pizzada
 170317;calcium;3;Pizza, cheese topping, regular crust, frozen, cooked;pişmiş dondurulmuş peynirli pizzada
+# --- 2026-11-16 dördüncü dalga: baharatlar ve yeni yiyecekler ---
+171320;energy;2;Spices, cinnamon, ground;toz tarçında
+170923;energy;3;Spices, cumin seed;kimyonda
+171328;energy;3;Spices, oregano, dried;kuru kekikte
+170931;energy;3;Spices, pepper, black;karabiberde
+171329;energy;3;Spices, paprika;toz kırmızı biberde (paprika)
+172231;energy;3;Spices, turmeric, ground;toz zerdeçalda
+171321;energy;3;Spices, cloves, ground;toz karanfilde
+173755;energy;2;Carob flour;keçiboynuzu ununda
+169941;energy;2;Persimmons, japanese, raw;trabzon hurmasında
+169908;energy;2;Loquats, raw;yenidünyada
+171978;energy;3;Mollusks, oyster, eastern, wild, raw;çiğ istiridyede
+174188;energy;3;Fish, caviar, black and red, granular;havyarda
+172684;energy;2;Bread, rye;çavdar ekmeğinde
+168782;energy;2;Puddings, rice, ready-to-eat;hazır sütlaçta
+171278;energy;2;Milk, goat, fluid;keçi sütünde
+170882;energy;2;Milk, sheep, fluid;koyun sütünde
+172191;energy;2;Egg, quail, whole, fresh, raw;çiğ bıldırcın yumurtasında
+172189;energy;2;Egg, duck, whole, fresh, raw;çiğ ördek yumurtasında
+174284;energy;2;Lentils, pink or red, raw;kuru kırmızı mercimekte
+175205;energy;2;Broadbeans (fava beans), mature seeds, raw;kuru baklada
+172197;energy;2;Cheese, goat, hard type;sert keçi peynirinde
+170851;energy;2;Cheese, ricotta, whole milk;tam yağlı ricotta peynirinde
+169926;energy;2;Papayas, raw;papayada
+173044;energy;3;Guavas, common, raw;guavada
+169108;energy;3;Passion-fruit, (granadilla), purple, raw;çarkıfelek meyvesinde
+170172;energy;2;Nuts, coconut milk, raw;hindistancevizi sütünde
+174208;energy;3;Crustaceans, lobster, northern, raw;çiğ ıstakozda
+174204;energy;3;Crustaceans, crab, blue, raw;çiğ mavi yengeçte
+172385;energy;2;Chicken, broilers or fryers, thigh, meat and skin, raw;derili çiğ tavuk butunda
+175290;energy;2;Veal, ground, raw;çiğ dana (buzağı) kıymasında
+173469;energy;2;Vinegar, cider;elma sirkesinde
+170495;energy;3;Seaweed, spirulina, dried;kuru spirulinada
+168436;energy;3;Mushrooms, shiitake, dried;kuru şitake mantarında
+170093;energy;2;Potatoes, baked, flesh and skin, without salt;kabuğuyla fırınlanmış patateste
+172238;energy;3;Capers, canned;kapari konservesinde
+169279;energy;3;Sauerkraut, canned, solids and liquids;lahana turşusunda (sauerkraut)
+171320;fiber;3;Spices, cinnamon, ground;toz tarçında
+171320;calcium;3;Spices, cinnamon, ground;toz tarçında
+170923;fiber;3;Spices, cumin seed;kimyonda
+170923;calcium;3;Spices, cumin seed;kimyonda
+171328;fiber;3;Spices, oregano, dried;kuru kekikte
+171328;calcium;3;Spices, oregano, dried;kuru kekikte
+170931;fiber;3;Spices, pepper, black;karabiberde
+170931;calcium;3;Spices, pepper, black;karabiberde
+171329;fiber;3;Spices, paprika;toz kırmızı biberde (paprika)
+171329;calcium;3;Spices, paprika;toz kırmızı biberde (paprika)
+172231;fiber;3;Spices, turmeric, ground;toz zerdeçalda
+172231;calcium;3;Spices, turmeric, ground;toz zerdeçalda
+171321;fiber;3;Spices, cloves, ground;toz karanfilde
+171321;calcium;3;Spices, cloves, ground;toz karanfilde
+173755;sugars;2;Carob flour;keçiboynuzu ununda
+173755;fiber;3;Carob flour;keçiboynuzu ununda
+173755;calcium;3;Carob flour;keçiboynuzu ununda
+169941;sugars;2;Persimmons, japanese, raw;trabzon hurmasında
+169941;fiber;3;Persimmons, japanese, raw;trabzon hurmasında
+174188;fat;2;Fish, caviar, black and red, granular;havyarda
+174188;protein;2;Fish, caviar, black and red, granular;havyarda
+174188;sodium;3;Fish, caviar, black and red, granular;havyarda
+174188;calcium;3;Fish, caviar, black and red, granular;havyarda
+172684;fiber;3;Bread, rye;çavdar ekmeğinde
+172684;sodium;3;Bread, rye;çavdar ekmeğinde
+168782;sugars;2;Puddings, rice, ready-to-eat;hazır sütlaçta
+171278;calcium;3;Milk, goat, fluid;keçi sütünde
+170882;fat;2;Milk, sheep, fluid;koyun sütünde
+170882;calcium;3;Milk, sheep, fluid;koyun sütünde
+172191;fat;2;Egg, quail, whole, fresh, raw;çiğ bıldırcın yumurtasında
+172191;protein;2;Egg, quail, whole, fresh, raw;çiğ bıldırcın yumurtasında
+172189;fat;2;Egg, duck, whole, fresh, raw;çiğ ördek yumurtasında
+172189;protein;2;Egg, duck, whole, fresh, raw;çiğ ördek yumurtasında
+174284;protein;2;Lentils, pink or red, raw;kuru kırmızı mercimekte
+174284;fiber;3;Lentils, pink or red, raw;kuru kırmızı mercimekte
+175205;sugars;2;Broadbeans (fava beans), mature seeds, raw;kuru baklada
+175205;protein;2;Broadbeans (fava beans), mature seeds, raw;kuru baklada
+175205;fiber;3;Broadbeans (fava beans), mature seeds, raw;kuru baklada
+175205;calcium;3;Broadbeans (fava beans), mature seeds, raw;kuru baklada
+172197;fat;2;Cheese, goat, hard type;sert keçi peynirinde
+172197;protein;2;Cheese, goat, hard type;sert keçi peynirinde
+172197;sodium;3;Cheese, goat, hard type;sert keçi peynirinde
+172197;calcium;3;Cheese, goat, hard type;sert keçi peynirinde
+170851;fat;2;Cheese, ricotta, whole milk;tam yağlı ricotta peynirinde
+170851;calcium;3;Cheese, ricotta, whole milk;tam yağlı ricotta peynirinde
+169926;sugars;2;Papayas, raw;papayada
+169926;vitamin_c;3;Papayas, raw;papayada
+173044;sugars;2;Guavas, common, raw;guavada
+173044;fiber;3;Guavas, common, raw;guavada
+173044;vitamin_c;3;Guavas, common, raw;guavada
+169108;sugars;2;Passion-fruit, (granadilla), purple, raw;çarkıfelek meyvesinde
+169108;fiber;3;Passion-fruit, (granadilla), purple, raw;çarkıfelek meyvesinde
+169108;vitamin_c;3;Passion-fruit, (granadilla), purple, raw;çarkıfelek meyvesinde
+170172;fat;2;Nuts, coconut milk, raw;hindistancevizi sütünde
+174208;protein;2;Crustaceans, lobster, northern, raw;çiğ ıstakozda
+174208;sodium;3;Crustaceans, lobster, northern, raw;çiğ ıstakozda
+174204;protein;2;Crustaceans, crab, blue, raw;çiğ mavi yengeçte
+172385;fat;2;Chicken, broilers or fryers, thigh, meat and skin, raw;derili çiğ tavuk butunda
+172385;protein;2;Chicken, broilers or fryers, thigh, meat and skin, raw;derili çiğ tavuk butunda
+175290;fat;2;Veal, ground, raw;çiğ dana (buzağı) kıymasında
+175290;protein;2;Veal, ground, raw;çiğ dana (buzağı) kıymasında
+170495;fat;2;Seaweed, spirulina, dried;kuru spirulinada
+170495;protein;2;Seaweed, spirulina, dried;kuru spirulinada
+170495;fiber;3;Seaweed, spirulina, dried;kuru spirulinada
+170495;sodium;3;Seaweed, spirulina, dried;kuru spirulinada
+170495;calcium;3;Seaweed, spirulina, dried;kuru spirulinada
+168436;fiber;3;Mushrooms, shiitake, dried;kuru şitake mantarında
+172238;fiber;3;Capers, canned;kapari konservesinde
+172238;sodium;3;Capers, canned;kapari konservesinde
+169279;sodium;3;Sauerkraut, canned, solids and liquids;lahana turşusunda (sauerkraut)

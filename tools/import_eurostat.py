@@ -137,6 +137,21 @@ INDICATORS = {
         "{year} verilerine göre {loc} çalışanlar ana işlerinde haftada ortalama kaç saat çalışmaktadır?",
         "saat", 1, "es_weekly_hours",
     ),
+    "recycling": Indicator(
+        "cei_wm011", (("freq", "A"), ("wst_oper", "RCY"), ("unit", "PC")),
+        "{year} yılında {loc} belediye atıklarının yüzde kaçı geri dönüştürülmüştür?",
+        "%", 1, "es_recycling",
+    ),
+    "online_shopping": Indicator(
+        "isoc_ec_ib20", (("freq", "A"), ("ind_type", "IND_TOTAL"), ("indic_is", "I_BUY3"), ("unit", "PC_IND")),
+        "{year} yılında {loc} yetişkinlerin yüzde kaçı son üç ayda internetten alışveriş yapmıştır?",
+        "%", 1, "es_online_shopping",
+    ),
+    "flats": Indicator(
+        "ilc_lvho01", (("freq", "A"), ("rskpovth", "TOTAL"), ("building", "FLAT"), ("deg_urb", "TOTAL"), ("unit", "PC")),
+        "{year} verilerine göre {loc} nüfusun yüzde kaçı apartman dairesinde oturmaktadır?",
+        "%", 1, "es_flats",
+    ),
     "home_owners": Indicator(
         "ilc_lvho02",
         (("freq", "A"), ("rskpovth", "TOTAL"), ("hhcomp", "TOTAL"), ("tenure", "OWN"), ("unit", "PC")),
@@ -186,6 +201,10 @@ QUESTIONS: list[tuple[str, str, int]] = [
     *(("hospital_beds", c, 2) for c in "TR DE FR IT ES EL SE PL NL".split()),
     *(("tertiary", c, 2) for c in "TR DE FR IT ES IE NL PL SE RO".split()),
     *(("weekly_hours", c, 2) for c in "TR DE FR IT ES EL NL PL SE".split()),
+    # Not Türkiye's recycling rate (about 12 %, inside the ±20 slider).
+    *(("recycling", c, 2) for c in "DE FR IT ES NL PL SE AT".split()),
+    *(("online_shopping", c, 2) for c in "TR DE FR IT ES EL NL PL RO".split()),
+    *(("flats", c, 2) for c in "DE FR IT ES EL NL PL".split()),
     # Not unemployment: rates of 3-10 % sit inside the fixed ±20-point
     # slider of percentages, a sure hit (2026-11-16).
     *(("first_marriage_f", c, d) for c, d in [

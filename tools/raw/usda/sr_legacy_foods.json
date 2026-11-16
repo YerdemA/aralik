@@ -264,6 +264,20 @@
     "calcium": 254.0
    }
   },
+  "168436": {
+   "description": "Mushrooms, shiitake, dried",
+   "per_100g": {
+    "caffeine": 0.0,
+    "energy": 296.0,
+    "sugars": 2.21,
+    "protein": 9.58,
+    "fiber": 11.5,
+    "sodium": 13.0,
+    "vitamin_c": 3.5,
+    "calcium": 11.0,
+    "fat": 0.99
+   }
+  },
   "168448": {
    "description": "Pumpkin, raw",
    "per_100g": {
@@ -360,6 +374,20 @@
     "protein": 2.09,
     "fiber": 0.0,
     "sodium": 152.0
+   }
+  },
+  "168782": {
+   "description": "Puddings, rice, ready-to-eat",
+   "per_100g": {
+    "fiber": 0.3,
+    "vitamin_c": 1.3,
+    "protein": 3.23,
+    "sodium": 97.0,
+    "fat": 2.15,
+    "energy": 108.0,
+    "sugars": 11.59,
+    "calcium": 95.0,
+    "caffeine": 0.0
    }
   },
   "168894": {
@@ -472,6 +500,20 @@
     "vitamin_c": 26.7,
     "protein": 0.81,
     "fiber": 1.8
+   }
+  },
+  "169108": {
+   "description": "Passion-fruit, (granadilla), purple, raw",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 11.2,
+    "fat": 0.7,
+    "energy": 97.0,
+    "calcium": 12.0,
+    "fiber": 10.4,
+    "sodium": 28.0,
+    "vitamin_c": 30.0,
+    "protein": 2.2
    }
   },
   "169118": {
@@ -653,6 +695,20 @@
     "fat": 0.1,
     "caffeine": 0.0,
     "calcium": 25.0
+   }
+  },
+  "169279": {
+   "description": "Sauerkraut, canned, solids and liquids",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 1.78,
+    "fiber": 2.9,
+    "energy": 19.0,
+    "calcium": 30.0,
+    "fat": 0.14,
+    "vitamin_c": 14.7,
+    "protein": 0.91,
+    "sodium": 661.0
    }
   },
   "169291": {
@@ -851,6 +907,18 @@
     "sodium": 1.0
    }
   },
+  "169908": {
+   "description": "Loquats, raw",
+   "per_100g": {
+    "vitamin_c": 1.0,
+    "fiber": 1.7,
+    "sodium": 1.0,
+    "protein": 0.43,
+    "fat": 0.2,
+    "energy": 47.0,
+    "calcium": 16.0
+   }
+  },
   "169910": {
    "description": "Mangos, raw",
    "per_100g": {
@@ -879,6 +947,20 @@
     "sodium": 10.0
    }
   },
+  "169926": {
+   "description": "Papayas, raw",
+   "per_100g": {
+    "protein": 0.47,
+    "fiber": 1.7,
+    "sodium": 8.0,
+    "vitamin_c": 60.9,
+    "fat": 0.26,
+    "sugars": 7.82,
+    "calcium": 20.0,
+    "energy": 43.0,
+    "caffeine": 0.0
+   }
+  },
   "169928": {
    "description": "Peaches, yellow, raw",
    "per_100g": {
@@ -891,6 +973,20 @@
     "caffeine": 0.0,
     "sugars": 8.39,
     "calcium": 6.0
+   }
+  },
+  "169941": {
+   "description": "Persimmons, japanese, raw",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 12.53,
+    "protein": 0.58,
+    "fiber": 3.6,
+    "sodium": 1.0,
+    "vitamin_c": 7.5,
+    "fat": 0.19,
+    "energy": 70.0,
+    "calcium": 8.0
    }
   },
   "169949": {
@@ -1005,6 +1101,20 @@
     "caffeine": 0.0
    }
   },
+  "170093": {
+   "description": "Potatoes, baked, flesh and skin, without salt",
+   "per_100g": {
+    "caffeine": 0.0,
+    "fiber": 2.2,
+    "sodium": 10.0,
+    "protein": 2.5,
+    "vitamin_c": 9.6,
+    "calcium": 15.0,
+    "fat": 0.13,
+    "energy": 93.0,
+    "sugars": 1.18
+   }
+  },
   "170108": {
    "description": "Peppers, sweet, red, raw",
    "per_100g": {
@@ -1058,6 +1168,20 @@
     "calcium": 14.0,
     "caffeine": 0.0,
     "sugars": 6.23
+   }
+  },
+  "170172": {
+   "description": "Nuts, coconut milk, raw (liquid expressed from grated meat and water)",
+   "per_100g": {
+    "vitamin_c": 2.8,
+    "protein": 2.29,
+    "fiber": 2.2,
+    "sodium": 15.0,
+    "fat": 23.84,
+    "energy": 230.0,
+    "calcium": 16.0,
+    "caffeine": 0.0,
+    "sugars": 3.34
    }
   },
   "170184": {
@@ -1283,6 +1407,20 @@
     "fiber": 4.1
    }
   },
+  "170495": {
+   "description": "Seaweed, spirulina, dried",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 3.1,
+    "energy": 290.0,
+    "fat": 7.72,
+    "calcium": 120.0,
+    "protein": 57.47,
+    "fiber": 3.6,
+    "sodium": 1048.0,
+    "vitamin_c": 10.1
+   }
+  },
   "170497": {
    "description": "Peppers, hot chili, green, raw",
    "per_100g": {
@@ -1449,6 +1587,20 @@
     "calcium": 1184.0
    }
   },
+  "170851": {
+   "description": "Cheese, ricotta, whole milk",
+   "per_100g": {
+    "protein": 7.54,
+    "sodium": 110.0,
+    "calcium": 206.0,
+    "fat": 10.18,
+    "energy": 150.0,
+    "fiber": 0.0,
+    "vitamin_c": 0.0,
+    "caffeine": 0.0,
+    "sugars": 0.27
+   }
+  },
   "170859": {
    "description": "Cream, fluid, heavy whipping",
    "per_100g": {
@@ -1461,6 +1613,46 @@
     "caffeine": 0.0,
     "fiber": 0.0,
     "vitamin_c": 0.6
+   }
+  },
+  "170882": {
+   "description": "Milk, sheep, fluid",
+   "per_100g": {
+    "fat": 7.0,
+    "energy": 108.0,
+    "calcium": 193.0,
+    "protein": 5.98,
+    "fiber": 0.0,
+    "sodium": 44.0,
+    "vitamin_c": 4.2
+   }
+  },
+  "170923": {
+   "description": "Spices, cumin seed",
+   "per_100g": {
+    "protein": 17.81,
+    "fiber": 10.5,
+    "sodium": 168.0,
+    "vitamin_c": 7.7,
+    "fat": 22.27,
+    "energy": 375.0,
+    "calcium": 931.0,
+    "sugars": 2.25,
+    "caffeine": 0.0
+   }
+  },
+  "170931": {
+   "description": "Spices, pepper, black",
+   "per_100g": {
+    "fat": 3.26,
+    "caffeine": 0.0,
+    "sugars": 0.64,
+    "energy": 251.0,
+    "calcium": 443.0,
+    "protein": 10.39,
+    "fiber": 25.3,
+    "sodium": 20.0,
+    "vitamin_c": 0.0
    }
   },
   "171009": {
@@ -1505,6 +1697,20 @@
     "calcium": 113.0
    }
   },
+  "171278": {
+   "description": "Milk, goat, fluid, with added vitamin D",
+   "per_100g": {
+    "caffeine": 0.0,
+    "energy": 69.0,
+    "sugars": 4.45,
+    "protein": 3.56,
+    "fiber": 0.0,
+    "sodium": 50.0,
+    "vitamin_c": 1.3,
+    "calcium": 134.0,
+    "fat": 4.14
+   }
+  },
   "171284": {
    "description": "Yogurt, plain, whole milk",
    "per_100g": {
@@ -1545,6 +1751,62 @@
     "calcium": 100.0,
     "fat": 5.0,
     "energy": 97.0
+   }
+  },
+  "171320": {
+   "description": "Spices, cinnamon, ground",
+   "per_100g": {
+    "sugars": 2.17,
+    "fiber": 53.1,
+    "protein": 3.99,
+    "vitamin_c": 3.8,
+    "sodium": 10.0,
+    "calcium": 1002.0,
+    "fat": 1.24,
+    "energy": 247.0,
+    "caffeine": 0.0
+   }
+  },
+  "171321": {
+   "description": "Spices, cloves, ground",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 2.38,
+    "fat": 13.0,
+    "energy": 274.0,
+    "calcium": 632.0,
+    "fiber": 33.9,
+    "sodium": 277.0,
+    "vitamin_c": 0.2,
+    "protein": 5.97
+   }
+  },
+  "171328": {
+   "description": "Spices, oregano, dried",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 4.09,
+    "fat": 4.28,
+    "energy": 265.0,
+    "calcium": 1597.0,
+    "fiber": 42.5,
+    "sodium": 25.0,
+    "vitamin_c": 2.3,
+    "protein": 9.0
+   }
+  },
+  "171329": {
+   "description": "Spices, paprika",
+   "per_100g": {
+    "sugars": 10.34,
+    "fiber": 34.9,
+    "sodium": 68.0,
+    "vitamin_c": 0.9,
+    "protein": 14.14,
+    "calcium": 229.0,
+    "fat": 12.89,
+    "energy": 282.0,
+    "caffeine": 0.0
    }
   },
   "171413": {
@@ -1715,6 +1977,20 @@
     "calcium": 16.0
    }
   },
+  "171978": {
+   "description": "Mollusks, oyster, eastern, wild, raw",
+   "per_100g": {
+    "caffeine": 0.0,
+    "fiber": 0.0,
+    "sodium": 85.0,
+    "vitamin_c": 0.0,
+    "protein": 5.71,
+    "sugars": 0.62,
+    "calcium": 59.0,
+    "fat": 1.71,
+    "energy": 51.0
+   }
+  },
   "172179": {
    "description": "Cheese, cottage, creamed, large or small curd",
    "per_100g": {
@@ -1727,6 +2003,62 @@
     "vitamin_c": 0.0,
     "fiber": 0.0,
     "caffeine": 0.0
+   }
+  },
+  "172189": {
+   "description": "Egg, duck, whole, fresh, raw",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 0.93,
+    "protein": 12.81,
+    "fiber": 0.0,
+    "sodium": 146.0,
+    "vitamin_c": 0.0,
+    "calcium": 64.0,
+    "fat": 13.77,
+    "energy": 185.0
+   }
+  },
+  "172191": {
+   "description": "Egg, quail, whole, fresh, raw",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 0.4,
+    "protein": 13.05,
+    "vitamin_c": 0.0,
+    "fiber": 0.0,
+    "sodium": 141.0,
+    "fat": 11.09,
+    "energy": 158.0,
+    "calcium": 64.0
+   }
+  },
+  "172197": {
+   "description": "Cheese, goat, hard type",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 2.17,
+    "sodium": 423.0,
+    "calcium": 895.0,
+    "fat": 35.59,
+    "energy": 452.0,
+    "vitamin_c": 0.0,
+    "fiber": 0.0,
+    "protein": 30.52
+   }
+  },
+  "172231": {
+   "description": "Spices, turmeric, ground",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 3.21,
+    "fat": 3.25,
+    "energy": 312.0,
+    "calcium": 168.0,
+    "protein": 9.68,
+    "fiber": 22.7,
+    "sodium": 27.0,
+    "vitamin_c": 0.7
    }
   },
   "172233": {
@@ -1753,6 +2085,34 @@
     "sugars": 0.92,
     "calcium": 63.0,
     "caffeine": 0.0
+   }
+  },
+  "172238": {
+   "description": "Capers, canned",
+   "per_100g": {
+    "sugars": 0.41,
+    "fat": 0.86,
+    "protein": 2.36,
+    "caffeine": 0.0,
+    "vitamin_c": 4.3,
+    "fiber": 3.2,
+    "calcium": 40.0,
+    "energy": 23.0,
+    "sodium": 2348.0
+   }
+  },
+  "172385": {
+   "description": "Chicken, broilers or fryers, thigh, meat and skin, raw",
+   "per_100g": {
+    "energy": 221.0,
+    "calcium": 7.0,
+    "protein": 16.52,
+    "sodium": 81.0,
+    "fiber": 0.0,
+    "vitamin_c": 0.0,
+    "caffeine": 0.0,
+    "sugars": 0.0,
+    "fat": 16.61
    }
   },
   "172390": {
@@ -1825,6 +2185,20 @@
     "energy": 598.0
    }
   },
+  "172684": {
+   "description": "Bread, rye",
+   "per_100g": {
+    "fiber": 5.8,
+    "caffeine": 0.0,
+    "energy": 259.0,
+    "sugars": 3.85,
+    "protein": 8.5,
+    "fat": 3.3,
+    "calcium": 73.0,
+    "sodium": 603.0,
+    "vitamin_c": 0.4
+   }
+  },
   "172688": {
    "description": "Bread, whole-wheat, commercially prepared",
    "per_100g": {
@@ -1879,6 +2253,20 @@
     "vitamin_c": 34.4,
     "fiber": 1.1,
     "sodium": 0.0
+   }
+  },
+  "173044": {
+   "description": "Guavas, common, raw",
+   "per_100g": {
+    "energy": 68.0,
+    "caffeine": 0.0,
+    "sugars": 8.92,
+    "fiber": 5.4,
+    "vitamin_c": 228.3,
+    "sodium": 2.0,
+    "protein": 2.55,
+    "fat": 0.95,
+    "calcium": 18.0
    }
   },
   "173227": {
@@ -1965,6 +2353,20 @@
     "sodium": 11.0
    }
   },
+  "173469": {
+   "description": "Vinegar, cider",
+   "per_100g": {
+    "vitamin_c": 0.0,
+    "fiber": 0.0,
+    "fat": 0.0,
+    "protein": 0.0,
+    "energy": 21.0,
+    "sugars": 0.4,
+    "calcium": 7.0,
+    "sodium": 5.0,
+    "caffeine": 0.0
+   }
+  },
   "173475": {
    "description": "Spearmint, fresh",
    "per_100g": {
@@ -2017,6 +2419,20 @@
     "sodium": 51.0,
     "vitamin_c": 2.9,
     "fiber": 0.0
+   }
+  },
+  "173755": {
+   "description": "Carob flour",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 49.08,
+    "fat": 0.65,
+    "calcium": 348.0,
+    "protein": 4.62,
+    "fiber": 39.8,
+    "sodium": 35.0,
+    "vitamin_c": 0.2,
+    "energy": 222.0
    }
   },
   "173756": {
@@ -2201,6 +2617,46 @@
     "energy": 131.0
    }
   },
+  "174188": {
+   "description": "Fish, caviar, black and red, granular",
+   "per_100g": {
+    "caffeine": 0.0,
+    "sugars": 0.0,
+    "energy": 264.0,
+    "fat": 17.9,
+    "calcium": 275.0,
+    "protein": 24.6,
+    "vitamin_c": 0.0,
+    "fiber": 0.0,
+    "sodium": 1500.0
+   }
+  },
+  "174204": {
+   "description": "Crustaceans, crab, blue, raw",
+   "per_100g": {
+    "fat": 1.08,
+    "energy": 87.0,
+    "calcium": 89.0,
+    "protein": 18.06,
+    "vitamin_c": 3.0,
+    "fiber": 0.0,
+    "sodium": 293.0
+   }
+  },
+  "174208": {
+   "description": "Crustaceans, lobster, northern, raw",
+   "per_100g": {
+    "protein": 16.52,
+    "fiber": 0.0,
+    "sodium": 423.0,
+    "vitamin_c": 0.0,
+    "fat": 0.75,
+    "energy": 77.0,
+    "caffeine": 0.0,
+    "sugars": 0.0,
+    "calcium": 84.0
+   }
+  },
   "174216": {
    "description": "Mollusks, mussel, blue, raw",
    "per_100g": {
@@ -2255,6 +2711,18 @@
     "energy": 53.0,
     "vitamin_c": 0.0,
     "fiber": 0.8
+   }
+  },
+  "174284": {
+   "description": "Lentils, pink or red, raw",
+   "per_100g": {
+    "energy": 358.0,
+    "calcium": 48.0,
+    "protein": 23.91,
+    "fat": 2.17,
+    "fiber": 10.8,
+    "vitamin_c": 1.7,
+    "sodium": 7.0
    }
   },
   "174289": {
@@ -2528,6 +2996,34 @@
     "fiber": 15.2,
     "sodium": 16.0,
     "vitamin_c": 0.0
+   }
+  },
+  "175205": {
+   "description": "Broadbeans (fava beans), mature seeds, raw",
+   "per_100g": {
+    "calcium": 103.0,
+    "fat": 1.53,
+    "protein": 26.12,
+    "fiber": 25.0,
+    "sodium": 13.0,
+    "vitamin_c": 1.4,
+    "caffeine": 0.0,
+    "sugars": 5.7,
+    "energy": 341.0
+   }
+  },
+  "175290": {
+   "description": "Veal, ground, raw",
+   "per_100g": {
+    "vitamin_c": 0.0,
+    "fiber": 0.0,
+    "sodium": 103.0,
+    "protein": 18.58,
+    "energy": 197.0,
+    "fat": 13.06,
+    "caffeine": 0.0,
+    "sugars": 0.0,
+    "calcium": 12.0
    }
   }
  }
