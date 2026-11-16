@@ -1,0 +1,3999 @@
+{
+ "dataset": "metro_ridership",
+ "description": "Metro sistemleri, yıllık yolcu (P3872, yılı P585)",
+ "property": "P3872",
+ "fetched_at": "2026-11-16T13:30:16+00:00",
+ "rows": [
+  {
+   "qid": "Q20075",
+   "label": "Londra metrosu",
+   "links": 88,
+   "value": 1337000000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Londra Metrosu",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 4269
+  },
+  {
+   "qid": "Q5499",
+   "label": "Moskova metrosu",
+   "links": 85,
+   "value": 1561914214.0,
+   "rank": "normal",
+   "value_year": 2020,
+   "tr_title": "Moskova Metrosu",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 8379
+  },
+  {
+   "qid": "Q5499",
+   "label": "Moskova metrosu",
+   "links": 85,
+   "value": 1900625491.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "tr_title": "Moskova Metrosu",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 8379
+  },
+  {
+   "qid": "Q5499",
+   "label": "Moskova metrosu",
+   "links": 85,
+   "value": 2070472726.0,
+   "rank": "normal",
+   "value_year": 2022,
+   "tr_title": "Moskova Metrosu",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 8379
+  },
+  {
+   "qid": "Q5499",
+   "label": "Moskova metrosu",
+   "links": 85,
+   "value": 2169434842.0,
+   "rank": "normal",
+   "value_year": 2023,
+   "tr_title": "Moskova Metrosu",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 8379
+  },
+  {
+   "qid": "Q5499",
+   "label": "Moskova metrosu",
+   "links": 85,
+   "value": 2442400000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Moskova Metrosu",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 8379
+  },
+  {
+   "qid": "Q5499",
+   "label": "Moskova metrosu",
+   "links": 85,
+   "value": 2560700000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Moskova Metrosu",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 8379
+  },
+  {
+   "qid": "Q50716",
+   "label": "Paris metrosu",
+   "links": 82,
+   "value": 1518600000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Paris Metrosu",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 2284
+  },
+  {
+   "qid": "Q50716",
+   "label": "Paris metrosu",
+   "links": 82,
+   "value": 1520000000.0,
+   "rank": "normal",
+   "value_year": 2015,
+   "tr_title": "Paris Metrosu",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 2284
+  },
+  {
+   "qid": "Q50716",
+   "label": "Paris metrosu",
+   "links": 82,
+   "value": 1559500000.0,
+   "rank": "preferred",
+   "value_year": 2018,
+   "tr_title": "Paris Metrosu",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 2284
+  },
+  {
+   "qid": "Q213271",
+   "label": "Bakü metrosu",
+   "links": 78,
+   "value": 217500000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Bakü Metrosu",
+   "country": [
+    "Azerbaycan"
+   ],
+   "tr_views": 2559
+  },
+  {
+   "qid": "Q213271",
+   "label": "Bakü metrosu",
+   "links": 78,
+   "value": 229700000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Bakü Metrosu",
+   "country": [
+    "Azerbaycan"
+   ],
+   "tr_views": 2559
+  },
+  {
+   "qid": "Q7733",
+   "label": "New York metrosu",
+   "links": 76,
+   "value": 1697800000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "New York Metrosu",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 3157
+  },
+  {
+   "qid": "Q7733",
+   "label": "New York metrosu",
+   "links": 76,
+   "value": 1727300000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "New York Metrosu",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 3157
+  },
+  {
+   "qid": "Q7733",
+   "label": "New York metrosu",
+   "links": 76,
+   "value": 1793073000.0,
+   "rank": "preferred",
+   "value_year": 2022,
+   "tr_title": "New York Metrosu",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 3157
+  },
+  {
+   "qid": "Q250225",
+   "label": "Saint Petersburg Metrosu",
+   "links": 63,
+   "value": 740400000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Sankt-Peterburg Metrosu",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 777
+  },
+  {
+   "qid": "Q250225",
+   "label": "Saint Petersburg Metrosu",
+   "links": 63,
+   "value": 762500000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Sankt-Peterburg Metrosu",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 777
+  },
+  {
+   "qid": "Q483343",
+   "label": "São Paulo metrosu",
+   "links": 61,
+   "value": 1295400000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "São Paulo Metrosu",
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 187
+  },
+  {
+   "qid": "Q483343",
+   "label": "São Paulo metrosu",
+   "links": 61,
+   "value": 1494300000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "São Paulo Metrosu",
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 187
+  },
+  {
+   "qid": "Q190271",
+   "label": "Prag metrosu",
+   "links": 60,
+   "value": 435600000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Prag Metrosu",
+   "country": [
+    "Çekya"
+   ],
+   "tr_views": 446
+  },
+  {
+   "qid": "Q190271",
+   "label": "Prag metrosu",
+   "links": 60,
+   "value": 440489000.0,
+   "rank": "preferred",
+   "value_year": 2019,
+   "tr_title": "Prag Metrosu",
+   "country": [
+    "Çekya"
+   ],
+   "tr_views": 446
+  },
+  {
+   "qid": "Q215871",
+   "label": "Kiev metrosu",
+   "links": 59,
+   "value": 484600000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Kiev Metrosu",
+   "country": [
+    "Ukrayna"
+   ],
+   "tr_views": 329
+  },
+  {
+   "qid": "Q215871",
+   "label": "Kiev metrosu",
+   "links": 59,
+   "value": 495300000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Kiev Metrosu",
+   "country": [
+    "Ukrayna"
+   ],
+   "tr_views": 329
+  },
+  {
+   "qid": "Q235319",
+   "label": "Pekin metrosu",
+   "links": 59,
+   "value": 3777900000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Pekin Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 597
+  },
+  {
+   "qid": "Q235319",
+   "label": "Pekin metrosu",
+   "links": 59,
+   "value": 3950870000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Pekin Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 597
+  },
+  {
+   "qid": "Q68646",
+   "label": "Berlin U-Bahn",
+   "links": 58,
+   "value": 534500000.0,
+   "rank": "normal",
+   "value_year": 2015,
+   "tr_title": "Berlin Metrosu",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 2675
+  },
+  {
+   "qid": "Q68646",
+   "label": "Berlin U-Bahn",
+   "links": 58,
+   "value": 563000000.0,
+   "rank": "preferred",
+   "value_year": 2017,
+   "tr_title": "Berlin Metrosu",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 2675
+  },
+  {
+   "qid": "Q68646",
+   "label": "Berlin U-Bahn",
+   "links": 58,
+   "value": 596000000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Berlin Metrosu",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 2675
+  },
+  {
+   "qid": "Q320028",
+   "label": "Varşova metrosu",
+   "links": 57,
+   "value": 187300000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Varşova Metrosu",
+   "country": [
+    "Polonya"
+   ],
+   "tr_views": 296
+  },
+  {
+   "qid": "Q320028",
+   "label": "Varşova metrosu",
+   "links": 57,
+   "value": 195400000.0,
+   "rank": "preferred",
+   "value_year": 2019,
+   "tr_title": "Varşova Metrosu",
+   "country": [
+    "Polonya"
+   ],
+   "tr_views": 296
+  },
+  {
+   "qid": "Q271195",
+   "label": "Delhi metrosu",
+   "links": 56,
+   "value": 926100000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Delhi Metrosu",
+   "country": [
+    "Hindistan"
+   ],
+   "tr_views": 288
+  },
+  {
+   "qid": "Q271195",
+   "label": "Delhi metrosu",
+   "links": 56,
+   "value": 1001650000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Delhi Metrosu",
+   "country": [
+    "Hindistan"
+   ],
+   "tr_views": 288
+  },
+  {
+   "qid": "Q484433",
+   "label": "Almatı Metrosu",
+   "links": 56,
+   "value": 14000000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Almatı Metrosu",
+   "country": [
+    "Kazakistan"
+   ],
+   "tr_views": 546
+  },
+  {
+   "qid": "Q484433",
+   "label": "Almatı Metrosu",
+   "links": 56,
+   "value": 16300000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Almatı Metrosu",
+   "country": [
+    "Kazakistan"
+   ],
+   "tr_views": 546
+  },
+  {
+   "qid": "Q191987",
+   "label": "Madrid metrosu",
+   "links": 55,
+   "value": 626400000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Madrid Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 609
+  },
+  {
+   "qid": "Q191987",
+   "label": "Madrid metrosu",
+   "links": 55,
+   "value": 677500000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Madrid Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 609
+  },
+  {
+   "qid": "Q191987",
+   "label": "Madrid metrosu",
+   "links": 55,
+   "value": 715000000.0,
+   "rank": "preferred",
+   "value_year": 2024,
+   "tr_title": "Madrid Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 609
+  },
+  {
+   "qid": "Q37006",
+   "label": "Tiflis metrosu",
+   "links": 55,
+   "value": 105400000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Tiflis Metrosu",
+   "country": [
+    "Gürcistan"
+   ],
+   "tr_views": 1059
+  },
+  {
+   "qid": "Q37006",
+   "label": "Tiflis metrosu",
+   "links": 55,
+   "value": 137700000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Tiflis Metrosu",
+   "country": [
+    "Gürcistan"
+   ],
+   "tr_views": 1059
+  },
+  {
+   "qid": "Q462201",
+   "label": "Şanghay Metrosu",
+   "links": 55,
+   "value": 3537600000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Şanghay Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 992
+  },
+  {
+   "qid": "Q462201",
+   "label": "Şanghay Metrosu",
+   "links": 55,
+   "value": 3880060000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Şanghay Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 992
+  },
+  {
+   "qid": "Q498172",
+   "label": "İstanbul Metrosu",
+   "links": 55,
+   "value": 384900000.0,
+   "rank": "normal",
+   "value_year": 2015,
+   "tr_title": "İstanbul Metrosu",
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 53673
+  },
+  {
+   "qid": "Q498172",
+   "label": "İstanbul Metrosu",
+   "links": 55,
+   "value": 495400000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "İstanbul Metrosu",
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 53673
+  },
+  {
+   "qid": "Q237480",
+   "label": "Roma Metrosu",
+   "links": 54,
+   "value": 279000000.0,
+   "rank": "preferred",
+   "value_year": 2012,
+   "tr_title": "Roma Metrosu",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 525
+  },
+  {
+   "qid": "Q237480",
+   "label": "Roma Metrosu",
+   "links": 54,
+   "value": 320000000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Roma Metrosu",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 525
+  },
+  {
+   "qid": "Q237480",
+   "label": "Roma Metrosu",
+   "links": 54,
+   "value": 331000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Roma Metrosu",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 525
+  },
+  {
+   "qid": "Q207287",
+   "label": "Helsinki metrosu",
+   "links": 53,
+   "value": 67500000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Helsinki Metrosu",
+   "country": [
+    "Finlandiya"
+   ],
+   "tr_views": 175
+  },
+  {
+   "qid": "Q207287",
+   "label": "Helsinki metrosu",
+   "links": 53,
+   "value": 67500000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Helsinki Metrosu",
+   "country": [
+    "Finlandiya"
+   ],
+   "tr_views": 175
+  },
+  {
+   "qid": "Q336488",
+   "label": "Atina metrosu",
+   "links": 53,
+   "value": 259200000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Atina Metrosu",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 840
+  },
+  {
+   "qid": "Q336488",
+   "label": "Atina metrosu",
+   "links": 53,
+   "value": 264400000.0,
+   "rank": "preferred",
+   "value_year": 2015,
+   "tr_title": "Atina Metrosu",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 840
+  },
+  {
+   "qid": "Q336488",
+   "label": "Atina metrosu",
+   "links": 53,
+   "value": 493800000.0,
+   "rank": "normal",
+   "value_year": 2013,
+   "tr_title": "Atina Metrosu",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 840
+  },
+  {
+   "qid": "Q80872",
+   "label": "Pyongyang metrosu",
+   "links": 53,
+   "value": 36000000.0,
+   "rank": "preferred",
+   "value_year": 2009,
+   "tr_title": "Pyongyang Metrosu",
+   "country": [
+    "Kuzey Kore"
+   ],
+   "tr_views": 380
+  },
+  {
+   "qid": "Q80872",
+   "label": "Pyongyang metrosu",
+   "links": 53,
+   "value": 36000000.0,
+   "rank": "normal",
+   "value_year": 2009,
+   "tr_title": "Pyongyang Metrosu",
+   "country": [
+    "Kuzey Kore"
+   ],
+   "tr_views": 380
+  },
+  {
+   "qid": "Q211044",
+   "label": "Budapeşte metrosu",
+   "links": 52,
+   "value": 354000000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Budapeşte Metrosu",
+   "country": [
+    "Macaristan"
+   ],
+   "tr_views": 723
+  },
+  {
+   "qid": "Q211044",
+   "label": "Budapeşte metrosu",
+   "links": 52,
+   "value": 410600000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Budapeşte Metrosu",
+   "country": [
+    "Macaristan"
+   ],
+   "tr_views": 723
+  },
+  {
+   "qid": "Q40176",
+   "label": "Hızlı Toplu Taşımacılık Sistemi",
+   "links": 52,
+   "value": 1139500000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Hızlı Toplu Taşımacılık Sistemi (Singapur)",
+   "country": [
+    "Singapur"
+   ],
+   "tr_views": 298
+  },
+  {
+   "qid": "Q40176",
+   "label": "Hızlı Toplu Taşımacılık Sistemi",
+   "links": 52,
+   "value": 1235200000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Hızlı Toplu Taşımacılık Sistemi (Singapur)",
+   "country": [
+    "Singapur"
+   ],
+   "tr_views": 298
+  },
+  {
+   "qid": "Q506298",
+   "label": "Brüksel metrosu",
+   "links": 51,
+   "value": 151600000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Brüksel Metrosu",
+   "country": [
+    "Belçika"
+   ],
+   "tr_views": 197
+  },
+  {
+   "qid": "Q506298",
+   "label": "Brüksel metrosu",
+   "links": 51,
+   "value": 165300000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Brüksel Metrosu",
+   "country": [
+    "Belçika"
+   ],
+   "tr_views": 197
+  },
+  {
+   "qid": "Q232164",
+   "label": "Minsk metrosu",
+   "links": 50,
+   "value": 291000000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Minsk Metrosu",
+   "country": [
+    "Belarus"
+   ],
+   "tr_views": 226
+  },
+  {
+   "qid": "Q232164",
+   "label": "Minsk metrosu",
+   "links": 50,
+   "value": 293700000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Minsk Metrosu",
+   "country": [
+    "Belarus"
+   ],
+   "tr_views": 226
+  },
+  {
+   "qid": "Q272926",
+   "label": "Stockholm metrosu",
+   "links": 50,
+   "value": 330000000.0,
+   "rank": "normal",
+   "value_year": 2015,
+   "tr_title": "Stockholm Metrosu",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 651
+  },
+  {
+   "qid": "Q272926",
+   "label": "Stockholm metrosu",
+   "links": 50,
+   "value": 355000000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Stockholm Metrosu",
+   "country": [
+    "İsveç"
+   ],
+   "tr_views": 651
+  },
+  {
+   "qid": "Q320337",
+   "label": "Erivan metrosu",
+   "links": 49,
+   "value": 15400000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Erivan Metrosu",
+   "country": [
+    "Ermenistan"
+   ],
+   "tr_views": 516
+  },
+  {
+   "qid": "Q320337",
+   "label": "Erivan metrosu",
+   "links": 49,
+   "value": 20200000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Erivan Metrosu",
+   "country": [
+    "Ermenistan"
+   ],
+   "tr_views": 516
+  },
+  {
+   "qid": "Q491886",
+   "label": "Taşkent metrosu",
+   "links": 49,
+   "value": 53500000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Taşkent Metrosu",
+   "country": [
+    "Özbekistan"
+   ],
+   "tr_views": 1005
+  },
+  {
+   "qid": "Q491886",
+   "label": "Taşkent metrosu",
+   "links": 49,
+   "value": 71200000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Taşkent Metrosu",
+   "country": [
+    "Özbekistan"
+   ],
+   "tr_views": 1005
+  },
+  {
+   "qid": "Q491886",
+   "label": "Taşkent metrosu",
+   "links": 49,
+   "value": 270300000.0,
+   "rank": "normal",
+   "value_year": 2024,
+   "tr_title": "Taşkent Metrosu",
+   "country": [
+    "Özbekistan"
+   ],
+   "tr_views": 1005
+  },
+  {
+   "qid": "Q494079",
+   "label": "Kazan metrosu",
+   "links": 49,
+   "value": 27200000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Kazan Metrosu",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 253
+  },
+  {
+   "qid": "Q494079",
+   "label": "Kazan metrosu",
+   "links": 49,
+   "value": 30500000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Kazan Metrosu",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 253
+  },
+  {
+   "qid": "Q735559",
+   "label": "Milano metrosu",
+   "links": 49,
+   "value": 369000000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Milano Metrosu",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 993
+  },
+  {
+   "qid": "Q735559",
+   "label": "Milano metrosu",
+   "links": 49,
+   "value": 569500000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Milano Metrosu",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 993
+  },
+  {
+   "qid": "Q14751",
+   "label": "Hong Kong metrosu",
+   "links": 48,
+   "value": 1688100000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Hong Kong Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 275
+  },
+  {
+   "qid": "Q14751",
+   "label": "Hong Kong metrosu",
+   "links": 48,
+   "value": 1767100000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Hong Kong Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 275
+  },
+  {
+   "qid": "Q164054",
+   "label": "Münih metrosu",
+   "links": 48,
+   "value": 398000000.0,
+   "rank": "normal",
+   "value_year": 2015,
+   "tr_title": "Münih Metrosu",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 761
+  },
+  {
+   "qid": "Q164054",
+   "label": "Münih metrosu",
+   "links": 48,
+   "value": 410000000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Münih Metrosu",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 761
+  },
+  {
+   "qid": "Q164054",
+   "label": "Münih metrosu",
+   "links": 48,
+   "value": 429000000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Münih Metrosu",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 761
+  },
+  {
+   "qid": "Q164054",
+   "label": "Münih metrosu",
+   "links": 48,
+   "value": 452000000.0,
+   "rank": "preferred",
+   "value_year": 2024,
+   "tr_title": "Münih Metrosu",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 761
+  },
+  {
+   "qid": "Q209400",
+   "label": "Viyana metrosu",
+   "links": 48,
+   "value": 440100000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Viyana Metrosu",
+   "country": [
+    "Avusturya"
+   ],
+   "tr_views": 969
+  },
+  {
+   "qid": "Q209400",
+   "label": "Viyana metrosu",
+   "links": 48,
+   "value": 453600000.0,
+   "rank": "preferred",
+   "value_year": 2017,
+   "tr_title": "Viyana Metrosu",
+   "country": [
+    "Avusturya"
+   ],
+   "tr_views": 969
+  },
+  {
+   "qid": "Q209400",
+   "label": "Viyana metrosu",
+   "links": 48,
+   "value": 459800000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Viyana Metrosu",
+   "country": [
+    "Avusturya"
+   ],
+   "tr_views": 969
+  },
+  {
+   "qid": "Q237189",
+   "label": "Barselona metrosu",
+   "links": 48,
+   "value": 411900000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Barselona Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 433
+  },
+  {
+   "qid": "Q237189",
+   "label": "Barselona metrosu",
+   "links": 48,
+   "value": 452400000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Barselona Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 433
+  },
+  {
+   "qid": "Q171221",
+   "label": "Washington Metro",
+   "links": 47,
+   "value": 175000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Washington Metrosu",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 470
+  },
+  {
+   "qid": "Q171221",
+   "label": "Washington Metro",
+   "links": 47,
+   "value": 182000000.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Washington Metrosu",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 470
+  },
+  {
+   "qid": "Q171221",
+   "label": "Washington Metro",
+   "links": 47,
+   "value": 229600000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Washington Metrosu",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 470
+  },
+  {
+   "qid": "Q506290",
+   "label": "Glasgow metrosu",
+   "links": 47,
+   "value": 12700000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Glasgow Metrosu",
+   "country": [
+    "Birleşik Krallık"
+   ],
+   "tr_views": 173
+  },
+  {
+   "qid": "Q714823",
+   "label": "Tahran metrosu",
+   "links": 47,
+   "value": 820000000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Tahran Metrosu",
+   "country": [
+    "İran"
+   ],
+   "tr_views": 1183
+  },
+  {
+   "qid": "Q24492",
+   "label": "Oslo Metrosu",
+   "links": 46,
+   "value": 94400000.0,
+   "rank": "normal",
+   "value_year": 2015,
+   "tr_title": "Oslo Metrosu",
+   "country": [
+    "Norveç"
+   ],
+   "tr_views": 145
+  },
+  {
+   "qid": "Q24492",
+   "label": "Oslo Metrosu",
+   "links": 46,
+   "value": 118000000.0,
+   "rank": "preferred",
+   "value_year": 2017,
+   "tr_title": "Oslo Metrosu",
+   "country": [
+    "Norveç"
+   ],
+   "tr_views": 145
+  },
+  {
+   "qid": "Q24492",
+   "label": "Oslo Metrosu",
+   "links": 46,
+   "value": 119000000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Oslo Metrosu",
+   "country": [
+    "Norveç"
+   ],
+   "tr_views": 145
+  },
+  {
+   "qid": "Q272558",
+   "label": "Novosibirsk metrosu",
+   "links": 45,
+   "value": 79000000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Novosibirsk Metrosu",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 186
+  },
+  {
+   "qid": "Q272558",
+   "label": "Novosibirsk metrosu",
+   "links": 45,
+   "value": 84500000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Novosibirsk Metrosu",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 186
+  },
+  {
+   "qid": "Q622884",
+   "label": "Bükreş metrosu",
+   "links": 45,
+   "value": 179120000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Bükreş Metrosu",
+   "country": [
+    "Romanya"
+   ],
+   "tr_views": 378
+  },
+  {
+   "qid": "Q622884",
+   "label": "Bükreş metrosu",
+   "links": 45,
+   "value": 179200000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Bükreş Metrosu",
+   "country": [
+    "Romanya"
+   ],
+   "tr_views": 378
+  },
+  {
+   "qid": "Q685381",
+   "label": "Kahire metrosu",
+   "links": 45,
+   "value": 1314000000.0,
+   "rank": "normal",
+   "value_year": 2015,
+   "tr_title": "Kahire Metrosu",
+   "country": [
+    "Mısır"
+   ],
+   "tr_views": 860
+  },
+  {
+   "qid": "Q685381",
+   "label": "Kahire metrosu",
+   "links": 45,
+   "value": 1314000000.0,
+   "rank": "normal",
+   "value_year": 2015,
+   "tr_title": "Kahire Metrosu",
+   "country": [
+    "Mısır"
+   ],
+   "tr_views": 860
+  },
+  {
+   "qid": "Q750441",
+   "label": "Yekaterinburg metrosu",
+   "links": 45,
+   "value": 46300000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Yekaterinburg Metrosu",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 212
+  },
+  {
+   "qid": "Q750441",
+   "label": "Yekaterinburg metrosu",
+   "links": 45,
+   "value": 49200000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Yekaterinburg Metrosu",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 212
+  },
+  {
+   "qid": "Q16950",
+   "label": "Seul metrosu",
+   "links": 44,
+   "value": 2856500000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Seul Metrosu",
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 710
+  },
+  {
+   "qid": "Q16950",
+   "label": "Seul metrosu",
+   "links": 44,
+   "value": 2923600000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Seul Metrosu",
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 710
+  },
+  {
+   "qid": "Q234707",
+   "label": "Sofya metrosu",
+   "links": 44,
+   "value": 89700000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Sofya Metrosu",
+   "country": [
+    "Bulgaristan"
+   ],
+   "tr_views": 903
+  },
+  {
+   "qid": "Q234707",
+   "label": "Sofya metrosu",
+   "links": 44,
+   "value": 93100000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Sofya Metrosu",
+   "country": [
+    "Bulgaristan"
+   ],
+   "tr_views": 903
+  },
+  {
+   "qid": "Q260870",
+   "label": "Amsterdam metrosu",
+   "links": 44,
+   "value": 71000000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Amsterdam Metrosu",
+   "country": [
+    "Hollanda"
+   ],
+   "tr_views": 203
+  },
+  {
+   "qid": "Q260870",
+   "label": "Amsterdam metrosu",
+   "links": 44,
+   "value": 111300000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Amsterdam Metrosu",
+   "country": [
+    "Hollanda"
+   ],
+   "tr_views": 203
+  },
+  {
+   "qid": "Q497044",
+   "label": "Buenos Aires metrosu",
+   "links": 44,
+   "value": 317700000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Buenos Aires Metrosu",
+   "country": [
+    "Arjantin"
+   ],
+   "tr_views": 224
+  },
+  {
+   "qid": "Q497044",
+   "label": "Buenos Aires metrosu",
+   "links": 44,
+   "value": 337700000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Buenos Aires Metrosu",
+   "country": [
+    "Arjantin"
+   ],
+   "tr_views": 224
+  },
+  {
+   "qid": "Q746032",
+   "label": "Lizbon Metrosu",
+   "links": 44,
+   "value": 161500000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Lizbon Metrosu",
+   "country": [
+    "Portekiz"
+   ],
+   "tr_views": 487
+  },
+  {
+   "qid": "Q746032",
+   "label": "Lizbon Metrosu",
+   "links": 44,
+   "value": 173000000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Lizbon Metrosu",
+   "country": [
+    "Portekiz"
+   ],
+   "tr_views": 487
+  },
+  {
+   "qid": "Q660751",
+   "label": "Guangzhou metrosu",
+   "links": 43,
+   "value": 2800000000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Guangzhou Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 183
+  },
+  {
+   "qid": "Q660751",
+   "label": "Guangzhou metrosu",
+   "links": 43,
+   "value": 3305900000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Guangzhou Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 183
+  },
+  {
+   "qid": "Q333696",
+   "label": "Nijniy Novgorod metrosu",
+   "links": 42,
+   "value": 30400000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Nijni Novgorod Metrosu",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 277
+  },
+  {
+   "qid": "Q333696",
+   "label": "Nijniy Novgorod metrosu",
+   "links": 42,
+   "value": 30400000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Nijni Novgorod Metrosu",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 277
+  },
+  {
+   "qid": "Q735042",
+   "label": "Meksiko metrosu",
+   "links": 42,
+   "value": 1605000000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Meksiko Metrosu",
+   "country": [
+    "Meksika"
+   ],
+   "tr_views": 131
+  },
+  {
+   "qid": "Q735042",
+   "label": "Meksiko metrosu",
+   "links": 42,
+   "value": 1655400000.0,
+   "rank": "preferred",
+   "value_year": 2019,
+   "tr_title": "Meksiko Metrosu",
+   "country": [
+    "Meksika"
+   ],
+   "tr_views": 131
+  },
+  {
+   "qid": "Q673320",
+   "label": "Harkiv Metrosu",
+   "links": 41,
+   "value": 212800000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Harkiv Metrosu",
+   "country": [
+    "Ukrayna"
+   ],
+   "tr_views": 253
+  },
+  {
+   "qid": "Q673320",
+   "label": "Harkiv Metrosu",
+   "links": 41,
+   "value": 231100000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Harkiv Metrosu",
+   "country": [
+    "Ukrayna"
+   ],
+   "tr_views": 253
+  },
+  {
+   "qid": "Q2106",
+   "label": "Samara metrosu",
+   "links": 40,
+   "value": 13100000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Samara Metrosu",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 167
+  },
+  {
+   "qid": "Q2106",
+   "label": "Samara metrosu",
+   "links": 40,
+   "value": 15600000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Samara Metrosu",
+   "country": [
+    "Rusya"
+   ],
+   "tr_views": 167
+  },
+  {
+   "qid": "Q219374",
+   "label": "Dnipropetrovsk metrosu",
+   "links": 40,
+   "value": 6900000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Dnipro Metrosu",
+   "country": [
+    "Ukrayna"
+   ],
+   "tr_views": 96
+  },
+  {
+   "qid": "Q219374",
+   "label": "Dnipropetrovsk metrosu",
+   "links": 40,
+   "value": 7500000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Dnipro Metrosu",
+   "country": [
+    "Ukrayna"
+   ],
+   "tr_views": 96
+  },
+  {
+   "qid": "Q691704",
+   "label": "Rotterdam metrosu",
+   "links": 40,
+   "value": 93000000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Rotterdam Metrosu",
+   "country": [
+    "Hollanda"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q691704",
+   "label": "Rotterdam metrosu",
+   "links": 40,
+   "value": 99000000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Rotterdam Metrosu",
+   "country": [
+    "Hollanda"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q820880",
+   "label": "Chicago metrosu",
+   "links": 40,
+   "value": 103524900.0,
+   "rank": "preferred",
+   "value_year": 2022,
+   "tr_title": "Chicago Metrosu",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 275
+  },
+  {
+   "qid": "Q820880",
+   "label": "Chicago metrosu",
+   "links": 40,
+   "value": 218500000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Chicago Metrosu",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 275
+  },
+  {
+   "qid": "Q820880",
+   "label": "Chicago metrosu",
+   "links": 40,
+   "value": 230200000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Chicago Metrosu",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 275
+  },
+  {
+   "qid": "Q913314",
+   "label": "Santiago metrosu",
+   "links": 40,
+   "value": 263358863.0,
+   "rank": "normal",
+   "value_year": 2020,
+   "tr_title": "Santiago Metrosu",
+   "country": [
+    "Şili"
+   ],
+   "tr_views": 225
+  },
+  {
+   "qid": "Q913314",
+   "label": "Santiago metrosu",
+   "links": 40,
+   "value": 359376710.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "tr_title": "Santiago Metrosu",
+   "country": [
+    "Şili"
+   ],
+   "tr_views": 225
+  },
+  {
+   "qid": "Q913314",
+   "label": "Santiago metrosu",
+   "links": 40,
+   "value": 544475303.0,
+   "rank": "normal",
+   "value_year": 2022,
+   "tr_title": "Santiago Metrosu",
+   "country": [
+    "Şili"
+   ],
+   "tr_views": 225
+  },
+  {
+   "qid": "Q913314",
+   "label": "Santiago metrosu",
+   "links": 40,
+   "value": 599090420.0,
+   "rank": "normal",
+   "value_year": 2023,
+   "tr_title": "Santiago Metrosu",
+   "country": [
+    "Şili"
+   ],
+   "tr_views": 225
+  },
+  {
+   "qid": "Q913314",
+   "label": "Santiago metrosu",
+   "links": 40,
+   "value": 670070000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Santiago Metrosu",
+   "country": [
+    "Şili"
+   ],
+   "tr_views": 225
+  },
+  {
+   "qid": "Q913314",
+   "label": "Santiago metrosu",
+   "links": 40,
+   "value": 685100000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Santiago Metrosu",
+   "country": [
+    "Şili"
+   ],
+   "tr_views": 225
+  },
+  {
+   "qid": "Q913314",
+   "label": "Santiago metrosu",
+   "links": 40,
+   "value": 703700000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Santiago Metrosu",
+   "country": [
+    "Şili"
+   ],
+   "tr_views": 225
+  },
+  {
+   "qid": "Q913314",
+   "label": "Santiago metrosu",
+   "links": 40,
+   "value": 721007000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Santiago Metrosu",
+   "country": [
+    "Şili"
+   ],
+   "tr_views": 225
+  },
+  {
+   "qid": "Q1552",
+   "label": "Lyon metrosu",
+   "links": 39,
+   "value": 198200000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Lyon Metrosu",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 129
+  },
+  {
+   "qid": "Q1552",
+   "label": "Lyon metrosu",
+   "links": 39,
+   "value": 212400000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Lyon Metrosu",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 129
+  },
+  {
+   "qid": "Q6445",
+   "label": "Hamburg metrosu",
+   "links": 39,
+   "value": 232400000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Hamburg Metrosu",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 636
+  },
+  {
+   "qid": "Q6445",
+   "label": "Hamburg metrosu",
+   "links": 39,
+   "value": 242500000.0,
+   "rank": "preferred",
+   "value_year": 2017,
+   "tr_title": "Hamburg Metrosu",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 636
+  },
+  {
+   "qid": "Q6445",
+   "label": "Hamburg metrosu",
+   "links": 39,
+   "value": 249500000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Hamburg Metrosu",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 636
+  },
+  {
+   "qid": "Q392377",
+   "label": "Montreal metrosu",
+   "links": 38,
+   "value": 367500000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Montreal Metrosu",
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 129
+  },
+  {
+   "qid": "Q392377",
+   "label": "Montreal metrosu",
+   "links": 38,
+   "value": 400300000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Montreal Metrosu",
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 129
+  },
+  {
+   "qid": "Q682894",
+   "label": "Tokyo Metro",
+   "links": 38,
+   "value": 2757400000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Tokyo Metro",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 424
+  },
+  {
+   "qid": "Q748402",
+   "label": "Ankara Metrosu",
+   "links": 38,
+   "value": 104100000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Ankara Metrosu",
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 35544
+  },
+  {
+   "qid": "Q748402",
+   "label": "Ankara Metrosu",
+   "links": 38,
+   "value": 135700000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Ankara Metrosu",
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 35544
+  },
+  {
+   "qid": "Q1133623",
+   "label": "Rio de Janeiro metrosu",
+   "links": 37,
+   "value": 244700000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Rio de Janeiro Metrosu",
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 147
+  },
+  {
+   "qid": "Q1133623",
+   "label": "Rio de Janeiro metrosu",
+   "links": 37,
+   "value": 252500000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Rio de Janeiro Metrosu",
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 147
+  },
+  {
+   "qid": "Q275267",
+   "label": "Marsilya metrosu",
+   "links": 37,
+   "value": 75900000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Marsilya Metrosu",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 138
+  },
+  {
+   "qid": "Q275267",
+   "label": "Marsilya metrosu",
+   "links": 37,
+   "value": 76200000.0,
+   "rank": "preferred",
+   "value_year": 2018,
+   "tr_title": "Marsilya Metrosu",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 138
+  },
+  {
+   "qid": "Q275267",
+   "label": "Marsilya metrosu",
+   "links": 37,
+   "value": 76700000.0,
+   "rank": "normal",
+   "value_year": 2012,
+   "tr_title": "Marsilya Metrosu",
+   "country": [
+    "Fransa"
+   ],
+   "tr_views": 138
+  },
+  {
+   "qid": "Q429366",
+   "label": "Nankin metrosu",
+   "links": 37,
+   "value": 977000000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Nankin Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 95
+  },
+  {
+   "qid": "Q429366",
+   "label": "Nankin metrosu",
+   "links": 37,
+   "value": 1151890000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Nankin Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 95
+  },
+  {
+   "qid": "Q646414",
+   "label": "Mumbai metrosu",
+   "links": 37,
+   "value": 118000000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Mumbai Metrosu",
+   "country": [
+    "Hindistan"
+   ],
+   "tr_views": 137
+  },
+  {
+   "qid": "Q1048849",
+   "label": "Kalküta metrosu",
+   "links": 36,
+   "value": 204200000.0,
+   "rank": "normal",
+   "value_year": 2020,
+   "tr_title": "Kalküta Metrosu",
+   "country": [
+    "Hindistan"
+   ],
+   "tr_views": 78
+  },
+  {
+   "qid": "Q20379",
+   "label": "Toronto metrosu",
+   "links": 36,
+   "value": 304100000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Toronto Metrosu",
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 371
+  },
+  {
+   "qid": "Q20379",
+   "label": "Toronto metrosu",
+   "links": 36,
+   "value": 474500000.0,
+   "rank": "preferred",
+   "value_year": 2019,
+   "tr_title": "Toronto Metrosu",
+   "country": [
+    "Kanada"
+   ],
+   "tr_views": 371
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 3086252.0,
+   "rank": "normal",
+   "value_year": 1995,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 31660119.0,
+   "rank": "normal",
+   "value_year": 1996,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 41493501.0,
+   "rank": "normal",
+   "value_year": 1997,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 49102360.0,
+   "rank": "normal",
+   "value_year": 1998,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 50886407.0,
+   "rank": "normal",
+   "value_year": 1999,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 54173349.0,
+   "rank": "normal",
+   "value_year": 2000,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 55894768.0,
+   "rank": "normal",
+   "value_year": 2001,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 55987465.0,
+   "rank": "normal",
+   "value_year": 2020,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 66705570.0,
+   "rank": "normal",
+   "value_year": 2002,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 66779959.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 72609409.0,
+   "rank": "normal",
+   "value_year": 2003,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 73088978.0,
+   "rank": "normal",
+   "value_year": 2004,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 77801841.0,
+   "rank": "normal",
+   "value_year": 2005,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 79780094.0,
+   "rank": "normal",
+   "value_year": 2006,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 80376641.0,
+   "rank": "normal",
+   "value_year": 2022,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 85864456.0,
+   "rank": "normal",
+   "value_year": 2007,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 86333743.0,
+   "rank": "normal",
+   "value_year": 2008,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 87043712.0,
+   "rank": "normal",
+   "value_year": 2009,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 87105288.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 87133034.0,
+   "rank": "normal",
+   "value_year": 2013,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 87397394.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 87535815.0,
+   "rank": "normal",
+   "value_year": 2015,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 87615087.0,
+   "rank": "normal",
+   "value_year": 2012,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 88172137.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 88556281.0,
+   "rank": "normal",
+   "value_year": 2010,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 89616398.0,
+   "rank": "normal",
+   "value_year": 2011,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 89918810.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 91570001.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 92380889.0,
+   "rank": "normal",
+   "value_year": 2023,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 100364375.0,
+   "rank": "normal",
+   "value_year": 2024,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q325309",
+   "label": "Bilbao metrosu",
+   "links": 36,
+   "value": 104508201.0,
+   "rank": "normal",
+   "value_year": 2025,
+   "tr_title": "Bilbao Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 101
+  },
+  {
+   "qid": "Q697512",
+   "label": "Nürnberg metrosu",
+   "links": 36,
+   "value": 122200000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Nürnberg Metrosu",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 425
+  },
+  {
+   "qid": "Q697512",
+   "label": "Nürnberg metrosu",
+   "links": 36,
+   "value": 128850000.0,
+   "rank": "normal",
+   "value_year": 2015,
+   "tr_title": "Nürnberg Metrosu",
+   "country": [
+    "Almanya"
+   ],
+   "tr_views": 425
+  },
+  {
+   "qid": "Q728081",
+   "label": "Kyoto metrosu",
+   "links": 36,
+   "value": 138000000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Kyoto Metrosu",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 76
+  },
+  {
+   "qid": "Q728081",
+   "label": "Kyoto metrosu",
+   "links": 36,
+   "value": 146400000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Kyoto Metrosu",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 76
+  },
+  {
+   "qid": "Q747184",
+   "label": "Napoli metrosu",
+   "links": 36,
+   "value": 38100000.0,
+   "rank": "normal",
+   "value_year": 2015,
+   "tr_title": "Napoli Metrosu",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 266
+  },
+  {
+   "qid": "Q747184",
+   "label": "Napoli metrosu",
+   "links": 36,
+   "value": 41000000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Napoli Metrosu",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 266
+  },
+  {
+   "qid": "Q747184",
+   "label": "Napoli metrosu",
+   "links": 36,
+   "value": 41000000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Napoli Metrosu",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 266
+  },
+  {
+   "qid": "Q747184",
+   "label": "Napoli metrosu",
+   "links": 36,
+   "value": 41500000.0,
+   "rank": "normal",
+   "value_year": 2024,
+   "tr_title": "Napoli Metrosu",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 266
+  },
+  {
+   "qid": "Q867680",
+   "label": "Shenzhen metrosu",
+   "links": 36,
+   "value": 1654400000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Shenzhen Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 131
+  },
+  {
+   "qid": "Q867680",
+   "label": "Shenzhen metrosu",
+   "links": 36,
+   "value": 2017600000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Shenzhen Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 131
+  },
+  {
+   "qid": "Q51972",
+   "label": "Busan metrosu",
+   "links": 35,
+   "value": 358000000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Busan Metrosu",
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 160
+  },
+  {
+   "qid": "Q51972",
+   "label": "Busan metrosu",
+   "links": 35,
+   "value": 361000000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Busan Metrosu",
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 160
+  },
+  {
+   "qid": "Q610120",
+   "label": "Bay Area Rapid Transit",
+   "links": 35,
+   "value": 123500000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Bay Area Rapid Transit",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 149
+  },
+  {
+   "qid": "Q610120",
+   "label": "Bay Area Rapid Transit",
+   "links": 35,
+   "value": 129300000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Bay Area Rapid Transit",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 149
+  },
+  {
+   "qid": "Q1163754",
+   "label": "Cenova metrosu",
+   "links": 34,
+   "value": 11000000.0,
+   "rank": "normal",
+   "value_year": 2012,
+   "tr_title": "Cenova Metrosu",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 81
+  },
+  {
+   "qid": "Q1163754",
+   "label": "Cenova metrosu",
+   "links": 34,
+   "value": 15300000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Cenova Metrosu",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 81
+  },
+  {
+   "qid": "Q1339558",
+   "label": "Los Angeles metrosu",
+   "links": 34,
+   "value": 47866883.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "tr_title": "Los Angeles Metrosu",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 467
+  },
+  {
+   "qid": "Q1339558",
+   "label": "Los Angeles metrosu",
+   "links": 34,
+   "value": 51918949.0,
+   "rank": "normal",
+   "value_year": 2020,
+   "tr_title": "Los Angeles Metrosu",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 467
+  },
+  {
+   "qid": "Q1339558",
+   "label": "Los Angeles metrosu",
+   "links": 34,
+   "value": 60565995.0,
+   "rank": "normal",
+   "value_year": 2022,
+   "tr_title": "Los Angeles Metrosu",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 467
+  },
+  {
+   "qid": "Q1339558",
+   "label": "Los Angeles metrosu",
+   "links": 34,
+   "value": 65165346.0,
+   "rank": "normal",
+   "value_year": 2023,
+   "tr_title": "Los Angeles Metrosu",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 467
+  },
+  {
+   "qid": "Q1339558",
+   "label": "Los Angeles metrosu",
+   "links": 34,
+   "value": 68650712.0,
+   "rank": "normal",
+   "value_year": 2024,
+   "tr_title": "Los Angeles Metrosu",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 467
+  },
+  {
+   "qid": "Q1339558",
+   "label": "Los Angeles metrosu",
+   "links": 34,
+   "value": 93171898.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Los Angeles Metrosu",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 467
+  },
+  {
+   "qid": "Q1339558",
+   "label": "Los Angeles metrosu",
+   "links": 34,
+   "value": 108017525.0,
+   "rank": "preferred",
+   "value_year": 2018,
+   "tr_title": "Los Angeles Metrosu",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 467
+  },
+  {
+   "qid": "Q1339558",
+   "label": "Los Angeles metrosu",
+   "links": 34,
+   "value": 112783075.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Los Angeles Metrosu",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 467
+  },
+  {
+   "qid": "Q239927",
+   "label": "Katanya metrosu",
+   "links": 34,
+   "value": 3400000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Katanya Metrosu",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 141
+  },
+  {
+   "qid": "Q239927",
+   "label": "Katanya metrosu",
+   "links": 34,
+   "value": 5800000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Katanya Metrosu",
+   "country": [
+    "İtalya"
+   ],
+   "tr_views": 141
+  },
+  {
+   "qid": "Q1144874",
+   "label": "Nagoya metrosu",
+   "links": 32,
+   "value": 427500000.0,
+   "rank": "normal",
+   "value_year": 2008,
+   "tr_title": "Nagoya Metrosu",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 114
+  },
+  {
+   "qid": "Q1144874",
+   "label": "Nagoya metrosu",
+   "links": 32,
+   "value": 487400000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Nagoya Metrosu",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 114
+  },
+  {
+   "qid": "Q1503686",
+   "label": "İzmir Metrosu",
+   "links": 32,
+   "value": 92198968.0,
+   "rank": "normal",
+   "value_year": 2023,
+   "tr_title": "İzmir Metrosu",
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 15269
+  },
+  {
+   "qid": "Q1503686",
+   "label": "İzmir Metrosu",
+   "links": 32,
+   "value": 93843815.0,
+   "rank": "normal",
+   "value_year": 2024,
+   "tr_title": "İzmir Metrosu",
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 15269
+  },
+  {
+   "qid": "Q1503686",
+   "label": "İzmir Metrosu",
+   "links": 32,
+   "value": 94313261.0,
+   "rank": "preferred",
+   "value_year": 2025,
+   "tr_title": "İzmir Metrosu",
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 15269
+  },
+  {
+   "qid": "Q1503686",
+   "label": "İzmir Metrosu",
+   "links": 32,
+   "value": 105000000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "İzmir Metrosu",
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 15269
+  },
+  {
+   "qid": "Q1503686",
+   "label": "İzmir Metrosu",
+   "links": 32,
+   "value": 120000000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "İzmir Metrosu",
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 15269
+  },
+  {
+   "qid": "Q515817",
+   "label": "Tientsin metrosu",
+   "links": 32,
+   "value": 351500000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Tientsin Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 93
+  },
+  {
+   "qid": "Q515817",
+   "label": "Tientsin metrosu",
+   "links": 32,
+   "value": 523470000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Tientsin Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 93
+  },
+  {
+   "qid": "Q688268",
+   "label": "Lozan metrosu",
+   "links": 32,
+   "value": 30100000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Lozan Metrosu",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 187
+  },
+  {
+   "qid": "Q688268",
+   "label": "Lozan metrosu",
+   "links": 32,
+   "value": 32799999.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Lozan Metrosu",
+   "country": [
+    "İsviçre"
+   ],
+   "tr_views": 187
+  },
+  {
+   "qid": "Q728045",
+   "label": "Cezayir Metrosu",
+   "links": 31,
+   "value": 28400000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Cezayir Metrosu",
+   "country": [
+    "Cezayir"
+   ],
+   "tr_views": 445
+  },
+  {
+   "qid": "Q728045",
+   "label": "Cezayir Metrosu",
+   "links": 31,
+   "value": 30000000.0,
+   "rank": "preferred",
+   "value_year": 2017,
+   "tr_title": "Cezayir Metrosu",
+   "country": [
+    "Cezayir"
+   ],
+   "tr_views": 445
+  },
+  {
+   "qid": "Q728045",
+   "label": "Cezayir Metrosu",
+   "links": 31,
+   "value": 45300000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Cezayir Metrosu",
+   "country": [
+    "Cezayir"
+   ],
+   "tr_views": 445
+  },
+  {
+   "qid": "Q1190894",
+   "label": "Çongçing metrosu",
+   "links": 30,
+   "value": 743100000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Çongçing Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 231
+  },
+  {
+   "qid": "Q1190894",
+   "label": "Çongçing metrosu",
+   "links": 30,
+   "value": 1038920000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Çongçing Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 231
+  },
+  {
+   "qid": "Q1660441",
+   "label": "Vuhan metrosu",
+   "links": 30,
+   "value": 926800000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Vuhan Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 179
+  },
+  {
+   "qid": "Q1660441",
+   "label": "Vuhan metrosu",
+   "links": 30,
+   "value": 1222550000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Vuhan Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 179
+  },
+  {
+   "qid": "Q49458",
+   "label": "Daegu metrosu",
+   "links": 30,
+   "value": 163000000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Daegu Metrosu",
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 81
+  },
+  {
+   "qid": "Q49458",
+   "label": "Daegu metrosu",
+   "links": 30,
+   "value": 168000000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Daegu Metrosu",
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 81
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 20000000.0,
+   "rank": "normal",
+   "value_year": 1996,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 21100000.0,
+   "rank": "normal",
+   "value_year": 1997,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 22000000.0,
+   "rank": "normal",
+   "value_year": 1995,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 24200000.0,
+   "rank": "normal",
+   "value_year": 1998,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 35600000.0,
+   "rank": "normal",
+   "value_year": 1999,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 36980000.0,
+   "rank": "normal",
+   "value_year": 2020,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 37900000.0,
+   "rank": "normal",
+   "value_year": 2000,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 42600000.0,
+   "rank": "normal",
+   "value_year": 2001,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 42800000.0,
+   "rank": "normal",
+   "value_year": 2021,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 46600000.0,
+   "rank": "normal",
+   "value_year": 2002,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 51000000.0,
+   "rank": "normal",
+   "value_year": 2003,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 57600000.0,
+   "rank": "normal",
+   "value_year": 2004,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 59900000.0,
+   "rank": "normal",
+   "value_year": 2013,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 60100000.0,
+   "rank": "normal",
+   "value_year": 2014,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 60700000.0,
+   "rank": "normal",
+   "value_year": 2015,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 61500000.0,
+   "rank": "normal",
+   "value_year": 2005,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 62600000.0,
+   "rank": "normal",
+   "value_year": 2016,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 63100000.0,
+   "rank": "normal",
+   "value_year": 2012,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 63361626.0,
+   "rank": "preferred",
+   "value_year": 2022,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 63800000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 64600000.0,
+   "rank": "normal",
+   "value_year": 2006,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 65100000.0,
+   "rank": "normal",
+   "value_year": 2011,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 66500000.0,
+   "rank": "normal",
+   "value_year": 2009,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 67200000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 67600000.0,
+   "rank": "normal",
+   "value_year": 2007,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 67700000.0,
+   "rank": "normal",
+   "value_year": 2010,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 68300000.0,
+   "rank": "normal",
+   "value_year": 2008,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 69400000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q511171",
+   "label": "Valensiya metrosu",
+   "links": 30,
+   "value": 90492516.0,
+   "rank": "normal",
+   "value_year": 2023,
+   "tr_title": "Valensiya Metrosu",
+   "country": [
+    "İspanya"
+   ],
+   "tr_views": 111
+  },
+  {
+   "qid": "Q555733",
+   "label": "Xi'an metrosu",
+   "links": 30,
+   "value": 605300000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Şian Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 83
+  },
+  {
+   "qid": "Q555733",
+   "label": "Xi'an metrosu",
+   "links": 30,
+   "value": 945410000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Şian Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 83
+  },
+  {
+   "qid": "Q691322",
+   "label": "Federal District metrosu",
+   "links": 30,
+   "value": 36600000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Brasília Metrosu",
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 96
+  },
+  {
+   "qid": "Q691322",
+   "label": "Federal District metrosu",
+   "links": 30,
+   "value": 42800000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Brasília Metrosu",
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 96
+  },
+  {
+   "qid": "Q1363954",
+   "label": "Caracas metrosu",
+   "links": 29,
+   "value": 358000000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Caracas Metrosu",
+   "country": [
+    "Venezuela"
+   ],
+   "tr_views": 472
+  },
+  {
+   "qid": "Q1577356",
+   "label": "Adana metrosu",
+   "links": 29,
+   "value": 14000000.0,
+   "rank": "normal",
+   "value_year": 2011,
+   "tr_title": "Adana Metrosu",
+   "country": [
+    "Türkiye"
+   ],
+   "tr_views": 7955
+  },
+  {
+   "qid": "Q1660063",
+   "label": "Çengdu metrosu",
+   "links": 29,
+   "value": 782100000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Çengdu Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 92
+  },
+  {
+   "qid": "Q1660063",
+   "label": "Çengdu metrosu",
+   "links": 29,
+   "value": 1398010000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Çengdu Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 92
+  },
+  {
+   "qid": "Q289242",
+   "label": "Fukuoka metrosu",
+   "links": 29,
+   "value": 173300000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Fukuoka Metrosu",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 78
+  },
+  {
+   "qid": "Q736098",
+   "label": "Sapporo metrosu",
+   "links": 29,
+   "value": 226900000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Sapporo Metrosu",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 87
+  },
+  {
+   "qid": "Q1049009",
+   "label": "Kobe metrosu",
+   "links": 28,
+   "value": 114200000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Kobe Metrosu",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 76
+  },
+  {
+   "qid": "Q1055811",
+   "label": "PATH (raylı sistem)",
+   "links": 28,
+   "value": 90300000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "PATH (raylı sistem)",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 152
+  },
+  {
+   "qid": "Q1055811",
+   "label": "PATH (raylı sistem)",
+   "links": 28,
+   "value": 93000000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "PATH (raylı sistem)",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 152
+  },
+  {
+   "qid": "Q1345375",
+   "label": "Santo Domingo metrosu",
+   "links": 28,
+   "value": 76500000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Santo Domingo Metrosu",
+   "country": [
+    "Dominik Cumhuriyeti"
+   ],
+   "tr_views": 93
+  },
+  {
+   "qid": "Q1345375",
+   "label": "Santo Domingo metrosu",
+   "links": 28,
+   "value": 101400000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Santo Domingo Metrosu",
+   "country": [
+    "Dominik Cumhuriyeti"
+   ],
+   "tr_views": 93
+  },
+  {
+   "qid": "Q1345375",
+   "label": "Santo Domingo metrosu",
+   "links": 28,
+   "value": 104003341.0,
+   "rank": "normal",
+   "value_year": 2023,
+   "tr_title": "Santo Domingo Metrosu",
+   "country": [
+    "Dominik Cumhuriyeti"
+   ],
+   "tr_views": 93
+  },
+  {
+   "qid": "Q495335",
+   "label": "Gwangju metrosu",
+   "links": 28,
+   "value": 19000000.0,
+   "rank": "preferred",
+   "value_year": 2019,
+   "tr_title": "Gwangju Metrosu",
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 64
+  },
+  {
+   "qid": "Q495335",
+   "label": "Gwangju metrosu",
+   "links": 28,
+   "value": 19000000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Gwangju Metrosu",
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 64
+  },
+  {
+   "qid": "Q624200",
+   "label": "Daejeon metrosu",
+   "links": 28,
+   "value": 39000000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Daejeon Metrosu",
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 43
+  },
+  {
+   "qid": "Q624200",
+   "label": "Daejeon metrosu",
+   "links": 28,
+   "value": 40000000.0,
+   "rank": "preferred",
+   "value_year": 2019,
+   "tr_title": "Daejeon Metrosu",
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 43
+  },
+  {
+   "qid": "Q685945",
+   "label": "Sendai metrosu",
+   "links": 28,
+   "value": 91700000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Sendai Metrosu",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 72
+  },
+  {
+   "qid": "Q1341305",
+   "label": "Yokohama metrosu",
+   "links": 27,
+   "value": 243200000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Yokohama Metrosu",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 75
+  },
+  {
+   "qid": "Q1054256",
+   "label": "Changsha metrosu",
+   "links": 26,
+   "value": 233400000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Çangşa Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 100
+  },
+  {
+   "qid": "Q1054256",
+   "label": "Changsha metrosu",
+   "links": 26,
+   "value": 330320000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Çangşa Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 100
+  },
+  {
+   "qid": "Q3333785",
+   "label": "Cakarta metrosu",
+   "links": 26,
+   "value": 24600000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Cakarta Metrosu",
+   "country": [
+    "Endonezya"
+   ],
+   "tr_views": 262
+  },
+  {
+   "qid": "Q495149",
+   "label": "İncheon Metrosu",
+   "links": 26,
+   "value": 109000000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Incheon Metrosu",
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 63
+  },
+  {
+   "qid": "Q495149",
+   "label": "İncheon Metrosu",
+   "links": 26,
+   "value": 116000000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Incheon Metrosu",
+   "country": [
+    "Güney Kore"
+   ],
+   "tr_views": 63
+  },
+  {
+   "qid": "Q654751",
+   "label": "Medellín metrosu",
+   "links": 26,
+   "value": 208100000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Medellín Metrosu",
+   "country": [
+    "Kolombiya"
+   ],
+   "tr_views": 133
+  },
+  {
+   "qid": "Q654751",
+   "label": "Medellín metrosu",
+   "links": 26,
+   "value": 228300000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Medellín Metrosu",
+   "country": [
+    "Kolombiya"
+   ],
+   "tr_views": 133
+  },
+  {
+   "qid": "Q1537708",
+   "label": "Belo Horizonte metrosu",
+   "links": 25,
+   "value": 58400000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Belo Horizonte Metrosu",
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 63
+  },
+  {
+   "qid": "Q1537708",
+   "label": "Belo Horizonte metrosu",
+   "links": 25,
+   "value": 58800000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Belo Horizonte Metrosu",
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 63
+  },
+  {
+   "qid": "Q1926608",
+   "label": "Miami metrosu",
+   "links": 25,
+   "value": 18100000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Miami Metrosu",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 275
+  },
+  {
+   "qid": "Q1926608",
+   "label": "Miami metrosu",
+   "links": 25,
+   "value": 19700000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Miami Metrosu",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 275
+  },
+  {
+   "qid": "Q290307",
+   "label": "Urumçi metrosu",
+   "links": 25,
+   "value": 25570000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Urumçi Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 120
+  },
+  {
+   "qid": "Q1418233",
+   "label": "Porto Alegre metrosu",
+   "links": 24,
+   "value": 51700000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Porto Alegre Metrosu",
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 76
+  },
+  {
+   "qid": "Q1418233",
+   "label": "Porto Alegre metrosu",
+   "links": 24,
+   "value": 55100000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Porto Alegre Metrosu",
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 76
+  },
+  {
+   "qid": "Q1808272",
+   "label": "Recife metrosu",
+   "links": 23,
+   "value": 93500000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Recife Metrosu",
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 59
+  },
+  {
+   "qid": "Q1808272",
+   "label": "Recife metrosu",
+   "links": 23,
+   "value": 104200000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Recife Metrosu",
+   "country": [
+    "Brezilya"
+   ],
+   "tr_views": 59
+  },
+  {
+   "qid": "Q805751",
+   "label": "Baltimore Metro Subway",
+   "links": 23,
+   "value": 7300000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Baltimore Metro Subway",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 138
+  },
+  {
+   "qid": "Q805751",
+   "label": "Baltimore Metro Subway",
+   "links": 23,
+   "value": 7812675.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Baltimore Metro Subway",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 138
+  },
+  {
+   "qid": "Q1273068",
+   "label": "Staten Island Railway",
+   "links": 21,
+   "value": 7700000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Staten Island Railway",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 179
+  },
+  {
+   "qid": "Q1273068",
+   "label": "Staten Island Railway",
+   "links": 21,
+   "value": 8800000.0,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Staten Island Railway",
+   "country": [
+    "Amerika Birleşik Devletleri"
+   ],
+   "tr_views": 179
+  },
+  {
+   "qid": "Q4292517",
+   "label": "Meşhed metrosu",
+   "links": 20,
+   "value": 44400000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Meşhed Metrosu",
+   "country": [
+    "İran"
+   ],
+   "tr_views": 183
+  },
+  {
+   "qid": "Q2607679",
+   "label": "Şiraz metrosu",
+   "links": 19,
+   "value": 18000000.0,
+   "rank": "normal",
+   "value_year": 2018,
+   "tr_title": "Şiraz Metrosu",
+   "country": [
+    "İran"
+   ],
+   "tr_views": 202
+  },
+  {
+   "qid": "Q389415",
+   "label": "Astram Hattı",
+   "links": 19,
+   "value": 24000000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Astram Hattı",
+   "country": [
+    "Japonya"
+   ],
+   "tr_views": 83
+  },
+  {
+   "qid": "Q10893611",
+   "label": "Lanzhou Metrosu",
+   "links": 17,
+   "value": 32430000.0,
+   "rank": "normal",
+   "value_year": 2019,
+   "tr_title": "Lanzhou Metrosu",
+   "country": [
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 121
+  }
+ ]
+}

@@ -1,0 +1,1788 @@
+{
+ "dataset": "highest_points",
+ "description": "Egemen devletlerin en yüksek noktaları, yükseklik (P2044)",
+ "property": "P2044",
+ "fetched_at": "2026-11-16T13:33:30+00:00",
+ "rows": [
+  {
+   "qid": "Q513",
+   "label": "Everest Dağı",
+   "links": 238,
+   "value": 8844.43,
+   "rank": "normal",
+   "value_year": 2005,
+   "tr_title": "Everest Dağı",
+   "country": [
+    "1 Nolu il",
+    "Afrika-Avrasya",
+    "Asya",
+    "Avrasya",
+    "Doğu yarıküre",
+    "Dünya",
+    "Güney Asya",
+    "Himalaya Dağları",
+    "Hint altkıtası",
+    "Kuzey yarımküre",
+    "Mahalangur Himal",
+    "Nepal",
+    "Sagarmatha Ulusal Parkı",
+    "Solukhumbu bölgesi",
+    "Tibet",
+    "Tibet Özerk Bölgesi",
+    "Tibet İmparatorluğu",
+    "Xigazê",
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 104255
+  },
+  {
+   "qid": "Q513",
+   "label": "Everest Dağı",
+   "links": 238,
+   "value": 8847.93,
+   "rank": "normal",
+   "value_year": 2005,
+   "tr_title": "Everest Dağı",
+   "country": [
+    "1 Nolu il",
+    "Afrika-Avrasya",
+    "Asya",
+    "Avrasya",
+    "Doğu yarıküre",
+    "Dünya",
+    "Güney Asya",
+    "Himalaya Dağları",
+    "Hint altkıtası",
+    "Kuzey yarımküre",
+    "Mahalangur Himal",
+    "Nepal",
+    "Sagarmatha Ulusal Parkı",
+    "Solukhumbu bölgesi",
+    "Tibet",
+    "Tibet Özerk Bölgesi",
+    "Tibet İmparatorluğu",
+    "Xigazê",
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 104255
+  },
+  {
+   "qid": "Q513",
+   "label": "Everest Dağı",
+   "links": 238,
+   "value": 8848.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Everest Dağı",
+   "country": [
+    "1 Nolu il",
+    "Afrika-Avrasya",
+    "Asya",
+    "Avrasya",
+    "Doğu yarıküre",
+    "Dünya",
+    "Güney Asya",
+    "Himalaya Dağları",
+    "Hint altkıtası",
+    "Kuzey yarımküre",
+    "Mahalangur Himal",
+    "Nepal",
+    "Sagarmatha Ulusal Parkı",
+    "Solukhumbu bölgesi",
+    "Tibet",
+    "Tibet Özerk Bölgesi",
+    "Tibet İmparatorluğu",
+    "Xigazê",
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 104255
+  },
+  {
+   "qid": "Q513",
+   "label": "Everest Dağı",
+   "links": 238,
+   "value": 8848.86,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": "Everest Dağı",
+   "country": [
+    "1 Nolu il",
+    "Afrika-Avrasya",
+    "Asya",
+    "Avrasya",
+    "Doğu yarıküre",
+    "Dünya",
+    "Güney Asya",
+    "Himalaya Dağları",
+    "Hint altkıtası",
+    "Kuzey yarımküre",
+    "Mahalangur Himal",
+    "Nepal",
+    "Sagarmatha Ulusal Parkı",
+    "Solukhumbu bölgesi",
+    "Tibet",
+    "Tibet Özerk Bölgesi",
+    "Tibet İmparatorluğu",
+    "Xigazê",
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 104255
+  },
+  {
+   "qid": "Q513",
+   "label": "Everest Dağı",
+   "links": 238,
+   "value": 8850.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Everest Dağı",
+   "country": [
+    "1 Nolu il",
+    "Afrika-Avrasya",
+    "Asya",
+    "Avrasya",
+    "Doğu yarıküre",
+    "Dünya",
+    "Güney Asya",
+    "Himalaya Dağları",
+    "Hint altkıtası",
+    "Kuzey yarımküre",
+    "Mahalangur Himal",
+    "Nepal",
+    "Sagarmatha Ulusal Parkı",
+    "Solukhumbu bölgesi",
+    "Tibet",
+    "Tibet Özerk Bölgesi",
+    "Tibet İmparatorluğu",
+    "Xigazê",
+    "Çin Halk Cumhuriyeti"
+   ],
+   "tr_views": 104255
+  },
+  {
+   "qid": "Q39231",
+   "label": "Fuji Dağı",
+   "links": 146,
+   "value": 3777.24,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fuji Dağı",
+   "country": [
+    "Fuji",
+    "Fuji-Hakone-Izu Millî Parkı",
+    "Fujinomiya",
+    "Fujiyoshida",
+    "Honshū",
+    "Japonya"
+   ],
+   "tr_views": 20779
+  },
+  {
+   "qid": "Q583",
+   "label": "Mont Blanc",
+   "links": 127,
+   "value": 4805.59,
+   "rank": "preferred",
+   "value_year": 2023,
+   "tr_title": "Mont Blanc",
+   "country": [
+    "Alpler",
+    "Auvergne-Rhône-Alpes",
+    "Batı Alpleri",
+    "Fransa",
+    "Fransız Alpleri",
+    "Haute-Savoie",
+    "Mont Blanc Masifi",
+    "İtalya"
+   ],
+   "tr_views": 10625
+  },
+  {
+   "qid": "Q583",
+   "label": "Mont Blanc",
+   "links": 127,
+   "value": 4807.02,
+   "rank": "normal",
+   "value_year": 1894,
+   "tr_title": "Mont Blanc",
+   "country": [
+    "Alpler",
+    "Auvergne-Rhône-Alpes",
+    "Batı Alpleri",
+    "Fransa",
+    "Fransız Alpleri",
+    "Haute-Savoie",
+    "Mont Blanc Masifi",
+    "İtalya"
+   ],
+   "tr_views": 10625
+  },
+  {
+   "qid": "Q583",
+   "label": "Mont Blanc",
+   "links": 127,
+   "value": 4807.81,
+   "rank": "normal",
+   "value_year": 2021,
+   "tr_title": "Mont Blanc",
+   "country": [
+    "Alpler",
+    "Auvergne-Rhône-Alpes",
+    "Batı Alpleri",
+    "Fransa",
+    "Fransız Alpleri",
+    "Haute-Savoie",
+    "Mont Blanc Masifi",
+    "İtalya"
+   ],
+   "tr_views": 10625
+  },
+  {
+   "qid": "Q583",
+   "label": "Mont Blanc",
+   "links": 127,
+   "value": 4808.06,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Mont Blanc",
+   "country": [
+    "Alpler",
+    "Auvergne-Rhône-Alpes",
+    "Batı Alpleri",
+    "Fransa",
+    "Fransız Alpleri",
+    "Haute-Savoie",
+    "Mont Blanc Masifi",
+    "İtalya"
+   ],
+   "tr_views": 10625
+  },
+  {
+   "qid": "Q583",
+   "label": "Mont Blanc",
+   "links": 127,
+   "value": 4808.72,
+   "rank": "normal",
+   "value_year": 2017,
+   "tr_title": "Mont Blanc",
+   "country": [
+    "Alpler",
+    "Auvergne-Rhône-Alpes",
+    "Batı Alpleri",
+    "Fransa",
+    "Fransız Alpleri",
+    "Haute-Savoie",
+    "Mont Blanc Masifi",
+    "İtalya"
+   ],
+   "tr_views": 10625
+  },
+  {
+   "qid": "Q583",
+   "label": "Mont Blanc",
+   "links": 127,
+   "value": 4810.02,
+   "rank": "normal",
+   "value_year": 2013,
+   "tr_title": "Mont Blanc",
+   "country": [
+    "Alpler",
+    "Auvergne-Rhône-Alpes",
+    "Batı Alpleri",
+    "Fransa",
+    "Fransız Alpleri",
+    "Haute-Savoie",
+    "Mont Blanc Masifi",
+    "İtalya"
+   ],
+   "tr_views": 10625
+  },
+  {
+   "qid": "Q43105",
+   "label": "Elbruz Dağı",
+   "links": 113,
+   "value": 5642.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Elbruz Dağı",
+   "country": [
+    "Avrupa",
+    "Büyük Kafkas Dağları",
+    "Kabardino-Balkarya",
+    "Kafkas Dağları",
+    "Kafkasya",
+    "Karaçay-Çerkesya",
+    "Rusya",
+    "Rusya coğrafyası",
+    "Yan Dağları (Kafkasya)"
+   ],
+   "tr_views": 12370
+  },
+  {
+   "qid": "Q72303",
+   "label": "Ağrı Dağı",
+   "links": 112,
+   "value": 5137.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ağrı Dağı",
+   "country": [
+    "Anadolu",
+    "Ağrı",
+    "Doğu Anadolu Bölgesi",
+    "Ermeni Yaylası",
+    "Türkiye"
+   ],
+   "tr_views": 127947
+  },
+  {
+   "qid": "Q43512",
+   "label": "K2",
+   "links": 111,
+   "value": 8611.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "K2",
+   "country": [
+    "Baltoro Muzdağ",
+    "Güney Asya",
+    "Karakurum Dağları",
+    "Pakistan",
+    "Sincan"
+   ],
+   "tr_views": 1769
+  },
+  {
+   "qid": "Q80344",
+   "label": "Olimpos Dağı",
+   "links": 110,
+   "value": 2917.727,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Olimpos Dağı",
+   "country": [
+    "Yunanistan"
+   ],
+   "tr_views": 20408
+  },
+  {
+   "qid": "Q725591",
+   "label": "Bazardüzü Dağı",
+   "links": 107,
+   "value": 2706.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bazardüzü Dağı",
+   "country": [
+    "Azerbaycan",
+    "Dağıstan"
+   ],
+   "tr_views": 1993
+  },
+  {
+   "qid": "Q725591",
+   "label": "Bazardüzü Dağı",
+   "links": 107,
+   "value": 4466.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bazardüzü Dağı",
+   "country": [
+    "Azerbaycan",
+    "Dağıstan"
+   ],
+   "tr_views": 1993
+  },
+  {
+   "qid": "Q38954",
+   "label": "Teide Yanardağı",
+   "links": 105,
+   "value": 3715.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Teide Yanardağı",
+   "country": [
+    "Kanarya Adaları",
+    "Santa Cruz de Tenerife İli",
+    "Tenerife",
+    "İspanya"
+   ],
+   "tr_views": 864
+  },
+  {
+   "qid": "Q82019",
+   "label": "Kançencunga",
+   "links": 102,
+   "value": 8586.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kançencunga",
+   "country": [
+    "Hindistan",
+    "Sikkim"
+   ],
+   "tr_views": 173
+  },
+  {
+   "qid": "Q130018",
+   "label": "Denali Dağı",
+   "links": 100,
+   "value": 6190.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Denali",
+   "country": [
+    "Alaska",
+    "Amerika Birleşik Devletleri",
+    "Batı eyaletleri",
+    "Denali Ulusal Parkı ve Koruma Bölgesi",
+    "Kuzey Amerika"
+   ],
+   "tr_views": 5443
+  },
+  {
+   "qid": "Q172070",
+   "label": "Kenya Dağı",
+   "links": 89,
+   "value": 5199.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kenya Dağı",
+   "country": [
+    "Kenya",
+    "Kenya coğrafyası"
+   ],
+   "tr_views": 821
+  },
+  {
+   "qid": "Q14081",
+   "label": "Chimborazo",
+   "links": 84,
+   "value": 6263.47,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Chimborazo",
+   "country": [
+    "Ekvador"
+   ],
+   "tr_views": 3159
+  },
+  {
+   "qid": "Q40758",
+   "label": "Demavend Dağı",
+   "links": 79,
+   "value": 5610.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Demavend Dağı",
+   "country": [
+    "Demavend Dağı",
+    "Elburz Dağları",
+    "İran"
+   ],
+   "tr_views": 4460
+  },
+  {
+   "qid": "Q40758",
+   "label": "Demavend Dağı",
+   "links": 79,
+   "value": 5628.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Demavend Dağı",
+   "country": [
+    "Demavend Dağı",
+    "Elburz Dağları",
+    "İran"
+   ],
+   "tr_views": 4460
+  },
+  {
+   "qid": "Q104674",
+   "label": "Ben Nevis",
+   "links": 78,
+   "value": 1344.527,
+   "rank": "preferred",
+   "value_year": 2016,
+   "tr_title": "Ben Nevis",
+   "country": [
+    "Birleşik Krallık",
+    "Britanya Adaları",
+    "Büyük Britanya",
+    "Grampian Dağları",
+    "Kuzey İskoçya",
+    "İskoçya"
+   ],
+   "tr_views": 935
+  },
+  {
+   "qid": "Q104674",
+   "label": "Ben Nevis",
+   "links": 78,
+   "value": 1344.53,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ben Nevis",
+   "country": [
+    "Birleşik Krallık",
+    "Britanya Adaları",
+    "Büyük Britanya",
+    "Grampian Dağları",
+    "Kuzey İskoçya",
+    "İskoçya"
+   ],
+   "tr_views": 935
+  },
+  {
+   "qid": "Q1045888",
+   "label": "Puncak Jaya",
+   "links": 77,
+   "value": 4884.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Puncak Jaya",
+   "country": [
+    "Endonezya",
+    "Okyanusya",
+    "Sudirman Sıradağları",
+    "Yeni Gine"
+   ],
+   "tr_views": 863
+  },
+  {
+   "qid": "Q107635",
+   "label": "Baekdu Dağı",
+   "links": 77,
+   "value": 2744.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Baekdu Dağı",
+   "country": [
+    "Baekdu-daegan",
+    "Changbai Dağları",
+    "Jilin",
+    "Kore Yarımadası",
+    "Kuzey Kore",
+    "Ryanggang"
+   ],
+   "tr_views": 1747
+  },
+  {
+   "qid": "Q120306",
+   "label": "Logan Dağı",
+   "links": 75,
+   "value": 5959.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Logan Dağı",
+   "country": [
+    "Kanada",
+    "Kluane Millî Parkı ve Koruma Alanı",
+    "Pasifik Kıyı Dağları",
+    "Saint Elias Dağları",
+    "Yukon"
+   ],
+   "tr_views": 520
+  },
+  {
+   "qid": "Q3375",
+   "label": "Zugspitze Dağı",
+   "links": 75,
+   "value": 2962.06,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zugspitze Dağı",
+   "country": [
+    "Almanya",
+    "Bavyera",
+    "Bavyera Alpleri",
+    "Landkreis Garmisch-Partenkirchen",
+    "Oberbayern",
+    "Wetterstein Dağları"
+   ],
+   "tr_views": 2143
+  },
+  {
+   "qid": "Q233836",
+   "label": "Ojos del Salado",
+   "links": 72,
+   "value": 6893.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ojos del Salado",
+   "country": [
+    "Catamarca eyaleti",
+    "Şili"
+   ],
+   "tr_views": 1340
+  },
+  {
+   "qid": "Q60967",
+   "label": "Kinabalu Dağı",
+   "links": 71,
+   "value": 4095.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kinabalu Dağı",
+   "country": [
+    "Borneo",
+    "Büyük Sunda Adaları",
+    "Malezya"
+   ],
+   "tr_views": 106
+  },
+  {
+   "qid": "Q203568",
+   "label": "Alagöz Dağı",
+   "links": 69,
+   "value": 4090.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Alagöz Dağı",
+   "country": [
+    "Ermenistan",
+    "Küçük Kafkas Dağları"
+   ],
+   "tr_views": 2702
+  },
+  {
+   "qid": "Q5059",
+   "label": "Cook Dağı",
+   "links": 69,
+   "value": 3724.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cook Dağı",
+   "country": [
+    "Güney Adası",
+    "Güney Alpleri",
+    "Yeni Zelanda"
+   ],
+   "tr_views": 495
+  },
+  {
+   "qid": "Q215471",
+   "label": "Hermon Dağı",
+   "links": 66,
+   "value": 2813.95,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hermon Dağı",
+   "country": [
+    "Anti-Lübnan Dağları",
+    "Suriye"
+   ],
+   "tr_views": 5912
+  },
+  {
+   "qid": "Q1024",
+   "label": "Triglav",
+   "links": 65,
+   "value": 2864.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Triglav",
+   "country": [
+    "Jülyen Alpleri",
+    "Slovenya",
+    "Yugoslavya"
+   ],
+   "tr_views": 890
+  },
+  {
+   "qid": "Q211529",
+   "label": "Han Tengri Dağı",
+   "links": 64,
+   "value": 7010.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Han Tengri Dağı",
+   "country": [
+    "Kazakistan"
+   ],
+   "tr_views": 2792
+  },
+  {
+   "qid": "Q219986",
+   "label": "Gangkhar Puensum",
+   "links": 64,
+   "value": 7570.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gangkhar Puensum",
+   "country": [
+    "Butan"
+   ],
+   "tr_views": 1724
+  },
+  {
+   "qid": "Q3388",
+   "label": "Grossglockner",
+   "links": 63,
+   "value": 3798.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "country": [
+    "Avusturya",
+    "Yüksek Tauern Dağları",
+    "Yüksek Tauern Millî Parkı"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q627508",
+   "label": "Hoverla",
+   "links": 59,
+   "value": 2061.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hoverla",
+   "country": [
+    "Ukrayna"
+   ],
+   "tr_views": 192
+  },
+  {
+   "qid": "Q617511",
+   "label": "Śnieżka",
+   "links": 58,
+   "value": 1603.3,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Sněžka Dağı",
+   "country": [
+    "Bohemya",
+    "Bohemya Masifi",
+    "Dev Dağlar",
+    "Dev Dağlar Millî Parkı (Çekya)",
+    "Hradec Králové ili",
+    "Karkonosze ilçesi",
+    "Karpacz",
+    "Südet Krizi",
+    "Südetler",
+    "Trutnov İlçesi",
+    "Çek Sosyalist Cumhuriyeti",
+    "Çekya"
+   ],
+   "tr_views": 179
+  },
+  {
+   "qid": "Q271700",
+   "label": "Noşak",
+   "links": 57,
+   "value": 7492.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Noşak",
+   "country": [
+    "Afganistan"
+   ],
+   "tr_views": 447
+  },
+  {
+   "qid": "Q672936",
+   "label": "Rysy",
+   "links": 57,
+   "value": 2501.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Rysy Dağı",
+   "country": [
+    "Polonya"
+   ],
+   "tr_views": 157
+  },
+  {
+   "qid": "Q214011",
+   "label": "Kebnekaise Dağları",
+   "links": 56,
+   "value": 2096.8,
+   "rank": "preferred",
+   "value_year": 2018,
+   "tr_title": "Kebnekaise Dağları",
+   "country": [
+    "Norrbotten ili",
+    "İsveç"
+   ],
+   "tr_views": 177
+  },
+  {
+   "qid": "Q214011",
+   "label": "Kebnekaise Dağları",
+   "links": 56,
+   "value": 2135.0,
+   "rank": "normal",
+   "value_year": 1925,
+   "tr_title": "Kebnekaise Dağları",
+   "country": [
+    "Norrbotten ili",
+    "İsveç"
+   ],
+   "tr_views": 177
+  },
+  {
+   "qid": "Q332762",
+   "label": "Zafer Doruğu",
+   "links": 56,
+   "value": 7439.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zafer Doruğu",
+   "country": [
+    "Kakşaal Too",
+    "Kırgızistan",
+    "Tanrı Dağları"
+   ],
+   "tr_views": 729
+  },
+  {
+   "qid": "Q81213",
+   "label": "Gerlachovský štít",
+   "links": 56,
+   "value": 2654.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gerlachovský štít",
+   "country": [
+    "Batı Karpatlar",
+    "Karpatlar",
+    "Poprad ili",
+    "Prešov bölgesi",
+    "Slovak Sosyalist Cumhuriyeti",
+    "Slovakya",
+    "Tatra Dağları",
+    "Yüksek Tatra Dağları",
+    "Çekoslovakya",
+    "Çekoslovakya Sosyalist Cumhuriyeti"
+   ],
+   "tr_views": 338
+  },
+  {
+   "qid": "Q81213",
+   "label": "Gerlachovský štít",
+   "links": 56,
+   "value": 2655.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gerlachovský štít",
+   "country": [
+    "Batı Karpatlar",
+    "Karpatlar",
+    "Poprad ili",
+    "Prešov bölgesi",
+    "Slovak Sosyalist Cumhuriyeti",
+    "Slovakya",
+    "Tatra Dağları",
+    "Yüksek Tatra Dağları",
+    "Çekoslovakya",
+    "Çekoslovakya Sosyalist Cumhuriyeti"
+   ],
+   "tr_views": 338
+  },
+  {
+   "qid": "Q209341",
+   "label": "Musala",
+   "links": 55,
+   "value": 2925.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Musala",
+   "country": [
+    "Balkanlar",
+    "Bulgaristan",
+    "Rila Dağı"
+   ],
+   "tr_views": 2178
+  },
+  {
+   "qid": "Q41413",
+   "label": "Somoni Zirvesi",
+   "links": 55,
+   "value": 7495.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Somoni Zirvesi",
+   "country": [
+    "Dağlık Badahşan",
+    "Tacikistan"
+   ],
+   "tr_views": 462
+  },
+  {
+   "qid": "Q217457",
+   "label": "Şhara",
+   "links": 54,
+   "value": 5193.2,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Şhara",
+   "country": [
+    "Ana Kafkas Dağları",
+    "Bezengi Duvarı",
+    "Gürcistan",
+    "Karadeniz Havzası"
+   ],
+   "tr_views": 1037
+  },
+  {
+   "qid": "Q158526",
+   "label": "Monte Titano",
+   "links": 53,
+   "value": 739.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Monte Titano",
+   "country": [
+    "San Marino"
+   ],
+   "tr_views": 390
+  },
+  {
+   "qid": "Q158526",
+   "label": "Monte Titano",
+   "links": 53,
+   "value": 756.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Monte Titano",
+   "country": [
+    "San Marino"
+   ],
+   "tr_views": 390
+  },
+  {
+   "qid": "Q503433",
+   "label": "Cebel Tubkal",
+   "links": 53,
+   "value": 4167.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cebel Tubkal",
+   "country": [
+    "Atlas Dağları",
+    "Fas",
+    "Marakeş-Asfi",
+    "Sus-Massa",
+    "Yukarı Atlaslar"
+   ],
+   "tr_views": 471
+  },
+  {
+   "qid": "Q203942",
+   "label": "Galdhøpiggen Dağı",
+   "links": 52,
+   "value": 2468.854,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Galdhøpiggen Dağı",
+   "country": [
+    "Fennoskandiya",
+    "Jotunheimen Dağı",
+    "Kuzey Avrupa",
+    "Lom",
+    "Norveç",
+    "İskandinav Dağları",
+    "İskandinav Yarımadası"
+   ],
+   "tr_views": 421
+  },
+  {
+   "qid": "Q500275",
+   "label": "Yushan",
+   "links": 52,
+   "value": 3952.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Yushan",
+   "country": [
+    "Tayvan"
+   ],
+   "tr_views": 112
+  },
+  {
+   "qid": "Q3403",
+   "label": "Dufourspitze",
+   "links": 51,
+   "value": 4634.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dufourspitze",
+   "country": [
+    "Monte Rosa",
+    "Pennine Alpleri",
+    "Valais",
+    "İsviçre",
+    "İsviçre Alpleri"
+   ],
+   "tr_views": 3268
+  },
+  {
+   "qid": "Q272593",
+   "label": "Nevado Sajama",
+   "links": 50,
+   "value": 6542.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nevado Sajama",
+   "country": [
+    "Bolivya"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q504991",
+   "label": "Suur Munamägi",
+   "links": 50,
+   "value": 317.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Suur Munamägi",
+   "country": [
+    "Baltık Yaylaları",
+    "Estonya",
+    "Haanja Yaylası",
+    "Võru ili"
+   ],
+   "tr_views": 114
+  },
+  {
+   "qid": "Q200935",
+   "label": "Huascarán Dağı",
+   "links": 49,
+   "value": 6768.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Huascarán Dağı",
+   "country": [
+    "Cordillera Blanca",
+    "Peru"
+   ],
+   "tr_views": 260
+  },
+  {
+   "qid": "Q271901",
+   "label": "Banaba Adası",
+   "links": 49,
+   "value": 81.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Banaba Adası",
+   "country": [
+    "Kiribati"
+   ],
+   "tr_views": 769
+  },
+  {
+   "qid": "Q503368",
+   "label": "Carrauntoohil",
+   "links": 48,
+   "value": 1038.6,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Carrauntoohil",
+   "country": [
+    "Kerry County",
+    "İrlanda"
+   ],
+   "tr_views": 83
+  },
+  {
+   "qid": "Q746524",
+   "label": "Moldoveanu Zirvesi",
+   "links": 48,
+   "value": 2544.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Moldoveanu Zirvesi",
+   "country": [
+    "Făgăraș Dağları",
+    "Nucșoara",
+    "Romanya",
+    "Transilvanya Alpleri"
+   ],
+   "tr_views": 315
+  },
+  {
+   "qid": "Q912579",
+   "label": "Korab Dağı",
+   "links": 48,
+   "value": 2764.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Korab Dağı",
+   "country": [
+    "Arnavutluk",
+    "Korab Dağı",
+    "Kuzey Makedonya"
+   ],
+   "tr_views": 475
+  },
+  {
+   "qid": "Q213704",
+   "label": "Pico Bolívar",
+   "links": 47,
+   "value": 4978.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pico Bolívar",
+   "country": [
+    "Venezuela"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q275435",
+   "label": "Ras Dashen",
+   "links": 47,
+   "value": 4533.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ras Dashen",
+   "country": [
+    "Etiyopya",
+    "Etiyopya Yükseltileri",
+    "Simen Dağları",
+    "Simien Dağları Millî Parkı"
+   ],
+   "tr_views": 203
+  },
+  {
+   "qid": "Q494645",
+   "label": "Halla Dağı",
+   "links": 47,
+   "value": 1947.06,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Halla Dağı",
+   "country": [
+    "Güney Kore",
+    "Jeju",
+    "Jejudo"
+   ],
+   "tr_views": 251
+  },
+  {
+   "qid": "Q123782",
+   "label": "Fansipan",
+   "links": 46,
+   "value": 3143.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fansipan",
+   "country": [
+    "Vietnam"
+   ],
+   "tr_views": 213
+  },
+  {
+   "qid": "Q123782",
+   "label": "Fansipan",
+   "links": 46,
+   "value": 3147.3,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Fansipan",
+   "country": [
+    "Vietnam"
+   ],
+   "tr_views": 213
+  },
+  {
+   "qid": "Q499108",
+   "label": "Pico do Fogo Dağı",
+   "links": 45,
+   "value": 2829.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Pico do Fogo Dağı",
+   "country": [
+    "Cabo Verde"
+   ],
+   "tr_views": 460
+  },
+  {
+   "qid": "Q747618",
+   "label": "Kékes Dağı",
+   "links": 45,
+   "value": 1014.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kékes Dağı",
+   "country": [
+    "Kuzey Macar Dağları",
+    "Macaristan",
+    "Mátra Dağları"
+   ],
+   "tr_views": 145
+  },
+  {
+   "qid": "Q216035",
+   "label": "Halti Dağı",
+   "links": 44,
+   "value": 1361.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Halti Dağı",
+   "country": [
+    "Finlandiya"
+   ],
+   "tr_views": 282
+  },
+  {
+   "qid": "Q239485",
+   "label": "Phou Bia",
+   "links": 43,
+   "value": 2819.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Phou Bia",
+   "country": [
+    "Annamite Dağları",
+    "Laos"
+   ],
+   "tr_views": 102
+  },
+  {
+   "qid": "Q257441",
+   "label": "Emi Koussi",
+   "links": 43,
+   "value": 3445.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "country": [
+    "Sahra",
+    "Çad"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q739484",
+   "label": "Neblina Doruğu",
+   "links": 43,
+   "value": 2994.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "country": [
+    "Amazonas",
+    "Brezilya",
+    "Guyana Kalkanı"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q819979",
+   "label": "Olimpos Tepesi",
+   "links": 43,
+   "value": 1952.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Olimpos Tepesi (Kıbrıs)",
+   "country": [
+    "Kıbrıs",
+    "Trodos Dağları"
+   ],
+   "tr_views": 860
+  },
+  {
+   "qid": "Q921447",
+   "label": "Dzyarjınskaya Hara",
+   "links": 43,
+   "value": 345.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Dzyarjınskaya Hara",
+   "country": [
+    "Belarus"
+   ],
+   "tr_views": 131
+  },
+  {
+   "qid": "Q540520",
+   "label": "Meron Dağı",
+   "links": 42,
+   "value": 1208.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Meron Dağı",
+   "country": [
+    "Celile",
+    "İsrail"
+   ],
+   "tr_views": 147
+  },
+  {
+   "qid": "Q62467",
+   "label": "Coma Pedrosa",
+   "links": 42,
+   "value": 2942.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Coma Pedrosa",
+   "country": [
+    "Andorra",
+    "La Massana"
+   ],
+   "tr_views": 77
+  },
+  {
+   "qid": "Q737859",
+   "label": "Karisimbi Dağı",
+   "links": 42,
+   "value": 4507.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Karisimbi Dağı",
+   "country": [
+    "Kongo Havzası",
+    "Kuzey ili",
+    "Ruanda",
+    "Virunga Dağları"
+   ],
+   "tr_views": 145
+  },
+  {
+   "qid": "Q928681",
+   "label": "Pico Dağı",
+   "links": 42,
+   "value": 2351.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "country": [
+    "Azorlar",
+    "Pico Adası",
+    "Portekiz",
+    "Portekiz coğrafyası"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q1122342",
+   "label": "Gaiziņkalns Tepesi",
+   "links": 40,
+   "value": 311.94,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Gaiziņkalns Tepesi",
+   "country": [
+    "Letonya"
+   ],
+   "tr_views": 58
+  },
+  {
+   "qid": "Q1510436",
+   "label": "Mulanje Masifi",
+   "links": 40,
+   "value": 3002.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mulanje Masifi",
+   "country": [
+    "Malavi"
+   ],
+   "tr_views": 72
+  },
+  {
+   "qid": "Q2720697",
+   "label": "Zla Kolata",
+   "links": 40,
+   "value": 2534.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Zla Kolata",
+   "country": [
+    "Karadağ"
+   ],
+   "tr_views": 108
+  },
+  {
+   "qid": "Q26544",
+   "label": "La Soufrière",
+   "links": 39,
+   "value": 1220.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "country": [
+    "Saint Vincent",
+    "Saint Vincent ve Grenadinler"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q1147144",
+   "label": "Maromokotro Dağı",
+   "links": 38,
+   "value": 2876.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Maromokotro Dağı",
+   "country": [
+    "Madagaskar"
+   ],
+   "tr_views": 184
+  },
+  {
+   "qid": "Q818467",
+   "label": "Tajumulco Yanardağı",
+   "links": 38,
+   "value": 4203.0,
+   "rank": "preferred",
+   "value_year": null,
+   "tr_title": null,
+   "country": [
+    "Guatemala",
+    "Orta Amerika"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q818467",
+   "label": "Tajumulco Yanardağı",
+   "links": 38,
+   "value": 4220.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "country": [
+    "Guatemala",
+    "Orta Amerika"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q632489",
+   "label": "Niulakita",
+   "links": 37,
+   "value": 4.6,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Niulakita",
+   "country": [
+    "Tuvalu"
+   ],
+   "tr_views": 171
+  },
+  {
+   "qid": "Q849129",
+   "label": "Nimba Dağı",
+   "links": 37,
+   "value": 1752.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "country": [
+    "Fildişi Sahili",
+    "Gine",
+    "Nimba Dağı Yasaklı Doğa Siti"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q1261915",
+   "label": "Cebel Şems",
+   "links": 35,
+   "value": 3018.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cebel Şems",
+   "country": [
+    "Hacer Dağları",
+    "Umman"
+   ],
+   "tr_views": 375
+  },
+  {
+   "qid": "Q1091113",
+   "label": "Hüyten Zirvesi",
+   "links": 34,
+   "value": 4374.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Hüyten Zirvesi",
+   "country": [
+    "Moğolistan",
+    "Tavan Bogd"
+   ],
+   "tr_views": 177
+  },
+  {
+   "qid": "Q1539961",
+   "label": "Tatamailau",
+   "links": 33,
+   "value": 2963.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "country": [
+    "Doğu Timor",
+    "Timor"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q47940",
+   "label": "Bălănești Tepesi",
+   "links": 33,
+   "value": 430.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bălănești Tepesi",
+   "country": [
+    "Moldova"
+   ],
+   "tr_views": 90
+  },
+  {
+   "qid": "Q311330",
+   "label": "Kurnat es-Sevda",
+   "links": 32,
+   "value": 3088.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kurnatü's-Sevda",
+   "country": [
+    "Doğu Akdeniz",
+    "Lübnan",
+    "Lübnan Dağı",
+    "Suriye"
+   ],
+   "tr_views": 80
+  },
+  {
+   "qid": "Q24457",
+   "label": "Kneiff Tepesi",
+   "links": 31,
+   "value": 560.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kneiff Tepesi",
+   "country": [
+    "Clervaux kantonu",
+    "Diekirch ili",
+    "Lüksemburg",
+    "Troisvierges"
+   ],
+   "tr_views": 70
+  },
+  {
+   "qid": "Q771431",
+   "label": "Aukštojas Tepesi",
+   "links": 31,
+   "value": 293.84,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Aukštojas Tepesi",
+   "country": [
+    "Litvanya"
+   ],
+   "tr_views": 63
+  },
+  {
+   "qid": "Q733132",
+   "label": "Thabana Ntlenyana Dağı",
+   "links": 30,
+   "value": 3482.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Thabana Ntlenyana Dağı",
+   "country": [
+    "Drakensberg",
+    "Lesotho"
+   ],
+   "tr_views": 172
+  },
+  {
+   "qid": "Q976055",
+   "label": "Chappal Waddi",
+   "links": 30,
+   "value": 2419.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Chappal Waddi",
+   "country": [
+    "Nijerya"
+   ],
+   "tr_views": 130
+  },
+  {
+   "qid": "Q1232136",
+   "label": "Cebel-i Şambi Dağı",
+   "links": 28,
+   "value": 1544.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Cebel-i Şambi Dağı",
+   "country": [
+    "Tunus"
+   ],
+   "tr_views": 128
+  },
+  {
+   "qid": "Q1269774",
+   "label": "Liamuiga Dağı",
+   "links": 28,
+   "value": 1156.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Liamuiga Dağı",
+   "country": [
+    "Saint Kitts",
+    "Saint Kitts ve Nevis"
+   ],
+   "tr_views": 42
+  },
+  {
+   "qid": "Q152294",
+   "label": "Nyangani Dağı",
+   "links": 28,
+   "value": 2592.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Nyangani Dağı",
+   "country": [
+    "Zimbabve"
+   ],
+   "tr_views": 74
+  },
+  {
+   "qid": "Q720209",
+   "label": "Bukit Timah",
+   "links": 28,
+   "value": 163.63,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bukit Timah",
+   "country": [
+    "Singapur"
+   ],
+   "tr_views": 85
+  },
+  {
+   "qid": "Q1753509",
+   "label": "Agou Dağı",
+   "links": 27,
+   "value": 986.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Agou Dağı",
+   "country": [
+    "Atakora Sıradağı",
+    "Togo"
+   ],
+   "tr_views": 86
+  },
+  {
+   "qid": "Q769525",
+   "label": "Bintumani Dağı",
+   "links": 26,
+   "value": 1945.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Bintumani Dağı",
+   "country": [
+    "Loma Dağları",
+    "Sierra Leone"
+   ],
+   "tr_views": 49
+  },
+  {
+   "qid": "Q1549215",
+   "label": "Julianatop",
+   "links": 25,
+   "value": 1280.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Julianatop",
+   "country": [
+    "Surinam"
+   ],
+   "tr_views": 51
+  },
+  {
+   "qid": "Q1883683",
+   "label": "Mafadi Dağı",
+   "links": 22,
+   "value": 3450.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Mafadi Dağı",
+   "country": [
+    "Güney Afrika",
+    "KwaZulu-Natal",
+    "UKhahlamba-Drakensberg Park"
+   ],
+   "tr_views": 116
+  },
+  {
+   "qid": "Q3042286",
+   "label": "Mont Idoukal-n-Taghès",
+   "links": 22,
+   "value": 2022.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "country": [
+    "Aïr Dağları",
+    "Nijer"
+   ],
+   "tr_views": 0
+  },
+  {
+   "qid": "Q1760978",
+   "label": "Piton de la Petite Rivière Noire",
+   "links": 21,
+   "value": 828.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Piton de la Petite Rivière Noire",
+   "country": [
+    "Mauritius"
+   ],
+   "tr_views": 91
+  },
+  {
+   "qid": "Q794684",
+   "label": "Ayrıbaba Dağı",
+   "links": 19,
+   "value": 3139.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Ayrıbaba Dağı",
+   "country": [
+    "Köytendağ",
+    "Türkmenistan"
+   ],
+   "tr_views": 341
+  },
+  {
+   "qid": "Q1633034",
+   "label": "Kureyn Ebu'l-Bavl",
+   "links": 14,
+   "value": 103.0,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": "Kureyn Ebu'l-Bavl",
+   "country": [
+    "Katar"
+   ],
+   "tr_views": 11
+  },
+  {
+   "qid": "Q4681407",
+   "label": "Addu City",
+   "links": 14,
+   "value": 2.4,
+   "rank": "normal",
+   "value_year": null,
+   "tr_title": null,
+   "country": [
+    "Maldivler"
+   ],
+   "tr_views": 0
+  }
+ ]
+}

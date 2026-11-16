@@ -68,6 +68,10 @@
    "description": "Filmler, süre (P2047, saniyeye normalize)",
    "fetched_at": "2026-11-16T12:32:42+00:00"
   },
+  "highest_points": {
+   "description": "Egemen devletlerin en yüksek noktaları, yükseklik (P2044)",
+   "fetched_at": "2026-11-16T13:33:30+00:00"
+  },
   "islands_population": {
    "description": "Adalar, nüfus (P1082, yılı P585)",
    "fetched_at": "2026-11-16T13:23:36+00:00"
@@ -83,6 +87,14 @@
   "lakes_world": {
    "description": "Dünyadaki göller, yüzölçümü (P2046)",
    "fetched_at": "2026-11-06T11:21:38+00:00"
+  },
+  "metro_length": {
+   "description": "Metro sistemleri, uzunluk (P2043)",
+   "fetched_at": "2026-11-16T13:29:38+00:00"
+  },
+  "metro_ridership": {
+   "description": "Metro sistemleri, yıllık yolcu (P3872, yılı P585)",
+   "fetched_at": "2026-11-16T13:30:16+00:00"
   },
   "museums_visitors": {
    "description": "Müzeler, yıllık ziyaretçi (P1174, yılı P585)",
@@ -135,6 +147,10 @@
   "waterfalls_height": {
    "description": "Şelaleler, yükseklik (P2048)",
    "fetched_at": "2026-11-16T13:20:22+00:00"
+  },
+  "worldcup_attendance": {
+   "description": "FIFA Dünya Kupaları, toplam seyirci (P1110)",
+   "fetched_at": "2026-11-16T13:30:34+00:00"
   }
  }
 }
