@@ -31611,5 +31611,1600 @@
   "fun_fact": null,
   "difficulty": 2,
   "dataset": "transport_curated"
+ },
+ {
+  "id": "q2264",
+  "text": "100 gram kuru bulgurda kaç kalori var?",
+  "answer": 342,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170688/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 12,3 g protein ve 0,4 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2265",
+  "text": "100 gram taze maydanozda kaç miligram C vitamini var?",
+  "answer": 133,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170416/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 36 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q2266",
+  "text": "100 gram çiğ midyede kaç gram protein var?",
+  "answer": 12,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174216/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 86 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q2267",
+  "text": "100 gram çiğ kuzu kıymasında kaç kalori var?",
+  "answer": 282,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174370/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 16,6 g protein ve 0 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2268",
+  "text": "100 gram ananasta kaç miligram C vitamini var?",
+  "answer": 48,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169124/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 50 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q2269",
+  "text": "100 gram taze hindistancevizinde kaç kalori var?",
+  "answer": 354,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170169/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 3,3 g protein ve 6,2 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2270",
+  "text": "100 gram taze kayısıda kaç kalori var?",
+  "answer": 48,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171697/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 1,4 g protein ve 9,2 g şeker var.",
+  "difficulty": 1,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2271",
+  "text": "100 gram çiğ kajuda kaç kalori var?",
+  "answer": 553,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170162/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 18,2 g protein ve 5,9 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2272",
+  "text": "100 gram ketçapta kaç kalori var?",
+  "answer": 101,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168556/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 1 g protein ve 21,3 g şeker var.",
+  "difficulty": 1,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2273",
+  "text": "100 gram reçelde kaç kalori var?",
+  "answer": 278,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169641/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 0,4 g protein ve 48,5 g şeker var.",
+  "difficulty": 1,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2274",
+  "text": "100 gram çiğ karideste kaç gram protein var?",
+  "answer": 20,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/175179/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 85 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q2275",
+  "text": "100 gram mangoda kaç kalori var?",
+  "answer": 60,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169910/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 0,8 g protein ve 13,7 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2276",
+  "text": "100 gram suyla hazırlanmış hazır kahvede kaç miligram kafein var?",
+  "answer": 26,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174130/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 2 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_caffeine",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2277",
+  "text": "100 gram haşlanmış kinoada kaç gram protein var?",
+  "answer": 4.4,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168917/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 120 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q2278",
+  "text": "100 gram çiğ bal kabağında kaç kalori var?",
+  "answer": 26,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168448/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 1 g protein ve 2,8 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2279",
+  "text": "100 gram çiğ tatlı patateste kaç kalori var?",
+  "answer": 86,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168482/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 1,6 g protein ve 4,2 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2280",
+  "text": "100 gram mandalinada kaç miligram C vitamini var?",
+  "answer": 27,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169105/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 53 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q2281",
+  "text": "100 gram lor tipi taze peynirde kaç gram protein var?",
+  "answer": 11,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/172179/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 98 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q2282",
+  "text": "100 gram çiğ Brüksel lahanasında kaç miligram C vitamini var?",
+  "answer": 85,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170383/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 43 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q2283",
+  "text": "100 gram marulda kaç kalori var?",
+  "answer": 17,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169247/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 1,2 g protein ve 1,2 g şeker var.",
+  "difficulty": 1,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2284",
+  "text": "100 gram çiğ pancarda kaç kalori var?",
+  "answer": 43,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169145/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 1,6 g protein ve 6,8 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2285",
+  "text": "100 gram tereyağlı kruvasanda kaç kalori var?",
+  "answer": 406,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174987/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 8,2 g protein ve 11,3 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2286",
+  "text": "100 gram armutta kaç kalori var?",
+  "answer": 57,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169118/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 0,4 g protein ve 9,8 g şeker var.",
+  "difficulty": 1,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2287",
+  "text": "100 gram tahinde kaç kalori var?",
+  "answer": 595,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170189/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 17 g protein ve 0,5 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2288",
+  "text": "100 gram çiğ tatlı mısırda kaç kalori var?",
+  "answer": 86,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169998/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 3,3 g protein ve 6,3 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2289",
+  "text": "100 gram çiğ kabakta kaç kalori var?",
+  "answer": 17,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169291/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 1,2 g protein ve 2,5 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2290",
+  "text": "100 gram ananasta kaç kalori var?",
+  "answer": 50,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169124/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 0,5 g protein ve 9,9 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2291",
+  "text": "100 gram mandalinada kaç kalori var?",
+  "answer": 53,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169105/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 0,8 g protein ve 10,6 g şeker var.",
+  "difficulty": 1,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2292",
+  "text": "100 gram çiğ kuzu kıymasında kaç gram protein var?",
+  "answer": 17,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174370/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 282 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q2293",
+  "text": "100 gram kuru makarnada kaç kalori var?",
+  "answer": 371,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169736/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 13 g protein ve 2,7 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2294",
+  "text": "100 gram portakallı gazozda kaç kalori var?",
+  "answer": 48,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174854/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 0 g protein var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2295",
+  "text": "100 gram sade hamburgerde kaç kalori var?",
+  "answer": 297,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170693/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 16,5 g protein ve 4,9 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2296",
+  "text": "100 gram çiğ karnabaharda kaç kalori var?",
+  "answer": 25,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169986/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 1,9 g protein ve 1,9 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2297",
+  "text": "100 gram çedar peynirinde kaç gram protein var?",
+  "answer": 23,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173414/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 403 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q2298",
+  "text": "100 gram çilekte kaç miligram C vitamini var?",
+  "answer": 59,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/167762/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 32 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q2299",
+  "text": "100 gram çiğ yeşil acı biberde kaç miligram C vitamini var?",
+  "answer": 243,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170497/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 40 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q2300",
+  "text": "100 gram kavunda kaç kalori var?",
+  "answer": 34,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169092/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 0,8 g protein ve 7,9 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2301",
+  "text": "100 gram çiğ karideste kaç kalori var?",
+  "answer": 85,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/175179/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 20,1 g protein var.",
+  "difficulty": 3,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2302",
+  "text": "100 gram çiğ yumurtada kaç kalori var?",
+  "answer": 143,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171287/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 12,6 g protein ve 0,4 g şeker var.",
+  "difficulty": 1,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2303",
+  "text": "100 gram çiğ bezelyede kaç kalori var?",
+  "answer": 81,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170419/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 5,4 g protein ve 5,7 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2304",
+  "text": "100 gram kestane kebapta kaç kalori var?",
+  "answer": 245,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170190/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 3,2 g protein ve 10,6 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2305",
+  "text": "100 gram çiğ taze fasulyede kaç kalori var?",
+  "answer": 31,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169961/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 1,8 g protein ve 3,3 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2306",
+  "text": "100 gram kuru bulgurda kaç gram protein var?",
+  "answer": 12,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170688/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 342 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q2307",
+  "text": "100 gram çiğ kajuda kaç gram protein var?",
+  "answer": 18,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170162/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 553 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q2308",
+  "text": "100 gram yeşil zeytinde kaç kalori var?",
+  "answer": 145,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169096/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 1 g protein ve 0,5 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2309",
+  "text": "100 gram tahinde kaç gram protein var?",
+  "answer": 17,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/170189/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 595 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q2310",
+  "text": "100 gram çiğ karnabaharda kaç miligram C vitamini var?",
+  "answer": 48,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169986/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 25 kcal var.",
+  "difficulty": 3,
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q2311",
+  "text": "100 gram humusta kaç kalori var?",
+  "answer": 237,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174289/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 7,8 g protein ve 0,6 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2312",
+  "text": "100 gram çiğ midyede kaç kalori var?",
+  "answer": 86,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/174216/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 11,9 g protein ve 0 g şeker var.",
+  "difficulty": 3,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2313",
+  "text": "100 gram erikte kaç kalori var?",
+  "answer": 46,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169949/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 0,7 g protein ve 9,9 g şeker var.",
+  "difficulty": 1,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2314",
+  "text": "100 gram çiğ pırasada kaç kalori var?",
+  "answer": 61,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/169246/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 1,5 g protein ve 3,9 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2315",
+  "text": "100 gram greyfurtta kaç miligram C vitamini var?",
+  "answer": 34,
+  "unit": "mg",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/173033/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 32 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_vitamin_c",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q2316",
+  "text": "100 gram tam yağlı süzme yoğurtta kaç gram protein var?",
+  "answer": 9.0,
+  "unit": "g",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/171304/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 97 kcal var.",
+  "difficulty": 2,
+  "dataset": "foods_protein",
+  "scale": {
+   "half": 6
+  }
+ },
+ {
+  "id": "q2317",
+  "text": "100 gram kakaolu fındık kremasında kaç kalori var?",
+  "answer": 539,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168000/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 5,4 g protein ve 54,1 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2318",
+  "text": "100 gram kuru erikte kaç kalori var?",
+  "answer": 240,
+  "unit": "kcal",
+  "kind": "magnitude",
+  "category": "gündelik",
+  "source": "https://fdc.nal.usda.gov/food-details/168162/nutrients",
+  "data_year": 2018,
+  "fun_fact": "Aynı 100 gramda 2,2 g protein ve 38,1 g şeker var.",
+  "difficulty": 2,
+  "dataset": "foods_energy",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2319",
+  "text": "Aslan için kaydedilen en uzun ömür kaç yıldır?",
+  "answer": 28,
+  "unit": "yıl",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Panthera_leo",
+  "data_year": 2026,
+  "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
+  "difficulty": 2,
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2320",
+  "text": "Bir eşeğin gebelik süresi kaç gündür?",
+  "answer": 359,
+  "unit": "gün",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Equus_asinus",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2321",
+  "text": "Kuzgun için kaydedilen en uzun ömür kaç yıldır?",
+  "answer": 69,
+  "unit": "yıl",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Corvus_corax",
+  "data_year": 2026,
+  "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
+  "difficulty": 3,
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2322",
+  "text": "Boz ayı için kaydedilen en uzun ömür kaç yıldır?",
+  "answer": 40,
+  "unit": "yıl",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Ursus_arctos",
+  "data_year": 2026,
+  "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
+  "difficulty": 3,
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2323",
+  "text": "Tavşan için kaydedilen en uzun ömür kaç yıldır?",
+  "answer": 13,
+  "unit": "yıl",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Oryctolagus_cuniculus",
+  "data_year": 2026,
+  "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
+  "difficulty": 2,
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2324",
+  "text": "Bir orangutanın gebelik süresi kaç gündür?",
+  "answer": 249,
+  "unit": "gün",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Pongo_pygmaeus",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2325",
+  "text": "Afrika fili için kaydedilen en uzun ömür kaç yıldır?",
+  "answer": 65,
+  "unit": "yıl",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Loxodonta_africana",
+  "data_year": 2026,
+  "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
+  "difficulty": 2,
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2326",
+  "text": "Bir kızıl geyiğin gebelik süresi kaç gündür?",
+  "answer": 245,
+  "unit": "gün",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Cervus_elaphus",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2327",
+  "text": "Bir altın hamsterin gebelik süresi kaç gündür?",
+  "answer": 16,
+  "unit": "gün",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Mesocricetus_auratus",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 2,
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2328",
+  "text": "Bir boz ayının gebelik süresi kaç gündür?",
+  "answer": 103,
+  "unit": "gün",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Ursus_arctos",
+  "data_year": 2026,
+  "fun_fact": null,
+  "difficulty": 3,
+  "dataset": "anage_gestation",
+  "scale": {
+   "factor": 3
+  }
+ },
+ {
+  "id": "q2329",
+  "text": "Tavuk için kaydedilen en uzun ömür kaç yıldır?",
+  "answer": 30,
+  "unit": "yıl",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Gallus_gallus",
+  "data_year": 2026,
+  "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
+  "difficulty": 3,
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2330",
+  "text": "Goril için kaydedilen en uzun ömür kaç yıldır?",
+  "answer": 60.1,
+  "unit": "yıl",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Gorilla_gorilla",
+  "data_year": 2026,
+  "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
+  "difficulty": 3,
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2331",
+  "text": "Köpek için kaydedilen en uzun ömür kaç yıldır?",
+  "answer": 27,
+  "unit": "yıl",
+  "kind": "magnitude",
+  "category": "hayvanlar",
+  "source": "https://genomics.senescence.info/species/entry.php?species=Canis_familiaris",
+  "data_year": 2026,
+  "fun_fact": "Kayıt bakım altındaki bir bireye ait.",
+  "difficulty": 2,
+  "dataset": "anage_longevity",
+  "scale": {
+   "factor": 4
+  }
+ },
+ {
+  "id": "q2332",
+  "text": "2025 verilerine göre Yunanistan'da her 1.000 kişiye kaç otomobil düşmektedir?",
+  "answer": 597,
+  "unit": "otomobil",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/road_eqs_carhab?freq=A&unit=NR&geo=EL&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 584 otomobil.",
+  "difficulty": 2,
+  "dataset": "es_cars",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q2333",
+  "text": "2025 verilerine göre İspanya'da her 1.000 kişiye kaç otomobil düşmektedir?",
+  "answer": 550,
+  "unit": "otomobil",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/road_eqs_carhab?freq=A&unit=NR&geo=ES&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 584 otomobil.",
+  "difficulty": 2,
+  "dataset": "es_cars",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q2334",
+  "text": "2024 yılında İspanya'da kişi başına kaç kilogram belediye atığı (evsel çöp) oluşmuştur?",
+  "answer": 456,
+  "unit": "kg",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_wasmun?freq=A&wst_oper=GEN&unit=KG_HAB&geo=ES&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl AB ortalaması: 513 kg.",
+  "difficulty": 2,
+  "dataset": "es_municipal_waste",
+  "scale": {
+   "factor": 1.7
+  }
+ },
+ {
+  "id": "q2335",
+  "text": "2025 verilerine göre Fransa'da her 1.000 kişiye kaç otomobil düşmektedir?",
+  "answer": 578,
+  "unit": "otomobil",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/road_eqs_carhab?freq=A&unit=NR&geo=FR&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 584 otomobil.",
+  "difficulty": 2,
+  "dataset": "es_cars",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q2336",
+  "text": "2025 verilerine göre İtalya'da her 1.000 kişiye kaç otomobil düşmektedir?",
+  "answer": 709,
+  "unit": "otomobil",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/road_eqs_carhab?freq=A&unit=NR&geo=IT&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 584 otomobil.",
+  "difficulty": 2,
+  "dataset": "es_cars",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q2337",
+  "text": "2024 yılında Fransa'da kişi başına kaç kilogram belediye atığı (evsel çöp) oluşmuştur?",
+  "answer": 501,
+  "unit": "kg",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_wasmun?freq=A&wst_oper=GEN&unit=KG_HAB&geo=FR&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl AB ortalaması: 513 kg.",
+  "difficulty": 2,
+  "dataset": "es_municipal_waste",
+  "scale": {
+   "factor": 1.7
+  }
+ },
+ {
+  "id": "q2338",
+  "text": "2025 verilerine göre Romanya'da her 1.000 kişiye kaç otomobil düşmektedir?",
+  "answer": 461,
+  "unit": "otomobil",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/road_eqs_carhab?freq=A&unit=NR&geo=RO&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 584 otomobil.",
+  "difficulty": 2,
+  "dataset": "es_cars",
+  "scale": {
+   "factor": 2
+  }
+ },
+ {
+  "id": "q2339",
+  "text": "2024 verilerine göre Portekiz'de kadınlar ilk kez ortalama kaç yaşında evlenmektedir?",
+  "answer": 33.3,
+  "unit": "yaş",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_nind?freq=A&indic_de=FAGEMAR1&geo=PT&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl Türkiye'de: 25,9 yaş.",
+  "difficulty": 2,
+  "dataset": "es_first_marriage",
+  "scale": {
+   "half": 3
+  }
+ },
+ {
+  "id": "q2340",
+  "text": "2025 verilerine göre İspanya nüfusunun ortanca yaşı kaçtır?",
+  "answer": 45.8,
+  "unit": "yaş",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjanind?freq=A&indic_de=MEDAGEPOP&geo=ES&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 44,9 yaş. Nüfusun yarısı bu yaştan genç, yarısı yaşlıdır (1 Ocak itibarıyla).",
+  "difficulty": 2,
+  "dataset": "es_median_age",
+  "scale": {
+   "half": 4
+  }
+ },
+ {
+  "id": "q2341",
+  "text": "2022 verilerine göre Fransa'da kadınlar ilk kez ortalama kaç yaşında evlenmektedir?",
+  "answer": 34.3,
+  "unit": "yaş",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_nind?freq=A&indic_de=FAGEMAR1&geo=FR&time=2022&lang=EN",
+  "data_year": 2022,
+  "fun_fact": "Aynı yıl Türkiye'de: 25,6 yaş.",
+  "difficulty": 2,
+  "dataset": "es_first_marriage",
+  "scale": {
+   "half": 3
+  }
+ },
+ {
+  "id": "q2342",
+  "text": "2024 yılında Yunanistan'da kişi başına kaç kilogram belediye atığı (evsel çöp) oluşmuştur?",
+  "answer": 533,
+  "unit": "kg",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_wasmun?freq=A&wst_oper=GEN&unit=KG_HAB&geo=EL&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl AB ortalaması: 513 kg.",
+  "difficulty": 2,
+  "dataset": "es_municipal_waste",
+  "scale": {
+   "factor": 1.7
+  }
+ },
+ {
+  "id": "q2343",
+  "text": "2025 verilerine göre İsveç nüfusunun ortanca yaşı kaçtır?",
+  "answer": 41.2,
+  "unit": "yaş",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjanind?freq=A&indic_de=MEDAGEPOP&geo=SE&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 44,9 yaş. Nüfusun yarısı bu yaştan genç, yarısı yaşlıdır (1 Ocak itibarıyla).",
+  "difficulty": 2,
+  "dataset": "es_median_age",
+  "scale": {
+   "half": 4
+  }
+ },
+ {
+  "id": "q2344",
+  "text": "2025 verilerine göre Fransa nüfusunun ortanca yaşı kaçtır?",
+  "answer": 42.8,
+  "unit": "yaş",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjanind?freq=A&indic_de=MEDAGEPOP&geo=FR&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 44,9 yaş. Nüfusun yarısı bu yaştan genç, yarısı yaşlıdır (1 Ocak itibarıyla).",
+  "difficulty": 2,
+  "dataset": "es_median_age",
+  "scale": {
+   "half": 4
+  }
+ },
+ {
+  "id": "q2345",
+  "text": "2024 verilerine göre Fransa'da kadınlar ilk çocuklarını ortalama kaç yaşında doğurmaktadır?",
+  "answer": 29.3,
+  "unit": "yaş",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=AGEMOTH1&geo=FR&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl AB ortalaması: 29,9 yaş.",
+  "difficulty": 2,
+  "dataset": "es_first_child",
+  "scale": {
+   "half": 3
+  }
+ },
+ {
+  "id": "q2346",
+  "text": "2025 verilerine göre Hollanda'da gençler baba evinden ortalama kaç yaşında ayrılmaktadır?",
+  "answer": 23.4,
+  "unit": "yaş",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/yth_demo_030?freq=A&unit=AVG&sex=T&geo=NL&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 26,3 yaş.",
+  "difficulty": 2,
+  "dataset": "es_leaving_home",
+  "scale": {
+   "half": 3
+  }
+ },
+ {
+  "id": "q2347",
+  "text": "2025 verilerine göre Polonya'da gençler baba evinden ortalama kaç yaşında ayrılmaktadır?",
+  "answer": 26.8,
+  "unit": "yaş",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/yth_demo_030?freq=A&unit=AVG&sex=T&geo=PL&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 26,3 yaş.",
+  "difficulty": 2,
+  "dataset": "es_leaving_home",
+  "scale": {
+   "half": 3
+  }
+ },
+ {
+  "id": "q2348",
+  "text": "2024 yılında Hollanda'da doğan bebeklerin yüzde kaçı evlilik dışı doğmuştur?",
+  "answer": 41.9,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=NMARPCT&geo=NL&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl AB ortalaması: %41,1.",
+  "difficulty": 2,
+  "dataset": "es_births_outside_marriage"
+ },
+ {
+  "id": "q2349",
+  "text": "2024 verilerine göre Yunanistan'da kadınlar ilk çocuklarını ortalama kaç yaşında doğurmaktadır?",
+  "answer": 31.2,
+  "unit": "yaş",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=AGEMOTH1&geo=EL&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl AB ortalaması: 29,9 yaş.",
+  "difficulty": 2,
+  "dataset": "es_first_child",
+  "scale": {
+   "half": 3
+  }
+ },
+ {
+  "id": "q2350",
+  "text": "2024 verilerine göre Polonya'da kadınlar ilk çocuklarını ortalama kaç yaşında doğurmaktadır?",
+  "answer": 28.7,
+  "unit": "yaş",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=AGEMOTH1&geo=PL&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl AB ortalaması: 29,9 yaş.",
+  "difficulty": 2,
+  "dataset": "es_first_child",
+  "scale": {
+   "half": 3
+  }
+ },
+ {
+  "id": "q2351",
+  "text": "2024 verilerine göre İspanya'da erkekler ilk kez ortalama kaç yaşında evlenmektedir?",
+  "answer": 37.3,
+  "unit": "yaş",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_nind?freq=A&indic_de=MAGEMAR1&geo=ES&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl Türkiye'de: 28,4 yaş.",
+  "difficulty": 2,
+  "dataset": "es_first_marriage",
+  "scale": {
+   "half": 3
+  }
+ },
+ {
+  "id": "q2352",
+  "text": "2025 verilerine göre Polonya nüfusunun ortanca yaşı kaçtır?",
+  "answer": 43.4,
+  "unit": "yaş",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_pjanind?freq=A&indic_de=MEDAGEPOP&geo=PL&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 44,9 yaş. Nüfusun yarısı bu yaştan genç, yarısı yaşlıdır (1 Ocak itibarıyla).",
+  "difficulty": 2,
+  "dataset": "es_median_age",
+  "scale": {
+   "half": 4
+  }
+ },
+ {
+  "id": "q2353",
+  "text": "2024 yılında Polonya'da doğan bebeklerin yüzde kaçı evlilik dışı doğmuştur?",
+  "answer": 28.9,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=NMARPCT&geo=PL&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl AB ortalaması: %41,1.",
+  "difficulty": 2,
+  "dataset": "es_births_outside_marriage"
+ },
+ {
+  "id": "q2354",
+  "text": "2025 verilerine göre Yunanistan nüfusunun yüzde kaçı kendi evinde oturmaktadır?",
+  "answer": 69.4,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_lvho02?freq=A&rskpovth=TOTAL&hhcomp=TOTAL&tenure=OWN&unit=PC&geo=EL&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %68,5.",
+  "difficulty": 2,
+  "dataset": "es_home_owners"
+ },
+ {
+  "id": "q2355",
+  "text": "2025 verilerine göre Yunanistan'da gençler baba evinden ortalama kaç yaşında ayrılmaktadır?",
+  "answer": 30.9,
+  "unit": "yaş",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/yth_demo_030?freq=A&unit=AVG&sex=T&geo=EL&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: 26,3 yaş.",
+  "difficulty": 2,
+  "dataset": "es_leaving_home",
+  "scale": {
+   "half": 3
+  }
+ },
+ {
+  "id": "q2356",
+  "text": "2025 verilerine göre İspanya nüfusunun yüzde kaçı kendi evinde oturmaktadır?",
+  "answer": 73.6,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_lvho02?freq=A&rskpovth=TOTAL&hhcomp=TOTAL&tenure=OWN&unit=PC&geo=ES&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %68,5.",
+  "difficulty": 2,
+  "dataset": "es_home_owners"
+ },
+ {
+  "id": "q2357",
+  "text": "2025 verilerine göre Fransa nüfusunun yüzde kaçı kendi evinde oturmaktadır?",
+  "answer": 61.4,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_lvho02?freq=A&rskpovth=TOTAL&hhcomp=TOTAL&tenure=OWN&unit=PC&geo=FR&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %68,5.",
+  "difficulty": 2,
+  "dataset": "es_home_owners"
+ },
+ {
+  "id": "q2358",
+  "text": "2024 verilerine göre Polonya'da erkekler ilk kez ortalama kaç yaşında evlenmektedir?",
+  "answer": 31.6,
+  "unit": "yaş",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_nind?freq=A&indic_de=MAGEMAR1&geo=PL&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl Türkiye'de: 28,4 yaş.",
+  "difficulty": 2,
+  "dataset": "es_first_marriage",
+  "scale": {
+   "half": 3
+  }
+ },
+ {
+  "id": "q2359",
+  "text": "2024 verilerine göre İsveç'te kadınlar ilk çocuklarını ortalama kaç yaşında doğurmaktadır?",
+  "answer": 30.2,
+  "unit": "yaş",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=AGEMOTH1&geo=SE&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl AB ortalaması: 29,9 yaş.",
+  "difficulty": 2,
+  "dataset": "es_first_child",
+  "scale": {
+   "half": 3
+  }
+ },
+ {
+  "id": "q2360",
+  "text": "2025 verilerine göre Polonya nüfusunun yüzde kaçı kendi evinde oturmaktadır?",
+  "answer": 87.2,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_lvho02?freq=A&rskpovth=TOTAL&hhcomp=TOTAL&tenure=OWN&unit=PC&geo=PL&time=2025&lang=EN",
+  "data_year": 2025,
+  "fun_fact": "Aynı yıl AB ortalaması: %68,5.",
+  "difficulty": 2,
+  "dataset": "es_home_owners"
+ },
+ {
+  "id": "q2361",
+  "text": "2024 verilerine göre Polonya'da kadınlar ilk kez ortalama kaç yaşında evlenmektedir?",
+  "answer": 28.9,
+  "unit": "yaş",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_nind?freq=A&indic_de=FAGEMAR1&geo=PL&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl Türkiye'de: 25,9 yaş.",
+  "difficulty": 2,
+  "dataset": "es_first_marriage",
+  "scale": {
+   "half": 3
+  }
+ },
+ {
+  "id": "q2362",
+  "text": "2024 verilerine göre İsveç'te erkekler ilk kez ortalama kaç yaşında evlenmektedir?",
+  "answer": 37.4,
+  "unit": "yaş",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_nind?freq=A&indic_de=MAGEMAR1&geo=SE&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl Türkiye'de: 28,4 yaş.",
+  "difficulty": 2,
+  "dataset": "es_first_marriage",
+  "scale": {
+   "half": 3
+  }
+ },
+ {
+  "id": "q2363",
+  "text": "2024 yılında Portekiz'de doğan bebeklerin yüzde kaçı evlilik dışı doğmuştur?",
+  "answer": 59.2,
+  "unit": "%",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_find?freq=A&indic_de=NMARPCT&geo=PT&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl AB ortalaması: %41,1.",
+  "difficulty": 2,
+  "dataset": "es_births_outside_marriage"
+ },
+ {
+  "id": "q2364",
+  "text": "2024 yılında Hollanda'da kişi başına kaç kilogram belediye atığı (evsel çöp) oluşmuştur?",
+  "answer": 473,
+  "unit": "kg",
+  "kind": "magnitude",
+  "category": "coğrafya",
+  "source": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_wasmun?freq=A&wst_oper=GEN&unit=KG_HAB&geo=NL&time=2024&lang=EN",
+  "data_year": 2024,
+  "fun_fact": "Aynı yıl AB ortalaması: 513 kg.",
+  "difficulty": 2,
+  "dataset": "es_municipal_waste",
+  "scale": {
+   "factor": 1.7
+  }
  }
 ]

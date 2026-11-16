@@ -150,30 +150,46 @@ COUNTRIES = {
 QUESTIONS: list[tuple[str, str, int]] = [
     *(("first_marriage_f", c, d) for c, d in [
         ("TR", 2), ("IT", 3), ("ES", 3), ("SE", 3), ("EL", 3), ("HU", 3), ("NL", 3),
+        # 2026-11-16
+        ("PL", 2), ("PT", 2), ("FR", 2),
     ]),
-    *(("first_marriage_m", c, d) for c, d in [("TR", 2), ("IT", 3), ("EL", 3), ("PT", 3)]),
+    *(("first_marriage_m", c, d) for c, d in [("TR", 2), ("IT", 3), ("EL", 3), ("PT", 3), ("ES", 2), ("SE", 2), ("PL", 2)]),
     *(("first_child", c, d) for c, d in [
         ("TR", 2), ("IT", 3), ("DE", 3), ("ES", 3), ("BG", 3), ("IE", 3), ("NL", 3),
+        # 2026-11-16
+        ("FR", 2), ("PL", 2), ("SE", 2), ("EL", 2),
     ]),
     *(("outside_marriage", c, d) for c, d in [
         ("TR", 2), ("EL", 3), ("FR", 3), ("DE", 3), ("IT", 3), ("BG", 3), ("SE", 3), ("NO", 3),
         ("HU", 3), ("ES", 3),
+        # 2026-11-16
+        ("PT", 2), ("NL", 2), ("PL", 2),
     ]),
     *(("median_age", c, d) for c, d in [
         ("TR", 2), ("IT", 3), ("DE", 3), ("IE", 3), ("EL", 3), ("IS", 3), ("NO", 3),
+        # 2026-11-16
+        ("FR", 2), ("ES", 2), ("PL", 2), ("SE", 2),
     ]),
     *(("cars", c, d) for c, d in [
         ("TR", 2), ("DE", 3), ("PL", 3), ("LU", 3), ("FI", 3), ("SE", 3), ("AL", 3), ("NL", 3),
+        # 2026-11-16
+        ("IT", 2), ("FR", 2), ("ES", 2), ("EL", 2), ("RO", 2),
     ]),
     *(("waste", c, d) for c, d in [
         ("TR", 2), ("AT", 3), ("DK", 3), ("DE", 3), ("RO", 3), ("PL", 3), ("IT", 3), ("NO", 3), ("CH", 3),
+        # 2026-11-16
+        ("FR", 2), ("ES", 2), ("EL", 2), ("NL", 2),
     ]),
     *(("leaving_home", c, d) for c, d in [
         ("TR", 2), ("FI", 3), ("DK", 3), ("IT", 3), ("HR", 3), ("DE", 3), ("FR", 3), ("ES", 3), ("SE", 3),
+        # 2026-11-16
+        ("EL", 2), ("PL", 2), ("NL", 2),
     ]),
     *(("household_size", c, d) for c, d in [("TR", 2), ("DE", 3), ("PL", 3)]),
     *(("home_owners", c, d) for c, d in [
         ("TR", 2), ("CH", 3), ("DE", 3), ("RO", 3), ("IT", 3), ("HU", 3), ("NO", 3), ("AT", 3),
+        # 2026-11-16
+        ("FR", 2), ("ES", 2), ("EL", 2), ("PL", 2),
     ]),
 ]
 

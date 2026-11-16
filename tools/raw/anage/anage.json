@@ -1,7 +1,7 @@
 {
  "source": "https://genomics.senescence.info/species/dataset.zip",
  "release": "<title>AnAge Build 15: Release Notes</title>",
- "fetched": "2026-11-06",
+ "fetched": "2026-11-16",
  "species": {
   "Acinonyx jubatus": {
    "HAGRID": "02106",
@@ -73,6 +73,16 @@
    "Sample size": "medium",
    "Data quality": "acceptable"
   },
+  "Bos taurus": {
+   "HAGRID": "01910",
+   "Common name": "Domestic cattle",
+   "Gestation/Incubation (days)": "277",
+   "Maximum longevity (yrs)": "20",
+   "Birth weight (g)": "",
+   "Specimen origin": "captivity",
+   "Sample size": "large",
+   "Data quality": "questionable"
+  },
   "Bubo bubo": {
    "HAGRID": "01681",
    "Common name": "Eurasian eagle-owl",
@@ -103,6 +113,16 @@
    "Sample size": "medium",
    "Data quality": "acceptable"
   },
+  "Canis familiaris": {
+   "HAGRID": "02073",
+   "Common name": "Domestic dog",
+   "Gestation/Incubation (days)": "63",
+   "Maximum longevity (yrs)": "27",
+   "Birth weight (g)": "",
+   "Specimen origin": "captivity",
+   "Sample size": "large",
+   "Data quality": "acceptable"
+  },
   "Canis lupus": {
    "HAGRID": "02075",
    "Common name": "Gray wolf",
@@ -123,12 +143,32 @@
    "Sample size": "large",
    "Data quality": "high"
   },
+  "Carassius auratus": {
+   "HAGRID": "03897",
+   "Common name": "Goldfish",
+   "Gestation/Incubation (days)": "",
+   "Maximum longevity (yrs)": "41",
+   "Birth weight (g)": "",
+   "Specimen origin": "wild",
+   "Sample size": "medium",
+   "Data quality": "acceptable"
+  },
   "Ceratotherium simum": {
    "HAGRID": "02643",
    "Common name": "White rhinoceros",
    "Gestation/Incubation (days)": "515",
    "Maximum longevity (yrs)": "45",
    "Birth weight (g)": "52500",
+   "Specimen origin": "captivity",
+   "Sample size": "large",
+   "Data quality": "high"
+  },
+  "Cervus elaphus": {
+   "HAGRID": "02020",
+   "Common name": "Red deer",
+   "Gestation/Incubation (days)": "245",
+   "Maximum longevity (yrs)": "31.5",
+   "Birth weight (g)": "10100",
    "Specimen origin": "captivity",
    "Sample size": "large",
    "Data quality": "high"
@@ -152,6 +192,16 @@
    "Specimen origin": "captivity",
    "Sample size": "large",
    "Data quality": "high"
+  },
+  "Corvus corax": {
+   "HAGRID": "00819",
+   "Common name": "Common raven",
+   "Gestation/Incubation (days)": "19",
+   "Maximum longevity (yrs)": "69",
+   "Birth weight (g)": "25",
+   "Specimen origin": "captivity",
+   "Sample size": "medium",
+   "Data quality": "acceptable"
   },
   "Cyprinus carpio": {
    "HAGRID": "03899",
@@ -183,6 +233,16 @@
    "Sample size": "large",
    "Data quality": "acceptable"
   },
+  "Equus asinus": {
+   "HAGRID": "02636",
+   "Common name": "African wild ass",
+   "Gestation/Incubation (days)": "359",
+   "Maximum longevity (yrs)": "47",
+   "Birth weight (g)": "30000",
+   "Specimen origin": "captivity",
+   "Sample size": "large",
+   "Data quality": "high"
+  },
   "Equus caballus": {
    "HAGRID": "02637",
    "Common name": "Horse",
@@ -192,6 +252,26 @@
    "Specimen origin": "captivity",
    "Sample size": "large",
    "Data quality": "high"
+  },
+  "Felis catus": {
+   "HAGRID": "02109",
+   "Common name": "Domestic cat",
+   "Gestation/Incubation (days)": "65",
+   "Maximum longevity (yrs)": "30",
+   "Birth weight (g)": "97.5",
+   "Specimen origin": "captivity",
+   "Sample size": "large",
+   "Data quality": "questionable"
+  },
+  "Gallus gallus": {
+   "HAGRID": "00685",
+   "Common name": "Red junglefowl",
+   "Gestation/Incubation (days)": "",
+   "Maximum longevity (yrs)": "30",
+   "Birth weight (g)": "",
+   "Specimen origin": "captivity",
+   "Sample size": "large",
+   "Data quality": "acceptable"
   },
   "Giraffa camelopardalis": {
    "HAGRID": "02046",
@@ -262,6 +342,16 @@
    "Specimen origin": "captivity",
    "Sample size": "large",
    "Data quality": "high"
+  },
+  "Mesocricetus auratus": {
+   "HAGRID": "02885",
+   "Common name": "Golden hamster",
+   "Gestation/Incubation (days)": "16",
+   "Maximum longevity (yrs)": "3.9",
+   "Birth weight (g)": "2.45",
+   "Specimen origin": "captivity",
+   "Sample size": "medium",
+   "Data quality": "acceptable"
   },
   "Mus musculus": {
    "HAGRID": "03063",
@@ -343,6 +433,16 @@
    "Sample size": "large",
    "Data quality": "high"
   },
+  "Pongo pygmaeus": {
+   "HAGRID": "02792",
+   "Common name": "Orangutan",
+   "Gestation/Incubation (days)": "249",
+   "Maximum longevity (yrs)": "59",
+   "Birth weight (g)": "1736.5",
+   "Specimen origin": "captivity",
+   "Sample size": "large",
+   "Data quality": "acceptable"
+  },
   "Proteus anguinus": {
    "HAGRID": "00183",
    "Common name": "Olm",
@@ -371,6 +471,16 @@
    "Birth weight (g)": "",
    "Specimen origin": "wild",
    "Sample size": "small",
+   "Data quality": "acceptable"
+  },
+  "Struthio camelus": {
+   "HAGRID": "01703",
+   "Common name": "Ostrich",
+   "Gestation/Incubation (days)": "",
+   "Maximum longevity (yrs)": "50",
+   "Birth weight (g)": "",
+   "Specimen origin": "captivity",
+   "Sample size": "large",
    "Data quality": "acceptable"
   },
   "Sus scrofa": {
