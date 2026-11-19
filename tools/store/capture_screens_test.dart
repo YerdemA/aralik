@@ -31,6 +31,9 @@ import 'package:aralik/data/stats_store.dart';
 import 'package:aralik/features/duel/duel_screen.dart';
 import 'package:aralik/features/game/game_screen.dart';
 import 'package:aralik/features/home/home_screen.dart';
+import 'package:aralik/features/leaderboard/leaderboard_screen.dart';
+import 'package:aralik/data/ranked_client.dart';
+import 'package:aralik/features/settings/mascot_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
@@ -360,6 +363,8 @@ void main() {
       't': 'start',
       'you': 0,
       'names': ['Ayşe', 'Bora'],
+      'looks': ['111002024', '014312103'],
+      'ranked': true,
       'questions': [for (final q in duelQuestions) q.id],
       'questionMs': 15000,
     });
@@ -397,7 +402,12 @@ void main() {
       });
       await tester.pump();
       if (i == 0) {
-        await tester.pump(const Duration(seconds: 1));
+        // Bora missed by a hair: a sad face from the other side.
+        say({'t': 'react', 'seat': 1, 'r': 'sad'});
+        await tester.runAsync(() => Future<void>.delayed(Duration.zero));
+        for (var k = 0; k < 4; k++) {
+          await tester.pump(const Duration(milliseconds: 250));
+        }
         await _snap(tester, '04-duello');
       }
     }
@@ -407,6 +417,14 @@ void main() {
       'winner': totals[0] >= totals[1] ? 0 : 1,
       'reason': 'done',
       'rematch': true,
+    });
+    // The monthly rating, a moment after the end.
+    say({
+      't': 'rated',
+      'ratings': [
+        {'before': 120, 'after': 138},
+        {'before': 131, 'after': 113},
+      ],
     });
     for (var i = 0; i < 3; i++) {
       await tester.runAsync(() => Future<void>.delayed(Duration.zero));
@@ -421,12 +439,80 @@ void main() {
     for (var i = 0; i < 4; i++) {
       await tester.pump(const Duration(milliseconds: 250));
     }
+    // The rating has counted up to the new total.
+    await tester.pump(const Duration(seconds: 3));
     await _snap(tester, '05-rovans');
 
     // 06 Math mode: basic or further on.
     await tester.pumpWidget(_app(const MathModeScreen()));
     await tester.pump(const Duration(seconds: 1));
     await _snap(tester, '06-matematik');
+
+    // 09 The monthly duel ranking, with everyone's mascot.
+    await prefs.setString('duel_name', 'Ayşe');
+    await prefs.setString('mascot_look', '111002024');
+    const rankNames = ['Deniz', 'Bora', 'Ayşe', 'Kerem', 'Cem', 'Ece', 'Gül'];
+    const rankLooks = [
+      '120131212',
+      '014312103',
+      '111002024',
+      '002240311',
+      '010331100',
+      '100003020',
+      '121110432',
+    ];
+    Map<String, Object?> rankRow(int i) => {
+      'rank': i + 1,
+      'nickname': rankNames[i],
+      'rating': 386 - i * 23,
+      'played': 20 - i,
+      'won': 14 - i,
+      'drawn': 1,
+      'average': 290 - i * 9,
+      'hitRate': 81 - i * 2,
+      'look': rankLooks[i],
+    };
+    await tester.pumpWidget(
+      _app(
+        LeaderboardScreen(
+          store: LeaderboardStore(
+            prefs,
+            serviceUri: () => Uri.parse('https://lb.example/'),
+            deviceKey: () async => null,
+          ),
+          ranked: RankedService(
+            serviceUri: () => Uri.parse('https://lb.example/'),
+            account: () => (id: 'p3', token: 't', nickname: 'Ayşe'),
+            prefs: prefs,
+            request: (method, uri, [body]) async => (
+              status: 200,
+              body: <String, Object?>{
+                'month': 202611,
+                'current': 202611,
+                'mode': 'bank',
+                'players': 48,
+                'top': [for (var i = 0; i < rankNames.length; i++) rankRow(i)],
+                'me': rankRow(2),
+              },
+            ),
+          ),
+          settings: SettingsStore(prefs),
+          day: today,
+          dayDone: true,
+          initialTab: LeaderboardTab.duel,
+        ),
+      ),
+    );
+    await tester.pump();
+    await tester.runAsync(() => Future<void>.delayed(Duration.zero));
+    await tester.pump(const Duration(seconds: 1));
+    await _snap(tester, '09-siralama');
+
+    // 10 The mascot editor.
+    await prefs.setString('mascot_look', '110021212');
+    await tester.pumpWidget(_app(MascotScreen(settings: SettingsStore(prefs))));
+    await tester.pump(const Duration(seconds: 1));
+    await _snap(tester, '10-maskot');
 
     // 07 A math question (further on) with its interval, 60 s clock.
     final ladder = mathQuestion(generateMath(MathTopic.trigonometry, 1, 2026));
@@ -480,7 +566,8 @@ void main() {
     await tester.runAsync(() => Future<void>.delayed(Duration.zero));
     await tester.pump();
     final players = [
-      for (final (k, n) in names.indexed) {'id': k + 1, 'name': n},
+      for (final (k, n) in names.indexed)
+        {'id': k + 1, 'name': n, 'look': rankLooks[k]},
     ];
     tell({'t': 'welcome', 'you': 1});
     tell({

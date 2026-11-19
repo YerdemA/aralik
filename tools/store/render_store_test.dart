@@ -20,13 +20,10 @@ const _shots = [
   ('02-aralik', '%90 emin olduğun\naralığı seç'),
   ('03-sonuc', 'Aralık ne kadar darsa\no kadar çok puan'),
   ('04-duello', 'Canlı düello:\naynı soru, iki aralık'),
-  ('05-rovans', 'Kaybettin mi?\nTek dokunuşla rövanş'),
-  ('06-matematik', 'Matematik modu:\ntemel ya da ileri'),
-  (
-    '07-matematik-soru',
-    'Trigonometri, türev, olasılık:\nkafadan kabaca tahmin',
-  ),
-  ('08-turnuva', 'Turnuva: 3–8 kişi,\naynı sorular aynı anda'),
+  ('05-rovans', 'Kazan, rövanş iste,\nsıralamada yüksel'),
+  ('09-siralama', 'Aylık düello sıralaması:\nher ay sıfırdan'),
+  ('10-maskot', 'Maskotunu tasarla:\nfes mi, kep mi, bere mi?'),
+  ('07-matematik-soru', 'Matematik modu:\nkafadan kabaca tahmin'),
 ];
 
 const _sun = Palette.sun;

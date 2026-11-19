@@ -27,6 +27,7 @@ başıma geliştirdiğim, Google Play üzerinden dağıtılan bir uygulama.
 - **Sıralamalar:** İsteğe bağlı günün liderleri tablosu ve Elo tabanlı **aylık düello sıralaması**; ay sonunda indirilebilir kişisel istatistik kartı.
 - **Matematik modu:** 27 konuda algoritmayla üretilen, hiç tükenmeyen sorular.
 - **Maskot editörü:** Cinsiyet, ten, saç, saç rengi, sakal, bıyık, göz, gözlük ve şapka; 288.000 kombinasyon, düelloda ve paylaşım kartlarında görünür.
+- **Hazır tepkiler:** Düello ve turnuvada basılı tut, kaydır, bırak: maskotun hareketli yüzleri ve kısa mesajlar. Yazı olmadığı için moderasyon gerektirmez.
 - **İstatistikler:** Zaman içindeki kalibrasyon grafiği, ıskaların yönü, kategori bazında isabet.
 
 ## Teknik öne çıkanlar
@@ -34,10 +35,10 @@ başıma geliştirdiğim, Google Play üzerinden dağıtılan bir uygulama.
 - **Sunucuya güvenilir sonuç.** Puanları istemci değil sunucu hesaplar. Dart ve JavaScript'teki iki uygulama ortak test vektörleriyle eşit tutulur (puan formülü ve 3.240 matematik sorusu; iki tarafta aynı tohumlu rastgele sayı üreteci).
 - **Gerçek zamanlı çok oyunculu oyun, ücretsiz katmanda.** Her düello ve turnuva odası bir Cloudflare Durable Object'tir; WebSocket Hibernation sayesinde boşta maliyetsizdir. Kopan bağlantılar sessizlikten anlaşılır, uygulama kendiliğinden geri bağlanır. Kurallar, "bağlantıyı kes, cevabı ara, geri dön" hilesini kazançsız kılacak biçimde tasarlandı.
 - **Çevrimdışı öncelikli.** Oyun internetsiz eksiksiz çalışır. Yeni sorular uygulama güncellemesi olmadan GitHub Pages'ten iner ve yalnızca gömülü verinin birebir devamıysa kabul edilir.
-- **Kaynaklı veri hattı.** Python betikleri 15 açık veri kaynağından (Wikidata, Dünya Bankası, Eurostat, NASA, USGS, FAO, İBB…) 2.151 soru üretir. Her cevabın kaynak bağlantısı vardır, sayılar elle yazılmaz. Zorluk, Türkçe Vikipedi okunma sayılarından tahmin edilir; lisans ve atıflar otomatik derlenir.
-- **Neredeyse sıfır bağımlılık.** Yalnızca iki paket (`shared_preferences`, `share_plus`). HTTP ve WebSocket `dart:io` ile; uygulama ikonu, maskot ve paylaşım kartları `CustomPaint` ile çizilir; ses efektleri bir Python betiğiyle sentezlenir. Yerel işler küçük Kotlin ve Swift kanallarıyla yapılır (ses, galeri, vekil sunucu, cihaz anahtarı).
-- **Gizlilik.** Hesap, reklam ve analitik yok. Tabloya katılmayan oyuncunun verisi cihazdan çıkmaz; katılanlar için hile önlemi, cihaz kimliğinin tek yönlü özetiyle cihaz başına tek hesaptır.
-- **Kalite.** 398 Flutter ve 116 sunucu testi; `flutter analyze` sıfır uyarı. iOS sürümü GitHub Actions'ta derlenir.
+- **Kaynaklı veri hattı.** Python betikleri 15 açık veri kaynağından (Wikidata, Dünya Bankası, Eurostat, NASA, USGS, FAO, İBB…) 3.400'den fazla soru üretir. Her cevabın kaynak bağlantısı vardır, sayılar elle yazılmaz. Zorluk, Türkçe Vikipedi okunma sayılarından tahmin edilir; lisans ve atıflar otomatik derlenir.
+- **Neredeyse sıfır bağımlılık.** Yalnızca iki paket (`shared_preferences`, `share_plus`). HTTP ve WebSocket `dart:io` ile; uygulama ikonu, maskot ve paylaşım kartları `CustomPaint` ile çizilir; ses efektleri bir Python betiğiyle sentezlenir (birkaçı CC0 kayıttır). Yerel işler küçük Kotlin ve Swift kanallarıyla yapılır (ses, galeri, vekil sunucu, cihaz anahtarı).
+- **Gizlilik.** Üyelik, reklam ve analitik yok. Tabloya katılmayan oyuncunun verisi cihazdan çıkmaz; katılanlar için hile önlemi, cihaz kimliğinin tek yönlü özetiyle cihaz başına tek hesaptır.
+- **Kalite.** 417 Flutter ve 125 sunucu testi; `flutter analyze` sıfır uyarı. iOS sürümü GitHub Actions'ta derlenir.
 
 ## Teknolojiler
 | Katman | Kullanılan |

@@ -7,7 +7,7 @@
 <meta name="description" content="Kabaca, Türkçe bir günlük tahmin oyunudur. Sayısal sorulara tek bir sayıyla değil, %90 emin olduğun bir aralıkla cevap verirsin. Android için.">
 <meta name="theme-color" content="#2C209E">
 <meta property="og:title" content="Kabaca · %90 emin olduğun aralığı ver">
-<meta property="og:description" content="Tek sayı değil, aralık tahmin et. Her gün 5 yeni soru, düello, turnuva ve kalibrasyon.">
+<meta property="og:description" content="Tek sayı değil, aralık tahmin et. Her gün 5 yeni soru, düello, turnuva, aylık sıralama ve kalibrasyon.">
 <meta property="og:image" content="https://kabaca.app/img/og.jpg">
 <meta property="og:url" content="https://kabaca.app/">
 <meta property="og:type" content="website">
@@ -132,8 +132,8 @@
     color: var(--hit); background: var(--hit-soft); border-radius: 999px; padding: 4px 10px;
   }
   .track { position: relative; height: 12px; border-radius: 6px; background: var(--line); margin: 18px 0 10px; }
-  .track .range { position: absolute; left: 30%; right: 22%; top: 0; bottom: 0; border-radius: 6px; background: var(--hit); }
-  .track .mark { position: absolute; left: 63%; top: -7px; width: 3px; height: 26px; background: var(--ink); border-radius: 2px; }
+  .track .range { position: absolute; left: 26%; right: 26%; top: 0; bottom: 0; border-radius: 6px; background: var(--hit); }
+  .track .mark { position: absolute; left: 71%; top: -7px; width: 3px; height: 26px; background: var(--ink); border-radius: 2px; }
   .example .row { display: flex; justify-content: space-between; font-size: 15px; color: var(--muted); }
   .example .row b { color: var(--ink); font-size: 17px; }
   .example .score { margin-top: 10px; font-weight: 800; color: var(--hit); }
@@ -281,7 +281,7 @@
         <span class="chip" data-i18n="exChip">✓ İsabet · +89 puan</span>
         <div class="q" data-i18n="exQ">Ağrı Dağı kaç metre yüksekliktedir?</div>
         <div class="track" aria-hidden="true"><div class="range"></div><div class="mark"></div></div>
-        <div class="row"><span data-i18n="exRange">Aralığın</span><b>3.200 – 6.400 m</b></div>
+        <div class="row"><span data-i18n="exRange">Aralığın</span><b>3.900 – 5.200 m</b></div>
         <div class="row"><span data-i18n="exAnswer">Cevap</span><b>5.137 m</b></div>
       </div>
     </div>
@@ -306,7 +306,7 @@
         <div class="num">2</div>
         <h3 data-i18n="s2Title">Aralığını aç</h3>
         <p data-i18n="s2Text">Kaydırıcıyla aralığı daralt ya da genişlet. İsabet edersen kaç puan alacağın canlı olarak yazar.</p>
-        <img src="/img/range.webp" width="540" height="1200" loading="lazy" alt="Aralık ekranı: 3.200 – 6.400 m, isabet edersen 89 puan" data-i18n-alt="altRange">
+        <img src="/img/range.webp" width="540" height="1200" loading="lazy" alt="Aralık ekranı: 3.900 – 5.200 m, isabet edersen 89 puan" data-i18n-alt="altRange">
       </div>
       <div class="step">
         <div class="num">3</div>
@@ -341,12 +341,12 @@
       <div class="mode m-daily">
         <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10z"/></svg></div>
         <h3 data-i18n="mDailyT">Günün seti</h3>
-        <p data-i18n="mDailyP">Herkes aynı gün aynı 5 soruyu çözer: 2 kolay, 2 orta, 1 zor. Seriyi bozma.</p>
+        <p data-i18n="mDailyP">Herkes aynı gün aynı 5 soruyu çözer, kolaydan zora. Seriyi bozma.</p>
       </div>
       <div class="mode m-duel">
         <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 21h-1l1-7H7.5c-.6 0-.6-.3-.4-.7L13 3h1l-1 7h3.5c.5 0 .6.3.4.7L11 21z"/></svg></div>
         <h3 data-i18n="mDuelT">Düello</h3>
-        <p data-i18n="mDuelP">Bilgi ya da matematik: rastgele bir rakiple ya da oda koduyla arkadaşınla canlı 5 soru. Bitince tek dokunuşla rövanş.</p>
+        <p data-i18n="mDuelP">Bilgi ya da matematik: rastgele bir rakiple ya da oda koduyla arkadaşınla canlı 5 soru. Hazır tepkilerle rakibine seslen, bitince tek dokunuşla rövanş iste.</p>
       </div>
       <div class="mode m-round">
         <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.6 6.6c-1.4 0-2.7.6-4.2 1.9L12 10.6 10.5 12l-2.3 2c-1 .9-1.7 1.3-2.8 1.3a3.3 3.3 0 0 1 0-6.6c1.1 0 1.8.4 2.9 1.4l.8.7 1.5-1.3-.9-.8C8.3 7.5 7 6.6 5.4 6.6a5.4 5.4 0 0 0 0 10.8c1.4 0 2.7-.6 4.2-1.9l2.4-2.1 1.5-1.4 2.3-2c1-.9 1.7-1.3 2.8-1.3a3.3 3.3 0 0 1 0 6.6c-1.1 0-1.8-.4-2.9-1.4l-.8-.7-1.5 1.3.9.8c1.4 1.3 2.7 2.2 4.3 2.2a5.4 5.4 0 0 0 0-10.8z"/></svg></div>
@@ -360,8 +360,8 @@
       </div>
       <div class="mode m-board">
         <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5h-2V3H7v2H5a2 2 0 0 0-2 2v1a5 5 0 0 0 4.4 5A5 5 0 0 0 11 15.9V19H7v2h10v-2h-4v-3.1a5 5 0 0 0 3.6-2.9A5 5 0 0 0 21 8V7a2 2 0 0 0-2-2zM5 8V7h2v3.8A3 3 0 0 1 5 8zm14 0a3 3 0 0 1-2 2.8V7h2v1z"/></svg></div>
-        <h3 data-i18n="mBoardT">Günün liderleri</h3>
-        <p data-i18n="mBoardP">İstersen takma adınla günün tablosuna gir. İlk üçe altın, gümüş, bronz. Tamamen isteğe bağlı.</p>
+        <h3 data-i18n="mBoardT">Sıralamalar</h3>
+        <p data-i18n="mBoardP">İstersen takma adınla günün tablosuna gir; rastgele rakiple düellolar aylık sıralamaya sayılır, her ay sıfırdan. Tamamen isteğe bağlı.</p>
       </div>
       <div class="mode m-math">
         <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-5.9 4.1 1.1-1.1 1.4 1.4 1.4-1.4 1.1 1.1-1.4 1.4 1.4 1.4-1.1 1.1-1.4-1.4-1.4 1.4-1.1-1.1 1.4-1.4-1.4-1.4zM6.3 7.7h5v1.5h-5V7.7zM11.5 16h-2v2H8v-2H6v-1.5h2v-2h1.5v2h2V16zm6.2 1.3h-5v-1.5h5v1.5zm0-2.5h-5v-1.5h5v1.5z"/></svg></div>
@@ -390,15 +390,31 @@
   <section id="galeri" aria-label="Ekran görüntüleri">
     <div class="eyebrow" data-i18n="galEyebrow">Uygulamadan</div>
     <h2 data-i18n="galTitle">Kupayı kim kaldıracak?</h2>
-    <p class="intro" data-i18n="galIntro">Düelloda kazanan filozof defne tacını takar, kaybeden beyaz bayrağı sallar ve rövanş ister. Turnuvada herkesin aralığı yan yana açılır.</p>
+    <p class="intro" data-i18n="galIntro">Düelloda kazanan filozof defne tacını takar, kaybeden beyaz bayrağı sallar ve rövanş ister. Rastgele rakiple oynadığın düellolar aylık sıralamaya sayılır. Turnuvada herkesin aralığı yan yana açılır.</p>
     <div class="gallery">
       <figure><img src="/img/duel.webp" width="540" height="1200" loading="lazy" alt="Düello: iki oyuncunun aralıkları yan yana" data-i18n-alt="altDuel"><figcaption data-i18n="capDuel">Düelloda iki aralık yan yana</figcaption></figure>
-      <figure><img src="/img/rematch.webp" width="540" height="1200" loading="lazy" alt="Düello sonu: rakip rövanş istiyor" data-i18n-alt="altRematch"><figcaption data-i18n="capRematch">Kürsü ve rövanş</figcaption></figure>
+      <figure><img src="/img/rematch.webp" width="540" height="1200" loading="lazy" alt="Düello sonu: sıralama puanı artıyor, rakip rövanş istiyor" data-i18n-alt="altRematch"><figcaption data-i18n="capRematch">Kürsü ve rövanş</figcaption></figure>
       <figure><img src="/img/cup.webp" width="540" height="1200" loading="lazy" alt="Turnuva: beş oyuncunun aralıkları puana göre sıralı" data-i18n-alt="altCup"><figcaption data-i18n="capCup">Turnuvada herkesin aralığı</figcaption></figure>
-      <figure><img src="/img/math.webp" width="540" height="1200" loading="lazy" alt="Matematik modu: temel ya da ileri" data-i18n-alt="altMath"><figcaption data-i18n="capMath">Matematik: temel ya da ileri</figcaption></figure>
+      <figure><img src="/img/ranked.webp" width="540" height="1200" loading="lazy" alt="Aylık düello sıralaması: oyuncular maskotları ve puanlarıyla" data-i18n-alt="altRanked"><figcaption data-i18n="capRanked">Aylık düello sıralaması</figcaption></figure>
       <figure><img src="/img/share.webp" width="540" height="1200" loading="lazy" alt="Paylaşım kartı: 340 / 500" data-i18n-alt="altShare"><figcaption data-i18n="capShare">Hikâyede paylaşılacak kart</figcaption></figure>
     </div>
     <p class="note" data-i18n="galNote" hidden></p>
+  </section>
+
+  <section id="maskot">
+    <div class="split">
+      <div>
+        <div class="eyebrow" data-i18n="mascotEyebrow">Maskot ve tepkiler</div>
+        <h2 data-i18n="mascotTitle">Filozofunu kendine benzet.</h2>
+        <p class="intro" data-i18n="mascotIntro">Cinsiyet, ten, saç ve saç rengi, sakal, bıyık, göz, gözlük ve şapka: 288.000 kombinasyon. Fes mi, kep mi, bere mi? Düelloda, turnuvada, sıralamada ve paylaşım kartlarında seni maskotun temsil eder.</p>
+        <ul class="facts">
+          <li><b data-i18n="mcf1Title">Hazır tepkiler</b><span data-i18n="mcf1Text">Düello ve turnuvada basılı tut, kaydır, bırak: maskotunla sinirlen, kahkaha at, üzül ya da şaşır. "Kıl payı!", "Tebrikler!" gibi kısa mesajlar da var; yazı yazılmaz.</span></li>
+          <li><b data-i18n="mcf2Title">Ay sonu kartı</b><span data-i18n="mcf2Text">Ay bitince sıranı, galibiyetlerini ve isabet oranını gösteren kişisel kartını indir ya da paylaş.</span></li>
+          <li><b data-i18n="mcf3Title">Arşiv</b><span data-i18n="mcf3Text">Son 7 günün birincileri ve geçen ayın düello kürsüsü, maskotlarıyla.</span></li>
+        </ul>
+      </div>
+      <img class="shot" src="/img/mascot.webp" width="540" height="1200" loading="lazy" alt="Maskot ekranı: fesli, gözlüklü, uzun saçlı bir filozof" data-i18n-alt="altMascot">
+    </div>
   </section>
 
   <section id="puan">
@@ -423,8 +439,8 @@ Kalibrasyon %80</div>
 
   <section id="kaynaklar">
     <div class="eyebrow" data-i18n="srcEyebrow">Kaynaklı sorular</div>
-    <h2 data-i18n="srcTitle">1.900'den fazla soru, hiçbiri uydurma değil.</h2>
-    <p class="intro" data-i18n="srcIntro">Her cevap açık bir kaynaktan gelir ve sonuç ekranında bağlantısıyla gösterilir. Coğrafya, tarih, Türkiye, bilim, spor, gündelik hayat, hayvanlar, şirketler, Osmanlı, mimari ve sanat.</p>
+    <h2 data-i18n="srcTitle">3.400'den fazla soru, hiçbiri uydurma değil.</h2>
+    <p class="intro" data-i18n="srcIntro">Her cevap açık bir kaynaktan gelir ve sonuç ekranında bağlantısıyla gösterilir. Coğrafya, tarih, Türkiye, bilim, spor, gündelik hayat, hayvanlar, şirketler, Osmanlı, mimari, sanat, insan vücudu, mutfak, ulaşım ve uzay.</p>
     <ul class="sources">
       <li>Wikidata</li><li data-i18n="srcWiki">Vikipedi</li><li data-i18n="srcWb">Dünya Bankası</li><li>Eurostat</li><li>FAO</li><li>NASA</li><li>USGS</li><li data-i18n="srcIbb">İBB Açık Veri</li><li>Our World in Data</li><li>USDA</li><li>OurAirports</li><li data-i18n="srcMore">ve daha fazlası</li>
     </ul>
@@ -433,8 +449,8 @@ Kalibrasyon %80</div>
   <div class="privacy" id="gizlilik">
     <img src="/img/icon-192.png" width="120" height="120" alt="">
     <div>
-      <h2 data-i18n="privTitle">Hesap yok, reklam yok, takip yok.</h2>
-      <p data-i18n="privText">Oyun verilerin telefonunda kalır ve uygulama internetsiz de eksiksiz çalışır. İnternet yalnızca yeni soruları indirmek, düello, turnuva ve katılırsan günün liderleri tablosu için kullanılır. Tabloda yalnızca takma adın ve günlük puanın görünür; istediğin an ayrılıp verini silebilirsin.</p>
+      <h2 data-i18n="privTitle">Üyelik yok, reklam yok, takip yok.</h2>
+      <p data-i18n="privText">Oyun verilerin telefonunda kalır ve uygulama internetsiz de eksiksiz çalışır. İnternet yalnızca yeni soruları indirmek, düello, turnuva ve katılırsan liderlik tabloları için kullanılır. Tabloda yalnızca takma adın, maskotun ve puanın görünür; istediğin an ayrılıp verini silebilirsin.</p>
     </div>
   </div>
 </main>
@@ -471,7 +487,7 @@ Kalibrasyon %80</div>
     s1Title: 'Type your guess', s1Text: 'Enter your best guess on the app’s own number pad. The 000 key makes big numbers quick.',
     s2Title: 'Open your range', s2Text: 'Narrow or widen the range with a slider. It shows live how many points a hit would bring.',
     s3Title: 'Lock it, see the answer', s3Text: 'A hit, a near miss or a miss? The answer is marked on your range, with its source and a fun fact.',
-    altGuess: 'Guess screen: 4,500 m', altRange: 'Range screen: 3,200 – 6,400 m, 89 points if it hits', altResult: 'Result screen: Hit, +89 points, the answer is 5,137 m',
+    altGuess: 'Guess screen: 4,500 m', altRange: 'Range screen: 3,900 – 5,200 m, 89 points if it hits', altResult: 'Result screen: Hit, +89 points, the answer is 5,137 m',
     calEyebrow: 'Calibration',
     calTitle: 'When you say “90% sure”, do you hit 9 out of 10?',
     calIntro: 'Quizzes check right or wrong. Kabaca measures how sure you are. Over time you see how many of your ranges held the answer, and the game tells you: “your ranges are too narrow” or “be bolder”.',
@@ -482,11 +498,11 @@ Kalibrasyon %80</div>
     modesEyebrow: 'Modes',
     modesTitle: 'Alone, head to head, or as a crowd.',
     modesIntro: 'The daily set is the same for everyone. When you finish it, you don’t have to stop.',
-    mDailyT: 'Daily set', mDailyP: 'Everyone gets the same 5 questions on the same day: 2 easy, 2 medium, 1 hard. Keep your streak going.',
-    mDuelT: 'Duel', mDuelP: 'Trivia or math: five live questions against a random opponent, or a friend with a room code. A rematch is one tap away.',
+    mDailyT: 'Daily set', mDailyP: 'Everyone gets the same 5 questions on the same day, easy to hard. Keep your streak going.',
+    mDuelT: 'Duel', mDuelP: 'Trivia or math: five live questions against a random opponent, or a friend with a room code. Tease them with quick reactions; a rematch is one tap away.',
     mRoundT: 'Play a round', mRoundP: 'Unlimited rounds of five. Questions you have already seen never come back, and you can share your round.',
     mCupT: 'Tournament', mCupP: 'Open a room for 3–8 players and share the code. 5 or 10 questions; standings and hits at the end.',
-    mBoardT: 'Daily leaders', mBoardP: 'Join the day’s table with a nickname if you like. Gold, silver and bronze for the top three. Entirely optional.',
+    mBoardT: 'Rankings', mBoardP: 'Join the day’s table with a nickname if you like; duels against random opponents count toward a monthly ranking that starts from zero each month. Entirely optional.',
     mMathT: 'Math', mMathP: 'Basic or advanced, 27 topics. Generated questions that never run out; no minus points.',
     mathEyebrow: 'Math mode',
     mathTitle: 'Estimate it in your head.',
@@ -495,25 +511,32 @@ Kalibrasyon %80</div>
     mf2Title: 'Advanced', mf2Text: 'Trigonometry, limits, derivatives, integrals, logarithms, sequences, statistics, matrices, complex numbers, vectors.',
     mf3Title: 'Rules', mf3Text: '60 seconds a question (30 in a duel). The range opens to ÷2 … ×2 at most, a close estimate scores high, and there are no minus points.',
     altMathQ: 'Math question: the height of a ladder, range 480 – 760 cm',
-    altRematch: 'End of a duel: the opponent asks for a rematch', altCup: 'Tournament: five players’ ranges, best first', altMath: 'Math mode: basic or advanced',
-    capRematch: 'The podium and a rematch', capCup: 'Everyone’s range in a tournament', capMath: 'Math: basic or advanced',
+    altRematch: 'End of a duel: the monthly rating goes up and the opponent asks for a rematch', altCup: 'Tournament: five players’ ranges, best first', altRanked: 'Monthly duel ranking: players with their mascots and ratings',
+    capRematch: 'The podium and a rematch', capCup: 'Everyone’s range in a tournament', capRanked: 'Monthly duel ranking',
     galEyebrow: 'In the app',
     galTitle: 'Who lifts the cup?',
-    galIntro: 'In a duel the winning philosopher wears the laurel wreath; the loser waves a white flag and asks for a rematch. In a tournament everyone’s range opens side by side.',
+    galIntro: 'In a duel the winning philosopher wears the laurel wreath; the loser waves a white flag and asks for a rematch. Duels against random opponents count toward the monthly ranking. In a tournament everyone’s range opens side by side.',
     altDuel: 'Duel: both players’ ranges side by side', altDuelEnd: 'End of a duel: You won!', altShare: 'Share card: 340 / 500', altDark: 'Home screen in dark theme',
     capDuel: 'Two ranges side by side', capDuelEnd: 'Philosophers on the podium', capShare: 'A card for your story', capDark: 'Dark theme',
     galNote: 'The app and its questions are in Turkish.',
+    mascotEyebrow: 'Mascot and reactions',
+    mascotTitle: 'Make the philosopher look like you.',
+    mascotIntro: 'Gender, skin, hair and hair colour, beard, moustache, eyes, glasses and hat: 288,000 combinations. A fez, a cap or a beret? Your mascot stands for you in duels, tournaments, the rankings and on share cards.',
+    mcf1Title: 'Quick reactions', mcf1Text: 'In duels and tournaments, hold, slide and let go: your mascot gets angry, laughs, sulks or gasps. There are short messages like “So close!” and “Well done!” too; no typing.',
+    mcf2Title: 'Month-end card', mcf2Text: 'When the month ends, download or share your own card with your rank, wins and hit rate.',
+    mcf3Title: 'Archive', mcf3Text: 'The winners of the last 7 days and last month’s duel podium, with their mascots.',
+    altMascot: 'Mascot screen: a philosopher with a fez, glasses and long hair',
     scoreEyebrow: 'Scoring',
     scoreTitle: 'Honesty pays.',
     scoreIntro: 'A hit is worth up to 100 points, and narrower ranges earn more. A near miss can still score; a far miss costs points (down to −50). The rule makes deliberately narrow ranges a losing bet: the best strategy is to give the range you are truly 90% sure of.',
     lgGreen: 'Hit with 70 points or more', lgYellow: 'Hit with under 70 points', lgBlack: 'Miss',
     shareText: 'Kabaca · 4 November · 380/500\n🟩🟩🟨⬛🟩\nCalibration 80%',
     srcEyebrow: 'Sourced questions',
-    srcTitle: 'Over 1,900 questions, not one made up.',
-    srcIntro: 'Every answer comes from an open source and is linked on the result screen. Geography, history, Türkiye, science, sport, everyday life, animals, companies, the Ottomans, architecture and art.',
+    srcTitle: 'Over 3,400 questions, not one made up.',
+    srcIntro: 'Every answer comes from an open source and is linked on the result screen. Geography, history, Türkiye, science, sport, everyday life, animals, companies, the Ottomans, architecture, art, the human body, food, transport and space.',
     srcWiki: 'Wikipedia', srcWb: 'World Bank', srcIbb: 'Istanbul Open Data', srcMore: 'and more',
-    privTitle: 'No account, no ads, no tracking.',
-    privText: 'Your game data stays on your phone and the app works fully offline. The internet is only used to download new questions, for duels and tournaments, and for the daily leaders table if you join. The table shows only your nickname and daily score; you can leave and delete your data at any time.',
+    privTitle: 'No sign-up, no ads, no tracking.',
+    privText: 'Your game data stays on your phone and the app works fully offline. The internet is only used to download new questions, for duels and tournaments, and for the leaderboards if you join. The tables show only your nickname, mascot and score; you can leave and delete your data at any time.',
     lnkPrivacy: 'Privacy policy', lnkSources: 'Data sources and licences', lnkCode: 'Source code (GitHub)',
     credit: 'Kabaca · Developer: Yusuf Erdem Aykaç · Android 7.0 and later'
   };

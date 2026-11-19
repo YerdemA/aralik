@@ -3,7 +3,7 @@ layout: page
 title: Gizlilik Politikası
 lead: Kabaca hangi verileri nasıl kullanır? Kısa cevap, neredeyse hiçbirini.
 description: Kabaca kişisel veri toplamaz. Oyun verileri cihazda kalır; istisnalar isteğe bağlı liderlik tablosu, düello ve turnuvadır.
-updated: 11 Kasım 2026
+updated: 20 Kasım 2026
 ---
 
 Kabaca, Yusuf Erdem Aykaç tarafından geliştirilen bir tahmin oyunudur. Bu politika uygulamanın hangi verileri nasıl kullandığını açıklar.
@@ -56,14 +56,14 @@ Rakip ararken de yalnızca kullanıcı adın ve soru sayısı gider. Adın ve ar
 
 Bağlantın koparsa kaldığın yerden devam edebilmen için oda sana rastgele, tek kullanımlık bir **geri dönüş anahtarı** verir; bu anahtar yalnızca o odada ve oyun sürerken işe yarar. Uygulamayı kapatırsan geri dönebilmen için oda kodu ve bu anahtar telefonunda, yalnızca dönüş süresi bitene kadar saklanır. Bağlantının hâlâ açık olduğunu anlamak için uygulama birkaç saniyede bir odaya içeriksiz bir sinyal gönderir. Turnuvada kurucunun odadan çıkardığı oyuncunun adı, aynı odaya yeniden girmesin diye oda açık kaldıkça tutulur.
 
-Düello bittiğinde ikiniz de isterseniz aynı odada **rövanş** oynanır; bunun için yeni bir şey gönderilmez, yalnızca "rövanş istiyorum" ya da "istemiyorum" bilgisi rakibine iletilir. Matematik düellosunun soruları cihazlarda ve sunucuda hesapla üretilir; aynı veriler (adın ve aralıkların) kullanılır.
+Düello bittiğinde ikiniz de isterseniz aynı odada **rövanş** oynanır; bunun için yeni bir şey gönderilmez, yalnızca "rövanş istiyorum" ya da "istemiyorum" bilgisi rakibine iletilir. Maç sırasında bir **hazır tepki** (8 sabit yüz ya da kısa mesajdan biri; yazı yazılamaz) seçersen, yalnızca seçtiğin tepkinin kimliği odadaki diğer oyunculara iletilir ve saklanmaz. Matematik düellosunun soruları cihazlarda ve sunucuda hesapla üretilir; aynı veriler (adın ve aralıkların) kullanılır.
 
 Oda bittikten (ya da boş kaldıktan) en geç birkaç dakika sonra sunucudan tamamen silinir. Düello ya da turnuva verisi, aşağıdaki aylık sıralama dışında saklanmaz. Oynamazsan hiçbir şey gönderilmez.
 
 Odaların kötüye kullanılmasını (örneğin binlerce oda açılmasını) önlemek için oda açma ve odaya bağlanma istekleri IP adresi başına dakikalık bir sınırla sayılır. Bu sayımı Cloudflare kısa süreliğine yapar; IP adresini biz saklamayız.
 
 ## Aylık düello sıralaması (isteğe bağlı)
-Günün liderleri tablosuna katıldıysan, **rastgele bir rakiple** oynadığın düellolar aylık sıralamaya sayılır (rakibin de katılmışsa). Bunun için uygulama, rakip bulunduğunda odaya tablodaki rastgele kimliğini ve gizli anahtarını da gönderir; sunucu anahtarı, saklı özetiyle karşılaştırıp hesabın senin olduğunu doğrular. Arkadaşınla oynadığın düellolar ve rövanşlar sayılmaz, onlarda bu bilgiler gönderilmez.
+Günün liderleri tablosuna katıldıysan, **rastgele bir rakiple** oynadığın düellolar aylık sıralamaya sayılır (rakibin de katılmışsa). Bunun için uygulama, rakip bulunduğunda odaya tablodaki rastgele kimliğini ve gizli anahtarını da gönderir; sunucu anahtarı, saklı özetiyle karşılaştırıp hesabın senin olduğunu doğrular. Aynı odada oynanan rövanşlar da sayılır. Arkadaşınla oda koduyla oynadığın düellolar sayılmaz, onlarda bu bilgiler gönderilmez.
 
 Her ay ve düello türü (bilgi, matematik) için hesabına bağlı olarak şunlar saklanır: **sıralama puanın**, oynadığın, kazandığın ve berabere bitirdiğin düello sayısı, maç puanlarının toplamı (ortalama için), isabet ve cevap sayın, maskotunun görünümü ve son güncelleme zamanı. Tek tek maçlar, rakiplerin ve aralıkların saklanmaz.
 
