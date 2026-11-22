@@ -3,6 +3,10 @@
 // play-store/screenshots/ (capture_screens_test.dart draws them).
 //
 //   flutter test tools/store/render_store_test.dart
+//
+// With --dart-define=phone=iphone it frames the iPhone shots in
+// app-store/screenshots/ for the App Store instead (1320 × 2868, the 6.9"
+// size, into app-store/screenshots/app-store/); no feature graphic there.
 import 'dart:io';
 import 'dart:math' as math;
 import 'dart:ui' as ui;
@@ -27,6 +31,8 @@ const _shots = [
 ];
 
 const _sun = Palette.sun;
+
+const _iphone = String.fromEnvironment('phone') == 'iphone';
 
 Directory _materialFonts() {
   var dir = File(Platform.resolvedExecutable).parent;
@@ -142,25 +148,32 @@ void _paintFeature(Canvas c, Size size) {
 }
 
 void _paintScreenshot(Canvas c, Size size, ui.Image shot, String headline) {
-  _background(c, size, const [
-    ('?', 40, 300, 120),
-    ('≈', 960, 420, 100),
-    ('?', 970, 1250, 110),
-    ('≈', 10, 1100, 90),
+  // Laid out for 1080 wide; [u] scales it to the iPhone's 1320.
+  final u = size.width / 1080;
+  _background(c, size, [
+    ('?', 40 * u, 300 * u, 120 * u),
+    ('≈', 960 * u, 420 * u, 100 * u),
+    ('?', 970 * u, size.height * .65, 110 * u),
+    ('≈', 10 * u, size.height * .57, 90 * u),
   ]);
   final title = _text(
     headline,
-    70,
+    70 * u,
     Colors.white,
     weight: FontWeight.w800,
-    letterSpacing: -1.5,
+    letterSpacing: -1.5 * u,
     align: TextAlign.center,
-    width: size.width - 60,
-  )..paint(c, const Offset(30, 64));
+    width: size.width - 60 * u,
+  )..paint(c, Offset(30 * u, 64 * u));
 
   // The phone runs off the bottom, just past the shot's main buttons.
-  final top = 64 + title.height + 56;
-  final scale = math.min(0.76, (size.height - top + 6) / (shot.height - 100));
+  final top = (64 + 56) * u + title.height;
+  // The iPhone shot has the frame's own shape, so it needs a bigger phone to
+  // run off the bottom.
+  final scale = math.min(
+    _iphone ? 0.9 : 0.76,
+    (size.height - top + 6 * u) / (shot.height - 100 * u),
+  );
   final w = shot.width * scale;
   final phone = Rect.fromLTWH(
     (size.width - w) / 2,
@@ -170,10 +183,10 @@ void _paintScreenshot(Canvas c, Size size, ui.Image shot, String headline) {
   );
   final corner = RRect.fromRectAndCorners(
     phone,
-    topLeft: const Radius.circular(56),
-    topRight: const Radius.circular(56),
+    topLeft: Radius.circular(56 * u),
+    topRight: Radius.circular(56 * u),
   );
-  c.drawShadow(Path()..addRRect(corner), Colors.black, 24, false);
+  c.drawShadow(Path()..addRRect(corner), Colors.black, 24 * u, false);
   c.save();
   c.clipRRect(corner);
   c.drawImageRect(
@@ -187,7 +200,7 @@ void _paintScreenshot(Canvas c, Size size, ui.Image shot, String headline) {
     corner,
     Paint()
       ..style = PaintingStyle.stroke
-      ..strokeWidth = 4
+      ..strokeWidth = 4 * u
       ..color = Colors.white.withValues(alpha: .35),
   );
 }
@@ -197,19 +210,24 @@ void main() {
     await tester.runAsync(() async {
       await _loadRoboto();
 
-      const feature = Size(1024, 500);
-      var recorder = ui.PictureRecorder();
-      _paintFeature(Canvas(recorder), feature);
-      await _save(
-        recorder.endRecording(),
-        feature,
-        'play-store/graphics/feature-graphic-1024x500.png',
-      );
+      ui.PictureRecorder recorder;
+      if (!_iphone) {
+        const feature = Size(1024, 500);
+        recorder = ui.PictureRecorder();
+        _paintFeature(Canvas(recorder), feature);
+        await _save(
+          recorder.endRecording(),
+          feature,
+          'play-store/graphics/feature-graphic-1024x500.png',
+        );
+      }
 
-      const screen = Size(1080, 1920);
+      const screen = _iphone ? Size(1320, 2868) : Size(1080, 1920);
+      const raw = _iphone ? 'app-store/screenshots' : 'play-store/screenshots';
+      const framed = _iphone ? '$raw/app-store' : '$raw/play';
+      Directory(framed).createSync(recursive: true);
       for (final (i, (name, headline)) in _shots.indexed) {
-        final bytes = File('play-store/screenshots/$name.png')
-            .readAsBytesSync();
+        final bytes = File('$raw/$name.png').readAsBytesSync();
         final codec = await ui.instantiateImageCodec(bytes);
         final shot = (await codec.getNextFrame()).image;
         recorder = ui.PictureRecorder();
@@ -217,7 +235,7 @@ void main() {
         await _save(
           recorder.endRecording(),
           screen,
-          'play-store/screenshots/play/${i + 1}-$name.png',
+          '$framed/${i + 1}-$name.png',
         );
       }
     });

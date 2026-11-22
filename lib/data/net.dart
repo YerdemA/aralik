@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 
 /// What every request of the app sends as its User-Agent.
-const String userAgent = 'Kabaca-Android';
+final String userAgent = Platform.isIOS ? 'Kabaca-iOS' : 'Kabaca-Android';
 
 /// The HTTP proxy Android uses on the current network ("host:port"), or
 /// null when there is none. dart:io does not read Android's proxy setting

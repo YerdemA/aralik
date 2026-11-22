@@ -58,6 +58,7 @@ __pycache__/
 # Play Store assets made by hand or for the store (screenshots, graphics,
 # video, listing drafts, release bundles). Kept out of git.
 /play-store/
+/app-store/
 
 # Vikipedi doğrulama önbelleği (tools/import_curated.py)
 tools/raw/wikipedia/

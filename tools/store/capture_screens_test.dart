@@ -3,6 +3,9 @@
 // with a clean status bar (09:00) and the gesture bar. Then
 // render_store_test.dart frames them for Google Play.
 //
+// For the App Store (iPhone 16 Pro Max, 1320 × 2868, into
+// app-store/screenshots/), add --dart-define=phone=iphone to both.
+//
 //   flutter test tools/store/capture_screens_test.dart
 //   flutter test tools/store/render_store_test.dart
 import 'dart:async';
@@ -36,7 +39,9 @@ import 'phone_frame.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
-final _out = Directory('play-store/screenshots');
+final _out = Directory(
+  isIphone ? 'app-store/screenshots' : 'play-store/screenshots',
+);
 
 class _Channel implements DuelChannel {
   final incoming = StreamController<String>();
