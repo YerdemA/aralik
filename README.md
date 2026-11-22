@@ -6,7 +6,7 @@
 
 <p align="center"><b>Tek bir sayı değil, %90 emin olduğun aralığı tahmin et.</b><br>
 Türkçe günlük tahmin oyunu · Flutter · Cloudflare Workers<br>
-<a href="https://kabaca.app">kabaca.app</a></p>
+<a href="https://kabaca.app">kabaca.app</a> · <a href="https://play.google.com/store/apps/details?id=com.yerdema.kabaca">Google Play</a></p>
 
 ---
 

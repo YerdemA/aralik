@@ -118,7 +118,6 @@
   .btn-sun { background: var(--sun); color: var(--on-sun); }
   .btn-ghost { background: rgba(255,255,255,.12); color: #fff; }
   .btn small { font-weight: 500; opacity: .8; }
-  .btn[aria-disabled="true"] { cursor: default; }
   .btn svg { width: 22px; height: 22px; flex: none; }
 
   /* Example card in the hero */
@@ -271,10 +270,10 @@
       <h1 data-i18n="title">Tek sayı değil, <em>aralık</em> tahmin et.</h1>
       <p class="lead" data-i18n="lead">Kabaca, 5–10 dakikalık beklemelerde oynanan Türkçe bir günlük tahmin oyunu. Sayısal sorulara %90 emin olduğun bir aralıkla cevap verirsin. Aralık cevabı içeriyorsa puan alırsın; ne kadar darsa o kadar çok.</p>
       <div class="cta">
-        <span class="btn btn-sun" aria-disabled="true">
+        <a class="btn btn-sun" href="https://play.google.com/store/apps/details?id=com.yerdema.kabaca">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 3.3v17.4c0 .5.5.8.9.6l15-8.7c.4-.3.4-.9 0-1.2l-15-8.7C4.5 2.5 4 2.8 4 3.3z"/></svg>
-          <span data-i18n="play">Google Play · <small>yakında</small></span>
-        </span>
+          <span data-i18n="play">Google Play'den indir</span>
+        </a>
         <a class="btn btn-ghost" href="#nasil" data-i18n="howBtn">Nasıl oynanır?</a>
       </div>
       <div class="example" aria-label="Örnek soru">
@@ -475,7 +474,7 @@ Kalibrasyon %80</div>
     pill: '🔥 <b>Every day</b> 5 new questions',
     title: 'Not a number. Guess a <em>range</em>.',
     lead: 'Kabaca is a daily estimation game for the 5–10 minutes you spend waiting. You answer numeric questions with a range you are 90% sure of. If the range holds the answer you score, and the narrower it is, the more you get.',
-    play: 'Google Play · <small>coming soon</small>',
+    play: 'Get it on Google Play',
     howBtn: 'How to play',
     exChip: '✓ Hit · +89 points',
     exQ: 'How high is Mount Ararat, in metres?',
