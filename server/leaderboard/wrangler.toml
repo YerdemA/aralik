@@ -34,8 +34,8 @@ BOARD_CACHE_SECONDS = "30"
 REPORT_HIDE_AT = "3"
 # Apple Developer Team ID (10 characters, developer.apple.com → Membership):
 # kabaca.app/.well-known/apple-app-site-association lets the iOS app open
-# invite links. Empty until the Apple account exists.
-APPLE_TEAM_ID = ""
+# invite links.
+APPLE_TEAM_ID = "3WLC568FJN"
 
 # Per-IP limit on opening, joining and searching for duels (src/index.js,
 # limitDuel). namespace_id is any number unique to this account.

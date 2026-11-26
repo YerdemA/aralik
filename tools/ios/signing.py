@@ -74,6 +74,7 @@ def profile(path: str) -> None:
 
 
 def main() -> None:
+    sys.stdout.reconfigure(encoding="utf-8")  # Windows console: arrows, Turkish
     match sys.argv[1:]:
         case ["csr"]:
             csr()
